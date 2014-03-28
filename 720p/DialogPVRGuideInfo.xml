@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<window>
+    <defaultcontrol always="true">7</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+    
+	<controls>
+	
+		<include>DialogOverlay</include>
+		
+		<control type="group">
+			<posx>250</posx>
+			<posy>100</posy>
+			
+			<include>Animation_Dialog_Center</include>
+			
+		<!--Backgrounds-->	
+			<control type="image">
+				<width>730</width>
+				<height>570</height>
+				<include>Common_Color_Keyback1</include>
+			</control>	
+			
+			<control type="image">
+				<description>line</description>
+				<width>730</width>
+				<include>Dialog_Line</include>
+			</control>
+			
+			<control type="image">
+				<width>240</width>
+				<height>570</height>
+				<include>Common_Color_Keyback2</include>
+			</control>
+			
+			<control type="label">
+				<description>Title</description>
+				<posx>710</posx>
+				<width>480</width>
+				<include>Dialog_Header</include>
+				<label>$INFO[ListItem.Title]</label>
+			</control>
+			
+		<!--Details list-->	
+			<control type="grouplist">
+				<posx>260</posx>
+				<posy>84</posy>
+				<width>580</width>
+				<height>112</height>
+				<itemgap>0</itemgap>
+				<orientation>vertical</orientation>		
+				
+				<control type="group">
+					<height>28</height>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<include>Common_Infolist_Label</include>
+						<label>$LOCALIZE[142]</label>
+					</control>
+					
+					<control type="label">
+						<description>Type Value</description>
+						<include>Common_Infolist_Info</include>
+						<label>$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime]</label>						
+					</control>
+					
+				</control>
+
+				<control type="group">
+					<height>28</height>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<include>Common_Infolist_Label</include>
+						<label>$LOCALIZE[552]:</label>
+					</control>
+					
+					<control type="label">
+						<description>Type Value</description>
+						<include>Common_Infolist_Info</include>
+						<label>$INFO[ListItem.StartDate]</label>						
+					</control>
+					
+				</control>
+				
+				<control type="group">
+					<height>28</height>
+					<visible>!IsEmpty(ListItem.Duration)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<include>Common_Infolist_Label</include>
+						<label>$LOCALIZE[180]:</label>
+					</control>
+					
+					<control type="label">
+						<description>Type Value</description>
+						<include>Common_Infolist_Info</include>
+						<label>$INFO[ListItem.Duration]</label>						
+					</control>
+					
+				</control>	
+				
+				<control type="group">
+					<height>28</height>
+					<visible>!IsEmpty(ListItem.ChannelName)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<include>Common_Infolist_Label</include>
+						<label>$LOCALIZE[19029]:</label>
+					</control>
+					
+					<control type="label">
+						<description>Type Value</description>
+						<include>Common_Infolist_Info</include>
+						<label>$INFO[ListItem.ChannelName]</label>						
+					</control>
+					
+				</control>	
+
+				<control type="group">
+					<height>28</height>
+					<visible>!IsEmpty(ListItem.Genre)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<include>Common_Infolist_Label</include>
+						<label>$LOCALIZE[515]:</label>
+					</control>
+					
+					<control type="label">
+						<description>Type Value</description>
+						<include>Common_Infolist_Info</include>
+						<label>$INFO[ListItem.Genre]</label>						
+					</control>
+					
+				</control>					
+				
+			</control>
+			
+			<control type="label">
+				<posx>260</posx>
+				<posy>224</posy>			
+				<width>340</width>
+				<height>28</height>
+				<label>$LOCALIZE[31001]:</label>
+				<font>font20UB</font>
+				<textcolor>Accent</textcolor>
+				<aligny>top</aligny>
+			</control>
+			
+			<control type="textbox" id="400">
+				<description>Plot</description>
+				<posx>260</posx>
+				<posy>250</posy>
+				<width>450</width>
+				<height>300</height>
+				<font>font18</font>
+				<align>justify</align>
+				<label fallback="161">$INFO[ListItem.Plot]</label>
+			</control>
+				
+			<control type="grouplist" id="9000">
+				<posx>20</posx>
+				<posy>60</posy>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<itemgap>5</itemgap>
+				<orientation>vertical</orientation>
+				
+				<control type="group">
+					<height>50</height>
+					
+					<control type="button" id="7">
+						<description>OK</description>
+						<include>Common_Control_Button</include>
+						<visible>!Control.IsVisible(50)</visible>
+						<onup>6</onup>
+						<ondown>5</ondown>
+					</control>
+					
+					<control type="image">
+						<include>Common_Control_Button</include>
+						<texture>icons/ok.png</texture>
+					</control>
+					
+					<control type="image">
+						<visible>!Control.IsEnabled(7)</visible>
+						<include>Common_Control_Button</include>
+						<texture>backings/overlay.png</texture>
+					</control>	
+					
+					<control type="label">
+						<include>Common_Control_Label</include>
+						<label>12321</label>
+					</control>
+					
+				</control>
+				
+				<control type="group">
+					<height>50</height>	
+					
+					<control type="button" id="5">
+						<description>switch</description>
+						<include>Common_Control_Button</include>
+						<onup>7</onup>
+						<ondown>6</ondown>
+					</control>
+					
+					<control type="image">
+						<include>Common_Control_Button</include>
+						<texture>icons/refresh.png</texture>
+					</control>
+					
+					<control type="image">
+						<visible>!Control.IsEnabled(5)</visible>
+						<include>Common_Control_Button</include>
+						<texture>backings/overlay.png</texture>
+					</control>
+					
+					<control type="label">
+						<include>Common_Control_Label</include>
+						<label>switch</label>
+					</control>
+					
+				</control>
+				
+				<control type="group">
+					<height>50</height>
+					
+					<control type="button" id="6">
+						<description>record</description>
+						<include>Common_Control_Button</include>
+						<onup>5</onup>
+						<ondown>7</ondown>
+					</control>
+					
+					<control type="image">
+						<include>Common_Control_Button</include>
+						<texture>icons/record.png</texture>
+					</control>
+					
+					<control type="image">
+						<visible>!Control.IsEnabled(6)</visible>
+						<include>Common_Control_Button</include>
+						<texture>backings/overlay.png</texture>
+					</control>
+					
+					<control type="label">
+						<include>Common_Control_Label</include>
+						<label>$LOCALIZE[264]</label>
+					</control>
+					
+				</control>
+				
+			</control>
+			
+        </control>
+		
+    </controls>
+	
+</window>

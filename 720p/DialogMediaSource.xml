@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window id="129">
+	<defaultcontrol always="true">10</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<include>DialogOverlay</include>
+
+		<control type="group">
+			<posx>325</posx>
+			<posy>80</posy>
+			<include>Animation_Dialog_Center</include>
+			
+			<control type="image">
+				<width>655</width>
+				<height>560</height>
+				<include>Common_Color_Keyback1</include>
+			</control>
+
+			<control type="label" id="0">
+				<description>Path</description>
+				<posx>635</posx>
+				<width>660</width>
+				<include>Dialog_Header</include>
+				<label>$LOCALIZE[20094]</label>
+			</control>
+			
+			<control type="image">
+				<width>655</width>
+				<include>Dialog_Line</include>
+			</control>
+			
+			<control type="image">
+				<width>195</width>
+				<height>560</height>
+				<include>Common_Color_Keyback2</include>
+			</control>
+
+			<control type="list" id="10">
+				<posx>215</posx>
+				<posy>80</posy>
+				<width>420</width>
+				<height>322</height>
+				<onup>19</onup>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<ondown>12</ondown>
+				<itemlayout height="46">
+
+					<control type="image">
+						<width>420</width>
+						<height>44</height>
+						<include>Common_Color_Keyback1</include>
+					</control>
+
+					<control type="label">
+						<posx>20</posx>
+						<width>400</width>
+						<info>ListItem.Label</info>
+					</control>
+
+				</itemlayout>
+
+				<focusedlayout height="46">
+
+					<control type="image">
+						<width>420</width>
+						<height>44</height>
+						<include>Common_Color_Accent</include>
+						<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(10)">Conditional</animation>
+					</control>
+
+					<control type="label">
+						<posx>20</posx>
+						<width>400</width>
+						<info>ListItem.Label</info>
+					</control>
+
+				</focusedlayout>
+
+			</control>
+
+			<control type="grouplist" id="9000">
+				<posx>20</posx>
+				<posy>80</posy>
+				<width>180</width>
+				<height>350</height>
+				<itemgap>5</itemgap>
+				<orientation>vertical</orientation>
+				<scrolltime tween="back" easing="inout">1000</scrolltime>
+				
+				<control type="group">
+					<width>180</width>
+					<height>50</height>
+					
+					<control type="button" id="11">
+						<description>Browse</description>
+						<include>Common_Control_Button</include>
+						<onup>14</onup>
+						<ondown>13</ondown>
+						<onleft>10</onleft>
+						<onright>10</onright>
+					</control>
+					
+					<control type="image">
+						<include>Common_Control_Button</include>
+						<texture>icons/browse.png</texture>
+					</control>
+					
+					<control type="label">
+						<include>Common_Control_Label</include>
+						<label>1024</label>
+					</control>
+					
+				</control>	
+					
+				<control type="group">
+					<width>180</width>
+					<height>50</height>	
+					
+					<control type="button" id="13">
+						<description>Add</description>
+						<include>Common_Control_Button</include>
+						<onup>11</onup>
+						<ondown>14</ondown>
+						<onleft>10</onleft>
+						<onright>10</onright>
+					</control>
+					
+					<control type="image">
+						<include>Common_Control_Button</include>
+						<texture>icons/add.png</texture>
+					</control>
+					
+					<control type="image">
+						<visible>!Control.IsEnabled(13)</visible>
+						<include>Common_Control_Button</include>
+						<texture>backings/overlay.png</texture>
+					</control>
+					
+					<control type="label">
+						<visible>!Control.IsEnabled(13)</visible>
+						<include>Common_Control_Label</include>
+						<label>15019</label>
+						<textcolor>Keyback1</textcolor>
+					</control>
+					
+					<control type="label">
+						<visible>Control.IsEnabled(13)</visible>
+						<include>Common_Control_Label</include>
+						<label>15019</label>
+					</control>
+					
+				</control>	
+					
+				<control type="group">
+					<width>180</width>
+					<height>50</height>
+					
+					<control type="button" id="14">
+						<description>remove</description>
+						<include>Common_Control_Button</include>
+						<texturenofocus>views/removeNF.png</texturenofocus>
+						<texturefocus>views/removeFO.png</texturefocus>
+						<onup>13</onup>
+						<ondown>11</ondown>
+						<onleft>10</onleft>
+						<onright>10</onright>
+					</control>
+					
+					<control type="image">
+						<include>Common_Control_Button</include>
+						<texture>icons/remove.png</texture>
+					</control>
+					
+					<control type="image">
+						<visible>!Control.IsEnabled(14)</visible>
+						<include>Common_Control_Button</include>
+						<texture>backings/overlay.png</texture>
+					</control>
+					
+					<control type="label">
+						<visible>!Control.IsEnabled(14)</visible>
+						<include>Common_Control_Label</include>
+						<label>1210</label>
+						<textcolor>Keyback1</textcolor>
+					</control>
+					
+					<control type="label">
+						<visible>Control.IsEnabled(14)</visible>
+						<include>Common_Control_Label</include>
+						<label>1210</label>
+					</control>
+					
+				</control>	
+
+			</control>
+		
+			<control type="label" id="0">
+				<description>Name Label</description>
+				<posx>205</posx>
+				<posy>398</posy>
+				<width>440</width>
+				<align>center</align>
+				<label>$LOCALIZE[1022]</label>
+			</control>
+
+			<control type="button" id="12">
+				<description>Name</description>
+				<posx>205</posx>
+				<posy>448</posy>
+				<label>-</label>
+				<width>440</width>
+				<align>left</align>
+				<textoffsetx>20</textoffsetx>
+				<texturenofocus>backings/edit-back.png</texturenofocus>
+				<font>font20</font>
+				<onup>10</onup>
+				<onleft>12</onleft>
+				<onright>18</onright>
+				<ondown>19</ondown>
+			</control>
+			
+			<control type="group">
+				<posx>527</posx>
+				<posy>500</posy>
+
+				<control type="button" id="18">
+					<description>OK Button</description>
+					<visible>Control.IsEnabled(18)</visible>
+					<onleft>9000</onleft>
+					<onright>19</onright>
+					<onup>12</onup>
+					<ondown>10</ondown>
+					<include>Dialog_OkButton</include>				
+				</control>
+				
+				<control type="image">
+					<description>OK Button</description>
+					<visible>!Control.IsEnabled(18)</visible>
+					<include>Dialog_Button</include>
+					<texture>buttons/okDISABLED.png</texture>				
+				</control>
+
+				<control type="button" id="19">
+					<description>Cancel Button</description>
+					<posx>60</posx>
+					<label>222</label>
+					<onleft>18</onleft>
+					<onright>9000</onright>
+					<onup>12</onup>
+					<ondown>10</ondown>
+					<include>Dialog_CancelButton</include>
+				</control>
+				
+			</control>	
+
+		</control>
+
+	</controls>
+
+</window>

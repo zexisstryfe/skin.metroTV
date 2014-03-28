@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window id="131">
+	<defaultcontrol always="true">5</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<include>DialogOverlay</include>
+
+		<control type="group">
+			<posx>440</posx>
+			<posy>140</posy>
+			<include>Animation_Dialog_Center</include>
+			
+			<control type="image">
+				<width>400</width>
+				<height>470</height>
+				<include>Common_Color_Keyback1</include>
+			</control>
+
+			<control type="label">
+				<description>Header Label</description>
+				<posx>380</posx>
+				<width>400</width>
+				<include>Dialog_Header</include>
+				<label>$LOCALIZE[20043]</label>
+			</control>
+			
+			<control type="image">
+				<description>line</description>
+				<width>400</width>
+				<include>Dialog_Line</include>
+			</control>
+
+			<control type="grouplist" id="5">
+				<description>Control Area</description>
+				<posx>20</posx>
+				<posy>70</posy>
+				<height>275</height>
+				<width>360</width>
+				<itemgap>2</itemgap>
+				<orientation>vertical</orientation>
+				<onleft>28</onleft>
+				<onright>28</onright>
+				<onup>28</onup>
+				<ondown>28</ondown>
+			</control>
+
+			<control type="button" id="7">
+				<description>button</description>
+				<width>580</width>
+				<align>left</align>
+			</control>
+
+			<control type="radiobutton" id="8">
+				<description>radio_button</description>
+				<width>580</width>
+				<align>left</align>
+			</control>
+
+			<control type="spincontrolex" id="9">
+				<description>spin_controlex</description>
+				<width>580</width>
+				<align>left</align>
+			</control>
+
+			<control type="sliderex" id="10">
+				<description>slider</description>
+				<width>580</width>
+				<align>left</align>
+			</control>
+
+			<control type="button" id="28">
+				<description>Ok</description>
+				<posx>272</posx>
+				<posy>406</posy>
+				<onleft>29</onleft>
+				<onright>29</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<include>Dialog_OkButton</include>
+			</control>
+
+			<control type="button" id="29">
+				<description>Cancel</description>
+				<posx>332</posx>
+				<posy>406</posy>
+				<onleft>28</onleft>
+				<onright>28</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<include>Dialog_CancelButton</include>
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

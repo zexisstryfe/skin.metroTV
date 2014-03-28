@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window type="dialog" id="3001">
+	<defaultcontrol always="true">2405</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<zorder>0</zorder>
+	<onload>Skin.SetString(HomeTileEdit.Type,0)</onload>
+	<onload>Skin.SetString(HomeTileEdit.TypeName,$LOCALIZE[1037])</onload>
+	<onload>Skin.SetString(Window.Property(HomeTileEdit.Type),0)</onload>
+	<onunload condition="!IsEmpty(Skin.String(HomeTileEdit.Path))">Skin.Reset(HomeTileEdit.Path)</onunload>
+	<onunload condition="!IsEmpty(Skin.String(HomeTileEdit.Label))">Skin.Reset(HomeTileEdit.Label)</onunload>
+	<onunload condition="!IsEmpty(Skin.String(HomeTileEdit.Icon))">Skin.Reset(HomeTileEdit.Icon)</onunload>
+
+	<controls>
+
+		<include>DialogOverlay</include>		
+
+		<control type="group">
+			<posx>320</posx>
+			<posy>210</posy>
+			<include>Animation_Dialog_Center</include>
+			
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>660</width>
+				<height>300</height>
+				<include>Common_Color_Keyback1</include>
+			</control>
+
+			<control type="label" id="1">
+				<description>header label</description>
+				<posx>640</posx>
+				<width>460</width>
+				<include>Dialog_Header</include>
+				<label>$LOCALIZE[31197]</label>
+			</control>
+			
+			<control type="image">
+				<description>line</description>
+				<include>Dialog_Line</include>
+				<width>660</width>				
+			</control>
+			
+			<control type="group">
+				
+				<control type="image">
+					<posx>10</posx>
+					<posy>80</posy>
+					<width>640</width>
+					<height>35</height>
+					<include>Common_Color_Accent</include>
+					<visible>ControlGroup(2405).HasFocus</visible>
+				</control>
+				
+				<control type="button">				
+					<include>TileCreator_Buttons1</include>
+					<visible>!ControlGroup(2405).HasFocus</visible>
+				</control>
+				
+				<control type="button">
+					<include>TileCreator_Buttons1</include>
+					<visible>ControlGroup(2405).HasFocus</visible>
+				</control>
+				
+			</control>
+        
+			<control type="grouplist" id="2405">
+				<description>button area</description>
+				<posx>600</posx>
+				<posy>88</posy>
+				<width>120</width>
+				<height>60</height>
+				<itemgap>0</itemgap>
+				<onleft>5</onleft>
+				<onright condition="Control.IsVisible(3)">3</onright>
+				<onright condition="!Control.IsVisible(3)">6</onright>
+				<onup>2404</onup>
+				<ondown>2406</ondown>
+				<orientation>horizontal</orientation>
+				
+				<control type="button" id="24051">
+					<width>20</width>
+					<height>20</height>
+					<aspectratio>keep</aspectratio>
+					<texturefocus>controls/ArrowDownFO.png</texturefocus>
+					<texturenofocus>controls/ArrowDownNF.png</texturenofocus>
+					<onclick condition="Skin.String(HomeTileEdit.Type,6)">Skin.SetString(HomeTileEdit.Type,0)</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,6)">Skin.SetString(HomeTileEdit.TypeName,$LOCALIZE[1037])</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,6)">SetProperty(HomeTileEdit.Type,0)</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,5)">Skin.SetString(HomeTileEdit.Type,6)</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,5)">Skin.SetString(HomeTileEdit.TypeName,$LOCALIZE[1036])</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,5)">SetProperty(HomeTileEdit.Type,6)</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,4)">Skin.SetString(HomeTileEdit.Type,5)</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,4)">Skin.SetString(HomeTileEdit.TypeName,$LOCALIZE[20011])</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,4)">SetProperty(HomeTileEdit.Type,5)</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,3)">Skin.SetString(HomeTileEdit.Type,4)</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,3)">Skin.SetString(HomeTileEdit.TypeName,$LOCALIZE[20012])</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,3)">SetProperty(HomeTileEdit.Type,4)</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,2)">Skin.SetString(HomeTileEdit.Type,3)</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,2)">Skin.SetString(HomeTileEdit.TypeName,$LOCALIZE[1043])</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,2)">SetProperty(HomeTileEdit.Type,3)</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,1)">Skin.SetString(HomeTileEdit.Type,2)</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,1)">Skin.SetString(HomeTileEdit.TypeName,$LOCALIZE[1039])</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,1)">SetProperty(HomeTileEdit.Type,2)</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,0)">Skin.SetString(HomeTileEdit.Type,1)</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,0)">Skin.SetString(HomeTileEdit.TypeName,$LOCALIZE[1038])</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,0)">SetProperty(HomeTileEdit.Type,1)</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,6)">Skin.SetString(HomeTileEdit.Type,0)</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,6)">Skin.SetString(HomeTileEdit.TypeName,$LOCALIZE[1037])</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,6)">SetProperty(HomeTileEdit.Type,0)</onclick>
+				</control>
+					
+				<control type="button" id="24052">
+					<width>20</width>
+					<height>20</height>
+					<aspectratio>keep</aspectratio>
+					<texturefocus>controls/ArrowUpFO.png</texturefocus>
+					<texturenofocus>controls/ArrowUpNF.png</texturenofocus>
+					<onclick condition="Skin.String(HomeTileEdit.Type,0)">Skin.SetString(HomeTileEdit.Type,6)</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,0)">Skin.SetString(HomeTileEdit.TypeName,$LOCALIZE[1036])</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,0)">SetProperty(HomeTileEdit.Type,6)</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,1)">Skin.SetString(HomeTileEdit.Type,0)</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,1)">Skin.SetString(HomeTileEdit.TypeName,$LOCALIZE[1037])</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,1)">SetProperty(HomeTileEdit.Type,0)</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,2)">Skin.SetString(HomeTileEdit.Type,1)</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,2)">Skin.SetString(HomeTileEdit.TypeName,$LOCALIZE[1038])</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,2)">SetProperty(HomeTileEdit.Type,1)</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,3)">Skin.SetString(HomeTileEdit.Type,2)</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,3)">Skin.SetString(HomeTileEdit.TypeName,$LOCALIZE[1039])</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,3)">SetProperty(HomeTileEdit.Type,2)</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,4)">Skin.SetString(HomeTileEdit.Type,3)</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,4)">Skin.SetString(HomeTileEdit.TypeName,$LOCALIZE[1043])</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,4)">SetProperty(HomeTileEdit.Type,3)</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,5)">Skin.SetString(HomeTileEdit.Type,4)</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,5)">Skin.SetString(HomeTileEdit.TypeName,$LOCALIZE[20012])</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,5)">SetProperty(HomeTileEdit.Type,4)</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,6)">Skin.SetString(HomeTileEdit.Type,5)</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,6)">Skin.SetString(HomeTileEdit.TypeName,$LOCALIZE[20011])</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,6)">SetProperty(HomeTileEdit.Type,5)</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,0)">Skin.SetString(HomeTileEdit.Type,6)</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,0)">Skin.SetString(HomeTileEdit.TypeName,$LOCALIZE[1036])</onclick>
+					<onclick condition="Skin.String(HomeTileEdit.Type,0)">SetProperty(HomeTileEdit.Type,6)</onclick>
+				</control>
+				
+			</control>
+			
+			<control type="button" id="2406">
+				<posx>10</posx>
+				<posy>115</posy>
+				<width>640</width>
+				<height>35</height>
+				<align>left</align>
+				<textoffsetx>10</textoffsetx>
+				<onup>2405</onup>
+				<ondown>2141</ondown>
+				<label>$LOCALIZE[31198]</label>
+				<label2>$INFO[Skin.String(HomeTileEdit.Path)]</label2>
+				<onclick condition="!Skin.String(HomeTileEdit.Type,6)">SetProperty(Property,HomeTileEdit,selectdialog)</onclick>
+ 				<onclick condition="Skin.String(HomeTileEdit.Type,0)">Skin.SetAddon(HomeTileEdit.Path,xbmc.addon.video)</onclick>
+				<onclick condition="Skin.String(HomeTileEdit.Type,1)">Skin.SetAddon(HomeTileEdit.Path,xbmc.addon.audio)</onclick>
+				<onclick condition="Skin.String(HomeTileEdit.Type,2)">Skin.SetAddon(HomeTileEdit.Path,xbmc.addon.image)</onclick>
+				<onclick condition="Skin.String(HomeTileEdit.Type,3)">Skin.SetAddon(HomeTileEdit.Path,xbmc.addon.executable)</onclick>
+				<onclick condition="Skin.String(HomeTileEdit.Type,4)">Skin.SetFile(HomeTileEdit.Path,.xsp|.m3u,special://profile/playlists/video/)</onclick>
+				<onclick condition="Skin.String(HomeTileEdit.Type,5)">Skin.SetFile(HomeTileEdit.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
+				<onclick condition="Skin.String(HomeTileEdit.Type,6)">RunScript(script.favourites,property=HomeTileEdit)</onclick>
+			</control>
+			
+			<control type="button" id="2141">
+				<posy>150</posy>
+				<include>TileCreator_Buttons2</include>
+				<onup>2406</onup>
+				<ondown>2142</ondown>
+                <label>$LOCALIZE[551]</label>
+                <label2>$INFO[Skin.String(HomeTileEdit.Label)]</label2>
+                <onclick>Skin.SetString(HomeTileEdit.Label)</onclick>
+            </control>
+			
+			<control type="button" id="2142">
+				<posy>185</posy>
+				<include>TileCreator_Buttons2</include>
+				<onup>2141</onup>
+				<ondown>11</ondown>
+                <label>$LOCALIZE[31205]</label>
+                <label2>$INFO[Skin.String(HomeTileEdit.Icon)]</label2>
+                <onclick>Skin.SetImage(HomeTileEdit.Icon)</onclick>
+            </control>
+			
+			<control type="button" id="11">
+				<description>Yes</description>
+				<posx>532</posx>
+				<posy>240</posy>
+				<include>Dialog_OkButton</include>
+				<onleft>10</onleft>
+				<onright>10</onright>
+				<onup>2142</onup>
+				<ondown>2405</ondown>
+				<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],$INFO[Skin.String(HomeTileEdit.Label)])</onclick>
+				<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)].Label,$INFO[Skin.String(HomeTileEdit.Label)])</onclick>
+				<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)].Icon,$INFO[Skin.String(HomeTileEdit.Icon)])</onclick>
+				<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)].Path,$INFO[Skin.String(HomeTileEdit.Path)])</onclick>
+				<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)].Type,$INFO[Skin.String(HomeTileEdit.Type)])</onclick>
+				<onclick>Dialog.Close(3001)</onclick>
+				<onclick>Dialog.Close(200)</onclick>
+			</control>
+
+			<control type="button" id="10">
+				<description>No</description>
+				<posx>592</posx>
+				<posy>240</posy>
+				<include>Dialog_CancelButton</include>
+				<onleft>11</onleft>
+				<onright>11</onright>
+				<onup>2142</onup>
+				<ondown>2405</ondown>
+				<onclick>Dialog.Close(3001)</onclick>
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

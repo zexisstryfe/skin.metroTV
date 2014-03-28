@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	
+	<!-- Views -->
+	<include file="Viewtype_List.xml" /> <!-- id 50 -->
+	<include file="Viewtype_List_Pics.xml" /> <!-- id 50 -->
+	<include file="Viewtype_Fanart.xml" /> <!-- id 51 -->
+	<include file="Viewtype_Episodes.xml" /> <!-- id 52 -->
+	<include file="Viewtype_Songs.xml" /> <!-- id 52 -->
+	<include file="Viewtype_Dialog.xml" /> <!-- id 53 -->
+	<include file="Viewtype_Panel.xml" /> <!-- id 54 -->
+	<include file="Viewtype_Panel_Album.xml" /> <!-- id 54 -->
+	<include file="Viewtype_Tiles.xml" /> <!-- id 55 -->
+	<include file="Viewtype_Photos.xml" /> <!-- id 55 -->
+	<include file="Viewtype_Panel_Genre.xml" /> <!-- id 56 -->
+	<include file="Viewtype_Showcase.xml" /> <!-- id 57 -->
+	<include file="Viewtype_Showcase_Album.xml" /> <!-- id 57 -->
+	<include file="Viewtype_Logo.xml" /> <!-- id 58 -->
+	<include file="Viewtype_Album.xml" /> <!-- id 58 -->
+	<include file="Viewtype_16x9.xml" /> <!-- id 59 -->
+	<include file="Viewtype_Fanart_Banner.xml" /> <!-- id 590 -->	
+	
+	<!-- PVR Views -->
+	<include file="Viewtype_PVR_TVChannel.xml" />
+	<include file="Viewtype_PVR_RadioChannel.xml" />
+	<include file="Viewtype_PVR_TVRecordings.xml" />
+	<include file="Viewtype_PVR_EPGTimeline.xml" />
+	<include file="Viewtype_PVR_TVTimers.xml" />
+	<include file="Viewtype_PVR_TVSearch.xml" />
+	<include file="Viewtype_PVR_TVGuideChannel.xml" />
+	<include file="Viewtype_PVR_TVGuideNowNext.xml" />	
+	
+	<!-- Include Files -->
+	<include file="Includes_Animations.xml" />
+	<include file="Includes_Backgrounds.xml" />
+	<include file="Includes_Tiles.xml" />
+	<include file="Includes_Codecs.xml" />
+	<include file="Includes_Common.xml" />
+	<include file="Includes_Content.xml" />
+	<include file="Includes_Dialogs.xml" />
+	<include file="Includes_Home.xml" />
+	<include file="Includes_Options.xml" />
+	<include file="Includes_Settings.xml" />
+	
+	<!-- Variables -->
+	<include file="Variable.xml" />
+	<include file="Defaults.xml" />
+	
+	<!-- Misc Includes -->	
+	
+	<include name="TVGuide_FixedList">
+		<posy>20</posy>
+		<width>1000</width>
+		<height>550</height>
+		<viewtype label="Extended">wrap</viewtype>
+		<orientation>horizontal</orientation>
+		<pagecontrol>63</pagecontrol>
+		<focusposition>0</focusposition>
+		<scrolltime tween="sine" easing="out">400</scrolltime>
+		<preloaditems>2</preloaditems>
+		<itemlayout width="189" height="315">
+		
+			<control type="group">
+				<posy>190</posy>
+				<width>300</width>
+				<height>440</height>
+				
+				<control type="image">
+					<width>182</width>
+					<height>315</height>
+					<include>Common_Color_Tile1</include>
+					<visible>!Skin.HasSetting(TileBackground)</visible>
+				</control>
+				
+				<control type="image">
+					<width>182</width>
+					<height>315</height>
+					<include>Common_Color_Keyback1</include>
+					<visible>Skin.HasSetting(TileBackground)</visible>
+				</control>
+				
+				<control type="image">
+					<description>Logo</description>
+					<posx>5</posx>
+					<posy>8</posy>
+					<width>172</width>
+					<height>60</height>
+					<aspectratio aligny="top">keep</aspectratio>
+					<texture background="true">$INFO[ListItem.Property(Path),,logo.png]</texture>
+				</control>
+				
+				<control type="textbox">
+					<posx>10</posx>
+					<posy>75</posy>
+					<width>160</width>
+					<height>60</height>
+					<label>$INFO[ListItem.Property(NextTitle)]</label>
+					<font>font16UB</font>
+					<textcolor>Accent</textcolor>
+					<shadowcolor>00FFFFFF</shadowcolor>
+					<align>center</align>
+					<autoscroll>true</autoscroll>
+				</control>
+				
+				<control type="textbox">
+					<posx>10</posx>
+					<posy>135</posy>
+					<width>160</width>
+					<height>20</height>
+					<label>$INFO[ListItem.Property(ShortTime)]</label>
+					<font>font16UB</font>
+					<align>center</align>
+				</control>
+				
+				<control type="image">
+					<description>Thumb</description>
+					<posx>5</posx>
+					<posy>160</posy>
+					<width>172</width>
+					<height>150</height>
+					<aspectratio aligny="top">scale</aspectratio>
+					<texture background="true">$INFO[ListItem.Property(Fanart)]</texture>
+				</control>
+				
+			</control>
+			
+		</itemlayout>
+		
+		<focusedlayout width="189" height="315">
+		
+			<control type="group">
+				<posy>190</posy>
+				<width>300</width>
+				<height>440</height>
+				<visible>Control.HasFocus(207)</visible>
+				
+				<control type="image">
+					<width>182</width>
+					<height>315</height>
+					<include>Common_Color_Tile1</include>
+					<visible>!Skin.HasSetting(TileBackground)</visible>
+				</control>
+				
+				<control type="image">
+					<width>182</width>
+					<height>315</height>
+					<include>Common_Color_Keyback1</include>
+					<visible>Skin.HasSetting(TileBackground)</visible>
+				</control>
+				
+				<control type="image">
+					<description>Logo</description>
+					<posx>5</posx>
+					<posy>8</posy>
+					<width>172</width>
+					<height>60</height>
+					<aspectratio aligny="top">keep</aspectratio>
+					<texture background="true">$INFO[ListItem.Property(Path),,logo.png]</texture>
+				</control>
+				
+				<control type="textbox">
+					<posx>10</posx>
+					<posy>75</posy>
+					<width>160</width>
+					<height>60</height>
+					<label>$INFO[ListItem.Property(NextTitle)]</label>
+					<font>font16UB</font>
+					<textcolor>Accent</textcolor>
+					<shadowcolor>00FFFFFF</shadowcolor>
+					<align>center</align>
+					<autoscroll>true</autoscroll>
+				</control>
+				
+				<control type="textbox">
+					<posx>10</posx>
+					<posy>135</posy>
+					<width>160</width>
+					<height>20</height>
+					<label>$INFO[ListItem.Property(ShortTime)]</label>
+					<font>font16UB</font>
+					<align>left</align>
+				</control>
+				
+				<control type="image">
+					<description>Thumb</description>
+					<posx>5</posx>
+					<posy>160</posy>
+					<width>172</width>
+					<height>150</height>
+					<aspectratio aligny="top">scale</aspectratio>
+					<texture background="true">$INFO[ListItem.Property(Fanart)]</texture>
+				</control>	
+				
+			</control>
+			
+			<control type="group">
+				<posy>190</posy>
+				<width>300</width>
+				<height>440</height>
+				<visible>!Control.HasFocus(207)</visible>
+				
+				<control type="image">
+					<width>182</width>
+					<height>315</height>
+					<include>Common_Color_Tile1</include>
+					<visible>!Skin.HasSetting(TileBackground)</visible>
+				</control>
+				
+				<control type="image">
+					<width>182</width>
+					<height>315</height>
+					<include>Common_Color_Keyback1</include>
+					<visible>Skin.HasSetting(TileBackground)</visible>
+				</control>
+				
+				<control type="image">
+					<width>182</width>
+					<height>315</height>
+					<include>Common_Color_Accent</include>
+					<animation effect="fade" start="100" end="30" time="0" condition="Control.HasFocus(50)">conditional</animation>
+				</control>
+				
+				<control type="image">
+					<description>Logo</description>
+					<posx>5</posx>
+					<posy>8</posy>
+					<width>172</width>
+					<height>60</height>
+					<aspectratio aligny="top">keep</aspectratio>
+					<texture background="true">$INFO[ListItem.Property(Path),,logo.png]</texture>
+				</control>
+				
+				<control type="textbox">
+					<posx>10</posx>
+					<posy>75</posy>
+					<width>160</width>
+					<height>60</height>
+					<label>$INFO[ListItem.Property(NextTitle)]</label>
+					<font>font16UB</font>
+					<textcolor>Black</textcolor>
+					<shadowcolor>00FFFFFF</shadowcolor>
+					<align>center</align>
+					<autoscroll>true</autoscroll>
+				</control>
+				
+				<control type="textbox">
+					<posx>10</posx>
+					<posy>135</posy>
+					<width>160</width>
+					<height>20</height>
+					<label>$INFO[ListItem.Property(ShortTime)]</label>
+					<font>font16UB</font>
+					<align>center</align>
+				</control>
+				
+				<control type="image">
+					<description>Thumb</description>
+					<posx>5</posx>
+					<posy>160</posy>
+					<width>172</width>
+					<height>150</height>
+					<aspectratio aligny="top">scale</aspectratio>
+					<texture background="true">$INFO[ListItem.Property(Fanart)]</texture>
+				</control>
+				
+			</control>
+
+		</focusedlayout>	
+		
+	</include>
+		
+	<include name="DialogID">
+		<width>520</width>
+		<height>14</height>
+		<textcolor>White</textcolor>
+		<shadowcolor>Red</shadowcolor>
+		<align>left</align>
+	</include>
+	
+	<include name="WindowID">
+		<width>520</width>
+		<height>14</height>
+		<textcolor>White</textcolor>
+		<shadowcolor>Red</shadowcolor>
+		<align>left</align>
+	</include>
+	
+	<include name="BackgroundTextScroll">
+		<control type="group">
+			<visible>Container.Content(songs)</visible>
+			<control type="group" id="3333">	
+				<visible> IntegerGreaterThan(System.Time(ss),40)</visible>		
+				<animation effect="fade" time="600">Visible</animation>
+				<animation effect="fade" time="600">Hidden</animation>	 
+				
+				<control type="label">
+					<description>Now Playing</description>
+					<posy>900</posy>
+					<height>25</height>
+					<label>$INFO[ListItem.Title,  ,] $INFO[ListItem.Title,  ,] $INFO[ListItem.Title,  ,] $INFO[ListItem.Title,  ,] $INFO[ListItem.Title,  ,] </label>
+					<include>Common_Scroll_AngleText</include>
+					<font>font230L</font>
+					<textcolor>White60</textcolor>
+				</control>
+				
+				<control type="label">
+					<description>Now Playing</description>
+					<posx>170</posx>
+					<posy>900</posy>
+					<label>$INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] </label>
+					<include>Common_Scroll_AngleText</include>
+					<font>font72L</font>
+					<textcolor>Black80</textcolor>
+					<scrollspeed>100</scrollspeed>
+				</control>
+
+				<control type="label">
+					<description>Now Playing</description>
+					<posx>320</posx>
+					<posy>900</posy>
+					<label>$INFO[ListItem.Album, ,] $INFO[ListItem.Album, ,] $INFO[ListItem.Album, ,] $INFO[ListItem.Album, ,] $INFO[ListItem.Album, ,] $INFO[ListItem.Album, ,] $INFO[ListItem.Album, ,] $INFO[ListItem.Album, ,] </label>
+					<include>Common_Scroll_AngleText</include>
+					<font>font40L</font>
+					<textcolor>White80</textcolor>
+					<scrollspeed>80</scrollspeed>
+				</control>
+			</control>
+
+			<control type="group" id="3334">	
+				<visible> IntegerGreaterThan(System.Time(ss),0) + !IntegerGreaterThan(System.Time(ss),21)</visible>
+				<animation effect="fade" time="600">Visible</animation>
+				<animation effect="fade" time="600">Hidden</animation>
+				
+				<control type="label">
+					<description>Now Playing</description>
+					<posy>500</posy>
+					<width>1350</width>
+					<height>25</height>
+					<label>$INFO[ListItem.Title,  ,] $INFO[ListItem.Title,  ,] $INFO[ListItem.Title,  ,] $INFO[ListItem.Title,  ,] $INFO[ListItem.Title,  ,] </label>
+					<scroll>true</scroll>
+					<font>font230L</font>
+					<pauseatend>0</pauseatend>
+					<textcolor>White60</textcolor>
+				</control>
+				
+				<control type="label">
+					<description>Now Playing</description>
+					<posy>600</posy>
+					<width>1350</width>
+					<label>$INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] </label>
+					<scroll>true</scroll>
+					<pauseatend>0</pauseatend>
+					<font>font72L</font>
+					<textcolor>Black80</textcolor>
+					<scrollspeed>100</scrollspeed>
+				</control>
+
+				<control type="label">
+					<description>Now Playing</description>
+					<posy>600</posy>
+					<width>1350</width>
+					<label>$INFO[ListItem.Album, ,] $INFO[ListItem.Album, ,] $INFO[ListItem.Album, ,] $INFO[ListItem.Album, ,] $INFO[ListItem.Album, ,] $INFO[ListItem.Album, ,] $INFO[ListItem.Album, ,] $INFO[ListItem.Album, ,] </label>
+					<scroll>true</scroll>
+					<pauseatend>0</pauseatend>
+					<font>font40L</font>
+					<textcolor>White80</textcolor>
+					<scrollspeed>80</scrollspeed>
+					<pauseatend>0</pauseatend>
+				</control>
+										
+				<control type="label">
+					<description>Player Times</description>
+					<posx>760</posx>
+					<posy>80</posy>
+					<width>900</width>
+					<label>$INFO[ListItem.Time]</label>
+					<font>font230L</font>
+					<textcolor>White40</textcolor>
+				</control>
+			</control>
+
+			<control type="group" id="3335">	
+				<visible> IntegerGreaterThan(System.Time(ss),20) + !IntegerGreaterThan(System.Time(ss),41)</visible>
+				<animation effect="fade" time="600">Visible</animation>
+				<animation effect="fade" time="600">Hidden</animation>
+				
+				<control type="label">
+					<description>Now Playing</description>
+					<posx>400</posx>
+					<posy>900</posy>
+					<width>1050</width>
+					<height>25</height>
+					<label>$INFO[ListItem.Title,  ,] $INFO[ListItem.Title,  ,] $INFO[ListItem.Title,  ,] $INFO[ListItem.Title,  ,] $INFO[ListItem.Title,  ,] </label>
+					<scroll>true</scroll>
+					<font>font230L</font>
+					<pauseatend>0</pauseatend>
+					<angle>90</angle>
+					<textcolor>White60</textcolor>
+				</control>
+				
+				<control type="label">
+					<description>Now Playing</description>
+					<posx>580</posx>
+					<posy>900</posy>
+					<width>1350</width>
+					<label>$INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] </label>
+					<scroll>true</scroll>
+					<pauseatend>0</pauseatend>
+					<font>font72L</font>
+					<textcolor>Black80</textcolor>
+					<angle>90</angle>
+					<scrollspeed>100</scrollspeed>
+				</control>
+
+				<control type="label">
+					<description>Now Playing</description>
+					<posx>580</posx>
+					<posy>900</posy>
+					<width>1350</width>
+					<label>$INFO[ListItem.Album, ,] $INFO[ListItem.Album, ,] $INFO[ListItem.Album, ,] $INFO[ListItem.Album, ,] $INFO[ListItem.Album, ,] $INFO[ListItem.Album, ,] $INFO[ListItem.Album, ,] $INFO[ListItem.Album, ,] </label>
+					<scroll>true</scroll>
+					<pauseatend>0</pauseatend>
+					<font>font40L</font>
+					<textcolor>White80</textcolor>
+					<angle>90</angle>
+					<scrollspeed>80</scrollspeed>
+					<pauseatend>0</pauseatend>
+				</control>
+							
+				
+				<control type="label">
+					<description>Player Times</description>
+					<posx>-40</posx>
+					<posy>280</posy>
+					<width>900</width>
+					<label>$INFO[MusicPlayer.Time]</label>
+					<font>font230L</font>
+					<textcolor>White40</textcolor>
+				</control>
+			</control>
+
+		</control>
+
+		<control type="group">
+			<visible>Player.HasAudio + !Control.IsVisible(503) + !Container.Content(episodes)</visible>
+			<control type="group" id="3333">	
+				<visible> IntegerGreaterThan(System.Time(ss),41)</visible>		
+				<animation effect="fade" time="600">Visible</animation>
+				<animation effect="fade" time="600">Hidden</animation>
+				<control type="label">
+					<description>Now Playing</description>
+					<posy>900</posy>
+					<height>25</height>
+					<label>$INFO[MusicPlayer.Title,  ,] $INFO[MusicPlayer.Title,  ,] $INFO[MusicPlayer.Title,  ,] $INFO[MusicPlayer.Title,  ,] $INFO[MusicPlayer.Title,  ,] </label>
+					<include>Common_Scroll_AngleText</include>
+					<font>font230L</font>
+					<textcolor>White60</textcolor>
+				</control>
+				
+				<control type="label">
+					<description>Now Playing</description>
+					<posx>170</posx>
+					<posy>900</posy>
+					<label>$INFO[MusicPlayer.Artist, ,] $INFO[MusicPlayer.Artist, ,] $INFO[MusicPlayer.Artist, ,] $INFO[MusicPlayer.Artist, ,] $INFO[MusicPlayer.Artist, ,] $INFO[MusicPlayer.Artist, ,] $INFO[MusicPlayer.Artist, ,] $INFO[MusicPlayer.Artist, ,] $INFO[MusicPlayer.Artist, ,] </label>
+					<include>Common_Scroll_AngleText</include>
+					<font>font72L</font>
+					<textcolor>Black80</textcolor>
+					<scrollspeed>100</scrollspeed>
+				</control>
+
+				<control type="label">
+					<description>Now Playing</description>
+					<posx>320</posx>
+					<posy>900</posy>
+					<label>$INFO[MusicPlayer.Album, ,] $INFO[MusicPlayer.Album, ,] $INFO[MusicPlayer.Album, ,] $INFO[MusicPlayer.Album, ,] $INFO[MusicPlayer.Album, ,] $INFO[MusicPlayer.Album, ,] $INFO[MusicPlayer.Album, ,] $INFO[MusicPlayer.Album, ,] </label>
+					<include>Common_Scroll_AngleText</include>
+					<font>font40L</font>
+					<textcolor>White80</textcolor>
+					<scrollspeed>80</scrollspeed>
+				</control>
+					
+				<control type="label">
+					<description>Player Times</description>
+					<posx>70</posx>
+					<width>900</width>
+					<label>$INFO[MusicPlayer.Time]</label>
+					<font>font230L</font>
+					<angle>-45</angle>
+					<textcolor>White40</textcolor>
+				</control>
+				
+			</control>
+
+			<control type="group" id="3334">	
+				<visible> IntegerGreaterThan(System.Time(ss),0) + !IntegerGreaterThan(System.Time(ss),21)</visible>
+				<animation effect="fade" time="600">Visible</animation>
+				<animation effect="fade" time="600">Hidden</animation>
+				
+				<control type="label">
+					<description>Now Playing</description>
+					<posy>500</posy>
+					<width>1350</width>
+					<height>25</height>
+					<label>$INFO[MusicPlayer.Title,  ,] $INFO[MusicPlayer.Title,  ,] $INFO[MusicPlayer.Title,  ,] $INFO[MusicPlayer.Title,  ,] $INFO[MusicPlayer.Title,  ,] </label>
+					<scroll>true</scroll>
+					<font>font230L</font>
+					<pauseatend>0</pauseatend>
+					<textcolor>White60</textcolor>
+				</control>
+				
+				<control type="label">
+					<description>Now Playing</description>
+					<posy>600</posy>
+					<width>1350</width>
+					<label>$INFO[MusicPlayer.Artist, ,] $INFO[MusicPlayer.Artist, ,] $INFO[MusicPlayer.Artist, ,] $INFO[MusicPlayer.Artist, ,] $INFO[MusicPlayer.Artist, ,] $INFO[MusicPlayer.Artist, ,] $INFO[MusicPlayer.Artist, ,] $INFO[MusicPlayer.Artist, ,] $INFO[MusicPlayer.Artist, ,] </label>
+					<scroll>true</scroll>
+					<pauseatend>0</pauseatend>
+					<font>font72L</font>
+					<textcolor>Black80</textcolor>
+					<scrollspeed>100</scrollspeed>
+				</control>
+
+				<control type="label">
+					<description>Now Playing</description>
+					<posy>600</posy>
+					<width>1350</width>
+					<label>$INFO[MusicPlayer.Album, ,] $INFO[MusicPlayer.Album, ,] $INFO[MusicPlayer.Album, ,] $INFO[MusicPlayer.Album, ,] $INFO[MusicPlayer.Album, ,] $INFO[MusicPlayer.Album, ,] $INFO[MusicPlayer.Album, ,] $INFO[MusicPlayer.Album, ,] </label>
+					<scroll>true</scroll>
+					<pauseatend>0</pauseatend>
+					<font>font40L</font>
+					<textcolor>White80</textcolor>
+					<scrollspeed>80</scrollspeed>
+				</control>
+				
+				<control type="label">
+					<description>Player Times</description>
+					<posx>760</posx>
+					<posy>80</posy>
+					<width>900</width>
+					<label>$INFO[MusicPlayer.Time]</label>
+					<font>font230L</font>
+					<textcolor>White40</textcolor>
+				</control>
+			</control>
+
+			<control type="group" id="3335">	
+				<visible> IntegerGreaterThan(System.Time(ss),20) + !IntegerGreaterThan(System.Time(ss),41)</visible>	
+				<animation effect="fade" time="600">Visible</animation>
+				<animation effect="fade" time="600">Hidden</animation>
+	
+				<control type="label">
+					<description>Now Playing</description>
+					<posx>400</posx>
+					<posy>900</posy>
+					<width>1050</width>
+					<height>25</height>
+					<label>$INFO[MusicPlayer.Title,  ,] $INFO[MusicPlayer.Title,  ,] $INFO[MusicPlayer.Title,  ,] $INFO[MusicPlayer.Title,  ,] $INFO[MusicPlayer.Title,  ,] </label>
+					<scroll>true</scroll>
+					<font>font230L</font>
+					<pauseatend>0</pauseatend>
+					<angle>90</angle>
+					<textcolor>White60</textcolor>
+				</control>
+				
+				<control type="label">
+					<description>Now Playing</description>
+					<posx>580</posx>
+					<posy>900</posy>
+					<width>1350</width>
+					<label>$INFO[MusicPlayer.Artist, ,] $INFO[MusicPlayer.Artist, ,] $INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,] $INFO[MusicPlayer.Artist, ,] $INFO[MusicPlayer.Artist, ,] $INFO[MusicPlayer.Artist, ,] $INFO[MusicPlayer.Artist, ,] $INFO[MusicPlayer.Artist, ,] </label>
+					<scroll>true</scroll>
+					<pauseatend>0</pauseatend>
+					<font>font72L</font>
+					<textcolor>Black80</textcolor>
+					<angle>90</angle>
+					<scrollspeed>100</scrollspeed>
+				</control>
+
+				<control type="label">
+					<description>Now Playing</description>
+					<posx>580</posx>
+					<posy>900</posy>
+					<width>1350</width>
+					<label>$INFO[MusicPlayer.Album, ,] $INFO[MusicPlayer.Album, ,] $INFO[MusicPlayer.Album, ,] $INFO[MusicPlayer.Album, ,] $INFO[MusicPlayer.Album, ,] $INFO[MusicPlayer.Album, ,] $INFO[MusicPlayer.Album, ,] $INFO[MusicPlayer.Album, ,] </label>
+					<scroll>true</scroll>
+					<pauseatend>0</pauseatend>
+					<font>font40L</font>
+					<textcolor>White80</textcolor>
+					<angle>90</angle>
+					<scrollspeed>80</scrollspeed>
+					<pauseatend>0</pauseatend>
+				</control>
+								
+					
+				<control type="label">
+					<description>Player Times</description>
+					<posx>-40</posx>
+					<posy>280</posy>
+					<width>900</width>
+					<label>$INFO[MusicPlayer.Time]</label>
+					<font>font230L</font>
+					<textcolor>White40</textcolor>
+				</control>
+				
+			</control>
+
+		</control>
+
+	</include>
+
+	<include name="ListWalls">
+
+		<control type="multiimage">
+			<include>Dimensions_Fullscreen</include>
+			<randomize>true</randomize>
+			<timeperimage>12000</timeperimage>
+			<fadetime>4000</fadetime>
+			<pauseatend>0</pauseatend>
+			<loop>true</loop>
+			<aspectratio background="true" aligny="top">stretch</aspectratio>
+			<imagepath background="true">colors/</imagepath>
+			<include>Animation_CommonFade</include>
+			<visible>true</visible>
+			<colordiffuse>WallsDiffuse</colordiffuse>
+		</control>	
+
+	</include>
+		
+</includes>

@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+    <defaultcontrol always="true">4</defaultcontrol>
+	
+    <controls>
+	
+		<include>DialogOverlay</include>
+		
+        <control type="group">
+			<posx>90</posx>
+			<posy>100</posy>
+			<include>Animation_Dialog_Center</include>
+            <visible>!Window.IsVisible(FileBrowser)</visible>
+			
+			<control type="image">
+				<width>1100</width>
+				<height>520</height>
+				<include>Common_Color_Keyback1</include>
+			</control>
+			
+			<control type="image">
+				<description>line</description>
+				<width>1100</width>
+				<include>Dialog_Line</include>
+			</control>
+			
+			<control type="image">
+				<width>240</width>
+				<height>520</height>
+				<include>Common_Color_Keyback2</include>
+			</control>
+			
+			<control type="label">
+				<description>Title</description>
+				<posx>1090</posx>
+				<width>480</width>
+				<include>Dialog_Header</include>
+				<label>$LOCALIZE[19199]</label>
+            </control>
+			
+            <control type="label">
+                <posx>260</posx>
+                <posy>70</posy>
+                <width>600</width>
+                <height>50</height>
+                <font>font20UB</font>
+                <label>$LOCALIZE[19210]: </label>
+            </control>
+			
+			<control type="label">
+                <posx>360</posx>
+                <posy>70</posy>
+                <width>600</width>
+                <height>50</height>
+                <font>font20</font>
+				<textcolor>Accent</textcolor>
+                <label>$INFO[ListItem.Property(ClientName)]</label>
+            </control>
+			
+            <control type="group">
+                <posx>260</posx>
+                <posy>120</posy>
+				
+				<control type="image">
+					<description>line</description>
+					<posy>-4</posy>
+					<width>420</width>
+					<height>4</height>
+					<include>Common_Color_Accent</include>
+				</control>
+				
+                <control type="image">
+                    <width>420</width>
+                    <height>360</height>
+					<include>Common_Color_Keyback2</include>
+                </control>
+				
+                <control type="list" id="20">
+                    <width>420</width>
+                    <height>360</height>
+                    <onup>20</onup>
+                    <ondown>20</ondown>
+                    <onleft>9000</onleft>
+                    <onright>60</onright>
+                    <pagecontrol>60</pagecontrol>
+                    <scrolltime>200</scrolltime>
+                    <itemlayout height="45" width="420">
+					
+                        <control type="label">
+                            <posx>10</posx>
+                            <width>50</width>
+                            <align>left</align>
+							<font>font24UB</font>
+                            <label>[B]$INFO[ListItem.Property(Number)][/B]</label>
+                        </control>
+						
+                        <control type="label">
+                            <posx>85</posx>
+                            <width>300</width>
+							<font>font20</font>
+                            <label>$INFO[ListItem.Property(Name)]</label>
+                        </control>
+						
+                    </itemlayout>
+					
+                    <focusedlayout height="45" width="420">
+					
+                        <control type="image">
+                            <width>420</width>
+                            <height>45</height>
+							<include>Common_Color_Accent</include>
+                            <animation effect="fade" start="100" end="30" time="0" condition="!Control.HasFocus(20)">conditional</animation>
+                        </control>
+						
+                        <control type="label">
+                            <posx>10</posx>
+                            <width>50</width>
+                            <align>left</align>
+							<font>font24UB</font>
+                            <label>[B]$INFO[ListItem.Property(Number)][/B]</label>
+                        </control>
+						
+                        <control type="label">
+                            <posx>85</posx>
+                            <width>300</width>
+							<font>font20</font>
+                            <label>$INFO[ListItem.Property(Name)]</label>
+                        </control>
+						
+                    </focusedlayout>
+					
+                </control>
+				
+				<control type="image">
+					<description>outline</description>
+					<posx>424</posx>
+					<posy>-5</posy>
+					<height>366</height>
+					<include>Common_Scroll_OutlineV</include>
+					<visible>Control.HasFocus(60)</visible>
+				</control>
+				
+				<control type="scrollbar" id="60">
+					<posx>425</posx>
+					<posy>-4</posy>
+					<width>5</width>
+					<height>364</height>
+					<showonepage>true</showonepage>
+					<orientation>vertical</orientation>>
+					<onleft>20</onleft>
+                    <onright>7</onright>
+				</control>
+				
+            </control>
+			
+            <control type="group" id="9002">
+			
+                <control type="group">
+                    <posx>695</posx>
+                    <posy>120</posy>
+					
+                    <control type="radiobutton" id="7">
+                        <description>Channel activated</description>
+                        <width>395</width>
+                        <align>left</align>
+                        <label>19074</label>
+                        <onleft>20</onleft>
+                        <onup>33</onup>
+                        <ondown>8</ondown>
+                    </control>
+					
+					<control type="image">
+						<posy>45</posy>
+						<width>395</width>
+						<height>45</height>
+						<include>Common_Color_Accent</include>
+						<visible>Control.HasFocus(8)</visible>
+					</control>
+					
+                    <control type="edit" id="8">
+                        <description>Channel name</description>
+                        <posx>20</posx>
+                        <posy>45</posy>
+                        <width>365</width>
+                        <height>45</height>
+                        <aligny>center</aligny>
+                        <font>font20L</font>
+                        <textcolor>white</textcolor>
+                        <focusedcolor>white</focusedcolor>
+                        <label>19201</label>
+                        <onleft>20</onleft>
+                        <onup>7</onup>
+                        <ondown>12</ondown>
+                    </control>
+					
+                    <control type="radiobutton" id="12">
+                        <description>EPG activated</description>
+                        <posy>90</posy>
+                        <width>395</width>
+                        <align>left</align>
+                        <label>19206</label>
+                        <onleft>20</onleft>
+                        <onup>8</onup>
+                        <ondown>13</ondown>
+                    </control>
+					
+                    <control type="spincontrolex" id="13">
+                        <description>EPG source</description>
+                        <posy>135</posy>
+                        <width>395</width>
+                        <label>19200</label>
+                        <onleft>20</onleft>
+                        <onup>12</onup>
+                        <ondown>14</ondown>
+                    </control>
+					
+                    <control type="radiobutton" id="14">
+                        <description>Parental locked</description>
+                        <posy>180</posy>
+                        <width>395</width>
+                        <align>left</align>
+                        <label>19267</label>
+                        <onleft>20</onleft>
+                        <onup>13</onup>
+                        <ondown>31</ondown>
+                    </control>
+					
+                </control>
+				
+                <control type="group">
+                    <posx>695</posx>
+                    <posy>380</posy>
+					
+					<control type="button" id="31">
+						<description>Edit channel Button</description>
+						<posx>95</posx>
+						<onleft>60</onleft>
+						<onright>32</onright>
+						<onup>14</onup>
+						<ondown>7</ondown>
+						<include>Dialog_Button</include>
+						<texturefocus>buttons/editFO.png</texturefocus>
+						<texturenofocus>buttons/editNF.png</texturenofocus>
+					</control>
+					
+					<control type="button" id="32">
+						<description>Delete channel Button</description>
+						<posx>175</posx>
+						<posy>0</posy>
+						<onleft>31</onleft>
+						<onright>33</onright>
+						<onup>14</onup>
+						<ondown>7</ondown>
+						<include>Dialog_Button</include>
+						<texturefocus>buttons/removeFO.png</texturefocus>
+						<texturenofocus>buttons/removeNF.png</texturenofocus>
+					</control>
+					
+					<control type="button" id="33">
+						<description>New channel Button</description>
+						<posx>255</posx>
+						<posy>0</posy>
+						<onleft>32</onleft>
+						<onright>9000</onright>
+						<onup>14</onup>
+						<ondown>7</ondown>
+						<include>Dialog_Button</include>
+						<texturefocus>buttons/addFO.png</texturefocus>
+						<texturenofocus>buttons/addNF.png</texturenofocus>
+					</control>
+					
+                </control>
+				
+            </control>
+
+            <control type="grouplist" id="9000">
+                <posx>10</posx>
+                <posy>70</posy>
+                <width>300</width>
+                <height>300</height>
+                <itemgap>2</itemgap>
+                <onright>20</onright>
+                <onup>34</onup>
+                <ondown>30</ondown>
+				
+				<control type="group">
+					<height>50</height>	
+					
+					<control type="button" id="4">
+						<description>okay button</description>
+						<include>Common_Control_Button</include>
+						<onup>34</onup>
+						<ondown>6</ondown>
+						<onright>20</onright>
+						<onleft>20</onleft>
+					</control>
+					
+					<control type="image">
+						<include>Common_Control_Button</include>
+						<texture>icons/ok.png</texture>
+					</control>
+					
+					<control type="label">
+						<include>Common_Control_Label</include>
+						<label>$LOCALIZE[186]</label>
+					</control>
+					
+				</control>
+				
+				<control type="group">
+					<height>50</height>	
+					
+					<control type="button" id="6">
+						<description>cancel button</description>
+						<include>Common_Control_Button</include>
+						<onup>4</onup>
+						<ondown>5</ondown>
+						<onright>20</onright>
+						<onleft>20</onleft>
+					</control>
+					
+					<control type="image">
+						<include>Common_Control_Button</include>
+						<texture>icons/disable.png</texture>
+					</control>
+					
+					<control type="label">
+						<include>Common_Control_Label</include>
+						<label>$LOCALIZE[222]</label>
+					</control>
+					
+				</control>
+				
+				<control type="group">
+					<height>50</height>	
+					
+					<control type="button" id="5">
+						<description>apply button</description>
+						<include>Common_Control_Button</include>
+						<onup>6</onup>
+						<ondown>30</ondown>
+						<onright>20</onright>
+						<onleft>20</onleft>
+					</control>
+					
+					<control type="image">
+						<include>Common_Control_Button</include>
+						<texture>icons/save.png</texture>
+					</control>
+					
+					<control type="label">
+						<include>Common_Control_Label</include>
+						<label>$LOCALIZE[732]</label>
+					</control>
+					
+				</control>
+				
+				<control type="group">
+					<height>50</height>	
+					
+					<control type="button" id="30">
+						<description>group manager button</description>
+						<include>Common_Control_Button</include>
+						<onup>5</onup>
+						<ondown>34</ondown>
+						<onright>20</onright>
+						<onleft>20</onleft>
+					</control>
+					
+					<control type="image">
+						<include>Common_Control_Button</include>
+						<texture>icons/group.png</texture>
+					</control>
+					
+					<control type="label">
+						<include>Common_Control_Label</include>
+						<label>$LOCALIZE[31180]</label>
+					</control>
+					
+				</control>
+				
+				<control type="group">
+					<height>50</height>	
+					
+					<control type="button" id="34">
+						<description>channels button</description>
+						<include>Common_Control_Button</include>
+						<onup>30</onup>
+						<ondown>4</ondown>
+						<onright>20</onright>
+						<onleft>20</onleft>
+					</control>
+					
+					<control type="image">
+						<include>Common_Control_Button</include>
+						<texture>icons/channels.png</texture>
+					</control>
+					
+					<control type="label">
+						<include>Common_Control_Label</include>
+						<label>$LOCALIZE[19024]</label>
+						<visible>IsEmpty(Window.Property(IsRadio))</visible>
+					</control>
+					
+					<control type="label">
+						<include>Common_Control_Label</include>
+						<label>$LOCALIZE[19023]</label>
+						<visible>!IsEmpty(Window.Property(IsRadio))</visible>
+					</control>
+					
+				</control>
+				
+            </control>
+			
+        </control>
+		
+    </controls>
+	
+</window>

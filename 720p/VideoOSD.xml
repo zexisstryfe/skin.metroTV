@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window id="2901">
+	<defaultcontrol always="true">14</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<control type="group">	
+			<animation type="WindowOpen">
+				<effect type="zoom" start="108" end="100" time="400" center="640,360" tween="cubic" easing="out" />
+				<effect type="fade" start="0" end="100" time="400" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="zoom" start="100" end="108" time="400"  center="640,360" tween="cubic" easing="out" />
+				<effect type="fade" start="100" end="0" time="400" />
+			</animation>
+
+			<control type="group">
+				<visible>!Window.IsVisible(sliderdialog)</visible>
+				<posx>0</posx>
+				<posy>595</posy>
+	
+				<control type="image">
+					<description>backing</description>
+					<width>800</width>
+					<height>125</height>
+					<fadetime>200</fadetime>
+					<align>right</align>
+					<include>Common_Color_Tile1</include>
+				</control>
+
+				<control type="grouplist" id="100">
+					<posx>32</posx>
+					<posy>15</posy>
+					<width>750</width>
+					<height>125</height>
+					<itemgap>15</itemgap>
+					<orientation>horizontal</orientation>
+					<align>left</align>
+					
+					<control type="button" id="12">
+						<description>Skip Back</description>
+						<include>Common_Settings_Button</include>									
+						<label>$LOCALIZE[210]</label>
+						<texturefocus>OSD/PrevTrackFO.png</texturefocus>
+						<texturenofocus>OSD/PrevTrackNF.png</texturenofocus>
+						<onclick>PlayerControl(Previous)</onclick>
+						<visible>!VideoPlayer.Content(LiveTV)</visible>
+					</control>
+
+					<control type="button" id="13">
+						<description>Rewind</description>
+						<include>Common_Settings_Button</include>
+						<label>$LOCALIZE[31008]</label>
+						<texturefocus>OSD/RewindFO.png</texturefocus>
+						<texturenofocus>OSD/RewindNF.png</texturenofocus>
+						<onclick>PlayerControl(Rewind)</onclick>
+						<visible>!VideoPlayer.Content(LiveTV)</visible>
+					</control>
+
+					<control type="togglebutton" id="14">
+						<description>Play/Pause</description>
+						<include>Common_Settings_Button</include>
+						<label>$LOCALIZE[31112]</label>
+						<altlabel>$LOCALIZE[208]</altlabel>
+						<texturefocus>OSD/PauseFO.png</texturefocus>
+						<texturenofocus>OSD/PauseNF.png</texturenofocus>
+						<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+						<alttexturefocus>OSD/PlayFO.png</alttexturefocus>
+						<alttexturenofocus>OSD/PlayNF.png</alttexturenofocus>
+						<onclick>PlayerControl(Play)</onclick>
+						<visible>!VideoPlayer.Content(LiveTV)</visible>
+					</control>
+
+					<control type="button" id="15">
+						<description>Stop</description>		
+						<include>Common_Settings_Button</include>
+						<label>$LOCALIZE[31113]</label>
+						<texturefocus>OSD/StopFO.png</texturefocus>
+						<texturenofocus>OSD/StopNF.png</texturenofocus>
+						<onclick>PlayerControl(Stop)</onclick>
+					</control>
+					
+					<control type="togglebutton" id="353">
+						<description>Recording</description>
+						<include>Common_Settings_Button</include>
+						<label>$LOCALIZE[264]</label>
+						<altlabel>$LOCALIZE[31191]</altlabel>
+						<texturefocus>OSD/RecordFO.png</texturefocus>
+						<texturenofocus>OSD/RecordNF.png</texturenofocus>
+						<usealttexture>Player.Recording</usealttexture>
+						<alttexturefocus>OSD/RecordingFO.png</alttexturefocus>
+						<alttexturenofocus>OSD/RecordingNF.png</alttexturenofocus>
+						<onclick>PlayerControl(Record)</onclick>
+						<visible>VideoPlayer.Content(LiveTV)</visible>
+					</control>
+
+					<control type="button" id="16">
+						<description>Fast Forward</description>						
+						<include>Common_Settings_Button</include>
+						<label>$LOCALIZE[31114]</label>
+						<texturefocus>OSD/ForwardFO.png</texturefocus>
+						<texturenofocus>OSD/ForwardNF.png</texturenofocus>
+						<onclick>PlayerControl(Forward)</onclick>
+						<visible>!VideoPlayer.Content(LiveTV)</visible>
+					</control>
+
+					<control type="button" id="17">
+						<description>Next</description>
+						<include>Common_Settings_Button</include>
+						<label>$LOCALIZE[209]</label>
+						<texturefocus>OSD/NextTrackFO.png</texturefocus>
+						<texturenofocus>OSD/NextTrackNF.png</texturenofocus>
+						<onclick>PlayerControl(Next)</onclick>
+						<visible>!VideoPlayer.Content(LiveTV)</visible>
+					</control>
+					
+					<control type="image" id="18">
+						<include>Common_Options_Divider</include>
+					</control>
+
+					<control type="button" id="1">
+						<description>Bookmarks</description>
+						<include>Common_Settings_Button</include>
+						<label>$LOCALIZE[298]</label>
+						<texturefocus>OSD/BookMarksFO.png</texturefocus>
+						<texturenofocus>OSD/BookMarksNF.png</texturenofocus>
+						<onclick>ActivateWindow(125)</onclick>
+						<visible>!VideoPlayer.Content(LiveTV)</visible>
+					</control>
+
+					<control type="button" id="2">
+						<description>Audio Settings</description>
+						<include>Common_Settings_Button</include>
+						<label>$LOCALIZE[31170]</label>
+						<texturefocus>OSD/AudioFO.png</texturefocus>
+						<texturenofocus>OSD/AudioNF.png</texturenofocus>
+						<onclick>ActivateWindow(124)</onclick>
+					</control>
+
+					<control type="button" id="3">
+						<description>Video Settings</description>
+						<include>Common_Settings_Button</include>
+						<label>$LOCALIZE[31171]</label>
+						<texturefocus>OSD/VideoFO.png</texturefocus>
+						<texturenofocus>OSD/VideoNF.png</texturenofocus>
+						<onclick>ActivateWindow(123)</onclick>
+					</control>
+
+					<control type="button" id="4">
+						<description>Subtitles</description>
+						<include>Common_Settings_Button</include>
+						<label>$LOCALIZE[287]</label>
+						<texturefocus>OSD/SubtitlesFO.png</texturefocus>
+						<texturenofocus>OSD/SubtitlesNF.png</texturenofocus>
+						<onclick>Close</onclick>
+						<onclick>XBMC.RunScript(script.xbmc.subtitles)</onclick>
+						<visible>IsEmpty(Skin.String(SubtitlesPath))</visible>
+						<visible>!VideoPlayer.Content(LiveTV)</visible>
+					</control>
+
+					<control type="button" id="5">
+						<description>Subtitles</description>
+						<include>Common_Settings_Button</include>
+						<label>$LOCALIZE[287]</label>
+						<texturefocus>OSD/SubtitlesFO.png</texturefocus>
+						<texturenofocus>OSD/SubtitlesNF.png</texturenofocus>
+						<onclick>Close</onclick>
+						<onclick>XBMC.RunScript($INFO[Skin.String(SubtitlesPath)])</onclick>
+						<visible>!IsEmpty(Skin.String(SubtitlesPath))</visible>
+						<visible>!VideoPlayer.Content(LiveTV)</visible>
+					</control>
+
+					<control type="button" id="6">
+						<description>DVD menu</description>
+						<include>Common_Settings_Button</include>
+						<label>$LOCALIZE[31172]</label>
+						<colordiffuse>$VAR[Disabled_ColorDiffuse]</colordiffuse>
+						<texturefocus>OSD/DvdFO.png</texturefocus>
+						<texturenofocus>OSD/DvdNF.png</texturenofocus>
+						<onclick>PlayerControl(ShowVideoMenu)</onclick>
+						<enable>VideoPlayer.HasMenu</enable>
+						<visible>!VideoPlayer.Content(LiveTV)</visible>
+					</control>
+					
+					<control type="image" id="19">
+						<include>Common_Options_Divider</include>
+						<visible>VideoPlayer.Content(LiveTV)</visible>
+					</control>
+					
+					<control type="button" id="350">
+						<description>Teletext</description>
+						<include>Common_Settings_Button</include>
+						<label>$LOCALIZE[31189]</label>
+						<texturefocus>OSD/TeletextFO.png</texturefocus>
+						<texturenofocus>OSD/TeletextNF.png</texturenofocus>
+						<onclick>ActivateWindow(Teletext)</onclick>
+						<visible>VideoPlayer.Content(LiveTV)</visible>
+					</control>
+					
+					<control type="button" id="306">
+						<description>Channel list</description>
+						<include>Common_Settings_Button</include>
+						<label>$LOCALIZE[31190]</label>
+						<texturefocus>OSD/ChannelsFO.png</texturefocus>
+						<texturenofocus>OSD/ChannelsNF.png</texturenofocus>
+						<onclick>ActivateWindow(PVROSDChannels)</onclick>
+						<onclick>Dialog.Close(VideoOSD)</onclick>
+						<visible>VideoPlayer.Content(LiveTV)</visible>
+					</control>
+					
+					<control type="button" id="307">
+						<description>PVR Guide</description>
+						<include>Common_Settings_Button</include>
+						<label>$LOCALIZE[22020]</label>
+						<texturefocus>OSD/GuideFO.png</texturefocus>
+						<texturenofocus>OSD/GuideNF.png</texturenofocus>
+						<onclick>ActivateWindow(PVROSDGuide)</onclick>
+						<onclick>Dialog.Close(VideoOSD)</onclick>
+						<visible>VideoPlayer.Content(LiveTV)</visible>
+					</control>
+
+				</control>
+
+			</control>
+			
+			<control type="group">
+			
+				<control type="image">
+					<description>backing</description>
+					<posx>800</posx>
+					<posy>595</posy>
+					<width>480</width>
+					<height>125</height>
+					<fadetime>200</fadetime>
+					<align>right</align>
+					<include>Common_Color_Tile1</include>
+				</control>
+				
+				<control type="label">
+					<description>Chapter Count Label</description>
+					<posx>1060</posx>
+					<posy>645</posy>
+					<width>300</width>
+					<label>[B][COLOR=Accent]$LOCALIZE[21396][/COLOR][/B]</label>
+					<align>left</align>
+					<font>font16UB</font>
+					<visible>Player.ChapterCount</visible>
+					<animation effect="slide" end="0,34" condition="!VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos)">Conditional</animation>
+				</control>
+				
+				<control type="label">
+					<description>Chapter Count</description>
+					<posx>1265</posx>
+					<posy>645</posy>
+					<width>300</width>
+					<label>[B]$INFO[Player.Chapter] / $INFO[Player.ChapterCount][/B]</label>
+					<align>right</align>
+					<font>font16</font>
+					<visible>Player.ChapterCount</visible>
+					<animation effect="slide" end="0,34" condition="!VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos)">Conditional</animation>
+				</control>
+
+				<control type="label">
+					<description>Player Times</description>
+					<posx>900</posx>
+					<posy>638</posy>
+					<width>500</width>
+					<label>[B]$INFO[Player.Time][/B]</label>
+					<align>right</align>
+					<font>font16</font>
+				</control>
+				
+				<control type="label">
+					<description>Player Duration</description>
+					<posx>1190</posx>
+					<posy>638</posy>
+					<width>500</width>
+					<label>[B]$INFO[Player.Duration][/B]</label>
+					<align>left</align>
+					<font>font16</font>
+				</control>
+		
+				<control type="label">
+					<description>Current Video End Time Label</description>
+					<posx>1060</posx>
+					<posy>595</posy>
+					<width>890</width>
+					<label>[COLOR=Accent]$LOCALIZE[31181][/COLOR]</label>
+					<align>left</align>
+					<font>font16UB</font>
+				</control>
+				
+				<control type="label">
+					<description>Current Video End Time</description>
+					<posx>1265</posx>
+					<posy>595</posy>
+					<width>890</width>
+					<label>[B]$INFO[Player.FinishTime][/B]</label>
+					<align>right</align>
+					<font>font16</font>
+				</control>
+				
+				<control type="progress">
+					<description>Progressbar</description>
+					<posx>910</posx>
+					<posy>655</posy>
+					<width>270</width>
+					<height>10</height>
+					<info>Player.Progress</info>
+				</control>
+
+				<control type="slider" id="401">
+					<description>Seekbar</description>
+					<posx>910</posx>
+					<posy>655</posy>
+					<width>270</width>
+					<height>10</height>
+					<visible>Player.Seeking</visible>
+				</control>
+
+			</control>
+			
+		</control>
+		
+		<control type="group">
+			<animation type="WindowOpen">
+				<effect type="slide" start="0,0" end="-405,0" time="300" easing="out" tween="cubic"/>
+			</animation>
+			<animation type="WindowClose">
+				<effect type="slide" start="-405,0" end="0,0" time="300" easing="out" tween="cubic"/>
+			</animation>
+			
+			<control type="image">
+				<description>background image</description>
+				<posx>1335</posx>
+				<posy>20</posy>
+				<width>390</width>
+				<height>100</height>
+				<include>Common_Color_Tile1</include>
+			</control>
+			
+			<control type="label">
+				<label>$INFO[System.Time(hh:mm)]</label>
+				<posx>1630</posx>
+				<posy>20</posy>
+				<height>100</height>
+				<width>200</width>
+				<font>font65L</font>
+				<align>right</align>
+				<visible>!IsEmpty(System.Time(xx))</visible>
+			</control>
+			
+			<control type="label">
+				<label>$INFO[System.Time(hh:mm)]</label>
+				<posx>1490</posx>
+				<posy>20</posy>
+				<height>100</height>
+				<width>200</width>
+				<font>font65L</font>
+				<align>left</align>
+				<visible>IsEmpty(System.Time(xx))</visible>
+			</control>
+			
+			<control type="label">
+				<label>[COLOR Accent]$INFO[System.Time(xx)][/COLOR]</label>
+				<posx>1630</posx>
+				<posy>34</posy>
+				<height>100</height>
+				<width>60</width>
+				<font>font26L</font>
+				<align>left</align>
+			</control>
+			
+			<control type="label">
+				<label>[COLOR Accent]$INFO[System.Date(DDD)][/COLOR]</label>
+				<posx>1477</posx>
+				<posy>4</posy>
+				<height>100</height>
+				<width>750</width>
+				<font>font26L</font>
+				<align>right</align>
+			</control>
+			
+			<control type="label">
+				<label>[COLOR Accent]$INFO[System.Date(MMM)] $INFO[System.Date(dd)][/COLOR]</label>
+				<posx>1477</posx>
+				<posy>34</posy>
+				<height>100</height>
+				<width>750</width>
+				<font>font22L</font>
+				<align>right</align>
+			</control>
+			
+		</control>
+
+	</controls>
+
+</window>

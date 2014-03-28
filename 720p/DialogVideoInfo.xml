@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window id="2003">
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+	
+		<include>DialogOverlay</include>
+		
+		<control type="group">
+			<posx>150</posx>
+			<posy>100</posy>
+			
+			<include>Animation_Dialog_Center</include>
+			
+		<!--Backgrounds-->	
+			<control type="image">
+				<width>930</width>
+				<height>570</height>
+				<include>Common_Color_Keyback1</include>
+			</control>	
+			
+			<control type="image">
+				<description>line</description>
+				<width>930</width>
+				<include>Dialog_Line</include>
+			</control>
+			
+			<control type="image">
+				<width>320</width>
+				<height>570</height>
+				<include>Common_Color_Keyback2</include>
+			</control>
+			
+			<control type="image">
+				<description>Fanart Image</description>
+				<width>320</width>
+				<height>200</height>
+				<texture>$INFO[ListItem.Art(fanart)]</texture>
+				<aspectratio align="center" aligny="top">stretch</aspectratio>
+				<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
+				<bordersize>5</bordersize>
+			</control>	
+			
+			<control type="label" id="20">
+				<description>Title</description>
+				<posx>910</posx>
+				<width>570</width>
+				<include>Dialog_Header</include>
+				<label>[COLOR Accent]$INFO[ListItem.Title][/COLOR]</label>
+			</control>	
+			
+		<!--Details list-->	
+			<control type="grouplist">
+				<posx>340</posx>
+				<posy>70</posy>
+				<width>500</width>
+				<height>196</height>
+				<itemgap>0</itemgap>
+				<scrolltime tween="back" easing="inout">1000</scrolltime>
+				<orientation>vertical</orientation>
+				
+				<control type="group">
+					<height>28</height>
+					<visible>!IsEmpty(ListItem.Genre)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<include>Common_Infolist_Label</include>
+						<label>$LOCALIZE[515]:</label>
+					</control>
+					
+					<control type="label">
+						<description>Type Value</description>
+						<include>Common_Infolist_Info</include>
+						<label>$INFO[ListItem.Genre]</label>						
+					</control>
+					
+				</control>	
+				
+				<control type="group">
+					<height>28</height>
+					<visible>!IsEmpty(ListItem.Director)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<include>Common_Infolist_Label</include>
+						<label>$LOCALIZE[20339]:</label>
+					</control>
+					
+					<control type="label">
+						<description>Type Value</description>
+						<include>Common_Infolist_Info</include>
+						<label>$INFO[ListItem.Director]</label>						
+					</control>
+					
+				</control>	
+				
+				<control type="group">
+					<height>28</height>
+					<visible>!IsEmpty(ListItem.Year)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<include>Common_Infolist_Label</include>
+						<label>$LOCALIZE[345]:</label>
+					</control>
+					
+					<control type="label">
+						<description>Type Value</description>
+						<include>Common_Infolist_Info</include>
+						<label>$INFO[ListItem.Year]</label>						
+					</control>
+					
+				</control>		
+				
+				<control type="group">
+					<height>28</height>
+					<visible>!IsEmpty(ListItem.Duration)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<include>Common_Infolist_Label</include>
+						<label>$LOCALIZE[2050]:</label>
+					</control>
+					
+					<control type="label">
+						<description>Type Value</description>
+						<include>Common_Infolist_Info</include>
+						<label>$INFO[ListItem.Duration]</label>	
+						<visible>SubString(ListItem.Duration,min)</visible>						
+					</control>
+					
+					<control type="label">
+						<description>Type Value</description>
+						<include>Common_Infolist_Info</include>
+						<label>$INFO[ListItem.Duration] min</label>	
+						<visible>!SubString(ListItem.Duration,min)</visible>						
+					</control>
+					
+				</control>	
+				
+				<control type="group">
+					<height>28</height>
+					<visible>!IsEmpty(ListItem.RatingAndVotes)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<include>Common_Infolist_Label</include>
+						<label>$LOCALIZE[563]:</label>
+					</control>
+					
+					<control type="label">
+						<description>Type Value</description>
+						<include>Common_Infolist_Info</include>
+						<label>$INFO[ListItem.RatingAndVotes]</label>						
+					</control>
+					
+				</control>		
+
+				<control type="group">
+					<height>28</height>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<include>Common_Infolist_Label</include>
+						<label>$LOCALIZE[567]:</label>
+					</control>
+					
+					<control type="label">
+						<description>Type Value</description>
+						<include>Common_Infolist_Info</include>
+						<label>$INFO[ListItem.Playcount]</label>
+						<visible>!IsEmpty(ListItem.Playcount)</visible>
+					</control>
+					
+					<control type="label">
+						<description>Type Value</description>
+						<include>Common_Infolist_Info</include>
+						<label>231</label>
+						<visible>IsEmpty(ListItem.Playcount)</visible>
+					</control>
+					
+				</control>
+				
+			<!--Media Flags-->
+				<control type="grouplist">
+					<description>Media Codec Flagging Images</description>
+					<width>540</width>
+					<align>center</align>
+					<itemgap>1</itemgap>
+					<orientation>horizontal</orientation>
+					<control type="image">
+						<description>Video rez Image</description>
+						<width>80</width>
+						<height>28</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.VideoResolution,flags/video/,.png]</texture>
+					</control>
+					<include>VideoCodecFlaggingConditions</include>
+					<include>AspectCodecFlaggingConditions</include>
+					<include>AudioCodecFlaggingConditions</include>
+					<include>AudioChannelsFlaggingConditions</include>
+				</control>
+				
+			</control>
+			
+			<!--BUTTON list-->
+			<control type="grouplist" id="9000">
+				<posx>70</posx>
+				<posy>220</posy>
+				<width>180</width>
+				<height>350</height>
+				<itemgap>5</itemgap>
+				<scrolltime tween="back" easing="inout">1000</scrolltime>
+				<orientation>vertical</orientation>
+				
+				<!--PLAY-->
+				<control type="group">
+					<width>180</width>
+					<height>50</height>
+					<onright>50</onright>
+					<onleft>50</onleft>
+					
+					<control type="button" id="8">
+						<include>Common_Control_Button</include>
+						<onup>5</onup>
+						<ondown>9</ondown>
+						<onright>50</onright>
+						<onleft>50</onleft>
+					</control>
+					
+					<control type="image">
+						<include>Common_Control_Button</include>
+						<texture>icons/play.png</texture>
+					</control>
+					
+					<control type="image">
+						<visible>!Control.IsEnabled(8)</visible>
+						<include>Common_Control_Button</include>
+						<texture>backings/overlay.png</texture>
+					</control>
+					
+					<control type="label">
+						<include>Common_Control_Label</include>
+						<label>208</label>
+					</control>
+					
+				</control>	
+				
+				<!--RESUME-->
+				<control type="group">
+					<width>180</width>
+					<height>50</height>
+					
+					<control type="button" id="9">
+						<include>Common_Control_Button</include>
+						<onup>8</onup>
+						<ondown>11</ondown>
+						<onright>50</onright>
+						<onleft>50</onleft>
+					</control>
+					
+					<control type="image">
+						<include>Common_Control_Button</include>
+						<texture>icons/resume.png</texture>
+					</control>
+					
+					<control type="image">
+						<visible>!Control.IsEnabled(9)</visible>
+						<include>Common_Control_Button</include>
+						<texture>backings/overlay.png</texture>
+					</control>
+					
+					<control type="image">
+						<visible>!Control.IsEnabled(9)</visible>
+						<include>Common_Control_Button</include>
+						<texture>backings/overlay.png</texture>
+					</control>
+					
+					<control type="label">
+						<visible>!Control.IsEnabled(9)</visible>
+						<include>Common_Control_Label</include>
+						<label>13404</label>
+						<textcolor>Keyback1</textcolor>
+					</control>
+					
+					<control type="label">
+						<visible>Control.IsEnabled(9)</visible>
+						<include>Common_Control_Label</include>
+						<label>13404</label>
+					</control>
+					
+				</control>	
+				
+				<!--TRAILER-->
+				<control type="group">
+					<width>180</width>
+					<height>50</height>
+					
+					<control type="button" id="11">
+						<include>Common_Control_Button</include>
+						<onup>9</onup>
+						<ondown>6</ondown>
+						<onright>50</onright>
+						<onleft>50</onleft>
+						<enable>!IsEmpty(ListItem.Trailer)</enable>
+					</control>
+					
+					<control type="image">
+						<include>Common_Control_Button</include>
+						<texture>icons/trailer.png</texture>
+					</control>
+					
+					<control type="image">
+						<visible>!Control.IsEnabled(11)</visible>
+						<include>Common_Control_Button</include>
+						<texture>backings/overlay.png</texture>
+					</control>
+					
+					<control type="image">
+						<visible>!Control.IsEnabled(11)</visible>
+						<include>Common_Control_Button</include>
+						<texture>backings/overlay.png</texture>
+					</control>
+					
+					<control type="label">
+						<visible>!Control.IsEnabled(11)</visible>
+						<include>Common_Control_Label</include>
+						<label>20410</label>
+						<textcolor>Keyback1</textcolor>
+					</control>
+					
+					<control type="label">
+						<visible>Control.IsEnabled(11)</visible>
+						<include>Common_Control_Label</include>
+						<label>20410</label>
+					</control>
+					
+				</control>	
+				
+				<!--REFRESH-->
+				<control type="group">
+					<width>180</width>
+					<height>50</height>
+					
+					<control type="button" id="6">
+						<include>Common_Control_Button</include>
+						<onup>11</onup>
+						<ondown>10</ondown>
+						<onright>50</onright>
+						<onleft>50</onleft>
+					</control>
+					
+					<control type="image">
+						<include>Common_Control_Button</include>
+						<texture>icons/refresh.png</texture>
+					</control>
+					
+					<control type="image">
+						<visible>!Control.IsEnabled(6)</visible>
+						<include>Common_Control_Button</include>
+						<texture>backings/overlay.png</texture>
+					</control>
+					
+					<control type="label">
+						<include>Common_Control_Label</include>
+						<label>$LOCALIZE[184]</label>
+					</control>
+					
+				</control>	
+				
+				<!--ARTWORK-->
+				<control type="group">
+					<width>180</width>
+					<height>50</height>
+					
+					<control type="button" id="10">
+						<include>Common_Control_Button</include>
+						<onup>6</onup>
+						<ondown>5</ondown>
+						<onright>50</onright>
+						<onleft>50</onleft>
+					</control>
+					
+					<control type="image">
+						<include>Common_Control_Button</include>
+						<texture>icons/art.png</texture>
+					</control>
+					
+					<control type="image">
+						<visible>!Control.IsEnabled(10)</visible>
+						<include>Common_Control_Button</include>
+						<texture>backings/overlay.png</texture>
+					</control>
+					
+					<control type="label">
+						<include>Common_Control_Label</include>
+						<label>$LOCALIZE[13511]</label>
+					</control>
+					
+				</control>	
+				
+				<!--CAST-->
+				<control type="group">
+					<width>180</width>
+					<height>50</height>
+					
+					<control type="button" id="5">
+						<include>Common_Control_Button</include>
+						<onup>10</onup>
+						<ondown>8</ondown>
+						<onright>50</onright>
+						<onleft>50</onleft>
+					</control>
+					
+					<control type="image">
+						<include>Common_Control_Button</include>
+						<texture>icons/cast.png</texture>
+						<visible>!Control.IsVisible(50)</visible>
+					</control>
+					
+					<control type="image">
+						<include>Common_Control_Button</include>
+						<texture>icons/plot.png</texture>
+						<visible>Control.IsVisible(50)</visible>
+					</control>
+					
+					<control type="label">
+						<visible>!Control.IsVisible(50)</visible>
+						<include>Common_Control_Label</include>
+						<label>$LOCALIZE[206]</label>
+					</control>
+					
+					<control type="image">
+						<visible>!Control.IsEnabled(5)</visible>
+						<include>Common_Control_Button</include>
+						<texture>backings/overlay.png</texture>
+					</control>
+					
+					<control type="label">
+						<visible>Control.IsVisible(50)</visible>
+						<include>Common_Control_Label</include>
+						<label>$LOCALIZE[207]</label>
+					</control>
+					
+				</control>
+
+			</control>
+
+			<control type="label">
+				<posx>340</posx>
+				<posy>266</posy>			
+				<label>$LOCALIZE[207]:</label>
+				<include>Common_Infolist_Label</include>
+				<visible>!Control.IsVisible(50)</visible> 
+			</control>	
+			
+			<control type="label">
+				<posx>340</posx>
+				<posy>266</posy>			
+				<label>$LOCALIZE[206]:</label>
+				<include>Common_Infolist_Label</include>
+				<visible>Control.IsVisible(50)</visible> 
+			</control>	
+
+			<control type="image">
+				<description>outline</description>
+				<posx>839</posx>
+				<posy>274</posy>
+				<height>277</height>
+				<include>Common_Scroll_OutlineV</include>
+				<visible>Control.HasFocus(79)</visible>
+			</control>
+			
+			<control type="scrollbar" id="79">
+				<posx>840</posx>
+				<posy>275</posy>
+				<height>275</height>
+				<onleft>50</onleft>
+				<onright>9000</onright>
+				<width>5</width>
+				<visible>Control.IsVisible(50)</visible> 
+			</control>			
+			
+			<!--CAST list-->
+			<control type="list" id="50">
+				<description>Cast</description>
+				<posx>410</posx>
+				<posy>270</posy>
+				<width>580</width>
+				<height>280</height>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<onleft>9000</onleft>
+				<onright>79</onright>
+				<orientation>vertical</orientation>
+				<pagecontrol>79</pagecontrol>
+				<scrolltime>200</scrolltime>
+				
+				<itemlayout height="85">
+				
+					<control type="image">
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>420</width>
+						<height>80</height>
+						<include>Common_Color_Keyback2</include>
+					</control>
+					
+					<control type="image">
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>80</width>
+						<height>80</height>
+						<texture border="2" colordiffuse="Keyback1">colors/color_white.png</texture>
+					</control>
+				
+					<control type="image">
+						<description>Actor Image</description>
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>80</width>
+						<height>80</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>		
+
+					<control type="label">
+						<posx>110</posx>
+						<height>85</height>
+						<width>300</width>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+
+				</itemlayout>
+				
+				<focusedlayout height="85">
+
+					<control type="image">
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>420</width>
+						<height>80</height>
+						<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(50)">Conditional</animation>
+						<include>Common_Color_Accent</include>
+					</control>
+					
+					<control type="image">
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>80</width>
+						<height>80</height>
+						<texture border="2" colordiffuse="Keyback1">colors/color_white.png</texture>
+					</control>
+				
+					<control type="image">
+						<description>Actor Image</description>
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>80</width>
+						<height>80</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>		
+
+					<control type="label">
+						<posx>110</posx>
+						<height>85</height>
+						<width>300</width>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+
+				</focusedlayout>
+
+			</control>
+			
+			<control type="textbox" id="4">
+				<description>Plot</description>
+				<posx>360</posx>
+				<posy>294</posy>
+				<width>530</width>
+				<height>240</height>
+				<font>font18</font>
+				<align>justify</align>
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

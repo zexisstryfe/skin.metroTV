@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<includes>
+
+	<include name="Settings_TileLabels">
+		<height>35</height>
+		<width>255</width>
+		<textwidth>170</textwidth>
+		<aligny>center</aligny>
+		<disabledcolor>Black</disabledcolor>					
+		<font>font24L</font>		
+	</include>	
+
+
+	<include name="Settings_MovieTiles">
+		<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="Control.HasFocus(401) | Control.HasFocus(1001) | Control.HasFocus(1002) | Control.HasFocus(1003) | Control.HasFocus(1004) | Control.HasFocus(1005) | Control.HasFocus(1101) | Control.HasFocus(1102) | Control.HasFocus(1103) | Control.HasFocus(1104)">Conditional</animation>
+		<visible>[Control.HasFocus(401) | Control.HasFocus(1001) | Control.HasFocus(1002) | Control.HasFocus(1003) | Control.HasFocus(1004) | Control.HasFocus(1005) | Control.HasFocus(1101) | Control.HasFocus(1102) | Control.HasFocus(1103) | Control.HasFocus(1104)]</visible>
+		<include>Settings_TileLabels</include>
+		<align>left</align>
+		<onleft>401</onleft>
+		<onright>1100</onright>
+	</include>	
+	
+	<include name="Settings_TVShowTiles">
+		<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="Control.HasFocus(402) | Control.HasFocus(1006) | Control.HasFocus(1007) | Control.HasFocus(1008) | Control.HasFocus(1009) | Control.HasFocus(1010) | Control.HasFocus(1105) | Control.HasFocus(1106) | Control.HasFocus(1107) | Control.HasFocus(1108) | Control.HasFocus(1129)">Conditional</animation>
+		<visible>[Control.HasFocus(402) | Control.HasFocus(1006) | Control.HasFocus(1007) | Control.HasFocus(1008) | Control.HasFocus(1009) | Control.HasFocus(1010) | Control.HasFocus(1105) | Control.HasFocus(1106) | Control.HasFocus(1107) | Control.HasFocus(1108) | Control.HasFocus(1129)]</visible>
+		<include>Settings_TileLabels</include>
+		<align>left</align>
+		<onleft>402</onleft>
+		<onright>1100</onright>
+	</include>	
+	
+	<include name="Settings_LiveTVTiles">
+		<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="[Control.HasFocus(403) | Control.HasFocus(1011) | Control.HasFocus(1012) | Control.HasFocus(1013) | Control.HasFocus(1014) | Control.HasFocus(1015) | Control.HasFocus(1109) | Control.HasFocus(1110)]">Conditional</animation>
+		<visible>[Control.HasFocus(403) | Control.HasFocus(1011) | Control.HasFocus(1012) | Control.HasFocus(1013) | Control.HasFocus(1014) | Control.HasFocus(1015) | Control.HasFocus(1109) | Control.HasFocus(1110)]</visible>
+		<include>Settings_TileLabels</include>
+		<align>left</align>
+		<onleft>403</onleft>
+		<onright>1100</onright>
+	</include>	
+	
+	<include name="Settings_MusicTiles">
+		<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="[Control.HasFocus(404) | Control.HasFocus(1016) | Control.HasFocus(1017) | Control.HasFocus(1018) | Control.HasFocus(1019) | Control.HasFocus(1020) | Control.HasFocus(1111) | Control.HasFocus(1112) | Control.HasFocus(1113) | Control.HasFocus(1114) | Control.HasFocus(1115) | Control.HasFocus(1116)]">Conditional</animation>
+		<visible>[Control.HasFocus(404) | Control.HasFocus(1016) | Control.HasFocus(1017) | Control.HasFocus(1018) | Control.HasFocus(1019) | Control.HasFocus(1020) | Control.HasFocus(1111) | Control.HasFocus(1112) | Control.HasFocus(1113) | Control.HasFocus(1114) | Control.HasFocus(1115) | Control.HasFocus(1116)]</visible>
+		<include>Settings_TileLabels</include>
+		<align>left</align>
+		<onleft>404</onleft>
+		<onright>1100</onright>
+		<include>Settings_TileLabels</include>
+	</include>
+	
+	<include name="Settings_MusicVidTiles">
+		<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="[Control.HasFocus(405) | Control.HasFocus(1021) | Control.HasFocus(1022) | Control.HasFocus(1023) | Control.HasFocus(1024) | Control.HasFocus(1025) | Control.HasFocus(1117) | Control.HasFocus(1118) | Control.HasFocus(1119) | Control.HasFocus(1120)]">Conditional</animation>
+		<visible>[Control.HasFocus(405) | Control.HasFocus(1021) | Control.HasFocus(1022) | Control.HasFocus(1023) | Control.HasFocus(1024) | Control.HasFocus(1025) | Control.HasFocus(1117) | Control.HasFocus(1118) | Control.HasFocus(1119) | Control.HasFocus(1120)]</visible>
+		<include>Settings_TileLabels</include>
+		<align>left</align>
+		<onleft>405</onleft>
+		<onright>1100</onright>
+	</include>
+	
+	<include name="Settings_PictureTiles">
+		<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="Control.HasFocus(406) | Control.HasFocus(1026) | Control.HasFocus(1027) | Control.HasFocus(1028) | Control.HasFocus(1029) | Control.HasFocus(1030)">Conditional</animation>
+		<visible>Control.HasFocus(406) | Control.HasFocus(1026) | Control.HasFocus(1027) | Control.HasFocus(1028) | Control.HasFocus(1029) | Control.HasFocus(1030)</visible>
+		<include>Settings_TileLabels</include>
+		<align>left</align>
+		<onleft>406</onleft>
+		<onright>1100</onright>
+	</include>
+
+	<include name="Settings_GameTiles">
+		<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="[Control.HasFocus(407) | Control.HasFocus(1031) | Control.HasFocus(1032) | Control.HasFocus(1033) | Control.HasFocus(1034) | Control.HasFocus(1035) | Control.HasFocus(1121) | Control.HasFocus(1122)]">Conditional</animation>
+		<visible>[Control.HasFocus(407) | Control.HasFocus(1031) | Control.HasFocus(1032) | Control.HasFocus(1033) | Control.HasFocus(1034) | Control.HasFocus(1035) | Control.HasFocus(1121) | Control.HasFocus(1122)]</visible>
+		<include>Settings_TileLabels</include>
+		<align>left</align>
+		<onleft>407</onleft>
+		<onright>1100</onright>
+	</include>
+	
+	<include name="Settings_AddonTiles">
+		<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="[Control.HasFocus(409) | Control.HasFocus(1036) | Control.HasFocus(1037) | Control.HasFocus(1038) | Control.HasFocus(1039) | Control.HasFocus(1040) | Control.HasFocus(1125) | Control.HasFocus(1126)]">Conditional</animation>
+		<visible>[Control.HasFocus(409) | Control.HasFocus(1036) | Control.HasFocus(1037) | Control.HasFocus(1038) | Control.HasFocus(1039) | Control.HasFocus(1040) | Control.HasFocus(1125) | Control.HasFocus(1126)]</visible>
+		<include>Settings_TileLabels</include>
+		<align>left</align>
+		<onleft>409</onleft>
+		<onright>1100</onright>
+	</include>
+	
+	<include name="Settings_Custom1Tiles">
+		<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="[Control.HasFocus(410) | Control.HasFocus(1041) | Control.HasFocus(1042) | Control.HasFocus(1043) | Control.HasFocus(1044) | Control.HasFocus(1045) | Control.HasFocus(1127) | Control.HasFocus(1128)]">Conditional</animation>
+		<visible>[Control.HasFocus(410) | Control.HasFocus(1041) | Control.HasFocus(1042) | Control.HasFocus(1043) | Control.HasFocus(1044) | Control.HasFocus(1045) | Control.HasFocus(1127) | Control.HasFocus(1128)]</visible>
+		<include>Settings_TileLabels</include>
+		<align>left</align>
+		<onleft>410</onleft>
+		<onright>1100</onright>
+	</include>
+	
+	<include name="Settings_MovieTileLabels">	
+		<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="Control.HasFocus(401) | Control.HasFocus(1001) | Control.HasFocus(1002) | Control.HasFocus(1003) | Control.HasFocus(1004) | Control.HasFocus(1005) | Control.HasFocus(1101) | Control.HasFocus(1102) | Control.HasFocus(1103) | Control.HasFocus(1104)">Conditional</animation>
+		<visible>[Control.HasFocus(401) | Control.HasFocus(1001) | Control.HasFocus(1002) | Control.HasFocus(1003) | Control.HasFocus(1004) | Control.HasFocus(1005) | Control.HasFocus(1101) | Control.HasFocus(1102) | Control.HasFocus(1103) | Control.HasFocus(1104)]</visible>
+		<include>Settings_TileLabels</include>
+		<align>right</align>
+	</include>
+	
+	<include name="Settings_TVShowTileLabels">	
+		<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="[Control.HasFocus(402) | Control.HasFocus(1006) | Control.HasFocus(1007) | Control.HasFocus(1008) | Control.HasFocus(1009) | Control.HasFocus(1010) | Control.HasFocus(1105) | Control.HasFocus(1106) | Control.HasFocus(1107) | Control.HasFocus(1108) | Control.HasFocus(1129)]">Conditional</animation>
+		<visible>[Control.HasFocus(402) | Control.HasFocus(1006) | Control.HasFocus(1007) | Control.HasFocus(1008) | Control.HasFocus(1009) | Control.HasFocus(1010) | Control.HasFocus(1105) | Control.HasFocus(1106) | Control.HasFocus(1107) | Control.HasFocus(1108) | Control.HasFocus(1129)]</visible>
+		<include>Settings_TileLabels</include>
+		<align>right</align>
+	</include>
+	
+	<include name="Settings_LiveTVTileLabels">	
+		<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="[Control.HasFocus(403) | Control.HasFocus(1011) | Control.HasFocus(1012) | Control.HasFocus(1013) | Control.HasFocus(1014) | Control.HasFocus(1015) | Control.HasFocus(1109) | Control.HasFocus(1110)]">Conditional</animation>
+		<visible>[Control.HasFocus(403) | Control.HasFocus(1011) | Control.HasFocus(1012) | Control.HasFocus(1013) | Control.HasFocus(1014) | Control.HasFocus(1015) | Control.HasFocus(1109) | Control.HasFocus(1110)]</visible>
+		<include>Settings_TileLabels</include>
+		<align>right</align>
+	</include>	
+	
+	<include name="Settings_MusicTileLabels">	
+		<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="[Control.HasFocus(404) | Control.HasFocus(1016) | Control.HasFocus(1017) | Control.HasFocus(1018) | Control.HasFocus(1019) | Control.HasFocus(1020) | Control.HasFocus(1111) | Control.HasFocus(1112) | Control.HasFocus(1113) | Control.HasFocus(1114) | Control.HasFocus(1115) | Control.HasFocus(1116)]">Conditional</animation>
+		<visible>[Control.HasFocus(404) | Control.HasFocus(1016) | Control.HasFocus(1017) | Control.HasFocus(1018) | Control.HasFocus(1019) | Control.HasFocus(1020) | Control.HasFocus(1111) | Control.HasFocus(1112) | Control.HasFocus(1113) | Control.HasFocus(1114) | Control.HasFocus(1115) | Control.HasFocus(1116)]</visible>
+		<include>Settings_TileLabels</include>
+		<align>right</align>
+	</include>	
+	
+	<include name="Settings_MusicVidTileLabels">	
+		<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="[Control.HasFocus(405) | Control.HasFocus(1021) | Control.HasFocus(1022) | Control.HasFocus(1023) | Control.HasFocus(1024) | Control.HasFocus(1025) | Control.HasFocus(1117) | Control.HasFocus(1118) | Control.HasFocus(1119) | Control.HasFocus(1120)]">Conditional</animation>
+		<visible>[Control.HasFocus(405) | Control.HasFocus(1021) | Control.HasFocus(1022) | Control.HasFocus(1023) | Control.HasFocus(1024) | Control.HasFocus(1025) | Control.HasFocus(1117) | Control.HasFocus(1118) | Control.HasFocus(1119) | Control.HasFocus(1120)]</visible>
+		<include>Settings_TileLabels</include>
+		<align>right</align>
+	</include>		
+
+	<include name="Settings_PictureTileLabels">	
+		<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="Control.HasFocus(406) | Control.HasFocus(1026) | Control.HasFocus(1027) | Control.HasFocus(1028) | Control.HasFocus(1029) | Control.HasFocus(1030)">Conditional</animation>
+		<visible>Control.HasFocus(406) | Control.HasFocus(1026) | Control.HasFocus(1027) | Control.HasFocus(1028) | Control.HasFocus(1029) | Control.HasFocus(1030)</visible>
+		<include>Settings_TileLabels</include>
+		<align>right</align>
+	</include>		
+	
+	<include name="Settings_GameTileLabels">	
+		<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="[Control.HasFocus(407) | Control.HasFocus(1031) | Control.HasFocus(1032) | Control.HasFocus(1033) | Control.HasFocus(1034) | Control.HasFocus(1035) | Control.HasFocus(1121) | Control.HasFocus(1122)]">Conditional</animation>
+		<visible>[Control.HasFocus(407) | Control.HasFocus(1031) | Control.HasFocus(1032) | Control.HasFocus(1033) | Control.HasFocus(1034) | Control.HasFocus(1035) | Control.HasFocus(1121) | Control.HasFocus(1122)]</visible>
+		<include>Settings_TileLabels</include>
+		<align>right</align>
+	</include>	
+
+	<include name="Settings_AddonTileLabels">	
+		<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="[Control.HasFocus(409) | Control.HasFocus(1036) | Control.HasFocus(1037) | Control.HasFocus(1038) | Control.HasFocus(1039) | Control.HasFocus(1040) | Control.HasFocus(1125) | Control.HasFocus(1126)]">Conditional</animation>
+		<visible>[Control.HasFocus(409) | Control.HasFocus(1036) | Control.HasFocus(1037) | Control.HasFocus(1038) | Control.HasFocus(1039) | Control.HasFocus(1040) | Control.HasFocus(1125) | Control.HasFocus(1126)]</visible>
+		<include>Settings_TileLabels</include>
+		<align>right</align>
+	</include>	
+
+	<include name="Settings_Custom1TileLabels">	
+		<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="[Control.HasFocus(410) | Control.HasFocus(1041) | Control.HasFocus(1042) | Control.HasFocus(1043) | Control.HasFocus(1044) | Control.HasFocus(1045) | Control.HasFocus(1127) | Control.HasFocus(1128)]">Conditional</animation>
+		<visible>[Control.HasFocus(410) | Control.HasFocus(1041) | Control.HasFocus(1042) | Control.HasFocus(1043) | Control.HasFocus(1044) | Control.HasFocus(1045) | Control.HasFocus(1127) | Control.HasFocus(1128)]</visible>
+		<include>Settings_TileLabels</include>
+		<align>right</align>
+	</include>
+
+	<include name="Settings_PanelButtons">
+		<width>180</width>
+		<height>40</height>
+		<texturenofocus>backings/key-back2.png</texturenofocus>	
+		<onup>1100</onup>
+		<ondown>1100</ondown>	
+	</include>	
+	
+	<include name="Settings_MoviePanelButtons">
+		<include>Settings_PanelButtons</include>
+		<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="[Control.HasFocus(401) | Control.HasFocus(1001) | Control.HasFocus(1002) | Control.HasFocus(1003) | Control.HasFocus(1004) | Control.HasFocus(1005) | Control.HasFocus(1101) | Control.HasFocus(1102) | Control.HasFocus(1103) | Control.HasFocus(1104)]">Conditional</animation>
+		<visible>[Control.HasFocus(401) | Control.HasFocus(1001) | Control.HasFocus(1002) | Control.HasFocus(1003) | Control.HasFocus(1004) | Control.HasFocus(1005) | Control.HasFocus(1101) | Control.HasFocus(1102) | Control.HasFocus(1103) | Control.HasFocus(1104)]</visible>
+		<onleft>1002</onleft>
+		<onright>401</onright>									
+	</include>	
+	
+	<include name="Settings_TVShowPanelButtons">
+		<include>Settings_PanelButtons</include>
+		<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="[Control.HasFocus(402) | Control.HasFocus(1006) | Control.HasFocus(1007) | Control.HasFocus(1008) | Control.HasFocus(1009) | Control.HasFocus(1010) | Control.HasFocus(1105) | Control.HasFocus(1106) | Control.HasFocus(1107) | Control.HasFocus(1108) | Control.HasFocus(1129)]">Conditional</animation>
+		<visible>[Control.HasFocus(402) | Control.HasFocus(1006) | Control.HasFocus(1007) | Control.HasFocus(1008) | Control.HasFocus(1009) | Control.HasFocus(1010) | Control.HasFocus(1105) | Control.HasFocus(1106) | Control.HasFocus(1107) | Control.HasFocus(1108) | Control.HasFocus(1129)]</visible>
+		<onleft>1007</onleft>
+		<onright>402</onright>									
+	</include>	
+	
+	<include name="Settings_LiveTVPanelButtons">
+		<include>Settings_PanelButtons</include>
+		<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="[Control.HasFocus(403) | Control.HasFocus(1011) | Control.HasFocus(1012) | Control.HasFocus(1013) | Control.HasFocus(1014) | Control.HasFocus(1015) | Control.HasFocus(1109) | Control.HasFocus(1110)]">Conditional</animation>
+		<visible>[Control.HasFocus(403) | Control.HasFocus(1011) | Control.HasFocus(1012) | Control.HasFocus(1013) | Control.HasFocus(1014) | Control.HasFocus(1015) | Control.HasFocus(1109) | Control.HasFocus(1110)]</visible>
+		<onleft>1012</onleft>
+		<onright>403</onright>									
+	</include>	
+	
+	<include name="Settings_MusicPanelButtons">
+		<include>Settings_PanelButtons</include>
+		<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="[Control.HasFocus(404) | Control.HasFocus(1016) | Control.HasFocus(1017) | Control.HasFocus(1018) | Control.HasFocus(1019) | Control.HasFocus(1020) | Control.HasFocus(1111) | Control.HasFocus(1112) | Control.HasFocus(1113) | Control.HasFocus(1114) | Control.HasFocus(1115) | Control.HasFocus(1116)]">Conditional</animation>
+		<visible>[Control.HasFocus(404) | Control.HasFocus(1016) | Control.HasFocus(1017) | Control.HasFocus(1018) | Control.HasFocus(1019) | Control.HasFocus(1020) | Control.HasFocus(1111) | Control.HasFocus(1112) | Control.HasFocus(1113) | Control.HasFocus(1114) | Control.HasFocus(1115) | Control.HasFocus(1116)]</visible>
+		<onleft>1016</onleft>
+		<onright>404</onright>									
+	</include>
+	
+	<include name="Settings_MusicVidPanelButtons">
+		<include>Settings_PanelButtons</include>
+		<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="[Control.HasFocus(405) | Control.HasFocus(1021) | Control.HasFocus(1022) | Control.HasFocus(1023) | Control.HasFocus(1024) | Control.HasFocus(1025) | Control.HasFocus(1117) | Control.HasFocus(1118) | Control.HasFocus(1119) | Control.HasFocus(1120)]">Conditional</animation>
+		<visible>[Control.HasFocus(405) | Control.HasFocus(1021) | Control.HasFocus(1022) | Control.HasFocus(1023) | Control.HasFocus(1024) | Control.HasFocus(1025) | Control.HasFocus(1117) | Control.HasFocus(1118) | Control.HasFocus(1119) | Control.HasFocus(1120)]</visible>
+		<onleft>1022</onleft>
+		<onright>405</onright>									
+	</include>	
+	
+	<include name="Settings_GamePanelButtons">
+		<include>Settings_PanelButtons</include>
+		<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="[Control.HasFocus(407) | Control.HasFocus(1031) | Control.HasFocus(1032) | Control.HasFocus(1033) | Control.HasFocus(1034) | Control.HasFocus(1035) | Control.HasFocus(1121) | Control.HasFocus(1122)]">Conditional</animation>
+		<visible>[Control.HasFocus(407) | Control.HasFocus(1031) | Control.HasFocus(1032) | Control.HasFocus(1033) | Control.HasFocus(1034) | Control.HasFocus(1035) | Control.HasFocus(1121) | Control.HasFocus(1122)]</visible>
+		<onleft>1031</onleft>
+		<onright>407</onright>									
+	</include>	
+	
+	<include name="Settings_WeatherPanelButtons">
+		<include>Settings_PanelButtons</include>
+		<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="[Control.HasFocus(408) | Control.HasFocus(1123) | Control.HasFocus(1124)]">Conditional</animation>
+		<visible>[Control.HasFocus(408) | Control.HasFocus(1123) | Control.HasFocus(1124)]</visible>
+		<onleft>408</onleft>
+		<onright>408</onright>									
+	</include>	
+	
+	<include name="Settings_AddonPanelButtons">
+		<include>Settings_PanelButtons</include>
+		<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="[Control.HasFocus(409) | Control.HasFocus(1036) | Control.HasFocus(1037) | Control.HasFocus(1038) | Control.HasFocus(1039) | Control.HasFocus(1040) | Control.HasFocus(1125) | Control.HasFocus(1126)]">Conditional</animation>
+		<visible>[Control.HasFocus(409) | Control.HasFocus(1036) | Control.HasFocus(1037) | Control.HasFocus(1038) | Control.HasFocus(1039) | Control.HasFocus(1040) | Control.HasFocus(1125) | Control.HasFocus(1126)]</visible>
+		<onleft>1037</onleft>
+		<onright>409</onright>									
+	</include>		
+	
+	<include name="Settings_Custom1PanelButtons">
+		<include>Settings_PanelButtons</include>
+		<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="[Control.HasFocus(410) | Control.HasFocus(1041) | Control.HasFocus(1042) | Control.HasFocus(1043) | Control.HasFocus(1044) | Control.HasFocus(1045) | Control.HasFocus(1127) | Control.HasFocus(1128)]">Conditional</animation>
+		<visible>[Control.HasFocus(410) | Control.HasFocus(1041) | Control.HasFocus(1042) | Control.HasFocus(1043) | Control.HasFocus(1044) | Control.HasFocus(1045) | Control.HasFocus(1127) | Control.HasFocus(1128)]  + Skin.HasSetting(UseFavouritesScript)</visible>
+		<onleft>1041</onleft>
+		<onright>410</onright>									
+	</include>	
+	
+	<include name="Settings_PanelCheck">
+		<width>30</width>
+		<height>30</height>
+		<texture>watched/check.png</texture>
+	</include>	
+	
+</includes>

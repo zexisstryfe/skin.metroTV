@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window type="dialog" id="134">
+	<defaultcontrol always="true">450</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+		<include>DialogOverlay</include>
+		
+		<control type="group">
+			<posx>300</posx>
+			<posy>80</posy>
+			<include>Animation_Dialog_Center</include>
+			
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>680</width>
+				<height>560</height>
+				<include>Common_Color_Keyback1</include>
+			</control>
+		
+			<control type="label" id="1">
+				<description>Heading</description>
+				<posx>660</posx>
+				<label>$LOCALIZE[1036]</label>
+				<width>590</width>
+				<include>Dialog_Header</include>
+			</control>
+			
+			<control type="image">
+				<description>line</description>
+				<width>680</width>
+				<include>Dialog_Line</include>
+			</control>
+			
+			<control type="image">
+				<description>outline</description>
+				<posx>444</posx>
+				<posy>79</posy>
+				<height>462</height>
+				<include>Common_Scroll_OutlineV</include>
+				<visible>Control.HasFocus(451)</visible>
+			</control>
+			
+			<control type="scrollbar" id="451">
+				<posx>445</posx>
+				<posy>80</posy>
+				<height>460</height>
+				<onleft>450</onleft>
+				<onright>450</onright>
+				<width>5</width>
+			</control>
+
+			<control type="list" id="450">
+				<posx>20</posx>
+				<posy>80</posy>
+				<width>420</width>
+				<height>460</height>
+				<onleft>451</onleft>
+				<onright>451</onright>
+				<onup>450</onup>
+				<ondown>450</ondown>
+				<pagecontrol>451</pagecontrol>
+				<itemlayout height="92">
+
+					<control type="image">
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>420</width>
+						<height>80</height>
+						<include>Common_Color_Keyback2</include>
+					</control>
+					
+					<control type="image">
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>80</width>
+						<height>80</height>
+						<texture border="2" colordiffuse="Keyback1">colors/color_white.png</texture>
+						<bordertexture border="1">colors/color_white.png</bordertexture>
+						<bordersize>1</bordersize>
+					</control>
+
+					<control type="image">
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>80</width>
+						<height>80</height>
+						<texture background="true" fallback="tiles/favourites.png">$INFO[ListItem.Icon]</texture>
+						<aspectratio aligny="top">scale</aspectratio>
+					</control>
+
+					<control type="label">
+						<posx>100</posx>
+						<width>380</width>
+						<height>90</height>
+						<label>[B]$INFO[ListItem.Label][/B]</label>c
+					</control>
+
+					<control type="label">
+						<posx>420</posx>
+						<width>400</width>
+						<height>90</height>
+						<align>right</align>
+						<info>ListItem.Label2</info>
+					</control>
+
+				</itemlayout>
+
+				<focusedlayout height="92">
+
+					<control type="image">
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>420</width>
+						<height>80</height>
+						<include>Common_Color_Accent</include>
+						<include>VisibleFadeEffect</include>
+					</control>
+					
+					
+					<control type="image">
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>80</width>
+						<height>80</height>
+						<texture border="2" colordiffuse="Keyback1">colors/color_white.png</texture>
+						<bordertexture border="1">colors/color_white.png</bordertexture>
+						<bordersize>1</bordersize>
+					</control>
+
+					<control type="image">
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>80</width>
+						<height>80</height>
+						<texture background="true" fallback="tiles/favourites.png">$INFO[ListItem.Icon]</texture>
+						<aspectratio aligny="top">scale</aspectratio>
+					</control>
+
+					<control type="label">
+						<posx>100</posx>
+						<width>380</width>
+						<height>90</height>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<scroll>true</scroll>
+					</control>
+
+					<control type="label">
+						<posx>420</posx>
+						<width>400</width>
+						<height>90</height>
+						<align>right</align>
+						<info>ListItem.Label2</info>
+					</control>
+
+				</focusedlayout>
+
+			</control>
+
+			<control type="image">
+				<description>Large Icon Image</description>
+				<posx>460</posx>
+				<posy>238</posy>
+				<width>200</width>
+				<height>300</height>
+				<texture fallback="defaults/DefaultAddonNone.png">$INFO[Container(450).ListItem.Icon]</texture>
+				<aspectratio align="center" aligny="bottom">keep</aspectratio>
+				<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
+				<bordersize>5</bordersize>
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

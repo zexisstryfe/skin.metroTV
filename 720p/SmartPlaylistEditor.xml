@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="129">
+	<defaultcontrol always="true">22</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+
+	<controls>
+
+		<include>DialogOverlay</include>
+
+		<control type="group">
+			<posx>250</posx>
+			<posy>20</posy>
+			<include>Animation_Dialog_Center</include>
+			<visible>!Window.IsVisible(smartplaylistrule)</visible>
+			
+			<control type="image">
+				<description>background image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>780</width>
+				<height>680</height>
+				<include>Common_Color_Keyback1</include>
+			</control>
+
+			<control type="label" id="2">
+				<description>header label</description>
+				<posx>760</posx>
+				<posy>10</posy>
+				<width>760</width>
+				<align>right</align>
+				<font>font40LB</font>
+				<textcolor>Accent</textcolor>
+				<label>21432</label>
+			</control>
+			
+			<control type="image">
+				<description>line</description>
+				<posx>0</posx>
+				<posy>60</posy>
+				<width>780</width>
+				<height>4</height>
+				<include>Common_Color_Accent</include>
+			</control>
+
+			<control type="spincontrolex" id="22">
+				<description>Set Playlist type</description>
+				<posx>20</posx>
+				<posy>90</posy>
+				<width>740</width>
+				<label>467</label>
+				<onright>22</onright>
+				<onleft>22</onleft>
+				<onup>9001</onup>
+				<ondown>12</ondown>
+			</control>
+
+			<control type="label">
+				<description>Name Label</description>
+				<posx>20</posx>
+				<posy>136</posy>
+				<width>740</width>
+				<label>21433</label>
+				<font>font20UB</font>
+				<textcolor>Accent</textcolor>
+				<align>center</align>
+			</control>
+
+			<control type="edit" id="12">
+				<description>Name Button</description>
+				<posx>20</posx>
+				<posy>182</posy>
+				<width>740</width>
+				<height>44</height>
+				<font>font20</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>Black</textcolor>
+				<focusedcolor>White</focusedcolor>
+				<selectedcolor>White</selectedcolor>
+				<label>-</label>
+				<textoffsetx>20</textoffsetx>
+				<texturenofocus border="2">backings/edit-back.png</texturenofocus>
+				<texturefocus border="5">general/accent.png</texturefocus>
+				<pulseonselect>false</pulseonselect>
+				<onup>22</onup>
+				<onleft>12</onleft>
+				<onright>12</onright>
+				<ondown>10</ondown>
+			</control>
+
+			<control type="label">
+				<description>rules label</description>
+				<posx>20</posx>
+				<posy>228</posy>
+				<width>740</width>
+				<label>21434</label>
+				<font>font20UB</font>
+				<textcolor>Accent</textcolor>
+				<align>center</align>
+			</control>
+			
+			<control type="image">
+				<description>list background image</description>
+				<posx>20</posx>
+				<posy>274</posy>
+				<width>560</width>
+				<height>138</height>
+				<include>Common_Color_Keyback2</include>
+			</control>
+			
+			<control type="image">
+				<description>outline</description>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<posx>584</posx>
+				<posy>273</posy>
+				<width>7</width>
+				<height>140</height>
+				<aspectratio>stretch</aspectratio>
+				<texture>colors/color_white.png</texture>
+				<visible>Control.HasFocus(23)</visible>
+			</control>
+			
+			<control type="scrollbar" id="23">
+				<posx>585</posx>
+				<posy>274</posy>
+				<height>138</height>
+				<onleft>10</onleft>
+				<onright>9000</onright>
+				<width>5</width>
+			</control>
+
+			<control type="list" id="10">
+				<description>Rules List Control</description>
+				<posx>20</posx>
+				<posy>274</posy>
+				<width>560</width>
+				<height>138</height>
+				<onup>12</onup>
+				<onleft>9000</onleft>
+				<onright>23</onright>
+				<pagecontrol>23</pagecontrol>
+				<ondown>16</ondown>
+				<itemlayout width="560" height="46">
+
+					<control type="label">
+						<posx>20</posx>
+						<posy>0</posy>
+						<width>520</width>
+						<info>ListItem.Label</info>
+					</control>
+
+				</itemlayout>
+
+				<focusedlayout width="560" height="46">
+
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>560</width>
+						<height>44</height>
+						<include>Common_Color_Accent</include>
+						<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(10)">Conditional</animation>
+					</control>
+
+					<control type="label">
+						<posx>20</posx>
+						<posy>0</posy>
+						<width>520</width>
+						<info>ListItem.Label</info>
+					</control>
+
+				</focusedlayout>
+
+			</control>
+
+			<control type="group" id="9000">
+
+				<control type="button" id="13">
+					<description>Add Rule Button</description>
+					<posx>600</posx>
+					<posy>320</posy>
+					<width>48</width>
+					<height>48</height>
+					<textoffsetx>2000</textoffsetx>
+					<onup>17</onup>
+					<onleft>10</onleft>
+					<onright>14</onright>
+					<ondown>16</ondown>
+					<texturefocus>buttons/addFO.png</texturefocus>
+					<texturenofocus>buttons/addNF.png</texturenofocus>
+				</control>
+				
+				<control type="button" id="14">
+					<description>Remove</description>
+					<visible>Control.IsEnabled(14)</visible>
+					<posx>660</posx>
+					<posy>320</posy>
+					<width>48</width>
+					<height>48</height>
+					<textoffsetx>2000</textoffsetx>
+					<onup>17</onup>
+					<onleft>13</onleft>
+					<onright>15</onright>
+					<ondown>16</ondown>
+					<texturefocus>buttons/removeFO.png</texturefocus>
+					<texturenofocus>buttons/removeNF.png</texturenofocus>
+				</control>
+				
+				<control type="image">
+					<visible>!Control.IsEnabled(14)</visible>
+					<posx>660</posx>
+					<posy>320</posy>
+					<width>48</width>
+					<height>48</height>
+					<texture>buttons/removeDISABLED.png</texture>
+				</control>
+				
+				<control type="button" id="15">
+					<description>Edit</description>
+					<posx>720</posx>
+					<posy>320</posy>
+					<width>48</width>
+					<height>48</height>
+					<textoffsetx>2000</textoffsetx>
+					<onup>17</onup>
+					<onleft>14</onleft>
+					<onright>10</onright>
+					<ondown>16</ondown>
+					<texturefocus>buttons/editFO.png</texturefocus>
+					<texturenofocus>buttons/editNF.png</texturenofocus>
+				</control>
+
+			</control>
+
+			<control type="label">
+				<description>Name Label</description>
+				<posx>20</posx>
+				<posy>412</posy>
+				<width>740</width>
+				<label>31166</label>
+				<font>font20UB</font>
+				<textcolor>Accent</textcolor>
+				<align>center</align>
+			</control>
+
+			<control type="spincontrolex" id="16">
+				<posx>20</posx>
+				<posy>458</posy>
+				<width>740</width>
+				<label>21424</label>
+				<onright>16</onright>
+				<onleft>16</onleft>
+				<onup>10</onup>
+				<ondown>17</ondown>
+			</control>
+
+			<control type="spincontrolex" id="17">
+				<posx>20</posx>
+				<posy>504</posy>
+				<width>740</width>
+				<label>21427</label>
+				<onright>17</onright>
+				<onleft>17</onleft>
+				<onup>16</onup>
+				<ondown>18</ondown>
+			</control>
+
+			<control type="spincontrolex" id="18">
+				<posx>20</posx>
+				<posy>550</posy>
+				<width>560</width>
+				<label>21429</label>
+				<onright>19</onright>
+				<onleft>19</onleft>
+				<onup>17</onup>
+				<ondown>9001</ondown>
+			</control>
+
+			<control type="togglebutton" id="19">
+				<posx>600</posx>
+				<posy>550</posy>
+				<width>170</width>
+				<label>21431</label>
+				<altlabel>21430</altlabel>
+				<onright>18</onright>
+				<onleft>18</onleft>
+				<onup>17</onup>
+				<ondown>9001</ondown>
+				<texturenofocus>backings/key-back2.png</texturenofocus>
+			</control>
+
+			<control type="group" id="9001">
+				<posx>660</posx>
+				<posy>616</posy>
+			
+				<control type="button" id="20">
+					<description>Yes</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>48</width>
+					<height>48</height>
+					<textoffsetx>2000</textoffsetx>
+					<onup>18</onup>
+					<onleft>21</onleft>
+					<onright>21</onright>
+					<ondown>22</ondown>
+					<texturefocus>buttons/okFO.png</texturefocus>
+					<texturenofocus>buttons/okNF.png</texturenofocus>
+				</control>
+
+				<control type="button" id="21">
+					<description>No</description>
+					<posx>60</posx>
+					<posy>0</posy>
+					<width>48</width>
+					<height>48</height>
+					<textoffsetx>2000</textoffsetx>
+					<onup>18</onup>
+					<onleft>20</onleft>
+					<onright>20</onright>
+					<ondown>22</ondown>
+					<texturefocus>buttons/cancelFO.png</texturefocus>
+					<texturenofocus>buttons/cancelNF.png</texturenofocus>
+				</control>
+
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

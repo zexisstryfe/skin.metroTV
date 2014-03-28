@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window id="135">
+	<defaultcontrol always="true">14</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<include>DialogOverlay</include>
+
+		<control type="group">
+			<posx>275</posx>
+			<posy>100</posy>
+			<include>Animation_Dialog_Center</include>
+			
+			<control type="image">
+				<width>730</width>
+				<height>570</height>
+				<include>Common_Color_Keyback1</include>
+			</control>		
+			
+			<control type="image">
+				<description>line</description>
+				<width>730</width>
+				<include>Dialog_Line</include>
+			</control>	
+			
+			<control type="image">
+				<width>240</width>
+				<height>570</height>
+				<include>Common_Color_Keyback2</include>
+			</control>
+			
+			<control type="image" id="3">
+				<description>Cover Image</description>
+				<posx>20</posx>
+				<posy>40</posy>
+				<width>200</width>
+				<height>200</height>
+				<texture fallback="defaults/DefaultAlbumCover.png">$INFO[ListItem.Icon]</texture>
+				<aspectratio align="center" aligny="top">keep</aspectratio>
+				<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
+				<bordersize>5</bordersize>
+			</control>
+			
+			<control type="label">
+				<description>Title</description>
+				<posx>710</posx>
+				<width>480</width>
+				<include>Dialog_Header</include>
+				<label>$INFO[ListItem.Title]</label>
+			</control>
+			
+		<!--Details list-->	
+			<control type="grouplist">
+				<posx>260</posx>
+				<posy>84</posy>
+				<width>580</width>
+				<height>112</height>
+				<itemgap>0</itemgap>
+				<orientation>vertical</orientation>
+				
+				<control type="group">
+					<height>28</height>
+					<visible>!IsEmpty(ListItem.Album)</visible>
+					
+					<control type="label">
+						<description>Album Label</description>
+						<include>Common_Infolist_Label</include>
+						<label>$LOCALIZE[558]:</label>
+					</control>
+					
+					<control type="label">
+						<description>Album Value</description>
+						<include>Common_Infolist_Info</include>
+						<label>$INFO[ListItem.Album]</label>						
+					</control>
+					
+				</control>
+				
+				<control type="group">
+					<height>28</height>
+					<visible>!IsEmpty(ListItem.Artist)</visible>
+					
+					<control type="label">
+						<description>Artist Label</description>
+						<include>Common_Infolist_Label</include>
+						<label>$LOCALIZE[557]:</label>
+					</control>
+					
+					<control type="label">
+						<description>Artist Value</description>
+						<include>Common_Infolist_Info</include>
+						<label>$INFO[ListItem.Artist]</label>						
+					</control>
+					
+				</control>
+				
+				<control type="group">
+					<height>28</height>
+					<visible>!IsEmpty(ListItem.Genre)</visible>
+					
+					<control type="label">
+						<description>Genre Label</description>
+						<include>Common_Infolist_Label</include>
+						<label>$LOCALIZE[515]:</label>
+					</control>
+					
+					<control type="label">
+						<description>Genre Value</description>
+						<include>Common_Infolist_Info</include>
+						<label>$INFO[ListItem.Genre]</label>						
+					</control>
+					
+				</control>
+
+				<control type="group">
+					<height>28</height>
+					<visible>!IsEmpty(ListItem.Year)</visible>
+					
+					<control type="label">
+						<description>Year Label</description>
+						<include>Common_Infolist_Label</include>
+						<label>$LOCALIZE[562]:</label>
+					</control>
+					
+					<control type="label">
+						<description>Year Value</description>
+						<include>Common_Infolist_Info</include>
+						<label>$INFO[ListItem.Year]</label>						
+					</control>
+					
+				</control>
+				
+			</control>
+
+			<control type="grouplist">
+				<posx>260</posx>
+				<posy>196</posy>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>	
+
+				<control type="label">
+					<description>Rating Title</description>
+					<include>Common_Infolist_Label</include>
+					<label>$LOCALIZE[563]:</label>
+				</control>
+
+				<control type="image">
+					<description>Rating value</description>
+					<width>150</width>
+					<height>28</height>
+					<texture>flags/ratings/$INFO[ListItem.StarRating]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+
+			</control>
+			
+			<control type="label">
+				<posx>260</posx>
+				<posy>224</posy>			
+				<label>$LOCALIZE[31011]:</label>
+				<include>Common_Infolist_Label</include>
+			</control>
+
+			<control type="textbox" id="4">
+				<description>Review</description>
+				<posx>260</posx>
+				<posy>252</posy>
+				<width>450</width>
+				<height>200</height>
+				<align>justify</align>
+				<font>font18</font>
+				<label fallback="161">$INFO[ListItem.Comment]</label>
+			</control>
+
+			<control type="group">
+				<posx>20</posx>
+				<posy>270</posy>
+				<height>50</height>		
+				
+				<control type="image">
+					<description>rating</description>
+					<include>Common_Color_Keyback1</include>
+					<include>Common_Control_Button</include>
+				</control>	
+				
+				<control type="image">
+					<description>rating</description>
+					<include>Common_Color_Accent</include>
+					<include>Common_Control_Button</include>
+					<visible>!ControlGroup(9000).HasFocus</visible>
+				</control>
+				
+				<control type="image">
+					<include>Common_Control_Button</include>
+					<texture>icons/star.png</texture>
+				</control>
+				
+				<control type="label">
+					<include>Common_Control_Label</include>
+					<label>$LOCALIZE[563]</label>
+				</control>
+				
+				<control type="button" id="14">
+					<description>Decrease Rating</description>
+					<posx>165</posx>
+					<posy>15</posy>
+					<width>22</width>
+					<height>22</height>
+					<onclick>DecreaseRating</onclick>
+					<texturenofocus>controls/ArrowDownNF.png</texturenofocus>
+					<texturefocus>controls/ArrowDownFO.png</texturefocus>
+					<onleft>15</onleft>
+					<onright>15</onright>
+					<onup>13</onup>
+					<ondown>10</ondown>
+				</control>
+
+				<control type="button" id="15">
+					<description>Increase Rating</description>
+					<posx>187</posx>
+					<posy>15</posy>
+					<width>22</width>
+					<height>22</height>
+					<onclick>IncreaseRating</onclick>
+					<texturenofocus>controls/ArrowUpNF.png</texturenofocus>
+					<texturefocus>controls/ArrowUpFO.png</texturefocus>
+					<onleft>14</onleft>
+					<onright>14</onright>
+					<onup>13</onup>
+					<ondown>10</ondown>
+				</control>
+			</control>
+			
+			<control type="grouplist" id="9000">
+				<posx>20</posx>
+				<posy>325</posy>
+				<onleft>-</onleft>
+				<onright>-</onright>
+				<onup>15</onup>
+				<ondown>14</ondown>
+				<itemgap>5</itemgap>
+				<orientation>vertical</orientation>
+				
+				<control type="group">
+					<height>50</height>	
+					
+					<control type="button" id="10">
+						<description>Ok button</description>
+						<include>Common_Control_Button</include>
+						<onup>15</onup>
+						<ondown>11</ondown>
+						<onright>50</onright>
+						<onleft>50</onleft>
+					</control>
+					
+					<control type="image">
+						<include>Common_Control_Button</include>
+						<texture>icons/ok.png</texture>
+					</control>
+					
+					<control type="image">
+						<visible>!Control.IsEnabled(10)</visible>
+						<include>Common_Control_Button</include>
+						<texture>backings/overlay.png</texture>
+					</control>
+					
+					<control type="label">
+						<visible>!Control.IsEnabled(10)</visible>
+						<include>Common_Control_Label</include>
+						<label>$LOCALIZE[186]</label>
+						<textcolor>Keyback1</textcolor>
+					</control>
+					
+					<control type="label">
+						<visible>Control.IsEnabled(10)</visible>
+						<include>Common_Control_Label</include>
+						<label>$LOCALIZE[186]</label>
+					</control>
+					
+				</control>
+				<control type="group">
+					<height>50</height>
+					
+					<control type="button" id="11">
+						<description>Cancel</description>
+						<include>Common_Control_Button</include>
+						<onup>10</onup>
+						<ondown>12</ondown>
+						<onright>50</onright>
+						<onleft>50</onleft>
+					</control>
+					
+					<control type="image">
+						<include>Common_Control_Button</include>
+						<texture>icons/disable.png</texture>
+					</control>
+					
+					<control type="image">
+						<visible>!Control.IsEnabled(11)</visible>
+						<include>Common_Control_Button</include>
+						<texture>backings/overlay.png</texture>
+					</control>
+					
+					<control type="label">
+						<visible>!Control.IsEnabled(11)</visible>
+						<include>Common_Control_Label</include>
+						<label>$LOCALIZE[222]</label>
+						<textcolor>Keyback1</textcolor>
+					</control>
+					
+					<control type="label">
+						<visible>Control.IsEnabled(11)</visible>
+						<include>Common_Control_Label</include>
+						<label>$LOCALIZE[222]</label>
+					</control>
+					
+				</control>
+				
+				<control type="group">
+					<height>50</height>
+					
+					<control type="button" id="12">
+						<description>Album Info</description>
+						<include>Common_Control_Button</include>
+						<onup>11</onup>
+						<ondown>13</ondown>
+						<onright>50</onright>
+						<onleft>50</onleft>
+					</control>
+					
+					<control type="image">
+						<include>Common_Control_Button</include>
+						<texture>icons/disc.png</texture>
+					</control>
+					
+					<control type="image">
+						<visible>!Control.IsEnabled(12)</visible>
+						<include>Common_Control_Button</include>
+						<texture>backings/overlay.png</texture>
+					</control>
+					
+					<control type="label">
+						<visible>!Control.IsEnabled(12)</visible>
+						<include>Common_Control_Label</include>
+						<label>$LOCALIZE[10523]</label>
+						<textcolor>Keyback1</textcolor>
+					</control>
+					
+					<control type="label">
+						<visible>Control.IsEnabled(12)</visible>
+						<include>Common_Control_Label</include>
+						<label>$LOCALIZE[10523]</label>
+					</control>
+					
+				</control>
+				
+				<control type="group">
+					<height>50</height>
+					
+					<control type="button" id="13">
+						<description>Get Artwork</description>
+						<include>Common_Control_Button</include>
+						<onup>12</onup>
+						<ondown>14</ondown>
+						<onright>50</onright>
+						<onleft>50</onleft>
+					</control>
+					
+					<control type="image">
+						<include>Common_Control_Button</include>
+						<texture>icons/art.png</texture>
+					</control>
+					
+					<control type="image">
+						<visible>!Control.IsEnabled(13)</visible>
+						<include>Common_Control_Button</include>
+						<texture>backings/overlay.png</texture>
+					</control>
+					
+					<control type="label">
+						<visible>!Control.IsEnabled(13)</visible>
+						<include>Common_Control_Label</include>
+						<label>$LOCALIZE[13405]</label>
+						<textcolor>Keyback1</textcolor>
+					</control>
+					
+					<control type="label">
+						<visible>Control.IsEnabled(13)</visible>
+						<include>Common_Control_Label</include>
+						<label>$LOCALIZE[13405]</label>
+					</control>
+					
+				</control>
+				
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

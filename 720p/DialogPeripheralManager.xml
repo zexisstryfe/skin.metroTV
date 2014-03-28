@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="10140">
+	<defaultcontrol always="true">20</defaultcontrol>
+
+	<controls>
+
+		<include>DialogOverlay</include>
+
+		<control type="group">
+			<posx>420</posx>
+			<posy>80</posy>
+			<visible>!Window.IsVisible(PeripheralSettings)</visible>
+			<include>Animation_Dialog_Center</include>
+			
+			<control type="image">
+				<width>460</width>
+				<height>560</height>
+				<include>Common_Color_Keyback1</include>
+			</control>
+
+			<control type="label" id="1">
+				<description>header label</description>
+				<posx>440</posx>
+				<width>460</width>
+				<include>Dialog_Header</include>
+				<label>35000</label>
+			</control>
+			
+			<control type="image">
+				<description>line</description>
+				<width>460</width>
+				<include>Dialog_Line</include>
+			</control>
+			
+			<control type="image">
+				<description>outline</description>
+				<posx>439</posx>
+				<posy>84</posy>
+				<height>397</height>
+				<include>Common_Scroll_OutlineV</include>
+				<visible>Control.HasFocus(21)</visible>
+			</control>
+			
+			<control type="scrollbar" id="21">
+				<posx>440</posx>
+				<posy>85</posy>
+				<height>395</height>
+				<onleft>20</onleft>
+				<onright>20</onright>
+				<width>5</width>
+				<texturesliderbar colordiffuse="Accent">colors/color_white.png</texturesliderbar> 
+				<texturesliderbackground colordiffuse="KeyBack2">colors/color_white.png</texturesliderbackground> 
+			</control>
+
+			<control type="list" id="20">
+				<posx>10</posx>
+				<posy>80</posy>
+				<width>440</width>
+				<height>400</height>
+				<onup>10</onup>
+				<ondown>10</ondown>
+				<onleft>21</onleft>
+				<onright>21</onright>
+				<pagecontrol>21</pagecontrol>
+				<itemlayout height="105">
+					
+					<control type="image">
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>420</width>
+						<height>100</height>
+						<include>Common_Color_Keyback2</include>
+					</control>
+					
+					<control type="image">
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>100</width>
+						<height>100</height>
+						<include>Common_Color_Keyback1</include>
+						<bordertexture border="1">colors/color_white.png</bordertexture>
+						<bordersize>1</bordersize>
+					</control>
+					
+					<control type="image">
+						<posx>10</posx>
+						<posy>10</posy>
+						<width>90</width>
+						<height>90</height>
+						<texture>defaults/DefaultPeripheral.png</texture>
+					</control>
+					
+					<control type="label">
+						<description>Name</description>
+						<posx>120</posx>
+						<posy>10</posy>
+						<width>310</width>
+						<height>30</height>
+						<font>font20UB</font>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+					</control>
+
+					<control type="label">
+						<description>Product ID</description>
+						<posx>120</posx>
+						<posy>38</posy>
+						<width>310</width>
+						<height>20</height>
+						<font>font16L</font>
+						<label>[B]$LOCALIZE[35504]:[/B] $INFO[ListItem.Property(Product)]</label>
+					</control>
+
+					<control type="label">
+						<description>vendor</description>
+						<posx>120</posx>
+						<posy>58</posy>
+						<width>310</width>
+						<height>20</height>
+						<label>[B]$LOCALIZE[35503]:[/B]  $INFO[ListItem.Property(Vendor)]</label>
+						<font>font16L</font>
+					</control>
+					
+					<control type="label">
+						<description>class</description>
+						<posx>120</posx>
+						<posy>78</posy>
+						<width>310</width>
+						<height>20</height>
+						<label>[B]$LOCALIZE[35501]:[/B]  $INFO[ListItem.Property(Class)]</label>
+						<font>font16L</font>
+					</control>
+
+				</itemlayout>
+
+				<focusedlayout height="105">
+
+					<control type="image">
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>420</width>
+						<height>100</height>
+						<include>Common_Color_Accent</include>
+						<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(20)">Conditional</animation>
+					</control>
+					
+					<control type="image">
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>100</width>
+						<height>100</height>
+						<include>Common_Color_Keyback1</include>
+						<bordertexture border="1">colors/color_white.png</bordertexture>
+						<bordersize>1</bordersize>
+					</control>
+					
+					<control type="image">
+						<posx>10</posx>
+						<posy>10</posy>
+						<width>90</width>
+						<height>90</height>
+						<texture>defaults/DefaultPeripheral.png</texture>
+					</control>
+					
+					<control type="label">
+						<description>Name</description>
+						<posx>120</posx>
+						<posy>10</posy>
+						<width>310</width>
+						<height>30</height>
+						<font>font20UB</font>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+					</control>
+
+					<control type="label">
+						<description>Product ID</description>
+						<posx>120</posx>
+						<posy>38</posy>
+						<width>310</width>
+						<height>20</height>
+						<font>font16L</font>
+						<label>[B]$LOCALIZE[35504]:[/B] $INFO[ListItem.Property(Product)]</label>
+					</control>
+
+					<control type="label">
+						<description>vendor</description>
+						<posx>120</posx>
+						<posy>58</posy>
+						<width>310</width>
+						<height>20</height>
+						<label>[B]$LOCALIZE[35503]:[/B]  $INFO[ListItem.Property(Vendor)]</label>
+						<font>font16L</font>
+					</control>
+					
+					<control type="label">
+						<description>class</description>
+						<posx>120</posx>
+						<posy>78</posy>
+						<width>310</width>
+						<height>20</height>
+						<label>[B]$LOCALIZE[35501]:[/B]  $INFO[ListItem.Property(Class)]</label>
+						<font>font16L</font>
+					</control>
+					
+				</focusedlayout>
+		
+			</control>
+			
+			<control type="button" id="10">
+				<description>OK Button</description>
+				<posx>392</posx>
+				<posy>500</posy>
+				<onup>20</onup>
+				<ondown>20</ondown>
+				<include>Dialog_OkButton</include>
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

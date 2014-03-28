@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="2002">
+	<defaultcontrol always="true">10</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<include>DialogOverlay</include>
+
+		<control type="group">
+			<posx>340</posx>
+			<posy>240</posy>
+			<include>Animation_Dialog_Center</include>
+			
+			<control type="image">
+				<width>600</width>
+				<height>254</height>
+				<include>Common_Color_Keyback1</include>
+			</control>
+
+			<control type="label" id="1">
+				<description>Heading</description>
+				<posx>580</posx>
+				<label>-</label>
+				<width>590</width>
+				<include>Dialog_Header</include>
+			</control>
+			
+			<control type="image">
+				<description>line</description>
+				<width>600</width>
+				<include>Dialog_Line</include>
+			</control>
+
+			<control type="label" id="2">
+				<description>Line 1</description>
+				<posx>20</posx>
+				<posy>62</posy>
+				<width>560</width>
+				<scroll>true</scroll>
+				<align>center</align>
+			</control>
+
+			<control type="label" id="3">
+				<description>Line 2</description>
+				<posx>20</posx>
+				<posy>94</posy>
+				<width>560</width>
+				<scroll>true</scroll>
+				<align>center</align>
+			</control>
+
+			<control type="label" id="4">
+				<description>Line 3</description>
+				<posx>20</posx>
+				<posy>126</posy>
+				<width>560</width>
+				<scroll>true</scroll>
+				<align>center</align>
+			</control>
+			
+			<control type="button" id="10">
+				<description>OK Button</description>
+				<posx>532</posx>
+				<posy>190</posy>
+				<onleft>10</onleft>
+				<onright>10</onright>
+				<onup>10</onup>
+				<ondown>10</ondown>
+				<include>Dialog_OkButton</include>
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

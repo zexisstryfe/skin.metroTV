@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window type="dialog" id="3002">
+
+	<defaultcontrol always="true">10</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<zorder>2</zorder>
+	
+	<controls>
+	
+		<include>DialogOverlay</include>
+
+		<control type="group">
+			<posx>0</posx>
+			<posy>190</posy>
+			
+			<include>Common_Animation_Dialog</include>
+
+			<control type="image">				
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>340</height>
+				<include>Common_Color_Keyback1</include>				
+			</control>
+		
+			<control type="grouplist">				
+				<posx>190</posx>
+				<posy>20</posy>
+				<width>900</width>
+				<itemgap>25</itemgap>
+				<orientation>vertical</orientation>
+				
+				<control type="label" id="1">				
+					<description>Heading</description>
+					<posx>900</posx>
+					<label>31199</label>
+					<width>590</width>
+					<font>font40</font>					
+				</control>
+
+				<control type="label" id="2">					
+					<description>Line 1</description>
+					<include>FirstRun_Labels</include>
+					<label>31200</label>				
+				</control>
+
+				<control type="label" id="3">					
+					<description>Line 2</description>
+					<include>FirstRun_Labels</include>
+					<label>31201</label>				
+				</control>
+				
+				<control type="label" id="4">					
+					<description>Line 3</description>
+					<label>31202</label>
+					<include>FirstRun_Labels</include>				
+				</control>
+
+			</control>
+			
+			<control type="grouplist">			
+				<posx>190</posx>
+				<posy>280</posy>
+				<width>900</width>
+				<itemgap>20</itemgap>
+				<orientation>horizontal</orientation>
+				<align>right</align>
+					
+				<control type="button" id="10">
+					<description>Yes</description>
+					<onclick>Skin.SetBool(FirstTimeRun)</onclick>
+					<onclick>Dialog.Close(3002)</onclick>
+					<include>Dialog_OkButton</include>
+				</control>
+
+			</control>	
+
+		</control>
+
+	</controls>
+
+</window>

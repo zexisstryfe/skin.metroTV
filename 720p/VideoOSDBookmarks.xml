@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window id="125">
+	<defaultcontrol always="true">2</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+	
+		<include>DialogOverlay</include>
+
+		<control type="group">
+			<posx>260</posx>
+			<posy>80</posy>
+			<include>Animation_Dialog_Center</include>
+			
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>760</width>
+				<height>560</height>
+				<include>Common_Color_Keyback1</include>
+			</control>
+			
+			<control type="label">
+				<description>header label</description>
+				<posx>740</posx>
+				<posy>10</posy>
+				<width>440</width>
+				<align>right</align>
+				<font>font40LB</font>
+				<textcolor>Accent</textcolor>
+				<label>$LOCALIZE[298]</label>
+			</control>
+			
+			<control type="image">
+				<description>line</description>
+				<posx>0</posx>
+				<posy>60</posy>
+				<width>760</width>
+				<height>4</height>
+				<include>Common_Color_Accent</include>
+			</control>
+			
+			<control type="image">
+				<description>outline</description>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<posx>739</posx>
+				<posy>94</posy>
+				<width>7</width>
+				<height>392</height>
+				<aspectratio>stretch</aspectratio>
+				<texture>colors/color_white.png</texture>
+				<visible>Control.HasFocus(7)</visible>
+			</control>
+			
+			<control type="scrollbar" id="7">
+				<posx>740</posx>
+				<posy>95</posy>
+				<height>390</height>
+				<onleft>11</onleft>
+				<onright>11</onright>
+				<width>5</width>
+			</control>
+
+			<control type="panel" id="11">
+				<posx>20</posx>
+				<posy>95</posy>
+				<width>720</width>
+				<height>390</height>
+				<onleft>7</onleft>
+				<onright>7</onright>
+				<ondown>2</ondown>
+				<onup>2</onup>
+				<scrolltime>200</scrolltime>
+				<viewtype label="536">icon</viewtype>
+				<pagecontrol>7</pagecontrol>
+				<orientation>vertical</orientation>
+				<itemlayout height="195" width="240">
+
+					<control type="image">
+						<posx>7</posx>
+						<posy>7</posy>
+						<width>220</width>
+						<height>140</height>
+						<info>ListItem.Icon</info>
+					</control>
+
+					<control type="label">
+						<posx>112</posx>
+						<posy>155</posy>
+						<width>225</width>
+						<height>15</height>
+						<align>center</align>
+						<info>ListItem.Label</info>
+					</control>
+
+				</itemlayout>
+
+				<focusedlayout height="195" width="240">
+
+					<control type="image">
+						<posx>2</posx>
+						<posy>2</posy>
+						<width>230</width>
+						<height>150</height>
+						<info>ListItem.Icon</info>
+						<bordertexture border="5">general/accent.png</bordertexture>
+						<bordersize>5</bordersize>
+					</control>
+
+					<control type="label">
+						<posx>112</posx>
+						<posy>155</posy>
+						<width>225</width>
+						<height>15</height>
+						<align>center</align>
+						<info>ListItem.Label</info>
+					</control>
+
+				</focusedlayout>
+
+			</control>
+
+			<control type="grouplist" id="9000">
+				<posx>580</posx>
+				<posy>495</posy>
+				<width>760</width>
+				<height>50</height>
+				<itemgap>12</itemgap>
+				<orientation>horizontal</orientation>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>11</onup>
+				<ondown>11</ondown>
+
+				<control type="button" id="2">
+					<description>Create Bookmark button</description>
+					<width>48</width>
+					<height>48</height>
+					<textoffsetx>2000</textoffsetx>
+					<texturefocus>buttons/addbookmarkFO.png</texturefocus>
+					<texturenofocus>buttons/addbookmarkNF.png</texturenofocus>
+				</control>
+
+				<control type="button" id="3">
+					<description>Clear Bookmark button</description>
+					<width>48</width>
+					<height>48</height>
+					<textoffsetx>2000</textoffsetx>
+					<texturefocus>buttons/clearbookmarkFO.png</texturefocus>
+					<texturenofocus>buttons/clearbookmarkNF.png</texturenofocus>
+				</control>
+
+				<control type="button" id="4">
+					<description>Set Bookmark button</description>
+					<width>48</width>
+					<height>48</height>
+					<textoffsetx>2000</textoffsetx>
+					<texturefocus>buttons/setbookmarkFO.png</texturefocus>
+					<texturenofocus>buttons/setbookmarkNF.png</texturenofocus>
+					<visible>Control.IsEnabled(4)</visible>
+				</control>
+				
+				<control type="image">
+					<description>Set Bookmark</description>
+					<width>48</width>
+					<height>48</height>
+					<texture>buttons/setbookmarkDISABLED.png</texture>
+					<visible>!Control.IsEnabled(4)</visible>				
+				</control>
+
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

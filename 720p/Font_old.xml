@@ -1,0 +1,770 @@
+<fonts>
+	<fontset id="default" unicode="true">
+
+	<!--Scrawl font-->
+	
+		<font>
+			<name>Scrawl18</name>
+			<filename>aescrawl.ttf</filename>
+			<size>18</size>
+			<linespacing>0.75</linespacing>
+		</font>
+		
+	<!--Roboto font-->
+	
+		<font>
+			<name>Roboto16</name>
+			<filename>Roboto-Light.ttf</filename>
+			<size>16</size>
+		</font>
+
+		<font>
+			<name>Roboto18</name>
+			<filename>Roboto-Light.ttf</filename>
+			<size>18</size>
+		</font>
+		
+		<font>
+			<name>Roboto20</name>
+			<filename>Roboto-Light.ttf</filename>
+			<size>20</size>
+		</font>
+		
+		<font>
+			<name>Roboto26</name>
+			<filename>Roboto-Light.ttf</filename>
+			<size>26</size>
+		</font>
+
+	<!--Roboto font- lowercase-->
+		
+		<font>
+			<name>Roboto14L</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>lowercase</style>
+			<size>14</size>
+		</font>
+	
+		<font>
+			<name>Roboto16L</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>lowercase</style>
+			<size>16</size>
+		</font>
+		
+		<font>
+			<name>Roboto18L</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>lowercase</style>
+			<size>18</size>
+		</font>
+	
+		<font>
+			<name>Roboto20L</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>lowercase</style>
+			<size>20</size>
+		</font>
+		
+		<font>
+			<name>Roboto22L</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>lowercase</style>
+			<size>22</size>
+		</font>
+
+		<font>
+			<name>Roboto24L</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>lowercase</style>
+			<size>24</size>
+		</font>
+		
+		<font>
+			<name>Roboto26L</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>lowercase</style>
+			<size>26</size>
+		</font>
+		
+		<font>
+			<name>Roboto28L</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>lowercase</style>
+			<size>28</size>
+		</font>
+
+		<font>
+			<name>Roboto30L</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>lowercase</style>
+			<size>30</size>
+		</font>
+
+		<font>
+			<name>Roboto32L</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>lowercase</style>
+			<size>32</size>
+		</font>
+		
+		<font>
+			<name>Roboto40L</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>lowercase</style>
+			<size>40</size>
+		</font>
+		
+		<font>
+			<name>Roboto48L</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>lowercase</style>
+			<size>48</size>
+		</font>
+		
+		<font>
+			<name>Roboto50L</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>lowercase</style>
+			<size>50</size>
+		</font>
+
+		<font>
+			<name>Roboto60L</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>lowercase</style>
+			<size>60</size>
+		</font>	
+		
+		<font>
+			<name>Roboto65L</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>lowercase</style>
+			<size>65</size>
+		</font>
+	
+		<font>
+			<name>Roboto70L</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>lowercase</style>
+			<size>70</size>
+		</font>	
+
+		<font>
+			<name>Roboto72L</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>lowercase</style>
+			<size>72</size>
+		</font>		
+		
+		<font>
+			<name>Roboto80L</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>lowercase</style>
+			<size>80</size>
+		</font>	
+	
+		<font>
+			<name>Roboto90L</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>lowercase</style>
+			<size>90</size>
+		</font>	
+		
+		<font>
+			<name>Roboto120L</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>lowercase</style>
+			<size>120</size>
+		</font>	
+
+		<font>
+			<name>Roboto220L</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>lowercase</style>
+			<size>220</size>
+		</font>	
+		
+		<font>
+			<name>Roboto230L</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>lowercase</style>
+			<size>230</size>
+		</font>		
+
+	<!--Roboto font- uppercase-->
+		
+		<font>
+			<name>Roboto14U</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>uppercase</style>
+			<size>14</size>
+		</font>
+	
+		<font>
+			<name>Roboto16U</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>uppercase</style>
+			<size>16</size>
+		</font>
+		
+		<font>
+			<name>Roboto18U</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>uppercase</style>
+			<size>18</size>
+		</font>
+	
+		<font>
+			<name>Roboto20U</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>uppercase</style>
+			<size>20</size>
+		</font>
+		
+		<font>
+			<name>Roboto22U</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>uppercase</style>
+			<size>22</size>
+		</font>
+
+		<font>
+			<name>Roboto24U</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>uppercase</style>
+			<size>24</size>
+		</font>
+		
+		<font>
+			<name>Roboto26U</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>uppercase</style>
+			<size>26</size>
+		</font>
+		
+		<font>
+			<name>Roboto28U</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>uppercase</style>
+			<size>28</size>
+		</font>
+
+		<font>
+			<name>Roboto30U</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>uppercase</style>
+			<size>30</size>
+		</font>
+
+		<font>
+			<name>Roboto32U</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>uppercase</style>
+			<size>32</size>
+		</font>
+		
+		<font>
+			<name>Roboto40U</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>uppercase</style>
+			<size>40</size>
+		</font>
+		
+		<font>
+			<name>Roboto48U</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>uppercase</style>
+			<size>48</size>
+		</font>
+		
+		<font>
+			<name>Roboto50U</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>uppercase</style>
+			<size>50</size>
+		</font>
+
+		<font>
+			<name>Roboto60U</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>uppercase</style>
+			<size>60</size>
+		</font>	
+		
+		<font>
+			<name>Roboto65U</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>uppercase</style>
+			<size>65</size>
+		</font>
+	
+		<font>
+			<name>Roboto70U</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>uppercase</style>
+			<size>70</size>
+		</font>	
+
+		<font>
+			<name>Roboto72U</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>uppercase</style>
+			<size>72</size>
+		</font>		
+		
+		<font>
+			<name>Roboto80U</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>uppercase</style>
+			<size>80</size>
+		</font>	
+	
+		<font>
+			<name>Roboto90U</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>uppercase</style>
+			<size>90</size>
+		</font>	
+		
+		<font>
+			<name>Roboto120U</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>uppercase</style>
+			<size>120</size>
+		</font>	
+
+		<font>
+			<name>Roboto220U</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>uppercase</style>
+			<size>220</size>
+		</font>	
+		
+		<font>
+			<name>Roboto230U</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>uppercase</style>
+			<size>230</size>
+		</font>			
+	
+	<!--Roboto font- bold-->
+		
+		<font>
+			<name>Roboto16LB</name>
+			<filename>Roboto-Bold.ttf</filename>
+			<style>lowercase</style>
+			<size>16</size>
+		</font>	
+		
+		<font>
+			<name>Roboto20LB</name>
+			<filename>Roboto-Bold.ttf</filename>
+			<style>lowercase</style>
+			<size>20</size>
+		</font>	
+		
+		<font>
+			<name>Roboto24LB</name>
+			<filename>Roboto-Bold.ttf</filename>
+			<style>lowercase</style>
+			<size>24</size>
+		</font>	
+		
+		<font>
+			<name>Roboto32LB</name>
+			<filename>Roboto-Bold.ttf</filename>
+			<style>lowercase</style>
+			<size>32</size>
+		</font>	
+		
+		<font>
+			<name>Roboto40LB</name>
+			<filename>Roboto-Bold.ttf</filename>
+			<style>lowercase</style>
+			<size>40</size>
+		</font>		
+		
+		<font>
+			<name>Roboto48LB</name>
+			<filename>Roboto-Bold.ttf</filename>
+			<style>lowercase</style>
+			<size>48</size>
+		</font>	
+		
+		<font>
+			<name>Roboto72LB</name>
+			<filename>Roboto-Bold.ttf</filename>
+			<style>lowercase</style>
+			<size>72</size>
+		</font>	
+		
+		<font>
+			<name>Roboto16UB</name>
+			<filename>Roboto-Bold.ttf</filename>
+			<style>uppercase</style>
+			<size>16</size>
+		</font>
+		
+		<font>
+			<name>Roboto15UB</name>
+			<filename>Roboto-Bold.ttf</filename>
+			<style>uppercase</style>
+			<size>15</size>
+		</font>
+	
+		<font>
+			<name>Roboto20UB</name>
+			<filename>Roboto-Bold.ttf</filename>
+			<style>uppercase</style>
+			<size>20</size>
+		</font>		
+	
+		<font>
+			<name>Roboto20boldUB</name>
+			<filename>Roboto-Bold.ttf</filename>
+			<style>uppercase bold</style>
+			<size>20</size>
+		</font>
+		
+		<font>
+			<name>Roboto24boldUB</name>
+			<filename>Roboto-Bold.ttf</filename>
+			<style>uppercase bold</style>
+			<size>24</size>
+		</font>
+		
+		<font>
+			<name>Roboto24blackUB</name>
+			<filename>Roboto-Black.ttf</filename>
+			<style>uppercase bold</style>
+			<size>24</size>
+		</font>
+		
+		<font>
+			<name>Roboto48BUB</name>
+			<filename>Roboto-Black.ttf</filename>
+			<style>uppercase bold</style>
+			<size>48</size>
+		</font>
+		
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		<font>
+			<name>Home</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>60</size>
+		</font>
+		
+		<font>
+			<name>Home_header</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>72</size>
+		</font>
+		
+		<font>
+			<name>xbmc_header</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>90</size>
+		</font>
+		
+		<font>
+			<name>Home_numbers</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>70</size>
+		</font>
+				
+		<font>
+			<name>Home_sub_header</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>48</size>
+		</font>
+	
+		<font>
+			<name>options_header</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>32</size>
+		</font>	
+		
+		<font>
+			<name>Home_time</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>72</size>
+		</font>
+		
+		<font>
+			<name>am_pm</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>40</size>
+		</font>
+		
+		<font>
+			<name>time_vis</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>230</size>
+		</font>
+
+		<font>
+			<name>Home_day</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>30</size>
+		</font>
+		
+
+		<font>
+			<name>Home_date</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>24</size>
+		</font>
+		
+		
+		<font>
+			<name>Home_menu</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>48</size>
+		</font>
+		
+		<font>
+			<name>Home_menu_over</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>50</size>
+		</font>
+		
+		
+		<font>
+			<name>weather_loc</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>48</size>
+		</font>
+
+		<font>
+			<name>button_title_big</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>32</size>
+		</font>	
+		
+		<font>
+			<name>button_title_med</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>28</size>
+		</font>	
+		
+		
+		<font>
+			<name>temp_big</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>80</size>
+		</font>		
+		
+		<font>
+			<name>Huge</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>120</size>
+		</font>
+		
+		<font>
+			<name>Large</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>32</size>
+		</font>
+		
+		<font>
+			<name>Medium</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>26</size>
+		</font>
+		
+		<font>
+			<name>Small</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>20</size>
+		</font>
+		
+		<font>
+			<name>SmallB</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase bold</style>
+			<size>20</size>
+		</font>
+
+		<!-- Required for system -->
+		<font>
+			<name>font13</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>20</size>
+		</font>
+		
+		<font>
+			<name>letterB</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>bold</style>
+			<style>lowercase</style>
+			<size>24</size>
+		</font>		
+		
+		<font>
+			<name>buttonB</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>22</size>
+		</font>	
+		
+		<font>
+			<name>button_title</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>20</size>
+		</font>	
+		
+		
+		<font>
+			<name>weather_med</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>24</size>
+		</font>	
+		
+		<font>
+			<name>weather_small</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>14</size>
+		</font>			
+
+		<font>
+			<name>rss_small</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>20</size>
+		</font>	
+
+		<font>
+			<name>plot_scroll_small</name>
+			<filename>GeosansLight.ttf</filename>
+			<size>16</size>
+		</font>	
+		
+		<font>
+			<name>plot_scrollB</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>bold</style>
+			<size>16</size>
+		</font>	
+		
+	
+		<font>
+			<name>Artist_Font</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>42</size>
+		</font>
+		
+		<font>
+			<name>Genre_Font_Small</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>16</size>
+		</font>
+		
+		<font>
+			<name>Genre_Font</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>17</size>
+		</font>
+		
+		<font>
+			<name>Plot_Font</name>
+			<filename>GeosansLight.ttf</filename>
+			<size>18</size>
+		</font>
+		
+		<font>
+			<name>Plot_Font_Large</name>
+			<filename>GeosansLight.ttf</filename>
+			<size>22</size>
+		</font>
+		
+		<font>
+			<name>Sort_Font_Small</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>24</size>
+		</font>
+		
+			
+		<font>
+			<name>Large_Letter_Music</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase</style>
+			<size>220</size>
+		</font>
+		
+	<!--Kai Fonts-->
+		
+		<font>
+			<name>kai_header</name>
+			<filename>GeosansLight.ttf</filename>
+			<size>20</size>
+			<style>lowercase bold</style>
+		</font>
+		
+		<font>
+			<name>kai_text</name>
+			<filename>GeosansLight.ttf</filename>
+			<size>18</size>
+			<style>lowercase</style>
+			<linespacing>0.75</linespacing>
+		</font>	
+		
+		<font>
+			<name>Label_Small</name>
+			<filename>GeosansLight.ttf</filename>
+			<style>lowercase bold</style>
+			<size>16</size>
+		</font>	
+	
+	<!--Handwriting Fonts-->
+
+		<font>
+			<name>Scrawl_small</name>
+			<filename>aescrawl.ttf</filename>
+			<size>18</size>
+			<linespacing>0.75</linespacing>
+		</font>
+	
+	</fontset>
+	
+</fonts>

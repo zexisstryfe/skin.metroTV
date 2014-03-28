@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window type="dialog" id="144">
+
+	<controls>
+
+		<include>DialogOverlay</include>
+
+		<control type="group">
+			<posx>415</posx>
+			<posy>275</posy>
+			<include>Animation_Dialog_Center</include>
+			
+			<control type="image">
+				<width>450</width>
+				<height>170</height>
+				<include>Common_Color_Keyback1</include>
+			</control>
+
+			<control type="label" id="1">
+				<description>header label</description>
+				<posx>430</posx>
+				<width>430</width>
+				<include>Dialog_Header</include>
+				<label>$LOCALIZE[31057]</label>
+			</control>
+			
+			<control type="image">
+				<description>line</description>
+				<width>450</width>
+				<include>Dialog_Line</include>
+			</control>
+			
+			<control type="label" id="402">
+				<description>Song Name Label</description>
+				<posx>20</posx>
+				<posy>70</posy>
+				<width>410</width>
+				<font>font26L</font>
+				<align>center</align>
+				<textcolor>Accent</textcolor>
+				<scroll>true</scroll>
+			</control>
+
+			<control type="label" id="401">
+				<description>Song Number Label</description>
+				<posx>20</posx>
+				<posy>110</posy>
+				<width>410</width>
+				<align>center</align>
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

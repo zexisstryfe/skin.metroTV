@@ -1,0 +1,1777 @@
+<includes>
+
+	<variable name="Splash_Image">
+		<value condition="Window.IsVisible(script-The Big Picture-main.xml)">splash/splash_thebigpicture.png</value>
+		<value condition="Window.IsVisible(script-NextAired-TVGuide.xml)">splash/splash_nextaired.png</value>
+		<value condition="Window.IsVisible(script-globalsearch-main.xml)">splash/splash_globalsearch.png</value>
+		<value condition="Window.IsVisible(script-forumbrowser-forums.xml)">splash/splash_forumbrowser.png</value>
+		<value condition="Window.IsVisible(script.pseudotv.EPG.xml)">splash/splash_pseudotv.png</value>
+		<value condition="Window.IsActive(MyPics.xml)">splash/splash_picture.png</value>
+		<value condition="Window.IsActive(MyMusicNav.xml) | Window.IsActive(MyMusicSongs.xml)">splash/splash_music.png</value>
+		<value condition="Window.IsActive(MyVideoNav.xml) + [StringCompare(Container.FolderPath,videodb://1/2/) | StringCompare(Container.FolderPath,library://video/movies/)]">splash/splash_movies.png</value>
+		<value condition="Window.IsActive(MyVideoNav.xml) + [StringCompare(Container.FolderPath,videodb://2/2/) | StringCompare(Container.FolderPath,library://video/tvshows/)]">splash/splash_tvshows.png</value>
+		<value condition="Window.IsActive(MyVideoNav.xml)">splash/splash_video.png</value>
+		<value condition="Window.IsActive(FileManager.xml)">splash/splash_filemanager.png</value>
+		<value condition="Window.IsActive(Settings.xml)">splash/splash_settings.png</value>
+		<value condition="Window.IsActive(MyPrograms.xml)">splash/splash_program.png</value>
+		<value condition="Window.IsActive(AddonBrowser.xml)">splash/splash_store.png</value>
+		<value condition="Window.IsActive(MyWeather.xml)">splash/splash_weather.png</value>
+		<value condition="Window.IsActive(Startup.xml)">splash/splash_startup.png</value>
+		<value condition="Window.IsActive(MyPVR.xml)">splash/splash_livetv.png</value>
+		<value condition="Window.IsActive(Startup.xml)">splash/splash_startup.png</value>
+	</variable>
+	
+	<variable name="Custom1.HomeMenu">
+		<value condition="!IsEmpty(Skin.String(CustomHome.1.Name))">$INFO[Skin.String(CustomHome.1.Name)]</value>
+		<value condition="IsEmpty(Skin.String(CustomHome.1.Name))">$LOCALIZE[636]</value>
+	</variable>
+	
+		<variable name="NowPlaying_Image">
+		<value condition="Player.HasAudio">$INFO[MusicPlayer.Cover]</value>
+		<value condition="Player.HasVideo + VideoPlayer.HasMenu">nowplaying/tile/nowplaying_dvd.png</value>
+		<value condition="Player.HasVideo + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">$INFO[Player.Art(poster)]</value>
+		<value condition="Player.HasVideo + VideoPlayer.Content(files)">nowplaying/tile/nowplaying_file.png</value>
+	</variable>
+	
+	<variable name="NowPlaying_Icon">
+		<value condition="Player.HasAudio">tiles/home_music_small.png</value>
+		<value condition="VideoPlayer.Content(movies)">tiles/home_movie_small.png</value>
+		<value condition="VideoPlayer.Content(episodes)">tiles/home_tvshow_small.png</value>
+		<value condition="VideoPlayer.Content(files) + !VideoPlayer.HasMenu">tiles/home_videos_small.png</value>
+		<value condition="VideoPlayer.Content(files) + VideoPlayer.HasMenu">tiles/home_dvd_small.png</value>
+	</variable>
+	
+	<variable name="NowPlaying_First_Label">
+		<value condition="Player.HasAudio">$INFO[MusicPlayer.Artist]</value>
+		<value condition="Player.HasVideo + VideoPlayer.HasMenu">$INFO[Player.Title]</value>
+		<value condition="Player.HasVideo + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes) | VideoPlayer.Content(files)]">$INFO[VideoPlayer.Title]</value>
+	</variable>
+	
+	<variable name="NowPlaying_Second_Label">
+		<value condition="Player.HasAudio">$INFO[MusicPlayer.Album]</value>
+		<value condition="Player.HasVideo + VideoPlayer.Content(movies)">$INFO[VideoPlayer.Director]</value>
+		<value condition="Player.HasVideo + VideoPlayer.Content(episodes) + !IsEmpty(VideoPlayer.TVShowTitle)">$INFO[VideoPlayer.Season,Season ,] $INFO[VideoPlayer.Episode,Episode ,] '[B]$INFO[VideoPlayer.TVShowTitle][/B]'</value>
+	</variable>
+	
+	<variable name="NowPlaying_Third_Label">
+		<value condition="Player.HasAudio">$INFO[MusicPlayer.Title]</value>
+		<value condition="Player.HasVideo + VideoPlayer.HasMenu">Chapter $INFO[Player.Chapter] of $INFO[Player.ChapterCount]</value>
+		<value condition="Player.HasVideo + VideoPlayer.Content(movies) + !IsEmpty(VideoPlayer.Year)">[B]$INFO[VideoPlayer.Year][/B] $INFO[VideoPlayer.Studio]</value>
+		<value condition="Player.HasVideo + VideoPlayer.Content(movies) + IsEmpty(VideoPlayer.Year)">$INFO[VideoPlayer.Studio]</value>
+		<value condition="Player.HasVideo + VideoPlayer.Content(episodes)">$INFO[VideoPlayer.Studio]</value>
+	</variable>
+	
+	<variable name="TopBar_Label">
+		<value condition="StringCompare(Container.FolderName,files)">$LOCALIZE[744]</value>
+		<value condition="Container.Content(Movies)">$LOCALIZE[342]</value>
+		<value condition="Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)">$LOCALIZE[20343]</value>
+		<value condition="Window.IsActive(401)">$LOCALIZE[4]</value>
+		<value condition="Container.Content(albums)">$LOCALIZE[132]</value>
+		<value condition="Container.Content(artists)">$LOCALIZE[133]</value>
+		<value condition="Container.Content(songs)">$LOCALIZE[134]</value>
+		<value condition="Container.Content(genres)">$LOCALIZE[135]</value>
+		<value condition="Container.Content(playlists)">$LOCALIZE[136]</value>
+		<value condition="Container.Content(files) + !Window.IsVisible(mymusicplaylisteditor.xml)">$LOCALIZE[744]</value>
+		<value condition="Container.Content(musicvideos)">$LOCALIZE[20389]</value>
+		<value condition="Container.Content(years)">$LOCALIZE[652]</value>
+		<value condition="Container.Content(actors)">$LOCALIZE[344]</value>
+		<value condition="Container.Content(studios)">$LOCALIZE[20388]</value>
+		<value condition="Container.Content(directors)">$LOCALIZE[20348]</value>
+		<value condition="Window.IsVisible(mypics.xml)">$LOCALIZE[1]</value>
+		<value condition="Window.IsVisible(mypvr.xml)">$LOCALIZE[31012]</value>
+		<value condition="Window.IsVisible(filemanager.xml)">$LOCALIZE[10003]</value>
+		<value condition="Window.IsVisible(skinsettings.xml) | Window.IsVisible(settingscategory.xml)">$LOCALIZE[5]</value>
+		<value condition="Window.IsVisible(settings.xml) | Window.IsVisible(settingsprofile.xml) | Window.IsVisible(settingssysteminfo.xml)">$LOCALIZE[10004]</value>
+		<value condition="Window.IsVisible(addonbrowser.xml)">$LOCALIZE[24001]</value>
+		<value condition="Window.IsVisible(script-NextAired-TVGuide.xml)">$LOCALIZE[31103]</value>
+		<value condition="Window.IsVisible(myweather.xml)">$LOCALIZE[31157]</value>
+		<value condition="Window.IsVisible(myvideoplaylist.xml)">$LOCALIZE[3]</value>
+		<value condition="Window.IsVisible(mymusicplaylist.xml) | Window.IsVisible(mymusicplaylisteditor.xml)">$LOCALIZE[2]</value>
+		<value condition="Window.IsVisible(script-Rom_Collection_Browser-main.xml)">$LOCALIZE[15016]</value>
+	</variable>
+	
+	<variable name="Disabled_ColorDiffuse">
+		<value condition="VideoPlayer.HasMenu">White</value>
+		<value condition="!VideoPlayer.HasMenu">White60</value>
+	</variable>
+
+<!--MOVIE TILE VARIABLES-->	
+	<variable name="MovieTile2.Image">
+		<value condition="Skin.String(MovieTile2,Views)">tiles/views.png</value>
+		<value condition="Skin.String(MovieTile2,3DMovies)">tiles/3Dglasses.png</value>
+		<value condition="Skin.String(MovieTile2,HDMovies)">tiles/HD.png</value>
+		<value condition="Skin.String(MovieTile2,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(MovieTile2,Update)">tiles/update.png</value>
+		<value condition="Skin.String(MovieTile2,Playlists)">tiles/playlist.png</value>
+		<value condition="Skin.String(MovieTile2,VideoAddons)">tiles/video_addons.png</value>
+		<value condition="Skin.String(MovieTile2,Genres)">tiles/genres.png</value>
+		<value condition="Skin.String(MovieTile2,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(MovieTile2,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(MovieTile2,RecentlyAdded)">tiles/recent.png</value>
+		<value condition="Skin.String(MovieTile2,MovieSets)">tiles/collection.png</value>
+		<value condition="Skin.String(MovieTile2,Tags)">tiles/tags.png</value>
+		<value condition="Skin.String(MovieTile2,PlayDisc)">tiles/disc.png</value>
+		<value condition="Skin.String(MovieTile2,EjectDisc)">tiles/eject.png</value>
+		<value condition="Skin.String(MovieTile2,FileManager)">tiles/filemanager.png</value>
+	</variable>
+	
+	<variable name="MovieTile2.Label">
+		<value condition="!IsEmpty(Skin.String(MovieTile2.Label))">$INFO[Skin.String(MovieTile2.Label)]</value>
+		<value condition="Skin.String(MovieTile2,Views)">$LOCALIZE[31097]</value>
+		<value condition="Skin.String(MovieTile2,3DMovies)">$LOCALIZE[31098]</value>
+		<value condition="Skin.String(MovieTile2,HDMovies)">$LOCALIZE[31099]</value>
+		<value condition="Skin.String(MovieTile2,VideoFiles)">$LOCALIZE[31100]</value>
+		<value condition="Skin.String(MovieTile2,Update)">$LOCALIZE[31014]</value>
+		<value condition="Skin.String(MovieTile2,Playlists)">$LOCALIZE[136]</value>
+		<value condition="Skin.String(MovieTile2,VideoAddons)">$LOCALIZE[1037]</value>
+		<value condition="Skin.String(MovieTile2,Genres)">$LOCALIZE[135]</value>
+		<value condition="Skin.String(MovieTile2,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(MovieTile2,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(MovieTile2,RecentlyAdded)">$LOCALIZE[31009]</value>
+		<value condition="Skin.String(MovieTile2,MovieSets)">$LOCALIZE[31107]</value>
+		<value condition="Skin.String(MovieTile2,Tags)">$LOCALIZE[20459]</value>
+		<value condition="Skin.String(MovieTile2,PlayDisc)">$LOCALIZE[341]</value>
+		<value condition="Skin.String(MovieTile2,EjectDisc)">$LOCALIZE[31033]</value>
+		<value condition="Skin.String(MovieTile2,FileManager)">$LOCALIZE[7]</value>
+	</variable>
+	
+	<variable name="MovieTile2.Path">
+		<value condition="Skin.String(MovieTile2.Type,0) | Skin.String(MovieTile2.Type,1) | Skin.String(MovieTile2.Type,2) | Skin.String(MovieTile2.Type,3)">RunAddon($INFO[Skin.String(MovieTile2.Path)])</value>
+		<value condition="Skin.String(MovieTile2.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(MovieTile2.Path)],return)</value>
+		<value condition="Skin.String(MovieTile2.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(MovieTile2.Path)],return)</value>
+		<value condition="Skin.String(MovieTile2.Type,6)">$INFO[Skin.String(MovieTile2.Path)]</value>
+		<value condition="Skin.String(MovieTile2,Views)">Skin.ToggleSetting(MovieViews)</value>
+		<value condition="Skin.String(MovieTile2,3DMovies)">ActivateWindow(10025,special://skin/playlists/3dmovies.xsp,return)</value>
+		<value condition="Skin.String(MovieTile2,HDMovies)">ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</value>
+		<value condition="Skin.String(MovieTile2,VideoFiles)">ActivateWindow(Videos,Files,return)</value>
+		<value condition="Skin.String(MovieTile2,Update)">UpdateLibrary(video)</value>
+		<value condition="Skin.String(MovieTile2,Playlists)">ActivateWindow(VideoLibrary, Playlists,return)</value>
+		<value condition="Skin.String(MovieTile2,VideoAddons)">ActivateWindow(Videos,Addons,return)</value>
+		<value condition="Skin.String(MovieTile2,Genres)">ActivateWindow(Videos, MovieGenres,return)</value>
+		<value condition="Skin.String(MovieTile2,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(MovieTile2,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(MovieTile2,RecentlyAdded)">ActivateWindow(Videos, RecentlyAddedMovies,return)</value>
+		<value condition="Skin.String(MovieTile2,MovieSets)">ActivateWindow(Videos, MovieSets,return)</value>
+		<value condition="Skin.String(MovieTile2,Tags)">ActivateWindow(Videos, MovieTags,return)</value>
+		<value condition="Skin.String(MovieTile2,PlayDisc)">PlayDVD</value>
+		<value condition="Skin.String(MovieTile2,EjectDisc)">EjectTray</value>
+		<value condition="Skin.String(MovieTile2,FileManager)">ActivateWindow(Filemanager)</value>
+	</variable>
+	
+	<variable name="MovieTile3.Image">
+		<value condition="Skin.String(MovieTile3,Views)">tiles/views.png</value>
+		<value condition="Skin.String(MovieTile3,3DMovies)">tiles/3Dglasses.png</value>
+		<value condition="Skin.String(MovieTile3,HDMovies)">tiles/HD.png</value>
+		<value condition="Skin.String(MovieTile3,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(MovieTile3,Update)">tiles/update.png</value>
+		<value condition="Skin.String(MovieTile3,Playlists)">tiles/playlist.png</value>
+		<value condition="Skin.String(MovieTile3,VideoAddons)">tiles/video_addons.png</value>
+		<value condition="Skin.String(MovieTile3,Genres)">tiles/genres.png</value>
+		<value condition="Skin.String(MovieTile3,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(MovieTile3,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(MovieTile3,RecentlyAdded)">tiles/recent.png</value>
+		<value condition="Skin.String(MovieTile3,MovieSets)">tiles/collection.png</value>
+		<value condition="Skin.String(MovieTile3,Tags)">tiles/tags.png</value>
+		<value condition="Skin.String(MovieTile3,PlayDisc)">tiles/disc.png</value>
+		<value condition="Skin.String(MovieTile3,EjectDisc)">tiles/eject.png</value>
+		<value condition="Skin.String(MovieTile3,FileManager)">tiles/filemanager.png</value>
+	</variable>
+	
+	<variable name="MovieTile3.Label">
+		<value condition="!IsEmpty(Skin.String(MovieTile3.Label))">$INFO[Skin.String(MovieTile3.Label)]</value>
+		<value condition="Skin.String(MovieTile3,Views)">$LOCALIZE[31097]</value>
+		<value condition="Skin.String(MovieTile3,3DMovies)">$LOCALIZE[31098]</value>
+		<value condition="Skin.String(MovieTile3,HDMovies)">$LOCALIZE[31099]</value>
+		<value condition="Skin.String(MovieTile3,VideoFiles)">$LOCALIZE[31100]</value>
+		<value condition="Skin.String(MovieTile3,Update)">$LOCALIZE[31014]</value>
+		<value condition="Skin.String(MovieTile3,Playlists)">$LOCALIZE[136]</value>
+		<value condition="Skin.String(MovieTile3,VideoAddons)">$LOCALIZE[1037]</value>
+		<value condition="Skin.String(MovieTile3,Genres)">$LOCALIZE[135]</value>
+		<value condition="Skin.String(MovieTile3,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(MovieTile3,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(MovieTile3,RecentlyAdded)">$LOCALIZE[31009]</value>
+		<value condition="Skin.String(MovieTile3,MovieSets)">$LOCALIZE[31107]</value>
+		<value condition="Skin.String(MovieTile3,Tags)">$LOCALIZE[20459]</value>
+		<value condition="Skin.String(MovieTile3,PlayDisc)">$LOCALIZE[341]</value>
+		<value condition="Skin.String(MovieTile3,EjectDisc)">$LOCALIZE[31033]</value>
+		<value condition="Skin.String(MovieTile3,FileManager)">$LOCALIZE[7]</value>
+	</variable>
+	
+	<variable name="MovieTile3.Path">
+		<value condition="Skin.String(MovieTile3.Type,0) | Skin.String(MovieTile3.Type,1) | Skin.String(MovieTile3.Type,2) | Skin.String(MovieTile3.Type,3)">RunAddon($INFO[Skin.String(MovieTile3.Path)])</value>
+		<value condition="Skin.String(MovieTile3.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(MovieTile3.Path)],return)</value>
+		<value condition="Skin.String(MovieTile3.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(MovieTile3.Path)],return)</value>
+		<value condition="Skin.String(MovieTile3.Type,6)">$INFO[Skin.String(MovieTile3.Path)]</value>		
+		<value condition="Skin.String(MovieTile3,Views)">Skin.ToggleSetting(MovieViews)</value>
+		<value condition="Skin.String(MovieTile3,3DMovies)">ActivateWindow(10025,special://skin/playlists/3dmovies.xsp,return)</value>
+		<value condition="Skin.String(MovieTile3,HDMovies)">ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</value>
+		<value condition="Skin.String(MovieTile3,VideoFiles)">ActivateWindow(Videos,Files,return)</value>
+		<value condition="Skin.String(MovieTile3,Update)">UpdateLibrary(video)</value>
+		<value condition="Skin.String(MovieTile3,Playlists)">ActivateWindow(VideoLibrary, Playlists,return)</value>
+		<value condition="Skin.String(MovieTile3,VideoAddons)">ActivateWindow(Videos,Addons,return)</value>
+		<value condition="Skin.String(MovieTile3,Genres)">ActivateWindow(Videos, MovieGenres,return)</value>
+		<value condition="Skin.String(MovieTile3,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(MovieTile3,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(MovieTile3,RecentlyAdded)">ActivateWindow(Videos, RecentlyAddedMovies,return)</value>
+		<value condition="Skin.String(MovieTile3,MovieSets)">ActivateWindow(Videos, MovieSets,return)</value>
+		<value condition="Skin.String(MovieTile3,Tags)">ActivateWindow(Videos, MovieTags,return)</value>
+		<value condition="Skin.String(MovieTile3,PlayDisc)">PlayDVD</value>
+		<value condition="Skin.String(MovieTile3,EjectDisc)">EjectTray</value>
+		<value condition="Skin.String(MovieTile3,FileManager)">ActivateWindow(Filemanager)</value>
+	</variable>
+	
+	<variable name="MovieTile4.Image">
+		<value condition="Skin.String(MovieTile4,Views)">tiles/views.png</value>
+		<value condition="Skin.String(MovieTile4,3DMovies)">tiles/3Dglasses.png</value>
+		<value condition="Skin.String(MovieTile4,HDMovies)">tiles/HD.png</value>
+		<value condition="Skin.String(MovieTile4,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(MovieTile4,Update)">tiles/update.png</value>
+		<value condition="Skin.String(MovieTile4,Playlists)">tiles/playlist.png</value>
+		<value condition="Skin.String(MovieTile4,VideoAddons)">tiles/video_addons.png</value>
+		<value condition="Skin.String(MovieTile4,Genres)">tiles/genres.png</value>
+		<value condition="Skin.String(MovieTile4,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(MovieTile4,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(MovieTile4,RecentlyAdded)">tiles/recent.png</value>
+		<value condition="Skin.String(MovieTile4,MovieSets)">tiles/collection.png</value>
+		<value condition="Skin.String(MovieTile4,Tags)">tiles/tags.png</value>
+		<value condition="Skin.String(MovieTile4,PlayDisc)">tiles/disc.png</value>
+		<value condition="Skin.String(MovieTile4,EjectDisc)">tiles/eject.png</value>
+		<value condition="Skin.String(MovieTile4,FileManager)">tiles/filemanager.png</value>
+	</variable>
+	
+	<variable name="MovieTile4.Label">
+		<value condition="!IsEmpty(Skin.String(MovieTile4.Label))">$INFO[Skin.String(MovieTile4.Label)]</value>
+		<value condition="Skin.String(MovieTile4,Views)">$LOCALIZE[31097]</value>
+		<value condition="Skin.String(MovieTile4,3DMovies)">$LOCALIZE[31098]</value>
+		<value condition="Skin.String(MovieTile4,HDMovies)">$LOCALIZE[31099]</value>
+		<value condition="Skin.String(MovieTile4,VideoFiles)">$LOCALIZE[31100]</value>
+		<value condition="Skin.String(MovieTile4,Update)">$LOCALIZE[31014]</value>
+		<value condition="Skin.String(MovieTile4,Playlists)">$LOCALIZE[136]</value>
+		<value condition="Skin.String(MovieTile4,VideoAddons)">$LOCALIZE[1037]</value>
+		<value condition="Skin.String(MovieTile4,Genres)">$LOCALIZE[135]</value>
+		<value condition="Skin.String(MovieTile4,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(MovieTile4,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(MovieTile4,RecentlyAdded)">$LOCALIZE[31009]</value>
+		<value condition="Skin.String(MovieTile4,MovieSets)">$LOCALIZE[31107]</value>
+		<value condition="Skin.String(MovieTile4,Tags)">$LOCALIZE[20459]</value>
+		<value condition="Skin.String(MovieTile4,PlayDisc)">$LOCALIZE[341]</value>
+		<value condition="Skin.String(MovieTile4,EjectDisc)">$LOCALIZE[31033]</value>
+		<value condition="Skin.String(MovieTile4,FileManager)">$LOCALIZE[7]</value>
+	</variable>
+	
+	<variable name="MovieTile4.Path">
+		<value condition="Skin.String(MovieTile4.Type,0) | Skin.String(MovieTile4.Type,1) | Skin.String(MovieTile4.Type,2) | Skin.String(MovieTile4.Type,3)">RunAddon($INFO[Skin.String(MovieTile4.Path)])</value>
+		<value condition="Skin.String(MovieTile4.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(MovieTile4.Path)],return)</value>
+		<value condition="Skin.String(MovieTile4.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(MovieTile4.Path)],return)</value>
+		<value condition="Skin.String(MovieTile4.Type,6)">$INFO[Skin.String(MovieTile4.Path)]</value>	
+		<value condition="Skin.String(MovieTile4,Views)">Skin.ToggleSetting(MovieViews)</value>
+		<value condition="Skin.String(MovieTile4,3DMovies)">ActivateWindow(10025,special://skin/playlists/3dmovies.xsp,return)</value>
+		<value condition="Skin.String(MovieTile4,HDMovies)">ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</value>
+		<value condition="Skin.String(MovieTile4,VideoFiles)">ActivateWindow(Videos,Files,return)</value>
+		<value condition="Skin.String(MovieTile4,Update)">UpdateLibrary(video)</value>
+		<value condition="Skin.String(MovieTile4,Playlists)">ActivateWindow(VideoLibrary, Playlists,return)</value>
+		<value condition="Skin.String(MovieTile4,VideoAddons)">ActivateWindow(Videos,Addons,return)</value>
+		<value condition="Skin.String(MovieTile4,Genres)">ActivateWindow(Videos, MovieGenres,return)</value>
+		<value condition="Skin.String(MovieTile4,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(MovieTile4,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(MovieTile4,RecentlyAdded)">ActivateWindow(Videos, RecentlyAddedMovies,return)</value>
+		<value condition="Skin.String(MovieTile4,MovieSets)">ActivateWindow(Videos, MovieSets,return)</value>
+		<value condition="Skin.String(MovieTile4,Tags)">ActivateWindow(Videos, MovieTags,return)</value>
+		<value condition="Skin.String(MovieTile4,PlayDisc)">PlayDVD</value>
+		<value condition="Skin.String(MovieTile4,EjectDisc)">EjectTray</value>
+		<value condition="Skin.String(MovieTile4,FileManager)">ActivateWindow(Filemanager)</value>
+	</variable>
+	
+	<variable name="MovieTile5.Image">
+		<value condition="Skin.String(MovieTile5,Views)">tiles/views.png</value>
+		<value condition="Skin.String(MovieTile5,3DMovies)">tiles/3Dglasses.png</value>
+		<value condition="Skin.String(MovieTile5,HDMovies)">tiles/HD.png</value>
+		<value condition="Skin.String(MovieTile5,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(MovieTile5,Update)">tiles/update.png</value>
+		<value condition="Skin.String(MovieTile5,Playlists)">tiles/playlist.png</value>
+		<value condition="Skin.String(MovieTile5,VideoAddons)">tiles/video_addons.png</value>
+		<value condition="Skin.String(MovieTile5,Genres)">tiles/genres.png</value>
+		<value condition="Skin.String(MovieTile5,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(MovieTile5,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(MovieTile5,RecentlyAdded)">tiles/recent.png</value>
+		<value condition="Skin.String(MovieTile5,MovieSets)">tiles/collection.png</value>
+		<value condition="Skin.String(MovieTile5,Tags)">tiles/tags.png</value>
+		<value condition="Skin.String(MovieTile5,PlayDisc)">tiles/disc.png</value>
+		<value condition="Skin.String(MovieTile5,EjectDisc)">tiles/eject.png</value>
+		<value condition="Skin.String(MovieTile5,FileManager)">tiles/filemanager.png</value>
+	</variable>
+	
+	<variable name="MovieTile5.Label">
+		<value condition="!IsEmpty(Skin.String(MovieTile5.Label))">$INFO[Skin.String(MovieTile5.Label)]</value>
+		<value condition="Skin.String(MovieTile5,Views)">$LOCALIZE[31097]</value>
+		<value condition="Skin.String(MovieTile5,3DMovies)">$LOCALIZE[31098]</value>
+		<value condition="Skin.String(MovieTile5,HDMovies)">$LOCALIZE[31099]</value>
+		<value condition="Skin.String(MovieTile5,VideoFiles)">$LOCALIZE[31100]</value>
+		<value condition="Skin.String(MovieTile5,Update)">$LOCALIZE[31014]</value>
+		<value condition="Skin.String(MovieTile5,Playlists)">$LOCALIZE[136]</value>
+		<value condition="Skin.String(MovieTile5,VideoAddons)">$LOCALIZE[1037]</value>
+		<value condition="Skin.String(MovieTile5,Genres)">$LOCALIZE[135]</value>
+		<value condition="Skin.String(MovieTile5,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(MovieTile5,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(MovieTile5,RecentlyAdded)">$LOCALIZE[31009]</value>
+		<value condition="Skin.String(MovieTile5,MovieSets)">$LOCALIZE[31107]</value>
+		<value condition="Skin.String(MovieTile5,Tags)">$LOCALIZE[20459]</value>
+		<value condition="Skin.String(MovieTile5,PlayDisc)">$LOCALIZE[341]</value>
+		<value condition="Skin.String(MovieTile5,EjectDisc)">$LOCALIZE[31033]</value>
+		<value condition="Skin.String(MovieTile5,FileManager)">$LOCALIZE[7]</value>
+	</variable>
+	
+	<variable name="MovieTile5.Path">
+		<value condition="Skin.String(MovieTile5.Type,0) | Skin.String(MovieTile5.Type,1) | Skin.String(MovieTile5.Type,2) | Skin.String(MovieTile5.Type,3)">RunAddon($INFO[Skin.String(MovieTile5.Path)])</value>
+		<value condition="Skin.String(MovieTile5.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(MovieTile5.Path)],return)</value>
+		<value condition="Skin.String(MovieTile5.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(MovieTile5.Path)],return)</value>
+		<value condition="Skin.String(MovieTile5.Type,6)">$INFO[Skin.String(MovieTile5.Path)]</value>
+		<value condition="Skin.String(MovieTile5,Views)">Skin.ToggleSetting(MovieViews)</value>
+		<value condition="Skin.String(MovieTile5,3DMovies)">ActivateWindow(10025,special://skin/playlists/3dmovies.xsp,return)</value>
+		<value condition="Skin.String(MovieTile5,HDMovies)">ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</value>
+		<value condition="Skin.String(MovieTile5,VideoFiles)">ActivateWindow(Videos,Files,return)</value>
+		<value condition="Skin.String(MovieTile5,Update)">UpdateLibrary(video)</value>
+		<value condition="Skin.String(MovieTile5,Playlists)">ActivateWindow(VideoLibrary, Playlists,return)</value>
+		<value condition="Skin.String(MovieTile5,VideoAddons)">ActivateWindow(Videos,Addons,return)</value>
+		<value condition="Skin.String(MovieTile5,Genres)">ActivateWindow(Videos, MovieGenres,return)</value>
+		<value condition="Skin.String(MovieTile5,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(MovieTile5,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(MovieTile5,RecentlyAdded)">ActivateWindow(Videos, RecentlyAddedMovies,return)</value>
+		<value condition="Skin.String(MovieTile5,MovieSets)">ActivateWindow(Videos, MovieSets,return)</value>
+		<value condition="Skin.String(MovieTile5,Tags)">ActivateWindow(Videos, MovieTags,return)</value>
+		<value condition="Skin.String(MovieTile5,PlayDisc)">PlayDVD</value>
+		<value condition="Skin.String(MovieTile5,EjectDisc)">EjectTray</value>
+		<value condition="Skin.String(MovieTile5,FileManager)">ActivateWindow(Filemanager)</value>
+	</variable>
+
+<!--TVSHOW TILE VARIABLES-->		
+	<variable name="TVShowTile2.Image">
+		<value condition="Skin.String(TVShowTile2,Views)">tiles/views.png</value>
+		<value condition="Skin.String(TVShowTile2,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(TVShowTile2,Update)">tiles/update.png</value>
+		<value condition="Skin.String(TVShowTile2,Playlists)">tiles/playlist.png</value>
+		<value condition="Skin.String(TVShowTile2,VideoAddons)">tiles/video_addons.png</value>
+		<value condition="Skin.String(TVShowTile2,Genres)">tiles/genres.png</value>
+		<value condition="Skin.String(TVShowTile2,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(TVShowTile2,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(TVShowTile2,RecentlyAdded)">tiles/recent.png</value>
+		<value condition="Skin.String(TVShowTile2,NextAired)">tiles/tvguide.png</value>
+		<value condition="Skin.String(TVShowTile2,FileManager)">tiles/filemanager.png</value>	
+	</variable>
+	
+	<variable name="TVShowTile2.Label">
+		<value condition="!IsEmpty(Skin.String(TVShowTile2.Label))">$INFO[Skin.String(TVShowTile2.Label)]</value>
+		<value condition="Skin.String(TVShowTile2,Views)">$LOCALIZE[31097]</value>
+		<value condition="Skin.String(TVShowTile2,VideoFiles)">$LOCALIZE[31100]</value>
+		<value condition="Skin.String(TVShowTile2,Update)">$LOCALIZE[31014]</value>
+		<value condition="Skin.String(TVShowTile2,Playlists)">$LOCALIZE[136]</value>
+		<value condition="Skin.String(TVShowTile2,VideoAddons)">$LOCALIZE[1037]</value>
+		<value condition="Skin.String(TVShowTile2,Genres)">$LOCALIZE[135]</value>
+		<value condition="Skin.String(TVShowTile2,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(TVShowTile2,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(TVShowTile2,RecentlyAdded)">$LOCALIZE[31009]</value>
+		<value condition="Skin.String(TVShowTile2,NextAired)">$LOCALIZE[31103]</value>
+		<value condition="Skin.String(TVShowTile2,FileManager)">$LOCALIZE[7]</value>	
+	</variable>
+	
+	<variable name="TVShowTile2.Path">
+		<value condition="Skin.String(TVShowTile2.Type,0) | Skin.String(TVShowTile2.Type,1) | Skin.String(TVShowTile2.Type,2) | Skin.String(TVShowTile2.Type,3)">RunAddon($INFO[Skin.String(TVShowTile2.Path)])</value>
+		<value condition="Skin.String(TVShowTile2.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(TVShowTile2.Path)],return)</value>
+		<value condition="Skin.String(TVShowTile2.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(TVShowTile2.Path)],return)</value>
+		<value condition="Skin.String(TVShowTile2.Type,6)">$INFO[Skin.String(TVShowTile2.Path)]</value>
+		<value condition="Skin.String(TVShowTile2,Views)">Skin.ToggleSetting(TvViews)</value>
+		<value condition="Skin.String(TVShowTile2,VideoFiles)">ActivateWindow(Videos,Files,return)</value>
+		<value condition="Skin.String(TVShowTile2,Update)">UpdateLibrary(video)</value>
+		<value condition="Skin.String(TVShowTile2,Playlists)">ActivateWindow(VideoLibrary, Playlists,return)</value>
+		<value condition="Skin.String(TVShowTile2,VideoAddons)">ActivateWindow(Videos,Addons,return)</value>
+		<value condition="Skin.String(TVShowTile2,Genres)">ActivateWindow(Videos, TVShowGenres,return)</value>
+		<value condition="Skin.String(TVShowTile2,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(TVShowTile2,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(TVShowTile2,RecentlyAdded)">ActivateWindow(Videos, RecentlyAddedEpisodes,return)</value>
+		<value condition="Skin.String(TVShowTile2,NextAired)">RunScript(script.tv.show.next.aired)</value>
+		<value condition="Skin.String(TVShowTile2,FileManager)">ActivateWindow(Filemanager)</value>
+	</variable>
+	
+	<variable name="TVShowTile3.Image">
+		<value condition="Skin.String(TVShowTile3,Views)">tiles/views.png</value>
+		<value condition="Skin.String(TVShowTile3,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(TVShowTile3,Update)">tiles/update.png</value>
+		<value condition="Skin.String(TVShowTile3,Playlists)">tiles/playlist.png</value>
+		<value condition="Skin.String(TVShowTile3,VideoAddons)">tiles/video_addons.png</value>
+		<value condition="Skin.String(TVShowTile3,Genres)">tiles/genres.png</value>
+		<value condition="Skin.String(TVShowTile3,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(TVShowTile3,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(TVShowTile3,RecentlyAdded)">tiles/recent.png</value>
+		<value condition="Skin.String(TVShowTile3,NextAired)">tiles/tvguide.png</value>
+		<value condition="Skin.String(TVShowTile3,FileManager)">tiles/filemanager.png</value>	
+	</variable>
+	
+	<variable name="TVShowTile3.Label">
+		<value condition="!IsEmpty(Skin.String(TVShowTile3.Label))">$INFO[Skin.String(TVShowTile3.Label)]</value>
+		<value condition="Skin.String(TVShowTile3,Views)">$LOCALIZE[31097]</value>
+		<value condition="Skin.String(TVShowTile3,VideoFiles)">$LOCALIZE[31100]</value>
+		<value condition="Skin.String(TVShowTile3,Update)">$LOCALIZE[31014]</value>
+		<value condition="Skin.String(TVShowTile3,Playlists)">$LOCALIZE[136]</value>
+		<value condition="Skin.String(TVShowTile3,VideoAddons)">$LOCALIZE[1037]</value>
+		<value condition="Skin.String(TVShowTile3,Genres)">$LOCALIZE[135]</value>
+		<value condition="Skin.String(TVShowTile3,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(TVShowTile3,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(TVShowTile3,RecentlyAdded)">$LOCALIZE[31009]</value>
+		<value condition="Skin.String(TVShowTile3,NextAired)">$LOCALIZE[31103]</value>
+		<value condition="Skin.String(TVShowTile3,FileManager)">$LOCALIZE[7]</value>	
+	</variable>
+	
+	<variable name="TVShowTile3.Path">
+		<value condition="Skin.String(TVShowTile3.Type,0) | Skin.String(TVShowTile3.Type,1) | Skin.String(TVShowTile3.Type,2) | Skin.String(TVShowTile3.Type,3)">RunAddon($INFO[Skin.String(TVShowTile3.Path)])</value>
+		<value condition="Skin.String(TVShowTile3.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(TVShowTile3.Path)],return)</value>
+		<value condition="Skin.String(TVShowTile3.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(TVShowTile3.Path)],return)</value>
+		<value condition="Skin.String(TVShowTile3.Type,6)">$INFO[Skin.String(TVShowTile3.Path)]</value>
+		<value condition="Skin.String(TVShowTile3,Views)">Skin.ToggleSetting(TvViews)</value>
+		<value condition="Skin.String(TVShowTile3,VideoFiles)">ActivateWindow(Videos,Files,return)</value>
+		<value condition="Skin.String(TVShowTile3,Update)">UpdateLibrary(video)</value>
+		<value condition="Skin.String(TVShowTile3,Playlists)">ActivateWindow(VideoLibrary, Playlists,return)</value>
+		<value condition="Skin.String(TVShowTile3,VideoAddons)">ActivateWindow(Videos,Addons,return)</value>
+		<value condition="Skin.String(TVShowTile3,Genres)">ActivateWindow(Videos, TVShowGenres,return)</value>
+		<value condition="Skin.String(TVShowTile3,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(TVShowTile3,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(TVShowTile3,RecentlyAdded)">ActivateWindow(Videos, RecentlyAddedEpisodes,return)</value>
+		<value condition="Skin.String(TVShowTile3,NextAired)">RunScript(script.tv.show.next.aired)</value>
+		<value condition="Skin.String(TVShowTile3,FileManager)">ActivateWindow(Filemanager)</value>
+	</variable>
+	
+	<variable name="TVShowTile4.Image">
+		<value condition="Skin.String(TVShowTile4,Views)">tiles/views.png</value>
+		<value condition="Skin.String(TVShowTile4,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(TVShowTile4,Update)">tiles/update.png</value>
+		<value condition="Skin.String(TVShowTile4,Playlists)">tiles/playlist.png</value>
+		<value condition="Skin.String(TVShowTile4,VideoAddons)">tiles/video_addons.png</value>
+		<value condition="Skin.String(TVShowTile4,Genres)">tiles/genres.png</value>
+		<value condition="Skin.String(TVShowTile4,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(TVShowTile4,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(TVShowTile4,RecentlyAdded)">tiles/recent.png</value>
+		<value condition="Skin.String(TVShowTile4,NextAired)">tiles/tvguide.png</value>
+		<value condition="Skin.String(TVShowTile4,FileManager)">tiles/filemanager.png</value>	
+	</variable>
+	
+	<variable name="TVShowTile4.Label">
+		<value condition="!IsEmpty(Skin.String(TVShowTile4.Label))">$INFO[Skin.String(TVShowTile4.Label)]</value>
+		<value condition="Skin.String(TVShowTile4,Views)">$LOCALIZE[31097]</value>
+		<value condition="Skin.String(TVShowTile4,VideoFiles)">$LOCALIZE[31100]</value>
+		<value condition="Skin.String(TVShowTile4,Update)">$LOCALIZE[31014]</value>
+		<value condition="Skin.String(TVShowTile4,Playlists)">$LOCALIZE[136]</value>
+		<value condition="Skin.String(TVShowTile4,VideoAddons)">$LOCALIZE[1037]</value>
+		<value condition="Skin.String(TVShowTile4,Genres)">$LOCALIZE[135]</value>
+		<value condition="Skin.String(TVShowTile4,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(TVShowTile4,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(TVShowTile4,RecentlyAdded)">$LOCALIZE[31009]</value>
+		<value condition="Skin.String(TVShowTile4,NextAired)">$LOCALIZE[31103]</value>
+		<value condition="Skin.String(TVShowTile4,FileManager)">$LOCALIZE[7]</value>	
+	</variable>
+	
+	<variable name="TVShowTile4.Path">
+		<value condition="Skin.String(TVShowTile4.Type,0) | Skin.String(TVShowTile4.Type,1) | Skin.String(TVShowTile4.Type,2) | Skin.String(TVShowTile4.Type,3)">RunAddon($INFO[Skin.String(TVShowTile4.Path)])</value>
+		<value condition="Skin.String(TVShowTile4.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(TVShowTile4.Path)],return)</value>
+		<value condition="Skin.String(TVShowTile4.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(TVShowTile4.Path)],return)</value>
+		<value condition="Skin.String(TVShowTile4.Type,6)">$INFO[Skin.String(TVShowTile4.Path)]</value>
+		<value condition="Skin.String(TVShowTile4,Views)">Skin.ToggleSetting(TvViews)</value>
+		<value condition="Skin.String(TVShowTile4,VideoFiles)">ActivateWindow(Videos,Files,return)</value>
+		<value condition="Skin.String(TVShowTile4,Update)">UpdateLibrary(video)</value>
+		<value condition="Skin.String(TVShowTile4,Playlists)">ActivateWindow(VideoLibrary, Playlists,return)</value>
+		<value condition="Skin.String(TVShowTile4,VideoAddons)">ActivateWindow(Videos,Addons,return)</value>
+		<value condition="Skin.String(TVShowTile4,Genres)">ActivateWindow(Videos, TVShowGenres,return)</value>
+		<value condition="Skin.String(TVShowTile4,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(TVShowTile4,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(TVShowTile4,RecentlyAdded)">ActivateWindow(Videos, RecentlyAddedEpisodes,return)</value>
+		<value condition="Skin.String(TVShowTile4,NextAired)">RunScript(script.tv.show.next.aired)</value>
+		<value condition="Skin.String(TVShowTile4,FileManager)">ActivateWindow(Filemanager)</value>
+	</variable>
+	
+	<variable name="TVShowTile5.Image">
+		<value condition="Skin.String(TVShowTile5,Views)">tiles/views.png</value>
+		<value condition="Skin.String(TVShowTile5,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(TVShowTile5,Update)">tiles/update.png</value>
+		<value condition="Skin.String(TVShowTile5,Playlists)">tiles/playlist.png</value>
+		<value condition="Skin.String(TVShowTile5,VideoAddons)">tiles/video_addons.png</value>
+		<value condition="Skin.String(TVShowTile5,Genres)">tiles/genres.png</value>
+		<value condition="Skin.String(TVShowTile5,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(TVShowTile5,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(TVShowTile5,RecentlyAdded)">tiles/recent.png</value>
+		<value condition="Skin.String(TVShowTile5,NextAired)">tiles/tvguide.png</value>
+		<value condition="Skin.String(TVShowTile5,FileManager)">tiles/filemanager.png</value>	
+	</variable>
+	
+	<variable name="TVShowTile5.Label">
+		<value condition="!IsEmpty(Skin.String(TVShowTile5.Label))">$INFO[Skin.String(TVShowTile5.Label)]</value>
+		<value condition="Skin.String(TVShowTile5,Views)">$LOCALIZE[31097]</value>
+		<value condition="Skin.String(TVShowTile5,VideoFiles)">$LOCALIZE[31100]</value>
+		<value condition="Skin.String(TVShowTile5,Update)">$LOCALIZE[31014]</value>
+		<value condition="Skin.String(TVShowTile5,Playlists)">$LOCALIZE[136]</value>
+		<value condition="Skin.String(TVShowTile5,VideoAddons)">$LOCALIZE[1037]</value>
+		<value condition="Skin.String(TVShowTile5,Genres)">$LOCALIZE[135]</value>
+		<value condition="Skin.String(TVShowTile5,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(TVShowTile5,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(TVShowTile5,RecentlyAdded)">$LOCALIZE[31009]</value>
+		<value condition="Skin.String(TVShowTile5,NextAired)">$LOCALIZE[31103]</value>
+		<value condition="Skin.String(TVShowTile5,FileManager)">$LOCALIZE[7]</value>	
+	</variable>
+	
+	<variable name="TVShowTile5.Path">
+		<value condition="Skin.String(TVShowTile5.Type,0) | Skin.String(TVShowTile5.Type,1) | Skin.String(TVShowTile5.Type,2) | Skin.String(TVShowTile5.Type,3)">RunAddon($INFO[Skin.String(TVShowTile5.Path)])</value>
+		<value condition="Skin.String(TVShowTile5.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(TVShowTile5.Path)],return)</value>
+		<value condition="Skin.String(TVShowTile5.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(TVShowTile5.Path)],return)</value>
+		<value condition="Skin.String(TVShowTile5.Type,6)">$INFO[Skin.String(TVShowTile5.Path)]</value>
+		<value condition="Skin.String(TVShowTile5,Views)">Skin.ToggleSetting(TvViews)</value>
+		<value condition="Skin.String(TVShowTile5,VideoFiles)">ActivateWindow(Videos,Files,return)</value>
+		<value condition="Skin.String(TVShowTile5,Update)">UpdateLibrary(video)</value>
+		<value condition="Skin.String(TVShowTile5,Playlists)">ActivateWindow(VideoLibrary, Playlists,return)</value>
+		<value condition="Skin.String(TVShowTile5,VideoAddons)">ActivateWindow(Videos,Addons,return)</value>
+		<value condition="Skin.String(TVShowTile5,Genres)">ActivateWindow(Videos, TVShowGenres,return)</value>
+		<value condition="Skin.String(TVShowTile5,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(TVShowTile5,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(TVShowTile5,RecentlyAdded)">ActivateWindow(Videos, RecentlyAddedEpisodes,return)</value>
+		<value condition="Skin.String(TVShowTile5,NextAired)">RunScript(script.tv.show.next.aired)</value>
+		<value condition="Skin.String(TVShowTile5,FileManager)">ActivateWindow(Filemanager)</value>
+	</variable>
+	
+<!--LIVETV TILE VARIABLES-->		
+	<variable name="LiveTVTile2.Image">	
+		<value condition="Skin.String(LiveTVTile2,ChannelList)">tiles/channels.png</value>
+		<value condition="Skin.String(LiveTVTile2,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(LiveTVTile2,RadioList)">tiles/radio.png</value>
+		<value condition="Skin.String(LiveTVTile2,Recording)">tiles/recordings.png</value>
+		<value condition="Skin.String(LiveTVTile2,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(LiveTVTile2,Timers)">tiles/recent.png</value>
+		<value condition="Skin.String(LiveTVTile2,VideoAddons)">tiles/video_addons.png</value>
+		<value condition="Skin.String(LiveTVTile2,VideoFiles)">defaults/DefaultMovies.png</value>	
+	</variable>
+	
+	<variable name="LiveTVTile2.Label">	
+		<value condition="Skin.String(LiveTVTile2,ChannelList)">$LOCALIZE[31167]</value>
+		<value condition="Skin.String(LiveTVTile2,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(LiveTVTile2,RadioList)">$LOCALIZE[31168]</value>
+		<value condition="Skin.String(LiveTVTile2,Recording)">$LOCALIZE[31032]</value>
+		<value condition="Skin.String(LiveTVTile2,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(LiveTVTile2,Timers)">$LOCALIZE[31106]</value>
+		<value condition="Skin.String(LiveTVTile2,VideoAddons)">$LOCALIZE[1037]</value>
+		<value condition="Skin.String(LiveTVTile2,VideoFiles)">$LOCALIZE[31100]</value>	
+	</variable>
+	
+	<variable name="LiveTVTile3.Image">	
+		<value condition="Skin.String(LiveTVTile3,ChannelList)">tiles/channels.png</value>
+		<value condition="Skin.String(LiveTVTile3,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(LiveTVTile3,RadioList)">tiles/radio.png</value>
+		<value condition="Skin.String(LiveTVTile3,Recording)">tiles/recordings.png</value>
+		<value condition="Skin.String(LiveTVTile3,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(LiveTVTile3,Timers)">tiles/recent.png</value>
+		<value condition="Skin.String(LiveTVTile3,VideoAddons)">tiles/video_addons.png</value>
+		<value condition="Skin.String(LiveTVTile3,VideoFiles)">defaults/DefaultMovies.png</value>	
+	</variable>
+	
+	<variable name="LiveTVTile3.Label">	
+		<value condition="Skin.String(LiveTVTile3,ChannelList)">$LOCALIZE[31167]</value>
+		<value condition="Skin.String(LiveTVTile3,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(LiveTVTile3,RadioList)">$LOCALIZE[31168]</value>
+		<value condition="Skin.String(LiveTVTile3,Recording)">$LOCALIZE[31032]</value>
+		<value condition="Skin.String(LiveTVTile3,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(LiveTVTile3,Timers)">$LOCALIZE[31106]</value>
+		<value condition="Skin.String(LiveTVTile3,VideoAddons)">$LOCALIZE[1037]</value>
+		<value condition="Skin.String(LiveTVTile3,VideoFiles)">$LOCALIZE[31100]</value>	
+	</variable>
+
+	<variable name="LiveTVTile4.Image">	
+		<value condition="Skin.String(LiveTVTile4,ChannelList)">tiles/channels.png</value>
+		<value condition="Skin.String(LiveTVTile4,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(LiveTVTile4,RadioList)">tiles/radio.png</value>
+		<value condition="Skin.String(LiveTVTile4,Recording)">tiles/recordings.png</value>
+		<value condition="Skin.String(LiveTVTile4,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(LiveTVTile4,Timers)">tiles/recent.png</value>
+		<value condition="Skin.String(LiveTVTile4,VideoAddons)">tiles/video_addons.png</value>
+		<value condition="Skin.String(LiveTVTile4,VideoFiles)">defaults/DefaultMovies.png</value>	
+	</variable>
+	
+	<variable name="LiveTVTile4.Label">	
+		<value condition="Skin.String(LiveTVTile4,ChannelList)">$LOCALIZE[31167]</value>
+		<value condition="Skin.String(LiveTVTile4,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(LiveTVTile4,RadioList)">$LOCALIZE[31168]</value>
+		<value condition="Skin.String(LiveTVTile4,Recording)">$LOCALIZE[31032]</value>
+		<value condition="Skin.String(LiveTVTile4,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(LiveTVTile4,Timers)">$LOCALIZE[31106]</value>
+		<value condition="Skin.String(LiveTVTile4,VideoAddons)">$LOCALIZE[1037]</value>
+		<value condition="Skin.String(LiveTVTile4,VideoFiles)">$LOCALIZE[31100]</value>	
+	</variable>	
+	
+	<variable name="LiveTVTile5.Image">	
+		<value condition="Skin.String(LiveTVTile5,ChannelList)">tiles/channels.png</value>
+		<value condition="Skin.String(LiveTVTile5,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(LiveTVTile5,RadioList)">tiles/radio.png</value>
+		<value condition="Skin.String(LiveTVTile5,Recording)">tiles/recordings.png</value>
+		<value condition="Skin.String(LiveTVTile5,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(LiveTVTile5,Timers)">tiles/recent.png</value>
+		<value condition="Skin.String(LiveTVTile5,VideoAddons)">tiles/video_addons.png</value>
+		<value condition="Skin.String(LiveTVTile5,VideoFiles)">defaults/DefaultMovies.png</value>	
+	</variable>
+	
+	<variable name="LiveTVTile5.Label">	
+		<value condition="Skin.String(LiveTVTile5,ChannelList)">$LOCALIZE[31167]</value>
+		<value condition="Skin.String(LiveTVTile5,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(LiveTVTile5,RadioList)">$LOCALIZE[31168]</value>
+		<value condition="Skin.String(LiveTVTile5,Recording)">$LOCALIZE[31032]</value>
+		<value condition="Skin.String(LiveTVTile5,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(LiveTVTile5,Timers)">$LOCALIZE[31106]</value>
+		<value condition="Skin.String(LiveTVTile5,VideoAddons)">$LOCALIZE[1037]</value>
+		<value condition="Skin.String(LiveTVTile5,VideoFiles)">$LOCALIZE[31100]</value>	
+	</variable>	
+	
+<!--MUSIC TILE VARIABLES-->
+	<variable name="MusicTile1.Image">	
+		<value condition="Skin.String(MusicTile1,Albums)">tiles/albums.png</value>
+		<value condition="Skin.String(MusicTile1,Artists)">tiles/artists.png</value>
+		<value condition="Skin.String(MusicTile1,Songs)">tiles/songs.png</value>
+	</variable>
+	
+	<variable name="MusicTile1.Label">	
+		<value condition="Skin.String(MusicTile1,Albums)">$LOCALIZE[358]</value>
+		<value condition="Skin.String(MusicTile1,Artists)">$LOCALIZE[31017]</value>
+		<value condition="Skin.String(MusicTile1,Songs)">$LOCALIZE[31169]</value>
+	</variable>
+	
+	<variable name="MusicTile1.Path">	
+		<value condition="Skin.String(MusicTile1,Albums)">ActivateWindow(MusicLibrary, Albums,return)</value>
+		<value condition="Skin.String(MusicTile1,Artists)">ActivateWindow(MusicLibrary, Artists,return)</value>
+		<value condition="Skin.String(MusicTile1,Songs)">ActivateWindow(MusicLibrary, Songs,return)</value>
+	</variable>
+	
+	<variable name="MusicTile1.Label2">	
+		<value condition="Skin.String(MusicTile1,Albums)">$INFO[Window.Property(Music.AlbumsCount)]</value>
+		<value condition="Skin.String(MusicTile1,Artists)">$INFO[Window.Property(Music.ArtistsCount)]</value>
+		<value condition="Skin.String(MusicTile1,Songs)">$INFO[Window.Property(Music.SongsCount)]</value>
+	</variable>
+	
+	<variable name="MusicTile2.Image">	
+		<value condition="Skin.String(MusicTile2,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(MusicTile2,Genres)">tiles/genres.png</value>
+		<value condition="Skin.String(MusicTile2,MusicAddons)">tiles/music_addons.png</value>
+		<value condition="Skin.String(MusicTile2,MusicFiles)">defaults/DefaultMusicPlugins.png</value>
+		<value condition="Skin.String(MusicTile2,PartyMode)">tiles/party.png</value>
+		<value condition="Skin.String(MusicTile2,Playlists)">tiles/playlist.png</value>
+		<value condition="Skin.String(MusicTile2,RecentlyAdded)">tiles/recent.png</value>
+		<value condition="Skin.String(MusicTile2,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(MusicTile2,Top100)">tiles/top100.png</value>
+		<value condition="Skin.String(MusicTile2,Update)">tiles/update.png</value>
+		<value condition="Skin.String(MusicTile2,Views)">tiles/views.png</value>	
+		<value condition="Skin.String(MusicTile2,FileManager)">tiles/filemanager.png</value>
+	</variable>
+	
+	<variable name="MusicTile2.Label">	
+		<value condition="!IsEmpty(Skin.String(MusicTile2.Label))">$INFO[Skin.String(MusicTile2.Label)]</value>
+		<value condition="Skin.String(MusicTile2,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(MusicTile2,Genres)">$LOCALIZE[135]</value>
+		<value condition="Skin.String(MusicTile2,MusicAddons)">$LOCALIZE[1038]</value>
+		<value condition="Skin.String(MusicTile2,MusicFiles)">$LOCALIZE[31101]</value>
+		<value condition="Skin.String(MusicTile2,PartyMode)">$LOCALIZE[589]</value>
+		<value condition="Skin.String(MusicTile2,Playlists)">$LOCALIZE[136]</value>
+		<value condition="Skin.String(MusicTile2,RecentlyAdded)">$LOCALIZE[31009]</value>
+		<value condition="Skin.String(MusicTile2,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(MusicTile2,Top100)">$LOCALIZE[271]</value>
+		<value condition="Skin.String(MusicTile2,Update)">$LOCALIZE[31019]</value>
+		<value condition="Skin.String(MusicTile2,Views)">$LOCALIZE[31097]</value>	
+		<value condition="Skin.String(MusicTile2,FileManager)">$LOCALIZE[7]</value>
+	</variable>
+	
+	<variable name="MusicTile2.Path">	
+		<value condition="Skin.String(MusicTile2.Type,0) | Skin.String(MusicTile2.Type,1) | Skin.String(MusicTile2.Type,2) | Skin.String(MusicTile2.Type,3)">RunAddon($INFO[Skin.String(MusicTile2.Path)])</value>
+		<value condition="Skin.String(MusicTile2.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(MusicTile2.Path)],return)</value>
+		<value condition="Skin.String(MusicTile2.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(MusicTile2.Path)],return)</value>
+		<value condition="Skin.String(MusicTile2.Type,6)">$INFO[Skin.String(MusicTile2.Path)]</value>
+		<value condition="Skin.String(MusicTile2,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(MusicTile2,Genres)">ActivateWindow(Music, Genres,return)</value>
+		<value condition="Skin.String(MusicTile2,MusicAddons)">ActivateWindow(Music,Addons,return)</value>
+		<value condition="Skin.String(MusicTile2,MusicFiles)">ActivateWindow(Music)</value>
+		<value condition="Skin.String(MusicTile2,PartyMode)">PlayerControl(Partymode(music))</value>
+		<value condition="Skin.String(MusicTile2,Playlists)">ActivateWindow(MusicLibrary, Playlists,return)</value>
+		<value condition="Skin.String(MusicTile2,RecentlyAdded)">ActivateWindow(MusicLibrary, RecentlyAddedAlbums,return)</value>
+		<value condition="Skin.String(MusicTile2,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(MusicTile2,Top100)">ActivateWindow(MusicLibrary, Top100,return)</value>
+		<value condition="Skin.String(MusicTile2,Update)">UpdateLibrary(music)</value>
+		<value condition="Skin.String(MusicTile2,Views)">Skin.ToggleSetting(MusicViews)</value>
+		<value condition="Skin.String(MusicTile2,FileManager)">ActivateWindow(Filemanager)</value>
+	</variable>
+	
+	<variable name="MusicTile3.Image">	
+		<value condition="Skin.String(MusicTile3,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(MusicTile3,Genres)">tiles/genres.png</value>
+		<value condition="Skin.String(MusicTile3,MusicAddons)">tiles/music_addons.png</value>
+		<value condition="Skin.String(MusicTile3,MusicFiles)">defaults/DefaultMusicPlugins.png</value>
+		<value condition="Skin.String(MusicTile3,PartyMode)">tiles/party.png</value>
+		<value condition="Skin.String(MusicTile3,Playlists)">tiles/playlist.png</value>
+		<value condition="Skin.String(MusicTile3,RecentlyAdded)">tiles/recent.png</value>
+		<value condition="Skin.String(MusicTile3,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(MusicTile3,Top100)">tiles/top100.png</value>
+		<value condition="Skin.String(MusicTile3,Update)">tiles/update.png</value>
+		<value condition="Skin.String(MusicTile3,Views)">tiles/views.png</value>	
+		<value condition="Skin.String(MusicTile3,FileManager)">tiles/filemanager.png</value>
+	</variable>
+	
+	<variable name="MusicTile3.Label">	
+		<value condition="!IsEmpty(Skin.String(MusicTile3.Label))">$INFO[Skin.String(MusicTile3.Label)]</value>
+		<value condition="Skin.String(MusicTile3,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(MusicTile3,Genres)">$LOCALIZE[135]</value>
+		<value condition="Skin.String(MusicTile3,MusicAddons)">$LOCALIZE[1038]</value>
+		<value condition="Skin.String(MusicTile3,MusicFiles)">$LOCALIZE[31101]</value>
+		<value condition="Skin.String(MusicTile3,PartyMode)">$LOCALIZE[589]</value>
+		<value condition="Skin.String(MusicTile3,Playlists)">$LOCALIZE[136]</value>
+		<value condition="Skin.String(MusicTile3,RecentlyAdded)">$LOCALIZE[31009]</value>
+		<value condition="Skin.String(MusicTile3,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(MusicTile3,Top100)">$LOCALIZE[271]</value>
+		<value condition="Skin.String(MusicTile3,Update)">$LOCALIZE[31019]</value>
+		<value condition="Skin.String(MusicTile3,Views)">$LOCALIZE[31097]</value>	
+		<value condition="Skin.String(MusicTile3,FileManager)">$LOCALIZE[7]</value>
+	</variable>
+	
+	<variable name="MusicTile3.Path">	
+		<value condition="Skin.String(MusicTile3.Type,0) | Skin.String(MusicTile3.Type,1) | Skin.String(MusicTile3.Type,2) | Skin.String(MusicTile3.Type,3)">RunAddon($INFO[Skin.String(MusicTile3.Path)])</value>
+		<value condition="Skin.String(MusicTile3.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(MusicTile3.Path)],return)</value>
+		<value condition="Skin.String(MusicTile3.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(MusicTile3.Path)],return)</value>
+		<value condition="Skin.String(MusicTile3.Type,6)">$INFO[Skin.String(MusicTile3.Path)]</value>
+		<value condition="Skin.String(MusicTile3,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(MusicTile3,Genres)">ActivateWindow(Music, Genres,return)</value>
+		<value condition="Skin.String(MusicTile3,MusicAddons)">ActivateWindow(Music,Addons,return)</value>
+		<value condition="Skin.String(MusicTile3,MusicFiles)">ActivateWindow(Music)</value>
+		<value condition="Skin.String(MusicTile3,PartyMode)">PlayerControl(Partymode(music))</value>
+		<value condition="Skin.String(MusicTile3,Playlists)">ActivateWindow(MusicLibrary, Playlists,return)</value>
+		<value condition="Skin.String(MusicTile3,RecentlyAdded)">ActivateWindow(MusicLibrary, RecentlyAddedAlbums,return)</value>
+		<value condition="Skin.String(MusicTile3,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(MusicTile3,Top100)">ActivateWindow(MusicLibrary, Top100,return)</value>
+		<value condition="Skin.String(MusicTile3,Update)">UpdateLibrary(music)</value>
+		<value condition="Skin.String(MusicTile3,Views)">Skin.ToggleSetting(MusicViews)</value>
+		<value condition="Skin.String(MusicTile3,FileManager)">ActivateWindow(Filemanager)</value>
+	</variable>
+	
+	<variable name="MusicTile4.Image">	
+		<value condition="Skin.String(MusicTile4,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(MusicTile4,Genres)">tiles/genres.png</value>
+		<value condition="Skin.String(MusicTile4,MusicAddons)">tiles/music_addons.png</value>
+		<value condition="Skin.String(MusicTile4,MusicFiles)">defaults/DefaultMusicPlugins.png</value>
+		<value condition="Skin.String(MusicTile4,PartyMode)">tiles/party.png</value>
+		<value condition="Skin.String(MusicTile4,Playlists)">tiles/playlist.png</value>
+		<value condition="Skin.String(MusicTile4,RecentlyAdded)">tiles/recent.png</value>
+		<value condition="Skin.String(MusicTile4,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(MusicTile4,Top100)">tiles/top100.png</value>
+		<value condition="Skin.String(MusicTile4,Update)">tiles/update.png</value>
+		<value condition="Skin.String(MusicTile4,Views)">tiles/views.png</value>	
+		<value condition="Skin.String(MusicTile4,FileManager)">tiles/filemanager.png</value>
+	</variable>
+	
+	<variable name="MusicTile4.Label">	
+		<value condition="!IsEmpty(Skin.String(MusicTile4.Label))">$INFO[Skin.String(MusicTile4.Label)]</value>
+		<value condition="Skin.String(MusicTile4,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(MusicTile4,Genres)">$LOCALIZE[135]</value>
+		<value condition="Skin.String(MusicTile4,MusicAddons)">$LOCALIZE[1038]</value>
+		<value condition="Skin.String(MusicTile4,MusicFiles)">$LOCALIZE[31101]</value>
+		<value condition="Skin.String(MusicTile4,PartyMode)">$LOCALIZE[589]</value>
+		<value condition="Skin.String(MusicTile4,Playlists)">$LOCALIZE[136]</value>
+		<value condition="Skin.String(MusicTile4,RecentlyAdded)">$LOCALIZE[31009]</value>
+		<value condition="Skin.String(MusicTile4,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(MusicTile4,Top100)">$LOCALIZE[271]</value>
+		<value condition="Skin.String(MusicTile4,Update)">$LOCALIZE[31019]</value>
+		<value condition="Skin.String(MusicTile4,Views)">$LOCALIZE[31097]</value>	
+		<value condition="Skin.String(MusicTile4,FileManager)">$LOCALIZE[7]</value>
+	</variable>
+	
+	<variable name="MusicTile4.Path">	
+		<value condition="Skin.String(MusicTile4.Type,0) | Skin.String(MusicTile4.Type,1) | Skin.String(MusicTile4.Type,2) | Skin.String(MusicTile4.Type,3)">RunAddon($INFO[Skin.String(MusicTile4.Path)])</value>
+		<value condition="Skin.String(MusicTile4.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(MusicTile4.Path)],return)</value>
+		<value condition="Skin.String(MusicTile4.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(MusicTile4.Path)],return)</value>
+		<value condition="Skin.String(MusicTile4.Type,6)">$INFO[Skin.String(MusicTile4.Path)]</value>
+		<value condition="Skin.String(MusicTile4,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(MusicTile4,Genres)">ActivateWindow(Music, Genres,return)</value>
+		<value condition="Skin.String(MusicTile4,MusicAddons)">ActivateWindow(Music,Addons,return)</value>
+		<value condition="Skin.String(MusicTile4,MusicFiles)">ActivateWindow(Music)</value>
+		<value condition="Skin.String(MusicTile4,PartyMode)">PlayerControl(Partymode(music))</value>
+		<value condition="Skin.String(MusicTile4,Playlists)">ActivateWindow(MusicLibrary, Playlists,return)</value>
+		<value condition="Skin.String(MusicTile4,RecentlyAdded)">ActivateWindow(MusicLibrary, RecentlyAddedAlbums,return)</value>
+		<value condition="Skin.String(MusicTile4,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(MusicTile4,Top100)">ActivateWindow(MusicLibrary, Top100,return)</value>
+		<value condition="Skin.String(MusicTile4,Update)">UpdateLibrary(music)</value>
+		<value condition="Skin.String(MusicTile4,Views)">Skin.ToggleSetting(MusicViews)</value>
+		<value condition="Skin.String(MusicTile4,FileManager)">ActivateWindow(Filemanager)</value>
+	</variable>
+	
+	<variable name="MusicTile5.Image">	
+		<value condition="Skin.String(MusicTile5,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(MusicTile5,Genres)">tiles/genres.png</value>
+		<value condition="Skin.String(MusicTile5,MusicAddons)">tiles/music_addons.png</value>
+		<value condition="Skin.String(MusicTile5,MusicFiles)">defaults/DefaultMusicPlugins.png</value>
+		<value condition="Skin.String(MusicTile5,PartyMode)">tiles/party.png</value>
+		<value condition="Skin.String(MusicTile5,Playlists)">tiles/playlist.png</value>
+		<value condition="Skin.String(MusicTile5,RecentlyAdded)">tiles/recent.png</value>
+		<value condition="Skin.String(MusicTile5,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(MusicTile5,Top100)">tiles/top100.png</value>
+		<value condition="Skin.String(MusicTile5,Update)">tiles/update.png</value>
+		<value condition="Skin.String(MusicTile5,Views)">tiles/views.png</value>	
+		<value condition="Skin.String(MusicTile5,FileManager)">tiles/filemanager.png</value>
+	</variable>
+	
+	<variable name="MusicTile5.Label">	
+		<value condition="!IsEmpty(Skin.String(MusicTile5.Label))">$INFO[Skin.String(MusicTile5.Label)]</value>
+		<value condition="Skin.String(MusicTile5,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(MusicTile5,Genres)">$LOCALIZE[135]</value>
+		<value condition="Skin.String(MusicTile5,MusicAddons)">$LOCALIZE[1038]</value>
+		<value condition="Skin.String(MusicTile5,MusicFiles)">$LOCALIZE[31101]</value>
+		<value condition="Skin.String(MusicTile5,PartyMode)">$LOCALIZE[589]</value>
+		<value condition="Skin.String(MusicTile5,Playlists)">$LOCALIZE[136]</value>
+		<value condition="Skin.String(MusicTile5,RecentlyAdded)">$LOCALIZE[31009]</value>
+		<value condition="Skin.String(MusicTile5,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(MusicTile5,Top100)">$LOCALIZE[271]</value>
+		<value condition="Skin.String(MusicTile5,Update)">$LOCALIZE[31019]</value>
+		<value condition="Skin.String(MusicTile5,Views)">$LOCALIZE[31097]</value>	
+		<value condition="Skin.String(MusicTile5,FileManager)">$LOCALIZE[7]</value>
+	</variable>
+	
+	<variable name="MusicTile5.Path">	
+		<value condition="Skin.String(MusicTile5.Type,0) | Skin.String(MusicTile5.Type,1) | Skin.String(MusicTile5.Type,2) | Skin.String(MusicTile5.Type,3)">RunAddon($INFO[Skin.String(MusicTile5.Path)])</value>
+		<value condition="Skin.String(MusicTile5.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(MusicTile5.Path)],return)</value>
+		<value condition="Skin.String(MusicTile5.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(MusicTile5.Path)],return)</value>
+		<value condition="Skin.String(MusicTile5.Type,6)">$INFO[Skin.String(MusicTile5.Path)]</value>
+		<value condition="Skin.String(MusicTile5,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(MusicTile5,Genres)">ActivateWindow(Music, Genres,return)</value>
+		<value condition="Skin.String(MusicTile5,MusicAddons)">ActivateWindow(Music,Addons,return)</value>
+		<value condition="Skin.String(MusicTile5,MusicFiles)">ActivateWindow(Music)</value>
+		<value condition="Skin.String(MusicTile5,PartyMode)">PlayerControl(Partymode(music))</value>
+		<value condition="Skin.String(MusicTile5,Playlists)">ActivateWindow(MusicLibrary, Playlists,return)</value>
+		<value condition="Skin.String(MusicTile5,RecentlyAdded)">ActivateWindow(MusicLibrary, RecentlyAddedAlbums,return)</value>
+		<value condition="Skin.String(MusicTile5,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(MusicTile5,Top100)">ActivateWindow(MusicLibrary, Top100,return)</value>
+		<value condition="Skin.String(MusicTile5,Update)">UpdateLibrary(music)</value>
+		<value condition="Skin.String(MusicTile5,Views)">Skin.ToggleSetting(MusicViews)</value>
+		<value condition="Skin.String(MusicTile5,FileManager)">ActivateWindow(Filemanager)</value>
+	</variable>
+
+<!--MUSIC VIDEO TILE VARIABLES-->	
+	<variable name="MusicVidTile2.Image">	
+		<value condition="Skin.String(MusicVidTile2,Views)">tiles/views.png</value>
+		<value condition="Skin.String(MusicVidTile2,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(MusicVidTile2,Update)">tiles/update.png</value>
+		<value condition="Skin.String(MusicVidTile2,VideoAddons)">tiles/video_addons.png</value>
+		<value condition="Skin.String(MusicVidTile2,Genres)">tiles/genres.png</value>
+		<value condition="Skin.String(MusicVidTile2,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(MusicVidTile2,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(MusicVidTile2,RecentlyAdded)">tiles/recent.png</value>
+		<value condition="Skin.String(MusicVidTile2,FileManager)">tiles/filemanager.png</value>
+		<value condition="Skin.String(MusicVidTile2,Playlists)">tiles/playlist.png</value>
+	</variable>	
+	
+	<variable name="MusicVidTile2.Label">
+		<value condition="!IsEmpty(Skin.String(MusicVidTile2.Label))">$INFO[Skin.String(MusicVidTile2.Label)]</value>
+		<value condition="Skin.String(MusicVidTile2,Views)">$LOCALIZE[31097]</value>
+		<value condition="Skin.String(MusicVidTile2,VideoFiles)">$LOCALIZE[31100]</value>
+		<value condition="Skin.String(MusicVidTile2,Update)">$LOCALIZE[31014]</value>
+		<value condition="Skin.String(MusicVidTile2,VideoAddons)">$LOCALIZE[1037]</value>
+		<value condition="Skin.String(MusicVidTile2,Genres)">$LOCALIZE[135]</value>
+		<value condition="Skin.String(MusicVidTile2,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(MusicVidTile2,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(MusicVidTile2,RecentlyAdded)">$LOCALIZE[31009]</value>
+		<value condition="Skin.String(MusicVidTile2,FileManager)">$LOCALIZE[7]</value>
+		<value condition="Skin.String(MusicVidTile2,Playlists)">$LOCALIZE[136]</value>
+	</variable>	
+	
+	<variable name="MusicVidTile2.Path">	
+		<value condition="Skin.String(MusicVidTile2.Type,0) | Skin.String(MusicVidTile2.Type,1) | Skin.String(MusicVidTile2.Type,2) | Skin.String(MusicVidTile2.Type,3)">RunAddon($INFO[Skin.String(MusicVidTile2.Path)])</value>
+		<value condition="Skin.String(MusicVidTile2.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(MusicVidTile2.Path)],return)</value>
+		<value condition="Skin.String(MusicVidTile2.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(MusicVidTile2.Path)],return)</value>
+		<value condition="Skin.String(MusicVidTile2.Type,6)">$INFO[Skin.String(MusicVidTile2.Path)]</value>
+		<value condition="Skin.String(MusicVidTile2,Views)">Skin.ToggleSetting(MusicVidViews)</value>
+		<value condition="Skin.String(MusicVidTile2,VideoFiles)">ActivateWindow(Videos,Files,return)</value>
+		<value condition="Skin.String(MusicVidTile2,Update)">UpdateLibrary(video)</value>
+		<value condition="Skin.String(MusicVidTile2,VideoAddons)">ActivateWindow(Videos,Addons,return)</value>
+		<value condition="Skin.String(MusicVidTile2,Genres)">ActivateWindow(Videos, MovieVideoGenres,return)</value>
+		<value condition="Skin.String(MusicVidTile2,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(MusicVidTile2,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(MusicVidTile2,RecentlyAdded)">ActivateWindow(Videos, RecentlyAddedMusicVideos,return)</value>
+		<value condition="Skin.String(MusicVidTile2,FileManager)">ActivateWindow(Filemanager)</value>
+		<value condition="Skin.String(MusicVidTile2,Playlists)">ActivateWindow(VideoLibrary, Playlists,return)</value>
+	</variable>	
+	
+	<variable name="MusicVidTile3.Image">	
+		<value condition="Skin.String(MusicVidTile3,Views)">tiles/views.png</value>
+		<value condition="Skin.String(MusicVidTile3,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(MusicVidTile3,Update)">tiles/update.png</value>
+		<value condition="Skin.String(MusicVidTile3,VideoAddons)">tiles/video_addons.png</value>
+		<value condition="Skin.String(MusicVidTile3,Genres)">tiles/genres.png</value>
+		<value condition="Skin.String(MusicVidTile3,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(MusicVidTile3,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(MusicVidTile3,RecentlyAdded)">tiles/recent.png</value>
+		<value condition="Skin.String(MusicVidTile3,FileManager)">tiles/filemanager.png</value>
+		<value condition="Skin.String(MusicVidTile3,Playlists)">tiles/playlist.png</value>
+	</variable>	
+	
+	<variable name="MusicVidTile3.Label">	
+		<value condition="!IsEmpty(Skin.String(MusicVidTile3.Label))">$INFO[Skin.String(MusicVidTile3.Label)]</value>
+		<value condition="Skin.String(MusicVidTile3,Views)">$LOCALIZE[31097]</value>
+		<value condition="Skin.String(MusicVidTile3,VideoFiles)">$LOCALIZE[31100]</value>
+		<value condition="Skin.String(MusicVidTile3,Update)">$LOCALIZE[31014]</value>
+		<value condition="Skin.String(MusicVidTile3,VideoAddons)">$LOCALIZE[1037]</value>
+		<value condition="Skin.String(MusicVidTile3,Genres)">$LOCALIZE[135]</value>
+		<value condition="Skin.String(MusicVidTile3,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(MusicVidTile3,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(MusicVidTile3,RecentlyAdded)">$LOCALIZE[31009]</value>
+		<value condition="Skin.String(MusicVidTile3,FileManager)">$LOCALIZE[7]</value>
+		<value condition="Skin.String(MusicVidTile3,Playlists)">$LOCALIZE[136]</value>
+	</variable>
+	
+	<variable name="MusicVidTile3.Path">	
+		<value condition="Skin.String(MusicVidTile3.Type,0) | Skin.String(MusicVidTile3.Type,1) | Skin.String(MusicVidTile3.Type,2) | Skin.String(MusicVidTile3.Type,3)">RunAddon($INFO[Skin.String(MusicVidTile3.Path)])</value>
+		<value condition="Skin.String(MusicVidTile3.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(MusicVidTile3.Path)],return)</value>
+		<value condition="Skin.String(MusicVidTile3.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(MusicVidTile3.Path)],return)</value>
+		<value condition="Skin.String(MusicVidTile3.Type,6)">$INFO[Skin.String(MusicVidTile3.Path)]</value>	
+		<value condition="Skin.String(MusicVidTile3,Views)">Skin.ToggleSetting(MusicVidViews)</value>
+		<value condition="Skin.String(MusicVidTile3,VideoFiles)">ActivateWindow(Videos,Files,return)</value>
+		<value condition="Skin.String(MusicVidTile3,Update)">UpdateLibrary(video)</value>
+		<value condition="Skin.String(MusicVidTile3,VideoAddons)">ActivateWindow(Videos,Addons,return)</value>
+		<value condition="Skin.String(MusicVidTile3,Genres)">ActivateWindow(Videos, MovieVideoGenres,return)</value>
+		<value condition="Skin.String(MusicVidTile3,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(MusicVidTile3,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(MusicVidTile3,RecentlyAdded)">ActivateWindow(Videos, RecentlyAddedMusicVideos,return)</value>
+		<value condition="Skin.String(MusicVidTile3,FileManager)">ActivateWindow(Filemanager)</value>
+		<value condition="Skin.String(MusicVidTile3,Playlists)">ActivateWindow(VideoLibrary, Playlists,return)</value>
+	</variable>	
+
+	<variable name="MusicVidTile4.Image">	
+		<value condition="Skin.String(MusicVidTile4,Views)">tiles/views.png</value>
+		<value condition="Skin.String(MusicVidTile4,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(MusicVidTile4,Update)">tiles/update.png</value>
+		<value condition="Skin.String(MusicVidTile4,VideoAddons)">tiles/video_addons.png</value>
+		<value condition="Skin.String(MusicVidTile4,Genres)">tiles/genres.png</value>
+		<value condition="Skin.String(MusicVidTile4,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(MusicVidTile4,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(MusicVidTile4,RecentlyAdded)">tiles/recent.png</value>
+		<value condition="Skin.String(MusicVidTile4,FileManager)">tiles/filemanager.png</value>
+		<value condition="Skin.String(MusicVidTile4,Playlists)">tiles/playlist.png</value>
+	</variable>	
+	
+	<variable name="MusicVidTile4.Label">	
+		<value condition="!IsEmpty(Skin.String(MusicVidTile4.Label))">$INFO[Skin.String(MusicVidTile4.Label)]</value>
+		<value condition="Skin.String(MusicVidTile4,Views)">$LOCALIZE[31097]</value>
+		<value condition="Skin.String(MusicVidTile4,VideoFiles)">$LOCALIZE[31100]</value>
+		<value condition="Skin.String(MusicVidTile4,Update)">$LOCALIZE[31014]</value>
+		<value condition="Skin.String(MusicVidTile4,VideoAddons)">$LOCALIZE[1037]</value>
+		<value condition="Skin.String(MusicVidTile4,Genres)">$LOCALIZE[135]</value>
+		<value condition="Skin.String(MusicVidTile4,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(MusicVidTile4,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(MusicVidTile4,RecentlyAdded)">$LOCALIZE[31009]</value>
+		<value condition="Skin.String(MusicVidTile4,FileManager)">$LOCALIZE[7]</value>
+		<value condition="Skin.String(MusicVidTile4,Playlists)">$LOCALIZE[136]</value>
+	</variable>	
+	
+	<variable name="MusicVidTile4.Path">	
+		<value condition="Skin.String(MusicVidTile4.Type,0) | Skin.String(MusicVidTile4.Type,1) | Skin.String(MusicVidTile4.Type,2) | Skin.String(MusicVidTile4.Type,3)">RunAddon($INFO[Skin.String(MusicVidTile4.Path)])</value>
+		<value condition="Skin.String(MusicVidTile4.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(MusicVidTile4.Path)],return)</value>
+		<value condition="Skin.String(MusicVidTile4.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(MusicVidTile4.Path)],return)</value>
+		<value condition="Skin.String(MusicVidTile4.Type,6)">$INFO[Skin.String(MusicVidTile4.Path)]</value>		
+		<value condition="Skin.String(MusicVidTile4,Views)">Skin.ToggleSetting(MusicVidViews)</value>
+		<value condition="Skin.String(MusicVidTile4,VideoFiles)">ActivateWindow(Videos,Files,return)</value>
+		<value condition="Skin.String(MusicVidTile4,Update)">UpdateLibrary(video)</value>
+		<value condition="Skin.String(MusicVidTile4,VideoAddons)">ActivateWindow(Videos,Addons,return)</value>
+		<value condition="Skin.String(MusicVidTile4,Genres)">ActivateWindow(Videos, MovieVideoGenres,return)</value>
+		<value condition="Skin.String(MusicVidTile4,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(MusicVidTile4,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(MusicVidTile4,RecentlyAdded)">ActivateWindow(Videos, RecentlyAddedMusicVideos,return)</value>
+		<value condition="Skin.String(MusicVidTile4,FileManager)">ActivateWindow(Filemanager)</value>
+		<value condition="Skin.String(MusicVidTile4,Playlists)">ActivateWindow(VideoLibrary, Playlists,return)</value>
+	</variable>	
+	
+	<variable name="MusicVidTile5.Image">	
+		<value condition="Skin.String(MusicVidTile5,Views)">tiles/views.png</value>
+		<value condition="Skin.String(MusicVidTile5,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(MusicVidTile5,Update)">tiles/update.png</value>
+		<value condition="Skin.String(MusicVidTile5,VideoAddons)">tiles/video_addons.png</value>
+		<value condition="Skin.String(MusicVidTile5,Genres)">tiles/genres.png</value>
+		<value condition="Skin.String(MusicVidTile5,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(MusicVidTile5,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(MusicVidTile5,RecentlyAdded)">tiles/recent.png</value>
+		<value condition="Skin.String(MusicVidTile5,FileManager)">tiles/filemanager.png</value>
+		<value condition="Skin.String(MusicVidTile5,Playlists)">tiles/playlist.png</value>
+	</variable>	
+	
+	<variable name="MusicVidTile5.Label">
+		<value condition="!IsEmpty(Skin.String(MusicVidTile5.Label))">$INFO[Skin.String(MusicVidTile5.Label)]</value>
+		<value condition="Skin.String(MusicVidTile5,Views)">$LOCALIZE[31097]</value>
+		<value condition="Skin.String(MusicVidTile5,VideoFiles)">$LOCALIZE[31100]</value>
+		<value condition="Skin.String(MusicVidTile5,Update)">$LOCALIZE[31014]</value>
+		<value condition="Skin.String(MusicVidTile5,VideoAddons)">$LOCALIZE[1037]</value>
+		<value condition="Skin.String(MusicVidTile5,Genres)">$LOCALIZE[135]</value>
+		<value condition="Skin.String(MusicVidTile5,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(MusicVidTile5,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(MusicVidTile5,RecentlyAdded)">$LOCALIZE[31009]</value>
+		<value condition="Skin.String(MusicVidTile5,FileManager)">$LOCALIZE[7]</value>
+		<value condition="Skin.String(MusicVidTile5,Playlists)">$LOCALIZE[136]</value>
+	</variable>	
+	
+	<variable name="MusicVidTile5.Path">	
+		<value condition="Skin.String(MusicVidTile5.Type,0) | Skin.String(MusicVidTile5.Type,1) | Skin.String(MusicVidTile5.Type,2) | Skin.String(MusicVidTile5.Type,3)">RunAddon($INFO[Skin.String(MusicVidTile5.Path)])</value>
+		<value condition="Skin.String(MusicVidTile5.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(MusicVidTile5.Path)],return)</value>
+		<value condition="Skin.String(MusicVidTile5.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(MusicVidTile5.Path)],return)</value>
+		<value condition="Skin.String(MusicVidTile5.Type,6)">$INFO[Skin.String(MusicVidTile5.Path)]</value>		
+		<value condition="Skin.String(MusicVidTile5,Views)">Skin.ToggleSetting(MusicVidViews)</value>
+		<value condition="Skin.String(MusicVidTile5,VideoFiles)">ActivateWindow(Videos,Files,return)</value>
+		<value condition="Skin.String(MusicVidTile5,Update)">UpdateLibrary(video)</value>
+		<value condition="Skin.String(MusicVidTile5,VideoAddons)">ActivateWindow(Videos,Addons,return)</value>
+		<value condition="Skin.String(MusicVidTile5,Genres)">ActivateWindow(Videos, MovieVideoGenres,return)</value>
+		<value condition="Skin.String(MusicVidTile5,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(MusicVidTile5,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(MusicVidTile5,RecentlyAdded)">ActivateWindow(Videos, RecentlyAddedMusicVideos,return)</value>
+		<value condition="Skin.String(MusicVidTile5,FileManager)">ActivateWindow(Filemanager)</value>
+		<value condition="Skin.String(MusicVidTile5,Playlists)">ActivateWindow(VideoLibrary, Playlists,return)</value>
+	</variable>		
+
+<!--PICTURE TILE VARIABLES-->
+	<variable name="PictureTile2.Image">	
+		<value condition="Skin.String(PictureTile2,PictureAddons)">tiles/picture_addons.png</value>
+		<value condition="Skin.String(PictureTile2,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(PictureTile2,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(PictureTile2,FileManager)">tiles/filemanager.png</value>
+	</variable>	
+	
+	<variable name="PictureTile2.Label">	
+		<value condition="!IsEmpty(Skin.String(PictureTile2.Label))">$INFO[Skin.String(PictureTile2.Label)]</value>
+		<value condition="Skin.String(PictureTile2,PictureAddons)">$LOCALIZE[1039]</value>
+		<value condition="Skin.String(PictureTile2,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(PictureTile2,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(PictureTile2,FileManager)">$LOCALIZE[7]</value>
+	</variable>	
+	
+	<variable name="PictureTile2.Path">	
+		<value condition="Skin.String(PictureTile2.Type,0) | Skin.String(PictureTile2.Type,1) | Skin.String(PictureTile2.Type,2) | Skin.String(PictureTile2.Type,3)">RunAddon($INFO[Skin.String(PictureTile2.Path)])</value>
+		<value condition="Skin.String(PictureTile2.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(PictureTile2.Path)],return)</value>
+		<value condition="Skin.String(PictureTile2.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(PictureTile2.Path)],return)</value>
+		<value condition="Skin.String(PictureTile2.Type,6)">$INFO[Skin.String(PictureTile2.Path)]</value>		
+		<value condition="Skin.String(PictureTile2,PictureAddons)">ActivateWindow(pictures)</value>
+		<value condition="Skin.String(PictureTile2,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(PictureTile2,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(PictureTile2,FileManager)">ActivateWindow(Filemanager)</value>
+	</variable>
+	
+	<variable name="PictureTile3.Image">	
+		<value condition="Skin.String(PictureTile3,PictureAddons)">tiles/picture_addons.png</value>
+		<value condition="Skin.String(PictureTile3,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(PictureTile3,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(PictureTile3,FileManager)">tiles/filemanager.png</value>
+	</variable>	
+	
+	<variable name="PictureTile3.Label">	
+		<value condition="!IsEmpty(Skin.String(PictureTile3.Label))">$INFO[Skin.String(PictureTile3.Label)]</value>
+		<value condition="Skin.String(PictureTile3,PictureAddons)">$LOCALIZE[1039]</value>
+		<value condition="Skin.String(PictureTile3,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(PictureTile3,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(PictureTile3,FileManager)">$LOCALIZE[7]</value>
+	</variable>	
+
+	<variable name="PictureTile3.Path">	
+		<value condition="Skin.String(PictureTile3.Type,0) | Skin.String(PictureTile3.Type,1) | Skin.String(PictureTile3.Type,2) | Skin.String(PictureTile3.Type,3)">RunAddon($INFO[Skin.String(PictureTile3.Path)])</value>
+		<value condition="Skin.String(PictureTile3.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(PictureTile3.Path)],return)</value>
+		<value condition="Skin.String(PictureTile3.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(PictureTile3.Path)],return)</value>
+		<value condition="Skin.String(PictureTile3.Type,6)">$INFO[Skin.String(PictureTile3.Path)]</value>		
+		<value condition="Skin.String(PictureTile3,PictureAddons)">ActivateWindow(pictures)</value>
+		<value condition="Skin.String(PictureTile3,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(PictureTile3,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(PictureTile3,FileManager)">ActivateWindow(Filemanager)</value>
+	</variable>	
+	
+	<variable name="PictureTile4.Image">	
+		<value condition="Skin.String(PictureTile4,PictureAddons)">tiles/picture_addons.png</value>
+		<value condition="Skin.String(PictureTile4,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(PictureTile4,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(PictureTile4,FileManager)">tiles/filemanager.png</value>
+	</variable>	
+	
+	<variable name="PictureTile4.Label">	
+		<value condition="!IsEmpty(Skin.String(PictureTile4.Label))">$INFO[Skin.String(PictureTile4.Label)]</value>
+		<value condition="Skin.String(PictureTile4,PictureAddons)">$LOCALIZE[1039]</value>
+		<value condition="Skin.String(PictureTile4,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(PictureTile4,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(PictureTile4,FileManager)">$LOCALIZE[7]</value>
+	</variable>		
+	
+	<variable name="PictureTile4.Path">	
+		<value condition="Skin.String(PictureTile4.Type,0) | Skin.String(PictureTile4.Type,1) | Skin.String(PictureTile4.Type,2) | Skin.String(PictureTile4.Type,3)">RunAddon($INFO[Skin.String(PictureTile4.Path)])</value>
+		<value condition="Skin.String(PictureTile4.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(PictureTile4.Path)],return)</value>
+		<value condition="Skin.String(PictureTile4.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(PictureTile4.Path)],return)</value>
+		<value condition="Skin.String(PictureTile4.Type,6)">$INFO[Skin.String(PictureTile4.Path)]</value>		
+		<value condition="Skin.String(PictureTile4,PictureAddons)">ActivateWindow(pictures)</value>
+		<value condition="Skin.String(PictureTile4,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(PictureTile4,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(PictureTile4,FileManager)">ActivateWindow(Filemanager)</value>
+	</variable>
+	
+	<variable name="PictureTile5.Image">	
+		<value condition="Skin.String(PictureTile5,PictureAddons)">tiles/picture_addons.png</value>
+		<value condition="Skin.String(PictureTile5,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(PictureTile5,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(PictureTile5,FileManager)">tiles/filemanager.png</value>
+	</variable>	
+	
+	<variable name="PictureTile5.Label">
+		<value condition="!IsEmpty(Skin.String(PictureTile5.Label))">$INFO[Skin.String(PictureTile5.Label)]</value>
+		<value condition="Skin.String(PictureTile5,PictureAddons)">$LOCALIZE[1039]</value>
+		<value condition="Skin.String(PictureTile5,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(PictureTile5,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(PictureTile5,FileManager)">$LOCALIZE[7]</value>
+	</variable>	
+
+	<variable name="PictureTile5.Path">	
+		<value condition="Skin.String(PictureTile5.Type,0) | Skin.String(PictureTile5.Type,1) | Skin.String(PictureTile5.Type,2) | Skin.String(PictureTile5.Type,3)">RunAddon($INFO[Skin.String(PictureTile5.Path)])</value>
+		<value condition="Skin.String(PictureTile5.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(PictureTile5.Path)],return)</value>
+		<value condition="Skin.String(PictureTile5.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(PictureTile5.Path)],return)</value>
+		<value condition="Skin.String(PictureTile5.Type,6)">$INFO[Skin.String(PictureTile5.Path)]</value>		
+		<value condition="Skin.String(PictureTile5,PictureAddons)">ActivateWindow(pictures)</value>
+		<value condition="Skin.String(PictureTile5,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(PictureTile5,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(PictureTile5,FileManager)">ActivateWindow(Filemanager)</value>
+	</variable>	
+
+<!--GAMES TILE VARIABLES-->
+	<variable name="GameTile1.Image">	
+		<value condition="Skin.String(GameTile1,RCB)">tiles/games.png</value>
+		<value condition="Skin.String(GameTile1,Adv.Launcher)">tiles/games.png</value>
+	</variable>
+	
+	<variable name="GameTile1.Label">	
+		<value condition="Skin.String(GameTile1,RCB)">$LOCALIZE[31108]</value>
+		<value condition="Skin.String(GameTile1,Adv.Launcher)">$LOCALIZE[31108]</value>
+	</variable>	
+	
+	<variable name="GameTile1.Path">	
+		<value condition="Skin.String(GameTile1,RCB)">RunScript(script.games.rom.collection.browser)</value>
+		<value condition="Skin.String(GameTile1,Adv.Launcher)">RunScript(plugin.program.advanced.launcher)</value>
+	</variable>	
+	
+	<variable name="GameTile2.Image">	
+		<value condition="Skin.String(GameTile2,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(GameTile2,ProgramAddons)">tiles/program_addons.png</value>
+		<value condition="Skin.String(GameTile2,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(GameTile2,FileManager)">tiles/filemanager.png</value>
+	</variable>	
+	
+	<variable name="GameTile2.Label">	
+		<value condition="!IsEmpty(Skin.String(GameTile2.Label))">$INFO[Skin.String(GameTile2.Label)]</value>
+		<value condition="Skin.String(GameTile2,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(GameTile2,ProgramAddons)">$LOCALIZE[31186]</value>
+		<value condition="Skin.String(GameTile2,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(GameTile2,FileManager)">$LOCALIZE[7]</value>
+	</variable>
+	
+	<variable name="GameTile2.Path">	
+		<value condition="Skin.String(GameTile2.Type,0) | Skin.String(GameTile2.Type,1) | Skin.String(GameTile2.Type,2) | Skin.String(GameTile2.Type,3)">RunAddon($INFO[Skin.String(GameTile2.Path)])</value>
+		<value condition="Skin.String(GameTile2.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(GameTile2.Path)],return)</value>
+		<value condition="Skin.String(GameTile2.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(GameTile2.Path)],return)</value>
+		<value condition="Skin.String(GameTile2.Type,6)">$INFO[Skin.String(GameTile2.Path)]</value>		
+		<value condition="Skin.String(GameTile2,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(GameTile2,ProgramAddons)">ActivateWindow(programs)</value>
+		<value condition="Skin.String(GameTile2,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(GameTile2,FileManager)">ActivateWindow(Filemanager)</value>
+	</variable>
+	
+	<variable name="GameTile3.Image">	
+		<value condition="Skin.String(GameTile3,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(GameTile3,ProgramAddons)">tiles/program_addons.png</value>
+		<value condition="Skin.String(GameTile3,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(GameTile3,FileManager)">tiles/filemanager.png</value>
+	</variable>	
+	
+	<variable name="GameTile3.Label">	
+		<value condition="!IsEmpty(Skin.String(GameTile3.Label))">$INFO[Skin.String(GameTile3.Label)]</value>
+		<value condition="Skin.String(GameTile3,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(GameTile3,ProgramAddons)">$LOCALIZE[31186]</value>
+		<value condition="Skin.String(GameTile3,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(GameTile3,FileManager)">$LOCALIZE[7]</value>
+	</variable>
+	
+	<variable name="GameTile3.Path">	
+		<value condition="Skin.String(GameTile3.Type,0) | Skin.String(GameTile3.Type,1) | Skin.String(GameTile3.Type,2) | Skin.String(GameTile3.Type,3)">RunAddon($INFO[Skin.String(GameTile3.Path)])</value>
+		<value condition="Skin.String(GameTile3.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(GameTile3.Path)],return)</value>
+		<value condition="Skin.String(GameTile3.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(GameTile3.Path)],return)</value>
+		<value condition="Skin.String(GameTile3.Type,6)">$INFO[Skin.String(GameTile3.Path)]</value>		
+		<value condition="Skin.String(GameTile3,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(GameTile3,ProgramAddons)">ActivateWindow(programs)</value>
+		<value condition="Skin.String(GameTile3,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(GameTile3,FileManager)">ActivateWindow(Filemanager)</value>
+	</variable>
+
+	<variable name="GameTile4.Image">	
+		<value condition="Skin.String(GameTile4,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(GameTile4,ProgramAddons)">tiles/program_addons.png</value>
+		<value condition="Skin.String(GameTile4,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(GameTile4,FileManager)">tiles/filemanager.png</value>
+	</variable>	
+	
+	<variable name="GameTile4.Label">	
+		<value condition="!IsEmpty(Skin.String(GameTile4.Label))">$INFO[Skin.String(GameTile4.Label)]</value>
+		<value condition="Skin.String(GameTile4,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(GameTile4,ProgramAddons)">$LOCALIZE[31186]</value>
+		<value condition="Skin.String(GameTile4,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(GameTile4,FileManager)">$LOCALIZE[7]</value>
+	</variable>	
+	
+	<variable name="GameTile4.Path">	
+		<value condition="Skin.String(GameTile4.Type,0) | Skin.String(GameTile4.Type,1) | Skin.String(GameTile4.Type,2) | Skin.String(GameTile4.Type,3)">RunAddon($INFO[Skin.String(GameTile4.Path)])</value>
+		<value condition="Skin.String(GameTile4.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(GameTile4.Path)],return)</value>
+		<value condition="Skin.String(GameTile4.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(GameTile4.Path)],return)</value>
+		<value condition="Skin.String(GameTile4.Type,6)">$INFO[Skin.String(GameTile4.Path)]</value>		
+		<value condition="Skin.String(GameTile4,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(GameTile4,ProgramAddons)">ActivateWindow(programs)</value>
+		<value condition="Skin.String(GameTile4,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(GameTile4,FileManager)">ActivateWindow(Filemanager)</value>
+	</variable>	
+	
+	<variable name="GameTile5.Image">	
+		<value condition="Skin.String(GameTile5,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(GameTile5,ProgramAddons)">tiles/program_addons.png</value>
+		<value condition="Skin.String(GameTile5,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(GameTile5,FileManager)">tiles/filemanager.png</value>
+	</variable>	
+	
+	<variable name="GameTile5.Label">	
+		<value condition="!IsEmpty(Skin.String(GameTile5.Label))">$INFO[Skin.String(GameTile5.Label)]</value>
+		<value condition="Skin.String(GameTile5,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(GameTile5,ProgramAddons)">$LOCALIZE[31186]</value>
+		<value condition="Skin.String(GameTile5,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(GameTile5,FileManager)">$LOCALIZE[7]</value>
+	</variable>	
+	
+	<variable name="GameTile5.Path">	
+		<value condition="Skin.String(GameTile5.Type,0) | Skin.String(GameTile5.Type,1) | Skin.String(GameTile5.Type,2) | Skin.String(GameTile5.Type,3)">RunAddon($INFO[Skin.String(GameTile5.Path)])</value>
+		<value condition="Skin.String(GameTile5.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(GameTile5.Path)],return)</value>
+		<value condition="Skin.String(GameTile5.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(GameTile5.Path)],return)</value>
+		<value condition="Skin.String(GameTile5.Type,6)">$INFO[Skin.String(GameTile5.Path)]</value>		
+		<value condition="Skin.String(GameTile5,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(GameTile5,ProgramAddons)">ActivateWindow(programs)</value>
+		<value condition="Skin.String(GameTile5,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(GameTile5,FileManager)">ActivateWindow(Filemanager)</value>
+	</variable>
+
+<!--ADDON TILE VARIABLES-->
+	<variable name="AddonTile2.Image">	
+		<value condition="Skin.String(AddonTile2,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(AddonTile2,MusicAddons)">tiles/music_addons.png</value>
+		<value condition="Skin.String(AddonTile2,PictureAddons)">tiles/picture_addons.png</value>
+		<value condition="Skin.String(AddonTile2,ProgramAddons)">tiles/program_addons.png</value>
+		<value condition="Skin.String(AddonTile2,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(AddonTile2,VideoAddons)">tiles/video_addons.png</value>
+	</variable>	
+	
+	<variable name="AddonTile2.Label">	
+		<value condition="!IsEmpty(Skin.String(AddonTile2.Label))">$INFO[Skin.String(AddonTile2.Label)]</value>
+		<value condition="Skin.String(AddonTile2,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(AddonTile2,MusicAddons)">$LOCALIZE[1038]</value>
+		<value condition="Skin.String(AddonTile2,PictureAddons)">$LOCALIZE[1039]</value>
+		<value condition="Skin.String(AddonTile2,ProgramAddons)">$LOCALIZE[31186]</value>
+		<value condition="Skin.String(AddonTile2,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(AddonTile2,VideoAddons)">$LOCALIZE[1037]</value>
+	</variable>
+	
+	<variable name="AddonTile2.Path">	
+		<value condition="Skin.String(AddonTile2.Type,0) | Skin.String(AddonTile2.Type,1) | Skin.String(AddonTile2.Type,2) | Skin.String(AddonTile2.Type,3)">RunAddon($INFO[Skin.String(AddonTile2.Path)])</value>
+		<value condition="Skin.String(AddonTile2.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(AddonTile2.Path)],return)</value>
+		<value condition="Skin.String(AddonTile2.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(AddonTile2.Path)],return)</value>
+		<value condition="Skin.String(AddonTile2.Type,6)">$INFO[Skin.String(AddonTile2.Path)]</value>		
+		<value condition="Skin.String(AddonTile2,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(AddonTile2,MusicAddons)">ActivateWindow(Music,Addons,return)</value>
+		<value condition="Skin.String(AddonTile2,PictureAddons)">ActivateWindow(pictures)</value>
+		<value condition="Skin.String(AddonTile2,ProgramAddons)">ActivateWindow(programs)</value>
+		<value condition="Skin.String(AddonTile2,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(AddonTile2,VideoAddons)">ActivateWindow(Videos,Addons,return)</value>
+	</variable>	
+	
+	<variable name="AddonTile3.Image">	
+		<value condition="Skin.String(AddonTile3,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(AddonTile3,MusicAddons)">tiles/music_addons.png</value>
+		<value condition="Skin.String(AddonTile3,PictureAddons)">tiles/picture_addons.png</value>
+		<value condition="Skin.String(AddonTile3,ProgramAddons)">tiles/program_addons.png</value>
+		<value condition="Skin.String(AddonTile3,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(AddonTile3,VideoAddons)">tiles/video_addons.png</value>
+	</variable>	
+	
+	<variable name="AddonTile3.Label">	
+		<value condition="!IsEmpty(Skin.String(AddonTile3.Label))">$INFO[Skin.String(AddonTile3.Label)]</value>
+		<value condition="Skin.String(AddonTile3,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(AddonTile3,MusicAddons)">$LOCALIZE[1038]</value>
+		<value condition="Skin.String(AddonTile3,PictureAddons)">$LOCALIZE[1039]</value>
+		<value condition="Skin.String(AddonTile3,ProgramAddons)">$LOCALIZE[31186]</value>
+		<value condition="Skin.String(AddonTile3,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(AddonTile3,VideoAddons)">$LOCALIZE[1037]</value>
+	</variable>
+
+	<variable name="AddonTile3.Path">	
+		<value condition="Skin.String(AddonTile3.Type,0) | Skin.String(AddonTile3.Type,1) | Skin.String(AddonTile3.Type,2) | Skin.String(AddonTile3.Type,3)">RunAddon($INFO[Skin.String(AddonTile3.Path)])</value>
+		<value condition="Skin.String(AddonTile3.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(AddonTile3.Path)],return)</value>
+		<value condition="Skin.String(AddonTile3.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(AddonTile3.Path)],return)</value>
+		<value condition="Skin.String(AddonTile3.Type,6)">$INFO[Skin.String(AddonTile3.Path)]</value>		
+		<value condition="Skin.String(AddonTile3,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(AddonTile3,MusicAddons)">ActivateWindow(Music,Addons,return)</value>
+		<value condition="Skin.String(AddonTile3,PictureAddons)">ActivateWindow(pictures)</value>
+		<value condition="Skin.String(AddonTile3,ProgramAddons)">ActivateWindow(programs)</value>
+		<value condition="Skin.String(AddonTile3,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(AddonTile3,VideoAddons)">ActivateWindow(Videos,Addons,return)</value>
+	</variable>		
+	
+	<variable name="AddonTile4.Image">	
+		<value condition="Skin.String(AddonTile4,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(AddonTile4,MusicAddons)">tiles/music_addons.png</value>
+		<value condition="Skin.String(AddonTile4,PictureAddons)">tiles/picture_addons.png</value>
+		<value condition="Skin.String(AddonTile4,ProgramAddons)">tiles/program_addons.png</value>
+		<value condition="Skin.String(AddonTile4,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(AddonTile4,VideoAddons)">tiles/video_addons.png</value>
+	</variable>	
+	
+	<variable name="AddonTile4.Label">	
+		<value condition="!IsEmpty(Skin.String(AddonTile4.Label))">$INFO[Skin.String(AddonTile4.Label)]</value>
+		<value condition="Skin.String(AddonTile4,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(AddonTile4,MusicAddons)">$LOCALIZE[1038]</value>
+		<value condition="Skin.String(AddonTile4,PictureAddons)">$LOCALIZE[1039]</value>
+		<value condition="Skin.String(AddonTile4,ProgramAddons)">$LOCALIZE[31186]</value>
+		<value condition="Skin.String(AddonTile4,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(AddonTile4,VideoAddons)">$LOCALIZE[1037]</value>
+	</variable>
+	
+	<variable name="AddonTile4.Path">	
+		<value condition="Skin.String(AddonTile4.Type,0) | Skin.String(AddonTile4.Type,1) | Skin.String(AddonTile4.Type,2) | Skin.String(AddonTile4.Type,3)">RunAddon($INFO[Skin.String(AddonTile4.Path)])</value>
+		<value condition="Skin.String(AddonTile4.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(AddonTile4.Path)],return)</value>
+		<value condition="Skin.String(AddonTile4.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(AddonTile4.Path)],return)</value>
+		<value condition="Skin.String(AddonTile4.Type,6)">$INFO[Skin.String(AddonTile4.Path)]</value>		
+		<value condition="Skin.String(AddonTile4,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(AddonTile4,MusicAddons)">ActivateWindow(Music,Addons,return)</value>
+		<value condition="Skin.String(AddonTile4,PictureAddons)">ActivateWindow(pictures)</value>
+		<value condition="Skin.String(AddonTile4,ProgramAddons)">ActivateWindow(programs)</value>
+		<value condition="Skin.String(AddonTile4,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(AddonTile4,VideoAddons)">ActivateWindow(Videos,Addons,return)</value>
+	</variable>		
+	
+	<variable name="AddonTile5.Image">	
+		<value condition="Skin.String(AddonTile5,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(AddonTile5,MusicAddons)">tiles/music_addons.png</value>
+		<value condition="Skin.String(AddonTile5,PictureAddons)">tiles/picture_addons.png</value>
+		<value condition="Skin.String(AddonTile5,ProgramAddons)">tiles/program_addons.png</value>
+		<value condition="Skin.String(AddonTile5,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(AddonTile5,VideoAddons)">tiles/video_addons.png</value>
+	</variable>	
+	
+	<variable name="AddonTile5.Label">	
+		<value condition="!IsEmpty(Skin.String(AddonTile5.Label))">$INFO[Skin.String(AddonTile5.Label)]</value>
+		<value condition="Skin.String(AddonTile5,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(AddonTile5,MusicAddons)">$LOCALIZE[1038]</value>
+		<value condition="Skin.String(AddonTile5,PictureAddons)">$LOCALIZE[1039]</value>
+		<value condition="Skin.String(AddonTile5,ProgramAddons)">$LOCALIZE[31186]</value>
+		<value condition="Skin.String(AddonTile5,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(AddonTile5,VideoAddons)">$LOCALIZE[1037]</value>
+	</variable>
+
+	<variable name="AddonTile5.Path">	
+		<value condition="Skin.String(AddonTile5.Type,0) | Skin.String(AddonTile5.Type,1) | Skin.String(AddonTile5.Type,2) | Skin.String(AddonTile5.Type,3)">RunAddon($INFO[Skin.String(AddonTile5.Path)])</value>
+		<value condition="Skin.String(AddonTile5.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(AddonTile5.Path)],return)</value>
+		<value condition="Skin.String(AddonTile5.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(AddonTile5.Path)],return)</value>
+		<value condition="Skin.String(AddonTile5.Type,6)">$INFO[Skin.String(AddonTile5.Path)]</value>		
+		<value condition="Skin.String(AddonTile5,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(AddonTile5,MusicAddons)">ActivateWindow(Music,Addons,return)</value>
+		<value condition="Skin.String(AddonTile5,PictureAddons)">ActivateWindow(pictures)</value>
+		<value condition="Skin.String(AddonTile5,ProgramAddons)">ActivateWindow(programs)</value>
+		<value condition="Skin.String(AddonTile5,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(AddonTile5,VideoAddons)">ActivateWindow(Videos,Addons,return)</value>
+	</variable>		
+	
+<!--CUSTOM1 TILE VARIABLES-->	
+	<variable name="Custom1Tile1.Image">	
+		<value condition="Skin.String(Custom1Tile1,3DMovies)">tiles/3Dglasses.png</value>
+		<value condition="Skin.String(Custom1Tile1,HDMovies)">tiles/HD.png</value>
+		<value condition="Skin.String(Custom1Tile1,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(Custom1Tile1,Playlists)">tiles/playlist.png</value>
+		<value condition="Skin.String(Custom1Tile1,VideoAddons)">tiles/video_addons.png</value>
+		<value condition="Skin.String(Custom1Tile1,Genres)">tiles/genres.png</value>
+		<value condition="Skin.String(Custom1Tile1,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(Custom1Tile1,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(Custom1Tile1,MovieSets)">tiles/collection.png</value>
+		<value condition="Skin.String(Custom1Tile1,Tags)">tiles/tags.png</value>
+		<value condition="Skin.String(Custom1Tile1,PlayDisc)">tiles/disc.png</value>
+		<value condition="Skin.String(Custom1Tile1,EjectDisc)">tiles/eject.png</value>
+		<value condition="Skin.String(Custom1Tile1,RCB)">tiles/games.png</value>
+		<value condition="Skin.String(Custom1Tile1,Adv.Launcher)">tiles/games.png</value>
+		<value condition="Skin.String(Custom1Tile1,NextAired)">tiles/tvguide.png</value>
+		<value condition="Skin.String(Custom1Tile1,MusicAddons)">tiles/music_addons.png</value>
+		<value condition="Skin.String(Custom1Tile1,MusicFiles)">defaults/DefaultMusicPlugins.png</value>
+		<value condition="Skin.String(Custom1Tile1,PartyMode)">tiles/party.png</value>
+		<value condition="Skin.String(Custom1Tile1,Top100)">tiles/top100.png</value>
+		<value condition="Skin.String(Custom1Tile1,PictureAddons)">tiles/picture_addons.png</value>
+		<value condition="Skin.String(Custom1Tile1,ProgramAddons)">tiles/program_addons.png</value>
+		<value condition="Skin.String(Custom1Tile1,FileManager)">tiles/filemanager.png</value>
+	</variable>	
+	
+	<variable name="Custom1Tile1.Label">	
+		<value condition="Skin.String(Custom1Tile1,3DMovies)">$LOCALIZE[31098]</value>
+		<value condition="Skin.String(Custom1Tile1,HDMovies)">$LOCALIZE[31099]</value>
+		<value condition="Skin.String(Custom1Tile1,VideoFiles)">$LOCALIZE[31100]</value>
+		<value condition="Skin.String(Custom1Tile1,Playlists)">$LOCALIZE[136]</value>
+		<value condition="Skin.String(Custom1Tile1,VideoAddons)">$LOCALIZE[1037]</value>
+		<value condition="Skin.String(Custom1Tile1,Genres)">$LOCALIZE[135]</value>
+		<value condition="Skin.String(Custom1Tile1,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(Custom1Tile1,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(Custom1Tile1,MovieSets)">$LOCALIZE[31107]</value>
+		<value condition="Skin.String(Custom1Tile1,Tags)">$LOCALIZE[20459]</value>
+		<value condition="Skin.String(Custom1Tile1,PlayDisc)">$LOCALIZE[341]</value>
+		<value condition="Skin.String(Custom1Tile1,EjectDisc)">$LOCALIZE[31033]</value>
+		<value condition="Skin.String(Custom1Tile1,RCB)">$LOCALIZE[15016]</value>
+		<value condition="Skin.String(Custom1Tile1,Adv.Launcher)">$LOCALIZE[15016]</value>
+		<value condition="Skin.String(Custom1Tile1,NextAired)">$LOCALIZE[31103]</value>
+		<value condition="Skin.String(Custom1Tile1,MusicAddons)">$LOCALIZE[1038]</value>
+		<value condition="Skin.String(Custom1Tile1,MusicFiles)">$LOCALIZE[1038]</value>
+		<value condition="Skin.String(Custom1Tile1,PartyMode)">$LOCALIZE[589]</value>
+		<value condition="Skin.String(Custom1Tile1,Top100)">$LOCALIZE[271]</value>
+		<value condition="Skin.String(Custom1Tile1,PictureAddons)">$LOCALIZE[1039]</value>
+		<value condition="Skin.String(Custom1Tile1,ProgramAddons)">$LOCALIZE[31186]</value>
+		<value condition="Skin.String(Custom1Tile1,FileManager)">$LOCALIZE[7]</value>
+	</variable>
+	
+	<variable name="Custom1Tile1.Path">	
+		<value condition="Skin.String(Custom1Tile1,3DMovies)">ActivateWindow(10025,special://skin/playlists/3dmovies.xsp,return)</value>
+		<value condition="Skin.String(Custom1Tile1,HDMovies)">ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</value>
+		<value condition="Skin.String(Custom1Tile1,VideoFiles)">ActivateWindow(Videos,Files,return)</value>
+		<value condition="Skin.String(Custom1Tile1,Playlists)">ActivateWindow(VideoLibrary, Playlists,return)</value>
+		<value condition="Skin.String(Custom1Tile1,VideoAddons)">ActivateWindow(Videos,Addons,return)</value>
+		<value condition="Skin.String(Custom1Tile1,Genres)">ActivateWindow(Videos, MovieGenres,return)</value>
+		<value condition="Skin.String(Custom1Tile1,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(Custom1Tile1,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(Custom1Tile1,MovieSets)">ActivateWindow(Videos, MovieSets,return)</value>
+		<value condition="Skin.String(Custom1Tile1,Tags)">ActivateWindow(Videos, MovieTags,return)</value>
+		<value condition="Skin.String(Custom1Tile1,PlayDisc)">PlayDVD</value>
+		<value condition="Skin.String(Custom1Tile1,EjectDisc)">EjectTray</value>
+		<value condition="Skin.String(Custom1Tile1,RCB)">RunScript(script.games.rom.collection.browser)</value>
+		<value condition="Skin.String(Custom1Tile1,Adv.Launcher)">RunScript(plugin.program.advanced.launcher)</value>
+		<value condition="Skin.String(Custom1Tile1,NextAired)">RunScript(script.tv.show.next.aired)</value>
+		<value condition="Skin.String(Custom1Tile1,MusicAddons)">ActivateWindow(Music,Addons,return)</value>
+		<value condition="Skin.String(Custom1Tile1,MusicFiles)">ActivateWindow(Music)</value>
+		<value condition="Skin.String(Custom1Tile1,PartyMode)">PlayerControl(Partymode(music))</value>
+		<value condition="Skin.String(Custom1Tile1,Top100)">ActivateWindow(MusicLibrary, Top100,return)</value>
+		<value condition="Skin.String(Custom1Tile1,PictureAddons)">ActivateWindow(pictures)</value>
+		<value condition="Skin.String(Custom1Tile1,ProgramAddons)">ActivateWindow(programs)</value>
+		<value condition="Skin.String(Custom1Tile1,FileManager)">ActivateWindow(Filemanager)</value>
+	</variable>
+	
+	<variable name="Custom1Tile2.Image">	
+		<value condition="Skin.String(Custom1Tile2,3DMovies)">tiles/3Dglasses.png</value>
+		<value condition="Skin.String(Custom1Tile2,HDMovies)">tiles/HD.png</value>
+		<value condition="Skin.String(Custom1Tile2,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(Custom1Tile2,Playlists)">tiles/playlist.png</value>
+		<value condition="Skin.String(Custom1Tile2,VideoAddons)">tiles/video_addons.png</value>
+		<value condition="Skin.String(Custom1Tile2,Genres)">tiles/genres.png</value>
+		<value condition="Skin.String(Custom1Tile2,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(Custom1Tile2,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(Custom1Tile2,MovieSets)">tiles/collection.png</value>
+		<value condition="Skin.String(Custom1Tile2,Tags)">tiles/tags.png</value>
+		<value condition="Skin.String(Custom1Tile2,PlayDisc)">tiles/disc.png</value>
+		<value condition="Skin.String(Custom1Tile2,EjectDisc)">tiles/eject.png</value>
+		<value condition="Skin.String(Custom1Tile2,RCB)">tiles/games.png</value>
+		<value condition="Skin.String(Custom1Tile2,Adv.Launcher)">tiles/games.png</value>
+		<value condition="Skin.String(Custom1Tile2,NextAired)">tiles/tvguide.png</value>
+		<value condition="Skin.String(Custom1Tile2,MusicAddons)">tiles/music_addons.png</value>
+		<value condition="Skin.String(Custom1Tile2,MusicFiles)">defaults/DefaultMusicPlugins.png</value>
+		<value condition="Skin.String(Custom1Tile2,PartyMode)">tiles/party.png</value>
+		<value condition="Skin.String(Custom1Tile2,Top100)">tiles/top100.png</value>
+		<value condition="Skin.String(Custom1Tile2,PictureAddons)">tiles/picture_addons.png</value>
+		<value condition="Skin.String(Custom1Tile2,ProgramAddons)">tiles/program_addons.png</value>
+		<value condition="Skin.String(Custom1Tile2,FileManager)">tiles/filemanager.png</value>
+	</variable>	
+	
+	<variable name="Custom1Tile2.Label">	
+		<value condition="!IsEmpty(Skin.String(Custom1Tile2.Label))">$INFO[Skin.String(Custom1Tile2.Label)]</value>
+		<value condition="Skin.String(Custom1Tile2,3DMovies)">$LOCALIZE[31098]</value>
+		<value condition="Skin.String(Custom1Tile2,HDMovies)">$LOCALIZE[31099]</value>
+		<value condition="Skin.String(Custom1Tile2,VideoFiles)">$LOCALIZE[31100]</value>
+		<value condition="Skin.String(Custom1Tile2,Playlists)">$LOCALIZE[136]</value>
+		<value condition="Skin.String(Custom1Tile2,VideoAddons)">$LOCALIZE[1037]</value>
+		<value condition="Skin.String(Custom1Tile2,Genres)">$LOCALIZE[135]</value>
+		<value condition="Skin.String(Custom1Tile2,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(Custom1Tile2,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(Custom1Tile2,MovieSets)">$LOCALIZE[31107]</value>
+		<value condition="Skin.String(Custom1Tile2,Tags)">$LOCALIZE[20459]</value>
+		<value condition="Skin.String(Custom1Tile2,PlayDisc)">$LOCALIZE[341]</value>
+		<value condition="Skin.String(Custom1Tile2,EjectDisc)">$LOCALIZE[31033]</value>
+		<value condition="Skin.String(Custom1Tile2,RCB)">$LOCALIZE[15016]</value>
+		<value condition="Skin.String(Custom1Tile2,Adv.Launcher)">$LOCALIZE[15016]</value>
+		<value condition="Skin.String(Custom1Tile2,NextAired)">$LOCALIZE[31103]</value>
+		<value condition="Skin.String(Custom1Tile2,MusicAddons)">$LOCALIZE[1038]</value>
+		<value condition="Skin.String(Custom1Tile2,MusicFiles)">$LOCALIZE[1038]</value>
+		<value condition="Skin.String(Custom1Tile2,PartyMode)">$LOCALIZE[589]</value>
+		<value condition="Skin.String(Custom1Tile2,Top100)">$LOCALIZE[271]</value>
+		<value condition="Skin.String(Custom1Tile2,PictureAddons)">$LOCALIZE[1039]</value>
+		<value condition="Skin.String(Custom1Tile2,ProgramAddons)">$LOCALIZE[31186]</value>
+		<value condition="Skin.String(Custom1Tile2,FileManager)">$LOCALIZE[7]</value>
+	</variable>
+	
+	<variable name="Custom1Tile2.Path">	
+		<value condition="Skin.String(Custom1Tile2.Type,0) | Skin.String(Custom1Tile2.Type,1) | Skin.String(Custom1Tile2.Type,2) | Skin.String(Custom1Tile2.Type,3)">RunAddon($INFO[Skin.String(Custom1Tile2.Path)])</value>
+		<value condition="Skin.String(Custom1Tile2.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(Custom1Tile2.Path)],return)</value>
+		<value condition="Skin.String(Custom1Tile2.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Custom1Tile2.Path)],return)</value>
+		<value condition="Skin.String(Custom1Tile2.Type,6)">$INFO[Skin.String(Custom1Tile2.Path)]</value>		
+		<value condition="Skin.String(Custom1Tile2,3DMovies)">ActivateWindow(10025,special://skin/playlists/3dmovies.xsp,return)</value>
+		<value condition="Skin.String(Custom1Tile2,HDMovies)">ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</value>
+		<value condition="Skin.String(Custom1Tile2,VideoFiles)">ActivateWindow(Videos,Files,return)</value>
+		<value condition="Skin.String(Custom1Tile2,Playlists)">ActivateWindow(VideoLibrary, Playlists,return)</value>
+		<value condition="Skin.String(Custom1Tile2,VideoAddons)">ActivateWindow(Videos,Addons,return)</value>
+		<value condition="Skin.String(Custom1Tile2,Genres)">ActivateWindow(Videos, MovieGenres,return)</value>
+		<value condition="Skin.String(Custom1Tile2,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(Custom1Tile2,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(Custom1Tile2,MovieSets)">ActivateWindow(Videos, MovieSets,return)</value>
+		<value condition="Skin.String(Custom1Tile2,Tags)">ActivateWindow(Videos, MovieTags,return)</value>
+		<value condition="Skin.String(Custom1Tile2,PlayDisc)">PlayDVD</value>
+		<value condition="Skin.String(Custom1Tile2,EjectDisc)">EjectTray</value>
+		<value condition="Skin.String(Custom1Tile2,RCB)">RunScript(script.games.rom.collection.browser)</value>
+		<value condition="Skin.String(Custom1Tile2,Adv.Launcher)">RunScript(plugin.program.advanced.launcher)</value>
+		<value condition="Skin.String(Custom1Tile2,NextAired)">RunScript(script.tv.show.next.aired)</value>
+		<value condition="Skin.String(Custom1Tile2,MusicAddons)">ActivateWindow(Music,Addons,return)</value>
+		<value condition="Skin.String(Custom1Tile2,MusicFiles)">ActivateWindow(Music)</value>
+		<value condition="Skin.String(Custom1Tile2,PartyMode)">PlayerControl(Partymode(music))</value>
+		<value condition="Skin.String(Custom1Tile2,Top100)">ActivateWindow(MusicLibrary, Top100,return)</value>
+		<value condition="Skin.String(Custom1Tile2,PictureAddons)">ActivateWindow(pictures)</value>
+		<value condition="Skin.String(Custom1Tile2,ProgramAddons)">ActivateWindow(programs)</value>
+		<value condition="Skin.String(Custom1Tile2,FileManager)">ActivateWindow(Filemanager)</value>
+	</variable>	
+	
+	<variable name="Custom1Tile3.Image">	
+		<value condition="Skin.String(Custom1Tile3,3DMovies)">tiles/3Dglasses.png</value>
+		<value condition="Skin.String(Custom1Tile3,HDMovies)">tiles/HD.png</value>
+		<value condition="Skin.String(Custom1Tile3,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(Custom1Tile3,Playlists)">tiles/playlist.png</value>
+		<value condition="Skin.String(Custom1Tile3,VideoAddons)">tiles/video_addons.png</value>
+		<value condition="Skin.String(Custom1Tile3,Genres)">tiles/genres.png</value>
+		<value condition="Skin.String(Custom1Tile3,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(Custom1Tile3,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(Custom1Tile3,MovieSets)">tiles/collection.png</value>
+		<value condition="Skin.String(Custom1Tile3,Tags)">tiles/tags.png</value>
+		<value condition="Skin.String(Custom1Tile3,PlayDisc)">tiles/disc.png</value>
+		<value condition="Skin.String(Custom1Tile3,EjectDisc)">tiles/eject.png</value>
+		<value condition="Skin.String(Custom1Tile3,RCB)">tiles/games.png</value>
+		<value condition="Skin.String(Custom1Tile3,Adv.Launcher)">tiles/games.png</value>
+		<value condition="Skin.String(Custom1Tile3,NextAired)">tiles/tvguide.png</value>
+		<value condition="Skin.String(Custom1Tile3,MusicAddons)">tiles/music_addons.png</value>
+		<value condition="Skin.String(Custom1Tile3,MusicFiles)">defaults/DefaultMusicPlugins.png</value>
+		<value condition="Skin.String(Custom1Tile3,PartyMode)">tiles/party.png</value>
+		<value condition="Skin.String(Custom1Tile3,Top100)">tiles/top100.png</value>
+		<value condition="Skin.String(Custom1Tile3,PictureAddons)">tiles/picture_addons.png</value>
+		<value condition="Skin.String(Custom1Tile3,ProgramAddons)">tiles/program_addons.png</value>
+		<value condition="Skin.String(Custom1Tile3,FileManager)">tiles/filemanager.png</value>
+	</variable>	
+	
+	<variable name="Custom1Tile3.Label">	
+		<value condition="!IsEmpty(Skin.String(Custom1Tile3.Label))">$INFO[Skin.String(Custom1Tile3.Label)]</value>
+		<value condition="Skin.String(Custom1Tile3,3DMovies)">$LOCALIZE[31098]</value>
+		<value condition="Skin.String(Custom1Tile3,HDMovies)">$LOCALIZE[31099]</value>
+		<value condition="Skin.String(Custom1Tile3,VideoFiles)">$LOCALIZE[31100]</value>
+		<value condition="Skin.String(Custom1Tile3,Playlists)">$LOCALIZE[136]</value>
+		<value condition="Skin.String(Custom1Tile3,VideoAddons)">$LOCALIZE[1037]</value>
+		<value condition="Skin.String(Custom1Tile3,Genres)">$LOCALIZE[135]</value>
+		<value condition="Skin.String(Custom1Tile3,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(Custom1Tile3,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(Custom1Tile3,MovieSets)">$LOCALIZE[31107]</value>
+		<value condition="Skin.String(Custom1Tile3,Tags)">$LOCALIZE[20459]</value>
+		<value condition="Skin.String(Custom1Tile3,PlayDisc)">$LOCALIZE[341]</value>
+		<value condition="Skin.String(Custom1Tile3,EjectDisc)">$LOCALIZE[31033]</value>
+		<value condition="Skin.String(Custom1Tile3,RCB)">$LOCALIZE[15016]</value>
+		<value condition="Skin.String(Custom1Tile3,Adv.Launcher)">$LOCALIZE[15016]</value>
+		<value condition="Skin.String(Custom1Tile3,NextAired)">$LOCALIZE[31103]</value>
+		<value condition="Skin.String(Custom1Tile3,MusicAddons)">$LOCALIZE[1038]</value>
+		<value condition="Skin.String(Custom1Tile3,MusicFiles)">$LOCALIZE[1038]</value>
+		<value condition="Skin.String(Custom1Tile3,PartyMode)">$LOCALIZE[589]</value>
+		<value condition="Skin.String(Custom1Tile3,Top100)">$LOCALIZE[271]</value>
+		<value condition="Skin.String(Custom1Tile3,PictureAddons)">$LOCALIZE[1039]</value>
+		<value condition="Skin.String(Custom1Tile3,ProgramAddons)">$LOCALIZE[31186]</value>
+		<value condition="Skin.String(Custom1Tile3,FileManager)">$LOCALIZE[7]</value>
+	</variable>
+	
+	<variable name="Custom1Tile3.Path">	
+		<value condition="Skin.String(Custom1Tile3.Type,0) | Skin.String(Custom1Tile3.Type,1) | Skin.String(Custom1Tile3.Type,2) | Skin.String(Custom1Tile3.Type,3)">RunAddon($INFO[Skin.String(Custom1Tile3.Path)])</value>
+		<value condition="Skin.String(Custom1Tile3.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(Custom1Tile3.Path)],return)</value>
+		<value condition="Skin.String(Custom1Tile3.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Custom1Tile3.Path)],return)</value>
+		<value condition="Skin.String(Custom1Tile3.Type,6)">$INFO[Skin.String(Custom1Tile3.Path)]</value>		
+		<value condition="Skin.String(Custom1Tile3,3DMovies)">ActivateWindow(10025,special://skin/playlists/3dmovies.xsp,return)</value>
+		<value condition="Skin.String(Custom1Tile3,HDMovies)">ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</value>
+		<value condition="Skin.String(Custom1Tile3,VideoFiles)">ActivateWindow(Videos,Files,return)</value>
+		<value condition="Skin.String(Custom1Tile3,Playlists)">ActivateWindow(VideoLibrary, Playlists,return)</value>
+		<value condition="Skin.String(Custom1Tile3,VideoAddons)">ActivateWindow(Videos,Addons,return)</value>
+		<value condition="Skin.String(Custom1Tile3,Genres)">ActivateWindow(Videos, MovieGenres,return)</value>
+		<value condition="Skin.String(Custom1Tile3,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(Custom1Tile3,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(Custom1Tile3,MovieSets)">ActivateWindow(Videos, MovieSets,return)</value>
+		<value condition="Skin.String(Custom1Tile3,Tags)">ActivateWindow(Videos, MovieTags,return)</value>
+		<value condition="Skin.String(Custom1Tile3,PlayDisc)">PlayDVD</value>
+		<value condition="Skin.String(Custom1Tile3,EjectDisc)">EjectTray</value>
+		<value condition="Skin.String(Custom1Tile3,RCB)">RunScript(script.games.rom.collection.browser)</value>
+		<value condition="Skin.String(Custom1Tile3,Adv.Launcher)">RunScript(plugin.program.advanced.launcher)</value>
+		<value condition="Skin.String(Custom1Tile3,NextAired)">RunScript(script.tv.show.next.aired)</value>
+		<value condition="Skin.String(Custom1Tile3,MusicAddons)">ActivateWindow(Music,Addons,return)</value>
+		<value condition="Skin.String(Custom1Tile3,MusicFiles)">ActivateWindow(Music)</value>
+		<value condition="Skin.String(Custom1Tile3,PartyMode)">PlayerControl(Partymode(music))</value>
+		<value condition="Skin.String(Custom1Tile3,Top100)">ActivateWindow(MusicLibrary, Top100,return)</value>
+		<value condition="Skin.String(Custom1Tile3,PictureAddons)">ActivateWindow(pictures)</value>
+		<value condition="Skin.String(Custom1Tile3,ProgramAddons)">ActivateWindow(programs)</value>
+		<value condition="Skin.String(Custom1Tile3,FileManager)">ActivateWindow(Filemanager)</value>
+	</variable>	
+
+	<variable name="Custom1Tile4.Image">	
+		<value condition="Skin.String(Custom1Tile4,3DMovies)">tiles/3Dglasses.png</value>
+		<value condition="Skin.String(Custom1Tile4,HDMovies)">tiles/HD.png</value>
+		<value condition="Skin.String(Custom1Tile4,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(Custom1Tile4,Playlists)">tiles/playlist.png</value>
+		<value condition="Skin.String(Custom1Tile4,VideoAddons)">tiles/video_addons.png</value>
+		<value condition="Skin.String(Custom1Tile4,Genres)">tiles/genres.png</value>
+		<value condition="Skin.String(Custom1Tile4,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(Custom1Tile4,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(Custom1Tile4,MovieSets)">tiles/collection.png</value>
+		<value condition="Skin.String(Custom1Tile4,Tags)">tiles/tags.png</value>
+		<value condition="Skin.String(Custom1Tile4,PlayDisc)">tiles/disc.png</value>
+		<value condition="Skin.String(Custom1Tile4,EjectDisc)">tiles/eject.png</value>
+		<value condition="Skin.String(Custom1Tile4,RCB)">tiles/games.png</value>
+		<value condition="Skin.String(Custom1Tile4,Adv.Launcher)">tiles/games.png</value>
+		<value condition="Skin.String(Custom1Tile4,NextAired)">tiles/tvguide.png</value>
+		<value condition="Skin.String(Custom1Tile4,MusicAddons)">tiles/music_addons.png</value>
+		<value condition="Skin.String(Custom1Tile4,MusicFiles)">defaults/DefaultMusicPlugins.png</value>
+		<value condition="Skin.String(Custom1Tile4,PartyMode)">tiles/party.png</value>
+		<value condition="Skin.String(Custom1Tile4,Top100)">tiles/top100.png</value>
+		<value condition="Skin.String(Custom1Tile4,PictureAddons)">tiles/picture_addons.png</value>
+		<value condition="Skin.String(Custom1Tile4,ProgramAddons)">tiles/program_addons.png</value>
+		<value condition="Skin.String(Custom1Tile4,FileManager)">tiles/filemanager.png</value>
+	</variable>	
+	
+	<variable name="Custom1Tile4.Label">
+		<value condition="!IsEmpty(Skin.String(Custom1Tile4.Label))">$INFO[Skin.String(Custom1Tile4.Label)]</value>
+		<value condition="Skin.String(Custom1Tile4,3DMovies)">$LOCALIZE[31098]</value>
+		<value condition="Skin.String(Custom1Tile4,HDMovies)">$LOCALIZE[31099]</value>
+		<value condition="Skin.String(Custom1Tile4,VideoFiles)">$LOCALIZE[31100]</value>
+		<value condition="Skin.String(Custom1Tile4,Playlists)">$LOCALIZE[136]</value>
+		<value condition="Skin.String(Custom1Tile4,VideoAddons)">$LOCALIZE[1037]</value>
+		<value condition="Skin.String(Custom1Tile4,Genres)">$LOCALIZE[135]</value>
+		<value condition="Skin.String(Custom1Tile4,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(Custom1Tile4,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(Custom1Tile4,MovieSets)">$LOCALIZE[31107]</value>
+		<value condition="Skin.String(Custom1Tile4,Tags)">$LOCALIZE[20459]</value>
+		<value condition="Skin.String(Custom1Tile4,PlayDisc)">$LOCALIZE[341]</value>
+		<value condition="Skin.String(Custom1Tile4,EjectDisc)">$LOCALIZE[31033]</value>
+		<value condition="Skin.String(Custom1Tile4,RCB)">$LOCALIZE[15016]</value>
+		<value condition="Skin.String(Custom1Tile4,Adv.Launcher)">$LOCALIZE[15016]</value>
+		<value condition="Skin.String(Custom1Tile4,NextAired)">$LOCALIZE[31103]</value>
+		<value condition="Skin.String(Custom1Tile4,MusicAddons)">$LOCALIZE[1038]</value>
+		<value condition="Skin.String(Custom1Tile4,MusicFiles)">$LOCALIZE[1038]</value>
+		<value condition="Skin.String(Custom1Tile4,PartyMode)">$LOCALIZE[589]</value>
+		<value condition="Skin.String(Custom1Tile4,Top100)">$LOCALIZE[271]</value>
+		<value condition="Skin.String(Custom1Tile4,PictureAddons)">$LOCALIZE[1039]</value>
+		<value condition="Skin.String(Custom1Tile4,ProgramAddons)">$LOCALIZE[31186]</value>
+		<value condition="Skin.String(Custom1Tile4,FileManager)">$LOCALIZE[7]</value>
+	</variable>	
+	
+	<variable name="Custom1Tile4.Path">	
+		<value condition="Skin.String(Custom1Tile4.Type,0) | Skin.String(Custom1Tile4.Type,1) | Skin.String(Custom1Tile4.Type,2) | Skin.String(Custom1Tile4.Type,3)">RunAddon($INFO[Skin.String(Custom1Tile4.Path)])</value>
+		<value condition="Skin.String(Custom1Tile4.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(Custom1Tile4.Path)],return)</value>
+		<value condition="Skin.String(Custom1Tile4.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Custom1Tile4.Path)],return)</value>
+		<value condition="Skin.String(Custom1Tile4.Type,6)">$INFO[Skin.String(Custom1Tile4.Path)]</value>		
+		<value condition="Skin.String(Custom1Tile4,3DMovies)">ActivateWindow(10025,special://skin/playlists/3dmovies.xsp,return)</value>
+		<value condition="Skin.String(Custom1Tile4,HDMovies)">ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</value>
+		<value condition="Skin.String(Custom1Tile4,VideoFiles)">ActivateWindow(Videos,Files,return)</value>
+		<value condition="Skin.String(Custom1Tile4,Playlists)">ActivateWindow(VideoLibrary, Playlists,return)</value>
+		<value condition="Skin.String(Custom1Tile4,VideoAddons)">ActivateWindow(Videos,Addons,return)</value>
+		<value condition="Skin.String(Custom1Tile4,Genres)">ActivateWindow(Videos, MovieGenres,return)</value>
+		<value condition="Skin.String(Custom1Tile4,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(Custom1Tile4,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(Custom1Tile4,MovieSets)">ActivateWindow(Videos, MovieSets,return)</value>
+		<value condition="Skin.String(Custom1Tile4,Tags)">ActivateWindow(Videos, MovieTags,return)</value>
+		<value condition="Skin.String(Custom1Tile4,PlayDisc)">PlayDVD</value>
+		<value condition="Skin.String(Custom1Tile4,EjectDisc)">EjectTray</value>
+		<value condition="Skin.String(Custom1Tile4,RCB)">RunScript(script.games.rom.collection.browser)</value>
+		<value condition="Skin.String(Custom1Tile4,Adv.Launcher)">RunScript(plugin.program.advanced.launcher)</value>
+		<value condition="Skin.String(Custom1Tile4,NextAired)">RunScript(script.tv.show.next.aired)</value>
+		<value condition="Skin.String(Custom1Tile4,MusicAddons)">ActivateWindow(Music,Addons,return)</value>
+		<value condition="Skin.String(Custom1Tile4,MusicFiles)">ActivateWindow(Music)</value>
+		<value condition="Skin.String(Custom1Tile4,PartyMode)">PlayerControl(Partymode(music))</value>
+		<value condition="Skin.String(Custom1Tile4,Top100)">ActivateWindow(MusicLibrary, Top100,return)</value>
+		<value condition="Skin.String(Custom1Tile4,PictureAddons)">ActivateWindow(pictures)</value>
+		<value condition="Skin.String(Custom1Tile4,ProgramAddons)">ActivateWindow(programs)</value>
+		<value condition="Skin.String(Custom1Tile4,FileManager)">ActivateWindow(Filemanager)</value>
+	</variable>		
+	
+	<variable name="Custom1Tile5.Image">	
+		<value condition="Skin.String(Custom1Tile5,3DMovies)">tiles/3Dglasses.png</value>
+		<value condition="Skin.String(Custom1Tile5,HDMovies)">tiles/HD.png</value>
+		<value condition="Skin.String(Custom1Tile5,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(Custom1Tile5,Playlists)">tiles/playlist.png</value>
+		<value condition="Skin.String(Custom1Tile5,VideoAddons)">tiles/video_addons.png</value>
+		<value condition="Skin.String(Custom1Tile5,Genres)">tiles/genres.png</value>
+		<value condition="Skin.String(Custom1Tile5,Favourites)">tiles/favourites.png</value>
+		<value condition="Skin.String(Custom1Tile5,Settings)">tiles/settings.png</value>
+		<value condition="Skin.String(Custom1Tile5,MovieSets)">tiles/collection.png</value>
+		<value condition="Skin.String(Custom1Tile5,Tags)">tiles/tags.png</value>
+		<value condition="Skin.String(Custom1Tile5,PlayDisc)">tiles/disc.png</value>
+		<value condition="Skin.String(Custom1Tile5,EjectDisc)">tiles/eject.png</value>
+		<value condition="Skin.String(Custom1Tile5,RCB)">tiles/games.png</value>
+		<value condition="Skin.String(Custom1Tile5,Adv.Launcher)">tiles/games.png</value>
+		<value condition="Skin.String(Custom1Tile5,NextAired)">tiles/tvguide.png</value>
+		<value condition="Skin.String(Custom1Tile5,MusicAddons)">tiles/music_addons.png</value>
+		<value condition="Skin.String(Custom1Tile5,MusicFiles)">defaults/DefaultMusicPlugins.png</value>
+		<value condition="Skin.String(Custom1Tile5,PartyMode)">tiles/party.png</value>
+		<value condition="Skin.String(Custom1Tile5,Top100)">tiles/top100.png</value>
+		<value condition="Skin.String(Custom1Tile5,PictureAddons)">tiles/picture_addons.png</value>
+		<value condition="Skin.String(Custom1Tile5,ProgramAddons)">tiles/program_addons.png</value>
+		<value condition="Skin.String(Custom1Tile5,FileManager)">tiles/filemanager.png</value>
+	</variable>	
+	
+	<variable name="Custom1Tile5.Label">
+		<value condition="!IsEmpty(Skin.String(Custom1Tile5.Label))">$INFO[Skin.String(Custom1Tile5.Label)]</value>
+		<value condition="Skin.String(Custom1Tile5,3DMovies)">$LOCALIZE[31098]</value>
+		<value condition="Skin.String(Custom1Tile5,HDMovies)">$LOCALIZE[31099]</value>
+		<value condition="Skin.String(Custom1Tile5,VideoFiles)">$LOCALIZE[31100]</value>
+		<value condition="Skin.String(Custom1Tile5,Playlists)">$LOCALIZE[136]</value>
+		<value condition="Skin.String(Custom1Tile5,VideoAddons)">$LOCALIZE[1037]</value>
+		<value condition="Skin.String(Custom1Tile5,Genres)">$LOCALIZE[135]</value>
+		<value condition="Skin.String(Custom1Tile5,Favourites)">$LOCALIZE[1036]</value>
+		<value condition="Skin.String(Custom1Tile5,Settings)">$LOCALIZE[5]</value>
+		<value condition="Skin.String(Custom1Tile5,MovieSets)">$LOCALIZE[31107]</value>
+		<value condition="Skin.String(Custom1Tile5,Tags)">$LOCALIZE[20459]</value>
+		<value condition="Skin.String(Custom1Tile5,PlayDisc)">$LOCALIZE[341]</value>
+		<value condition="Skin.String(Custom1Tile5,EjectDisc)">$LOCALIZE[31033]</value>
+		<value condition="Skin.String(Custom1Tile5,RCB)">$LOCALIZE[15016]</value>
+		<value condition="Skin.String(Custom1Tile5,Adv.Launcher)">$LOCALIZE[15016]</value>
+		<value condition="Skin.String(Custom1Tile5,NextAired)">$LOCALIZE[31103]</value>
+		<value condition="Skin.String(Custom1Tile5,MusicAddons)">$LOCALIZE[1038]</value>
+		<value condition="Skin.String(Custom1Tile5,MusicFiles)">$LOCALIZE[1038]</value>
+		<value condition="Skin.String(Custom1Tile5,PartyMode)">$LOCALIZE[589]</value>
+		<value condition="Skin.String(Custom1Tile5,Top100)">$LOCALIZE[271]</value>
+		<value condition="Skin.String(Custom1Tile5,PictureAddons)">$LOCALIZE[1039]</value>
+		<value condition="Skin.String(Custom1Tile5,ProgramAddons)">$LOCALIZE[31186]</value>
+		<value condition="Skin.String(Custom1Tile5,FileManager)">$LOCALIZE[7]</value>
+	</variable>
+	
+	<variable name="Custom1Tile5.Path">	
+		<value condition="Skin.String(Custom1Tile5.Type,0) | Skin.String(Custom1Tile5.Type,1) | Skin.String(Custom1Tile5.Type,2) | Skin.String(Custom1Tile5.Type,3)">RunAddon($INFO[Skin.String(Custom1Tile5.Path)])</value>
+		<value condition="Skin.String(Custom1Tile5.Type,4)">ActivateWindow(Videos,$INFO[Skin.String(Custom1Tile5.Path)],return)</value>
+		<value condition="Skin.String(Custom1Tile5.Type,5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Custom1Tile5.Path)],return)</value>
+		<value condition="Skin.String(Custom1Tile5.Type,6)">$INFO[Skin.String(Custom1Tile5.Path)]</value>		
+		<value condition="Skin.String(Custom1Tile5,3DMovies)">ActivateWindow(10025,special://skin/playlists/3dmovies.xsp,return)</value>
+		<value condition="Skin.String(Custom1Tile5,HDMovies)">ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</value>
+		<value condition="Skin.String(Custom1Tile5,VideoFiles)">ActivateWindow(Videos,Files,return)</value>
+		<value condition="Skin.String(Custom1Tile5,Playlists)">ActivateWindow(VideoLibrary, Playlists,return)</value>
+		<value condition="Skin.String(Custom1Tile5,VideoAddons)">ActivateWindow(Videos,Addons,return)</value>
+		<value condition="Skin.String(Custom1Tile5,Genres)">ActivateWindow(Videos, MovieGenres,return)</value>
+		<value condition="Skin.String(Custom1Tile5,Favourites)">ActivateWindow(Favourites)</value>
+		<value condition="Skin.String(Custom1Tile5,Settings)">ActivateWindow(Settings)</value>
+		<value condition="Skin.String(Custom1Tile5,MovieSets)">ActivateWindow(Videos, MovieSets,return)</value>
+		<value condition="Skin.String(Custom1Tile5,Tags)">ActivateWindow(Videos, MovieTags,return)</value>
+		<value condition="Skin.String(Custom1Tile5,PlayDisc)">PlayDVD</value>
+		<value condition="Skin.String(Custom1Tile5,EjectDisc)">EjectTray</value>
+		<value condition="Skin.String(Custom1Tile5,RCB)">RunScript(script.games.rom.collection.browser)</value>
+		<value condition="Skin.String(Custom1Tile5,Adv.Launcher)">RunScript(plugin.program.advanced.launcher)</value>
+		<value condition="Skin.String(Custom1Tile5,NextAired)">RunScript(script.tv.show.next.aired)</value>
+		<value condition="Skin.String(Custom1Tile5,MusicAddons)">ActivateWindow(Music,Addons,return)</value>
+		<value condition="Skin.String(Custom1Tile5,MusicFiles)">ActivateWindow(Music)</value>
+		<value condition="Skin.String(Custom1Tile5,PartyMode)">PlayerControl(Partymode(music))</value>
+		<value condition="Skin.String(Custom1Tile5,Top100)">ActivateWindow(MusicLibrary, Top100,return)</value>
+		<value condition="Skin.String(Custom1Tile5,PictureAddons)">ActivateWindow(pictures)</value>
+		<value condition="Skin.String(Custom1Tile5,ProgramAddons)">ActivateWindow(programs)</value>
+		<value condition="Skin.String(Custom1Tile5,FileManager)">ActivateWindow(Filemanager)</value>
+	</variable>	
+	
+</includes>

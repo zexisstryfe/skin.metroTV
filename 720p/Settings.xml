@@ -1,0 +1,185 @@
+<window id="4">
+	<defaultcontrol always="false">50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<include condition="!Window.Previous(fullscreenvideo) + !Window.Previous(slideshow) + Skin.HasSetting(MetroAnimations)">Common_Animation_Splash_Flip</include>
+	
+	<controls>
+	
+		<include>Common_Fanart_Overlay</include>
+		
+		<control type="image" id="100">
+			<description>background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<visible>true</visible>
+			<texture>../backgrounds/systeminfo.jpg</texture>			
+			<animation effect="fade" time="400">WindowOpen</animation>
+			<animation effect="fade" time="400">WindowClose</animation>
+		</control>	
+		
+		<include>Common_Fanart_Overlay</include>
+		<include>Common_TopBar</include>	
+		
+		<control type="group" id="378">   	
+
+			<control type="panel" id="50">
+				<posx>150</posx>
+				<posy>340</posy>
+				<width>1000</width>
+				<height>320</height>
+				<preloaditems>2</preloaditems>
+				<visible>true</visible>
+				<onup>69</onup>
+				<ondown>69</ondown>
+				<onleft>505</onleft>
+				<onright>69</onright>
+				<orientation>horizontal</orientation>
+				<pagecontrol>98</pagecontrol>
+				<focusposition>0</focusposition>
+				<scrolltime tween="cubic" easing="out">400</scrolltime>
+				<itemlayout width="160" height="160">
+				
+					<control type="image">
+						<posx>9</posx>
+						<posy>0</posy>
+						<width>155</width>
+						<height>155</height>
+						<include>Common_Color_Tile1</include>
+					</control>
+				
+					<control type="image">
+						<posx>9</posx>
+						<posy>0</posy>
+						<include>Single_Tile</include>
+					</control>
+								
+					<control type="label">
+						<label>  $INFO[ListItem.Label]</label>
+						<include>Common_HomeTile_Label</include>
+					</control>
+					
+					<control type="image">
+						<posx>39</posx>
+						<posy>20</posy>
+						<width>100</width>
+						<height>100</height>
+						<texture >$INFO[ListItem.Thumb]</texture>
+					</control>
+					
+				</itemlayout>
+							
+				<focusedlayout width="215" height="348">
+					
+					<control type="group">
+						<posx>0</posx>
+						<posy>0</posy>
+						
+						<control type="image">
+							<posx>9</posx>
+							<posy>0</posy>
+							<include>Single_Tile_Focus</include>
+						</control>
+						
+						<control type="image">
+							<posx>39</posx>
+							<posy>20</posy>
+							<width>100</width>
+							<height>100</height>
+							<texture >$INFO[ListItem.Thumb]</texture>
+						</control>
+					
+					</control>
+					
+					<control type="label">
+						<label>  $INFO[ListItem.Label]</label>
+						<include>Common_HomeTile_Label</include>
+					</control>
+					
+				</focusedlayout>
+
+				<content>
+					<item id="1">
+						<description>Appearance</description>
+						<label>480</label>
+						<thumb>settings/appearance.png</thumb>
+						<onclick>activatewindow(AppearanceSettings)</onclick>
+					</item>
+					<item id="2">
+						<description>Skin</description>
+						<label>31132</label>
+						<thumb>settings/skin.png</thumb>
+						<onclick>activatewindow(skinsettings,return)</onclick>
+					</item>
+					<item id="3">
+						<description>Videos</description>
+						<label>3</label>
+						<thumb>settings/videos.png</thumb>
+						<onclick>activatewindow(VideosSettings)</onclick>
+					</item>
+					<item id="4">
+						<description>Music</description>
+						<label>2</label>
+						<thumb>settings/music.png</thumb>
+						<onclick>activatewindow(MusicSettings,return)</onclick>
+					</item>
+					<item id="5">
+						<description>Live TV</description>
+						<label>31012</label>
+						<thumb>settings/tv.png</thumb>
+						<onclick>activatewindow(TVSettings,return)</onclick>
+					</item>
+					<item id="6">
+						<description>Addons</description>
+						<label>24001</label>
+						<thumb>settings/addons.png</thumb>
+						<onclick>ActivateWindow(addonbrowser)</onclick>
+					</item>
+					<item id="7">
+						<description>Pictures</description>
+						<label>1</label>
+						<thumb>settings/pictures.png</thumb>
+						<onclick>activatewindow(PicturesSettings,return)</onclick>
+					</item>
+					<item id="8">
+						<description>Weather</description>
+						<label>8</label>
+						<thumb>settings/weather.png</thumb>
+						<onclick>activatewindow(WeatherSettings,return)</onclick>
+					</item>
+					<item id="9">
+						<description>Services</description>
+						<label>14036</label>
+						<thumb>settings/services.png</thumb>
+						<onclick>activatewindow(ServiceSettings,return)</onclick>
+					</item>
+					<item id="10">
+						<description>System</description>
+						<label>13000</label>
+						<thumb>settings/system.png</thumb>
+						<onclick>activatewindow(SystemSettings,return)</onclick>
+					</item>
+					<item id="11">
+						<description>Profiles</description>
+						<label>13200</label>
+						<thumb>settings/profile.png</thumb>
+						<onclick>activatewindow(Profiles,return)</onclick>
+					</item>
+					<item id="12">
+						<description>System Info</description>
+						<label>130</label>
+						<thumb>settings/info.png</thumb>
+						<onclick>activatewindow(7,return)</onclick>
+					</item>
+				</content>
+				
+			</control>  
+			
+		</control>
+		
+		<include condition="!Window.Previous(fullscreenvideo) + !Window.Previous(slideshow) + Skin.HasSetting(MetroAnimations)">Common_Splash</include>
+		
+	</controls>
+
+</window>

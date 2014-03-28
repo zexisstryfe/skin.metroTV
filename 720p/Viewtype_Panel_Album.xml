@@ -1,0 +1,263 @@
+<includes>
+
+	<include name="Viewtype_Panel_Album">
+	
+		<control type="group">
+			<visible>Control.IsVisible(54)</visible>
+			
+			<control type="image">
+				<include>Dimensions_Fullscreen</include>
+				<texture background="true">backings/music_fanart_diffuse.png</texture>
+				<visible>Skin.HasSetting(UseFanartOverlay)</visible>
+			</control>
+			
+			<include>Common_TopBar</include>				
+
+			<control type="panel" id="54">
+				<visible>Container.Content(albums) + !Container.Content(Genres)</visible>
+				<posx>500</posx>
+				<posy>150</posy>
+				<width>800</width>
+				<height>525</height>
+				<scrolltime>300</scrolltime>
+				<orientation>horizontal</orientation>
+				<viewtype label="Album Panel">Panel</viewtype>
+				<onleft>9000</onleft>
+				<onright>54</onright>
+				<onup>54</onup>
+				<ondown>66</ondown>
+				<preloaditems>2</preloaditems>
+				<pagecontrol>66</pagecontrol>
+				<itemlayout width="175" height="175">
+				
+					<control type="group">
+						<posx>60</posx>
+						<posy>16</posy>
+						
+						<control type="image">
+							<posx>1</posx>
+							<posy>0</posy>
+							<width>155</width>
+							<height>155</height>
+							<include>Common_Color_Keyback1</include>
+							<fadetime>200</fadetime>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<visible>!Container.Content(Genres)</visible>
+						</control>
+						
+						<control type="image">
+							<posx>1</posx>
+							<posy>0</posy>
+							<width>155</width>
+							<height>155</height>
+							<texture background="true" fallback="defaults/DefaultAlbumCover.png">$INFO[ListItem.Icon]</texture>
+							<fadetime>200</fadetime>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<visible>!Container.Content(Genres) + !stringcompare(ListItem.Label,..)</visible>
+						</control>
+						
+						<control type="image">
+							<posx>1</posx>
+							<posy>0</posy>
+							<width>155</width>
+							<height>155</height>
+							<texture>defaults/DefaultFolderBack.png</texture>
+							<aspectratio scalediffuse="false">keep</aspectratio>
+							<visible>!Container.Content(Genres) + stringcompare(ListItem.Label,..)</visible>
+						</control>
+						
+					</control>
+					
+				</itemlayout>
+				
+				<focusedlayout width="184" height="184">
+				
+					<control type="group">
+						<posx>60</posx>
+						<posy>16</posy>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />
+						</animation>
+						
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>155</width>
+							<height>155</height>
+							<texture background="true">backings/tile2.png</texture>
+							<bordertexture border="5">general/accent.png</bordertexture>
+							<bordersize>5</bordersize>
+							<fadetime>200</fadetime>
+							<aspectratio>stretch</aspectratio>
+							<visible>!Container.Content(Genres)</visible>
+						</control>
+						
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>155</width>
+							<height>155</height>
+							<texture background="true" fallback="defaults/DefaultAlbumCover.png">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="5">general/accent.png</bordertexture>
+							<bordersize>5</bordersize>
+							<fadetime>200</fadetime>
+							<aspectratio>stretch</aspectratio>
+							<visible>!Container.Content(Genres) + !stringcompare(ListItem.Label,..)</visible>
+						</control>
+						
+						<control type="image">
+							<posx>40</posx>
+							<posy>40</posy>
+							<width>75</width>
+							<height>75</height>
+							<texture>general/play_large.png</texture>
+							<visible>!Container.Content(Genres) + !stringcompare(ListItem.Label,..)</visible>
+							<aspectratio>keep</aspectratio>
+							<colordiffuse>Accent80</colordiffuse>
+						</control>
+						
+						<control type="image">
+							<posx>1</posx>
+							<posy>0</posy>
+							<width>155</width>
+							<height>155</height>
+							<texture>defaults/DefaultFolderBack.png</texture>
+							<aspectratio scalediffuse="false">keep</aspectratio>
+							<visible>!Container.Content(Genres) + stringcompare(ListItem.Label,..)</visible>
+						</control>
+						
+					</control>
+					
+				</focusedlayout>
+				
+			</control>
+
+			<control type="group">
+				<visible>Container.Content(Albums)</visible>
+
+				<control type="group">
+				
+					<control type="image">
+						<posx>20</posx>
+						<posy>166</posy>
+						<width>520</width>
+						<height>505</height>
+						<include>Common_Color_Keyback1</include>
+					</control>
+					
+					<control type="image">
+						<posx>20</posx>
+						<posy>166</posy>
+						<width>520</width>
+						<height>290</height>
+						<fadetime>800</fadetime>
+						<include>Common_Color_Keyback2</include>
+					</control>
+					
+					<control type="image">
+						<posx>20</posx>
+						<posy>166</posy>
+						<width>520</width>
+						<height>290</height>
+						<fadetime>800</fadetime>
+						<aspectratio>stretch</aspectratio>
+						<texture background="true" fallback="splash/splash_music.png">$INFO[ListItem.Art(fanart)]</texture>
+					</control>
+					
+					<control type="label">
+						<!--Year-->
+						<posx>520</posx>
+						<posy>181</posy>
+						<width>500</width>
+						<height>30</height>
+						<align>right</align>
+						<font>font26UB</font>
+						<textcolor>white</textcolor>
+						<label>$INFO[ListItem.Year]</label>
+						<shadowcolor>ff000000</shadowcolor>
+					</control>
+					
+					<control type="label">
+						<!--Album title-->
+						<posx>35</posx>
+						<posy>370</posy>
+						<width>500</width>
+						<height>50</height>
+						<align>left</align>
+						<font>font32UB</font>
+						<textcolor>Accent</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<scroll>true</scroll>
+						<shadowcolor>ff000000</shadowcolor>
+					</control>
+					
+					<control type="label">
+						<!--Artist-->
+						<posx>35</posx>
+						<posy>410</posy>
+						<width>500</width>
+						<height>50</height>
+						<align>left</align>
+						<font>font26L</font>
+						<textcolor>white</textcolor>
+						<label>[B]$INFO[ListItem.artist][/B]</label>
+						<shadowcolor>ff000000</shadowcolor>
+					</control>
+					
+					<control type="label">
+						<!--Overview-->
+						<posx>35</posx>
+						<posy>456</posy>
+						<width>500</width>
+						<height>30</height>
+						<align>left</align>
+						<font>font26L</font>
+						<textcolor>Accent</textcolor>
+						<label>$LOCALIZE[31001]</label>
+					</control>
+					
+				</control>
+
+				<control type="textbox">
+					<posx>30</posx>
+					<posy>490</posy>
+					<width>500</width>
+					<height>140</height>
+					<font>font18</font>
+					<textcolor>white</textcolor>
+					<info>ListItem.Property(Album_Description)</info>
+					<label>There is no information for this album.</label>
+					<align>justify</align>
+					<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
+				</control>
+				
+				<control type="image">
+					<description>outline</description>
+					<posx>19</posx>
+					<posy>685</posy>
+					<width>1242</width>
+					<height>7</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>colors/color_white.png</texture>
+					<visible>Control.HasFocus(66)</visible>
+				</control>
+				
+				<control type="scrollbar" id="66">
+					<posx>20</posx>
+					<posy>686</posy>
+					<width>1240</width>
+					<height>5</height>
+					<texturesliderbar>general/accent.png</texturesliderbar> 
+					<texturesliderbackground>backings/key-back2.png</texturesliderbackground> 
+					<onup>54</onup>
+					<ondown>9000</ondown>
+					<orientation>horizontal</orientation>
+				</control>
+				
+			</control>
+
+		</control>
+		
+	</include>
+	
+</includes>

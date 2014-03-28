@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window id="139">
+	<defaultcontrol always="true">5</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<include>DialogOverlay</include>
+
+		<control type="group">
+			<posx>345</posx>
+			<posy>100</posy>
+
+			<control type="image">
+				<width>590</width>
+				<height>570</height>
+				<include>Common_Color_Keyback1</include>
+			</control>
+			
+			<control type="label" id="1">
+				<description>Heading</description>
+				<posx>570</posx>
+				<label>$LOCALIZE[13406]</label>
+				<width>590</width>
+				<include>Dialog_Header</include>
+			</control>
+			
+			<control type="image">
+				<description>line</description>
+				<width>590</width>
+				<include>Dialog_Line</include>
+			</control>
+			
+			<control type="image">
+				<description>outline</description>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<posx>564</posx>
+				<posy>73</posy>
+				<include>Common_Scroll_OutlineV</include>
+				<height>478</height>
+				<visible>Control.HasFocus(7)</visible>
+			</control>
+			
+			<control type="scrollbar" id="7">
+				<posx>565</posx>
+				<posy>74</posy>
+				<height>476</height>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<width>5</width>
+				<texturesliderbar colordiffuse="Accent">colors/color_white.png</texturesliderbar> 
+				<texturesliderbackground colordiffuse="Keyback2">colors/color_white.png</texturesliderbackground> 
+			</control>
+
+			<control type="list" id="5">
+				<posx>20</posx>
+				<posy>74</posy>
+				<width>540</width>
+				<height>476</height>
+				<onleft>7</onleft>
+				<onright>7</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<pagecontrol>7</pagecontrol>
+
+				<itemlayout height="40">
+
+					<control type="label">
+						<posx>20</posx>
+						<width>180</width>
+						<textcolor>Accent</textcolor>
+						<font>font20UB</font>
+						<label>$INFO[ListItem.Label]</label>
+						<textcolor>Accent</textcolor>
+					</control>
+
+					<control type="label">
+						<posx>520</posx>
+						<width>320</width>
+						<align>right</align>
+						<info>ListItem.Label2</info>
+					</control>
+
+				</itemlayout>
+
+				<focusedlayout height="40">
+
+					<control type="image">
+						<width>570</width>
+						<height>40</height>
+						<include>Common_Color_Accent</include>
+					</control>
+
+					<control type="label">
+						<posx>20</posx>
+						<width>180</width>
+						<font>font20UB</font>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+
+					<control type="label">
+						<posx>520</posx>
+						<width>320</width>
+						<align>right</align>
+						<info>ListItem.Label2</info>
+					</control>
+
+				</focusedlayout>
+
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

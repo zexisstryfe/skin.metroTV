@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+	<include name="FirstRun_Labels">
+		<font>font24</font>
+		<wrapmultiline>true</wrapmultiline>	
+		<width>900</width>
+		<height>40</height>
+	</include>
+	
+	<include name="TileCreator_Buttons1">
+		<posx>10</posx>
+		<posy>80</posy>
+		<width>580</width>
+		<height>35</height>
+		<align>left</align>
+		<textoffsetx>10</textoffsetx>
+		<label>$LOCALIZE[467]</label>
+		<label2>$INFO[Skin.String(HomeTileEdit.TypeName)]</label2>
+	</include>
+	
+	<include name="TileCreator_Buttons2">
+		<posx>10</posx>
+		<width>640</width>
+		<height>35</height>
+		<align>left</align>
+		<textoffsetx>10</textoffsetx>
+	</include>
+	
+	<include name="AlbumInfo_Label">
+		<posx>260</posx>
+		<posy>225</posy>			
+		<width>340</width>
+		<height>28</height>
+		<font>font20UB</font>
+		<textcolor>Accent</textcolor>
+		<aligny>top</aligny>
+	</include>
+
+	<include name="KaiToast_Icon">
+		<posx>5</posx>
+		<posy>5</posy>
+		<width>54</width>
+		<height>54</height>
+		<aspectratio>keep</aspectratio>
+	</include>	
+
+	<include name="Seekbar_Label">
+		<posy>250</posy>
+		<width>1280</width>
+		<textcolor>Accent60</textcolor>
+		<align>center</align>
+		<font>font48BUB</font>
+	</include>	
+
+	<include name="Seekbar_Image">
+		<posy>311</posy>
+		<width>1280</width>
+		<height>128</height>
+		<fadetime>200</fadetime>
+		<aspectratio>keep</aspectratio>
+		<colordiffuse>White60</colordiffuse>
+	</include>	
+
+	<include name="Dialog_Button">
+		<width>48</width>
+		<height>48</height>
+		<textoffsetx>2000</textoffsetx>
+	</include>
+	
+	<include name="Dialog_OkButton">
+		<include>Dialog_Button</include>
+		<texturefocus>buttons/okFO.png</texturefocus>
+		<texturenofocus>buttons/okNF.png</texturenofocus>
+	</include>
+	
+	<include name="Dialog_CancelButton">
+		<include>Dialog_Button</include>
+		<texturefocus>buttons/cancelFO.png</texturefocus>
+		<texturenofocus>buttons/cancelNF.png</texturenofocus>
+	</include>
+	
+	<include name="Dialog_Header">
+		<posy>10</posy>
+		<align>right</align>
+		<font>font40LB</font>
+		<textcolor>Accent</textcolor>
+		<scroll>true</scroll>
+	</include>
+	
+	<include name="Dialog_Line">
+		<height>4</height>
+		<include>Common_Color_Accent</include>
+		<posx>0</posx>
+		<posy>60</posy>
+	</include>
+
+</includes>

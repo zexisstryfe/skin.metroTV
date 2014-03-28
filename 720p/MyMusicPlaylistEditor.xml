@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window id="503">
+	<defaultcontrol allways="true">6</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<views>50</views>
+
+	<controls>
+
+		<include>GlobalBackground</include>
+		
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture background="true">backings/music_fanart_diffuse.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			<visible>Skin.HasSetting(UseFanartOverlay)</visible>
+			<visible>Control.IsVisible(50)</visible>
+		</control>
+		
+		<include>Common_TopBar</include>
+
+		<control type="group">
+			<description>Left panel</description>
+			<posx>40</posx>
+			<posy>120</posy>
+
+			<control type="image">
+				<width>480</width>
+				<height>560</height>
+				<include>Common_Color_Keyback1</include>
+			</control>
+
+			<control type="label">
+				<posx>20</posx>
+				<width>410</width>
+				<height>60</height>
+				<textcolor>Accent</textcolor>
+				<font>font40LB</font>
+				<label>31101</label>
+			</control>
+			
+			<control type="image">
+				<description>line</description>
+				<width>480</width>
+				<include>Dialog_Line</include>
+			</control>	
+			
+			<control type="image">
+				<posx>10</posx>
+				<posy>70</posy>
+				<width>450</width>
+				<height>480</height>
+				<include>Common_Color_Keyback2</include>
+			</control>
+
+			<control type="list" id="50">
+				<posx>10</posx>
+				<posy>70</posy>
+				<width>450</width>
+				<height>480</height>
+				<onleft>-</onleft>
+				<onright>60</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<viewtype label="">list</viewtype>
+				<scrolltime>200</scrolltime>
+				<pagecontrol>60</pagecontrol>
+				<itemlayout height="40" width="450">
+				
+					<control type="image">
+						<posx>10</posx>
+						<posy>5</posy>
+						<width>30</width>
+						<height>30</height>
+						<include>Common_Color_Keyback1</include>
+					</control>
+					
+					<control type="image">
+						<posx>10</posx>
+						<posy>5</posy>
+						<width>30</width>
+						<height>30</height>
+						<texture fallback="defaults/DefaultFile.png">$INFO[Listitem.Icon]</texture>
+					</control>
+
+					<control type="label">
+						<posx>50</posx>
+						<posy>0</posy>
+						<width>380</width>
+						<info>ListItem.Label</info>
+					</control>
+
+					<control type="label">
+						<posx>435</posx>
+						<posy>0</posy>
+						<width>380</width>
+						<align>right</align>
+						<info>ListItem.Label2</info>
+					</control>
+
+				</itemlayout>
+
+				<focusedlayout height="40" width="450">
+
+					<control type="image">
+						<width>450</width>
+						<height>40</height>
+						<include>Common_Color_Accent</include>
+						<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(50)">Conditional</animation>
+					</control>
+
+					<control type="image">
+						<posx>10</posx>
+						<posy>5</posy>
+						<width>30</width>
+						<height>30</height>
+						<include>Common_Color_Keyback1</include>
+					</control>
+					
+					<control type="image">
+						<posx>10</posx>
+						<posy>5</posy>
+						<width>30</width>
+						<height>30</height>
+						<texture fallback="defaults/DefaultFile.png">$INFO[Listitem.Icon]</texture>
+					</control>
+
+					<control type="label">
+						<posx>50</posx>
+						<posy>0</posy>
+						<width>380</width>
+						<info>ListItem.Label</info>
+					</control>
+
+					<control type="label">
+						<posx>435</posx>
+						<posy>0</posy>
+						<width>380</width>
+						<align>right</align>
+						<info>ListItem.Label2</info>
+					</control>
+
+				</focusedlayout>
+
+			</control>
+			
+			<control type="image">
+				<description>outline</description>
+				<posx>464</posx>
+				<posy>69</posy>
+				<height>482</height>
+				<include>Common_Scroll_OutlineV</include>
+				<visible>Control.HasFocus(60)</visible>
+			</control>
+			
+			<control type="scrollbar" id="60">
+				<posx>465</posx>
+				<posy>70</posy>
+				<height>480</height>
+				<width>5</width>
+				<onleft>50</onleft>
+				<onright>9000</onright>
+			</control>
+
+		</control>
+
+		<control type="group">
+			<description>Middle Panel</description>
+			<posx>520</posx>
+			<posy>90</posy>
+
+			<control type="label">
+				<posy>-10</posy>
+				<width>240</width>
+				<height>30</height>
+				<font>font20UB</font>
+				<align>center</align>
+				<label>31044</label>
+			</control>
+
+			<control type="image">
+				<posx>10</posx>
+				<posy>30</posy>
+				<width>220</width>
+				<height>200</height>
+				<aspectratio>keep</aspectratio>
+				<texture fallback="defaults/DefaultAlbumCover.png">$INFO[Container(50).ListItem.Icon]</texture>
+				<bordertexture border="5" colordiffuse="Keyback2">colors/color_white.png</bordertexture>
+				<bordersize>8</bordersize>
+				<visible>Control.HasFocus(50)</visible>
+			</control>
+			
+			<control type="image">
+				<posx>10</posx>
+				<posy>30</posy>
+				<width>220</width>
+				<height>200</height>
+				<aspectratio>keep</aspectratio>
+				<texture fallback="defaults/DefaultAlbumCover.png">$INFO[Container(100).ListItem.Icon]</texture>
+				<bordertexture border="5" colordiffuse="Keyback2">colors/color_white.png</bordertexture>
+				<bordersize>8</bordersize>
+				<visible>Control.HasFocus(100)</visible>
+			</control>
+			
+			<control type="grouplist">
+				<posx>10</posx>
+				<posy>240</posy>
+				<width>230</width>
+				<height>500</height>
+				<itemgap>0</itemgap>
+				<orientation>vertical</orientation>
+				<visible>Control.HasFocus(50)</visible>
+				
+				<control type="group">
+					<height>28</height>
+					<visible>!IsEmpty(Container(50).ListItem.Title)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<include>Common_Infolist_Label2</include>
+						<label>$LOCALIZE[556]:</label>
+					</control>
+					
+					<control type="label">
+						<description>Type Value</description>
+						<include>Common_Infolist_Info2</include>
+						<label>$INFO[Container(50).ListItem.Title]</label>						
+					</control>
+					
+				</control>
+				
+				<control type="group">
+					<height>28</height>
+					<visible>!IsEmpty(Container(50).ListItem.Artist)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<include>Common_Infolist_Label2</include>
+						<label>$LOCALIZE[557]:</label>
+					</control>
+					
+					<control type="label">
+						<description>Type Value</description>
+						<include>Common_Infolist_Info2</include>
+						<label>$INFO[Container(50).ListItem.Artist]</label>						
+					</control>
+					
+				</control>
+				
+				<control type="group">
+					<height>28</height>
+					<visible>!IsEmpty(Container(50).ListItem.Album)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<include>Common_Infolist_Label2</include>
+						<label>$LOCALIZE[558]:</label>
+					</control>
+					
+					<control type="label">
+						<description>Type Value</description>
+						<include>Common_Infolist_Info2</include>
+						<label>$INFO[Container(50).ListItem.Album]</label>						
+					</control>
+					
+				</control>
+				
+				<control type="group">
+					<height>28</height>
+					<visible>!IsEmpty(Container(50).ListItem.Duration)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<include>Common_Infolist_Label2</include>
+						<label>$LOCALIZE[555]:</label>
+					</control>
+					
+					<control type="label">
+						<description>Type Value</description>
+						<include>Common_Infolist_Info2</include>
+						<label>$INFO[Container(50).ListItem.Duration]</label>						
+					</control>
+					
+				</control>
+				
+				<control type="group">
+					<height>28</height>
+					<visible>!IsEmpty(Container(50).ListItem.TrackNumber)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<include>Common_Infolist_Label2</include>
+						<label>$LOCALIZE[554]:</label>
+					</control>
+					
+					<control type="label">
+						<description>Type Value</description>
+						<include>Common_Infolist_Info2</include>
+						<label>$INFO[Container(50).ListItem.TrackNumber]</label>						
+					</control>
+					
+				</control>
+				
+				<control type="group">
+					<height>28</height>
+					<visible>!IsEmpty(Container(50).ListItem.Genre)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<include>Common_Infolist_Label2</include>
+						<label>$LOCALIZE[515]:</label>
+					</control>
+					
+					<control type="label">
+						<description>Type Value</description>
+						<include>Common_Infolist_Info2</include>
+						<label>$INFO[Container(50).ListItem.Genre]</label>						
+					</control>
+					
+				</control>
+
+			</control>
+			
+			<control type="grouplist">
+				<posx>10</posx>
+				<posy>240</posy>
+				<width>230</width>
+				<height>500</height>
+				<itemgap>0</itemgap>
+				<orientation>vertical</orientation>
+				<visible>Control.HasFocus(100)</visible>
+				
+				<control type="group">
+					<height>28</height>
+					<visible>!IsEmpty(Container(100).ListItem.Title)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<include>Common_Infolist_Label2</include>
+						<label>$LOCALIZE[556]:</label>
+					</control>
+					
+					<control type="label">
+						<description>Type Value</description>
+						<include>Common_Infolist_Info2</include>
+						<label>$INFO[Container(100).ListItem.Title]</label>						
+					</control>
+					
+				</control>
+				
+				<control type="group">
+					<height>28</height>
+					<visible>!IsEmpty(Container(100).ListItem.Artist)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<include>Common_Infolist_Label2</include>
+						<label>$LOCALIZE[557]:</label>
+					</control>
+					
+					<control type="label">
+						<description>Type Value</description>
+						<include>Common_Infolist_Info2</include>
+						<label>$INFO[Container(100).ListItem.Artist]</label>						
+					</control>
+					
+				</control>
+				
+				<control type="group">
+					<height>28</height>
+					<visible>!IsEmpty(Container(100).ListItem.Album)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<include>Common_Infolist_Label2</include>
+						<label>$LOCALIZE[558]:</label>
+					</control>
+					
+					<control type="label">
+						<description>Type Value</description>
+						<include>Common_Infolist_Info2</include>
+						<label>$INFO[Container(100).ListItem.Album]</label>						
+					</control>
+					
+				</control>
+				
+				<control type="group">
+					<height>28</height>
+					<visible>!IsEmpty(Container(100).ListItem.Duration)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<include>Common_Infolist_Label2</include>
+						<label>$LOCALIZE[555]:</label>
+					</control>
+					
+					<control type="label">
+						<description>Type Value</description>
+						<include>Common_Infolist_Info2</include>
+						<label>$INFO[Container(100).ListItem.Duration]</label>						
+					</control>
+					
+				</control>
+				
+				<control type="group">
+					<height>28</height>
+					<visible>!IsEmpty(Container(100).ListItem.TrackNumber)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<include>Common_Infolist_Label2</include>
+						<label>$LOCALIZE[554]:</label>
+					</control>
+					
+					<control type="label">
+						<description>Type Value</description>
+						<include>Common_Infolist_Info2</include>
+						<label>$INFO[Container(100).ListItem.TrackNumber]</label>						
+					</control>
+					
+				</control>
+				
+				<control type="group">
+					<height>28</height>
+					<visible>!IsEmpty(Container(100).ListItem.Genre)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<include>Common_Infolist_Label2</include>
+						<label>$LOCALIZE[515]:</label>
+					</control>
+					
+					<control type="label">
+						<description>Type Value</description>
+						<include>Common_Infolist_Info2</include>
+						<label>$INFO[Container(100).ListItem.Genre]</label>						
+					</control>
+					
+				</control>
+
+			</control>
+
+			<control type="group" id="9000">
+				<posx>36</posx>
+				<posy>542</posy>
+				
+				<control type="button" id="6">
+					<description>Open</description>
+					<include>Dialog_Button</include>
+					<onleft>50</onleft>
+					<onright>7</onright>
+					<texturefocus>buttons/openFO.png</texturefocus>
+					<texturenofocus>buttons/openNF.png</texturenofocus>
+				</control>
+				
+				<control type="button" id="7">
+					<description>Save</description>
+					<posx>60</posx>
+					<include>Dialog_Button</include>
+					<onleft>6</onleft>
+					<onright>8</onright>
+					<texturefocus>buttons/saveFO.png</texturefocus>
+					<texturenofocus>buttons/saveNF.png</texturenofocus>
+				</control>
+				
+				<control type="button" id="8">
+					<description>Save</description>
+					<posx>120</posx>
+					<include>Dialog_CancelButton</include>
+					<onleft>7</onleft>
+					<onright>100</onright>
+				</control>
+
+			</control>
+
+		</control>
+
+		<control type="group">
+			<description>Right Panel</description>
+			<posx>760</posx>
+			<posy>120</posy>
+
+			<control type="image">
+				<width>480</width>
+				<height>560</height>
+				<include>Common_Color_Keyback1</include>
+			</control>
+
+			<control type="label">
+				<posx>460</posx>
+				<width>410</width>
+				<include>Dialog_Header</include>
+				<label>31055</label>
+			</control>
+			
+			<control type="image">
+				<description>line</description>
+				<width>480</width>
+				<include>Dialog_Line</include>
+			</control>
+			
+			<control type="image">
+				<posx>10</posx>
+				<posy>70</posy>
+				<width>450</width>
+				<height>480</height>
+				<include>Common_Color_Keyback2</include>
+			</control>
+
+			<control type="list" id="100">
+				<posx>10</posx>
+				<posy>70</posy>
+				<width>450</width>
+				<height>480</height>
+				<onleft>9000</onleft>
+				<onright>61</onright>
+				<onup>100</onup>
+				<ondown>100</ondown>
+				<viewtype label="">list</viewtype>
+				<scrolltime>200</scrolltime>
+				<pagecontrol>61</pagecontrol>
+				<itemlayout height="40" width="450">
+
+					<control type="image">
+						<posx>10</posx>
+						<posy>5</posy>
+						<width>30</width>
+						<height>30</height>
+						<include>Common_Color_Keyback1</include>
+					</control>
+					
+					<control type="image">
+						<posx>10</posx>
+						<posy>5</posy>
+						<width>30</width>
+						<height>30</height>
+						<texture fallback="defaults/DefaultFile.png">$INFO[Listitem.Icon]</texture>
+					</control>
+
+					<control type="label">
+						<posx>50</posx>
+						<posy>0</posy>
+						<width>380</width>
+						<info>ListItem.Label</info>
+					</control>
+
+					<control type="label">
+						<posx>435</posx>
+						<posy>0</posy>
+						<width>380</width>
+						<align>right</align>
+						<info>ListItem.Label2</info>
+					</control>
+
+				</itemlayout>
+
+				<focusedlayout height="40" width="445">
+
+					<control type="image">
+						<width>450</width>
+						<height>40</height>
+						<include>Common_Color_Accent</include>
+						<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(100)">Conditional</animation>
+					</control>
+
+					<control type="image">
+						<posx>10</posx>
+						<posy>5</posy>
+						<width>30</width>
+						<height>30</height>
+						<include>Common_Color_Keyback1</include>
+					</control>
+					
+					<control type="image">
+						<posx>10</posx>
+						<posy>5</posy>
+						<width>30</width>
+						<height>30</height>
+						<texture fallback="defaults/DefaultFile.png">$INFO[Listitem.Icon]</texture>
+					</control>
+
+					<control type="label">
+						<posx>50</posx>
+						<posy>0</posy>
+						<width>380</width>
+						<info>ListItem.Label</info>
+					</control>
+
+					<control type="label">
+						<posx>435</posx>
+						<posy>0</posy>
+						<width>380</width>
+						<align>right</align>
+						<info>ListItem.Label2</info>
+					</control>
+
+				</focusedlayout>
+
+			</control>
+			
+			<control type="image">
+				<description>outline</description>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<posx>464</posx>
+				<posy>69</posy>
+				<height>482</height>
+				<include>Common_Scroll_OutlineV</include>
+				<visible>Control.HasFocus(61)</visible>
+			</control>
+			
+			<control type="scrollbar" id="61">
+				<posx>465</posx>
+				<posy>70</posy>
+				<height>480</height>
+				<width>5</width>
+				<onleft>100</onleft>
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

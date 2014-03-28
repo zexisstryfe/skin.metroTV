@@ -1,0 +1,2175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="56">
+	<defaultcontrol always="true">100</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>../backgrounds/systeminfo.jpg</texture>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+		</control>
+			
+		<include>Common_Fanart_Overlay</include>		
+		<include>Common_TopBar</include>
+		
+		<control type="group">
+			<posx>105</posx>
+			<posy>120</posy>	
+			
+			<control type="image">
+				<width>220</width>
+				<height>560</height>
+				<include>Common_Color_Keyback2</include>
+			</control>
+			
+			<control type="image">
+				<posx>220</posx>
+				<width>845</width>
+				<height>560</height>
+				<include>Common_Color_Keyback1</include>
+			</control>	
+			
+			<control type="image">
+				<description>line</description>
+				<posx>220</posx>
+				<posy>70</posy>
+				<width>845</width>
+				<height>4</height>
+				<include>Common_Color_Accent</include>
+			</control>
+			
+			<control type="label">
+				<description>header label</description>
+				<posx>1045</posx>
+				<posy>10</posy>
+				<width>660</width>
+				<align>right</align>
+				<font>font40LB</font>
+				<textcolor>Accent</textcolor>
+				<label>$LOCALIZE[31132]</label>
+			</control>
+
+		<!--Category List-->
+			<control type="list" id="100">
+				<description>List</description>
+				<posx>10</posx>
+				<posy>70</posy>
+				<width>200</width>
+				<height>480</height>
+				<onup>100</onup>
+				<ondown>100</ondown>
+				<onleft>-</onleft>
+				<onright>99</onright>
+				<scrolltime>0</scrolltime>
+				<orientation>vertical</orientation>
+				<pagecontrol>-</pagecontrol>
+				<itemlayout height="46" width="200">
+					
+					<control type="label">
+						<posx>20</posx>
+						<width>200</width>
+						<label>$INFO[ListItem.Label]</label>
+						<font>font20</font>
+					</control>
+
+				</itemlayout>
+
+				<focusedlayout height="46" width="300">
+
+					<control type="image">
+						<width>200</width>
+						<height>44</height>
+						<include>Common_Color_Accent</include>
+						<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(100)">Conditional</animation>
+					</control>
+
+					<control type="label">
+						<posx>20</posx>
+						<width>200</width>
+						<label>$INFO[ListItem.Label]</label>
+						<font>font20</font>
+					</control>
+
+				</focusedlayout>
+
+				<content>
+					<item id="1">
+						<description>General Settings</description>
+						<label>128</label>
+						<onclick>-</onclick>
+					</item>					
+					<item id="2">
+						<description>Scripts</description>
+						<label>247</label>
+						<onclick>-</onclick>
+					</item>
+					<item id="3">
+						<description>Homescreen</description>
+						<label>31135</label>
+						<onclick>-</onclick>
+					</item>					
+					<item id="4">
+						<description>Backgrounds</description>
+						<label>33069</label>
+						<onclick>-</onclick>
+					</item>							
+					<item id="6">
+						<description>Custom</description>
+						<label>31137</label>
+						<onclick>-</onclick>
+					</item>					
+					<item id="8">
+						<description>Debug</description>
+						<label>31059</label>
+						<onclick>-</onclick>
+					</item>					
+					<item id="9">
+						<description>Credits</description>
+						<label>470</label>
+						<onclick>-</onclick>
+					</item>
+				</content>
+
+			</control>
+
+		<!--Category Control Areas-->	
+			<control type="group" id="99">
+				<posx>235</posx>
+				<posy>70</posy>
+
+			<!--GENERAL Control Areas-->		
+				<control type="grouplist" id="200">
+					<description>Control Area- GENERAL</description>
+					<width>820</width>
+					<height>480</height>
+					<itemgap>2</itemgap>
+					<onup>200</onup>
+					<ondown>200</ondown>
+					<onleft>100</onleft>
+					<onright>-</onright>
+					<orientation>vertical</orientation>
+					<visible>Container(100).Hasfocus(1)</visible>
+
+					<control type="radiobutton" id="201">
+						<description>Background Visualiser</description>
+						<width>820</width>
+						<align>left</align>
+						<label>$LOCALIZE[31049]</label>
+						<onclick>Skin.ToggleSetting(NoBackgroundVisualiser)</onclick>
+						<selected>Skin.HasSetting(NoBackgroundVisualiser)</selected>						
+					</control>
+
+					<control type="radiobutton" id="202">
+						<description>Background Video</description>
+						<width>820</width>
+						<align>left</align>
+						<label>$LOCALIZE[31050]</label>
+						<onclick>Skin.ToggleSetting(NoBackgroundVideo)</onclick>
+						<selected>Skin.HasSetting(NoBackgroundVideo)</selected>						
+					</control>
+					
+					<control type="radiobutton" id="203">
+						<description>Tile Backgrounds</description>
+						<width>820</width>
+						<align>left</align>
+						<label>$LOCALIZE[31138]</label>
+						<onclick>Skin.ToggleSetting(TileBackground)</onclick>
+						<selected>Skin.HasSetting(TileBackground)</selected>					
+					</control>
+					
+					<control type="radiobutton" id="204">
+						<description>Tile Backgrounds</description>
+						<width>820</width>
+						<align>left</align>
+						<label>$LOCALIZE[31139]</label>
+						<onclick>Skin.ToggleSetting(MetroAnimations)</onclick>
+						<selected>Skin.HasSetting(MetroAnimations)</selected>						
+					</control>
+					
+					<control type="radiobutton" id="205">
+						<description>Home Screen Overlay</description>
+						<width>820</width>
+						<align>left</align>
+						<label>$LOCALIZE[31140]- $LOCALIZE[31135]</label>
+						<onclick>Skin.ToggleSetting(UseHomeOverlay)</onclick>
+						<selected>Skin.HasSetting(UseHomeOverlay)</selected>						
+					</control>
+									
+					<control type="radiobutton" id="206">
+						<description>Fanart Overlay</description>
+						<width>820</width>
+						<align>left</align>
+						<label>$LOCALIZE[31140]- $LOCALIZE[31136]</label>
+						<onclick>Skin.ToggleSetting(UseFanartOverlay)</onclick>
+						<selected>Skin.HasSetting(UseFanartOverlay)</selected>						
+					</control>
+					
+					<control type="radiobutton" id="207">
+						<description>TV Logos</description>
+						<width>820</width>
+						<align>left</align>
+						<label>$LOCALIZE[31163]</label>
+						<onclick>Skin.ToggleSetting(UseTVLogos)</onclick>
+						<selected>Skin.HasSetting(UseTVLogos)</selected>						
+					</control>
+					
+					<control type="radiobutton" id="208">
+						<description>MOVIEsets</description>
+						<width>820</width>
+						<align>left</align>
+						<label>$LOCALIZE[31164]</label>
+						<onclick>Skin.ToggleSetting(UseMovieset)</onclick>
+						<selected>Skin.HasSetting(UseMovieset)</selected>						
+					</control>
+
+				</control>
+
+			<!--SCRIPTS Control Areas-->				
+				<control type="grouplist" id="300">
+					<description>Control Area- SCRIPTS 1</description>
+					<width>820</width>
+					<height>480</height>
+					<itemgap>2</itemgap>
+					<onup>200</onup>
+					<ondown>200</ondown>
+					<onleft>100</onleft>
+					<onright>-</onright>
+					<orientation>vertical</orientation>
+					<visible>Container(100).Hasfocus(2)</visible>
+
+					<control type="button" id="301">
+						<description>Default lyrics Button</description>
+						<width>820</width>
+						<align>left</align>
+						<label>$LOCALIZE[31040]</label>
+						<onclick>Skin.SetAddon(LyricPath,xbmc.python.lyrics)</onclick>						
+					</control>
+
+					<control type="button" id="302">
+						<description>Default Button</description>
+						<width>820</width>
+						<align>left</align>
+						<label>$LOCALIZE[31041]</label>
+						<onclick>Skin.SetAddon(SubtitlePath,xbmc.python.subtitles)</onclick>						
+					</control>
+					
+					<control type="radiobutton" id="303">
+						<description>Favourites</description>
+						<width>820</width>
+						<align>left</align>
+						<label>$LOCALIZE[31141]</label>
+						<onclick>Skin.ToggleSetting(UseFavouritesScript)</onclick>
+						<selected>Skin.HasSetting(UseFavouritesScript)</selected>						
+					</control>
+					
+					<control type="radiobutton" id="304">
+						<description>Next Aired</description>
+						<width>820</width>
+						<align>left</align>
+						<label>$LOCALIZE[31142]</label>
+						<onclick>Skin.ToggleSetting(UseNextAiredScript)</onclick>
+						<selected>Skin.HasSetting(UseNextAiredScript)</selected>						
+					</control>
+					
+					<control type="radiobutton" id="305">
+						<description>TVTunes</description>
+						<width>820</width>
+						<align>left</align>
+						<label>$LOCALIZE[31143]</label>
+						<onclick>Skin.ToggleSetting(UseTVTunes)</onclick>
+						<selected>Skin.HasSetting(UseTVTunes)</selected>						
+					</control>
+					
+				</control>
+
+				<control type="grouplist" id="350">
+					<description>Control Area- SCRIPTS 2</description>
+					<width>820</width>
+					<height>480</height>
+					<itemgap>2</itemgap>
+					<onup>200</onup>
+					<ondown>200</ondown>
+					<onleft>100</onleft>
+					<onright>-</onright>
+					<orientation>vertical</orientation>
+					<visible>Container(100).Hasfocus(2)</visible>
+
+					<control type="label" id="351">
+						<description>Default Button</description>
+						<width>800</width>
+						<align>right</align>
+						<label>$INFO[Skin.String(LyricPath)]</label>
+						<visible>!IsEmpty(Skin.String(LyricPath))</visible>
+						
+					</control>
+
+					<control type="label" id="352">
+						<description>Default Button</description>
+						<width>800</width>
+						<align>right</align>
+						<label>CU Lyrics</label>
+						<visible>IsEmpty(Skin.String(LyricPath))</visible>						
+					</control>
+
+					<control type="label" id="353">
+						<description>Default Button</description>
+						<width>800</width>
+						<align>right</align>
+						<label>$INFO[Skin.String(SubtitlesPath)]</label>
+						<visible>!IsEmpty(Skin.String(SubtitlesPath))</visible>					
+					</control>
+
+					<control type="label" id="354">
+						<description>Default Button</description>
+						<width>800</width>
+						<align>right</align>
+						<label>XBMC Subtitles</label>
+						<visible>IsEmpty(Skin.String(SubtitlesPath))</visible>					
+					</control>
+
+				</control>
+
+			<!--HOME SCREEN Control Areas-->				
+				<control type="group">	
+					<visible>Container(100).Hasfocus(3)</visible>
+					
+					<control type="label">
+						<label>$LOCALIZE[31144]</label>
+						<posy>10</posy>
+						<height>30</height>
+						<width>250</width>
+						<font>font40L</font>
+						<align>left</align>
+						<shadowcolor>ff000000</shadowcolor>
+					</control>
+					
+					<control type="grouplist" id="400">				
+						<description>Control Area- HOMESCREEN Sections</description>			
+						<posy>70</posy>
+						<width>250</width>
+						<height>475</height>
+						<itemgap>2</itemgap>
+						<onleft>100</onleft>
+						<onup>400</onup>
+						<orientation>vertical</orientation>
+						
+						<control type="radiobutton" id="401">
+							<height>35</height>
+							<description>movies</description>
+							<width>250</width>
+							<textwidth>240</textwidth>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$LOCALIZE[20342]</label>
+							<onright>1000</onright>
+							<onclick>Skin.ToggleSetting(Movies.Hide)</onclick>
+							<selected>!Skin.HasSetting(Movies.Hide)</selected>			
+							<font>font26L</font>
+						</control>
+						
+						<control type="radiobutton" id="402">
+							<description>tvshows</description>
+							<textwidth>240</textwidth>
+							<height>35</height>
+							<width>250</width>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$LOCALIZE[20343]</label>
+							<onright>1000</onright>
+							<onclick>Skin.ToggleSetting(TVShows.Hide)</onclick>
+							<selected>!Skin.HasSetting(TVShows.Hide)</selected>
+							<font>font26L</font>
+						</control>
+						
+						<control type="radiobutton" id="403">
+							<description>live tv</description>
+							<height>35</height>
+							<width>250</width>
+							<textwidth>240</textwidth>
+							<disabledcolor>Black</disabledcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$LOCALIZE[31012]</label>
+							<onright>1000</onright>
+							<onclick>Skin.ToggleSetting(LiveTV.Hide)</onclick>
+							<selected>!Skin.HasSetting(LiveTV.Hide)</selected>
+							<font>font26L</font>
+						</control>
+						
+						<control type="radiobutton" id="404">
+							<description>music</description>
+							<height>35</height>
+							<width>250</width>
+							<textwidth>240</textwidth>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$LOCALIZE[2]</label>
+							<onright>1000</onright>
+							<onclick>Skin.ToggleSetting(Music.Hide)</onclick>
+							<selected>!Skin.HasSetting(Music.Hide)</selected>
+							<font>font26L</font>
+						</control>
+						
+						<control type="radiobutton" id="405">
+							<description>music videos</description>
+							<height>35</height>
+							<width>250</width>
+							<textwidth>250</textwidth>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$LOCALIZE[20389]</label>
+							<onright>1000</onright>
+							<onclick>Skin.ToggleSetting(MusicVid.Hide)</onclick>
+							<selected>!Skin.HasSetting(MusicVid.Hide)</selected>
+							<font>font26L</font>
+						</control>
+						
+						<control type="radiobutton" id="406">
+							<description>pictures</description>
+							<height>35</height>
+							<width>250</width>
+							<textwidth>240</textwidth>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$LOCALIZE[1]</label>
+							<onright>1000</onright>
+							<onclick>Skin.ToggleSetting(Pictures.Hide)</onclick>
+							<selected>!Skin.HasSetting(Pictures.Hide)</selected>
+							<font>font26L</font>
+						</control>
+						
+						<control type="radiobutton" id="407">
+							<description>games</description>
+							<height>35</height>
+							<width>250</width>
+							<textwidth>240</textwidth>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$LOCALIZE[15016]</label>
+							<onright>1000</onright>
+							<onclick>Skin.ToggleSetting(Games.Hide)</onclick>
+							<selected>!Skin.HasSetting(Games.Hide)</selected>
+							<font>font26L</font>
+						</control>	
+						
+						<control type="radiobutton" id="408">
+							<description>weather</description>
+							<textwidth>240</textwidth>
+							<height>35</height>
+							<width>250</width>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$LOCALIZE[400]</label>
+							<onright>1100</onright>
+							<onclick>Skin.ToggleSetting(Weather.Hide)</onclick>
+							<selected>!Skin.HasSetting(Weather.Hide)</selected>
+							<font>font26L</font>
+						</control>	
+						
+						<control type="radiobutton" id="409">
+							<description>addons</description>
+							<textwidth>240</textwidth>
+							<height>35</height>
+							<width>250</width>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$LOCALIZE[24001]</label>
+							<onright>1000</onright>
+							<onclick>Skin.ToggleSetting(Addons.Hide)</onclick>
+							<selected>!Skin.HasSetting(Addons.Hide)</selected>
+							<font>font26L</font>
+						</control>	
+						
+						<control type="radiobutton" id="410">
+							<description>custom</description>
+							<height>35</height>
+							<width>250</width>
+							<textwidth>240</textwidth>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$VAR[Custom1.HomeMenu]</label>
+							<onright>1000</onright>
+							<onclick>Skin.ToggleSetting(CustomHome.1.Hide)</onclick>
+							<selected>!Skin.HasSetting(CustomHome.1.Hide)</selected>
+							<font>font26L</font>
+						</control>
+						
+					</control>
+					
+				</control>	
+
+				<control type="group"> 			
+					<visible>[Control.HasFocus(401) | Control.HasFocus(1001) | Control.HasFocus(1002) | Control.HasFocus(1003) | Control.HasFocus(1004) | Control.HasFocus(1005)] | [Control.HasFocus(402) | Control.HasFocus(1006) | Control.HasFocus(1007) | Control.HasFocus(1008) | Control.HasFocus(1009) | Control.HasFocus(1010)] | [Control.HasFocus(403) | Control.HasFocus(1011) | Control.HasFocus(1012) | Control.HasFocus(1013) | Control.HasFocus(1014) | Control.HasFocus(1015)] | [Control.HasFocus(404) | Control.HasFocus(1016) | Control.HasFocus(1017) | Control.HasFocus(1018) | Control.HasFocus(1019) | Control.HasFocus(1020)] | [Control.HasFocus(405) | Control.HasFocus(1021) | Control.HasFocus(1022) | Control.HasFocus(1023) | Control.HasFocus(1024) | Control.HasFocus(1025)] | [Control.HasFocus(406) | Control.HasFocus(1026) | Control.HasFocus(1027) | Control.HasFocus(1028) | Control.HasFocus(1029) | Control.HasFocus(1030)] | [Control.HasFocus(407) | Control.HasFocus(1031) | Control.HasFocus(1032) | Control.HasFocus(1033) | Control.HasFocus(1034) | Control.HasFocus(1035)] | [Control.HasFocus(409) | Control.HasFocus(1036) | Control.HasFocus(1037) | Control.HasFocus(1038) | Control.HasFocus(1039) | Control.HasFocus(1040)] | [Control.HasFocus(410) | Control.HasFocus(1041) | Control.HasFocus(1042) | Control.HasFocus(1043) | Control.HasFocus(1044) | Control.HasFocus(1045)] | Control.HasFocus(1101) | Control.HasFocus(1102) | Control.HasFocus(1103) | Control.HasFocus(1104) | Control.HasFocus(1105) | Control.HasFocus(1106) | Control.HasFocus(1107) | Control.HasFocus(1108) | Control.HasFocus(1109) | Control.HasFocus(1110) | Control.HasFocus(1111) | Control.HasFocus(1112) | Control.HasFocus(1113) | Control.HasFocus(1114) | Control.HasFocus(1115) | Control.HasFocus(1116) | Control.HasFocus(1117) | Control.HasFocus(1118) | Control.HasFocus(1119) | Control.HasFocus(1120) | Control.HasFocus(1121) | Control.HasFocus(1122) | Control.HasFocus(1125) | Control.HasFocus(1126) | Control.HasFocus(1127) | Control.HasFocus(1128) | Control.HasFocus(1129)</visible>
+					<animation effect="fade" time="400">VisibleChange</animation>
+					
+					<control type="label">
+						<label>$LOCALIZE[31150]</label>
+						<posx>290</posx>
+						<posy>10</posy>
+						<height>30</height>
+						<width>250</width>
+						<font>font40L</font>
+						<align>left</align>
+						<shadowcolor>ff000000</shadowcolor>
+					</control>	
+					
+			<!--Tile 1-->
+					<control type="group">
+						<posx>310</posx>
+						<posy>70</posy>
+						<include>Small_Home_Double_Tile</include>
+						
+						<control type="image">
+							<include>Small_Double_Tile_Focus</include>
+							<visible>[Control.HasFocus(1001) | Control.HasFocus(1006) | Control.HasFocus(1011) | Control.HasFocus(1016) | Control.HasFocus(1021) | Control.HasFocus(1026) | Control.HasFocus(1031) | Control.HasFocus(1036) | Control.HasFocus(1041)]</visible>
+							<animation effect="fade" time="200" tween="square">VisibleChange</animation>
+							<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="Control.HasFocus(1001) | Control.HasFocus(1006) | Control.HasFocus(1011) | Control.HasFocus(1016) | Control.HasFocus(1021) | Control.HasFocus(1026) | Control.HasFocus(1031) | Control.HasFocus(1036) | Control.HasFocus(1041)">Conditional</animation>
+						</control>	
+						
+						<control type="image">
+							<posx>54</posx>
+							<posy>14</posy>
+							<width>50</width>
+							<height>50</height>
+							<texture>numbers/1.png</texture>
+						</control>	
+						
+					</control>
+					
+			<!--Tile 2-->			
+					<control type="group">
+						<posx>470</posx>
+						<posy>70</posy>				
+						<include>Small_Home_Single_Tile</include>
+						
+						<control type="image">
+							<include>Small_Single_Tile_Focus</include>
+							<visible>[Control.HasFocus(1002) | Control.HasFocus(1007) | Control.HasFocus(1012) | Control.HasFocus(1017) | Control.HasFocus(1022) | Control.HasFocus(1027) | Control.HasFocus(1032) | Control.HasFocus(1037) | Control.HasFocus(1042)]</visible>
+							<animation effect="fade" time="200" tween="square">VisibleChange</animation>
+							<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="Control.HasFocus(1002) | Control.HasFocus(1007) | Control.HasFocus(1012) | Control.HasFocus(1017) | Control.HasFocus(1022) | Control.HasFocus(1027) | Control.HasFocus(1032) | Control.HasFocus(1037) | Control.HasFocus(1042)">Conditional</animation>
+						</control>	
+						
+						<control type="image">
+							<posx>14</posx>
+							<posy>14</posy>
+							<width>50</width>
+							<height>50</height>
+							<texture>numbers/2.png</texture>
+						</control>	
+						
+					</control>	
+					
+			<!--Tile 3-->			
+					<control type="group">
+						<posx>310</posx>
+						<posy>150</posy>				
+						<include>Small_Home_Single_Tile</include>
+						
+						<control type="image">
+							<width>78</width>
+							<height>78</height>
+							<include>Small_Single_Tile_Focus</include>
+							<visible>[Control.HasFocus(1003) | Control.HasFocus(1008) | Control.HasFocus(1013) | Control.HasFocus(1018) | Control.HasFocus(1023) | Control.HasFocus(1028) | Control.HasFocus(1033) | Control.HasFocus(1038) | Control.HasFocus(1043)]</visible>
+							<animation effect="fade" time="200" tween="square">VisibleChange</animation>
+							<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="Control.HasFocus(1003) | Control.HasFocus(1008) | Control.HasFocus(1013) | Control.HasFocus(1018) | Control.HasFocus(1023) | Control.HasFocus(1028) | Control.HasFocus(1033) | Control.HasFocus(1038) | Control.HasFocus(1043)">Conditional</animation>
+						</control>
+						
+						<control type="image">
+							<posx>14</posx>
+							<posy>14</posy>
+							<width>50</width>
+							<height>50</height>
+							<texture>numbers/3.png</texture>
+						</control>
+						
+					</control>
+					
+			<!--Tile 4-->	
+					<control type="group">
+						<posx>390</posx>
+						<posy>150</posy>				
+						<include>Small_Home_Single_Tile</include>
+						
+						<control type="image">
+							<width>78</width>
+							<height>78</height>
+							<include>Small_Single_Tile_Focus</include>
+							<visible>[Control.HasFocus(1004) | Control.HasFocus(1009) | Control.HasFocus(1014) | Control.HasFocus(1019) | Control.HasFocus(1024) | Control.HasFocus(1029) | Control.HasFocus(1034) | Control.HasFocus(1039) | Control.HasFocus(1044)]</visible>
+							<animation effect="fade" time="200" tween="square">VisibleChange</animation>
+							<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="Control.HasFocus(1004) | Control.HasFocus(1009) | Control.HasFocus(1014) | Control.HasFocus(1019) | Control.HasFocus(1024) | Control.HasFocus(1029) | Control.HasFocus(1034) | Control.HasFocus(1039) | Control.HasFocus(1044)">Conditional</animation>
+						</control>
+						
+						<control type="image">
+							<posx>14</posx>
+							<posy>14</posy>
+							<width>50</width>
+							<height>50</height>
+							<texture>numbers/4.png</texture>
+						</control>
+						
+					</control>	
+					
+			<!--Tile 5-->
+					<control type="group">
+						<posx>470</posx>
+						<posy>150</posy>				
+						<include>Small_Home_Single_Tile</include>
+						
+						<control type="image">
+							<width>78</width>
+							<height>78</height>
+							<include>Small_Single_Tile_Focus</include>
+							<visible>[Control.HasFocus(1005) | Control.HasFocus(1010) | Control.HasFocus(1015) | Control.HasFocus(1020) | Control.HasFocus(1025) | Control.HasFocus(1030) | Control.HasFocus(1035) | Control.HasFocus(1040) | Control.HasFocus(1045)]</visible>
+							<animation effect="fade" time="200" tween="square">VisibleChange</animation>
+							<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="Control.HasFocus(1005) | Control.HasFocus(1010) | Control.HasFocus(1015) | Control.HasFocus(1020) | Control.HasFocus(1025) | Control.HasFocus(1030) | Control.HasFocus(1035) | Control.HasFocus(1040) | Control.HasFocus(1045)">Conditional</animation>
+						</control>
+						
+						<control type="image">
+							<posx>14</posx>
+							<posy>14</posy>
+							<width>50</width>
+							<height>50</height>
+							<texture>numbers/5.png</texture>
+						</control>	
+						
+					</control>
+					
+				</control>
+
+				<control type="grouplist" id="1000">				
+					<description>Control Area- HOMESCREEN Tiles</description>			
+					<animation effect="fade" time="200" tween="square">VisibleChange</animation>
+					<animation effect="fade" time="200" tween="square">VisibleChange</animation>
+					<posx>290</posx>
+					<posy>250</posy>
+					<width>265</width>
+					<height>475</height>
+					<itemgap>2</itemgap>
+					<onup>1000</onup>
+					<orientation>vertical</orientation>		
+					
+				<!-- MOVIE TILES -->
+					<control type="button" id="1001">
+						<include>Settings_MovieTiles</include>
+						<description>movie tile 1</description>
+						<enable>false</enable>
+						<label>$LOCALIZE[31145]</label>
+					</control>
+					
+					<control type="button" id="1002">
+						<include>Settings_MovieTiles</include>
+						<description>movie tile 2</description>
+						<label>$LOCALIZE[31146]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,MovieTile2)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+					<control type="button" id="1003">
+						<include>Settings_MovieTiles</include>
+						<description>movie tile 3</description>
+						<label>$LOCALIZE[31147]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,MovieTile3)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+					<control type="button" id="1004">
+						<include>Settings_MovieTiles</include>
+						<description>movie tile 4</description>
+						<label>$LOCALIZE[31148]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,MovieTile4)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+					<control type="button" id="1005">
+						<include>Settings_MovieTiles</include>
+						<description>movie tile 5</description>
+						<label>$LOCALIZE[31149]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,MovieTile5)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+				<!-- TVSHOW TILES -->
+					<control type="button" id="1006">
+						<include>Settings_TVShowTiles</include>
+						<description>TVshows tile 1</description>
+						<enable>false</enable>
+						<label>$LOCALIZE[31145]</label>
+					</control>
+					
+					<control type="button" id="1007">
+						<include>Settings_TVShowTiles</include>
+						<description>TVshows tile 2</description>
+						<label>$LOCALIZE[31146]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,TVShowTile2)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+					<control type="button" id="1008">
+						<include>Settings_TVShowTiles</include>
+						<description>TVshows tile 3</description>
+						<label>$LOCALIZE[31147]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,TVShowTile3)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+					<control type="button" id="1009">
+						<include>Settings_TVShowTiles</include>
+						<description>TVshows tile 4</description>
+						<label>$LOCALIZE[31148]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,TVShowTile4)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+					<control type="button" id="1010">
+						<include>Settings_TVShowTiles</include>
+						<description>TVshows tile 5</description>
+						<label>$LOCALIZE[31149]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,TVShowTile5)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+				<!-- LIVETV TILES -->
+					<control type="button" id="1011">
+						<include>Settings_LiveTVTiles</include>
+						<description>LiveTV tile 1</description>
+						<enable>false</enable>
+						<label>$LOCALIZE[31145]</label>
+					</control>
+					
+					<control type="button" id="1012">
+						<include>Settings_LiveTVTiles</include>
+						<description>LiveTV tile 2</description>
+						<label>$LOCALIZE[31146]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,LiveTVTile2)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+					<control type="button" id="1013">
+						<include>Settings_LiveTVTiles</include>
+						<description>LiveTV tile 3</description>
+						<label>$LOCALIZE[31147]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,LiveTVTile3)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+					<control type="button" id="1014">
+						<include>Settings_LiveTVTiles</include>
+						<description>LiveTV tile 4</description>
+						<label>$LOCALIZE[31148]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,LiveTVTile4)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+					<control type="button" id="1015">
+						<include>Settings_LiveTVTiles</include>
+						<description>LiveTV tile 5</description>
+						<label>$LOCALIZE[31149]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,LiveTVTile5)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+				<!-- MUSIC TILES -->
+					<control type="button" id="1016">
+						<include>Settings_MusicTiles</include>
+						<description>Music tile 1</description>
+						<label>$LOCALIZE[31145]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,MusicTile1)</onclick>
+						<onclick>ActivateWindow(200)</onclick>					
+					</control>
+					
+					<control type="button" id="1017">
+						<include>Settings_MusicTiles</include>
+						<description>Music tile 2</description>
+						<label>$LOCALIZE[31146]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,MusicTile2)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+					<control type="button" id="1018">
+						<include>Settings_MusicTiles</include>
+						<description>Music tile 3</description>
+						<label>$LOCALIZE[31147]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,MusicTile3)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+					<control type="button" id="1019">
+						<include>Settings_MusicTiles</include>
+						<description>Music tile 4</description>
+						<label>$LOCALIZE[31148]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,MusicTile4)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+					<control type="button" id="1020">
+						<include>Settings_MusicTiles</include>
+						<description>Music tile 5</description>
+						<label>$LOCALIZE[31149]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,MusicTile5)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+				<!-- MUSIC VIDEO TILES -->
+					<control type="button" id="1021">
+						<include>Settings_MusicVidTiles</include>
+						<description>music video tile 1</description>
+						<enable>false</enable>
+						<label>$LOCALIZE[31145]</label>
+					</control>
+					
+					<control type="button" id="1022">
+						<include>Settings_MusicVidTiles</include>
+						<description>music video tile 2</description>
+						<label>$LOCALIZE[31146]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,MusicVidTile2)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+					<control type="button" id="1023">
+						<include>Settings_MusicVidTiles</include>
+						<description>music video tile 3</description>
+						<label>$LOCALIZE[31147]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,MusicVidTile3)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+					<control type="button" id="1024">
+						<include>Settings_MusicVidTiles</include>
+						<description>music video tile 4</description>
+						<label>$LOCALIZE[31148]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,MusicVidTile4)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+					<control type="button" id="1025">
+						<include>Settings_MusicVidTiles</include>
+						<description>music video tile 5</description>
+						<label>$LOCALIZE[31149]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,MusicVidTile5)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+				<!-- PICTURES TILES -->
+					<control type="button" id="1026">
+						<include>Settings_PictureTiles</include>
+						<description>picture tile 1</description>
+						<enable>false</enable>
+						<label>$LOCALIZE[31145]</label>
+					</control>
+					
+					<control type="button" id="1027">
+						<include>Settings_PictureTiles</include>
+						<description>picture tile 2</description>
+						<label>$LOCALIZE[31146]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,PictureTile2)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+					<control type="button" id="1028">
+						<include>Settings_PictureTiles</include>
+						<description>picture tile 3</description>
+						<label>$LOCALIZE[31147]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,PictureTile3)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+					<control type="button" id="1029">
+						<include>Settings_PictureTiles</include>
+						<description>picture tile 4</description>
+						<label>$LOCALIZE[31148]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,PictureTile4)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+					<control type="button" id="1030">
+						<include>Settings_PictureTiles</include>
+						<description>picture tile 5</description>
+						<label>$LOCALIZE[31149]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,PictureTile5)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+				<!-- GAMES TILES -->
+					<control type="button" id="1031">
+						<include>Settings_GameTiles</include>
+						<description>Game Tile 1</description>
+						<label>$LOCALIZE[31145]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,GameTile1)</onclick>
+						<onclick>ActivateWindow(200)</onclick>					
+					</control>
+					
+					<control type="button" id="1032">
+						<include>Settings_GameTiles</include>
+						<description>Game Tile 2</description>
+						<label>$LOCALIZE[31146]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,GameTile2)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+					<control type="button" id="1033">
+						<include>Settings_GameTiles</include>
+						<description>Game Tile 3</description>
+						<label>$LOCALIZE[31147]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,GameTile3)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+					<control type="button" id="1034">
+						<include>Settings_GameTiles</include>
+						<description>Game Tile 4</description>
+						<label>$LOCALIZE[31148]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,GameTile4)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+					<control type="button" id="1035">
+						<include>Settings_GameTiles</include>
+						<description>Game Tile 5</description>
+						<label>$LOCALIZE[31149]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,GameTile5)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+				<!-- ADDONS TILES -->
+					<control type="button" id="1036">
+						<include>Settings_AddonTiles</include>
+						<description>addon tile 1</description>
+						<enable>false</enable>
+						<label>$LOCALIZE[31145]</label>
+					</control>
+					
+					<control type="button" id="1037">
+						<include>Settings_AddonTiles</include>
+						<description>addon tile 2</description>
+						<label>$LOCALIZE[31146]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,AddonTile2)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+					<control type="button" id="1038">
+						<include>Settings_AddonTiles</include>
+						<description>addon tile 3</description>
+						<label>$LOCALIZE[31147]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,AddonTile3)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+					<control type="button" id="1039">
+						<include>Settings_AddonTiles</include>
+						<description>addon tile 4</description>
+						<label>$LOCALIZE[31148]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,AddonTile4)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+					<control type="button" id="1040">
+						<include>Settings_AddonTiles</include>
+						<description>addon tile 5</description>
+						<label>$LOCALIZE[31149]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,AddonTile5)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+				<!-- CUSTOM1 TILES -->
+					<control type="button" id="1041">
+						<include>Settings_Custom1Tiles</include>
+						<description>Custom1 Tile 1</description>
+						<label>$LOCALIZE[31145]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,Custom1Tile1)</onclick>
+						<onclick>ActivateWindow(200)</onclick>					
+					</control>
+					
+					<control type="button" id="1042">
+						<include>Settings_Custom1Tiles</include>
+						<description>Custom1 Tile 2</description>
+						<label>$LOCALIZE[31146]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,Custom1Tile2)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+					<control type="button" id="1043">
+						<include>Settings_Custom1Tiles</include>
+						<description>Custom1 Tile 3</description>
+						<label>$LOCALIZE[31147]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,Custom1Tile3)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+					<control type="button" id="1044">
+						<include>Settings_Custom1Tiles</include>
+						<description>Custom1 Tile 4</description>
+						<label>$LOCALIZE[31148]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,Custom1Tile4)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+					<control type="button" id="1045">
+						<include>Settings_Custom1Tiles</include>
+						<description>Custom1 Tile 5</description>
+						<label>$LOCALIZE[31149]</label>
+						<onclick>Skin.SetString(TileSelector_Temp,Custom1Tile5)</onclick>
+						<onclick>ActivateWindow(200)</onclick>
+					</control>
+					
+				</control>
+							
+				<control type="grouplist">					
+					<description>Control Area- HOMESCREEN Tile Labels</description>
+					<animation effect="fade" time="200" tween="square">VisibleChange</animation>					
+					<animation effect="fade" time="200" tween="square">VisibleChange</animation>				
+					<posx>290</posx>
+					<posy>250</posy>
+					<width>255</width>
+					<height>475</height>
+					<itemgap>2</itemgap>
+					<orientation>vertical</orientation>	
+					
+				<!-- MOVIE TILE LABELS -->
+					<control type="label">
+						<include>Settings_MovieTileLabels</include>
+						<description>movie tile 1</description>
+						<label condition="!IsEmpty(Skin.String(MovieTile1))">$LOCALIZE[342]</label>			
+						<textcolor>Black</textcolor>
+					</control>
+					
+					<control type="label">
+						<include>Settings_MovieTileLabels</include>
+						<description>movie tile 2</description>
+						<label>$INFO[Skin.String(MovieTile2)]</label>
+					</control>
+					
+					<control type="label">
+						<include>Settings_MovieTileLabels</include>
+						<description>movie tile 3</description>
+						<label>$INFO[Skin.String(MovieTile3)]</label>
+					</control>
+					
+					<control type="label">
+						<include>Settings_MovieTileLabels</include>
+						<description>movie tile 4</description>
+						<label>$INFO[Skin.String(MovieTile4)]</label>
+					</control>
+					
+					<control type="label">
+						<include>Settings_MovieTileLabels</include>
+						<description>movie tile 5</description>
+						<label>$INFO[Skin.String(MovieTile5)]</label>
+					</control>
+					
+				<!-- TVSHOW TILE LABELS -->
+					<control type="label">
+						<include>Settings_TVShowTileLabels</include>
+						<description>tvshow tile 1</description>
+						<label condition="!IsEmpty(Skin.String(TVShowTile1))">$LOCALIZE[20343]</label>			
+						<textcolor>Black</textcolor>
+					</control>
+					
+					<control type="label">
+						<include>Settings_TVShowTileLabels</include>
+						<description>tvshow tile 2</description>
+						<label>$INFO[Skin.String(TVShowTile2)]</label>
+					</control>
+					
+					<control type="label">
+						<include>Settings_TVShowTileLabels</include>
+						<description>tvshow tile 3</description>
+						<label>$INFO[Skin.String(TVShowTile3)]</label>
+					</control>
+					
+					<control type="label">
+						<include>Settings_TVShowTileLabels</include>
+						<description>tvshow tile 4</description>
+						<label>$INFO[Skin.String(TVShowTile4)]</label>
+					</control>
+					
+					<control type="label">
+						<include>Settings_TVShowTileLabels</include>
+						<description>tvshow tile 5</description>
+						<label>$INFO[Skin.String(TVShowTile5)]</label>
+					</control>
+					
+				<!-- LIVETV TILE LABELS -->
+					<control type="label">
+						<include>Settings_LiveTVTileLabels</include>
+						<description>movie tile 1</description>
+						<label condition="!IsEmpty(Skin.String(LiveTVTile1))">$LOCALIZE[31023]</label>			
+						<textcolor>Black</textcolor>
+					</control>
+					
+					<control type="label">
+						<include>Settings_LiveTVTileLabels</include>
+						<description>livetv tile 2</description>
+						<label>$INFO[Skin.String(LiveTVTile2)]</label>
+					</control>
+					
+					<control type="label">
+						<include>Settings_LiveTVTileLabels</include>
+						<description>livetv tile 3</description>
+						<label>$INFO[Skin.String(LiveTVTile3)]</label>
+					</control>
+					
+					<control type="label">
+						<include>Settings_LiveTVTileLabels</include>
+						<description>livetv tile 4</description>
+						<label>$INFO[Skin.String(LiveTVTile4)]</label>
+					</control>
+					
+					<control type="label">
+						<include>Settings_LiveTVTileLabels</include>
+						<description>livetv tile 5</description>
+						<label>$INFO[Skin.String(LiveTVTile5)]</label>
+					</control>
+					
+				<!-- MUSIC TILE LABELS -->
+					<control type="label">
+						<include>Settings_MusicTileLabels</include>
+						<description>Music tile 1</description>
+						<label>$INFO[Skin.String(MusicTile1)]</label>			
+					</control>
+					
+					<control type="label">
+						<include>Settings_MusicTileLabels</include>
+						<description>Music tile 2</description>
+						<label>$INFO[Skin.String(MusicTile2)]</label>
+					</control>
+					
+					<control type="label">
+						<include>Settings_MusicTileLabels</include>
+						<description>Music tile 3</description>
+						<label>$INFO[Skin.String(MusicTile3)]</label>
+					</control>
+					
+					<control type="label">
+						<include>Settings_MusicTileLabels</include>
+						<description>Music tile 4</description>
+						<label>$INFO[Skin.String(MusicTile4)]</label>
+					</control>
+					
+					<control type="label">
+						<include>Settings_MusicTileLabels</include>
+						<description>Music tile 5</description>
+						<label>$INFO[Skin.String(MusicTile5)]</label>
+					</control>
+					
+				<!-- MUSIC VIDEO TILE LABELS -->
+					<control type="label">
+						<include>Settings_MusicVidTileLabels</include>
+						<description>music video tile 1</description>
+						<label condition="!IsEmpty(Skin.String(MusicVidTile1))">$LOCALIZE[20389]</label>			
+						<textcolor>Black</textcolor>
+					</control>
+					
+					<control type="label">
+						<include>Settings_MusicVidTileLabels</include>
+						<description>music video tile 2</description>
+						<label>$INFO[Skin.String(MusicVidTile2)]</label>
+					</control>
+					
+					<control type="label">
+						<include>Settings_MusicVidTileLabels</include>
+						<description>music video tile 3</description>
+						<label>$INFO[Skin.String(MusicVidTile3)]</label>
+					</control>
+					
+					<control type="label">
+						<include>Settings_MusicVidTileLabels</include>
+						<description>music video tile 4</description>
+						<label>$INFO[Skin.String(MusicVidTile4)]</label>
+					</control>
+					
+					<control type="label">
+						<include>Settings_MusicVidTileLabels</include>
+						<description>music video tile 5</description>
+						<label>$INFO[Skin.String(MusicVidTile5)]</label>
+					</control>
+					
+				<!-- PICTURE TILE LABELS -->
+					<control type="label">
+						<include>Settings_PictureTileLabels</include>
+						<description>picture tile 1</description>
+						<label condition="!IsEmpty(Skin.String(PictureTile1))">$LOCALIZE[1]</label>			
+						<textcolor>Black</textcolor>
+					</control>
+					
+					<control type="label">
+						<include>Settings_PictureTileLabels</include>
+						<description>picture tile 2</description>
+						<label>$INFO[Skin.String(PictureTile2)]</label>
+					</control>
+					
+					<control type="label">
+						<include>Settings_PictureTileLabels</include>
+						<description>picture tile 3</description>
+						<label>$INFO[Skin.String(PictureTile3)]</label>
+					</control>
+					
+					<control type="label">
+						<include>Settings_PictureTileLabels</include>
+						<description>picture tile 4</description>
+						<label>$INFO[Skin.String(PictureTile4)]</label>
+					</control>
+					
+					<control type="label">
+						<include>Settings_PictureTileLabels</include>
+						<description>picture tile 5</description>
+						<label>$INFO[Skin.String(PictureTile5)]</label>
+					</control>
+					
+				<!-- GAME TILE LABELS -->
+					<control type="label">
+						<include>Settings_GameTileLabels</include>
+						<description>Game Tile 1</description>
+						<label>$INFO[Skin.String(GameTile1)]</label>			
+					</control>
+					
+					<control type="label">
+						<include>Settings_GameTileLabels</include>
+						<description>Game Tile 2</description>
+						<label>$INFO[Skin.String(GameTile2)]</label>
+					</control>
+					
+					<control type="label">
+						<include>Settings_GameTileLabels</include>
+						<description>Game Tile 3</description>
+						<label>$INFO[Skin.String(GameTile3)]</label>
+					</control>
+					
+					<control type="label">
+						<include>Settings_GameTileLabels</include>
+						<description>Game Tile 4</description>
+						<label>$INFO[Skin.String(GameTile4)]</label>
+					</control>
+					
+					<control type="label">
+						<include>Settings_GameTileLabels</include>
+						<description>Game Tile 5</description>
+						<label>$INFO[Skin.String(GameTile5)]</label>
+					</control>	
+					
+				<!-- ADDON TILE LABELS -->
+					<control type="label">
+						<include>Settings_AddonTileLabels</include>
+						<description>addon tile 1</description>
+						<label condition="!IsEmpty(Skin.String(AddonTile1))">$LOCALIZE[24001]</label>			
+						<textcolor>Black</textcolor>
+					</control>
+					
+					<control type="label">
+						<include>Settings_AddonTileLabels</include>
+						<description>addon tile 2</description>
+						<label>$INFO[Skin.String(AddonTile2)]</label>
+					</control>
+					
+					<control type="label">
+						<include>Settings_AddonTileLabels</include>
+						<description>addon tile 3</description>
+						<label>$INFO[Skin.String(AddonTile3)]</label>
+					</control>
+					
+					<control type="label">
+						<include>Settings_AddonTileLabels</include>
+						<description>addon tile 4</description>
+						<label>$INFO[Skin.String(AddonTile4)]</label>
+					</control>
+					
+					<control type="label">
+						<include>Settings_AddonTileLabels</include>
+						<description>addon tile 5</description>
+						<label>$INFO[Skin.String(AddonTile5)]</label>
+					</control>
+					
+				<!-- CUSTOM1 TILE LABELS -->
+					<control type="label">
+						<include>Settings_Custom1TileLabels</include>
+						<description>Custom1 Tile 1</description>
+						<label>$INFO[Skin.String(Custom1Tile1)]</label>			
+					</control>
+					
+					<control type="label">
+						<include>Settings_Custom1TileLabels</include>
+						<description>Custom1 Tile 2</description>
+						<label>$INFO[Skin.String(Custom1Tile2)]</label>
+					</control>
+					
+					<control type="label">
+						<include>Settings_Custom1TileLabels</include>
+						<description>Custom1 Tile 3</description>
+						<label>$INFO[Skin.String(Custom1Tile3)]</label>
+					</control>
+					
+					<control type="label">
+						<include>Settings_Custom1TileLabels</include>
+						<description>Custom1 Tile 4</description>
+						<label>$INFO[Skin.String(Custom1Tile4)]</label>
+					</control>
+					
+					<control type="label">
+						<include>Settings_Custom1TileLabels</include>
+						<description>Custom1 Tile 5</description>
+						<label>$INFO[Skin.String(Custom1Tile5)]</label>
+					</control>
+					
+				</control>			
+
+				<control type="group"> 			
+					<animation effect="fade" time="400">VisibleChange</animation>
+					
+					<control type="label">
+						<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="Control.HasFocus(408) | [Control.HasFocus(401) | Control.HasFocus(1001) | Control.HasFocus(1002) | Control.HasFocus(1003) | Control.HasFocus(1004) | Control.HasFocus(1005)] | [Control.HasFocus(402) | Control.HasFocus(1006) | Control.HasFocus(1007) | Control.HasFocus(1008) | Control.HasFocus(1009) | Control.HasFocus(1010)] | [Control.HasFocus(403) | Control.HasFocus(1011) | Control.HasFocus(1012) | Control.HasFocus(1013) | Control.HasFocus(1014) | Control.HasFocus(1015)] | [Control.HasFocus(404) | Control.HasFocus(1016) | Control.HasFocus(1017) | Control.HasFocus(1018) | Control.HasFocus(1019) | Control.HasFocus(1020)] | [Control.HasFocus(405) | Control.HasFocus(1021) | Control.HasFocus(1022) | Control.HasFocus(1023) | Control.HasFocus(1024) | Control.HasFocus(1025)] | [Control.HasFocus(406) | Control.HasFocus(1026) | Control.HasFocus(1027) | Control.HasFocus(1028) | Control.HasFocus(1029) | Control.HasFocus(1030)] | [Control.HasFocus(407) | Control.HasFocus(1031) | Control.HasFocus(1032) | Control.HasFocus(1033) | Control.HasFocus(1034) | Control.HasFocus(1035)] | [Control.HasFocus(409) | Control.HasFocus(1036) | Control.HasFocus(1037) | Control.HasFocus(1038) | Control.HasFocus(1039) | Control.HasFocus(1040)] | [Control.HasFocus(410) | Control.HasFocus(1041) | Control.HasFocus(1042) | Control.HasFocus(1043) | Control.HasFocus(1044) | Control.HasFocus(1045)] | Control.HasFocus(1101) | Control.HasFocus(1102) | Control.HasFocus(1103) | Control.HasFocus(1104) | Control.HasFocus(1105) | Control.HasFocus(1106) | Control.HasFocus(1107) | Control.HasFocus(1108) | Control.HasFocus(1109) | Control.HasFocus(1110) | Control.HasFocus(1111) | Control.HasFocus(1112) | Control.HasFocus(1113) | Control.HasFocus(1114) | Control.HasFocus(1115) | Control.HasFocus(1116) | Control.HasFocus(1117) | Control.HasFocus(1118) | Control.HasFocus(1119) | Control.HasFocus(1120) | Control.HasFocus(1121) | Control.HasFocus(1122) | Control.HasFocus(1123) | Control.HasFocus(1124) | Control.HasFocus(1125) | Control.HasFocus(1126) | Control.HasFocus(1127) | Control.HasFocus(1128) | Control.HasFocus(1129)">Conditional</animation>
+						<animation effect="fade" time="200" tween="square">VisibleChange</animation>
+						<visible>Control.HasFocus(408) | [Control.HasFocus(401) | Control.HasFocus(1001) | Control.HasFocus(1002) | Control.HasFocus(1003) | Control.HasFocus(1004) | Control.HasFocus(1005)] | [Control.HasFocus(402) | Control.HasFocus(1006) | Control.HasFocus(1007) | Control.HasFocus(1008) | Control.HasFocus(1009) | Control.HasFocus(1010)] | [Control.HasFocus(403) | Control.HasFocus(1011) | Control.HasFocus(1012) | Control.HasFocus(1013) | Control.HasFocus(1014) | Control.HasFocus(1015)] | [Control.HasFocus(404) | Control.HasFocus(1016) | Control.HasFocus(1017) | Control.HasFocus(1018) | Control.HasFocus(1019) | Control.HasFocus(1020)] | [Control.HasFocus(405) | Control.HasFocus(1021) | Control.HasFocus(1022) | Control.HasFocus(1023) | Control.HasFocus(1024) | Control.HasFocus(1025)] | [Control.HasFocus(407) | Control.HasFocus(1031) | Control.HasFocus(1032) | Control.HasFocus(1033) | Control.HasFocus(1034) | Control.HasFocus(1035)] | [Control.HasFocus(409) | Control.HasFocus(1036) | Control.HasFocus(1037) | Control.HasFocus(1038) | Control.HasFocus(1039) | Control.HasFocus(1040)] | [Control.HasFocus(410) | Control.HasFocus(1041) | Control.HasFocus(1042) | Control.HasFocus(1043) | Control.HasFocus(1044) | Control.HasFocus(1045)] | Control.HasFocus(1101) | Control.HasFocus(1102) | Control.HasFocus(1103) | Control.HasFocus(1104) | Control.HasFocus(1105) | Control.HasFocus(1106) | Control.HasFocus(1107) | Control.HasFocus(1108) | Control.HasFocus(1109) | Control.HasFocus(1110) | Control.HasFocus(1111) | Control.HasFocus(1112) | Control.HasFocus(1113) | Control.HasFocus(1114) | Control.HasFocus(1115) | Control.HasFocus(1116) | Control.HasFocus(1117) | Control.HasFocus(1118) | Control.HasFocus(1119) | Control.HasFocus(1120) | Control.HasFocus(1121) | Control.HasFocus(1122) | Control.HasFocus(1123) | Control.HasFocus(1124) | Control.HasFocus(1125) | Control.HasFocus(1126) | Control.HasFocus(1127) | Control.HasFocus(1128) | Control.HasFocus(1129)</visible>
+						<label>$LOCALIZE[31151]</label>
+						<posx>580</posx>
+						<posy>10</posy>
+						<height>30</height>
+						<width>250</width>
+						<font>font40L</font>
+						<align>left</align>
+						<shadowcolor>ff000000</shadowcolor>
+					</control>
+					
+					<control type="grouplist" id="1100">				
+						<description>Control Area- HOMESCREEN Panels</description>			
+						<animation effect="fade" time="200" tween="square">VisibleChange</animation>				
+						<posx>600</posx>
+						<posy>70</posy>
+						<width>265</width>
+						<height>475</height>
+						<itemgap>10</itemgap>
+						<onup>1100</onup>
+						<orientation>vertical</orientation>
+						
+					<!-- MOVIE PANELS -->
+						<control type="button" id="1101">
+							<include>Settings_MoviePanelButtons</include>
+							<description>NONE</description>
+							<label>$LOCALIZE[31152]</label>
+							<onclick>Skin.SetString(Home.MoviePanel,None)</onclick>
+						</control>	
+						
+						<control type="button" id="1102">
+							<include>Settings_MoviePanelButtons</include>
+							<description>recent</description>
+							<label>$LOCALIZE[31009]</label>
+							<onclick>Skin.SetString(Home.MoviePanel,Recent)</onclick>
+						</control>
+						
+						<control type="button" id="1103">
+							<include>Settings_MoviePanelButtons</include>
+							<description>recommended</description>
+							<label>$LOCALIZE[31153]</label>
+							<onclick>Skin.SetString(Home.MoviePanel,Recommended)</onclick>
+						</control>
+						
+						<control type="button" id="1104">
+							<include>Settings_MoviePanelButtons</include>
+							<description>featured</description>
+							<label>$LOCALIZE[31154]</label>
+							<onclick>Skin.SetString(Home.MoviePanel,Random)</onclick>
+						</control>
+						
+					<!-- TVSHOW PANELS -->
+						<control type="button" id="1105">
+							<include>Settings_TVShowPanelButtons</include>
+							<description>NONE</description>
+							<label>$LOCALIZE[31152]</label>
+							<onclick>Skin.SetString(Home.TVShowPanel,None)</onclick>
+						</control>	
+						
+						<control type="button" id="1106">
+							<include>Settings_TVShowPanelButtons</include>
+							<description>recent</description>
+							<label>$LOCALIZE[31009]</label>
+							<onclick>Skin.SetString(Home.TVShowPanel,Recent)</onclick>
+						</control>
+						
+						<control type="button" id="1107">
+							<include>Settings_TVShowPanelButtons</include>
+							<description>recommended</description>
+							<label>$LOCALIZE[31026]</label>
+							<onclick>Skin.SetString(Home.TVShowPanel,Recommended)</onclick>
+						</control>
+						
+						<control type="button" id="1108">
+							<include>Settings_TVShowPanelButtons</include>
+							<description>$LOCALIZE[31154]</description>
+							<label>$LOCALIZE[31154]</label>
+							<onclick>Skin.SetString(Home.TVShowPanel,Random)</onclick>
+						</control>	
+						
+						<control type="button" id="1129">
+							<include>Settings_TVShowPanelButtons</include>
+							<description>Airing Today</description>
+							<label>$LOCALIZE[31031]</label>
+							<onclick>Skin.SetString(Home.TVShowPanel,NextAired)</onclick>
+						</control>	
+						
+					<!-- LIVETV PANELS -->
+						<control type="button" id="1109">
+							<include>Settings_LiveTVPanelButtons</include>
+							<description>NONE</description>
+							<label>$LOCALIZE[31152]</label>
+							<onclick>Skin.SetString(Home.LiveTVPanel,None)</onclick>
+						</control>	
+						
+						<control type="button" id="1110">
+							<include>Settings_LiveTVPanelButtons</include>
+							<description>recent</description>
+							<label>$LOCALIZE[31032]</label>
+							<onclick>Skin.SetString(Home.LiveTVPanel,Recordings)</onclick>
+						</control>
+						
+					<!-- MUSIC PANELS -->
+						<control type="button" id="1111">
+							<include>Settings_MusicPanelButtons</include>
+							<description>NONE</description>
+							<label>$LOCALIZE[31152]</label>
+							<onclick>Skin.SetString(Home.MusicPanel,None)</onclick>
+						</control>
+						
+						<control type="button" id="1112">
+							<include>Settings_MusicPanelButtons</include>
+							<description>recent</description>
+							<label>$LOCALIZE[31009]</label>
+							<onclick>Skin.SetString(Home.MusicPanel,Recent)</onclick>
+						</control>
+						
+						<control type="button" id="1113">
+							<include>Settings_MusicPanelButtons</include>
+							<description>recommended</description>
+							<label>$LOCALIZE[31155]</label>
+							<onclick>Skin.SetString(Home.MusicPanel,Recommended)</onclick>
+						</control>
+						
+						<control type="button" id="1114">
+							<include>Settings_MusicPanelButtons</include>
+							<description>featured albums</description>
+							<label>$LOCALIZE[31035]</label>
+							<onclick>Skin.SetString(Home.MusicPanel,RandomAlbum)</onclick>
+						</control>
+						
+						<control type="button" id="1115">
+							<include>Settings_MusicPanelButtons</include>
+							<description>featured artists</description>
+							<label>$LOCALIZE[31036]</label>
+							<onclick>Skin.SetString(Home.MusicPanel,RandomArtist)</onclick>
+						</control>
+						
+						<control type="button" id="1116">
+							<include>Settings_MusicPanelButtons</include>
+							<description>featured songs</description>
+							<label>$LOCALIZE[31037]</label>
+							<onclick>Skin.SetString(Home.MusicPanel,RandomSong)</onclick>
+						</control>
+						
+					<!-- MUSIC VIDEOS PANELS -->
+						<control type="button" id="1117">
+							<include>Settings_MusicVidPanelButtons</include>
+							<description>NONE</description>
+							<label>$LOCALIZE[31152]</label>
+							<onclick>Skin.SetString(Home.MusicVidPanel,None)</onclick>
+						</control>
+						
+						<control type="button" id="1118">
+							<include>Settings_MusicVidPanelButtons</include>
+							<description>recent</description>
+							<label>$LOCALIZE[31009]</label>
+							<onclick>Skin.SetString(Home.MusicVidPanel,Recent)</onclick>
+						</control>
+						
+						<control type="button" id="1119">
+							<include>Settings_MusicVidPanelButtons</include>
+							<description>recommended</description>
+							<label>$LOCALIZE[31038]</label>
+							<onclick>Skin.SetString(Home.MusicVidPanel,Recommended)</onclick>
+						</control>
+						
+						<control type="button" id="1120">
+							<include>Settings_MusicVidPanelButtons</include>
+							<description>featured</description>
+							<label>$LOCALIZE[31154]</label>
+							<onclick>Skin.SetString(Home.MusicVidPanel,Random)</onclick>
+						</control>
+						
+					<!-- GAME PANELS -->
+						<control type="button" id="1121">
+							<include>Settings_GamePanelButtons</include>
+							<description>NONE</description>
+							<label>$LOCALIZE[31152]</label>
+							<onclick>Skin.SetString(Home.GamePanel,None)</onclick>
+						</control>	
+						
+						<control type="button" id="1122">
+							<include>Settings_GamePanelButtons</include>
+							<description>recent</description>
+							<label>$LOCALIZE[31156]</label>
+							<onclick>Skin.SetString(Home.GamePanel,RecentRCB)</onclick>
+						</control>
+						
+					<!-- WEATHER PANELS -->
+						<control type="button" id="1123">
+							<include>Settings_WeatherPanelButtons</include>
+							<description>NONE</description>
+							<label>$LOCALIZE[31152]</label>
+							<onclick>Skin.SetString(Home.WeatherPanel,None)</onclick>
+						</control>	
+						
+						<control type="button" id="1124">
+							<include>Settings_WeatherPanelButtons</include>
+							<description>forecast</description>
+							<label>$LOCALIZE[31157]</label>
+							<onclick>Skin.SetString(Home.WeatherPanel,Forecast)</onclick>
+						</control>
+						
+					<!-- ADDON PANELS -->
+						<control type="button" id="1125">
+							<include>Settings_AddonPanelButtons</include>
+							<description>NONE</description>
+							<label>$LOCALIZE[31152]</label>
+							<onclick>Skin.SetString(Home.AddonPanel,None)</onclick>
+						</control>	
+						
+						<control type="button" id="1126">
+							<include>Settings_AddonPanelButtons</include>
+							<description>featured</description>
+							<label>$LOCALIZE[31154]</label>
+							<onclick>Skin.SetString(Home.AddonPanel,Random)</onclick>
+						</control>	
+						
+					<!-- CUSTOM1 PANELS -->
+						<control type="button" id="1127">
+							<include>Settings_Custom1PanelButtons</include>
+							<description>NONE</description>
+							<label>$LOCALIZE[31152]</label>
+							<onclick>Skin.SetString(Home.Custom1Panel,None)</onclick>
+						</control>	
+						
+						<control type="button" id="1128">
+							<include>Settings_Custom1PanelButtons</include>
+							<description>favourites</description>
+							<label>$LOCALIZE[1036]</label>
+							<onclick>Skin.SetString(Home.Custom1Panel,Favourites)</onclick>
+						</control>	
+						
+					</control>
+					
+				</control>
+
+				<control type="group">					
+					<description>Control Area- HOMESCREEN Panel Checks</description>
+					<animation effect="fade" time="200" tween="square">VisibleChange</animation>					
+					<animation effect="fade" time="200" tween="square">VisibleChange</animation>				
+					<posx>790</posx>
+					<posy>70</posy>	
+					
+					<!-- MOVIE PANELS -->
+					<control type="group">
+						<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="[Control.HasFocus(401) | Control.HasFocus(1001) | Control.HasFocus(1002) | Control.HasFocus(1003) | Control.HasFocus(1004) | Control.HasFocus(1005) | Control.HasFocus(1101) | Control.HasFocus(1102) | Control.HasFocus(1103) | Control.HasFocus(1104)]">Conditional</animation>
+						<visible>[Control.HasFocus(401) | Control.HasFocus(1001) | Control.HasFocus(1002) | Control.HasFocus(1003) | Control.HasFocus(1004) | Control.HasFocus(1005) | Control.HasFocus(1101) | Control.HasFocus(1102) | Control.HasFocus(1103) | Control.HasFocus(1104)]</visible>
+
+						<control type="image">
+							<posy>5</posy>
+							<include>Settings_PanelCheck</include>
+							<visible>Skin.String(Home.MoviePanel,None)</visible>							
+						</control>	
+						
+						<control type="image">
+							<posy>55</posy>
+							<include>Settings_PanelCheck</include>
+							<visible>Skin.String(Home.MoviePanel,Recent)</visible>
+						</control>
+						
+						<control type="image">
+							<posy>105</posy>
+							<include>Settings_PanelCheck</include>
+							<visible>Skin.String(Home.MoviePanel,Recommended)</visible>
+						</control>
+						
+						<control type="image">
+							<posy>155</posy>
+							<include>Settings_PanelCheck</include>
+							<visible>Skin.String(Home.MoviePanel,Random)</visible>
+						</control>
+						
+					</control>
+					
+					<!-- TVSHOW PANELS -->
+					<control type="group">
+						<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="[Control.HasFocus(402) | Control.HasFocus(1006) | Control.HasFocus(1007) | Control.HasFocus(1008) | Control.HasFocus(1009) | Control.HasFocus(1010) | Control.HasFocus(1105) | Control.HasFocus(1106) | Control.HasFocus(1107) | Control.HasFocus(1108) | Control.HasFocus(1129)]">Conditional</animation>
+						<visible>[Control.HasFocus(402) | Control.HasFocus(1006) | Control.HasFocus(1007) | Control.HasFocus(1008) | Control.HasFocus(1009) | Control.HasFocus(1010) | Control.HasFocus(1105) | Control.HasFocus(1106) | Control.HasFocus(1107) | Control.HasFocus(1108) | Control.HasFocus(1129)]</visible>
+						
+						<control type="image">
+							<posy>5</posy>
+							<include>Settings_PanelCheck</include>
+							<visible>Skin.String(Home.TVShowPanel,None)</visible>							
+						</control>
+						
+						<control type="image">
+							<posy>55</posy>
+							<include>Settings_PanelCheck</include>
+							<visible>Skin.String(Home.TVShowPanel,Recent)</visible>
+						</control>
+						
+						<control type="image">
+							<posy>105</posy>
+							<include>Settings_PanelCheck</include>
+							<visible>Skin.String(Home.TVShowPanel,Recommended)</visible>
+						</control>
+						
+						<control type="image">
+							<posy>155</posy>
+							<include>Settings_PanelCheck</include>
+							<visible>Skin.String(Home.TVShowPanel,Random)</visible>
+						</control>
+						
+						<control type="image">
+							<posy>205</posy>
+							<include>Settings_PanelCheck</include>
+							<visible>Skin.String(Home.TVShowPanel,NextAired)</visible>
+						</control>
+						
+					</control>
+					
+					<!-- LIVETV PANELS -->
+					<control type="group">
+						<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="[Control.HasFocus(403) | Control.HasFocus(1011) | Control.HasFocus(1012) | Control.HasFocus(1013) | Control.HasFocus(1014) | Control.HasFocus(1015) | Control.HasFocus(1109) | Control.HasFocus(1110)]">Conditional</animation>
+						<visible>[Control.HasFocus(403) | Control.HasFocus(1011) | Control.HasFocus(1012) | Control.HasFocus(1013) | Control.HasFocus(1014) | Control.HasFocus(1015) | Control.HasFocus(1109) | Control.HasFocus(1110)]</visible>
+						
+						<control type="image">
+							<posy>5</posy>
+							<include>Settings_PanelCheck</include>
+							<visible>Skin.String(Home.LiveTVPanel,None)</visible>							
+						</control>
+						
+						<control type="image">
+							<posy>55</posy>
+							<include>Settings_PanelCheck</include>
+							<visible>Skin.String(Home.LiveTVPanel,Recordings)</visible>
+						</control>
+						
+					</control>	
+					
+					<!-- MUSIC PANELS -->
+					<control type="group">
+						<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="[Control.HasFocus(404) | Control.HasFocus(1016) | Control.HasFocus(1017) | Control.HasFocus(1018) | Control.HasFocus(1019) | Control.HasFocus(1020) | Control.HasFocus(1111) | Control.HasFocus(1112) | Control.HasFocus(1113) | Control.HasFocus(1114) | Control.HasFocus(1115) | Control.HasFocus(1116)]">Conditional</animation>
+						<visible>[Control.HasFocus(404) | Control.HasFocus(1016) | Control.HasFocus(1017) | Control.HasFocus(1018) | Control.HasFocus(1019) | Control.HasFocus(1020) | Control.HasFocus(1111) | Control.HasFocus(1112) | Control.HasFocus(1113) | Control.HasFocus(1114) | Control.HasFocus(1115) | Control.HasFocus(1116)]</visible>
+						
+						<control type="image">
+							<posy>5</posy>
+							<include>Settings_PanelCheck</include>
+							<visible>Skin.String(Home.MusicPanel,None)</visible>							
+						</control>
+						
+						<control type="image">
+							<posy>55</posy>
+							<include>Settings_PanelCheck</include>
+							<visible>Skin.String(Home.MusicPanel,Recent)</visible>
+						</control>
+						
+						<control type="image">
+							<posy>105</posy>
+							<include>Settings_PanelCheck</include>
+							<visible>Skin.String(Home.MusicPanel,Recommended)</visible>
+						</control>
+						
+						<control type="image">
+							<posy>155</posy>
+							<include>Settings_PanelCheck</include>
+							<visible>Skin.String(Home.MusicPanel,RandomAlbum)</visible>
+						</control>
+						
+						<control type="image">
+							<posy>205</posy>
+							<include>Settings_PanelCheck</include>
+							<visible>Skin.String(Home.MusicPanel,RandomArtist)</visible>
+						</control>
+						
+						<control type="image">
+							<posy>255</posy>
+							<include>Settings_PanelCheck</include>
+							<visible>Skin.String(Home.MusicPanel,RandomSong)</visible>
+						</control>
+						
+					</control>
+					
+					<!-- MUSIC VIDEO PANELS -->
+					<control type="group">
+						<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="[Control.HasFocus(405) | Control.HasFocus(1021) | Control.HasFocus(1022) | Control.HasFocus(1023) | Control.HasFocus(1024) | Control.HasFocus(1025) | Control.HasFocus(1117) | Control.HasFocus(1118) | Control.HasFocus(1119) | Control.HasFocus(1120)]">Conditional</animation>
+						<visible>[Control.HasFocus(405) | Control.HasFocus(1021) | Control.HasFocus(1022) | Control.HasFocus(1023) | Control.HasFocus(1024) | Control.HasFocus(1025) | Control.HasFocus(1117) | Control.HasFocus(1118) | Control.HasFocus(1119) | Control.HasFocus(1120)]</visible>
+						
+						<control type="image">
+							<posy>5</posy>
+							<include>Settings_PanelCheck</include>
+							<visible>Skin.String(Home.MusicVidPanel,None)</visible>							
+						</control>	
+						
+						<control type="image">
+							<posy>55</posy>
+							<include>Settings_PanelCheck</include>
+							<visible>Skin.String(Home.MusicVidPanel,Recent)</visible>
+						</control>
+						
+						<control type="image">
+							<posy>105</posy>
+							<include>Settings_PanelCheck</include>
+							<visible>Skin.String(Home.MusicVidPanel,Recommended)</visible>
+						</control>
+						
+						<control type="image">
+							<posy>155</posy>
+							<include>Settings_PanelCheck</include>
+							<visible>Skin.String(Home.MusicVidPanel,Random)</visible>
+						</control>
+						
+					</control>	
+					
+					<!-- GAME PANELS -->
+					<control type="group">
+						<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="[Control.HasFocus(407) | Control.HasFocus(1031) | Control.HasFocus(1032) | Control.HasFocus(1033) | Control.HasFocus(1034) | Control.HasFocus(1035) | Control.HasFocus(1121) | Control.HasFocus(1122)]">Conditional</animation>
+						<visible>[Control.HasFocus(407) | Control.HasFocus(1031) | Control.HasFocus(1032) | Control.HasFocus(1033) | Control.HasFocus(1034) | Control.HasFocus(1035) | Control.HasFocus(1121) | Control.HasFocus(1122)]</visible>
+						
+						<control type="image">
+							<posy>5</posy>
+							<include>Settings_PanelCheck</include>
+							<visible>Skin.String(Home.GamePanel,None)</visible>							
+						</control>
+						
+						<control type="image">
+							<posy>55</posy>
+							<include>Settings_PanelCheck</include>
+							<visible>Skin.String(Home.GamePanel,RecentRCB)</visible>
+						</control>
+						
+					</control>
+					
+					<!-- WEATHER PANELS -->
+					<control type="group">
+						<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="[Control.HasFocus(408) | Control.HasFocus(1123) | Control.HasFocus(1124)]">Conditional</animation>
+						<visible>[Control.HasFocus(408) | Control.HasFocus(1123) | Control.HasFocus(1124)]</visible>
+						
+						<control type="image">
+							<posy>5</posy>
+							<include>Settings_PanelCheck</include>
+							<visible>Skin.String(Home.WeatherPanel,None)</visible>							
+						</control>
+						
+						<control type="image">
+							<posy>55</posy>
+							<include>Settings_PanelCheck</include>
+							<visible>Skin.String(Home.WeatherPanel,Forecast)</visible>
+						</control>
+						
+					</control>	
+					
+					<!-- ADDON PANELS -->
+					<control type="group">
+						<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="[Control.HasFocus(409) | Control.HasFocus(1036) | Control.HasFocus(1037) | Control.HasFocus(1038) | Control.HasFocus(1039) | Control.HasFocus(1040) | Control.HasFocus(1125) | Control.HasFocus(1126)]">Conditional</animation>
+						<visible>[Control.HasFocus(409) | Control.HasFocus(1036) | Control.HasFocus(1037) | Control.HasFocus(1038) | Control.HasFocus(1039) | Control.HasFocus(1040) | Control.HasFocus(1125) | Control.HasFocus(1126)]</visible>
+						
+						<control type="image">
+							<posy>5</posy>
+							<include>Settings_PanelCheck</include>
+							<visible>Skin.String(Home.AddonPanel,None)</visible>							
+						</control>	
+						
+						<control type="image">
+							<posy>55</posy>
+							<include>Settings_PanelCheck</include>
+							<visible>Skin.String(Home.AddonPanel,Random)</visible>
+						</control>
+						
+					</control>	
+					
+					<!-- CUSTOM1 PANELS -->
+					<control type="group">
+						<animation effect="fade" start="0" end="100" time="400" easing="Out" tween="square" condition="[Control.HasFocus(410) | Control.HasFocus(1041) | Control.HasFocus(1042) | Control.HasFocus(1043) | Control.HasFocus(1044) | Control.HasFocus(1045) | Control.HasFocus(1127) | Control.HasFocus(1128)]">Conditional</animation>
+						<visible>[Control.HasFocus(410) | Control.HasFocus(1041) | Control.HasFocus(1042) | Control.HasFocus(1043) | Control.HasFocus(1044) | Control.HasFocus(1045) | Control.HasFocus(1127) | Control.HasFocus(1128)]</visible>
+						
+						<control type="image">
+							<posy>5</posy>
+							<include>Settings_PanelCheck</include>
+							<visible>Skin.String(Home.Custom1Panel,None)</visible>							
+						</control>	
+						
+						<control type="image">
+							<posy>55</posy>
+							<include>Settings_PanelCheck</include>
+							<visible>Skin.String(Home.Custom1Panel,Favourites) + Skin.HasSetting(UseFavouritesScript)</visible>
+						</control>
+						
+					</control>	
+					
+				</control>
+				
+			<!--BACKGROUNDS Control Areas-->				
+				<control type="group" id="500">
+					<visible>Container(100).Hasfocus(4)</visible>
+					<control type="list" id="9003">
+						<width>820</width>
+						<height>60</height>
+						<onleft>100</onleft>
+						<onright>551</onright>
+						<onup>9003</onup>
+						<ondown>9003</ondown>
+						<pagecontrol>-</pagecontrol>
+						<scrolltime>0</scrolltime>
+						<itemlayout height="1" width="820"></itemlayout>
+						
+						<focusedlayout height="60" width="820">
+						
+							<control type="image">
+								<visible>Control.HasFocus(9003)</visible>
+								<include>VisibleFadeEffect</include>
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>680</width>
+								<height>50</height>
+								<include>Common_Color_Accent</include>
+							</control>
+							
+							<control type="image">
+								<posx>629</posx>
+								<posy>10</posy>
+								<width>40</width>
+								<height>30</height>
+								<texture>controls/ArrowUpNF.png</texture>
+								<aspectratio>keep</aspectratio>
+							</control>
+							
+							<control type="image">
+							   <posx>600</posx>
+							   <posy>10</posy>
+							   <width>40</width>
+							   <height>30</height>
+							   <texture>controls/ArrowDownNF.png</texture>
+							   <aspectratio>keep</aspectratio>
+							</control>
+							
+							<control type="label">
+							   <posx>10</posx>
+							   <posy>0</posy>
+							   <width>600</width>
+							   <height>50</height>
+							   <align>left</align>
+							   <label>$LOCALIZE[31158]</label>
+							</control>
+							
+							<control type="label">
+							    <posx>225r</posx>
+							    <posy>0</posy>
+							    <width>600</width>
+							    <height>50</height>
+							    <align>right</align>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+							
+						</focusedlayout>
+						  
+						<content>
+							<item id="0">
+								<label>571</label>
+							    <onclick>Control.Move(9003,-1)</onclick>
+							    <icon>special://skin/backgrounds/default.jpg</icon>
+							    <thumb>$INFO[Skin.String(Default.Background)]</thumb>
+							</item>
+							<item id="1">
+							    <visible>!Skin.HasSetting(Movies.Hide)</visible>
+							    <label>20342</label>
+							    <onclick>Control.Move(9003,-1)</onclick>
+							    <icon>special://skin/backgrounds/Movies.jpg</icon>
+							    <thumb>$INFO[Skin.String(Movies.Background)]</thumb>
+							</item>
+							<item id="2">
+							    <visible>!Skin.HasSetting(TVShows.Hide)</visible>
+							    <label>20343</label>
+							    <onclick>Control.Move(9003,-1)</onclick>
+							    <icon>special://skin/backgrounds/TVShows.jpg</icon>
+							    <thumb>$INFO[Skin.String(TVShows.Background)]</thumb>
+							</item>
+							<item id="3">
+							    <visible>System.GetBool(pvrmanager.enabled)</visible>
+							    <label>31012</label>
+							    <onclick>Control.Move(9003,-1)</onclick>
+							    <icon>special://skin/backgrounds/livetv.jpg</icon>
+							    <thumb>$INFO[Skin.String(Pvr.Background)]</thumb>
+							</item>
+							<item id="4">
+							    <visible>!Skin.HasSetting(Music.Hide)</visible>
+							    <label>2</label>
+							    <onclick>Control.Move(9003,-1)</onclick>
+							    <icon>special://skin/backgrounds/Music.jpg</icon>
+							    <thumb>$INFO[Skin.String(Music.Background)]</thumb>
+							</item>
+							<item id="5">
+							    <visible>!Skin.HasSetting(MusicVid.Hide)</visible>
+							    <label>20389</label>
+							    <onclick>Control.Move(9003,-1)</onclick>
+							    <icon>special://skin/backgrounds/MusicVid.jpg</icon>
+							    <thumb>$INFO[Skin.String(MusicVid.Background)]</thumb>
+							</item>
+							<item id="6">
+							    <visible>!Skin.HasSetting(Pictures.Hide)</visible>
+							    <label>1</label>
+							    <onclick>Control.Move(9003,-1)</onclick>
+							    <icon>special://skin/backgrounds/Pictures.jpg</icon>
+							    <thumb>$INFO[Skin.String(Pictures.Background)]</thumb>
+							</item>
+							<item id="7">
+								<visible>!Skin.HasSetting(Games.Hide)</visible>
+							    <label>15016</label>
+							    <onclick>Control.Move(9003,-1)</onclick>
+							    <icon>special://skin/backgrounds/Games.jpg</icon>
+							    <thumb>$INFO[Skin.String(Games.Background)]</thumb>
+							</item>
+							<item id="9">
+							    <visible>!Skin.HasSetting(Addons.Hide)</visible>
+							    <label>24001</label>
+							    <onclick>Control.Move(9003,-1)</onclick>
+							    <icon>special://skin/backgrounds/Addons.jpg</icon>
+							    <thumb>$INFO[Skin.String(Addons.Background)]</thumb>
+							</item>
+							<item id="10">
+							    <label>13200</label>
+							    <onclick>Control.Move(9003,-1)</onclick>
+							    <icon>special://skin/backgrounds/Profile.jpg</icon>
+							    <thumb>$INFO[Skin.String(Profile.Background)]</thumb>
+							</item>
+							<item id="11">
+							    <label>137</label>
+							    <onclick>Control.Move(9003,-1)</onclick>
+							    <icon>special://skin/backgrounds/Search.jpg</icon>
+							    <thumb>$INFO[Skin.String(Settings.Background)]</thumb>
+							</item>
+							<item id="12">
+							    <visible>!IsEmpty(Skin.String(CustomHome.1.Path))</visible>
+							    <label>$VAR[Custom1.HomeMenu]</label>
+							    <onclick>Control.Move(9003,-1)</onclick>
+							    <icon>special://skin/backgrounds/default/default.jpg</icon>
+							    <thumb>$INFO[Skin.String(CustomHome.1.Background)]</thumb>
+							</item>
+						</content>
+						
+					</control>
+					
+					<control type="multiimage">
+					    <posx>20</posx>
+					    <posy>60</posy>
+					    <width>640</width>
+					    <height>360</height>
+					    <imagepath background="true">$INFO[Container(9003).ListItem.Icon]</imagepath>
+					    <timeperimage>6000</timeperimage>
+					    <randomize>true</randomize>
+					    <fadetime>500</fadetime>
+					    <aspectratio>keep</aspectratio>
+					</control>
+					
+					<control type="label">
+					    <posx>20</posx>
+					    <posy>780</posy>
+					    <width>1060</width>
+					    <height>50</height>
+					    <align>center</align>
+					    <haspath>yes</haspath>
+					    <label fallback="571">$INFO[Container(9003).ListItem.Thumb]</label>
+					</control>
+					
+				</control>
+				
+				<control type="group" id="550">
+					<posx>670</posx>
+					<posy>150</posy>
+					
+					<control type="group">
+						<visible>Container(100).HasFocus(4)</visible>
+						
+						<control type="button" id="551">
+							<description>Single Image button</description>
+							<posy>0</posy>
+							<width>150</width>
+							<label>31159</label>
+							<texturenofocus>backings\key-back2.png</texturenofocus>
+							<onclick condition="Container(9003).HasFocus(0)">Skin.SetImage(Default.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(1)">Skin.SetImage(Movies.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(2)">Skin.SetImage(TVShows.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(3)">Skin.SetImage(Pvr.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(4)">Skin.SetImage(Music.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(5)">Skin.SetImage(MusicVid.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(6)">Skin.SetImage(Pictures.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(7)">Skin.SetImage(Games.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(9)">Skin.SetImage(Addons.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(10)">Skin.SetImage(Search.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(11)">Skin.SetImage(Profile.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(12)">Skin.SetImage(CustomHome.1.Background)</onclick>
+							<onleft>9003</onleft>
+							<onup>553</onup>
+							<ondown>552</ondown>
+							<font>font18L</font>
+						</control>
+						
+						<control type="button" id="552">
+							<description>Multi Image button</description>
+							<posy>60</posy>
+							<width>150</width>
+							<label>31160</label>
+							<texturenofocus>backings\key-back2.png</texturenofocus>
+							<onclick condition="Container(9003).HasFocus(0)">Skin.SetPath(Default.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(1)">Skin.SetPath(Movies.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(2)">Skin.SetPath(TVShows.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(3)">Skin.SetPath(Pvr.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(4)">Skin.SetPath(Music.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(5)">Skin.SetPath(MusicVid.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(6)">Skin.SetPath(Pictures.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(7)">Skin.SetPath(Games.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(9)">Skin.SetPath(Addons.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(10)">Skin.SetPath(Search.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(11)">Skin.SetPath(Profile.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(12)">Skin.SetPath(CustomHome.1.Background)</onclick>
+							<onleft>9003</onleft>
+							<onup>551</onup>
+							<ondown>553</ondown>
+							<font>font18L</font>
+						</control>
+						
+						<control type="button" id="553">
+							<description>Default Image button</description>
+							<posy>120</posy>
+							<width>150</width>
+							<label>31161</label>
+							<texturenofocus>backings\key-back2.png</texturenofocus>
+							<onclick condition="Container(9003).HasFocus(0)">Skin.Reset(Default.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(1)">Skin.Reset(Movies.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(2)">Skin.Reset(TVShows.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(3)">Skin.Reset(Pvr.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(4)">Skin.Reset(Music.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(5)">Skin.Reset(MusicVid.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(6)">Skin.Reset(Pictures.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(7)">Skin.Reset(Games.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(9)">Skin.Reset(Addons.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(10)">Skin.Reset(Search.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(11)">Skin.Reset(Profile.Background)</onclick>
+							<onclick condition="Container(9003).HasFocus(12)">Skin.Reset(CustomHome.1.Background)</onclick>
+							<onleft>9003</onleft>
+							<onup>552</onup>
+							<ondown>551</ondown>
+							<font>font18L</font>
+						</control>
+						
+					</control>
+					
+				</control>
+
+			<!--CUSTOM ITEMS Control Areas-->				
+				<control type="grouplist" id="800">
+					<description>Control Area- CUSTOM ITEMS</description>
+					<width>820</width>
+					<height>480</height>
+					<itemgap>2</itemgap>
+					<onup>800</onup>
+					<ondown>800</ondown>
+					<onleft>100</onleft>
+					<onright>-</onright>
+					<orientation>vertical</orientation>
+					<visible>Container(100).Hasfocus(6)</visible>
+
+					<control type="label" id="801">
+						<description>Tile Details</description>
+						<width>820</width>
+						<align>left</align>
+						<font>font26L</font>
+						<label>[COLOR Accent]home menu[/COLOR]</label>				
+					</control>
+					
+					<control type="button" id="802">
+						<description>Tile Details</description>
+						<width>820</width>
+						<align>left</align>
+						<posx>20</posx>
+						<label>$LOCALIZE[31165]</label>
+						<onclick>Skin.SetString(CustomHome.1.Name)</onclick>					
+					</control>
+					
+				</control>
+		
+				<control type="grouplist">
+					<description>Control Area- CUSTOM 2</description>
+					<width>820</width>
+					<height>480</height>
+					<itemgap>2</itemgap>
+					<orientation>vertical</orientation>
+					<visible>Container(100).Hasfocus(6)</visible>
+
+					<control type="label">
+						<description>Default Button</description>
+						<width>800</width>
+						<align>right</align>
+					</control>
+					
+					<control type="label">
+						<description>movie tile 2</description>
+						<width>800</width>
+						<align>right</align>
+						<label>$VAR[Custom1.HomeMenu]</label>
+					</control>
+
+				</control>
+
+			<!--DEBUG Control Areas-->				
+				<control type="grouplist" id="700">
+					<description>Control Area- DEBUG</description>
+					<width>820</width>
+					<height>480</height>
+					<itemgap>2</itemgap>
+					<onup>500</onup>
+					<ondown>500</ondown>
+					<onleft>100</onleft>
+					<onright>-</onright>
+					<orientation>vertical</orientation>
+					<visible>Container(100).Hasfocus(8)</visible>
+
+					<control type="radiobutton" id="701">
+						<description>Enable Debug Grid</description>
+						<width>820</width>
+						<align>left</align>
+						<label>$LOCALIZE[31060]</label>
+						<onclick>Skin.ToggleSetting(DebugGrid)</onclick>
+						<selected>Skin.HasSetting(DebugGrid)</selected>
+						
+					</control>
+					<control type="radiobutton" id="702">
+						<description>Disable Debug Info</description>
+						<width>820</width>
+						<align>left</align>
+						<label>$LOCALIZE[31061]</label>
+						<onclick>Skin.ToggleSetting(HideDebugInfo)</onclick>
+						<selected>Skin.HasSetting(HideDebugInfo)</selected>
+						
+					</control>
+
+				</control>
+
+			<!--CREDITS Control Areas-->				
+				<control type="grouplist" id="999">
+					<description>Control Area- CREDITS</description>
+					<width>820</width>
+					<height>480</height>
+					<itemgap>2</itemgap>
+					<onup>500</onup>
+					<ondown>500</ondown>
+					<onleft>100</onleft>
+					<onright>-</onright>
+					<orientation>vertical</orientation>
+					<visible>Container(100).Hasfocus(9)</visible>
+				</control>
+				
+			</control>
+
+		</control>
+		
+	</controls>
+
+</window>

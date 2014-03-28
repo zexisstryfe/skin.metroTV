@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<includes>
+
+	<include name="Viewtype_Dialog">
+	
+		<description>Dialog View (id=53)</description>
+		
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture background="true">backings/music_fanart_diffuse.png</texture>
+			<visible>Skin.HasSetting(UseFanartOverlay)</visible>
+			<visible>Control.IsVisible(53)</visible>
+		</control>
+
+		<control type="group">
+			<include>Common_TopBar</include>
+			<visible>Control.IsVisible(53)</visible>
+		</control>
+		
+		<control type="group">
+			<posx>250</posx>
+			<posy>130</posy>
+			<visible>Control.IsVisible(53)</visible>
+			<visible>Container.Content(episodes) | Container.Content(songs)</visible>
+			<include>Animation_Dialog_Center</include>
+			
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>780</width>
+				<height>540</height>
+				<include>Common_Color_Keyback1</include>
+			</control>
+			
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>260</width>
+				<height>540</height>
+				<include>Common_Color_Keyback2</include>
+			</control>
+			
+			<control type="group">
+				<visible>Control.IsVisible(53)</visible>
+				<visible>Skin.HasSetting(UseNextAiredScript)</visible>
+				<posx>0</posx>
+				<posy>-40</posy>
+				<visible>!IsEmpty(Window(Home).Property(NextAired.Label)) + !stringcompare(ListItem.Label,..) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + !IsEmpty(ListItem.TVShowTitle) + !IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
+
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>780</width>
+					<height>40</height>
+					<include>Common_Color_Accent</include>
+				</control>
+				
+				<control type="image">
+					<posx>20</posx>
+					<posy>5</posy>
+					<width>30</width>
+					<height>30</height>
+					<texture>home/tv.png</texture>
+				</control>
+				
+				<control type="label">
+					<posx>60</posx>
+					<posy>0</posy>
+					<width>590</width>
+					<height>40</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font20UB</font>
+					<scroll>true</scroll>
+					<label>[B]$LOCALIZE[31173][/B]</label>
+				</control>
+				
+				<control type="label">
+					<posx>220</posx>
+					<posy>0</posy>
+					<width>550</width>
+					<height>40</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font20</font>
+					<scroll>true</scroll>
+					<label>"$INFO[Window(Home).Property(NextAired.NextTitle)]" $LOCALIZE[31177] $INFO[Window(Home).Property(NextAired.NextDate)] - $INFO[Window(Home).Property(NextAired.AirTime)]</label>
+				</control>
+				
+			</control>
+						
+			<control type="image">
+				<description>line</description>
+				<posx>260</posx>
+				<posy>60</posy>
+				<width>520</width>
+				<height>4</height>
+				<include>Common_Color_Accent</include>
+			</control>
+			
+			<control type="label">
+				<description>Title</description>
+				<posx>760</posx>
+				<posy>10</posy>
+				<width>490</width>
+				<align>right</align>
+				<font>font40LB</font>
+				<label>[COLOR Accent]$INFO[ListItem.TVShowTitle][/COLOR]</label>
+				<visible>Container.Content(episodes)</visible>
+				<scroll>true</scroll>
+			</control>
+			
+			<control type="label">
+				<description>Title</description>
+				<posx>760</posx>
+				<posy>10</posy>
+				<width>490</width>
+				<align>right</align>
+				<font>font40LB</font>
+				<label>[COLOR Accent]$INFO[ListItem.Album] ($INFO[ListItem.Year])[/COLOR]</label>
+				<visible>Container.Content(songs)</visible>
+				<scroll>true</scroll>
+			</control>
+			
+			<control type="list" id="53">
+				<posx>260</posx>
+				<posy>70</posy>
+				<height>450</height>
+				<width>490</width>
+				<onup>53</onup>
+				<ondown>53</ondown>
+				<onleft>9000</onleft>
+				<onright>60</onright>
+				<scrolltime>0</scrolltime>
+				<pagecontrol>60</pagecontrol>
+				<viewtype label="dialog list">list</viewtype>
+				<orientation>vertical</orientation>
+				<visible>Container.Content(episodes) | Container.Content(songs)</visible>				
+				<itemlayout width="530" height="40">
+
+					<control type="label">
+						<posx>20</posx>
+						<posy>-5</posy>
+						<width>470</width>
+						<font>font22</font>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					
+					<control type="image">
+						<posx>455</posx>
+						<posy>5</posy>
+						<height>30</height>
+						<width>30</width>
+						<texture>watched/check.png</texture>
+						<visible>[Container.Content(episodes) + stringcompare(ListItem.Overlay,OverlayWatched.png)]</visible>
+					</control>
+				
+				</itemlayout>
+				
+				<focusedlayout width="530" height="40">
+				
+					<control type="image">
+						<width>530</width>
+						<height>40</height>
+						<include>Common_Color_Accent</include>
+					</control>
+
+					<control type="label">
+						<posx>20</posx>
+						<posy>-5</posy>
+						<width>530</width>
+						<font>font22</font>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					
+					<control type="image">
+						<posx>455</posx>
+						<posy>5</posy>
+						<height>30</height>
+						<width>30</width>
+						<texture>watched/check.png</texture>
+						<visible>[Container.Content(episodes) + stringcompare(ListItem.Overlay,OverlayWatched.png)]</visible>
+					</control>
+				
+				</focusedlayout>
+
+			</control>
+	
+			<control type="image">
+				<posx>20</posx>
+				<posy>20</posy>
+				<width>220</width>
+				<height>200</height>
+				<align>right</align>
+				<fadetime>500</fadetime>
+				<aspectratio>keep</aspectratio>
+				<bordertexture border="5">general/accent.png</bordertexture>
+				<bordersize>5</bordersize>
+				<texture fallback="defaults/DefaultAlbumCover.png">$INFO[ListItem.Icon]</texture>
+				<visible>!IsEmpty(ListItem.Icon) + Container.Content(songs)</visible>
+			</control>
+			
+			<control type="image">
+				<posx>20</posx>
+				<posy>20</posy>
+				<width>220</width>
+				<height>200</height>
+				<align>right</align>
+				<fadetime>500</fadetime>
+				<aspectratio>keep</aspectratio>
+				<bordertexture border="5">general/accent.png</bordertexture>
+				<bordersize>5</bordersize>
+				<texture fallback="splash/splash_tvshows.png">$INFO[ListItem.Art(thumb)]</texture>
+				<visible>!IsEmpty(ListItem.Art(thumb)) + Container.Content(episodes)</visible>
+			</control>
+			
+			<control type="image">
+				<posx>20</posx>
+				<posy>20</posy>
+				<width>220</width>
+				<height>220</height>
+				<align>right</align>
+				<fadetime>500</fadetime>
+				<aspectratio>keep</aspectratio>
+				<bordertexture border="5">general/accent.png</bordertexture>
+				<bordersize>5</bordersize>
+				<texture>defaults/DefaultFolderBack.png</texture>
+				<visible>stringcompare(ListItem.Label,..)</visible>
+			</control>
+			
+			<control type="image">
+				<posx>20</posx>
+				<posy>230</posy>
+				<width>150</width>
+				<height>40</height>
+				<texture>flags/ratings/$INFO[ListItem.StarRating]</texture>
+				<visible>!IsEmpty(ListItem.Title) + Container.Content(episodes)</visible>
+				<aspectratio>keep</aspectratio>
+			</control>
+			
+			<control type="label">
+				<posx>20</posx>
+				<posy>210</posy>
+				<width>220</width>
+				<height>17</height>
+				<aligny>center</aligny>
+				<font>font20UB</font>
+				<label>$LOCALIZE[20373] $INFO[ListItem.Season] $LOCALIZE[20359] $INFO[ListItem.Episode]</label>				
+				<visible>!IsEmpty(ListItem.Title) + Container.Content(episodes)</visible>
+			</control>
+			
+			<control type="label">
+				<posx>240</posx>
+				<posy>270</posy>
+				<width>220</width>
+				<height>17</height>
+				<align>right</align>
+				<aligny>center</aligny>
+				<textcolor>Accent</textcolor>
+				<font>font26L</font>
+				<label>$LOCALIZE[207]</label>				
+				<visible>Container.Content(episodes)</visible>
+				<visible>!stringcompare(ListItem.Label,..)</visible>
+			</control>
+			
+			<control type="label">
+				<posx>240</posx>
+				<posy>270</posy>
+				<width>220</width>
+				<height>17</height>
+				<align>right</align>
+				<aligny>center</aligny>
+				<textcolor>Accent</textcolor>
+				<font>font26L</font>
+				<label>$LOCALIZE[31194]</label>				
+				<visible>stringcompare(ListItem.Label,..)</visible>
+			</control>
+			
+			<control type="textbox">
+				<posx>20</posx>
+				<posy>300</posy>
+				<width>220</width>
+				<height>210</height>
+				<info>ListItem.Plot</info>
+				<align>justify</align>
+				<autoscroll time="3000" delay="6000" repeat="8000"></autoscroll>
+				<font>font18</font>
+				<textcolor>White</textcolor>
+			</control>
+			
+			<control type="label">
+				<posx>20</posx>
+				<posy>220</posy>
+				<width>220</width>
+				<font>font22UB</font>
+				<height>30</height>
+				<textcolor>Accent</textcolor>
+				<aligny>center</aligny>
+				<scroll>true</scroll>
+				<label>[B]$INFO[ListItem.Album][/B]</label>
+			</control>
+			
+			<control type="label">
+				<posx>20</posx>
+				<posy>250</posy>
+				<width>220</width>
+				<font>font20UB</font>
+				<height>25</height>
+				<scroll>true</scroll>
+				<aligny>center</aligny>
+				<label>[B]$INFO[ListItem.Artist][/B]</label>
+			</control>
+			
+			<control type="label">
+				<posx>20</posx>
+				<posy>270</posy>
+				<width>220</width>
+				<font>font20L</font>
+				<height>40</height>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Genre]</label>
+			</control>
+			
+			<control type="image">
+				<description>outline</description>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<posx>754</posx>
+				<posy>69</posy>
+				<width>7</width>
+				<height>442</height>
+				<aspectratio>stretch</aspectratio>
+				<texture>colors/color_white.png</texture>
+				<visible>Control.HasFocus(60)</visible>
+			</control>
+			
+			<control type="scrollbar" id="60">
+				<posx>755</posx>
+				<posy>70</posy>
+				<height>440</height>
+				<onleft>53</onleft>
+				<onright>9000</onright>
+			</control>
+			
+		</control>
+				
+	</include>
+			
+</includes>

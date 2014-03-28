@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+	<include name="Content_Clear">
+		<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)].Path,)</onclick>
+		<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)].Icon,)</onclick>
+		<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)].Label,)</onclick>
+		<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)].Type,)</onclick>
+	</include>
+	
+	<include name="Tile_Content">
+		<item id="900">
+			<label>$LOCALIZE[1223]</label>
+			<visible>Skin.String(TileSelector_Temp,MovieTile2) | Skin.String(TileSelector_Temp,MovieTile3) | Skin.String(TileSelector_Temp,MovieTile4) | Skin.String(TileSelector_Temp,MovieTile5) | Skin.String(TileSelector_Temp,TVShowTile2) | Skin.String(TileSelector_Temp,TVShowTile3) | Skin.String(TileSelector_Temp,TVShowTile4) | Skin.String(TileSelector_Temp,TVShowTile5) | Skin.String(TileSelector_Temp,LiveTVTile2) | Skin.String(TileSelector_Temp,LiveTVTile3) | Skin.String(TileSelector_Temp,LiveTVTile4) | Skin.String(TileSelector_Temp,LiveTVTile5) | Skin.String(TileSelector_Temp,MusicTile2) | Skin.String(TileSelector_Temp,MusicTile3) | Skin.String(TileSelector_Temp,MusicTile4) | Skin.String(TileSelector_Temp,MusicTile5) | Skin.String(TileSelector_Temp,MusicVidTile2) | Skin.String(TileSelector_Temp,MusicVidTile3) | Skin.String(TileSelector_Temp,MusicVidTile4) | Skin.String(TileSelector_Temp,MusicVidTile5) | Skin.String(TileSelector_Temp,PictureTile2) | Skin.String(TileSelector_Temp,PictureTile3) | Skin.String(TileSelector_Temp,PictureTile4) | Skin.String(TileSelector_Temp,PictureTile5) | Skin.String(TileSelector_Temp,GameTile2) | Skin.String(TileSelector_Temp,GameTile3) | Skin.String(TileSelector_Temp,GameTile4) | Skin.String(TileSelector_Temp,GameTile5) | Skin.String(TileSelector_Temp,AddonTile2) | Skin.String(TileSelector_Temp,AddonTile3) | Skin.String(TileSelector_Temp,AddonTile4) | Skin.String(TileSelector_Temp,AddonTile5) | Skin.String(TileSelector_Temp,Custom1Tile2) | Skin.String(TileSelector_Temp,Custom1Tile3) | Skin.String(TileSelector_Temp,Custom1Tile4) | Skin.String(TileSelector_Temp,Custom1Tile5)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],DISABLED)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>tiles/disabled.png</icon>
+		</item>
+		<item id="901">
+			<label>$LOCALIZE[31196]</label>
+			<visible>Skin.String(TileSelector_Temp,MovieTile2) | Skin.String(TileSelector_Temp,MovieTile3) | Skin.String(TileSelector_Temp,MovieTile4) | Skin.String(TileSelector_Temp,MovieTile5) | Skin.String(TileSelector_Temp,TVShowTile2) | Skin.String(TileSelector_Temp,TVShowTile3) | Skin.String(TileSelector_Temp,TVShowTile4) | Skin.String(TileSelector_Temp,TVShowTile5) | Skin.String(TileSelector_Temp,MusicTile2) | Skin.String(TileSelector_Temp,MusicTile3) | Skin.String(TileSelector_Temp,MusicTile4) | Skin.String(TileSelector_Temp,MusicTile5) | Skin.String(TileSelector_Temp,MusicVidTile2) | Skin.String(TileSelector_Temp,MusicVidTile3) | Skin.String(TileSelector_Temp,MusicVidTile4) | Skin.String(TileSelector_Temp,MusicVidTile5) | Skin.String(TileSelector_Temp,PictureTile2) | Skin.String(TileSelector_Temp,PictureTile3) | Skin.String(TileSelector_Temp,PictureTile4) | Skin.String(TileSelector_Temp,PictureTile5) | Skin.String(TileSelector_Temp,GameTile2) | Skin.String(TileSelector_Temp,GameTile3) | Skin.String(TileSelector_Temp,GameTile4) | Skin.String(TileSelector_Temp,GameTile5) | Skin.String(TileSelector_Temp,AddonTile2) | Skin.String(TileSelector_Temp,AddonTile3) | Skin.String(TileSelector_Temp,AddonTile4) | Skin.String(TileSelector_Temp,AddonTile5) | Skin.String(TileSelector_Temp,Custom1Tile2) | Skin.String(TileSelector_Temp,Custom1Tile3) | Skin.String(TileSelector_Temp,Custom1Tile4) | Skin.String(TileSelector_Temp,Custom1Tile5)</visible>
+			<onclick>ActivateWindow(3001)</onclick>
+			<icon>tiles/custom.png</icon>
+		</item>
+		<item id="902">
+			<label>$LOCALIZE[31098]</label>
+			<visible>Skin.String(TileSelector_Temp,MovieTile2) | Skin.String(TileSelector_Temp,MovieTile3) | Skin.String(TileSelector_Temp,MovieTile4) | Skin.String(TileSelector_Temp,MovieTile5) | Skin.String(TileSelector_Temp,Custom1Tile1) | Skin.String(TileSelector_Temp,Custom1Tile2) | Skin.String(TileSelector_Temp,Custom1Tile3) | Skin.String(TileSelector_Temp,Custom1Tile4) | Skin.String(TileSelector_Temp,Custom1Tile5)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],3DMovies)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>tiles/3Dglasses.png</icon>
+		</item>
+		<item id="903">
+			<label>$LOCALIZE[31185]</label>
+			<visible>Skin.String(TileSelector_Temp,GameTile1) | Skin.String(TileSelector_Temp,GameTile2) | Skin.String(TileSelector_Temp,GameTile3) | Skin.String(TileSelector_Temp,GameTile4) | Skin.String(TileSelector_Temp,GameTile5) | Skin.String(TileSelector_Temp,Custom1Tile1) | Skin.String(TileSelector_Temp,Custom1Tile2) | Skin.String(TileSelector_Temp,Custom1Tile3) | Skin.String(TileSelector_Temp,Custom1Tile4) | Skin.String(TileSelector_Temp,Custom1Tile5)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],Adv.Launcher)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>tiles/games.png</icon>
+		</item>
+		<item id="904">
+			<label>$LOCALIZE[132]</label>
+			<visible>Skin.String(TileSelector_Temp,MusicTile1)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],Albums)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>tiles/albums.png</icon>
+		</item>
+		<item id="905">
+			<label>$LOCALIZE[133]</label>
+			<visible>Skin.String(TileSelector_Temp,MusicTile1)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],Artists)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>tiles/artists.png</icon>
+		</item>
+		<item id="906">
+			<label>$LOCALIZE[31167]</label>
+			<visible>Skin.String(TileSelector_Temp,LiveTVTile2) | Skin.String(TileSelector_Temp,LiveTVTile3) | Skin.String(TileSelector_Temp,LiveTVTile4) | Skin.String(TileSelector_Temp,LiveTVTile5)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],ChannelList)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>tiles/channels.png</icon>
+		</item>
+		<item id="907">
+			<label>$LOCALIZE[31033]</label>
+			<visible>Skin.String(TileSelector_Temp,MovieTile2) | Skin.String(TileSelector_Temp,MovieTile3) | Skin.String(TileSelector_Temp,MovieTile4) | Skin.String(TileSelector_Temp,MovieTile5) | Skin.String(TileSelector_Temp,Custom1Tile1) | Skin.String(TileSelector_Temp,Custom1Tile2) | Skin.String(TileSelector_Temp,Custom1Tile3) | Skin.String(TileSelector_Temp,Custom1Tile4) | Skin.String(TileSelector_Temp,Custom1Tile5)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],EjectDisc)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>tiles/eject.png</icon>
+		</item>
+		<item id="908">
+			<label>$LOCALIZE[1036]</label>
+			<visible>Skin.String(TileSelector_Temp,MovieTile2) | Skin.String(TileSelector_Temp,MovieTile3) | Skin.String(TileSelector_Temp,MovieTile4) | Skin.String(TileSelector_Temp,MovieTile5) | Skin.String(TileSelector_Temp,TVShowTile2) | Skin.String(TileSelector_Temp,TVShowTile3) | Skin.String(TileSelector_Temp,TVShowTile4) | Skin.String(TileSelector_Temp,TVShowTile5) | Skin.String(TileSelector_Temp,LiveTVTile2) | Skin.String(TileSelector_Temp,LiveTVTile3) | Skin.String(TileSelector_Temp,LiveTVTile4) | Skin.String(TileSelector_Temp,LiveTVTile5) | Skin.String(TileSelector_Temp,MusicTile2) | Skin.String(TileSelector_Temp,MusicTile3) | Skin.String(TileSelector_Temp,MusicTile4) | Skin.String(TileSelector_Temp,MusicTile5) | Skin.String(TileSelector_Temp,MusicVidTile2) | Skin.String(TileSelector_Temp,MusicVidTile3) | Skin.String(TileSelector_Temp,MusicVidTile4) | Skin.String(TileSelector_Temp,MusicVidTile5) | Skin.String(TileSelector_Temp,PictureTile2) | Skin.String(TileSelector_Temp,PictureTile3) | Skin.String(TileSelector_Temp,PictureTile4) | Skin.String(TileSelector_Temp,PictureTile5) | Skin.String(TileSelector_Temp,GameTile2) | Skin.String(TileSelector_Temp,GameTile3) | Skin.String(TileSelector_Temp,GameTile4) | Skin.String(TileSelector_Temp,GameTile5) | Skin.String(TileSelector_Temp,AddonTile2) | Skin.String(TileSelector_Temp,AddonTile3) | Skin.String(TileSelector_Temp,AddonTile4) | Skin.String(TileSelector_Temp,AddonTile5) | Skin.String(TileSelector_Temp,Custom1Tile1) | Skin.String(TileSelector_Temp,Custom1Tile2) | Skin.String(TileSelector_Temp,Custom1Tile3) | Skin.String(TileSelector_Temp,Custom1Tile4) | Skin.String(TileSelector_Temp,Custom1Tile5)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],Favourites)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>tiles/favourites.png</icon>
+		</item>
+		<item id="909">
+			<label>$LOCALIZE[10003]</label>
+			<visible>Skin.String(TileSelector_Temp,MovieTile2) | Skin.String(TileSelector_Temp,MovieTile3) | Skin.String(TileSelector_Temp,MovieTile4) | Skin.String(TileSelector_Temp,MovieTile5) | Skin.String(TileSelector_Temp,TVShowTile2) | Skin.String(TileSelector_Temp,TVShowTile3) | Skin.String(TileSelector_Temp,TVShowTile4) | Skin.String(TileSelector_Temp,TVShowTile5) | Skin.String(TileSelector_Temp,MusicTile2) | Skin.String(TileSelector_Temp,MusicTile3) | Skin.String(TileSelector_Temp,MusicTile4) | Skin.String(TileSelector_Temp,MusicTile5) | Skin.String(TileSelector_Temp,MusicVidTile2) | Skin.String(TileSelector_Temp,MusicVidTile3) | Skin.String(TileSelector_Temp,MusicVidTile4) | Skin.String(TileSelector_Temp,MusicVidTile5) | Skin.String(TileSelector_Temp,PictureTile2) | Skin.String(TileSelector_Temp,PictureTile3) | Skin.String(TileSelector_Temp,PictureTile4) | Skin.String(TileSelector_Temp,PictureTile5) | Skin.String(TileSelector_Temp,GameTile2) | Skin.String(TileSelector_Temp,GameTile3) | Skin.String(TileSelector_Temp,GameTile4) | Skin.String(TileSelector_Temp,GameTile5) | Skin.String(TileSelector_Temp,Custom1Tile1) | Skin.String(TileSelector_Temp,Custom1Tile2) | Skin.String(TileSelector_Temp,Custom1Tile3) | Skin.String(TileSelector_Temp,Custom1Tile4) | Skin.String(TileSelector_Temp,Custom1Tile5)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],FileManager)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>tiles/filemanager.png</icon>
+		</item>
+		<item id="910">
+			<label>$LOCALIZE[135]</label>
+			<visible>Skin.String(TileSelector_Temp,MovieTile2) | Skin.String(TileSelector_Temp,MovieTile3) | Skin.String(TileSelector_Temp,MovieTile4) | Skin.String(TileSelector_Temp,MovieTile5) | Skin.String(TileSelector_Temp,TVShowTile2) | Skin.String(TileSelector_Temp,TVShowTile3) | Skin.String(TileSelector_Temp,TVShowTile4) | Skin.String(TileSelector_Temp,TVShowTile5) | Skin.String(TileSelector_Temp,MusicTile2) | Skin.String(TileSelector_Temp,MusicTile3) | Skin.String(TileSelector_Temp,MusicTile4) | Skin.String(TileSelector_Temp,MusicTile5) | Skin.String(TileSelector_Temp,MusicVidTile2) | Skin.String(TileSelector_Temp,MusicVidTile3) | Skin.String(TileSelector_Temp,MusicVidTile4) | Skin.String(TileSelector_Temp,MusicVidTile5)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],Genres)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>tiles/genres.png</icon>
+		</item>
+		<item id="911">
+			<label>$LOCALIZE[31099]</label>
+			<visible>Skin.String(TileSelector_Temp,MovieTile2) | Skin.String(TileSelector_Temp,MovieTile3) | Skin.String(TileSelector_Temp,MovieTile4) | Skin.String(TileSelector_Temp,MovieTile5) | Skin.String(TileSelector_Temp,Custom1Tile1) | Skin.String(TileSelector_Temp,Custom1Tile2) | Skin.String(TileSelector_Temp,Custom1Tile3) | Skin.String(TileSelector_Temp,Custom1Tile4) | Skin.String(TileSelector_Temp,Custom1Tile5)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],HDMovies)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>tiles/HD.png</icon>
+		</item>
+		<item id="912">
+			<label>$LOCALIZE[31107]</label>
+			<visible>Skin.String(TileSelector_Temp,MovieTile2) | Skin.String(TileSelector_Temp,MovieTile3) | Skin.String(TileSelector_Temp,MovieTile4) | Skin.String(TileSelector_Temp,MovieTile5) | Skin.String(TileSelector_Temp,Custom1Tile1) | Skin.String(TileSelector_Temp,Custom1Tile2) | Skin.String(TileSelector_Temp,Custom1Tile3) | Skin.String(TileSelector_Temp,Custom1Tile4) | Skin.String(TileSelector_Temp,Custom1Tile5)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],MovieSets)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>tiles/collection.png</icon>
+		</item>	
+		<item id="913">
+			<label>$LOCALIZE[1038]</label>
+			<visible>Skin.String(TileSelector_Temp,MusicTile2) | Skin.String(TileSelector_Temp,MusicTile3) | Skin.String(TileSelector_Temp,MusicTile4) | Skin.String(TileSelector_Temp,MusicTile5) | Skin.String(TileSelector_Temp,AddonTile2) | Skin.String(TileSelector_Temp,AddonTile3) | Skin.String(TileSelector_Temp,AddonTile4) | Skin.String(TileSelector_Temp,AddonTile5) | Skin.String(TileSelector_Temp,Custom1Tile1) | Skin.String(TileSelector_Temp,Custom1Tile2) | Skin.String(TileSelector_Temp,Custom1Tile3) | Skin.String(TileSelector_Temp,Custom1Tile4) | Skin.String(TileSelector_Temp,Custom1Tile5)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],MusicAddons)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>tiles/music_addons.png</icon>
+		</item>
+		<item id="914">
+			<label>$LOCALIZE[31101]</label>
+			<visible>Skin.String(TileSelector_Temp,MusicTile2) | Skin.String(TileSelector_Temp,MusicTile3) | Skin.String(TileSelector_Temp,MusicTile4) | Skin.String(TileSelector_Temp,MusicTile5) | Skin.String(TileSelector_Temp,Custom1Tile1) | Skin.String(TileSelector_Temp,Custom1Tile2) | Skin.String(TileSelector_Temp,Custom1Tile3) | Skin.String(TileSelector_Temp,Custom1Tile4) | Skin.String(TileSelector_Temp,Custom1Tile5)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],MusicFiles)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>defaults/DefaultMusicSongs.png</icon>
+		</item>
+		<item id="915">
+			<label>$LOCALIZE[31183]</label>
+			<visible>[Skin.String(TileSelector_Temp,TVShowTile2) | Skin.String(TileSelector_Temp,TVShowTile3) | Skin.String(TileSelector_Temp,TVShowTile4) | Skin.String(TileSelector_Temp,TVShowTile5) | Skin.String(TileSelector_Temp,Custom1Tile1) | Skin.String(TileSelector_Temp,Custom1Tile2) | Skin.String(TileSelector_Temp,Custom1Tile3) | Skin.String(TileSelector_Temp,Custom1Tile4) | Skin.String(TileSelector_Temp,Custom1Tile5)] + Skin.HasSetting(UseNextAiredScript)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],NextAired)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>tiles/tvguide.png</icon>
+		</item>
+		<item id="916">
+			<label>$LOCALIZE[589]</label>
+			<visible>Skin.String(TileSelector_Temp,MusicTile2) | Skin.String(TileSelector_Temp,MusicTile3) | Skin.String(TileSelector_Temp,MusicTile4) | Skin.String(TileSelector_Temp,MusicTile5) | Skin.String(TileSelector_Temp,Custom1Tile1) | Skin.String(TileSelector_Temp,Custom1Tile2) | Skin.String(TileSelector_Temp,Custom1Tile3) | Skin.String(TileSelector_Temp,Custom1Tile4) | Skin.String(TileSelector_Temp,Custom1Tile5)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],PartyMode)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>tiles/party.png</icon>
+		</item>
+		<item id="917">
+			<label>$LOCALIZE[1039]</label>
+			<visible>Skin.String(TileSelector_Temp,PictureTile2) | Skin.String(TileSelector_Temp,PictureTile3) | Skin.String(TileSelector_Temp,PictureTile4) | Skin.String(TileSelector_Temp,PictureTile5) | Skin.String(TileSelector_Temp,AddonTile2) | Skin.String(TileSelector_Temp,AddonTile3) | Skin.String(TileSelector_Temp,AddonTile4) | Skin.String(TileSelector_Temp,AddonTile5) | Skin.String(TileSelector_Temp,Custom1Tile1) | Skin.String(TileSelector_Temp,Custom1Tile2) | Skin.String(TileSelector_Temp,Custom1Tile3) | Skin.String(TileSelector_Temp,Custom1Tile4) | Skin.String(TileSelector_Temp,Custom1Tile5)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],PictureAddons)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>tiles/picture_addons.png</icon>
+		</item>
+		<item id="918">
+			<label>$LOCALIZE[341]</label>
+			<visible>Skin.String(TileSelector_Temp,MovieTile2) | Skin.String(TileSelector_Temp,MovieTile3) | Skin.String(TileSelector_Temp,MovieTile4) | Skin.String(TileSelector_Temp,MovieTile5) | Skin.String(TileSelector_Temp,Custom1Tile1) | Skin.String(TileSelector_Temp,Custom1Tile2) | Skin.String(TileSelector_Temp,Custom1Tile3) | Skin.String(TileSelector_Temp,Custom1Tile4) | Skin.String(TileSelector_Temp,Custom1Tile5)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],PlayDisc)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>tiles/disc.png</icon>
+		</item>	
+		<item id="919">
+			<label>$LOCALIZE[136]</label>
+			<visible>Skin.String(TileSelector_Temp,MovieTile2) | Skin.String(TileSelector_Temp,MovieTile3) | Skin.String(TileSelector_Temp,MovieTile4) | Skin.String(TileSelector_Temp,MovieTile5) | Skin.String(TileSelector_Temp,TVShowTile2) | Skin.String(TileSelector_Temp,TVShowTile3) | Skin.String(TileSelector_Temp,TVShowTile4) | Skin.String(TileSelector_Temp,TVShowTile5) | Skin.String(TileSelector_Temp,MusicTile2) | Skin.String(TileSelector_Temp,MusicTile3) | Skin.String(TileSelector_Temp,MusicTile4) | Skin.String(TileSelector_Temp,MusicTile5) | Skin.String(TileSelector_Temp,MusicVidTile2) | Skin.String(TileSelector_Temp,MusicVidTile3) | Skin.String(TileSelector_Temp,MusicVidTile4) | Skin.String(TileSelector_Temp,MusicVidTile5) | Skin.String(TileSelector_Temp,Custom1Tile1) | Skin.String(TileSelector_Temp,Custom1Tile2) | Skin.String(TileSelector_Temp,Custom1Tile3) | Skin.String(TileSelector_Temp,Custom1Tile4) | Skin.String(TileSelector_Temp,Custom1Tile5)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],Playlists)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>tiles/playlist.png</icon>
+		</item>
+		<item id="920">
+			<label>$LOCALIZE[1043]</label>
+			<visible>Skin.String(TileSelector_Temp,GameTile2) | Skin.String(TileSelector_Temp,GameTile3) | Skin.String(TileSelector_Temp,GameTile4) | Skin.String(TileSelector_Temp,GameTile5) | Skin.String(TileSelector_Temp,AddonTile2) | Skin.String(TileSelector_Temp,AddonTile3) | Skin.String(TileSelector_Temp,AddonTile4) | Skin.String(TileSelector_Temp,AddonTile5) | Skin.String(TileSelector_Temp,Custom1Tile1) | Skin.String(TileSelector_Temp,Custom1Tile2) | Skin.String(TileSelector_Temp,Custom1Tile3) | Skin.String(TileSelector_Temp,Custom1Tile4) | Skin.String(TileSelector_Temp,Custom1Tile5)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],ProgramAddons)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>tiles/program_addons.png</icon>
+		</item>
+		<item id="921">
+			<label>$LOCALIZE[31168]</label>
+			<visible>Skin.String(TileSelector_Temp,LiveTVTile2) | Skin.String(TileSelector_Temp,LiveTVTile3) | Skin.String(TileSelector_Temp,LiveTVTile4) | Skin.String(TileSelector_Temp,LiveTVTile5)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],RadioList)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>tiles/radio.png</icon>
+		</item>
+		<item id="922">
+			<label>$LOCALIZE[31009]</label>
+			<visible>Skin.String(TileSelector_Temp,MovieTile2) | Skin.String(TileSelector_Temp,MovieTile3) | Skin.String(TileSelector_Temp,MovieTile4) | Skin.String(TileSelector_Temp,MovieTile5) | Skin.String(TileSelector_Temp,TVShowTile2) | Skin.String(TileSelector_Temp,TVShowTile3) | Skin.String(TileSelector_Temp,TVShowTile4) | Skin.String(TileSelector_Temp,TVShowTile5) | Skin.String(TileSelector_Temp,MusicTile2) | Skin.String(TileSelector_Temp,MusicTile3) | Skin.String(TileSelector_Temp,MusicTile4) | Skin.String(TileSelector_Temp,MusicTile5) | Skin.String(TileSelector_Temp,MusicVidTile2) | Skin.String(TileSelector_Temp,MusicVidTile3) | Skin.String(TileSelector_Temp,MusicVidTile4) | Skin.String(TileSelector_Temp,MusicVidTile5)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],RecentlyAdded)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>tiles/recent.png</icon>
+		</item>
+		<item id="923">
+			<label>$LOCALIZE[31032]</label>
+			<visible>Skin.String(TileSelector_Temp,LiveTVTile2) | Skin.String(TileSelector_Temp,LiveTVTile3) | Skin.String(TileSelector_Temp,LiveTVTile4) | Skin.String(TileSelector_Temp,LiveTVTile5)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],Recording)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>tiles/recordings.png</icon>
+		</item>
+		<item id="924">
+			<label>$LOCALIZE[31184]</label>
+			<visible>Skin.String(TileSelector_Temp,GameTile1) | Skin.String(TileSelector_Temp,Custom1Tile1) | Skin.String(TileSelector_Temp,Custom1Tile2) | Skin.String(TileSelector_Temp,Custom1Tile3) | Skin.String(TileSelector_Temp,Custom1Tile4) | Skin.String(TileSelector_Temp,Custom1Tile5)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],RCB)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>tiles/games.png</icon>
+		</item>
+		<item id="925">
+			<label>$LOCALIZE[5]</label>
+			<visible>Skin.String(TileSelector_Temp,MovieTile2) | Skin.String(TileSelector_Temp,MovieTile3) | Skin.String(TileSelector_Temp,MovieTile4) | Skin.String(TileSelector_Temp,MovieTile5) | Skin.String(TileSelector_Temp,TVShowTile2) | Skin.String(TileSelector_Temp,TVShowTile3) | Skin.String(TileSelector_Temp,TVShowTile4) | Skin.String(TileSelector_Temp,TVShowTile5) | Skin.String(TileSelector_Temp,LiveTVTile2) | Skin.String(TileSelector_Temp,LiveTVTile3) | Skin.String(TileSelector_Temp,LiveTVTile4) | Skin.String(TileSelector_Temp,LiveTVTile5) | Skin.String(TileSelector_Temp,MusicTile2) | Skin.String(TileSelector_Temp,MusicTile3) | Skin.String(TileSelector_Temp,MusicTile4) | Skin.String(TileSelector_Temp,MusicTile5) | Skin.String(TileSelector_Temp,MusicVidTile2) | Skin.String(TileSelector_Temp,MusicVidTile3) | Skin.String(TileSelector_Temp,MusicVidTile4) | Skin.String(TileSelector_Temp,MusicVidTile5) | Skin.String(TileSelector_Temp,PictureTile2) | Skin.String(TileSelector_Temp,PictureTile3) | Skin.String(TileSelector_Temp,PictureTile4) | Skin.String(TileSelector_Temp,PictureTile5) | Skin.String(TileSelector_Temp,GameTile2) | Skin.String(TileSelector_Temp,GameTile3) | Skin.String(TileSelector_Temp,GameTile4) | Skin.String(TileSelector_Temp,GameTile5) | Skin.String(TileSelector_Temp,AddonTile2) | Skin.String(TileSelector_Temp,AddonTile3) | Skin.String(TileSelector_Temp,AddonTile4) | Skin.String(TileSelector_Temp,AddonTile5) | Skin.String(TileSelector_Temp,Custom1Tile1) | Skin.String(TileSelector_Temp,Custom1Tile2) | Skin.String(TileSelector_Temp,Custom1Tile3) | Skin.String(TileSelector_Temp,Custom1Tile4) | Skin.String(TileSelector_Temp,Custom1Tile5)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],Settings)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>tiles/settings.png</icon>
+		</item>	
+		<item id="926">
+			<label>$LOCALIZE[134]</label>
+			<visible>Skin.String(TileSelector_Temp,MusicTile1)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],Songs)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>tiles/songs.png</icon>
+		</item>		
+		<item id="927">
+			<label>$LOCALIZE[20459]</label>
+			<visible>Skin.String(TileSelector_Temp,MovieTile2) | Skin.String(TileSelector_Temp,MovieTile3) | Skin.String(TileSelector_Temp,MovieTile4) | Skin.String(TileSelector_Temp,MovieTile5) | Skin.String(TileSelector_Temp,Custom1Tile1) | Skin.String(TileSelector_Temp,Custom1Tile2) | Skin.String(TileSelector_Temp,Custom1Tile3) | Skin.String(TileSelector_Temp,Custom1Tile4) | Skin.String(TileSelector_Temp,Custom1Tile5)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],Tags)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>tiles/tags.png</icon>
+		</item>	
+		<item id="928">
+			<label>$LOCALIZE[271]</label>
+			<visible>Skin.String(TileSelector_Temp,MusicTile2) | Skin.String(TileSelector_Temp,MusicTile3) | Skin.String(TileSelector_Temp,MusicTile4) | Skin.String(TileSelector_Temp,MusicTile5) | Skin.String(TileSelector_Temp,Custom1Tile1) | Skin.String(TileSelector_Temp,Custom1Tile2) | Skin.String(TileSelector_Temp,Custom1Tile3) | Skin.String(TileSelector_Temp,Custom1Tile4) | Skin.String(TileSelector_Temp,Custom1Tile5)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],Top100)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>tiles/top100.png</icon>
+		</item>
+		<item id="929">
+			<label>$LOCALIZE[31106]</label>
+			<visible>Skin.String(TileSelector_Temp,LiveTVTile2) | Skin.String(TileSelector_Temp,LiveTVTile3) | Skin.String(TileSelector_Temp,LiveTVTile4) | Skin.String(TileSelector_Temp,LiveTVTile5)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],Timers)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>tiles/recent.png</icon>
+		</item>
+		<item id="930">
+			<label>$LOCALIZE[653]</label>
+			<visible>Skin.String(TileSelector_Temp,MovieTile2) | Skin.String(TileSelector_Temp,MovieTile3) | Skin.String(TileSelector_Temp,MovieTile4) | Skin.String(TileSelector_Temp,MovieTile5) | Skin.String(TileSelector_Temp,TVShowTile2) | Skin.String(TileSelector_Temp,TVShowTile3) | Skin.String(TileSelector_Temp,TVShowTile4) | Skin.String(TileSelector_Temp,TVShowTile5) | Skin.String(TileSelector_Temp,MusicTile2) | Skin.String(TileSelector_Temp,MusicTile3) | Skin.String(TileSelector_Temp,MusicTile4) | Skin.String(TileSelector_Temp,MusicTile5) | Skin.String(TileSelector_Temp,MusicVidTile2) | Skin.String(TileSelector_Temp,MusicVidTile3) | Skin.String(TileSelector_Temp,MusicVidTile4) | Skin.String(TileSelector_Temp,MusicVidTile5)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],Update)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>tiles/update.png</icon>
+		</item>		
+		<item id="931">
+			<label>$LOCALIZE[1037]</label>
+			<visible>Skin.String(TileSelector_Temp,MovieTile2) | Skin.String(TileSelector_Temp,MovieTile3) | Skin.String(TileSelector_Temp,MovieTile4) | Skin.String(TileSelector_Temp,MovieTile5) | Skin.String(TileSelector_Temp,TVShowTile2) | Skin.String(TileSelector_Temp,TVShowTile3) | Skin.String(TileSelector_Temp,TVShowTile4) | Skin.String(TileSelector_Temp,TVShowTile5) | Skin.String(TileSelector_Temp,LiveTVTile2) | Skin.String(TileSelector_Temp,LiveTVTile3) | Skin.String(TileSelector_Temp,LiveTVTile4) | Skin.String(TileSelector_Temp,LiveTVTile5) | Skin.String(TileSelector_Temp,MusicVidTile2) | Skin.String(TileSelector_Temp,MusicVidTile3) | Skin.String(TileSelector_Temp,MusicVidTile4) | Skin.String(TileSelector_Temp,MusicVidTile5) | Skin.String(TileSelector_Temp,AddonTile2) | Skin.String(TileSelector_Temp,AddonTile3) | Skin.String(TileSelector_Temp,AddonTile4) | Skin.String(TileSelector_Temp,AddonTile5) | Skin.String(TileSelector_Temp,Custom1Tile1) | Skin.String(TileSelector_Temp,Custom1Tile2) | Skin.String(TileSelector_Temp,Custom1Tile3) | Skin.String(TileSelector_Temp,Custom1Tile4) | Skin.String(TileSelector_Temp,Custom1Tile5)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],VideoAddons)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>tiles/video_addons.png</icon>
+		</item>
+		<item id="932">
+			<label>$LOCALIZE[31100]</label>
+			<visible>Skin.String(TileSelector_Temp,MovieTile2) | Skin.String(TileSelector_Temp,MovieTile3) | Skin.String(TileSelector_Temp,MovieTile4) | Skin.String(TileSelector_Temp,MovieTile5) | Skin.String(TileSelector_Temp,TVShowTile2) | Skin.String(TileSelector_Temp,TVShowTile3) | Skin.String(TileSelector_Temp,TVShowTile4) | Skin.String(TileSelector_Temp,TVShowTile5) | Skin.String(TileSelector_Temp,LiveTVTile2) | Skin.String(TileSelector_Temp,LiveTVTile3) | Skin.String(TileSelector_Temp,LiveTVTile4) | Skin.String(TileSelector_Temp,LiveTVTile5) | Skin.String(TileSelector_Temp,MusicVidTile2) | Skin.String(TileSelector_Temp,MusicVidTile3) | Skin.String(TileSelector_Temp,MusicVidTile4) | Skin.String(TileSelector_Temp,MusicVidTile5) | Skin.String(TileSelector_Temp,Custom1Tile1) | Skin.String(TileSelector_Temp,Custom1Tile2) | Skin.String(TileSelector_Temp,Custom1Tile3) | Skin.String(TileSelector_Temp,Custom1Tile4) | Skin.String(TileSelector_Temp,Custom1Tile5)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],VideoFiles)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>defaults/DefaultMovies.png</icon>
+		</item>
+		<item id="933">
+			<label>$LOCALIZE[31016]</label>
+			<visible>Skin.String(TileSelector_Temp,MovieTile2) | Skin.String(TileSelector_Temp,MovieTile3) | Skin.String(TileSelector_Temp,MovieTile4) | Skin.String(TileSelector_Temp,MovieTile5) | Skin.String(TileSelector_Temp,TVShowTile2) | Skin.String(TileSelector_Temp,TVShowTile3) | Skin.String(TileSelector_Temp,TVShowTile4) | Skin.String(TileSelector_Temp,TVShowTile5) | Skin.String(TileSelector_Temp,MusicTile2) | Skin.String(TileSelector_Temp,MusicTile3) | Skin.String(TileSelector_Temp,MusicTile4) | Skin.String(TileSelector_Temp,MusicTile5) | Skin.String(TileSelector_Temp,MusicVidTile2) | Skin.String(TileSelector_Temp,MusicVidTile3) | Skin.String(TileSelector_Temp,MusicVidTile4) | Skin.String(TileSelector_Temp,MusicVidTile5) | Skin.String(TileSelector_Temp,MovieTile2) | Skin.String(TileSelector_Temp,MovieTile3) | Skin.String(TileSelector_Temp,MovieTile4) | Skin.String(TileSelector_Temp,MovieTile5)</visible>
+			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],Views)</onclick>
+			<include>Content_Clear</include>
+			<onclick>Dialog.Close(200)</onclick>
+			<icon>tiles/views.png</icon>
+		</item>
+		
+	</include>
+
+</includes>						

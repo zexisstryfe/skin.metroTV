@@ -1,0 +1,43 @@
+﻿[B]metroTV 0.3.1[/B]
+
+Bug Fixes
+ - Showcase View extra thumbs don't line up
+ - TV Guide- you get stuck in the setting panel
+ - Not all video views have watched icons
+ - Turn off text scrolling on all movie names which are not selected
+ - Touchbox needs to be added to access the Options menu for touch displays
+
+Home Screen Changes
+ - Addition of a "Music Files" tile under music to simplify adding new music.
+ 
+Options
+ - Metro Flip transitions can now be disabled to support lower level hardware
+
+[B]metroTV 0.3.0[/B]
+
+General
+ - XBMC 12.0 FRODO FINAL is now required for using metroTV.
+ - New LOGO!
+
+Appearance Changes
+ - Added two new themes- Teal and Magenta!
+ - Added Metro Flip screen transitions
+
+Home Screen Changes
+ - To support future customization it is now possible to hide the recently added panels for Movies, TV, and Music.
+ - Tiles have been rearranged for Movies, TV, and Music.
+ - TV Shows has been renamed Television since it now encompasses all Television options.
+ - Added Tiles for Live TV and Recording (PVR is NOT functional!!! These are in preparation!)
+ - Added a toggle-able More Views panel to allow for viewing by Actor, Album,etc in Movies, TV and Music.
+ - Music Files tile has been added to Music to allow for easier adding of media.
+
+View Changes
+ - The bar in the upper Left corner now opens the options panel.
+ - A back button has been added to navigate back to the Home screen (touch/mouse controls under System -> Input Devices must be active to see!)
+
+Bug Fixes
+ - Showcase View extra fanart now lines up properly!
+ - TV Guide you no longer get stuck in the Options panel when using a keyboard.
+ - All Video views now have Watched icons.
+ - Text scrolling in Views now only occurs when the title is highlighted.
+ - The skin should now automatically download required scripts and addons.

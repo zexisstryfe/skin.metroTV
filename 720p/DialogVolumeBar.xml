@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window id="104">
+	<defaultcontrol always="true">-</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<control type="group">
+			<posx>840</posx>
+			<posy>20</posy>
+
+			<control type="image">
+				<description>background image</description>
+				<width>400</width>
+				<height>45</height>
+				<include>Common_Color_Keyback1</include>
+			</control>
+
+			<control type="group">
+				<visible>!player.passthrough</visible>
+
+				<control type="image">
+					<description>Lite Volume Logo</description>
+					<posx>10</posx>
+					<posy>4</posy>
+					<width>40</width>
+					<height>35</height>
+					<aspectratio>keep</aspectratio>
+					<texture>volume/VolumeIcon.png</texture>
+				</control>
+
+				<control type="progress" id="1">
+					<description>progress control</description>
+					<posx>60</posx>
+					<posy>20</posy>
+					<width>325</width>
+					<height>5</height>
+					<info>Player.Volume</info>
+				</control>
+
+			</control>
+
+			<control type="group">
+				<visible>player.passthrough</visible>
+
+				<control type="image">
+					<description>Lite Volume Logo</description>
+					<posx>10</posx>
+					<posy>4</posy>
+					<width>40</width>
+					<height>35</height>
+					<aspectratio>keep</aspectratio>
+					<colordiffuse>Red</colordiffuse>
+					<texture>volume/VolumeIcon.png</texture>
+				</control>
+
+				<control type="label">
+					<description>Passthrough Label</description>
+					<posx>50</posx>
+					<posy>10</posy>
+					<width>330</width>
+					<height>20</height>
+					<label>29802</label>
+				</control>
+
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

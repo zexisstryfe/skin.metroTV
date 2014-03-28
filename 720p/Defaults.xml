@@ -1,0 +1,204 @@
+<includes>
+
+	<default type="label">
+		<posx>0</posx>
+		<posy>0</posy>
+		<label>-</label>
+		<height>44</height>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>font20L</font>
+		<textcolor>White</textcolor>
+		<focusedcolor>White</focusedcolor>
+		<selectedcolor>White</selectedcolor>
+		<disabledcolor>Black</disabledcolor>
+	</default>
+
+	<default type="fadelabel">
+		<posx>0</posx>
+		<posy>0</posy>
+		<height>44</height>
+		<label>-</label>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>font20L</font>
+		<textcolor>White</textcolor>
+		<focusedcolor>White</focusedcolor>
+		<selectedcolor>White</selectedcolor>
+		<disabledcolor>Black</disabledcolor>
+		<scrollout>false</scrollout>
+		<pauseatend>2000</pauseatend>
+	</default>
+
+	<default type="image">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>-</width>
+		<height>-</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<texture>-</texture>
+	</default>
+
+	<default type="button">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>300</width>
+		<height>44</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>font20L</font>
+		<label>-</label>
+		<textoffsetx>20</textoffsetx>
+		<textcolor>White</textcolor>
+		<focusedcolor>White</focusedcolor>
+		<disabledcolor>Black</disabledcolor>
+		<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
+		<pulseonselect>false</pulseonselect>
+	</default>
+
+	<default type="togglebutton">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>300</width>
+		<height>44</height>
+		<label>-</label>
+		<textoffsetx>20</textoffsetx>
+		<font>font20L</font>
+		<textcolor>White</textcolor>
+		<focusedcolor>White</focusedcolor>
+		<disabledcolor>Black</disabledcolor>
+		<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
+		<alttexturefocus border="5" colordiffuse="Accent">colors/color_white.png</alttexturefocus>
+		<align>center</align>
+		<aligny>center</aligny>
+		<pulseonselect>false</pulseonselect>
+	</default>
+
+	<default type="radiobutton">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>300</width>
+		<height>44</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>font20L</font>
+		<label>-</label>
+		<textcolor>White</textcolor>
+		<focusedcolor>White</focusedcolor>
+		<disabledcolor>Black</disabledcolor>
+		<radiowidth>30</radiowidth>
+		<radioheight>30</radioheight>
+		<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
+		<textureradiofocus>controls/RadiobuttonFo.png</textureradiofocus>
+		<textureradionofocus>controls/RadiobuttonNF.png</textureradionofocus>
+		<textoffsetx>20</textoffsetx>
+		<pulseonselect>false</pulseonselect>
+	</default>
+
+	<default type="spincontrolex">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>300</width>
+		<height>44</height>
+		<label>-</label>
+		<font>font20L</font>
+		<spinwidth>26</spinwidth>
+		<spinheight>26</spinheight>
+		<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
+		<textureup>controls/ArrowUpNF.png</textureup>
+		<texturedown>controls/ArrowDownNF.png</texturedown>
+		<textureupfocus>controls/ArrowUpFO.png</textureupfocus>
+		<texturedownfocus>controls/ArrowDownFO.png</texturedownfocus>
+		<textcolor>White</textcolor>
+		<focusedcolor>White</focusedcolor>
+		<disabledcolor>Black</disabledcolor>
+		<textoffsetx>20</textoffsetx>
+		<align>left</align>
+		<aligny>center</aligny>
+		<reverse>yes</reverse>
+		<pulseonselect>false</pulseonselect>
+	</default>
+
+	<default type="spincontrol">
+		<posx>0</posx>
+		<posy>0</posy>
+		<height>15</height>
+		<width>15</width>
+		<spinwidth>26</spinwidth>
+		<spinheight>26</spinheight>
+		<textureup>controls/ArrowUpNF.png</textureup>
+		<texturedown>controls/ArrowDownNF.png</texturedown>
+		<textureupfocus>controls/ArrowUpFO.png</textureupfocus>
+		<texturedownfocus>controls/ArrowDownFO.png</texturedownfocus>
+		<font>font20L</font>
+		<textcolor>White</textcolor>
+		<focusedcolor>White</focusedcolor>
+		<disabledcolor>Black</disabledcolor>
+		<textoffsetx>20</textoffsetx>
+		<align>left</align>
+		<aligny>center</aligny>
+		<reverse>yes</reverse>
+		<pulseonselect>false</pulseonselect>
+	</default>
+
+	<default type="sliderex">
+		<posx>0</posx>
+		<posy>0</posy>
+		<height>44</height>
+		<width>300</width>
+		<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
+		<sliderwidth>150</sliderwidth>
+		<sliderheight>15</sliderheight>
+		<texturesliderbar>OSD/slider_bg.png</texturesliderbar>
+		<textureslidernib border="2">OSD/SliderNibNF.png</textureslidernib>
+		<textureslidernibfocus border="2">OSD/SliderNibFO.png</textureslidernibfocus>
+		<font>font20L</font>
+		<textcolor>White</textcolor>
+		<focusedcolor>White</focusedcolor>
+		<disabledcolor>Black</disabledcolor>
+		<textoffsetx>20</textoffsetx>
+		<textoffsety>0</textoffsety>
+	</default>
+
+	<default type="progress">
+		<posx>150</posx>
+		<posy>325</posy>
+		<height>5</height>
+		<texturebg>controls/ProgressBack.png</texturebg>
+		<lefttexture>-</lefttexture>
+		<midtexture>controls/ProgressMid.png</midtexture>
+		<righttexture>-</righttexture>
+		<overlaytexture>-</overlaytexture>
+	</default>
+
+	<default type="slider">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>420</width>
+		<height>15</height>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<texturesliderbar>OSD/slider_bg_2.png</texturesliderbar>
+		<textureslidernib border="2">OSD/SliderNibNF.png</textureslidernib>
+		<textureslidernibfocus border="2">OSD/SliderNibFO.png</textureslidernibfocus>
+	</default>
+
+	<default type="scrollbar">
+		<width>5</width>
+		<texturesliderbar colordiffuse="Accent">colors/color_white.png</texturesliderbar> 
+		<texturesliderbackground colordiffuse="Keyback2">colors/color_white.png</texturesliderbackground> 
+		<texturesliderbarfocus colordiffuse="Accent">colors/color_white.png</texturesliderbarfocus>
+		<showonepage>true</showonepage>
+		<orientation>vertical</orientation>
+	</default>
+
+	<default type="textbox">
+		<label>-</label>
+		<font>font20L</font>
+		<textcolor>white</textcolor>
+		<pagecontrol>61</pagecontrol>
+		<autoscroll delay="6000" time="2000" repeat="10000"/>
+	</default>
+
+</includes>

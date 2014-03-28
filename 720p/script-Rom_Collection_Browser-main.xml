@@ -1,0 +1,1308 @@
+<window>		
+	<allowoverlay>no</allowoverlay>
+	<defaultcontrol always="false">500</defaultcontrol>
+	<coordinates>
+	        <system>1</system>
+        	<posx>0</posx>
+        	<posy>0</posy>
+	</coordinates>
+	
+	<controls>
+	
+		<!-- background -->
+		<control type="image" id="75">
+		    <description>background image</description>
+		    <posx>0</posx>
+		    <posy>0</posy>
+		    <width>1280</width>
+		    <height>720</height>
+			<texture fallback="special://skin/backgrounds/games.jpg">$INFO[ListItem.Property(background)]</texture>
+		</control>
+		
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture background="true">backings/music_fanart_diffuse.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			<visible>Skin.HasSetting(UseFanartOverlay)</visible>
+			<visible>Control.IsVisible(50) | Control.IsVisible(58)</visible>
+		</control>
+		
+		<include>Common_TopBar</include>
+		
+		<!-- gamelist groups -->
+		<control type="group" id="200">
+			
+			<!-- gamelist 50 (INFO) -->
+			<control type="group">
+				<posx>0</posx>
+				<posy>0</posy>
+				<visible>Control.IsVisible(50)</visible>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>660</posy>
+					<width>1280</width>
+					<height>90</height>
+					<include>Common_Color_Tile1</include>
+				</control>	
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>660</posy>
+					<width>1280</width>
+					<height>1</height>
+					<include>Common_Color_Accent</include>
+				</control>
+				
+				<control type="image">
+					<animation delay="200" effect="fade" start="0" end="100">Visible</animation>
+					<description>gameinfo</description>
+					<posx>540</posx>
+					<posy>110</posy>
+					<width>200</width>
+					<height>140</height>
+					<texture>$INFO[ListItem.Property(extraImage1)]</texture>
+					<align>left</align>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				
+				<control type="image">
+					<animation delay="200" effect="fade" start="0" end="100">Visible</animation>
+					<description>gameinfo</description>
+					<posx>540</posx>
+					<posy>260</posy>
+					<width>200</width>
+					<height>140</height>
+					<texture>$INFO[ListItem.Property(extraImage2)]</texture>
+					<align>left</align>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				
+				<control type="wraplist" id="50">
+					<posx>-115</posx>
+					<posy>380</posy>
+					<width>1420</width>
+					<height>300</height>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>500</onup>					
+					<ondown>60</ondown>
+					<orientation>horizontal</orientation>
+					<focusposition>4</focusposition>
+					<viewtype label="Info">wrap</viewtype>
+					<scrolltime>100</scrolltime>
+					<pagecontrol>60</pagecontrol>
+					<preloaditems>2</preloaditems>
+					<itemlayout width="170" height="300">
+					
+						<control type="group">
+						
+							<control type="image">
+								<posx>0</posx>
+								<posy>15</posy>
+								<width>160</width>
+								<height>240</height>								
+								<aspectratio align="center" aligny="bottom">keep</aspectratio>
+								<bordertexture border="2">rcb-button-nofocus.png</bordertexture>
+								<bordersize>2</bordersize>
+								<texture background="true" fallback="defaults/DefaultGameTile.png">$INFO[ListItem.ActualIcon]</texture>								
+							</control>
+							
+							<control type="image">
+								<posx>-50</posx>
+								<posy>240</posy>
+								<width>100</width>
+								<height>25</height>
+								<texture>views/favourite.png</texture>					
+								<visible>!IsEmpty(ListItem.Property(isfavorite))</visible>
+							</control>
+							
+						</control>
+						
+					</itemlayout>
+					
+					<focusedlayout width="160" height="240">
+					
+						<control type="image">
+							<posx>-5</posx>
+							<posy>0</posy>
+							<width>160</width>
+							<height>240</height>
+							<aspectratio align="center" aligny="bottom">keep</aspectratio>
+							<bordertexture border="8">general/accent.png</bordertexture>
+							<bordersize>5</bordersize>
+							<texture background="true" fallback="defaults/DefaultGame.png">$INFO[ListItem.Thumb]</texture>
+							<animation reversible="false" effect="zoom" end="120" center="auto" time="150">Focus</animation>
+						</control>
+						
+						<control type="image">
+							<posx>-65</posx>
+							<posy>250</posy>
+							<width>100</width>
+							<height>25</height>
+							<texture>views/favourite.png</texture>
+							<visible>!IsEmpty(ListItem.Property(isfavorite))</visible>
+							<animation reversible="false" effect="fade" start="0" end="100" time="150">Focus</animation>
+						</control>
+						
+					</focusedlayout>
+					
+				</control>
+				
+				<control type="image">
+					<description>outline</description>
+					<animation effect="fade" time="200">VisibleChange</animation>
+					<posx>99</posx>
+					<posy>649</posy>
+					<width>1082</width>
+					<height>7</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>colors/color_white.png</texture>
+					<visible>Control.HasFocus(60)</visible>
+				</control>
+				
+				<control type="scrollbar" id="60">
+					<posx>100</posx>
+					<posy>650</posy>
+					<width>1080</width>
+					<height>5</height>
+					<onup>58</onup>
+					<ondown>9000</ondown>
+					<orientation>horizontal</orientation>
+				</control>
+				
+				<control type="label">
+					<label>[COLOR Accent]$INFO[ListItem.Label][/COLOR] $INFO[ListItem.Property(console)]</label>
+					<posx>0</posx>
+					<posy>660</posy>
+					<height>50</height>
+					<width>1280</width>
+					<font>font40UB</font>
+					<align>center</align>
+				</control>
+				
+				<!-- top area -->
+				<control type="group">
+					<visible allowhiddenfocus="true">Control.IsVisible(50)</visible>
+					<posx>0</posx>
+					<posy>0</posy>	
+					
+					<control type="image" id="2000">
+						<animation delay="200" effect="fade" start="0" end="100">Visible</animation>
+						<description>gameinfo</description>
+						<posx>20</posx>
+						<posy>110</posy>
+						<width>510</width>
+						<height>290</height>
+						<texture>$INFO[ListItem.Property(gameinfobig)]</texture>
+						<align>left</align>
+						<aspectratio>stretch</aspectratio>
+					</control>	
+					
+					<!-- info area -->
+					<control type="image">
+						<posx>750</posx>
+						<posy>110</posy>
+						<animation delay="200" effect="fade" start="0" end="100">Visible</animation>
+						<description>gameinfo</description>
+						<width>510</width>
+						<height>290</height>
+						<include>Common_Color_Tile1</include>
+					</control>
+						
+					<control type="grouplist">
+						<posx>770</posx>
+						<posy>120</posy>
+						<width>470</width>
+						<height>270</height>
+						<itemgap>0</itemgap>
+						<orientation>vertical</orientation>
+						
+						<control type="group">
+							<height>28</height>
+							<visible>!IsEmpty(ListItem.Property(Year))</visible>
+							
+							<control type="label">
+								<description>Type Label</description>
+								<include>Common_Infolist_Label</include>
+								<label>$ADDON[script.games.rom.collection.browser 50000]:</label>
+							</control>
+							
+							<control type="label">
+								<description>Type Value</description>
+								<include>Common_Infolist_Info</include>
+								<label>$INFO[ListItem.Property(Year)]</label>						
+							</control>
+							
+						</control>
+
+						<control type="group">
+							<height>28</height>
+							<visible>!IsEmpty(ListItem.Property(Genre))</visible>
+							
+							<control type="label">
+								<description>Type Label</description>
+								<include>Common_Infolist_Label</include>
+								<label>$ADDON[script.games.rom.collection.browser 50001]:</label>
+							</control>
+							
+							<control type="label">
+								<description>Type Value</description>
+								<include>Common_Infolist_Info</include>
+								<label>$INFO[ListItem.Property(Genre)]</label>						
+							</control>
+							
+						</control>						
+						
+						<control type="group">
+							<height>28</height>
+							<visible>!IsEmpty(ListItem.Property(Publisher))</visible>
+							
+							<control type="label">
+								<description>Type Label</description>
+								<include>Common_Infolist_Label</include>
+								<label>$ADDON[script.games.rom.collection.browser 50002]:</label>
+							</control>
+							
+							<control type="label">
+								<description>Type Value</description>
+								<include>Common_Infolist_Info</include>
+								<label>$INFO[ListItem.Property(Publisher)]</label>						
+							</control>
+							
+						</control>
+						
+						<control type="group">
+							<height>28</height>
+							<visible>!IsEmpty(ListItem.Property(Developer))</visible>
+							
+							<control type="label">
+								<description>Type Label</description>
+								<include>Common_Infolist_Label</include>
+								<label>$ADDON[script.games.rom.collection.browser 50003]:</label>
+							</control>
+							
+							<control type="label">
+								<description>Type Value</description>
+								<include>Common_Infolist_Info</include>
+								<label>$INFO[ListItem.Property(Developer)]</label>						
+							</control>
+							
+						</control>	
+						
+						<control type="textbox" id="2100">
+							<description>Plot</description>
+							<width>470</width>
+							<height>150</height>
+							<align>justify</align>
+							<font>font18</font>
+							<label>$INFO[ListItem.Property(plot)]</label>
+						</control>
+						
+					</control>
+					
+				</control>
+				
+			</control>
+			
+			<!-- gamelist 52 (FANART)-->
+			<control type="group">
+				<visible>Control.IsVisible(52)</visible>
+				
+				<control type="image">
+					<description>gamelist background image</description>
+					<posx>905</posx>
+					<posy>0</posy>
+					<width>375</width>
+					<height>720</height>
+					<include>Common_Color_Tile1</include>
+				</control>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>540</posy>
+					<width>900</width>
+					<height>160</height>
+					<include>Common_Color_Tile1</include>
+				</control>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>540</posy>
+					<width>900</width>
+					<height>1</height>
+					<include>Common_Color_Accent</include>
+				</control>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>699</posy>
+					<width>900</width>
+					<height>1</height>
+					<include>Common_Color_Accent</include>
+				</control>
+				
+				<control type="group">
+					<posx>905</posx>
+					<posy>0</posy>	
+					
+					<control type="list" id="52">					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>375</width>
+						<height>720</height>
+						<onleft>61</onleft>
+						<onright>9000</onright>
+						<onup>52</onup>
+						<ondown>52</ondown>
+						<pagecontrol>61</pagecontrol>
+						<viewtype label="fanart">list</viewtype>	
+						<scrolltime>100</scrolltime>
+						<itemlayout height="32" width="640">
+						
+							<control type="image">
+								<posx>340</posx>
+								<posy>2</posy>
+								<width>25</width>
+								<height>25</height>
+								<texture>views/favourite.png</texture>
+								<visible>!IsEmpty(ListItem.Property(isfavorite))</visible>
+							</control>
+							
+							<control type="label">
+								<posx>20</posx>
+								<width>315</width>
+								<height>30</height>
+								<font>font20</font>
+								<label>$INFO[ListItem.Label]</label>
+							</control>>	
+							
+						</itemlayout>
+						
+						<focusedlayout height="32" width="640">
+						
+							<control type="image">
+								<width>375</width>
+								<posy></posy>
+								<height>30</height>
+								<include>Common_Color_Accent</include>
+								<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(52)">Conditional</animation>
+							</control>	
+							
+							<control type="label">
+								<posx>20</posx>
+								<width>315</width>
+								<height>30</height>
+								<font>font20</font>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+							
+							<control type="image">
+								<posx>340</posx>
+								<posy>2</posy>
+								<width>25</width>
+								<height>25</height>
+								<texture>views/favourite.png</texture>
+								<visible>!IsEmpty(ListItem.Property(isfavorite))</visible>
+							</control>
+							
+						</focusedlayout>
+						
+					</control>
+					
+					<control type="image">
+						<description>outline</description>
+						<animation effect="fade" time="200">VisibleChange</animation>
+						<posx>-6</posx>
+						<posy>-1</posy>
+						<width>7</width>
+						<height>722</height>
+						<aspectratio>stretch</aspectratio>
+						<texture>colors/color_white.png</texture>
+						<visible>Control.HasFocus(61)</visible>
+					</control>
+					
+					<control type="scrollbar" id="61">
+						<posx>-5</posx>
+						<posy>0</posy>
+						<height>720</height>
+						<width>5</width>
+						<texturesliderbar>general/accent.png</texturesliderbar> 
+						<texturesliderbackground>backings/key-back2.png</texturesliderbackground> 
+						<texturesliderbarfocus>general/accent.png</texturesliderbarfocus>
+						<orientation>vertical</orientation>
+						<onleft>500</onleft>
+						<onright>52</onright>
+						<visible>Control.IsVisible(52)</visible>
+					</control>
+					
+				</control>
+				
+				<control type="image">
+					<posx>18</posx>
+					<posy>403</posy>
+					<width>250</width>
+					<height>300</height>
+					<aspectratio align="left" aligny="bottom">keep</aspectratio>
+					<bordertexture border="5">backings/key-back1.png</bordertexture>						
+					<bordersize>5</bordersize>
+					<texture background="true"  fallback="defaults/DefaultGameTile.png">$INFO[ListItem.ActualIcon]</texture>
+					<visible>Control.IsVisible(52)</visible>
+				</control>
+				
+				<control type="fadelabel">
+					<posx>270</posx>
+					<posy>540</posy>
+					<height>30</height>
+					<width>625</width>
+					<font>font40UB</font>
+					<textcolor>White</textcolor>
+					<aligny>top</aligny>
+					<label>[COLOR Accent]$INFO[ListItem.Label][/COLOR]</label>
+					<visible>true</visible>
+					<scroll>true</scroll>
+					<scrollout>false</scrollout>
+					<pauseatend>600</pauseatend>
+					<scrollspeed>50</scrollspeed>
+				</control>
+				
+				<control type="grouplist">
+					<posx>290</posx>
+					<posy>585</posy>
+					<width>500</width>
+					<height>120</height>
+					<itemgap>0</itemgap>
+					<orientation>vertical</orientation>
+					
+					<control type="group">
+						<height>28</height>
+						<visible>!IsEmpty(ListItem.Property(Console))</visible>
+						
+						<control type="label">
+							<description>Type Label</description>
+							<include>Common_Infolist_Label</include>
+							<label>$ADDON[script.games.rom.collection.browser 50006]:</label>
+						</control>
+						
+						<control type="label">
+							<description>Type Value</description>
+							<include>Common_Infolist_Info</include>
+							<label>$INFO[ListItem.Property(Console)]</label>						
+						</control>
+						
+					</control>
+				
+					<control type="group">
+						<height>28</height>
+						<visible>!IsEmpty(ListItem.Property(Year))</visible>
+						
+						<control type="label">
+							<description>Type Label</description>
+							<include>Common_Infolist_Label</include>
+							<label>$ADDON[script.games.rom.collection.browser 50000]:</label>
+						</control>
+						
+						<control type="label">
+							<description>Type Value</description>
+							<include>Common_Infolist_Info</include>
+							<label>$INFO[ListItem.Property(Year)]</label>						
+						</control>
+						
+					</control>	
+				
+					<control type="group">
+						<height>28</height>
+						<visible>!IsEmpty(ListItem.Property(Genre))</visible>
+						
+						<control type="label">
+							<description>Type Label</description>
+							<include>Common_Infolist_Label</include>
+							<label>$ADDON[script.games.rom.collection.browser 50001]:</label>
+						</control>
+						
+						<control type="label">
+							<description>Type Value</description>
+							<include>Common_Infolist_Info</include>
+							<label>$INFO[ListItem.Property(Genre)]</label>						
+						</control>
+						
+					</control>	
+				
+					<control type="group">
+						<height>28</height>
+						<visible>!IsEmpty(ListItem.Property(Publisher))</visible>
+						
+						<control type="label">
+							<description>Type Label</description>
+							<include>Common_Infolist_Label</include>
+							<label>$ADDON[script.games.rom.collection.browser 50002]:</label>
+						</control>
+						
+						<control type="label">
+							<description>Type Value</description>
+							<include>Common_Infolist_Info</include>
+							<label>$INFO[ListItem.Property(Publisher)]</label>						
+						</control>
+						
+					</control>
+					
+				</control>	
+				
+			</control>
+			
+			<!-- gamelist 58 (SHOWCASE)-->
+			<control type="group">
+				<visible>Control.IsVisible(58)</visible>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>313</posy>
+					<width>1400</width>
+					<height>375</height>
+					<include>Common_Color_Tile1</include>
+					<fadetime>200</fadetime>
+				</control>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>313</posy>
+					<width>1400</width>
+					<height>1</height>
+					<include>Common_Color_Accent</include>
+					<fadetime>200</fadetime>
+				</control>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>687</posy>
+					<width>1400</width>
+					<height>1</height>
+					<include>Common_Color_Accent</include>
+					<fadetime>200</fadetime>
+				</control>
+				
+				<control type="wraplist" id="58">
+					<posx>-135</posx>
+					<posy>225</posy>
+					<height>460</height>
+					<width>1480</width>
+					<onleft>58</onleft>
+					<onright>58</onright>
+					<onup>500</onup>
+					<ondown>62</ondown>
+					<viewtype label="showcase">wrap</viewtype>
+					<orientation>horizontal</orientation>
+					<focusposition>4</focusposition>
+					<scrolltime>400</scrolltime>
+					<preloaditems>2</preloaditems>
+					<pagecontrol>62</pagecontrol>
+					<include>Animation_Viewtype_Showcase_FocusArea</include>
+					<itemlayout width="168" height="245">
+					
+						<control type="group" id="159">
+							<animation effect="slide" start="0,0" end="0,20" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
+							<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="![Container(58).OnNext | Container(58).OnPrevious]">Conditional</animation>	
+							
+							<control type="image">
+								<posx>1</posx>
+								<posy>131</posy>
+								<width>162</width>
+								<height>241</height>
+								<texture background="true"  fallback="defaults/DefaultGameTile.png">$INFO[ListItem.ActualIcon]</texture>
+								<fadetime>200</fadetime>
+								<aspectratio align="center" aligny="center">keep</aspectratio>
+							</control>
+							
+							<control type="image">
+								<posx>1</posx>
+								<posy>374</posy>
+								<width>162</width>
+								<height>241</height>
+								<texture background="true" flipy="true" fallback="defaults/DefaultAddonNone.png">$INFO[ListItem.ActualIcon]</texture>
+								<visible>false</visible>
+								<fadetime>200</fadetime>
+								<aspectratio align="center" aligny="center">keep</aspectratio>
+							</control>
+							
+							<!--badge favourites-->
+							<control type="image">
+								<posx>5</posx>
+								<posy>135</posy>
+								<width>35</width>
+								<height>35</height>
+								<texture>views/favourite.png</texture>
+								<animation type="Focus" reversible="false">
+									<effect type="zoom" center="49,72" start="80" end="120" time="400" tween="back" easing="out" />
+									<effect type="fade" start="80" end="100" time="400" />
+								</animation>
+								<visible>!IsEmpty(ListItem.Property(isfavorite))</visible>
+							</control>
+							
+						</control>
+						
+					</itemlayout>
+					
+					<focusedlayout width="210" height="515">
+					
+						<control type="group" id="57">
+							<animation effect="zoom" start="100" end="100" time="600" delay="2800" condition="![Container(58).OnNext | Container(58).OnPrevious]">Conditional</animation>
+							<animation effect="slide" start="0,0" end="-470,0" time="600" delay="2800" condition="![Container(58).OnNext | Container(58).OnPrevious]">Conditional</animation>
+							
+							<control type="image">
+								<posx>2</posx>
+								<posy>90</posy>
+								<width>215</width>
+								<height>314</height>
+								<texture background="true"  fallback="defaults/DefaultGame.png">$INFO[ListItem.ActualIcon]</texture>
+								<bordertexture border="5">general/accent.png</bordertexture>
+								<fadetime>200</fadetime>
+								<aspectratio align="center" aligny="center">keep</aspectratio>
+								<animation type="Focus" reversible="false">
+									<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
+								</animation>
+								<bordersize>5</bordersize>
+							</control>
+							
+							<!--badge favourites-->
+							<control type="image">
+								<posx>15</posx>
+								<posy>90</posy>
+								<width>40</width>
+								<height>40</height>
+								<texture>views/favourite.png</texture>
+								<animation type="Focus" reversible="false">
+									<effect type="zoom" center="49,72" start="80" end="100" time="600" tween="back" easing="out" />
+									<effect type="fade" start="80" end="100" time="400" />
+								</animation>
+								<visible>!IsEmpty(ListItem.Property(isfavorite))</visible>
+							</control>
+							
+						</control>
+						
+					</focusedlayout>
+					
+				</control>
+				
+				<control type="group" id="10">
+					<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(58) + ![Container(58).OnNext | Container(58).OnPrevious]">WindowOpen</animation>
+					<animation effect="slide" start="1000,0" end="0,0" time="400" delay="3000" condition="![Container(58).OnNext | Container(58).OnPrevious]">Conditional</animation>
+					
+					<control type="image">
+						<posx>546</posx>
+						<posy>314</posy>
+						<width>408</width>
+						<height>314</height>
+						<texture background="true">$INFO[ListItem.Property(gameinfobig)]</texture>
+						<fadetime>200</fadetime>
+						<aspectratio align="center">scale</aspectratio>
+						<visible>!IsEmpty(ListItem.Property(gameinfobig))</visible>
+					 </control>
+					 
+					<!--EXTRA FANART-->
+					<control type="image">
+						<posx>290</posx>
+						<posy>314</posy>
+						<width>250</width>
+						<height>155</height>
+						<texture background="true">$INFO[ListItem.Property(extraImage1)]</texture>
+						<aspectratio align="right">scale</aspectratio>
+					</control>
+					
+					<control type="image">
+						<posx>290</posx>
+						<posy>474</posy>
+						<width>250</width>
+						<height>155</height>
+						<texture background="true">$INFO[ListItem.Property(extraImage2)]</texture>
+						<aspectratio align="right">scale</aspectratio>
+					</control>
+					
+					<control type="label">
+						<posx>1260</posx>
+						<posy>320</posy>
+						<width>200</width>
+						<height>50</height>
+						<align>right</align>
+						<aligny>Left</aligny>
+						<font>font40L</font>
+						<textcolor>Accent</textcolor>
+						<label>$LOCALIZE[207]</label>
+					</control>
+					
+					<control type="image">
+						<description>line</description>
+						<posx>968</posx>
+						<posy>374</posy>
+						<width>340</width>					
+						<height>4</height>
+						<aspectratio>stretch</aspectratio>
+						<include>Common_Color_Accent</include>
+					</control>
+					
+					<control type="textbox">
+						<posx>988</posx>
+						<posy>385</posy>
+						<width>260</width>
+						<height>235</height>
+						<info>ListItem.Property(plot)</info>
+						<align>justify</align>
+						<autoscroll time="3000" delay="6000" repeat="8000"></autoscroll>
+						<font>font18</font>
+						<textcolor>White</textcolor>
+					</control>
+					
+					<control type="label">
+						<posx>940</posx>
+						<posy>580</posy>
+						<width>200</width>
+						<height>50</height>
+						<align>right</align>
+						<font>font32L</font>
+						<textcolor>White</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>$INFO[ListItem.Property(genre)]</label>
+					</control>
+					
+				</control>
+				
+				<control type="image">
+					<description>outline</description>
+					<animation effect="fade" time="200">VisibleChange</animation>
+					<posx>99</posx>
+					<posy>699</posy>
+					<width>1082</width>
+					<height>7</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>colors/color_white.png</texture>
+					<visible>Control.HasFocus(62)</visible>
+				</control>
+				
+				<control type="scrollbar" id="62">
+					<posx>100</posx>
+					<posy>700</posy>
+					<width>1080</width>
+					<height>5</height>
+					<texturesliderbar>general/accent.png</texturesliderbar> 
+					<texturesliderbackground>backings/key-back2.png</texturesliderbackground> 
+					<onup>58</onup>
+					<ondown>9000</ondown>
+					<orientation>horizontal</orientation>
+				</control>
+				
+				<!-- Title -->
+				<control type="fadelabel">
+					<posx>0</posx>
+					<posy>630</posy>
+					<width>1280</width>
+					<height>30</height>
+					<font>font40UB</font>
+					<align>center</align>
+					<aligny>top</aligny>	
+					<visible>true</visible>
+					<scroll>true</scroll>
+					<scrollout>false</scrollout>
+					<pauseatend>600</pauseatend>
+					<scrollspeed>50</scrollspeed>
+					<shadowcolor>black</shadowcolor>					
+					<label>[COLOR Accent]$INFO[ListItem.Label][/COLOR] $INFO[ListItem.Property(console)]</label>					
+				</control>	
+				
+			</control>
+						
+		</control>
+
+
+		<!-- SlideBladeLeft -->
+				
+		<!-- filter controls -->
+		<control type="group" id="100">
+			<animation effect="slide" start="0,0" end="0,0" delay="0" time="400" tween="quadratic" easing="out" condition="ControlGroup(100).HasFocus">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-200" delay="0" time="400" tween="quadratic" easing="out" condition="!ControlGroup(100).HasFocus">Conditional</animation>
+
+			<control type="image">
+				<animation effect="zoom" start="0,0,1280,1" end="0,0,1280,180" time="300" tween="quadratic" easing="out" condition="ControlGroup(100).HasFocus">Conditional</animation>
+				<description>filter background image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>720</width>
+				<height>160</height>
+				<include>Common_Color_Keyback1</include>
+			</control>
+			
+			<control type="radiobutton" id="1000">
+				<posx>25</posx>
+				<posy>50</posy>
+				<width>200</width>
+				<height>30</height>
+				<font>font20L</font>
+				<label>$ADDON[script.games.rom.collection.browser 50004]:</label>
+				<textcolor>White</textcolor>
+				<texturefocus>general/accent.png</texturefocus>
+				<align>left</align>
+				<onleft>900</onleft>
+				<onright>500</onright>
+				<onup>50</onup>
+				<ondown>1100</ondown>
+			</control>
+			
+			<control type="button" id="1100"> 
+				<description>Search</description>
+				<font>font20L</font>
+				<posx>25</posx>
+				<posy>82</posy>
+				<width>200</width>
+				<height>30</height>
+				<visible>true</visible>
+				<texturefocus>general/accent.png</texturefocus>
+				<label>$ADDON[script.games.rom.collection.browser 50005]:</label>
+				<textcolor>White</textcolor>
+				<disabledcolor>Keyback2</disabledcolor>
+				<align>left</align>
+				<onup>1000</onup>
+				<ondown>50</ondown>
+				<onleft>900</onleft>
+				<onright>500</onright>
+			</control>
+			
+			<control type="image">
+				<posx>235</posx>
+				<posy>5</posy>
+				<width>2</width>
+				<height>160</height>
+				<texture>colors/color_white.png</texture>
+			</control>
+			
+			<control type="group">
+				<posx>250</posx>
+				<posy>0</posy>
+				
+				<!-- Console filter -->
+				<control type="image">
+					<posx>0</posx>
+					<posy>35</posy>
+					<width>200</width>
+					<height>128</height>
+					<include>Common_Color_Keyback2</include>
+				</control>
+				
+				<control type="label">
+					<description>Consoles</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>30</height>
+					<aligny>center</aligny>
+					<align>center</align>
+					<textcolor>Accent</textcolor>
+					<font>font20UB</font>
+					<label>[B]$ADDON[script.games.rom.collection.browser 50006][/B]</label>
+				</control>
+				
+				<control type="wraplist" id="500">
+					<posx>0</posx>
+					<posy>35</posy>
+					<width>200</width>
+					<height>128</height>
+					<onleft>1000</onleft>
+					<onright>600</onright>
+					<onup>500</onup>
+					<ondown>500</ondown>
+					<viewtype label="Console">wrap</viewtype>
+					<focusposition>1</focusposition>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="32">
+					
+						<control type="label">
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>190</width>
+							<height>30</height>
+							<font>font18</font>
+							<aligny>center</aligny>
+							<align>left</align>
+							<info>ListItem.Label</info>
+						</control>
+						
+					</itemlayout>
+					
+					<focusedlayout height="32">
+					
+						<control type="image">
+							<width>200</width>
+							<height>30</height>
+							<posx>0</posx>
+							<posy>0</posy>
+							<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(500)">Conditional</animation>
+							<include>Common_Color_Accent</include>
+						</control>
+						
+						<control type="label">
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>190</width>
+							<height>30</height>
+							<font>font18</font>
+							<aligny>center</aligny>
+							<align>left</align>
+							<info>ListItem.Label</info>
+						</control>
+						
+					</focusedlayout>
+					
+				</control>	
+				
+				<!-- Genre filter -->	
+				<control type="label">
+					<description>Genre</description>
+					<posx>210</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>30</height>
+					<aligny>center</aligny>
+					<align>center</align>
+					<textcolor>Accent</textcolor>
+					<font>font20UB</font>
+					<label>[B]$ADDON[script.games.rom.collection.browser 50001][/B]</label>
+				</control>
+				
+				<control type="image">
+					<posx>210</posx>
+					<posy>35</posy>
+					<width>200</width>
+					<height>128</height>
+					<include>Common_Color_Keyback2</include>
+				</control>
+				
+				<control type="wraplist" id="600">
+					<posx>210</posx>
+					<posy>35</posy>
+					<width>200</width>
+					<height>128</height>
+					<onleft>500</onleft>
+					<onright>700</onright>
+					<onup>600</onup>
+					<ondown>600</ondown>
+					<viewtype label="Genre">wrap</viewtype>
+					<focusposition>1</focusposition>			
+					<scrolltime>200</scrolltime>					
+					<itemlayout height="32">
+					
+						<control type="label">
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>190</width>
+							<height>30</height>
+							<font>font18</font>
+							<aligny>center</aligny>
+							<align>left</align>
+							<info>ListItem.Label</info>
+						</control>
+						
+					</itemlayout>
+					
+					<focusedlayout height="32">
+					
+						<control type="image">
+							<width>200</width>
+							<height>30</height>
+							<posx>0</posx>
+							<posy>0</posy>
+							<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(600)">Conditional</animation>
+							<include>Common_Color_Accent</include>
+						</control>
+						
+						<control type="label">
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>190</width>
+							<height>30</height>
+							<font>font18</font>
+							<aligny>center</aligny>
+							<align>left</align>
+							<info>ListItem.Label</info>
+						</control>
+						
+					</focusedlayout>
+					
+				</control>
+				
+				<!-- Year filter -->	
+				<control type="label">
+					<description>Year</description>
+					<posx>420</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>30</height>
+					<aligny>center</aligny>
+					<align>center</align>
+					<textcolor>Accent</textcolor>
+					<font>font20UB</font>
+					<label>[B]$ADDON[script.games.rom.collection.browser 50000][/B]</label>
+				</control>
+				
+				<control type="image">
+					<posx>420</posx>
+					<posy>35</posy>
+					<width>200</width>
+					<height>128</height>
+					<include>Common_Color_Keyback2</include>
+				</control>	
+				
+				<control type="wraplist" id="700">
+					<posx>420</posx>
+					<posy>35</posy>
+					<width>200</width>
+					<height>128</height>
+					<onleft>600</onleft>
+					<onright>800</onright>
+					<onup>700</onup>
+					<ondown>700</ondown>
+					<viewtype label="Year">wrap</viewtype>
+					<focusposition>1</focusposition>			
+					<scrolltime>200</scrolltime>
+					<itemlayout height="32">
+					
+						<control type="label">
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>190</width>
+							<height>30</height>
+							<font>font18</font>
+							<aligny>center</aligny>
+							<align>left</align>
+							<info>ListItem.Label</info>
+						</control>
+						
+					</itemlayout>
+					
+					<focusedlayout height="32">
+					
+						<control type="image">
+							<width>200</width>
+							<height>30</height>
+							<posx>0</posx>
+							<posy>0</posy>
+							<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(700)">Conditional</animation>
+							<include>Common_Color_Accent</include>
+						</control>
+						
+						<control type="label">
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>190</width>
+							<height>30</height>
+							<font>font18</font>
+							<aligny>center</aligny>
+							<align>left</align>
+							<info>ListItem.Label</info>
+						</control>
+						
+					</focusedlayout>
+					
+				</control>
+				
+				<!-- Publisher filter -->	
+				<control type="label">
+					<description>Publisher</description>
+					<posx>630</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>30</height>
+					<aligny>center</aligny>
+					<align>center</align>
+					<textcolor>Accent</textcolor>
+					<font>font20UB</font>
+					<label>[B]$ADDON[script.games.rom.collection.browser 50002][/B]</label>
+				</control>	
+				
+				<control type="image">
+					<posx>630</posx>
+					<posy>35</posy>
+					<width>200</width>
+					<height>128</height>
+					<include>Common_Color_Keyback2</include>
+				</control>		
+				
+				<control type="wraplist" id="800">
+					<posx>630</posx>
+					<posy>35</posy>
+					<width>200</width>
+					<height>128</height>
+					<onleft>700</onleft>
+					<onright>900</onright>
+					<onup>800</onup>
+					<ondown>800</ondown>
+					<viewtype label="Year">wrap</viewtype>
+					<focusposition>1</focusposition>			
+					<scrolltime>200</scrolltime>
+					<itemlayout height="32">
+					
+						<control type="label">
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>190</width>
+							<height>30</height>
+							<font>font18</font>
+							<aligny>center</aligny>
+							<align>left</align>
+							<info>ListItem.Label</info>
+						</control>
+						
+					</itemlayout>
+					
+					<focusedlayout height="32">
+					
+						<control type="image">
+							<width>200</width>
+							<height>30</height>
+							<posx>0</posx>
+							<posy>0</posy>
+							<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(800)">Conditional</animation>
+							<include>Common_Color_Accent</include>
+						</control>
+						
+						<control type="label">
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>190</width>
+							<height>30</height>
+							<font>font18</font>
+							<aligny>center</aligny>
+							<align>left</align>
+							<info>ListItem.Label</info>
+						</control>
+						
+					</focusedlayout>
+					
+				</control>
+				
+				<!-- Character filter -->	
+				<control type="label">
+					<description>Character</description>
+					<posx>840</posx>
+					<posy>0</posy>
+					<width>180</width>
+					<height>30</height>
+					<aligny>center</aligny>
+					<align>center</align>
+					<textcolor>Accent</textcolor>
+					<font>font20UB</font>
+					<label>[B]$ADDON[script.games.rom.collection.browser 50007][/B]</label>
+				</control>	
+				
+				<control type="image">
+					<posx>840</posx>
+					<posy>35</posy>
+					<width>180</width>
+					<height>128</height>
+					<include>Common_Color_Keyback2</include>
+				</control>	
+				
+				<control type="wraplist" id="900">
+					<posx>840</posx>
+					<posy>35</posy>
+					<width>180</width>
+					<height>128</height>
+					<onleft>800</onleft>
+					<onright>1000</onright>
+					<onup>900</onup>
+					<ondown>900</ondown>
+					<viewtype label="Character">wrap</viewtype>
+					<focusposition>1</focusposition>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="32">
+					
+						<control type="label">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>180</width>
+							<height>30</height>
+							<font>font18</font>
+							<aligny>center</aligny>
+							<align>left</align>
+							<info>ListItem.Label</info>
+						</control>
+						
+					</itemlayout>
+					
+					<focusedlayout height="32">
+					
+						<control type="image">
+							<width>180</width>
+							<height>30</height>
+							<posx>0</posx>
+							<posy>0</posy>
+							<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(900)">Conditional</animation>
+							<include>Common_Color_Accent</include>
+						</control>
+						
+						<control type="label">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>180</width>
+							<height>30</height>
+							<font>font18</font>
+							<aligny>center</aligny>
+							<align>left</align>
+							<info>ListItem.Label</info>
+						</control>
+						
+					</focusedlayout>
+					
+				</control>
+				
+			</control>
+			
+		</control>
+		
+		<!--Options Menu-->
+		<include>Common_Options</include>
+		<include>Common_Options_Clock</include>
+		
+		<!-- Messages -->
+		<control type="group">
+			<visible>!IsEmpty(Control.GetLabel(4000))</visible>
+			<include>DialogOverlay</include>
+			
+			<control type="group">
+				<posx>490</posx>
+				<posy>324</posy>
+				<include>Animation_Dialog_Center</include>
+				
+				<control type="image">
+					<description>background image</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>78</height>
+					<include>Common_Color_Accent</include>
+				</control>
+				
+				<control type="image">
+					<description>Busy animation</description>
+					<posx>20</posx>
+					<posy>20</posy>
+					<width>32</width>
+					<height>32</height>
+					<texture>busy/busy.png</texture>
+					<aspectratio>scale</aspectratio>
+					<animation effect="rotate" start="0" end="360" center="36,36" time="1200" loop="true" condition="true">conditional</animation>
+				</control>
+				
+				<control type="label" id="4000">
+					<description>Notes</description>
+					<posx>70</posx>
+					<posy>20</posy>
+					<width>280</width>
+					<height>32</height>
+					<align>left</align>
+					<textcolor>White</textcolor>
+				</control>	
+				
+			</control>
+			
+		</control>
+		
+	</controls>
+	
+</window>

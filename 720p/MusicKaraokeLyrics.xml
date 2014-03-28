@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window id="2009">
+
+	<controls>
+
+		<control type="karvisualisation" id="1">
+			<description>visualisation</description>
+			<width>1280</width>
+			<height>720</height>
+			<visibility>true</visibility>
+		</control>
+
+		<control type="image" id="2">
+			<description>fullscreen image</description>
+			<width>1280</width>
+			<height>720</height>
+			<visibility>false</visibility>
+		</control>
+
+		<control type="group">
+			<posx>400</posx>
+			<visible>MusicPlayer.Offset(number).Exists + !IntegerGreaterThan(Player.TimeRemaining,20)</visible>
+
+			<control type="image">
+				<posy>-20</posy>
+				<width>480</width>
+				<height>78</height>
+				<include>Common_Color_Keyback1</include>
+			</control>
+
+			<control type="label" id="402">
+				<description>Next Song Name</description>
+				<posx>20</posx>
+				<width>420</width>
+				<label>[COLOR=Accent]$LOCALIZE[209] :[/COLOR] $INFO[MusicPlayer.offset(1).Title]</label>
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<window>
+
+	<onload condition="System.HasAddon(script.tv.show.next.aired) + Skin.HasSetting(UseNextAiredScript)">XBMC.RunScript(script.tv.show.next.aired,silent=True)</onload>
+	<onload condition="System.HasAddon(script.favourites) + Skin.HasSetting(UseFavouritesScript)">XBMC.RunScript(script.favourites,silent=True)</onload>
+	<allowoverlay>yes</allowoverlay>
+	
+	<!--Splash Screen-->
+	<onload>AlarmClock(CloseStartup,ReplaceWindow(home),00:03,silent)</onload>
+	
+	<animation type="WindowOpen">
+		<effect type="fade" start="0" end="100" time="400" delay="200" />
+	</animation>
+	
+	<animation type="WindowClose">
+		<effect type="fade" start="100" end="0" time="400" delay="200" />
+	</animation>
+	
+	<controls>
+	
+		<control type="image">					
+			<include>Dimensions_Fullscreen</include>
+			<include>Common_Color_Accent</include>		
+		</control>
+		
+		<control type="label">
+			<animation effect="slide" start="-800,0" time="600" easing="out" tween="cubic" delay="250">WindowOpen</animation>
+			<posx>0</posx>
+			<posy>250</posy>
+			<width>1280</width>
+			<height>40</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>font80</font>
+			<scroll>true</scroll>
+			<label>$LOCALIZE[31203]</label>
+		</control>
+		
+		<control type="image">
+			<animation effect="slide" start="+800,0" time="600" easing="out" tween="cubic" delay="850">WindowOpen</animation>
+			<posy>350</posy>
+			<width>1280</width>
+			<height>100</height>
+			<align>center</align>
+			<aspectratio>keep</aspectratio>
+			<texture>general/logo.png</texture>
+		</control>
+		
+	</controls>
+
+</window>

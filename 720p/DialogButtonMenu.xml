@@ -1,0 +1,95 @@
+<window type="buttonMenu" id="111">
+	<defaultcontrol always="true">3110</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	
+	<controls>
+	
+		<include>DialogOverlay</include>
+		
+		<control type="group">
+			<posy>595</posy>
+	        <animation type="WindowOpen">
+				<effect type="slide" time="200" start="0,125" end="0,0" easing="out" tween="cubic"/>
+				<effect type="fade" start="0" end="100" time="200"/>
+			</animation>
+			<animation type="WindowClose">
+				<effect type="slide" time="200" start="0,0" end="0,125" easing="in" tween="cubic"/>
+				<effect type="fade" start="100" end="0" time="200"/>
+			</animation>
+			
+			<control type="image">
+				<width>1280</width>
+				<height>125</height>
+				<include>Common_Color_Accent</include>
+			</control>			
+
+			<control type="grouplist" id="1">
+				<posx>32</posx>
+				<posy>15</posy>
+				<width>1280</width>
+				<height>125</height>
+				<itemgap>30</itemgap>
+				<onleft>1</onleft>
+				<onright>1</onright>
+				<onup>50</onup>
+				<orientation>horizontal</orientation>
+				
+				<control type="button" id="3110">
+					<include>Common_Settings_Button</include>
+					<texturefocus>contextmenu/SettingsFO.png</texturefocus>
+					<texturenofocus>contextmenu/settingsNF.png</texturenofocus>
+					<label>$LOCALIZE[5]</label>
+					<onclick>ActivateWindow(Settings)</onclick>
+				</control>
+				
+				<control type="image" id="3111">
+					<include>Common_Options_Divider</include>
+				</control>
+				
+				<control type="button" id="3112">
+					<include>Common_Settings_Button</include>
+					<texturefocus>contextmenu/logoffFO.png</texturefocus>
+					<texturenofocus>contextmenu/logoffNF.png</texturenofocus>
+					<label>$LOCALIZE[20126]</label>
+					<onclick>ActivateWindow(LoginScreen)</onclick>
+				</control>
+				
+				<control type="button" id="3113">
+					<include>Common_Settings_Button</include>
+					<texturefocus>contextmenu/suspendFO.png</texturefocus>
+					<texturenofocus>contextmenu/suspendNF.png</texturenofocus>
+					<label>$LOCALIZE[13011]</label>
+					<onclick>XBMC.Suspend()</onclick>
+				</control>
+				
+				<control type="button" id="3114">
+					<include>Common_Settings_Button</include>
+					<texturefocus>contextmenu/rebootFO.png</texturefocus>
+					<texturenofocus>contextmenu/rebootNF.png</texturenofocus>
+					<label>$LOCALIZE[13313]</label>
+					<onclick>RestartApp</onclick>
+				</control>
+				
+				<control type="button" id="3115">
+					<include>Common_Settings_Button</include>
+					<texturefocus>contextmenu/timerFO.png</texturefocus>
+					<texturenofocus>contextmenu/timerNF.png</texturenofocus>
+					<label>$LOCALIZE[19040]</label>
+					<onclick>AlarmClock(ShutdownTimer,Shutdown)</onclick>
+				</control>
+				
+				<control type="button" id="3116">
+					<include>Common_Settings_Button</include>
+					<texturefocus>contextmenu/shutdownFO.png</texturefocus>
+					<texturenofocus>contextmenu/shutdownNF.png</texturenofocus>
+					<label>$LOCALIZE[13005]</label>
+					<onclick>Shutdown()</onclick>
+				</control>
+				
+			</control>
+			
+		</control>
+
+	</controls>
+	
+</window>

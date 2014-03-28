@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+	<include name="Common_Splash">
+	
+		<control type="group">
+			<include>Dimensions_Fullscreen</include>
+			<animation type="WindowOpen">
+				<effect type="fade" start="100" end="100" time="1000" />
+				<effect type="fade" start="100" end="0" time="400" delay="1000" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="fade" start="0" end="0" time="100" />
+			</animation>
+			
+			<control type="image">
+				<include>Dimensions_Fullscreen</include>
+				<include>Common_Color_Accent</include>
+			</control>
+			
+			<control type="image">
+				<animation type="WindowOpen">
+					<effect type="fade" start="0" end="100" time="400" delay="200" />
+				</animation>
+				<include>Dimensions_Fullscreen</include>
+				<texture>$VAR[Splash_Image]</texture>
+			</control>
+			
+		</control>
+		
+	</include>
+	
+	<include name="Common_Control_Button">
+		<texturefocus aspectratio="keep" colordiffuse="Accent">colors/color_white.png</texturefocus>
+		<texturenofocus aspectratio="keep" colordiffuse="Keyback1">colors/color_white.png</texturenofocus>
+		<width>48</width>
+		<height>48</height>
+		<textwidth>1</textwidth>
+		<textoffsetx>-1200</textoffsetx>
+	</include>	
+	
+	<include name="Common_Control_Image">
+		<width>50</width>
+		<height>50</height>
+		<aspectratio>center</aspectratio>
+	</include>	
+	
+	<include name="Common_Control_Label">
+		<posx>80</posx>
+		<width min="20" max="320">auto</width>
+		<height>50</height>
+		<wrapmultiline>true</wrapmultiline>
+		<scrollspeed>0</scrollspeed>
+		<font>font18L</font>
+	</include>
+	
+	<include name="Common_View_Button">
+		<width>60</width>
+		<height>60</height>
+		<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
+		<texturenofocus colordiffuse="Keyback1">colors/color_white.png</texturenofocus>
+		<disabledcolor>Black</disabledcolor>
+		<textcolor>Keyback1</textcolor>
+		<onleft>50</onleft>
+		<onright>50</onright>
+	</include>	
+	
+	<include name="Common_View_Image">
+		<width>60</width>
+		<height>60</height>
+		<aspectratio>center</aspectratio>
+	</include>
+	
+	<include name="Common_View_Label">
+		<posx>80</posx>
+		<width min="20" max="320">auto</width>
+		<height>60</height>
+		<wrapmultiline>true</wrapmultiline>
+		<scrollspeed>0</scrollspeed>
+	</include>	
+
+	<include name="Common_TopBar">
+	
+		<control type="button">
+			<description>top left bar</description>
+			<width>20</width>
+			<height>100</height>
+			<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>	
+			<texturenofocus colordiffuse="Accent">colors/color_white.png</texturenofocus>	
+			<onclick>9000</onclick>
+			<include>Animation_Home_Fade</include>
+		</control>
+		
+		<control type="image">
+			<description>xbmc</description>
+			<posx>40</posx>
+			<posy>10</posy>
+			<width>250</width>
+			<height>100</height>
+			<visible>true</visible>
+			<aspectratio>keep</aspectratio>
+			<texture border="2">general/xbmc.png</texture>			
+			<include>Animation_Home_Fade</include>
+			<visible>Window.IsActive(0)</visible>
+		</control>	
+		
+		<control type="button">
+			<description>invisible settings</description>
+			<posx>40</posx>
+			<posy>10</posy>
+			<width>250</width>
+			<height>100</height>
+			<texture border="2">-</texture>			
+			<texturefocus border="2">-</texturefocus>	
+			<include>Animation_Home_Fade</include>
+			<onclick>ActivateWindow(111)</onclick>
+			<visible>Window.IsActive(0)</visible>
+		</control>
+		
+		<control type="group">
+			<visible>!System.GetBool(Input.EnableMouse)</visible>
+			
+			<control type="label">
+				<label>$VAR[TopBar_Label]</label>
+				<posx>40</posx>
+				<posy>20</posy>
+				<height>30</height>
+				<width>400</width>
+				<font>font72L</font>
+				<shadowcolor>Black</shadowcolor>
+			</control>	
+
+			<control type="label">
+				<posx>45</posx>
+				<posy>70</posy>
+				<width>300</width>
+				<aligny>top</aligny>
+				<label>$LOCALIZE[31182]: [COLOR Accent]$INFO[Container.SortMethod][/COLOR] </label>
+				<font>font24L</font>
+				<shadowcolor>Black</shadowcolor>
+				<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>			
+			</control>
+			
+			<control type="label">
+				<posx>45</posx>
+				<posy>70</posy>
+				<width>300</width>
+				<aligny>top</aligny>
+				<label>$LOCALIZE[31084] [COLOR Accent]$INFO[Control.GetLabel(32)][/COLOR] </label>
+				<font>font24L</font>
+				<shadowcolor>Black</shadowcolor>
+				<visible>Window.IsVisible(mypvr.xml)</visible>			
+			</control>
+			
+			<control type="label">
+				<posx>45</posx>
+				<posy>70</posy>
+				<width>300</width>
+				<aligny>top</aligny>
+				<label>$LOCALIZE[31182]: [COLOR Accent]$INFO[Container.SortMethod][/COLOR] </label>
+				<font>font24L</font>
+				<shadowcolor>Black</shadowcolor>
+				<visible>Window.IsVisible(script-Rom_Collection_Browser-main.xml)</visible>			
+			</control>
+			
+		</control>
+				
+		<control type="group">
+			<visible>System.GetBool(Input.EnableMouse)</visible>
+			<visible>!Window.IsActive(0)</visible>		
+			
+			<control type="button">
+				<description>back button</description>
+				<posx>40</posx>
+				<posy>25</posy>
+				<width>40</width>
+				<height>40</height>
+				<texturefocus>arrows/back.png</texturefocus>	
+				<texturenofocus>arrows/back.png</texturenofocus>	
+				<onclick>ActivateWindow(0)</onclick>
+			</control>	
+			
+			<control type="label">
+				<label>$VAR[TopBar_Label]</label>
+				<posx>90</posx>
+				<posy>20</posy>
+				<height>30</height>
+				<width>400</width>
+				<font>font72L</font>
+				<textcolor>White</textcolor>
+				<shadowcolor>Black</shadowcolor>
+			</control>	
+
+			<control type="label">
+				<posx>45</posx>
+				<posy>70</posy>
+				<width>300</width>
+				<aligny>top</aligny>
+				<label>$LOCALIZE[31182]: [COLOR Accent]$INFO[Container.SortMethod][/COLOR] </label>
+				<font>font24L</font>
+				<shadowcolor>Black</shadowcolor>
+				<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>			
+			</control>
+			
+			<control type="label">
+				<posx>45</posx>
+				<posy>70</posy>
+				<width>300</width>
+				<aligny>top</aligny>
+				<label>$LOCALIZE[31084] [COLOR Accent]$INFO[Control.GetLabel(32)][/COLOR] </label>
+				<font>font24L</font>
+				<shadowcolor>Black</shadowcolor>
+				<visible>Window.IsVisible(mypvr.xml)</visible>			
+			</control>
+			
+			<control type="label">
+				<posx>45</posx>
+				<posy>70</posy>
+				<width>300</width>
+				<aligny>top</aligny>
+				<label>$LOCALIZE[31182]: [COLOR Accent]$INFO[Container.SortMethod][/COLOR] </label>
+				<font>font24L</font>
+				<shadowcolor>Black</shadowcolor>
+				<visible>Window.IsVisible(script-Rom_Collection_Browser-main.xml)</visible>			
+			</control>
+			
+		</control>
+		
+	</include>
+	
+	<include name="Common_HomeMenu_Fonts">
+		<textwidth>240</textwidth>
+		<align>left</align>
+		<aligny>center</aligny>	
+		<font>font40L</font>
+		<focusedcolor>Accent</focusedcolor>
+		<texturefocus></texturefocus>
+		<shadowcolor>ff000000</shadowcolor>
+	</include>
+	
+	<include name="Common_Library_Label">
+		<control type="label">
+			<label>$LOCALIZE[14022]</label>
+			<posx>335</posx>
+			<posy>250</posy>
+			<height>30</height>
+			<width>250</width>
+			<font>font40L</font>
+			<shadowcolor>ff000000</shadowcolor>
+		</control>
+	</include>
+
+	<include name="Common_Home_Label">
+		<control type="label">
+			<label>$LOCALIZE[10000]</label>
+			<posx>50</posx>
+			<posy>240</posy>
+			<height>30</height>
+			<width>250</width>
+			<font>font72L</font>
+			<shadowcolor>ff000000</shadowcolor>
+		</control>
+	</include>
+
+	<include name="Common_Home_DateTime">
+	
+		<control type="label">
+			<label>$INFO[System.Time(hh:mm)]</label>
+			<posx>1225</posx>
+			<posy>630</posy>
+			<height>100</height>
+			<width>200</width>
+			<font>font65L</font>
+			<align>right</align>
+			<shadowcolor>ff000000</shadowcolor>
+			<visible>!IsEmpty(System.Time(xx))</visible>
+		</control>	
+		
+		<control type="label">
+			<label>$INFO[System.Time(hh:mm)]</label>
+			<posx>1075</posx>
+			<posy>630</posy>
+			<height>100</height>
+			<width>200</width>
+			<font>font60L</font>
+			<shadowcolor>ff000000</shadowcolor>
+			<visible>IsEmpty(System.Time(xx))</visible>
+		</control>	
+		
+		<control type="label">
+			<label>[COLOR Accent]$INFO[System.Time(xx)][/COLOR]</label>
+			<posx>1225</posx>
+			<posy>644</posy>
+			<height>100</height>
+			<width>60</width>
+			<font>font26L</font>
+			<shadowcolor>ff000000</shadowcolor>
+			<visible>!IsEmpty(System.Time(xx))</visible>
+		</control>
+		
+		<control type="label">
+			<label>[COLOR Accent]$INFO[System.Date(DDD)][/COLOR]</label>
+			<posx>1072</posx>
+			<posy>614</posy>
+			<height>100</height>
+			<width>750</width>
+			<font>font26L</font>
+			<align>right</align>
+			<shadowcolor>ff000000</shadowcolor>
+		</control>
+		
+		<control type="label">
+			<label>[COLOR Accent]$INFO[System.Date(MMM)] $INFO[System.Date(dd)][/COLOR]</label>
+			<posx>1072</posx>
+			<posy>644</posy>
+			<height>100</height>
+			<width>750</width>
+			<font>font22L</font>
+			<align>right</align>
+			<shadowcolor>ff000000</shadowcolor>
+		</control>
+		
+	</include>
+
+	<include name="Common_Options_Divider">
+		<posy>30</posy>
+		<width>2</width>
+		<height>48</height>
+		<texture>colors/color_white.png</texture>
+	</include>
+	
+	<include name="Common_Settings_Button">
+		<width>50</width>
+		<height>50</height>
+		<font>font16LB</font>
+		<textcolor>White</textcolor>
+		<focusedcolor>White</focusedcolor>
+		<disabledcolor>Black</disabledcolor>
+		<aspectratio>keep</aspectratio>
+		<align>center</align>
+		<aligny>top</aligny>
+		<textoffsetx>-4</textoffsetx>
+		<textoffsety>60</textoffsety>
+		<textwidth>100</textwidth>
+		<wrapmultiline>true</wrapmultiline>
+	</include>	
+	
+	<include name="Common_Settings_Radio">
+		<textureradioon>contextmenu/radio-on.png</textureradioon>
+		<textureradiooff>-</textureradiooff>
+		<radiowidth>48</radiowidth>
+		<radioheight>48</radioheight>
+		<radioposx>6</radioposx>
+	</include>		
+	
+	<include name="Common_Settings_Edit">	
+		<width>700</width>
+		<height>45</height>
+		<texturefocus>colors/color_white.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<alttexturefocus>colors/color_white.png</alttexturefocus>
+		<alttexturenofocus>-</alttexturenofocus>
+		<colordiffuse>Accent</colordiffuse>
+		<disabledColorDiffuse>Keyback2</disabledColorDiffuse>
+		<font>font20</font>
+		<textcolor>White</textcolor>
+		<focusedcolor>White</focusedcolor>
+		<disabledcolor>Black</disabledcolor>
+		<textoffsetx>32</textoffsetx>
+		<textoffsety>-10</textoffsety>
+		<align>left</align>
+		<aligny>center</aligny>			
+	</include>
+	
+	<include name="Common_HomeTile_Image">
+		<posx>30</posx>
+		<posy>15</posy>
+		<width>90</width>
+		<height>90</height>
+		<aspectratio>keep</aspectratio>
+	</include>	
+	
+	<include name="Common_HomeTile_Icon">
+		<posy>2</posy>
+		<posx>2</posx>
+		<width>151</width>
+		<height>151</height>
+		<aspectratio>stretch</aspectratio>
+	</include>
+	
+	<include name="Common_HomeTile_Label">
+		<posx>15</posx>
+		<posy>120</posy>
+		<height>30</height>
+		<width>140</width>
+		<font>font16UB</font>
+		<scroll>true</scroll>
+	</include>
+
+	<include name="Common_Fanart_Overlay">
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture background="true">backings/music_fanart_diffuse.png</texture>
+			<visible>Skin.HasSetting(UseFanartOverlay)</visible>
+		</control>
+	</include>
+	
+	<include name="Common_Keyboard_Button">
+		<width>69</width>
+		<height>57</height>
+		<texturenofocus colordiffuse="Keyback1">colors/color_white.png</texturenofocus>
+		<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
+		<textoffsetx>0</textoffsetx>
+		<focusedcolor>white</focusedcolor>
+		<font>font20</font>
+	</include>
+	
+	<include name="Common_Keyboard_Button2">
+		<texturenofocus colordiffuse="Keyback1">colors/color_white.png</texturenofocus>
+		<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
+		<textoffsetx>0</textoffsetx>
+		<focusedcolor>white</focusedcolor>
+		<font>font20</font>
+	</include>
+	
+	<include name="Common_Numeric_Button">
+		<width>55</width>
+		<height>55</height>
+		<align>center</align>
+		<texturenofocus colordiffuse="Keyback2">colors/color_white.png</texturenofocus>
+		<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
+		<focusedcolor>White</focusedcolor>
+		<font>font20</font>
+	</include>
+	
+	<include name="Common_Numeric_Button2">
+		<width>55</width>
+		<height>115</height>
+		<angle>270</angle>
+		<textwidth>120</textwidth>
+		<align>center</align>
+		<texturenofocus colordiffuse="Keyback2">colors/color_white.png</texturenofocus>
+		<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
+		<focusedcolor>White</focusedcolor>
+		<font>font20</font>
+	</include>
+	
+	<include name="Common_View_Background">
+	
+		<control type="image">
+			<visible>!Skin.HasSetting(TileBackground)</visible>
+			<posx>790</posx>
+			<posy>310</posy>
+			<width>190</width>
+			<height>315</height>
+			<include>Common_Color_Tile1</include>
+		</control>	
+		
+		<control type="image">
+			<visible>Skin.HasSetting(TileBackground)</visible>
+			<posx>790</posx>
+			<posy>310</posy>
+			<width>190</width>
+			<height>315</height>
+			<include>Common_Color_Keyback2</include>
+		</control>
+		
+		<control type="label">
+			<label>$LOCALIZE[31016]</label>
+			<posx>825</posx>
+			<posy>250</posy>
+			<height>30</height>
+			<width>400</width>
+			<font>font40L</font>
+			<shadowcolor>Black</shadowcolor>
+		</control>	
+		
+	</include>
+
+	<include name="Common_Color_Black">
+		<texture colordiffuse="Black">colors/color_white.png</texture>
+		<aspectratio>stretch</aspectratio>
+	</include>
+	
+	<include name="Common_Color_Accent">
+		<texture colordiffuse="Accent">colors/color_white.png</texture>
+		<aspectratio>stretch</aspectratio>
+	</include>
+	
+	<include name="Common_Color_Keyback1">
+		<texture colordiffuse="Keyback1">colors/color_white.png</texture>
+		<aspectratio>stretch</aspectratio>
+	</include>
+	
+	<include name="Common_Color_Keyback1-80">
+		<texture colordiffuse="Keyback1-80">colors/color_white.png</texture>
+		<aspectratio>stretch</aspectratio>
+	</include>
+	
+	<include name="Common_Color_Keyback2">
+		<texture colordiffuse="Keyback2">colors/color_white.png</texture>
+		<aspectratio>stretch</aspectratio>
+	</include>
+	
+	<include name="Common_Color_Editback">
+		<texture colordiffuse="Editback">colors/color_white.png</texture>
+		<aspectratio>stretch</aspectratio>
+	</include>
+	
+	<include name="Common_Color_Nokey">
+		<texture colordiffuse="Nokey">colors/color_white.png</texture>
+		<aspectratio>stretch</aspectratio>
+	</include>
+	
+	<include name="Common_Color_Tile1">
+		<texture colordiffuse="Black70">colors/color_white.png</texture>
+		<aspectratio>stretch</aspectratio>
+	</include>
+	
+	<include name="Common_Infolist_Label">
+		<width>150</width>
+		<height>28</height>
+		<textcolor>Accent</textcolor>
+		<font>font20UB</font>
+	</include>
+	
+	<include name="Common_Infolist_Label2">
+		<width>80</width>
+		<height>28</height>
+		<textcolor>Black</textcolor>
+		<font>font20UB</font>
+	</include>
+	
+	<include name="Common_Infolist_Info">
+		<posx>150</posx>
+		<width>300</width>
+		<height>28</height>
+		<scroll>true</scroll>
+	</include>
+	
+	<include name="Common_Infolist_Info2">
+		<posx>80</posx>
+		<width>140</width>
+		<height>28</height>
+		<scroll>true</scroll>
+	</include>
+	
+	<include name="Common_Scroll_OutlineV">
+		<animation effect="fade" time="200">VisibleChange</animation>
+		<width>7</width>
+		<aspectratio>stretch</aspectratio>
+		<texture>colors/color_white.png</texture>
+	</include>
+	
+	<include name="Common_Scroll_OutlineH">
+		<animation effect="fade" time="200">VisibleChange</animation>
+		<height>7</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>colors/color_white.png</texture>
+	</include>
+	
+	<include name="Common_HomePanel_Label">
+		<posx>845</posx>
+		<posy>250</posy>
+		<height>30</height>
+		<width>400</width>
+		<font>font40L</font>
+		<align>left</align>
+		<shadowcolor>ff000000</shadowcolor>
+	</include>
+	
+	<include name="Common_HomePanel">
+		<posx>810</posx>
+		<posy>310</posy>
+		<width>560</width>
+		<height>320</height>
+		<preloaditems>2</preloaditems>
+		<orientation>horizontal</orientation>
+		<pagecontrol>98</pagecontrol>
+		<focusposition>0</focusposition>
+		<scrolltime tween="cubic" easing="out">400</scrolltime>
+	</include>
+	
+</includes>

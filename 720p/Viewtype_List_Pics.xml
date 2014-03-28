@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<includes>
+
+	<include name="Viewtype_List_Pics">
+	
+		<control type="group">
+			<description>Lists View (id=50)</description>
+			<visible>Control.IsVisible(50)</visible>
+			
+			<control type="image">
+				<include>Dimensions_Fullscreen</include>
+				<texture background="true">backings/music_fanart_diffuse.png</texture>
+				<visible>Skin.HasSetting(UseFanartOverlay)</visible>
+			</control>
+
+			<include>Common_TopBar</include>
+		
+			<control type="image">
+				<posx>240</posx>
+				<posy>188</posy>
+				<width>400</width>
+				<height>460</height>
+				<include>Common_Color_Keyback1</include>
+			</control>
+			
+			<control type="image">
+				<posx>650</posx>
+				<posy>188</posy>
+				<width>420</width>
+				<height>460</height>
+				<include>Common_Color_Keyback2</include>
+			</control>
+			
+			<control type="list" id="50">
+				<posx>240</posx>
+				<posy>188</posy>
+				<width>400</width>
+				<height>460</height>
+				<onleft>9000</onleft>
+				<onright>60</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<pagecontrol>60</pagecontrol>
+				<viewtype label="list">list</viewtype>
+				<scrolltime>200</scrolltime>
+
+				<itemlayout width="400" height="30">
+					
+					<control type="label">
+						<posx>20</posx>
+						<width>350</width>
+						<font>font22</font>
+						<label>$INFO[ListItem.Label]</label>
+						<scroll>true</scroll>
+					</control>
+
+				</itemlayout>
+
+				<focusedlayout width="400" height="30">
+
+					<control type="image">
+						<width>640</width>
+						<posy>8</posy>
+						<height>30</height>
+						<include>Common_Color_Accent</include>
+						<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(50)">Conditional</animation>
+					</control>
+					
+					<control type="label">
+						<posx>20</posx>
+						<width>350</width>
+						<font>font22</font>
+						<label>$INFO[ListItem.Label]</label>
+						<scroll>true</scroll>
+					</control>
+
+				</focusedlayout>
+
+			</control>
+
+			<control type="label">
+				<posx>585</posx>
+				<posy>188</posy>
+				<width>550</width>
+				<font>font24UB</font>
+				<align>center</align>
+				<scroll>true</scroll>
+				<label>[COLOR Accent]$LOCALIZE[31194][/COLOR]</label>
+				<visible>stringcompare(ListItem.Label,..)</visible>
+			</control>
+			
+			<control type="label">
+				<posx>585</posx>
+				<posy>188</posy>
+				<width>550</width>
+				<font>font24UB</font>
+				<align>center</align>
+				<scroll>true</scroll>
+				<label>[COLOR Accent]$INFO[ListItem.Label][/COLOR]</label>
+				<visible>!stringcompare(ListItem.Label,..)</visible>
+			</control>
+
+			<control type="image">
+				<posx>670</posx>
+				<posy>248</posy>
+				<width>380</width>
+				<height>380</height>
+				<fadetime>100</fadetime>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture fallback="defaults/DefaultPicture.png">$INFO[ListItem.Icon]</texture>
+				<bordertexture>backings/key-back1.png</bordertexture>
+				<visible>!IsEmpty(ListItem.Icon) + !stringcompare(ListItem.Label,..)</visible>
+			</control>
+			
+			<control type="image">
+				<posx>670</posx>
+				<posy>248</posy>
+				<width>380</width>
+				<height>380</height>
+				<fadetime>100</fadetime>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture>defaults/DefaultFolderBack.png</texture>
+				<bordertexture>backings/key-back1.png</bordertexture>
+				<visible>stringcompare(ListItem.Label,..)</visible>
+			</control>
+			
+			<control type="image">
+				<description>outline</description>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<posx>639</posx>
+				<posy>187</posy>
+				<width>7</width>
+				<height>462</height>
+				<aspectratio>stretch</aspectratio>
+				<texture>colors/color_white.png</texture>
+				<visible>Control.HasFocus(60)</visible>
+			</control>
+
+			<control type="scrollbar" id="60">
+				<posx>640</posx>
+				<posy>188</posy>
+				<height>460</height>
+				<width>5</width>
+				<texturesliderbar>general/accent.png</texturesliderbar> 
+				<texturesliderbackground>backings/key-back2.png</texturesliderbackground> 
+				<onleft>50</onleft>
+				<onright>50</onright>
+			</control>
+			
+		</control>	
+
+	</include>
+
+</includes>

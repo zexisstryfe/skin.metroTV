@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window id="107">
+	<defaultcontrol always="true">402</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<control type="group">
+			<posx>340r</posx>
+			<posy>30</posy>
+			<include>Animation_Notification_Right</include>
+			
+			<control type="image">
+				<description>background image</description>
+				<width>340</width>
+				<height>64</height>
+				<include>Common_Color_Keyback1</include>
+			</control>
+			
+			<control type="image">
+				<description>Image</description>
+				<width>64</width>
+				<height>64</height>
+				<include>Common_Color_Keyback2</include>
+			</control>
+
+			<control type="image" id="400">
+				<description>Image</description>
+				<include>KaiToast_Icon</include>
+				<texture>kai\dialog.png</texture>
+			</control>
+
+			<control type="label" id="402">
+				<description>heading</description>
+				<posx>84</posx>
+				<width>306</width>
+				<height>32</height>
+				<label>-</label>
+				<scroll>true</scroll>
+				<font>font20UB</font>
+			</control>
+
+			<control type="label" id="401">
+				<description>message</description>
+				<posx>84</posx>
+				<posy>32</posy>
+				<width>306</width>
+				<height>32</height>
+				<label>-</label>
+				<scroll>true</scroll>
+			</control>
+
+			<control type="image" id="403">
+				<description>Image</description>
+				<include>KaiToast_Icon</include>
+				<visible>false</visible>
+				<texture>kai\dialog-info.png</texture>
+			</control>
+
+			<control type="image" id="404">
+				<description>Image</description>
+				<include>KaiToast_Icon</include>
+				<visible>false</visible>
+				<texture>kai\dialog-warning.png</texture>
+			</control>
+
+			<control type="image" id="405">
+				<description>Image</description>
+				<include>KaiToast_Icon</include>
+				<visible>false</visible>
+				<texture>kai\dialog-error.png</texture>
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

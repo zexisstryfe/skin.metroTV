@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window id="2000">
+	<defaultcontrol always="true">3</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<onunload condition="!IsEmpty(Window(selectdialog).Property(Property))">Skin.SetString($INFO[Window(selectdialog).Property(Property),,.Label],$INFO[Window(selectdialog).Property(Label)])</onunload>
+    <onunload condition="!IsEmpty(Window(selectdialog).Property(Property))">Skin.SetString($INFO[Window(selectdialog).Property(Property),,.Icon],$INFO[Window(selectdialog).Property(Icon)])</onunload>
+    <onunload condition="!IsEmpty(Window(selectdialog).Property(Property))">ClearProperty(Label,selectdialog)</onunload>
+    <onunload condition="!IsEmpty(Window(selectdialog).Property(Property))">ClearProperty(Icon,selectdialog)</onunload>
+    <onunload condition="!IsEmpty(Window(selectdialog).Property(Property))">ClearProperty(Property,selectdialog)</onunload>
+	<controls>
+
+		<include>DialogOverlay</include>
+
+		<control type="group">
+			<posx>300</posx>
+			<posy>80</posy>
+			<include>Animation_Dialog_Center</include>
+			
+			<control type="image">
+				<width>700</width>
+				<height>560</height>
+				<include>Common_Color_Keyback1</include>
+			</control>
+
+			<control type="label" id="1">
+				<description>header label</description>
+				<posx>680</posx>
+				<width>660</width>
+				<include>Dialog_Header</include>
+			</control>
+			
+			<control type="image">
+				<description>line</description>
+				<width>700</width>
+				<include>Dialog_Line</include>
+			</control>
+			
+			<control type="image">
+				<description>left side</description>
+				<width>240</width>
+				<height>560</height>
+				<include>Common_Color_Keyback2</include>
+			</control>
+			
+			<control type="image">
+				<posx>250</posx>
+				<posy>80</posy>
+				<width>425</width>
+				<height>460</height>
+				<include>Common_Color_Keyback2</include>
+			</control>
+
+			<control type="list" id="3">
+				<posx>250</posx>
+				<posy>80</posy>
+				<width>440</width>
+				<height>460</height>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<onup>3</onup>
+				<ondown>3</ondown>
+				<pagecontrol>7</pagecontrol>
+				
+				<itemlayout height="46">
+					<control type="label">
+						<posx>20</posx>
+						<width>400</width>
+						<font>font24L</font>
+						<info>ListItem.Label</info>
+					</control>
+
+					<control type="label">
+						<posx>440</posx>
+						<width>400</width>
+						<align>right</align>
+						<font>font24L</font>
+						<info>ListItem.Label2</info>
+					</control>
+
+				</itemlayout>
+
+				<focusedlayout height="46">
+
+					<control type="image">
+						<width>415</width>
+						<height>45</height>
+						<include>Common_Color_Accent</include>
+					</control>
+
+					<control type="label">
+						<posx>20</posx>
+						<width>400</width>
+						<font>font24L</font>
+						<info>ListItem.Label</info>
+					</control>
+
+					<control type="label">
+						<posx>420</posx>
+						<width>400</width>
+						<align>right</align>
+						<font>font24L</font>
+						<info>ListItem.Label2</info>
+					</control>
+
+				</focusedlayout>
+
+			</control>
+			
+			<control type="image">
+				<description>outline</description>
+				<posx>679</posx>
+				<posy>84</posy>
+				<height>450</height>
+				<include>Common_Scroll_OutlineV</include>
+				<visible>Control.HasFocus(7)</visible>
+			</control>			
+			
+			<control type="scrollbar" id="7">
+				<posx>680</posx>
+				<posy>85</posy>
+				<height>448</height>
+				<onleft>6</onleft>
+				<onright>5</onright>
+				<width>5</width>
+			</control>
+
+			<control type="list" id="6">
+				<posx>250</posx>
+				<posy>80</posy>
+				<width>440</width>
+				<height>460</height>
+				<onleft>5</onleft>
+				<onright>7</onright>
+				<onup>6</onup>
+				<ondown>6</ondown>
+				<pagecontrol>7</pagecontrol>
+				<itemlayout height="92">
+					
+					<control type="image">
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>80</width>
+						<height>80</height>
+						<include>Common_Color_Keyback1</include>
+					</control>
+
+					<control type="image">
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>80</width>
+						<height>80</height>
+						<texture fallback="DefaultAddonNone.png">$INFO[Listitem.Icon]</texture>
+					</control>
+
+					<control type="label">
+						<posx>100</posx>
+						<posy>10</posy>
+						<width>400</width>
+						<height>30</height>
+						<textcolor>Accent</textcolor>
+						<font>font20UB</font>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+					</control>
+
+					<control type="label">
+						<posx>100</posx>
+						<posy>50</posy>
+						<width>400</width>
+						<height>30</height>
+						<align>left</align>
+						<font>font20L</font>
+						<info>ListItem.Label2</info>
+					</control>
+
+				</itemlayout>
+
+				<focusedlayout height="92">
+				
+					<control type="button">
+						<posx>5</posx>
+						<posy>5</posy>
+                        <onfocus condition="!IsEmpty(Window(selectdialog).Property(Property))">SetProperty(Label,$INFO[Container(6).ListItem.Label])</onfocus>
+                        <onfocus condition="!IsEmpty(Window(selectdialog).Property(Property))">SetProperty(Icon,$INFO[Container(6).ListItem.Icon])</onfocus>
+                    </control>
+
+					<control type="image">
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>415</width>
+						<height>80</height>
+						<include>Common_Color_Accent</include>
+					</control>
+
+					<control type="image">
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>80</width>
+						<height>80</height>
+						<include>Common_Color_Keyback1</include>
+					</control>
+					
+					<control type="image">
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>80</width>
+						<height>80</height>						
+						<texture fallback="defaults/DefaultAddonNone.png">$INFO[Listitem.Icon]</texture>
+					</control>
+
+					<control type="label">
+						<posx>100</posx>
+						<posy>10</posy>
+						<width>400</width>
+						<height>30</height>
+						<font>font20UB</font>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+					</control>
+
+					<control type="label">
+						<posx>100</posx>
+						<posy>50</posy>
+						<width>400</width>
+						<height>30</height>
+						<align>left</align>
+						<font>font20L</font>
+						<info>ListItem.Label2</info>
+					</control>
+
+				</focusedlayout>
+
+			</control>
+
+			<control type="label" id="2">
+				<description>Number Of Files</description>
+				<posx>20</posx>
+				<posy>80</posy>
+				<width>200</width>
+				<align>center</align>
+				<label>-</label>
+			</control>
+
+			<control type="button" id="5">
+				<description>Manual</description>
+				<posx>20</posx>
+				<posy>126</posy>
+				<width>200</width>
+				<label>368</label>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<onup>3</onup>
+				<ondown>3</ondown>
+				<texturenofocus colordiffuse="Keyback1">colors/color_white.png</texturenofocus>
+			</control>
+
+			<control type="image">
+				<description>Large Icon Image</description>
+				<posx>20</posx>
+				<posy>238</posy>
+				<width>200</width>
+				<height>300</height>
+				<texture fallback="defaults/DefaultAddonNone.png">$INFO[Container(6).ListItem.Icon]</texture>
+				<aspectratio align="center" aligny="bottom">keep</aspectratio>
+				<bordertexture colordiffuse="Accent">colors/color_white.png</bordertexture>
+				<bordersize>5</bordersize>
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

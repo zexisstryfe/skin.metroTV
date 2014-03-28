@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<includes>
+
+    <include name="LiveTVGuideNowNextView">
+	
+		<include>Common_TopBar</include>
+		
+        <control type="group">
+            <description>TV Guide Now/Next</description>
+            <visible>Control.IsVisible(16)</visible>
+			
+			<control type="group">
+				<animation effect="fade" time="400">VisibleChange</animation>
+				<animation effect="slide" start="+1200,0" time="500" easing="out" tween="cubic" delay="1000" condition="Skin.HasSetting(MetroAnimations)">WindowOpen</animation>
+				<animation effect="slide" start="+1200,0" time="500" easing="out" tween="cubic" reversible="false" delay="1000" condition="Skin.HasSetting(MetroAnimations)">WindowOpen</animation>	
+				<animation effect="slide" start="+1200,0" time="500" easing="out" tween="cubic" delay="300" condition="!Skin.HasSetting(MetroAnimations)">WindowOpen</animation>
+				<animation effect="slide" start="+1200,0" time="500" easing="out" tween="cubic" reversible="false" delay="300" condition="!Skin.HasSetting(MetroAnimations)">WindowOpen</animation>	
+
+				<control type="image">
+					<description>horizontal bar</description>
+					<posx>0</posx>
+					<posy>210</posy>
+					<width>1280</width>
+					<height>483</height>
+					<include>Common_Color_Tile1</include>
+				</control>
+
+				<control type="label">
+					<posx>76</posx>
+					<posy>230</posy>
+					<width>600</width>
+					<height>50</height>
+					<font>font40UB</font>
+					<label>$LOCALIZE[31084] [COLOR Accent]$INFO[Control.GetLabel(29)] $INFO[Control.GetLabel(30)][/COLOR]</label>
+				</control>
+				
+				<control type="group">
+					<posx>76</posx>
+					<posy>288</posy>
+					
+					<control type="label">
+						<description>Time label</description>
+						<posx>10</posx>
+						<height>45</height>
+						<width>100</width>
+						<label>[B]$LOCALIZE[555][/B]</label>
+					</control>
+					
+					<control type="label">
+						<description>Channel label</description>
+						<posx>150</posx>
+						<height>45</height>
+						<width>250</width>
+						<label>[B]$LOCALIZE[19029][/B]</label>
+					</control>
+					
+					<control type="label">
+						<description>Title</description>
+						<posx>360</posx>
+						<height>45</height>
+						<width>550</width>
+						<label>[B]$LOCALIZE[369][/B]</label>
+					</control>
+					
+					<control type="label">
+						<description>Status header label</description>
+						<posx>940</posx>
+						<height>45</height>
+						<width>140</width>
+						<label>[B]$LOCALIZE[126][/B]</label>
+					</control>
+					
+					<control type="list" id="16">
+						<posx>0</posx>
+						<posy>45</posy>
+						<width>1100</width>
+						<height>325</height>
+						<onup>16</onup>
+						<ondown>16</ondown>
+						<onleft>31</onleft>
+						<onright>76</onright>
+						<pagecontrol>76</pagecontrol>
+						<scrolltime>200</scrolltime>
+						<itemlayout height="47">
+						
+							<control type="image">
+								<posx></posx>
+								<width>138</width>
+								<height>45</height>
+								<include>Common_Color_Keyback1</include>
+							</control>
+							
+							<control type="image">
+								<posx>140</posx>
+								<width>208</width>
+								<height>45</height>
+								<include>Common_Color_Keyback1</include>
+							</control>
+							
+							<control type="image">
+								<posx>350</posx>
+								<width>578</width>
+								<height>45</height>
+								<include>Common_Color_Keyback1</include>
+							</control>
+							
+							<control type="image">
+								<posx>350</posx>
+								<width>578</width>
+								<height>45</height>
+								<texture>colors/color_maroon.png</texture>
+								<visible>ListItem.IsRecording</visible>
+							</control>
+							
+							<control type="progress">
+								<posx>350</posx>
+								<posy>39</posy>
+								<width>578</width>
+								<height>5</height>
+								<texturebg>backing/key-back1.png</texturebg>
+								<lefttexture>-</lefttexture>
+								<midtexture>general/accent.png</midtexture>
+								<righttexture>-</righttexture>
+								<info>ListItem.Progress</info>
+								<visible>ListItem.HasEpg</visible>
+							</control>
+							
+							<control type="image">
+								<posx>930</posx>
+								<width>170</width>
+								<height>45</height>
+								<include>Common_Color_Keyback1</include>
+							</control>
+							
+							<control type="label">
+								<posx>10</posx>
+								<posy>0</posy>
+								<width>100</width>
+								<height>45</height>
+								<aligny>center</aligny>
+								<font>font20UB</font>							
+								<info>ListItem.StartTime</info>
+							</control>
+							
+							<control type="label">
+								<posx>150</posx>
+								<posy>0</posy>
+								<width>190</width>
+								<height>45</height>
+								<aligny>center</aligny>
+								<font>font20UB</font>	
+								<align>left</align>
+								<info>ListItem.ChannelName</info>
+							</control>
+							
+							<control type="label">
+								<posx>360</posx>
+								<posy>0</posy>
+								<width>590</width>
+								<height>45</height>
+								<aligny>center</aligny>
+								<font>font20</font>	
+								<align>left</align>
+								<info>ListItem.Label</info>
+							</control>
+							
+							<control type="image">
+								<posx>940</posx>
+								<posy>12</posy>
+								<width>25</width>
+								<height>25</height>
+								<texture>home/recordings.png</texture>
+								<visible>ListItem.IsRecording</visible>
+							</control>
+							
+							<control type="label">
+								<posx>970</posx>
+								<posy>0</posy>
+								<width>80</width>
+								<height>45</height>
+								<aligny>center</aligny>
+								<font>font20</font>	
+								<align>left</align>
+								<label>19043</label>
+								<visible>ListItem.IsRecording</visible>
+							</control>
+							
+							<control type="image">
+								<posx>940</posx>
+								<posy>12</posy>
+								<width>25</width>
+								<height>25</height>
+								<texture>home/recent.png</texture>
+								<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+							</control>
+							
+							<control type="label">
+								<posx>970</posx>
+								<posy>0</posy>
+								<width>80</width>
+								<height>45</height>
+								<aligny>center</aligny>
+								<font>19040</font>	
+								<align>left</align>
+								<label>19040</label>
+								<visible>ListItem.HasTimer</visible>
+							</control>
+							
+						</itemlayout>
+						
+						<focusedlayout height="137">
+						
+							<control type="image">
+								<posx></posx>
+								<width>138</width>
+								<height>45</height>
+								<include>Common_Color_Accent</include>
+							</control>
+							
+							<control type="image">
+								<posx>140</posx>
+								<width>208</width>
+								<height>45</height>
+								<include>Common_Color_Accent</include>
+							</control>
+							
+							<control type="image">
+								<posx>350</posx>
+								<width>578</width>
+								<height>45</height>
+								<include>Common_Color_Accent</include>
+							</control>
+							
+							<control type="image">
+								<posx>930</posx>
+								<width>170</width>
+								<height>45</height>
+								<include>Common_Color_Accent</include>
+							</control>
+							
+							<control type="image">
+								<posx></posx>
+								<posy>47</posy>
+								<width>1100</width>
+								<height>88</height>
+								<include>Common_Color_Keyback2</include>
+							</control>
+							
+							<control type="progress">
+								<description>Progressbar</description>
+								<posx>350</posx>
+								<posy>40</posy>
+								<width>578</width>
+								<height>3</height>
+								<texturebg>general/accent.png</texturebg>
+								<lefttexture>-</lefttexture>
+								<righttexture>-</righttexture>
+								<visible>ListItem.HasEpg</visible>
+								<info>ListItem.Progress</info>
+							</control>
+							
+							<control type="label">
+								<posx>10</posx>
+								<posy>0</posy>
+								<width>100</width>
+								<height>45</height>
+								<aligny>center</aligny>
+								<font>font20UB</font>							
+								<info>ListItem.StartTime</info>
+							</control>
+							
+							<control type="label">
+								<posx>150</posx>
+								<posy>0</posy>
+								<width>190</width>
+								<height>45</height>
+								<aligny>center</aligny>
+								<font>font20UB</font>	
+								<align>left</align>
+								<info>ListItem.ChannelName</info>
+							</control>
+							
+							<control type="label">
+								<posx>360</posx>
+								<posy>0</posy>
+								<width>590</width>
+								<height>45</height>
+								<aligny>center</aligny>
+								<font>font20</font>	
+								<align>left</align>
+								<info>ListItem.Label</info>
+							</control>
+							
+							<control type="textbox">
+								<description>Plot Value for TVShow</description>
+								<posx>10</posx>
+								<posy>50</posy>
+								<width>1080</width>
+								<height>85</height>
+								<align>justify</align>
+								<font>font18</font>
+								<pagecontrol>-</pagecontrol>
+								<info>ListItem.Plot</info>
+							</control>
+							
+							<control type="image">
+								<posx>940</posx>
+								<posy>12</posy>
+								<width>25</width>
+								<height>25</height>
+								<texture>home/recordings.png</texture>
+								<visible>ListItem.IsRecording</visible>
+							</control>
+							
+							<control type="label">
+								<posx>970</posx>
+								<posy>0</posy>
+								<width>80</width>
+								<height>45</height>
+								<aligny>center</aligny>
+								<font>font20</font>	
+								<align>left</align>
+								<label>19043</label>
+								<visible>ListItem.IsRecording</visible>
+							</control>
+							
+							<control type="image">
+								<posx>940</posx>
+								<posy>12</posy>
+								<width>25</width>
+								<height>25</height>
+								<texture>home/recent.png</texture>
+								<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+							</control>
+							
+							<control type="label">
+								<posx>970</posx>
+								<posy>0</posy>
+								<width>80</width>
+								<height>45</height>
+								<aligny>center</aligny>
+								<font>font20</font>	
+								<align>left</align>
+								<label>19040</label>
+								<visible>ListItem.HasTimer</visible>
+							</control>
+							
+						</focusedlayout>
+						
+					</control>
+					
+					<control type="image">
+						<description>outline</description>
+						<animation effect="fade" time="200">VisibleChange</animation>
+						<posx>1104</posx>
+						<posy>44</posy>
+						<width>7</width>
+						<height>327</height>
+						<aspectratio>stretch</aspectratio>
+						<texture>colors/color_white.png</texture>
+						<visible>Control.HasFocus(76)</visible>
+					</control>
+					
+					<control type="scrollbar" id="76">
+						<onleft>16</onleft>
+						<onright>31</onright>
+						<posx>1105</posx>
+						<posy>45</posy>
+						<height>325</height>
+						<width>5</width>
+						<texturesliderbar>general/accent.png</texturesliderbar> 
+						<texturesliderbackground>backings/key-back2.png</texturesliderbackground> 
+					</control>
+					
+				</control>
+				
+			</control>
+			
+        </control>
+		
+    </include>
+	
+</includes>

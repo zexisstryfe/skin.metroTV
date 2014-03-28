@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window id="2006">
+	<defaultcontrol always="true">-</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+
+	<controls>
+
+		<control type="visualisation" id="2">
+			<visible>!SubString(Window(videolibrary).Property(TvTunesIsAlive),True)</visible>
+			<description>visualisation</description>
+			<include>Dimensions_Fullscreen</include>
+		</control>
+
+		<control type="group">
+			<visible>!SubString(Window(videolibrary).Property(TvTunesIsAlive),True)</visible>
+			<visible>Player.ShowInfo + ![Window.IsVisible(VisualisationSettings) | Window.IsVisible(VisualisationPresetList)]</visible>
+			<animation type="WindowOpen">
+				<effect type="zoom" start="108" end="100" time="400" center="640,360" tween="cubic" easing="out" />
+				<effect type="fade" start="0" end="100" time="400" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="zoom" start="100" end="108" time="400"  center="640,360" tween="cubic" easing="out" />
+				<effect type="fade" start="100" end="0" time="400" />
+			</animation>
+
+			<control type="image">
+				<description>Music cover image</description>
+				<posx>30</posx>
+				<posy>30</posy>
+				<width>240</width>
+				<height>240</height>
+				<fadetime>200</fadetime>
+				<texture background="true">$INFO[MusicPlayer.cover]</texture>
+				<aspectratio  align="left" aligny="top">keep</aspectratio>
+				<bordertexture border="5" colordiffuse="Keyback1">colors/color_white.png</bordertexture>
+				<bordersize>8</bordersize>
+			</control>
+		
+			<control type="group">			
+				<visible>!Window.IsVisible(MusicOSD.xml)</visible>
+				<control type="image">
+					<description>backing</description>
+					<posy>610</posy>
+					<width>1300</width>
+					<height>110</height>
+					<fadetime>200</fadetime>
+					<align>right</align>
+					<include>Common_Color_Tile1</include>
+				</control>
+
+				<control type="label">
+					<posx>30</posx>
+					<posy>610</posy>
+					<width>880</width>
+					<label>$INFO[MusicPlayer.Album]$INFO[MusicPlayer.Artist, - ]</label>
+					<font>font24UB</font>
+					<shadowcolor>black</shadowcolor>
+				</control>
+
+				<control type="label">
+					<posx>30</posx>
+					<posy>644</posy>
+					<width>880</width>
+					<label>$INFO[MusicPlayer.Title]</label>
+					<scroll>true</scroll>
+					<font>font24L</font>
+					<shadowcolor>black</shadowcolor>
+				</control>
+
+				<control type="label">
+					<description>Track Count</description>
+					<posx>1250</posx>
+					<posy>610</posy>
+					<width>300</width>
+					<label>$INFO[MusicPlayer.PlaylistPosition,[B][COLOR=Accent]$LOCALIZE[554]:[/COLOR][/B] ]$INFO[MusicPlayer.PlaylistLength, / ]</label>
+					<align>right</align>
+					<font>font24U</font>
+					<shadowcolor>black</shadowcolor>
+					<visible>MusicPlayer.ChapterCount</visible>
+				</control>
+
+				<control type="label">
+					<description>Player Times</description>
+					<posx>1250</posx>
+					<posy>644</posy>
+					<width>500</width>
+					<label>$INFO[MusicPlayer.Time]$INFO[MusicPlayer.Duration, / ]</label>
+					<align>right</align>
+					<font>font24L</font>
+					<shadowcolor>black</shadowcolor>
+				</control>
+
+				<control type="progress">
+					<description>Progressbar</description>
+					<posx>30</posx>
+					<posy>30r</posy>
+					<width>1220</width>
+					<height>15</height>
+					<info>Player.Progress</info>
+				</control>
+			
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

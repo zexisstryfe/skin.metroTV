@@ -1,0 +1,106 @@
+<window  type="dialog" id="152">
+	<defaultcontrol always="true">5</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	
+	<controls>
+		
+		<include>DialogOverlay</include>
+		
+		<control type="group">
+			<posx>270</posx>
+			<posy>80</posy>
+			<include>Animation_Dialog_Center</include>
+			
+			<control type="image">
+				<width>740</width>
+				<height>560</height>
+				<include>Common_Color_Keyback1</include>
+			</control>
+			
+			<control type="label" id="1">
+				<description>header label</description>
+				<posx>720</posx>
+				<width>460</width>
+				<include>Dialog_Header</include>
+				<label>$LOCALIZE[31003]</label>
+			</control>
+			
+			<control type="image">
+				<description>line</description>
+				<width>740</width>
+				<include>Dialog_Line</include>
+			</control>
+						
+			<control type="grouplist" id="5">					
+				<description>Control Area</description>
+				<posx>20</posx>
+				<posy>80</posy>
+				<width>700</width>
+				<height>460</height>
+				<itemgap>2</itemgap>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<ondown>28</ondown>
+				<orientation>vertical</orientation>					
+			</control>
+				
+			<control type="button" id="7">			
+				<description>Default Button</description>
+				<texturenofocus>-</texturenofocus>	
+				<align>left</align>	
+				<aligny>center</aligny>
+			</control>
+
+			<control type="radiobutton" id="8">
+				<description>Default RadioButton</description>
+				<texturenofocus>-</texturenofocus>
+				<align>left</align>	
+				<aligny>center</aligny>
+			</control>
+
+			<control type="spincontrolex" id="9">
+				<description>Default spincontrolex</description>
+				<texturenofocus>-</texturenofocus>
+				<reverse>yes</reverse>
+				<aligny>center</aligny>
+			</control>
+
+			<control type="sliderex" id="10">
+				<description>Default Slider</description>
+				<texturenofocus>-</texturenofocus>
+				<width>200</width>
+				<align>left</align>	
+				<aligny>center</aligny>
+			</control>
+			
+			<control type="edit" id="12">
+				<description>Default Edit</description>
+				<textcolor>White</textcolor>
+				<disabledcolor>Black</disabledcolor>
+				<textoffsetx>20</textoffsetx>
+				<textoffsety>0</textoffsety>
+				<include>Common_Settings_Edit</include>	
+			</control>	
+		
+			<control type="grouplist">			
+				<posx>20</posx>
+				<posy>500</posy>
+				<width>700</width>
+				<itemgap>20</itemgap>
+				<orientation>horizontal</orientation>
+				<align>right</align>
+				<ondown>5</ondown>
+				<onup>5</onup>
+				
+				<control type="button" id="28">
+					<description>OK Button</description>
+					<include>Dialog_OkButton</include>
+				</control>
+				
+			</control>			
+					
+		</control>
+
+	</controls>
+
+</window>

@@ -1,0 +1,115 @@
+<includes>
+
+<!-- BASIC TILES -->
+	<include name="Single_Tile">
+		<width>155</width>
+		<height>155</height>
+		<include>Common_Color_Keyback1</include>
+		<visible>Skin.HasSetting(TileBackground)</visible>
+	</include>
+	
+	<include name="Single_Tile_Focus">
+		<width>155</width>
+		<height>155</height>
+		<include>Common_Color_Accent</include>
+	</include>
+	
+	<include name="Small_Single_Tile_Focus">
+		<width>78</width>
+		<height>78</height>
+		<include>Common_Color_Accent</include>
+	</include>
+	
+	<include name="Double_Tile">
+		<width>315</width>
+		<height>155</height>
+		<include>Common_Color_Keyback1</include>
+		<visible>Skin.HasSetting(TileBackground)</visible>
+	</include>
+		
+	<include name="Double_Tile_Focus">
+		<width>315</width>
+		<height>155</height>
+		<include>Common_Color_Accent</include>
+	</include>
+
+	<include name="Small_Double_Tile_Focus">
+		<width>158</width>
+		<height>78</height>
+		<include>Common_Color_Accent</include>
+	</include>	
+
+<!-- HOME SCREEN TILES -->	
+	<include name="Home_Double_Tile">
+	
+		<control type="image">
+			<width>315</width>
+			<height>155</height>
+			<include>Common_Color_Tile1</include>
+			<visible>!Skin.HasSetting(TileBackground)</visible>
+		</control>
+		
+		<control type="image">
+			<width>315</width>
+			<height>155</height>
+			<include>Common_Color_Keyback1</include>
+			<visible>Skin.HasSetting(TileBackground)</visible>
+		</control>
+		
+	</include>
+	
+	<include name="Home_Single_Tile">
+	
+		<control type="image">
+			<width>155</width>
+			<height>155</height>
+			<include>Common_Color_Tile1</include>
+			<visible>!Skin.HasSetting(TileBackground)</visible>
+		</control>
+		
+		<control type="image">
+			<width>155</width>
+			<height>155</height>
+			<include>Common_Color_Keyback1</include>
+			<visible>Skin.HasSetting(TileBackground)</visible>
+		</control>
+		
+	</include>
+	
+	<include name="Small_Home_Double_Tile">
+	
+		<control type="image">
+			<width>158</width>
+			<height>78</height>
+			<include>Common_Color_Tile1</include>
+			<visible>!Skin.HasSetting(TileBackground)</visible>
+		</control>
+		
+		<control type="image">
+			<width>158</width>
+			<height>78</height>
+			<include>Common_Color_Keyback2</include>
+			<visible>Skin.HasSetting(TileBackground)</visible>
+		</control>
+		
+	</include>
+	
+	<include name="Small_Home_Single_Tile">
+	
+		<control type="image">
+			<width>78</width>
+			<height>78</height>
+			<include>Common_Color_Tile1</include>
+			<visible>!Skin.HasSetting(TileBackground)</visible>
+		</control>
+		
+		<control type="image">
+			<width>78</width>
+			<height>78</height>
+			<include>Common_Color_Keyback2</include>
+			<visible>Skin.HasSetting(TileBackground)</visible>
+		</control>	
+		
+	</include>
+	
+</includes>

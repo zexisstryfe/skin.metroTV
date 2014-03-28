@@ -1,0 +1,206 @@
+﻿<includes>
+	<include name="Viewtype_Photos">
+		
+		<control type="group">
+			<visible>Control.IsVisible(55)</visible>
+			<animation type="TYPE" condition="Window.IsVisible(2003)" reversible="false">
+				<effect type="slide" end="-1500,0" time="200"/>
+			</animation>
+			<animation type="TYPE" condition="!Window.IsVisible(2003)" reversible="false">
+				<effect type="slide" start="-1500,0" time="200"/>
+			</animation>		
+			<animation type="WindowClose">
+				<effect type="fade" time="300"/>
+				<effect type="slide" end="+1500,0" time="300"/>
+			</animation>
+			<animation type="WindowOpen">
+				<effect type="fade" time="300"/>
+				<effect type="slide" start="+1500,0" time="300"/>
+			</animation>
+			<animation effect="fade" time="300">WindowOpen</animation>
+			<animation type="WindowClose">
+				<effect type="fade" time="300"/>
+			</animation>
+			
+			<include>GlobalBackground</include>	
+			
+			<control type="image">
+				<include>Dimensions_Fullscreen</include>
+				<texture background="true">backings/music_fanart_diffuse.png</texture>
+				<visible>Skin.HasSetting(UseFanartOverlay)</visible>
+			</control>
+
+			<include>Common_TopBar</include>
+				
+			<control type="panel" id="55">
+				<viewtype label="polaroids">tiles</viewtype>
+				<posx>150</posx>
+				<posy>170</posy>
+				<width>1200</width>
+				<height>480</height>
+				<scrolltime>200</scrolltime>
+				<orientation>horizontal</orientation>
+				<onright>-</onright>
+				<onleft>9000</onleft>
+				<ondown>9000</ondown>
+				<pagecontrol>62</pagecontrol>
+				<preloaditems>2</preloaditems>
+				<include>Animation_HiddenByInfo</include>
+				<visible>Window.IsActive(pictures)</visible>
+				<itemlayout width="205" height="240">
+				
+					<control type="image">
+						<posx>9</posx>
+						<posy>0</posy>
+						<width>185</width>
+						<height>220</height>
+						<texture background="true" border="2">backings/polaroid.png</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+					</control>
+
+					<control type="image">
+						<posx>19</posx>
+						<posy>10</posy>
+						<width>165</width>
+						<height>155</height>
+						<aspectratio align="left" aligny="center">scale</aspectratio>
+						<texture fallback="defaults/DefaultPicture.png">$INFO[ListItem.Icon]</texture>
+						<visible>!stringcompare(ListItem.Label,..)</visible>
+					</control>
+					
+					<control type="image">
+						<posx>19</posx>
+						<posy>10</posy>
+						<width>165</width>
+						<height>155</height>
+						<aspectratio align="left" aligny="center">keep</aspectratio>
+						<texture>defaults/DefaultFolderBack.png</texture>
+						<visible>stringcompare(ListItem.Label,..)</visible>
+					</control>
+					
+					<control type="textbox">
+						<label>$INFO[ListItem.Label]</label>
+						<posx>25</posx>
+						<posy>170</posy>
+						<height>50</height>
+						<width>150</width>
+						<font>scrawl18</font>
+						<textcolor>Black</textcolor>
+						<align>center</align>
+						<wrapmultiline>true</wrapmultiline>
+						<visible>!stringcompare(ListItem.Label,..)</visible>
+					</control>
+					
+					<control type="textbox">
+						<label>$LOCALIZE[31194]</label>
+						<posx>25</posx>
+						<posy>170</posy>
+						<height>50</height>
+						<width>150</width>
+						<font>scrawl18</font>
+						<textcolor>Black</textcolor>
+						<align>center</align>
+						<wrapmultiline>true</wrapmultiline>
+						<visible>stringcompare(ListItem.Label,..)</visible>
+					</control>
+					
+				</itemlayout>
+				
+				<focusedlayout width="345" height="160">
+				
+					<control type="group">
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />
+						</animation>
+						
+						<control type="image">
+							<posx>14</posx>
+							<posy>0</posy>
+							<width>185</width>
+							<height>220</height>
+							<texture>backings/polaroid.png</texture>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+						</control>
+						
+						<control type="image">
+							<posx>24</posx>
+							<posy>10</posy>
+							<width>165</width>
+							<height>155</height>
+							<aspectratio align="left" aligny="center">scale</aspectratio>
+							<texture fallback="defaults/DefaultPicture.png">$INFO[ListItem.Icon]</texture>
+							<visible>!stringcompare(ListItem.Label,..)</visible>
+						</control>
+						
+						<control type="image">
+							<posx>24</posx>
+							<posy>10</posy>
+							<width>165</width>
+							<height>155</height>
+							<aspectratio align="left" aligny="center">keep</aspectratio>
+							<texture>defaults/DefaultFolderBack.png</texture>
+							<visible>stringcompare(ListItem.Label,..)</visible>
+						</control>
+										
+						<control type="textbox">
+							<label>$INFO[ListItem.Label]</label>
+							<posx>25</posx>
+							<posy>170</posy>
+							<height>50</height>
+							<width>150</width>
+							<font>scrawl18</font>
+							<textcolor>Black</textcolor>
+							<align>center</align>
+							<wrapmultiline>true</wrapmultiline>
+						</control>
+						
+						<control type="textbox">
+							<label>$LOCALIZE[31194]</label>
+							<posx>25</posx>
+							<posy>170</posy>
+							<height>50</height>
+							<width>150</width>
+							<font>scrawl18</font>
+							<textcolor>Black</textcolor>
+							<align>center</align>
+							<wrapmultiline>true</wrapmultiline>
+							<visible>stringcompare(ListItem.Label,..)</visible>
+						</control>
+						
+					</control>
+					
+				</focusedlayout>
+				
+			</control>
+
+			<control type="image">
+				<posx>0</posx>
+				<posy>660</posy>
+				<width>1280</width>
+				<height>90</height>
+				<include>Common_Color_Tile1</include>
+			</control>
+			
+			<control type="image">
+				<posx>0</posx>
+				<posy>660</posy>
+				<width>1280</width>
+				<height>1</height>
+				<include>Common_Color_Accent</include>
+			</control>
+			
+			<control type="label">
+				<label>[COLOR Accent]$INFO[ListItem.Label][/COLOR]</label>
+				<posx>0</posx>
+				<posy>660</posy>
+				<height>50</height>
+				<width>1280</width>
+				<font>font40UB</font>
+				<align>center</align>
+			</control>
+
+		</control>	
+
+	</include>
+	
+</includes>

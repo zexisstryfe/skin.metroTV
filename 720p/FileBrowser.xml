@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window id="126">
+	<defaultcontrol always="true">450</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+    <onunload condition="!IsEmpty(Window(selectdialog).Property(Property))">Skin.SetString($INFO[Window(selectdialog).Property(Property),,.Label],$INFO[Window(selectdialog).Property(Label)])</onunload>
+    <onunload condition="!IsEmpty(Window(selectdialog).Property(Property))">Skin.SetString($INFO[Window(selectdialog).Property(Property),,.Icon],$INFO[Window(selectdialog).Property(Icon)])</onunload>
+    <onunload condition="!IsEmpty(Window(selectdialog).Property(Property))">ClearProperty(Label,selectdialog)</onunload>
+    <onunload condition="!IsEmpty(Window(selectdialog).Property(Property))">ClearProperty(Icon,selectdialog)</onunload>
+    <onunload condition="!IsEmpty(Window(selectdialog).Property(Property))">ClearProperty(Property,selectdialog)</onunload>
+	
+	<controls>
+
+		<include>DialogOverlay</include>
+
+		<control type="group">
+			<posx>280</posx>
+			<posy>60</posy>
+			<include>Animation_Dialog_Center</include>
+			
+			<control type="image">
+				<width>720</width>
+				<height>600</height>
+				<include>Common_Color_Keyback1</include>
+			</control>
+			
+			<control type="image">
+				<width>720</width>
+				<include>Dialog_Line</include>
+			</control>
+			
+			<control type="image">
+				<width>240</width>
+				<height>600</height>
+				<include>Common_Color_Keyback2</include>
+			</control>
+			
+			<control type="label" id="411">
+				<description>Heading</description>
+				<posx>700</posx>
+				<width>440</width>
+				<include>Dialog_Header</include>
+				<label>$LOCALIZE[1023]</label>
+			</control>
+
+			<control type="label" id="412">
+				<description>Path</description>
+				<posx>260</posx>
+				<posy>58</posy>
+				<width>500</width>
+				<haspath>true</haspath>
+			</control>
+			
+			<control type="image">
+				<description>outline</description>
+				<posx>689</posx>
+				<posy>104</posy>
+				<height>450</height>
+				<include>Common_Scroll_OutlineV</include>
+				<visible>Control.HasFocus(417)</visible>
+			</control>
+			
+			<control type="scrollbar" id="417">
+				<posx>690</posx>
+				<posy>105</posy>
+				<height>448</height>
+				<onleft>6</onleft>
+				<onright>6</onright>
+				<width>5</width>
+			</control>
+			
+			<control type="image">
+				<posx>260</posx>
+				<posy>100</posy>
+				<width>425</width>
+				<height>460</height>
+				<include>Common_Color_Keyback2</include>
+			</control>
+
+			<control type="list" id="450">
+				<posx>260</posx>
+				<posy>100</posy>
+				<width>440</width>
+				<height>460</height>
+				<onup>450</onup>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<ondown>450</ondown>
+				<pagecontrol>417</pagecontrol>
+				<itemlayout height="92">
+					
+					<control type="image">
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>80</width>
+						<height>80</height>
+						<include>Common_Color_Keyback1</include>
+					</control>
+
+					<control type="image">
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>80</width>
+						<height>80</height>
+						<texture fallback="defaults/DefaultDVDEmpty.png">$INFO[Listitem.Icon]</texture>
+					</control>
+
+					<control type="label">
+						<posx>100</posx>
+						<posy>10</posy>
+						<width>400</width>
+						<height>30</height>
+						<font>font20UB</font>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+					</control>
+
+					<control type="label">
+						<posx>100</posx>
+						<posy>50</posy>
+						<width>400</width>
+						<height>30</height>
+						<align>left</align>
+						<font>font20L</font>
+						<info>ListItem.Label2</info>
+					</control>
+
+				</itemlayout>
+
+				<focusedlayout height="92">
+				
+					<control type="button">
+						<height>1</height>
+						<width>1</width>
+						<posx>5</posx>
+						<posy>5</posy>
+						<onfocus condition="!IsEmpty(Window(selectdialog).Property(Property))">SetProperty(Label,$INFO[Container(450).ListItem.Label],selectdialog)</onfocus>
+						<onfocus condition="!IsEmpty(Window(selectdialog).Property(Property))">SetProperty(Icon,$INFO[Container(450).ListItem.Icon],selectdialog)</onfocus>
+					</control>
+				
+					<control type="image">
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>415</width>
+						<height>80</height>
+						<include>Common_Color_Accent</include>
+						<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(450)">Conditional</animation>
+					</control>
+
+					<control type="image">
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>80</width>
+						<height>80</height>
+						<include>Common_Color_Keyback1</include>
+					</control>
+
+					<control type="image">
+						<posx>5</posx>
+						<posy>5</posy>
+						<width>80</width>
+						<height>80</height>
+						<texture fallback="defaults/DefaultDVDEmpty.png">$INFO[Listitem.Icon]</texture>
+					</control>
+
+					<control type="label">
+						<posx>100</posx>
+						<posy>10</posy>
+						<width>400</width>
+						<height>30</height>
+						<font>font20UB</font>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+					</control>
+
+					<control type="label">
+						<posx>100</posx>
+						<posy>50</posy>
+						<width>400</width>
+						<height>30</height>
+						<align>left</align>
+						<font>font20L</font>
+						<info>ListItem.Label2</info>
+					</control>
+
+				</focusedlayout>
+
+			</control>
+
+			<control type="grouplist" id="9000">
+				<posx>20</posx>
+				<posy>80</posy>
+				<width>180</width>
+				<height>350</height>
+				<itemgap>5</itemgap>
+				<orientation>vertical</orientation>
+				<scrolltime tween="back" easing="inout">1000</scrolltime>
+				
+				<control type="group">
+					<width>180</width>
+					<height>50</height>
+					
+					<control type="button" id="413">
+						<description>OK</description>
+						<include>Common_Control_Button</include>
+						<onup>416</onup>
+						<ondown>414</ondown>
+						<onright>450</onright>
+						<onleft>450</onleft>
+					</control>
+					
+					<control type="image">
+						<include>Common_Control_Button</include>
+						<texture>icons/ok.png</texture>
+					</control>
+					
+					<control type="label">
+						<include>Common_Control_Label</include>
+						<label>186</label>
+					</control>
+					
+				</control>
+
+				<control type="group">
+					<width>180</width>
+					<height>50</height>	
+					
+					<control type="button" id="414">
+						<description>Cancel</description>
+						<onright>450</onright>
+						<onleft>450</onleft>
+						<include>Common_Control_Button</include>
+						<onup>413</onup>
+						<ondown>415</ondown>
+					</control>
+					
+					<control type="image">
+						<include>Common_Control_Button</include>
+						<texture>icons/disable.png</texture>
+					</control>
+					
+					<control type="label">
+						<include>Common_Control_Label</include>
+						<label>222</label>
+					</control>
+					
+				</control>
+				
+				<control type="group">
+					<width>180</width>
+					<height>50</height>	
+					
+					<control type="button" id="415">
+						<description>Create Folder</description>
+						<onright>450</onright>
+						<onleft>450</onleft>
+						<include>Common_Control_Button</include>
+						<onup>414</onup>
+						<ondown>416</ondown>						
+					</control>
+					
+					<control type="image">
+						<include>Common_Control_Button</include>
+						<texture>icons/addfolder.png</texture>
+					</control>
+					
+					<control type="image">
+						<visible>!Control.IsEnabled(415)</visible>
+						<include>Common_Control_Button</include>
+						<texture>backings/overlay.png</texture>
+					</control>
+					
+					<control type="label">
+						<include>Common_Control_Label</include>
+						<label>119</label>
+					</control>
+					
+				</control>	
+
+				<control type="group">
+					<width>180</width>
+					<height>50</height>	
+					
+					<control type="button" id="416">
+						<description>Horizontal Flip</description>
+						<onright>450</onright>
+						<onleft>450</onleft>
+						<include>Common_Control_Button</include>
+						<onup>415</onup>
+						<ondown>413</ondown>
+					</control>
+					
+					<control type="image">
+						<include>Common_Control_Button</include>
+						<texture>icons/mirror.png</texture>
+					</control>
+					
+					<control type="image">
+						<visible>!Control.IsEnabled(416)</visible>
+						<include>Common_Control_Button</include>
+						<texture>backings/overlay.png</texture>
+					</control>
+					
+					<control type="label">
+						<include>Common_Control_Label</include>
+						<label>749</label>
+					</control>
+					
+				</control>
+				
+			</control>
+		
+			<control type="image">
+				<description>Large Icon Image</description>
+				<posx>20</posx>
+				<posy>318</posy>
+				<width>200</width>
+				<height>240</height>
+				<texture fallback="defaults/DefaultDVDEmpty.png">$INFO[Container(450).ListItem.Icon]</texture>
+				<aspectratio align="center" aligny="bottom">keep</aspectratio>
+				<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
+				<bordersize>5</bordersize>
+				<visible>!SubString(Control.GetLabel(416),*)</visible>
+			</control>
+
+			<control type="image">
+				<description>Flipped Large Icon Image</description>
+				<posx>20</posx>
+				<posy>318</posy>
+				<width>200</width>
+				<height>240</height>
+				<texture flipx="true" fallback="defaults/DefaultDVDEmpty.png">$INFO[Container(450).ListItem.Icon]</texture>
+				<aspectratio align="center" aligny="bottom">keep</aspectratio>
+				<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
+				<bordersize>5</bordersize>
+				<visible>SubString(Control.GetLabel(416),*)</visible>
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

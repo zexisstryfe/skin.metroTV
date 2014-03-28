@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window type="dialog" id="142">
+	<defaultcontrol always="true">603</defaultcontrol>
+	
+	<controls>
+
+		<control type="group">
+
+			<control type="group">
+				<animation type="WindowOpen">
+					<effect type="slide" start="-650,0" end="0,0" time="600" tween="cubic" easing="out" />
+				</animation>
+				<animation type="WindowClose">
+					<effect type="slide" start="0,0" end="-650,0" time="400" delay="200" tween="cubic" easing="out" />
+				</animation>
+				<posy>10</posy>
+				
+				<control type="image">
+					<width>160</width>
+					<height>240</height>
+					<fadetime>100</fadetime>
+					<include>Common_Color_Keyback2</include>
+				</control>
+				
+				<control type="image">
+					<width>160</width>
+					<height>240</height>
+					<fadetime>100</fadetime>
+					<aspectratio align="left" aligny="center">stretch</aspectratio>
+					<texture fallback="defaults/DefaultVideo.png">$INFO[VideoPlayer.Cover]</texture>
+					<visible>!IsEmpty(VideoPlayer.Cover)</visible>
+					<visible>VideoPlayer.Content(Movies) | VideoPlayer.Content(MusicVideos)</visible>
+				</control>
+				
+				<control type="image">
+					<width>160</width>
+					<height>240</height>
+					<fadetime>100</fadetime>
+					<aspectratio align="left" aligny="center">stretch</aspectratio>
+					<texture fallback="defaults/DefaultVideo.png">$INFO[Player.Art(tvshow.poster)]</texture>
+					<visible>!IsEmpty(Player.Art(tvshow.poster))</visible>
+					<visible>VideoPlayer.Content(Episodes)</visible>
+				</control>
+				
+				<control type="image">
+					<posx>160</posx>
+					<width>345</width>
+					<height>70</height>
+					<include>Common_Color_Keyback1</include>
+				</control>
+				
+				<control type="image">
+					<posx>160</posx>
+					<posy>70</posy>
+					<width>345</width>
+					<height>160</height>
+					<include>Common_Color_Tile1</include>
+				</control>
+				
+				<control type="image">
+					<posx>160</posx>
+					<posy>230</posy>
+					<width>345</width>
+					<height>10</height>
+					<include>Common_Color_Keyback1</include>
+				</control>
+								
+				<control type="fadelabel">
+					<description>Title</description>
+					<posx>165</posx>
+					<width>335</width>
+					<align>left</align>
+					<textcolor>Accent</textcolor>
+					<font>font26UB</font>
+					<label>$INFO[VideoPlayer.Title] ($INFO[VideoPlayer.Year])</label>
+					<scroll>true</scroll>
+					<visible>VideoPlayer.Content(Movies) | VideoPlayer.Content(MusicVideos)</visible>
+				</control>
+
+				<control type="label">
+					<posx>165</posx>
+					<width>335</width>
+					<label>$INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,x] - $INFO[VideoPlayer.Title]</label>
+					<align>left</align>
+					<font>font26UB</font>
+					<textcolor>Accent</textcolor>
+					<scroll>true</scroll>
+					<visible>VideoPlayer.Content(Episodes)</visible>
+				</control>
+				
+				<control type="label">
+					<posx>165</posx>
+					<posy>40</posy>
+					<width>335</width>
+					<height>20</height>
+					<aligny>center</aligny>
+					<font>font16L</font>
+					<label>$INFO[VideoPlayer.Genre]</label>
+					<visible>VideoPlayer.Content(Movies) | VideoPlayer.Content(MusicVideos)</visible>
+				</control>
+				
+				<control type="label">
+					<posx>165</posx>
+					<posy>40</posy>
+					<width>335</width>
+					<height>20</height>
+					<aligny>center</aligny>
+					<font>font16UB</font>
+					<label>$INFO[VideoPlayer.TVShowTitle]</label>
+					<visible>VideoPlayer.Content(Episodes)</visible>
+				</control>
+				
+				<control type="textbox">
+					<description>Plot</description>
+					<posx>165</posx>
+					<posy>73</posy>
+					<width>330</width>
+					<height>118</height>
+					<align>justify</align>
+					<font>font16</font>
+					<info>VideoPlayer.Plot</info>
+				</control>
+				
+				<control type="image">
+					<posx>160</posx>
+					<posy>195</posy>
+					<width>345</width>
+					<height>1</height>
+					<include>Common_Color_Accent</include>
+				</control>
+				
+				<control type="grouplist">
+					<posx>190</posx>
+					<posy>200</posy>
+					<width>330</width>
+					<height>25</height>
+					<itemgap>0</itemgap>
+					<align>left</align>
+					<orientation>horizontal</orientation>								
+							
+					<control type="image">
+						<description>Video rez Image</description>
+						<width>70</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[VideoPlayer.VideoResolution,flags/video/,.png]</texture>
+					</control>
+
+					<control type="image">
+						<description>Common Codec Image</description>
+						<width>70</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[VideoPlayer.VideoCodec,flags/video/,.png]</texture>
+						<visible>![substring(VideoPlayer.VideoCodec,div,left) | stringcompare(VideoPlayer.VideoCodec,dx50)]</visible>
+					</control>
+					
+					<control type="image">
+						<description>Aspectratio Image</description>
+						<width>70</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[VideoPlayer.VideoAspect,flags/aspectratio/,.png]</texture>
+					</control>
+					
+					<control type="image">
+						<description>Audio Codec Image</description>
+						<width>70</width>x
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[VideoPlayer.AudioCodec,flags/audio/,.png]</texture>
+					</control>
+
+				</control>
+								
+				<control type="label">
+					<description>Player Times</description>
+					<posx>10</posx>
+					<posy>228</posy>
+					<width>500</width>
+					<label>[B]$INFO[Player.Time][/B]</label>
+					<align>left</align>
+					<font>font16</font>
+				</control>
+					
+				<control type="label">
+					<description>Player Times</description>
+					<posx>430</posx>
+					<posy>228</posy>
+					<width>500</width>
+					<label>[B]$INFO[Player.Duration][/B]</label>
+					<align>left</align>
+					<font>font16</font>
+				</control>
+				
+				<control type="progress">
+					<description>Progressbar</description>
+					<posx>80</posx>
+					<posy>245</posy>
+					<width>345</width>
+					<height>10</height>
+					<info>Player.Progress</info>
+				</control>
+				
+			</control>	
+
+		</control>
+
+	</controls>
+
+</window>

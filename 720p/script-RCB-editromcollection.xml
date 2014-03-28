@@ -1,0 +1,1343 @@
+<window id="5200">
+	<defaultcontrol>7000</defaultcontrol>
+	<include>dialogeffect</include>
+	<coordinates>
+		<system>1</system>
+	</coordinates>
+	
+	<controls>
+	
+		<include>DialogOverlay</include>
+		
+		<control type="group">
+			<posx>200</posx>
+			<posy>100</posy>
+			<include>Animation_Dialog_Center</include>
+			
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>830</width>
+				<height>570</height>
+				<include>Common_Color_Keyback1</include>
+			</control>	
+			
+			<control type="image">
+				<description>line</description>
+				<posx>0</posx>
+				<posy>60</posy>
+				<width>830</width>
+				<height>4</height>
+				<include>Common_Color_Accent</include>
+			</control>
+			
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>220</width>
+				<height>570</height>
+				<include>Common_Color_Keyback2</include>
+			</control>
+			
+			<control type="label">
+				<description>Title</description>
+				<posx>810</posx>
+				<posy>10</posy>
+				<width>570</width>
+				<align>right</align>
+				<font>font40LB</font>
+				<textcolor>Accent</textcolor>
+				<label>$LOCALIZE[31130]</label>
+				<scroll>true</scroll>
+			</control>	
+		
+		<!-- Rom Collection List -->
+			<control type="list" id="5210">
+				<hitrect x="0" y="0" w="0" h="0" />
+				<visible>!Container(7000).Hasfocus(5)</visible>
+				<enable>false</enable>
+				<posx>240</posx>
+				<posy>70</posy>
+				<width>570</width>
+				<height>35</height>
+				<onleft>5210</onleft>
+				<onright>5210</onright>
+				<onup>5210</onup>
+				<ondown>5210</ondown>
+				<scrolltime>0</scrolltime>
+				<itemlayout height="35" width="570"></itemlayout>
+				
+				<focusedlayout height="35" width="570">
+				
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>570</width>
+						<height>35</height>
+						<include>Common_Color_Accent</include>
+						<visible>[Control.HasFocus(5211) | Control.HasFocus(5212)]</visible>
+					</control>
+					
+					<control type="label">
+						<posx>7</posx>
+						<width>200</width>
+						<height>35</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$ADDON[script.games.rom.collection.browser 52001]</label>
+					</control>
+					
+					<control type="label">
+						<posx>500</posx>
+						<width>370</width>
+						<height>35</height>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					
+				</focusedlayout>
+				
+			</control>
+			
+			<control type="button" id="5211">
+				<description>Menu Item Next Button</description>
+				<visible>!Container(7000).Hasfocus(5)</visible>
+				<posx>760</posx>
+				<posy>77</posy>
+				<width>20</width>
+				<height>20</height>
+				<texturenofocus>controls/ArrowDownNF.png</texturenofocus>
+				<texturefocus>controls/ArrowDownFO.png</texturefocus>
+				<onclick>Control.Move(5210,1)</onclick>
+				<onleft>7000</onleft>
+				<onright>5212</onright>
+				<onup>5101</onup>
+				<ondown>7010</ondown>
+			</control>
+			
+			<control type="button" id="5212">
+				<description>Menu Item Prev Button</description>
+				<visible>!Container(7000).Hasfocus(5)</visible>
+				<posx>780</posx>
+				<posy>77</posy>
+				<width>20</width>
+				<height>20</height>
+				<texturenofocus>controls/ArrowUpNF.png</texturenofocus>
+				<texturefocus>controls/ArrowUpFO.png</texturefocus>
+				<onclick>Control.Move(5210,-1)</onclick>
+				<onleft>5211</onleft>
+				<onright>6000</onright>
+				<onup>5101</onup>
+				<ondown>7010</ondown>
+			</control>
+			
+			<!-- Category buttons -->
+			<control type="list" id="7000">
+				<posx>10</posx>
+				<posy>70</posy>
+				<width>200</width>
+				<height>480</height>
+				<onleft>7010</onleft>
+				<onright>7010</onright>
+				<onup>7000</onup>
+				<ondown>7000</ondown>
+				<scrolltime>0</scrolltime>
+				<orientation>vertical</orientation>
+				<itemlayout height="40" width="150">
+				
+					<control type="label">
+						<posx>20</posx>
+						<width>200</width>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					
+				</itemlayout>
+				
+				<focusedlayout height="40" width="150">
+				
+					<control type="image">
+						<width>200</width>
+						<height>44</height>
+						<include>Common_Color_Accent</include>
+						<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(7000)">Conditional</animation>
+					</control>
+					
+					<control type="label">
+						<posx>20</posx>
+						<width>200</width>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					
+				</focusedlayout>	
+				
+				<content>
+					<item id="1">
+						<label>$ADDON[script.games.rom.collection.browser 52002]</label>
+						<onclick>-</onclick>
+					</item>
+					<item id="2">
+						<label>$ADDON[script.games.rom.collection.browser 52003]</label>
+						<onclick>-</onclick>
+					</item>
+					<item id="3">
+						<label>$ADDON[script.games.rom.collection.browser 52004]</label>
+						<onclick>-</onclick>
+					</item>
+					<item id="4">
+						<label>$ADDON[script.games.rom.collection.browser 52005]</label>
+						<onclick>-</onclick>
+					</item>
+				</content>
+				
+			</control>
+		
+			<control type="group" id="7010">
+				
+				<!-- Game Import -->
+				<control type="group" id="7001">
+					<visible>Container(7000).Hasfocus(1)</visible>
+					<posx>240</posx>
+					<posy>105</posy>
+					
+					<!-- Rom Path -->
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>570</width>
+						<height>35</height>
+						<include>Common_Color_Accent</include>
+						<visible>Control.HasFocus(5240)</visible>
+					</control>
+					
+					<control type="label">
+						<posx>7</posx>
+						<width>200</width>
+						<height>35</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$ADDON[script.games.rom.collection.browser 52006]</label>
+					</control>
+					
+					<control type="button" id="5240"> 
+						<description>Rom Path</description>
+						<posx>180</posx>
+						<posy>0</posy>
+						<width>400</width>
+						<height>35</height>
+						<texturefocus>-</texturefocus>
+						<label>$ADDON[script.games.rom.collection.browser 52006]</label>
+						<align>right</align>
+						<aligny>center</aligny>
+						<onup>5211</onup>
+						<ondown>5250</ondown>
+						<onleft>7000</onleft>
+						<onright>6000</onright>
+					</control>
+					
+					<!-- Rom file mask -->
+					<control type="image">
+						<posx>0</posx>
+						<posy>35</posy>
+						<width>570</width>
+						<height>35</height>
+						<include>Common_Color_Accent</include>
+						<visible>Control.HasFocus(5250)</visible>
+					</control>
+					
+					<control type="label">
+						<posx>7</posx>
+						<posy>35</posy>
+						<width>200</width>
+						<height>35</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$ADDON[script.games.rom.collection.browser 52007]</label>
+					</control>
+					
+					<control type="button" id="5250"> 
+						<description>Rom file mask</description>
+						<posx>170</posx>
+						<posy>35</posy>
+						<width>410</width>
+						<height>35</height>
+						<texturefocus>-</texturefocus>
+						<label>$ADDON[script.games.rom.collection.browser 52007]</label>
+						<align>right</align>
+						<aligny>center</aligny>
+						<onup>5240</onup>
+						<ondown>5330</ondown>
+						<onleft>7000</onleft>
+						<onright>6000</onright>
+					</control>
+					
+					<!-- Ignore on scan -->
+					<control type="radiobutton" id="5330">
+						<posx>0</posx>
+						<posy>70</posy>
+						<width>570</width>
+						<height>35</height>
+						<label>$ADDON[script.games.rom.collection.browser 52008]</label>
+						<texturefocus>general/accent.png</texturefocus>
+						<align>left</align>
+						<textoffsetx>7</textoffsetx>
+						<onleft>7000</onleft>
+						<onright>6000</onright>
+						<onup>5250</onup>
+						<ondown>5400</ondown>
+					</control>
+					
+					<!-- Allow update -->
+					<control type="radiobutton" id="5400">
+						<posx>0</posx>
+						<posy>105</posy>
+						<width>570</width>
+						<height>35</height>
+						<label>$ADDON[script.games.rom.collection.browser 52009]</label>
+						<texturefocus>general/accent.png</texturefocus>
+						<align>left</align>
+						<textoffsetx>7</textoffsetx>
+						<onleft>7000</onleft>
+						<onright>6000</onright>
+						<onup>5330</onup>
+						<ondown>5410</ondown>
+					</control>
+					
+					<!-- Max folder depth -->
+					<control type="image">
+						<posx>0</posx>
+						<posy>140</posy>
+						<width>570</width>
+						<height>35</height>
+						<include>Common_Color_Accent</include>
+						<visible>Control.HasFocus(5410)</visible>
+					</control>
+					
+					<control type="label">
+						<posx>7</posx>
+						<posy>140</posy>
+						<width>200</width>
+						<height>35</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$ADDON[script.games.rom.collection.browser 52010]</label>
+					</control>
+					
+					<control type="button" id="5410"> 
+						<description>Max folder depth</description>
+						<posx>170</posx>
+						<posy>140</posy>
+						<width>410</width>
+						<height>35</height>
+						<texturefocus>-</texturefocus>
+						<align>right</align>
+						<aligny>center</aligny>
+						<onup>5400</onup>
+						<ondown>5420</ondown>
+						<onleft>7000</onleft>
+						<onright>6000</onright>
+					</control>
+					
+					<!-- Disk indicator -->
+					<control type="image">
+						<posx>0</posx>
+						<posy>175</posy>
+						<width>570</width>
+						<height>35</height>
+						<include>Common_Color_Accent</include>
+						<visible>Control.HasFocus(5420)</visible>
+					</control>
+					
+					<control type="label">
+						<posx>7</posx>
+						<posy>175</posy>
+						<width>200</width>
+						<height>35</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$ADDON[script.games.rom.collection.browser 52011]</label>
+					</control>
+					
+					<control type="button" id="5420"> 
+						<description>Disk indicator</description>
+						<posx>170</posx>
+						<posy>175</posy>
+						<width>410</width>
+						<height>35</height>
+						<texturefocus>-</texturefocus>
+						<align>right</align>
+						<aligny>center</aligny>
+						<onup>5410</onup>
+						<ondown>5430</ondown>
+						<onleft>7000</onleft>
+						<onright>6000</onright>
+					</control>
+					
+					<control type="radiobutton" id="5430">
+						<posx>0</posx>
+						<posy>210</posy>
+						<width>570</width>
+						<height>35</height>
+						<label>$ADDON[script.games.rom.collection.browser 52012]</label>
+						<texturefocus>general/accent.png</texturefocus>
+						<align>left</align>
+						<textoffsetx>7</textoffsetx>
+						<onleft>7000</onleft>
+						<onright>6000</onright>
+						<onup>5420</onup>
+						<ondown>6000</ondown>
+					</control>
+					
+				</control>
+				
+				<!-- Import Game data -->
+				<control type="group" id="7002">
+					<visible>Container(7000).Hasfocus(2)</visible>
+					<posx>240</posx>
+					<posy>105</posy>
+
+					<!-- Scrapers -->
+					<!-- Scraper 1 -->				
+					<control type="list" id="5290">
+						<hitrect x="0" y="0" w="0" h="0" />
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>570</width>
+						<height>35</height>
+						<onleft>5280</onleft>
+						<onright>5280</onright>
+						<onup>5280</onup>
+						<ondown>5280</ondown>
+						<enable>false</enable>
+						<scrolltime>0</scrolltime>
+						<itemlayout height="35" width="570"></itemlayout>		
+						
+						<focusedlayout height="30" width="570">
+						
+							<control type="image">
+								<width>570</width>
+								<height>35</height>
+								<include>Common_Color_Accent</include>
+								<visible>[Control.HasFocus(5291) | Control.HasFocus(5292)]</visible>
+							</control>
+							
+							<control type="label">
+								<posx>7</posx>
+								<width>200</width>
+								<height>35</height>
+								<align>left</align>
+								<aligny>center</aligny>
+								<label>$ADDON[script.games.rom.collection.browser 52013]</label>
+							</control>
+							
+							<control type="label">
+								<posx>500</posx>
+								<width>370</width>
+								<height>35</height>
+								<align>right</align>
+								<aligny>center</aligny>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+							
+						</focusedlayout>
+						
+					</control>
+					
+					<control type="button" id="5291">
+						<description>Menu Item Next Button</description>
+						<posx>520</posx>
+						<posy>7</posy>
+						<width>20</width>
+						<height>20</height>
+						<texturenofocus>controls/ArrowDownNF.png</texturenofocus>
+						<texturefocus>controls/ArrowDownFO.png</texturefocus>
+						<onclick>Control.Move(5290,1)</onclick>
+						<onleft>7000</onleft>
+						<onright>5292</onright>
+						<onup>5211</onup>
+						<ondown>5301</ondown>
+					</control>
+					
+					<control type="button" id="5292">
+						<description>Menu Item Prev Button</description>
+						<posx>540</posx>
+						<posy>7</posy>
+						<width>20</width>
+						<height>20</height>
+						<texturenofocus>controls/ArrowUpNF.png</texturenofocus>
+						<texturefocus>controls/ArrowUpFO.png</texturefocus>
+						<onclick>Control.Move(5290,-1)</onclick>
+						<onleft>5291</onleft>
+						<onright>6000</onright>
+						<onup>5212</onup>
+						<ondown>5302</ondown>
+					</control>
+					
+					<!-- Scraper 2 -->
+					<control type="list" id="5300">
+						<hitrect x="0" y="0" w="0" h="0" />
+						<enable>false</enable>
+						<posx>0</posx>
+						<posy>35</posy>
+						<width>570</width>
+						<height>35</height>
+						<onleft>5290</onleft>
+						<onright>5310</onright>
+						<onup>5290</onup>
+						<ondown>5310</ondown>
+						<itemlayout height="35" width="570"></itemlayout>
+						
+						<focusedlayout height="35" width="570">
+						
+							<control type="image">
+								<width>570</width>
+								<height>35</height>
+								<include>Common_Color_Accent</include>
+								<visible>[Control.HasFocus(5301) | Control.HasFocus(5302)]</visible>
+							</control>
+							
+							<control type="label">
+								<posx>7</posx>
+								<width>200</width>
+								<height>35</height>
+								<align>left</align>
+								<aligny>center</aligny>
+								<label>$ADDON[script.games.rom.collection.browser 52014]</label>
+							</control>
+							
+							<control type="label">
+								<posx>500</posx>
+								<width>370</width>
+								<height>35</height>
+								<align>right</align>
+								<aligny>center</aligny>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+							
+						</focusedlayout>
+						
+					</control>
+					
+					<control type="button" id="5301">
+						<description>Menu Item Next Button</description>
+						<posx>520</posx>
+						<posy>42</posy>
+						<width>20</width>
+						<height>20</height>
+						<texturenofocus>controls/ArrowDownNF.png</texturenofocus>
+						<texturefocus>controls/ArrowDownFO.png</texturefocus>
+						<onclick>Control.Move(5300,1)</onclick>
+						<onleft>7000</onleft>
+						<onright>5302</onright>
+						<onup>5291</onup>
+						<ondown>5311</ondown>
+					</control>
+					
+					<control type="button" id="5302">
+						<description>Menu Item Prev Button</description>
+						<posx>540</posx>
+						<posy>42</posy>
+						<width>20</width>
+						<height>20</height>
+						<texturenofocus>controls/ArrowUpNF.png</texturenofocus>
+						<texturefocus>controls/ArrowUpFO.png</texturefocus>
+						<onclick>Control.Move(5300,-1)</onclick>
+						<onleft>5301</onleft>
+						<onright>6000</onright>
+						<onup>5292</onup>
+						<ondown>5312</ondown>
+					</control>
+					
+					<!-- Scraper 3 -->
+					<control type="list" id="5310">
+						<hitrect x="0" y="0" w="0" h="0" />
+						<enable>false</enable>
+						<posx>0</posx>
+						<posy>70</posy>
+						<width>570</width>
+						<height>35</height>
+						<onleft>5302</onleft>
+						<onright>5320</onright>
+						<onup>5301</onup>
+						<ondown>5320</ondown>
+						<itemlayout height="35" width="570"></itemlayout>
+						
+						<focusedlayout height="35" width="570">
+						
+							<control type="image">
+								<width>570</width>
+								<height>35</height>
+								<include>Common_Color_Accent</include>
+								<visible>[Control.HasFocus(5311) | Control.HasFocus(5312)]</visible>
+							</control>
+							
+							<control type="label">
+								<posx>7</posx>
+								<width>200</width>
+								<height>35</height>
+								<align>left</align>
+								<aligny>center</aligny>
+								<label>$ADDON[script.games.rom.collection.browser 52015]</label>
+							</control>
+							
+							<control type="label">
+								<posx>500</posx>
+								<width>370</width>
+								<height>35</height>
+								<align>right</align>
+								<aligny>center</aligny>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+							
+						</focusedlayout>
+						
+					</control>
+					
+					<control type="button" id="5311">
+						<description>Menu Item Next Button</description>
+						<posx>520</posx>
+						<posy>77</posy>
+						<width>20</width>
+						<height>20</height>
+						<texturenofocus>controls/ArrowDownNF.png</texturenofocus>
+						<texturefocus>controls/ArrowDownFO.png</texturefocus>
+						<onclick>Control.Move(5310,1)</onclick>
+						<onleft>7000</onleft>
+						<onright>5312</onright>
+						<onup>5301</onup>
+						<ondown>5261</ondown>
+					</control>
+					
+					<control type="button" id="5312">
+						<description>Menu Item Prev Button</description>
+						<posx>540</posx>
+						<posy>77</posy>
+						<width>20</width>
+						<height>20</height>
+						<texturenofocus>controls/ArrowUpNF.png</texturenofocus>
+						<texturefocus>controls/ArrowUpFO.png</texturefocus>
+						<onclick>Control.Move(5310,-1)</onclick>
+						<onleft>5311</onleft>
+						<onright>6000</onright>
+						<onup>5302</onup>
+						<ondown>5262</ondown>
+					</control>
+					
+					<!-- Media Path -->
+					<control type="group">
+						<posx>0</posx>
+						<posy>105</posy>
+						
+						<control type="list" id="5260">
+							<hitrect x="0" y="0" w="0" h="0" />
+							<enable>false</enable>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>570</width>
+							<height>35</height>
+							<onleft>7000</onleft>
+							<onright>5210</onright>
+							<onup>5210</onup>
+							<ondown>5210</ondown>
+							<itemlayout height="35" width="570"></itemlayout>
+							
+							<focusedlayout height="35" width="570">
+							
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>670</width>
+									<height>35</height>
+									<include>Common_Color_Accent</include>
+									<visible>[Control.HasFocus(5261) | Control.HasFocus(5262)]</visible>
+								</control>
+								
+								<control type="label">
+									<posx>7</posx>
+									<width>200</width>
+									<height>35</height>
+									<align>left</align>
+									<aligny>center</aligny>
+									<label>$ADDON[script.games.rom.collection.browser 52016]</label>
+								</control>
+								
+								<control type="label">
+									<posx>500</posx>
+									<width>370</width>
+									<height>35</height>
+									<align>right</align>
+									<aligny>center</aligny>
+									<label>$INFO[ListItem.Label]</label>
+								</control>
+								
+							</focusedlayout>
+							
+						</control>
+						
+						<control type="button" id="5261">
+							<description>Menu Item Next Button</description>
+							<posx>520</posx>
+							<posy>7</posy>
+							<width>20</width>
+							<height>20</height>
+							<texturenofocus>controls/ArrowDownNF.png</texturenofocus>
+							<texturefocus>controls/ArrowDownFO.png</texturefocus>
+							<onclick>Control.Move(5260,1)</onclick>
+							<onleft>7000</onleft>
+							<onright>5262</onright>
+							<onup>5311</onup>
+							<ondown>5270</ondown>
+						</control>
+						
+						<control type="button" id="5262">
+							<description>Menu Item Prev Button</description>
+							<posx>540</posx>
+							<posy>7</posy>
+							<width>20</width>
+							<height>20</height>
+							<texturenofocus>controls/ArrowUpNF.png</texturenofocus>
+							<texturefocus>controls/ArrowUpFO.png</texturefocus>
+							<onclick>Control.Move(5260,-1)</onclick>
+							<onleft>5261</onleft>
+							<onright>6000</onright>
+							<onup>5312</onup>
+							<ondown>5270</ondown>
+						</control>
+						
+						<!-- Media Path -->
+						<control type="image">
+							<posx>18</posx>
+							<posy>35</posy>
+							<width>552</width>
+							<height>35</height>
+							<include>Common_Color_Accent</include>
+							<visible>Control.HasFocus(5270)</visible>
+						</control>
+						
+						<control type="label">
+							<posx>25</posx>
+							<posy>35</posy>
+							<width>200</width>
+							<height>35</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$ADDON[script.games.rom.collection.browser 52017]</label>
+						</control>
+						
+						<control type="button" id="5270"> 
+							<description>Media Path</description>
+							<posx>170</posx>
+							<posy>35</posy>
+							<width>410</width>
+							<height>35</height>
+							<texturefocus>-</texturefocus>
+							<label>$ADDON[script.games.rom.collection.browser 52017]</label>
+							<align>right</align>
+							<aligny>center</aligny>
+							<onup>5262</onup>
+							<ondown>5280</ondown>
+							<onleft>7000</onleft>
+							<onright>6000</onright>
+						</control>
+						
+						<!-- File Mask -->
+						<control type="image">
+							<posx>18</posx>
+							<posy>70</posy>
+							<width>552</width>
+							<height>35</height>
+							<include>Common_Color_Accent</include>
+							<visible>Control.HasFocus(5280)</visible>
+						</control>
+						
+						<control type="label">
+							<posx>25</posx>
+							<posy>70</posy>
+							<width>200</width>
+							<height>35</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$ADDON[script.games.rom.collection.browser 52018]</label>
+						</control>
+						
+						<control type="button" id="5280"> 
+							<description>Media File Mask</description>
+							<posx>170</posx>
+							<posy>70</posy>
+							<width>410</width>
+							<height>35</height>
+							<texturefocus>-</texturefocus>
+							<label>$ADDON[script.games.rom.collection.browser 52018]</label>
+							<align>right</align>
+							<aligny>center</aligny>
+							<onup>5270</onup>
+							<ondown>5490</ondown>
+							<onleft>7000</onleft>
+							<onright>6000</onright>
+						</control>
+						
+						<control type="button" id="5490"> 
+							<description>Remove Media path</description>
+							<posx>18</posx>
+							<posy>105</posy>
+							<width>552</width>
+							<height>35</height>
+							<label>$ADDON[script.games.rom.collection.browser 52019]</label>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textoffsetx>7</textoffsetx>
+							<onup>5280</onup>
+							<ondown>5500</ondown>
+							<onleft>7000</onleft>
+							<onright>6000</onright>
+						</control>
+						
+						<control type="button" id="5500"> 
+							<description>Add Media path</description>
+							<posx>18</posx>
+							<posy>140</posy>
+							<width>552</width>
+							<height>35</height>
+							<label>$ADDON[script.games.rom.collection.browser 52020]</label>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textoffsetx>7</textoffsetx>
+							<onup>5490</onup>
+							<ondown>6000</ondown>
+							<onleft>7000</onleft>
+							<onright>6000</onright>
+						</control>
+						
+					</control>
+					
+				</control>				
+					
+				<!-- Game Browsing -->
+				<control type="group" id="7002">
+					<visible>Container(7000).Hasfocus(3)</visible>
+					<posx>240</posx>
+					<posy>105</posy>
+					
+					<control type="list" id="5320">
+						<hitrect x="0" y="0" w="0" h="0" />
+						<enable>false</enable>
+						<width>570</width>
+						<height>35</height>
+						<onleft>5320</onleft>
+						<onright>5320</onright>
+						<onup>5320</onup>
+						<ondown>5320</ondown>
+						<pagecontrol>-</pagecontrol>
+						<scrolltime>0</scrolltime>
+						<itemlayout height="35" width="570"></itemlayout>
+						
+						<focusedlayout height="35" width="570">
+						
+							<control type="image">
+								<width>670</width>
+								<height>35</height>
+								<include>Common_Color_Accent</include>
+								<visible>[Control.HasFocus(5321) | Control.HasFocus(5322)]</visible>
+							</control>
+							
+							<control type="label">
+								<posx>7</posx>
+								<width>300</width>
+								<height>35</height>
+								<align>left</align>
+								<aligny>center</aligny>
+								<label>$ADDON[script.games.rom.collection.browser 52021]</label>
+							</control>
+							
+							<control type="label">
+								<posx>500</posx>
+								<width>370</width>
+								<height>35</height>
+								<align>right</align>
+								<aligny>center</aligny>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+							
+						</focusedlayout>
+						
+					</control>
+					
+					<control type="button" id="5321">
+						<description>Menu Item Next Button</description>
+						<posx>520</posx>
+						<posy>7</posy>
+						<width>20</width>
+						<height>20</height>
+						<texturenofocus>controls/ArrowDownNF.png</texturenofocus>
+						<texturefocus>controls/ArrowDownFO.png</texturefocus>
+						<onclick>Control.Move(5320,1)</onclick>
+						<onleft>7000</onleft>
+						<onright>5322</onright>
+						<onup>5211</onup>
+						<ondown>5341</ondown>
+					</control>
+					
+					<control type="button" id="5322">
+						<description>Menu Item Prev Button</description>
+						<posx>540</posx>
+						<posy>7</posy>
+						<width>20</width>
+						<height>20</height>
+						<texturenofocus>controls/ArrowUpNF.png</texturenofocus>
+						<texturefocus>controls/ArrowUpFO.png</texturefocus>
+						<onclick>Control.Move(5320,-1)</onclick>
+						<onleft>5321</onleft>
+						<onright>6000</onright>
+						<onup>5212</onup>
+						<ondown>5342</ondown>
+					</control>			
+					
+					<control type="list" id="5340">
+						<hitrect x="0" y="0" w="0" h="0" />
+						<enable>false</enable>
+						<posx>0</posx>
+						<posy>35</posy>
+						<width>570</width>
+						<height>35</height>
+						<onleft>5340</onleft>
+						<onright>5340</onright>
+						<onup>5340</onup>
+						<ondown>5340</ondown>
+						<itemlayout height="35" width="570"></itemlayout>
+						
+						<focusedlayout height="35" width="570">
+						
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>670</width>
+								<height>30</height>
+								<include>Common_Color_Accent</include>
+								<visible>[Control.HasFocus(5341) | Control.HasFocus(5342)]</visible>
+							</control>
+							
+							<control type="label">
+								<posx>7</posx>
+								<width>300</width>
+								<height>35</height>
+								<align>left</align>
+								<aligny>center</aligny>
+								<label>$ADDON[script.games.rom.collection.browser 52022]</label>
+							</control>
+							
+							<control type="label">
+								<posx>500</posx>
+								<width>370</width>
+								<height>35</height>
+								<align>right</align>
+								<aligny>center</aligny>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+							
+						</focusedlayout>
+						
+					</control>
+					
+					<control type="button" id="5341">
+						<description>Menu Item Next Button</description>
+						<posx>520</posx>
+						<posy>42</posy>
+						<width>20</width>
+						<height>20</height>
+						<texturenofocus>controls/ArrowDownNF.png</texturenofocus>
+						<texturefocus>controls/ArrowDownFO.png</texturefocus>
+						<onclick>Control.Move(5340,1)</onclick>
+						<onleft>7000</onleft>
+						<onright>5342</onright>
+						<onup>5321</onup>
+						<ondown>5350</ondown>
+					</control>
+					
+					<control type="button" id="5342">
+						<description>Menu Item Prev Button</description>
+						<posx>540</posx>
+						<posy>42</posy>
+						<width>20</width>
+						<height>20</height>
+						<texturenofocus>controls/ArrowUpNF.png</texturenofocus>
+						<texturefocus>controls/ArrowUpFO.png</texturefocus>
+						<onclick>Control.Move(5340,-1)</onclick>
+						<onleft>5341</onleft>
+						<onright>6000</onright>
+						<onup>5322</onup>
+						<ondown>5350</ondown>
+					</control>
+					
+					<!-- Autoplay Main -->
+					<control type="radiobutton" id="5350">
+						<posx>0</posx>
+						<posy>70</posy>
+						<width>570</width>
+						<height>35</height>
+						<label>$ADDON[script.games.rom.collection.browser 52023]</label>
+						<texturefocus>general/accent.png</texturefocus>
+						<align>left</align>
+						<textoffsetx>7</textoffsetx>
+						<onleft>7000</onleft>
+						<onright>6000</onright>
+						<onup>5342</onup>
+						<ondown>5360</ondown>
+					</control>
+					
+					<!-- Autoplay Info -->
+					<control type="radiobutton" id="5360">
+						<posx>0</posx>
+						<posy>105</posy>
+						<width>570</width>
+						<height>35</height>
+						<label>$ADDON[script.games.rom.collection.browser 52036]</label>
+						<texturefocus>general/accent.png</texturefocus>
+						<align>left</align>
+						<textoffsetx>7</textoffsetx>					
+						<onleft>7000</onleft>
+						<onright>6000</onright>
+						<onup>5350</onup>
+						<ondown>6000</ondown>
+					</control>
+					
+				</control>
+				
+				<!-- Game Launching -->
+				<control type="group" id="7003">
+					<visible>Container(7000).Hasfocus(4)</visible>
+					<posx>240</posx>
+					<posy>105</posy>
+					
+					<!-- Emulator Cmd -->
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>570</width>
+						<height>35</height>
+						<include>Common_Color_Accent</include>
+						<visible>Control.HasFocus(5220)</visible>
+					</control>		
+					
+					<control type="label">
+						<posx>7</posx>
+						<posy>0</posy>
+						<width>200</width>
+						<height>35</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$ADDON[script.games.rom.collection.browser 52024]</label>
+					</control>
+					
+					<control type="button" id="5220"> 
+						<description>EmuCmd</description>
+						<posx>170</posx>
+						<width>410</width>
+						<height>35</height>
+						<texturefocus>-</texturefocus>
+						<label>$INFO[ListItem.Label]</label>
+						<align>right</align>
+						<aligny>center</aligny>
+						<onup>5212</onup>
+						<ondown>5230</ondown>
+						<onleft>7000</onleft>
+						<onright>6000</onright>
+					</control>
+					
+					<!-- Emulator Params -->
+					<control type="image">
+						<posx>0</posx>
+						<posy>35</posy>
+						<width>570</width>
+						<height>35</height>
+						<include>Common_Color_Accent</include>
+						<visible>Control.HasFocus(5230)</visible>
+					</control>
+					
+					<control type="label">
+						<posx>7</posx>
+						<posy>35</posy>
+						<width>200</width>
+						<height>35</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$ADDON[script.games.rom.collection.browser 52025]</label>
+					</control>
+					
+					<control type="button" id="5230"> 
+						<description>EmuParams</description>
+						<posx>170</posx>
+						<posy>35</posy>
+						<width>410</width>
+						<height>35</height>
+						<texturefocus>-</texturefocus>
+						<align>right</align>
+						<aligny>center</aligny>
+						<onup>5220</onup>
+						<ondown>5440</ondown>
+						<onleft>7000</onleft>
+						<onright>6000</onright>
+					</control>
+					
+					<!-- Use emu solo -->
+					<control type="radiobutton" id="5440">
+						<posx>0</posx>
+						<posy>70</posy>
+						<width>570</width>
+						<height>35</height>
+						<label>$ADDON[script.games.rom.collection.browser 52026]</label>
+						<texturefocus>general/accent.png</texturefocus>
+						<align>left</align>
+						<textoffsetx>7</textoffsetx>
+						<onleft>7000</onleft>
+						<onright>6000</onright>
+						<onup>5230</onup>
+						<ondown>5530</ondown>
+					</control>
+					
+					<!-- Use Popen -->
+					<control type="radiobutton" id="5530">
+						<posx>0</posx>
+						<posy>105</posy>
+						<width>570</width>
+						<height>35</height>
+						<label>$ADDON[script.games.rom.collection.browser 52027]</label>
+						<texturefocus>general/accent.png</texturefocus>
+						<align>left</align>
+						<textoffsetx>7</textoffsetx>
+						<onleft>7000</onleft>
+						<onright>6000</onright>
+						<onup>5440</onup>
+						<ondown>5450</ondown>
+					</control>
+									
+					<!-- Do not extract zip files -->
+					<control type="radiobutton" id="5450">
+						<posx>0</posx>
+						<posy>140</posy>
+						<width>570</width>
+						<height>35</height>
+						<label>$ADDON[script.games.rom.collection.browser 52028]</label>
+						<texturefocus>general/accent.png</texturefocus>
+						<align>left</align>
+						<textoffsetx>7</textoffsetx>
+						<onleft>7000</onleft>
+						<onright>6000</onright>
+						<onup>5530</onup>
+						<ondown>5460</ondown>
+					</control>
+					
+					<!-- Savestate path -->
+					<control type="image">
+						<posx>0</posx>
+						<posy>175</posy>
+						<width>570</width>
+						<height>35</height>
+						<include>Common_Color_Accent</include>
+						<visible>Control.HasFocus(5460)</visible>
+					</control>
+					
+					<control type="label">
+						<posx>7</posx>
+						<posy>175</posy>
+						<width>200</width>
+						<height>35</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$ADDON[script.games.rom.collection.browser 52029]</label>
+					</control>
+					
+					<control type="button" id="5460"> 
+						<description>Savestates</description>
+						<posx>170</posx>
+						<posy>175</posy>
+						<width>410</width>
+						<height>35</height>
+						<texturefocus>-</texturefocus>
+						<align>right</align>
+						<aligny>center</aligny>
+						<onup>5450</onup>
+						<ondown>5470</ondown>
+						<onleft>7000</onleft>
+						<onright>6000</onright>
+					</control>
+					
+					<!-- Savestate file mask -->
+					<control type="image">
+						<posx>0</posx>
+						<posy>210</posy>
+						<width>570</width>
+						<height>35</height>
+						<include>Common_Color_Accent</include>
+						<visible>Control.HasFocus(5470)</visible>
+					</control>
+					
+					<control type="label">
+						<posx>7</posx>
+						<posy>210</posy>
+						<width>200</width>
+						<height>35</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$ADDON[script.games.rom.collection.browser 52030]</label>
+					</control>
+					
+					<control type="button" id="5470"> 
+						<description>Savestates</description>
+						<posx>170</posx>
+						<posy>210</posy>
+						<width>410</width>
+						<height>35</height>
+						<texturefocus>-</texturefocus>
+						<align>right</align>
+						<aligny>center</aligny>
+						<onup>5460</onup>
+						<ondown>5480</ondown>
+						<onleft>7000</onleft>
+						<onright>6000</onright>
+					</control>
+					
+					<!-- Savestate params -->
+					<control type="image">
+						<posx>0</posx>
+						<posy>245</posy>
+						<width>570</width>
+						<height>35</height>
+						<include>Common_Color_Accent</include>
+						<visible>Control.HasFocus(5480)</visible>
+					</control>
+					
+					<control type="label">
+						<posx>7</posx>
+						<posy>245</posy>
+						<width>200</width>
+						<height>35</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$ADDON[script.games.rom.collection.browser 52031]</label>
+					</control>
+					
+					<control type="button" id="5480"> 
+						<description>Savestates</description>
+						<posx>170</posx>
+						<posy>245</posy>
+						<width>410</width>
+						<height>35</height>
+						<texturefocus>-</texturefocus>
+						<align>right</align>
+						<aligny>center</aligny>
+						<onup>5470</onup>
+						<ondown>5510</ondown>
+						<onleft>7000</onleft>
+						<onright>6000</onright>
+					</control>
+					
+					<!-- PreCmd -->
+					<control type="image">
+						<posx>0</posx>
+						<posy>280</posy>
+						<width>570</width>
+						<height>35</height>
+						<include>Common_Color_Accent</include>
+						<visible>Control.HasFocus(5510)</visible>
+					</control>
+					
+					<control type="label">
+						<posx>7</posx>
+						<posy>280</posy>
+						<width>200</width>
+						<height>35</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$ADDON[script.games.rom.collection.browser 52032]</label>
+					</control>
+					
+					<control type="button" id="5510"> 
+						<description>Pre-Launch Command</description>
+						<posx>240</posx>
+						<posy>280</posy>
+						<width>410</width>
+						<height>35</height>
+						<texturefocus>-</texturefocus>
+						<align>right</align>
+						<aligny>center</aligny>
+						<onup>5480</onup>
+						<ondown>5520</ondown>
+						<onleft>7000</onleft>
+						<onright>6000</onright>
+					</control>
+
+					<!-- PostCmd -->
+					<control type="image">
+						<posx>0</posx>
+						<posy>315</posy>
+						<width>570</width>
+						<height>35</height>
+						<include>Common_Color_Accent</include>
+						<visible>Control.HasFocus(5520)</visible>
+					</control>
+					
+					<control type="label">
+						<posx>7</posx>
+						<posy>315</posy>
+						<width>200</width>
+						<height>35</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$ADDON[script.games.rom.collection.browser 52033]</label>
+					</control>
+					
+					<control type="button" id="5520"> 
+						<description>Post-Launch Command</description>
+						<posx>170</posx>
+						<posy>315</posy>
+						<width>410</width>
+						<height>35</height>
+						<texturefocus>-</texturefocus>
+						<align>right</align>
+						<aligny>center</aligny>
+						<onup>5510</onup>
+						<ondown>6000</ondown>
+						<onleft>7000</onleft>
+						<onright>6000</onright>
+					</control>
+					
+				</control>
+				
+			</control>
+				
+			<!-- Buttons -->
+			<control type="button" id="6000"> 
+				<description>Save</description>
+				<posx>710</posx>
+				<posy>506</posy>
+				<width>48</width>
+				<height>48</height>
+				<texturefocus>buttons/saveFO.png</texturefocus>
+				<texturenofocus>buttons/saveNF.png</texturenofocus>
+				<textoffsetx>2000</textoffsetx>
+				<onup>7010</onup>
+				<ondown>5101</ondown>
+				<onleft>7000</onleft>
+				<onright>6010</onright>
+			</control>
+			
+			<control type="button" id="6010"> 
+				<description>Cancel</description>
+				<posx>770</posx>
+				<posy>506</posy>
+				<width>48</width>
+				<height>48</height>
+				<texturefocus>buttons/cancelFO.png</texturefocus>
+				<texturenofocus>buttons/cancelNF.png</texturenofocus>
+				<textoffsetx>2000</textoffsetx>
+				<onup>7010</onup>
+				<ondown>5101</ondown>
+				<onleft>6000</onleft>
+				<onright>7000</onright>
+			</control>
+			
+		</control>
+	
+	</controls>
+	
+</window>

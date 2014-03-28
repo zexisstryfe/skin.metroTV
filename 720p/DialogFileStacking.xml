@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window id="2008">
+	<defaultcontrol always="true">450</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<include>DialogOverlay</include>
+
+		<control type="group">
+			<posx>340</posx>
+			<posy>140</posy>
+			<include>Animation_Dialog_Center</include>
+			
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>600</width>
+				<height>440</height>
+				<include>Common_Color_Keyback1</include>
+			</control>
+
+			<control type="label">
+				<description>header label</description>
+				<posx>580</posx>
+				<width>580</width>
+				<include>Dialog_Header</include>
+				<label>ListItem.Label</label>
+			</control>
+			
+			<control type="image">
+				<description>line</description>
+				<width>600</width>
+				<include>Dialog_Line</include>
+			</control>
+
+			<control type="list" id="450">
+				<posx>20</posx>
+				<posy>78</posy>
+				<width>580</width>
+				<height>368</height>
+				<onleft>450</onleft>
+				<onright>450</onright>
+				<onup>450</onup>
+				<ondown>450</ondown>
+				<itemlayout height="46">
+
+					<control type="label">
+						<posx>20</posx>
+						<width>540</width>
+						<info>ListItem.Label</info>
+					</control>
+
+				</itemlayout>
+
+				<focusedlayout height="46">
+
+					<control type="image">
+						<width>560</width>
+						<height>44</height>
+						<include>Common_Color_Accent</include>
+					</control>
+
+					<control type="label">
+						<posx>20</posx>
+						<width>540</width>
+						<info>ListItem.Label</info>
+					</control>
+
+				</focusedlayout>
+
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

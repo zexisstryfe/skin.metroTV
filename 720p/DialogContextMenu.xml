@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<window id="106">
+	<defaultcontrol always="true">1000</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	
+	<coordinates>
+		<origin x="0" y="0" />
+	</coordinates>
+	
+	<controls>
+	
+		<include>DialogOverlay</include>
+		
+		<control type="group">
+			<posx>445</posx>
+			<posy>50</posy>
+			<include>Animation_Dialog_Center</include>
+			
+			<control type="image" id="999">
+				<description>background image</description>
+				<width>390</width>
+				<height>636</height>
+				<include>Common_Color_Keyback1</include>
+			</control>	
+			
+			<control type="image">
+				<description>line</description>
+				<width>390</width>
+				<include>Dialog_Line</include>
+			</control>	
+			
+			<control type="label">
+				<description>menu</description>
+				<posx>360</posx>
+				<width>400</width>
+				<include>Dialog_Header</include>
+				<label>$LOCALIZE[33061]</label>
+			</control>
+			
+			<control type="grouplist" id="996">
+				<description>grouplist for context buttons</description>
+				<posx>20</posx>
+				<posy>70</posy>
+				<width>350</width>
+				<height max="550">auto</height>
+				<itemgap>2</itemgap>
+				<pagecontrol>995</pagecontrol>
+				
+				<control type="button" id="1000">
+					<description>Buttons</description>
+					<width>350</width>
+				</control>
+				
+			</control>
+			
+		</control>
+		
+	</controls>
+	
+</window>

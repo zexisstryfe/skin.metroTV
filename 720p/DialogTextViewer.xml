@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window id="147">
+	<defaultcontrol>61</defaultcontrol>
+
+	<controls>
+
+		<include>DialogOverlay</include>
+
+		<control type="group">
+			<posx>240</posx>
+			<posy>110</posy>
+			<include>Animation_Dialog_Center</include>
+			
+			<control type="image">
+				<width>800</width>
+				<height>500</height>
+				<include>Common_Color_Keyback1</include>
+			</control>
+			
+			<control type="label" id="1">
+				<description>header label</description>
+				<posx>780</posx>
+				<width>900</width>
+				<include>Dialog_Header</include>
+			</control>
+			
+			<control type="image">
+				<description>line</description>
+				<width>800</width>
+				<include>Dialog_Line</include>
+			</control>
+
+			<control type="textbox" id="5">
+				<posx>20</posx>
+				<posy>80</posy>
+				<width>750</width>
+				<height>400</height>
+				<align>justify</align>
+				<font>font20</font>
+			</control>
+			
+			<control type="image">
+				<description>outline</description>
+				<posx>774</posx>
+				<posy>79</posy>
+				<height>402</height>
+				<include>Common_Scroll_OutlineV</include>
+				<visible>Control.HasFocus(61)</visible>
+			</control>
+
+			<control type="scrollbar" id="61">
+				<posx>775</posx>
+				<posy>80</posy>
+				<width>5</width>
+				<height>400</height>
+				<onleft>Close</onleft>
+				<onright>Close</onright>
+				<ondown>61</ondown>
+				<onup>61</onup>
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

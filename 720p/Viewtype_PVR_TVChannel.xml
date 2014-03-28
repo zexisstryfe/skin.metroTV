@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<includes>
+
+    <include name="LiveTVChannelView">
+	
+		<include>Common_TopBar</include>
+		
+        <control type="group">
+			<posy>50</posy>
+            <description>TV Channels group</description>
+            <visible>Control.IsVisible(11)</visible>
+			
+			
+            <control type="group">
+				<animation effect="fade" time="400">VisibleChange</animation>
+				<animation effect="slide" start="+1200,0" time="500" easing="out" tween="cubic" delay="1000" condition="Skin.HasSetting(MetroAnimations)">WindowOpen</animation>
+				<animation effect="slide" start="+1200,0" time="500" easing="out" tween="cubic" reversible="false" delay="1000" condition="Skin.HasSetting(MetroAnimations)">WindowOpen</animation>	
+				<animation effect="slide" start="+1200,0" time="500" easing="out" tween="cubic" delay="300" condition="!Skin.HasSetting(MetroAnimations)">WindowOpen</animation>
+				<animation effect="slide" start="+1200,0" time="500" easing="out" tween="cubic" reversible="false" delay="300" condition="!Skin.HasSetting(MetroAnimations)">WindowOpen</animation>	
+
+				<control type="image">
+					<description>horizontal bar</description>
+					<posx>0</posx>
+					<posy>210</posy>
+					<width>1280</width>
+					<height>433</height>
+					<include>Common_Color_Tile1</include>
+				</control>
+				
+				<control type="label">
+					<posx>76</posx>
+					<posy>230</posy>
+					<width>600</width>
+					<height>50</height>
+					<font>font40UB</font>
+					<label>[COLOR Accent]$INFO[Control.GetLabel(30),[COLOR White]$LOCALIZE[31084] [/COLOR]][/COLOR]</label>
+				</control>
+				
+				<control type="group">
+					<posx>901</posx>
+					<posy>288</posy>
+					
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>389</width>
+						<height>327</height>
+						<include>Common_Color_Keyback2</include>
+					</control>
+					
+					<control type="fadelabel">
+						<posx>20</posx>
+						<posy>5</posy>
+						<width>350</width>
+						<height>35</height>
+						<font>font26UB</font>
+						<label>[COLOR Accent]$INFO[Container(11).ListItem.Title][/COLOR]</label>
+					</control>
+					
+					<control type="label">
+						<posx>20</posx>
+						<posy>40</posy>
+						<width>350</width>
+						<height>30</height>
+						<font>font20</font>
+						<label>$INFO[Container(11).ListItem.StartTime] - $INFO[Container(11).ListItem.EndTime]</label>
+						<scroll>auto</scroll>
+					</control>
+					
+					<control type="textbox">
+						<posx>20</posx>
+						<posy>80</posy>
+						<width>350</width>
+						<height>180</height>
+						<align>justify</align>
+						<autoscroll time="3000" delay="6000" repeat="8000"></autoscroll>
+						<font>font18</font>
+						<textcolor>White</textcolor>
+						<label>$INFO[Container(11).ListItem.Plot]</label>
+					</control>
+					
+					<control type="fadelabel">
+						<posx>20</posx>
+						<posy>275</posy>
+						<width>350</width>
+						<height>50</height>
+						<font>font20UB</font>
+						<label>$LOCALIZE[19031]:</label>
+					</control>
+					
+					<control type="fadelabel">
+						<posx>90</posx>
+						<posy>275</posy>
+						<width>280</width>
+						<height>50</height>
+						<font>font20UB</font>
+						<textcolor>Accent</textcolor>
+						<label>$INFO[Container(11).ListItem.NextTitle]</label>
+					</control>
+					
+				</control>
+				
+				<control type="list" id="11">
+					<posx>76</posx>
+					<posy>288</posy>
+					<width>810</width>
+					<height>327</height>
+					<onleft condition="Player.HasMedia">111</onleft>
+					<onleft condition="!Player.HasMedia">32</onleft>
+					<onright>70</onright>
+					<onup>11</onup>
+					<ondown>11</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>70</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="47">
+					
+						<control type="image">
+							<posx></posx>
+							<width>65</width>
+							<height>45</height>
+							<include>Common_Color_Keyback1</include>
+						</control>
+						
+						<control type="image">
+							<posx>67</posx>
+							<width>200</width>
+							<height>45</height>
+							<include>Common_Color_Keyback1</include>
+						</control>
+						
+						<control type="image">
+							<posx>269</posx>
+							<width>541</width>
+							<height>45</height>
+							<include>Common_Color_Keyback1</include>
+						</control>
+						
+						<control type="image">
+							<posx>269</posx>							
+							<width>541</width>
+							<height>45</height>
+							<texture>colors/color_maroon.png</texture>
+							<visible>ListItem.IsRecording</visible>
+						</control>
+						
+						<control type="progress">
+							<posx>269</posx>
+							<posy>39</posy>
+							<width>541</width>
+							<height>5</height>
+							<texturebg>backing/key-back1.png</texturebg>
+							<lefttexture>-</lefttexture>
+							<midtexture>general/accent.png</midtexture>
+							<righttexture>-</righttexture>
+							<info>ListItem.Progress</info>
+							<visible>ListItem.HasEpg</visible>
+						</control>
+						
+						<control type="label">
+							<posx>32</posx>
+							<width>65</width>
+							<align>center</align>
+							<font>font20UB</font>
+							<label>[B]$INFO[ListItem.ChannelNumber][/B]</label>						
+						</control>
+						
+						<control type="label">
+							<posx>87</posx>
+							<width>160</width>
+							<font>font20UB</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						
+						<control type="label">
+							<posx>287</posx>
+							<width>530</width>
+							<font>font20</font>
+							<label>$INFO[ListItem.Title]</label>
+						</control>
+						
+						<control type="image">
+							<posx>770</posx>
+							<posy>5</posy>
+							<width>35</width>
+							<height>35</height>
+							<aspectratio>scale</aspectratio>
+							<texture>home/recordings.png</texture>
+							<visible>ListItem.IsRecording</visible>
+						</control>
+						
+					</itemlayout>
+					
+					<focusedlayout height="47">
+					
+						<control type="image">
+							<posx></posx>
+							<width>65</width>
+							<height>45</height>
+							<include>Common_Color_Accent</include>
+						</control>
+						
+						<control type="image">
+							<posx>67</posx>
+							<width>200</width>
+							<height>45</height>
+							<include>Common_Color_Accent</include>
+						</control>
+						
+						<control type="image">
+							<posx>269</posx>
+							<width>541</width>
+							<height>45</height>
+							<include>Common_Color_Accent</include>
+						</control>
+						
+						<control type="image">
+							<width>45</width>
+							<height>45</height>
+							<texture border="5">button.png</texture>
+							<animation type="Focus" reversible="false">
+								<effect type="fade" start="60" end="100" time="400" />
+							</animation>
+						</control>
+						
+						<control type="progress">
+							<description>Progressbar</description>
+							<posx>269</posx>
+							<posy>40</posy>
+							<width>541</width>
+							<height>3</height>
+							<texturebg>general/accent.png</texturebg>
+							<lefttexture>-</lefttexture>
+							<righttexture>-</righttexture>
+							<visible>ListItem.HasEpg</visible>
+							<info>ListItem.Progress</info>
+						</control>
+						
+						<control type="label">
+							<posx>32</posx>
+							<width>65</width>
+							<align>center</align>
+							<font>font20UB</font>
+							<label>[B]$INFO[ListItem.ChannelNumber][/B]</label>
+						</control>
+						
+						<control type="label">
+							<posx>87</posx>
+							<width>160</width>
+							<font>font20UB</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						
+						<control type="fadelabel">
+							<posx>287</posx>
+							<width>530</width>
+							<font>font20</font>
+							<label>$INFO[ListItem.Title]</label>
+						</control>
+											
+						<control type="image">
+							<posx>770</posx>
+							<posy>5</posy>
+							<width>35</width>
+							<height>35</height>
+							<aspectratio>scale</aspectratio>
+							<texture>home/recordings.png</texture>
+							<visible>ListItem.IsRecording</visible>
+						</control>
+						
+					</focusedlayout>
+					
+				</control>
+				
+				<control type="image">
+					<description>outline</description>
+					<animation effect="fade" time="200">VisibleChange</animation>
+					<posx>890</posx>
+					<posy>288</posy>
+					<width>7</width>
+					<height>327</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>colors/color_white.png</texture>
+					<visible>Control.HasFocus(70)</visible>
+				</control>
+				
+				<control type="scrollbar" id="70">
+					<posx>891</posx>
+					<posy>289</posy>
+					<height>325</height>
+					<width>5</width>
+					<onright condition="Player.HasMedia">111</onright>
+					<onright condition="!Player.HasMedia">32</onright>
+					<onleft>11</onleft>
+					<texturesliderbar>general/accent.png</texturesliderbar> 
+					<texturesliderbackground>backings/key-back2.png</texturesliderbackground> 
+				</control>
+				
+			</control>
+			
+		</control>
+		
+    </include>
+	
+</includes>

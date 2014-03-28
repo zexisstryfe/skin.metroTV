@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window id="136">
+	<defaultcontrol always="true">-</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<include>DialogOverlay</include>
+
+		<control type="group">
+			<posx>490</posx>
+			<posy>324</posy>
+			
+			<include>Animation_Dialog_Center</include>
+			
+			<control type="image">
+				<description>background image</description>
+				<width>300</width>
+				<height>78</height>
+				<include>Common_Color_Accent</include>
+			</control>
+
+			<control type="image">
+				<description>Busy animation</description>
+				<posx>20</posx>
+				<posy>20</posy>
+				<width>32</width>
+				<height>32</height>
+				<texture>busy/busy.png</texture>
+				<aspectratio>scale</aspectratio>
+				<animation effect="rotate" start="0" end="360" center="36,36" time="1200" loop="true" condition="true">conditional</animation>
+			</control>
+
+			<control type="label">
+				<description>Busy label</description>
+				<posx>70</posx>
+				<posy>20</posy>
+				<width>280</width>
+				<height>32</height>
+				<align>left</align>
+				<label>$LOCALIZE[20186]</label>
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>
