@@ -19,13 +19,6 @@
 		<height>78</height>
 		<include>Common_Color_Accent</include>
 	</include>
-	
-	<include name="Double_Tile">
-		<width>315</width>
-		<height>155</height>
-		<include>Common_Color_Keyback1</include>
-		<visible>Skin.HasSetting(TileBackground)</visible>
-	</include>
 		
 	<include name="Double_Tile_Focus">
 		<width>315</width>

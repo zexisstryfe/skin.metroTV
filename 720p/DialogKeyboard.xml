@@ -419,7 +419,7 @@
 				<control type="radiobutton" id="304">
 					<description>Symbols button</description>
 					<posy>186</posy>
-					<label>symbol</label>
+					<label>$LOCALIZE[31242]</label>
 					<onleft>48</onleft>
 					<onright>303</onright>
 					<onup>302</onup>
@@ -434,7 +434,7 @@
 					<description>CAPS LOCK button</description>
 					<posx>74</posx>
 					<posy>186</posy>
-					<label>caps</label>
+					<label>$LOCALIZE[31243]</label>
 					<onleft>304</onleft>
 					<onright>307</onright>
 					<onup>90</onup>

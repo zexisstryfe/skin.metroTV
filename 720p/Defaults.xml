@@ -167,7 +167,7 @@
 		<height>5</height>
 		<texturebg>controls/ProgressBack.png</texturebg>
 		<lefttexture>-</lefttexture>
-		<midtexture>controls/ProgressMid.png</midtexture>
+		<midtexture colordiffuse="Accent">controls/ProgressMid.png</midtexture>
 		<righttexture>-</righttexture>
 		<overlaytexture>-</overlaytexture>
 	</default>
@@ -181,7 +181,7 @@
 		<texturenofocus>-</texturenofocus>
 		<texturesliderbar>OSD/slider_bg_2.png</texturesliderbar>
 		<textureslidernib border="2">OSD/SliderNibNF.png</textureslidernib>
-		<textureslidernibfocus border="2">OSD/SliderNibFO.png</textureslidernibfocus>
+		<textureslidernibfocus border="2" colordiffuse="Accent">colors/color_white.png</textureslidernibfocus>
 	</default>
 
 	<default type="scrollbar">

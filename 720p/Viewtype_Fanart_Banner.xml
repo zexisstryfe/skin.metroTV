@@ -11,7 +11,6 @@
 			<!--List Background Area-->
 			<control type="image">
 				<posx>860</posx>
-				<posy>0</posy>
 				<width>430</width>
 				<height>720</height>
 				<include>Common_Color_Tile1</include>
@@ -20,19 +19,15 @@
 			<!--Scrollbar-->
 			<control type="image">
 				<description>outline</description>
-				<animation effect="fade" time="200">VisibleChange</animation>
 				<posx>854</posx>
 				<posy>-1</posy>
-				<width>7</width>
 				<height>722</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>colors/color_white.png</texture>
+				<include>Common_Scroll_OutlineV</include>
 				<visible>Control.HasFocus(581)</visible>
 			</control>
 			
 			<control type="scrollbar" id="581">
 				<posx>855</posx>
-				<posy>0</posy>
 				<height>720</height>
 				<onleft>7009</onleft>
 				<onright>590</onright>
@@ -69,7 +64,6 @@
 						<height>80</height>
 						<font>font24UB</font>
 						<label>$INFO[ListItem.Label][COLOR Accent]$INFO[ListItem.Year, (,)][/COLOR]</label>
-						<aligny>center</aligny>
 						<visible>IsEmpty(ListItem.Art(banner))</visible>
 					</control>
 					
@@ -100,8 +94,8 @@
 						<posx>5</posx>
 						<width>410</width>
 						<height>90</height>
-						<texture>backings/key-back1.png</texture>
-						<bordertexture border="5">general/accent.png</bordertexture>
+						<texture colordiffuse="Keyback1">colors/color_white.png</texture>
+						<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
 						<bordersize>5</bordersize>
 						<visible>IsEmpty(ListItem.Art(banner))</visible>
 					</control>
@@ -121,7 +115,7 @@
 						<width>410</width>
 						<height>90</height>
 						<texture>$INFO[ListItem.Art(banner)]</texture>
-						<bordertexture border="5">general/accent.png</bordertexture>
+						<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
 						<bordersize>5</bordersize>
 						<aspectratio>keep</aspectratio>
 						<visible>!IsEmpty(ListItem.Art(banner))</visible>
@@ -164,43 +158,19 @@
 					<visible>!IsEmpty(ListItem.Art(poster))</visible>
 				</control>
 				
-				<control type="image">
+				<control type="group">
 					<posx>178</posx>
 					<posy>463</posy>
-					<width>300</width>
-					<height>70</height>
-					<include>Common_Color_Keyback1</include>
+					
+					<include>Common_Fanart_InfoBack</include>
+				
 				</control>
 				
-				<control type="image">
-					<posx>178</posx>
-					<posy>533</posy>
-					<width>300</width>
-					<height>160</height>
-					<include>Common_Color_Tile1</include>
-				</control>
-				
-				<control type="image">
-					<posx>178</posx>
-					<posy>693</posy>
-					<width>300</width>
-					<height>10</height>
-					<include>Common_Color_Keyback1</include>
-				</control>
-				
-				<control type="label">
+				<control type="fadelabel">
 					<posx>183</posx>
 					<posy>468</posy>
-					<height>20</height>
-					<width>290</width>
-					<font>font26UB</font>
-					<textcolor>Accent</textcolor>
-					<aligny>top</aligny>
+					<include>Common_Fanart_Title</include>
 					<label>$INFO[ListItem.Title]</label>
-					<scroll>true</scroll>
-					<scrollout>false</scrollout>
-					<pauseatend>600</pauseatend>
-					<scrollspeed>50</scrollspeed>
 				</control>
 				
 				<control type="label">
@@ -219,11 +189,7 @@
 					<posx>183</posx>
 					<posy>540</posy>
 					<width>50</width>
-					<height>20</height>
-					<aligny>center</aligny>
-					<align>center</align>
-					<font>font14UB</font>
-					<textcolor>White80</textcolor>
+					<include>Common_Fanart_Label</include>
 					<label>$LOCALIZE[345]</label>
 				</control>
 				
@@ -231,12 +197,7 @@
 					<posx>183</posx>
 					<posy>565</posy>
 					<width>50</width>
-					<height>20</height>
-					<aligny>center</aligny>
-					<align>center</align>
-					<align>left</align>
-					<font>font20</font>
-					<textcolor>White</textcolor>
+					<include>Common_Fanart_Data</include>
 					<label>$INFO[ListItem.Year]</label>
 				</control>
 				
@@ -244,11 +205,7 @@
 					<posx>253</posx>
 					<posy>540</posy>
 					<width>80</width>
-					<height>20</height>
-					<aligny>center</aligny>
-					<align>center</align>
-					<font>font14UB</font>
-					<textcolor>White80</textcolor>
+					<include>Common_Fanart_Label</include>
 					<label>$LOCALIZE[33054]</label>
 				</control>
 				
@@ -256,12 +213,7 @@
 					<posx>253</posx>
 					<posy>565</posy>
 					<width>80</width>
-					<height>20</height>
-					<aligny>center</aligny>
-					<align>center</align>
-					<align>left</align>
-					<font>font20</font>
-					<textcolor>White</textcolor>
+					<include>Common_Fanart_Data</include>
 					<label>$INFO[ListItem.Property(TotalSeasons)]</label>
 				</control>
 
@@ -269,11 +221,7 @@
 					<posx>348</posx>
 					<posy>540</posy>
 					<width>120</width>
-					<height>20</height>
-					<aligny>center</aligny>
-					<align>center</align>
-					<font>font14UB</font>
-					<textcolor>White80</textcolor>
+					<include>Common_Fanart_Label</include>
 					<label>$LOCALIZE[31193]</label>
 				</control>
 				
@@ -287,14 +235,6 @@
 					<aspectratio>keep</aspectratio>
 				</control>
 				
-				<control type="image">
-					<posx>178</posx>
-					<posy>599</posy>
-					<width>300</width>
-					<height>1</height>
-					<include>Common_Color_Accent</include>
-				</control>
-				
 				<!--Next Aired Area-->
 				<control type="group">
 					<visible>Skin.HasSetting(UseNextAiredScript)</visible>
@@ -303,8 +243,6 @@
 					<visible>!IsEmpty(Window(Home).Property(NextAired.Label)) + !stringcompare(ListItem.Label,..) + [Container.Content(TVShows) | Container.Content(Seasons)] + !IsEmpty(ListItem.TVShowTitle) + !IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
 
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
 						<width>300</width>
 						<height>93</height>
 						<include>Common_Color_Accent</include>
@@ -315,18 +253,15 @@
 						<posy>5</posy>
 						<width>30</width>
 						<height>30</height>
-						<texture>home/tv.png</texture>
+						<texture>tiles/tv.png</texture>
 					</control>
 					
 					<control type="label">
 						<posx>10</posx>
-						<posy>0</posy>
 						<width>280</width>
 						<height>40</height>
 						<align>center</align>
-						<aligny>center</aligny>
 						<font>font20UB</font>
-						<scroll>true</scroll>
 						<label>[B]$LOCALIZE[31173][/B]</label>
 					</control>
 					
@@ -336,7 +271,6 @@
 						<width>280</width>
 						<height>40</height>
 						<align>center</align>
-						<aligny>center</aligny>
 						<font>font16</font>
 						<scroll>true</scroll>
 						<label>[B]"$INFO[Window(Home).Property(NextAired.NextTitle)]"[/B]</label>
@@ -348,7 +282,6 @@
 						<width>290</width>
 						<height>40</height>
 						<align>center</align>
-						<aligny>center</aligny>
 						<font>font16</font>
 						<scroll>true</scroll>
 						<label>$LOCALIZE[31177] $INFO[Window(Home).Property(NextAired.NextDate)] - $INFO[Window(Home).Property(NextAired.AirTime)]</label>
@@ -370,42 +303,22 @@
 					<fadetime>100</fadetime>
 					<aspectratio>stretch</aspectratio>
 					<texture>defaults/DefaultFolderBack.png</texture>
-					<bordertexture border="5">backings/key-back2.png</bordertexture>
+					<bordertexture border="5" colordiffuse="Keyback2">colors/color_white.png</bordertexture>
 					<bordersize>5</bordersize>
 				</control>
 				
-				<control type="image">
+				<control type="group">
 					<posx>258</posx>
 					<posy>463</posy>
-					<width>300</width>
-					<height>70</height>
-					<include>Common_Color_Keyback1</include>
-				</control>
+					
+					<include>Common_Fanart_InfoBack</include>
 				
-				<control type="image">
-					<posx>258</posx>
-					<posy>533</posy>
-					<width>300</width>
-					<height>160</height>
-					<include>Common_Color_Tile1</include>
-				</control>
-				
-				<control type="image">
-					<posx>258</posx>
-					<posy>693</posy>
-					<width>300</width>
-					<height>10</height>
-					<include>Common_Color_Keyback1</include>
 				</control>
 				
 				<control type="label">
 					<posx>263</posx>
 					<posy>468</posy>
-					<height>20</height>
-					<width>290</width>
-					<font>font26UB</font>
-					<textcolor>Accent</textcolor>
-					<aligny>top</aligny>
+					<include>Common_Fanart_Title</include>
 					<label>$LOCALIZE[31194]</label>
 				</control>
 						
@@ -413,7 +326,6 @@
 
 			<control type="image" id="100">
 				<visible>Skin.HasSetting(UseTVLogos)</visible>
-				<posx>0</posx>
 				<posy>20</posy>
 				<width>1280</width>
 				<height>100</height>

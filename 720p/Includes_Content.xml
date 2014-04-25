@@ -271,14 +271,14 @@
 			<onclick>Dialog.Close(200)</onclick>
 			<icon>defaults/DefaultMovies.png</icon>
 		</item>
-		<item id="933">
+		<!--<item id="933">
 			<label>$LOCALIZE[31016]</label>
 			<visible>Skin.String(TileSelector_Temp,MovieTile2) | Skin.String(TileSelector_Temp,MovieTile3) | Skin.String(TileSelector_Temp,MovieTile4) | Skin.String(TileSelector_Temp,MovieTile5) | Skin.String(TileSelector_Temp,TVShowTile2) | Skin.String(TileSelector_Temp,TVShowTile3) | Skin.String(TileSelector_Temp,TVShowTile4) | Skin.String(TileSelector_Temp,TVShowTile5) | Skin.String(TileSelector_Temp,MusicTile2) | Skin.String(TileSelector_Temp,MusicTile3) | Skin.String(TileSelector_Temp,MusicTile4) | Skin.String(TileSelector_Temp,MusicTile5) | Skin.String(TileSelector_Temp,MusicVidTile2) | Skin.String(TileSelector_Temp,MusicVidTile3) | Skin.String(TileSelector_Temp,MusicVidTile4) | Skin.String(TileSelector_Temp,MusicVidTile5) | Skin.String(TileSelector_Temp,MovieTile2) | Skin.String(TileSelector_Temp,MovieTile3) | Skin.String(TileSelector_Temp,MovieTile4) | Skin.String(TileSelector_Temp,MovieTile5)</visible>
 			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],Views)</onclick>
 			<include>Content_Clear</include>
 			<onclick>Dialog.Close(200)</onclick>
 			<icon>tiles/views.png</icon>
-		</item>
+		</item>-->
 		
 	</include>
 

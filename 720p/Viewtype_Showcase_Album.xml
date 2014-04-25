@@ -15,7 +15,6 @@
 			<include>Common_TopBar</include>
 			
 			<control type="image">
-				<posx>0</posx>
 				<posy>313</posy>
 				<width>1400</width>
 				<height>375</height>
@@ -24,7 +23,6 @@
 			</control>
 			
 			<control type="image">
-				<posx>0</posx>
 				<posy>313</posy>
 				<width>1400</width>
 				<height>1</height>
@@ -33,7 +31,6 @@
 			</control>
 			
 			<control type="image">
-				<posx>0</posx>
 				<posy>687</posy>
 				<width>1400</width>
 				<height>1</height>
@@ -125,9 +122,9 @@
 							<width>315</width>
 							<height>315</height>
 							<texture background="true" fallback="defaults/DefaultAlbumCover.png">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="5">general/accent.png</bordertexture>
+							<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<bordersize>5</bordersize>
+							<bordersize>2</bordersize>
 							<visible>!stringcompare(ListItem.Label,..) + Container.Content(Albums)</visible>
 						</control>
 						
@@ -137,9 +134,9 @@
 							<width>315</width>
 							<height>315</height>
 							<texture background="true" fallback="defaults/DefaultArtist.png">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="5">general/accent.png</bordertexture>
+							<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<bordersize>5</bordersize>
+							<bordersize>2</bordersize>
 							<visible>!stringcompare(ListItem.Label,..) + Container.Content(Artists)</visible>
 						</control>
 						
@@ -149,8 +146,8 @@
 							<width>315</width>
 							<height>315</height>
 							<texture>defaults/DefaultFolderBack.png</texture>
-							<bordertexture border="5">general/accent.png</bordertexture>
-							<bordersize>5</bordersize>
+							<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
+							<bordersize>2</bordersize>
 							<aspectratio scalediffuse="false">keep</aspectratio>
 							<visible>stringcompare(ListItem.Label,..)</visible>
 						</control>
@@ -160,8 +157,7 @@
 				</focusedlayout>
 				
 			</control>
-			
-		<!-------------------------------------------------------------------------------------------------->
+
 			<control type="group" id="10">
 				<visible>Container.Content(albums) | Container.Content(artists)</visible>
 				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(57) + [Container.Content(albums) | Container.Content(artists)] + ![Container(57).OnNext | Container(57).OnPrevious]">WindowOpen</animation>
@@ -174,7 +170,7 @@
 					<height>314</height>
 					<texture background="true" >$INFO[ListItem.Art(fanart)]</texture>
 					<fadetime>200</fadetime>
-					<aspectratio align="centre">scale</aspectratio>
+					<aspectratio align="center">scale</aspectratio>
 					<visible>!IsEmpty(ListItem.Art(fanart))</visible>
 				 </control>
 
@@ -207,7 +203,6 @@
 					<width>200</width>
 					<height>50</height>
 					<align>right</align>
-					<aligny>Left</aligny>
 					<font>font40L</font>
 					<textcolor>Accent</textcolor>
 					<label>21887</label>
@@ -220,7 +215,6 @@
 					<width>200</width>
 					<height>50</height>
 					<align>right</align>
-					<aligny>Left</aligny>
 					<font>font40L</font>
 					<textcolor>Accent</textcolor>
 					<label>183</label>
@@ -245,7 +239,6 @@
 					<align>justify</align>
 					<autoscroll time="3000" delay="6000" repeat="8000"></autoscroll>
 					<font>font18</font>
-					<textcolor>White</textcolor>
 					<visible>Container.Content(artists)</visible>
 				</control>
 				
@@ -258,40 +251,21 @@
 					<align>justify</align>
 					<autoscroll time="3000" delay="6000" repeat="8000"></autoscroll>
 					<font>font18</font>
-					<textcolor>White</textcolor>
 					<visible>Container.Content(albums)</visible>
 				</control>
 
 			</control>
 			
 			<control type="label" id="140">
-				<posx>0</posx>
-				<posy>630</posy>
-				<height>30</height>
-				<width>1280</width>
-				<font>font40UB</font>
-				<textcolor>White</textcolor>
-				<align>center</align>
-				<aligny>top</aligny>
+				<include>Common_Showcase_Title</include>
 				<label>[COLOR Accent]$INFO[ListItem.Label][/COLOR] $INFO[ListItem.Year]</label>
-				<scroll>true</scroll>
-				<shadowcolor>black</shadowcolor>
 				<visible>Window.IsActive(1) | Container.Content(albums) | Container.Content(artists)</visible>
 				<visible>!stringcompare(ListItem.Label,..)</visible>
 			</control>
 			
 			<control type="label" id="140">
-				<posx>0</posx>
-				<posy>630</posy>
-				<height>30</height>
-				<width>1280</width>
-				<font>font40UB</font>
-				<textcolor>Accent</textcolor>
-				<align>center</align>
-				<aligny>top</aligny>
+				<include>Common_Showcase_Title</include>
 				<label>$LOCALIZE[31194]</label>
-				<scroll>true</scroll>
-				<shadowcolor>black</shadowcolor>
 				<visible>stringcompare(ListItem.Label,..)</visible>	
 			</control>
 			
@@ -302,9 +276,7 @@
 			<posx>99</posx>
 			<posy>699</posy>
 			<width>1082</width>
-			<height>7</height>
-			<aspectratio>stretch</aspectratio>
-			<texture>colors/color_white.png</texture>
+			<include>Common_Scroll_OutlineH</include>
 			<visible>Control.HasFocus(68)</visible>
 		</control>
 		
@@ -313,8 +285,6 @@
 			<posy>700</posy>
 			<width>1080</width>
 			<height>5</height>
-			<texturesliderbar>general/accent.png</texturesliderbar> 
-			<texturesliderbackground>backings/key-back2.png</texturesliderbackground> 
 			<onup>57</onup>
 			<ondown>9000</ondown>
 			<orientation>horizontal</orientation>

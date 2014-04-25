@@ -15,8 +15,16 @@
 		<fadetime>1000</fadetime>
 		<pauseatend>0</pauseatend>
 		<loop>true</loop>
-		<aspectratio background="true" aligny="top">stretch</aspectratio>
+		<aspectratio aligny="top">stretch</aspectratio>
 		<animation effect="fade" time="1000">Hidden</animation>
+	</include>
+	
+	<include name="Settings_Background">
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture>../backgrounds/systeminfo.jpg</texture>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+		</control>
 	</include>
 	
 	<!-- Overlays -->
@@ -73,6 +81,12 @@
 		
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
+			<texture>../backgrounds/musicvid.jpg</texture>
+			<visible>Container.Content(musicvideos) + IsEmpty(ListItem.Art(fanart))</visible>
+		</control>
+		
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
 			<texture>../backgrounds/programs.jpg</texture>
 			<visible>Window.IsActive(programs) + IsEmpty(ListItem.Art(fanart))</visible>
 		</control>
@@ -104,7 +118,7 @@
 				<include>Dimensions_Fullscreen</include>
 				<fadetime>800</fadetime>
 				<texture background="true" fallback="../backgrounds/music.jpg">$INFO[ListItem.Art(fanart)]</texture>
-				<visible>Container.Content(albums) | Container.Content(artists) | Container.Content(songs) | Container.Content(musicvideos) </visible>
+				<visible>Container.Content(albums) | Container.Content(artists) | Container.Content(songs)</visible>
 			</control>
 			
 		</control>
@@ -155,13 +169,13 @@
 		<control type="multiimage">
 			<include>Multiimage_Backgrounds</include>
 			<imagepath background="true" fallback="special://skin/backgrounds/movies.jpg">$INFO[Skin.String(Movies.Background)]</imagepath>
-			<visible>Control.HasFocus(501) | Control.HasFocus(66) | Control.HasFocus(601) | Control.HasFocus(602) | Control.HasFocus(603) | Control.HasFocus(604) | Control.HasFocus(605) | Control.HasFocus(606) | Control.HasFocus(607) | Control.HasFocus(608) | Control.HasFocus(609) | Control.HasFocus(610) | Control.HasFocus(611) | Control.HasFocus(612) | Control.HasFocus(613) | Control.HasFocus(614) | Control.HasFocus(615) | Control.HasFocus(616) | Control.HasFocus(617) | Control.HasFocus(618)</visible>
+			<visible>Control.HasFocus(501) | Control.HasFocus(66) | Control.HasFocus(601) | Control.HasFocus(602) | Control.HasFocus(603) | Control.HasFocus(604) | Control.HasFocus(605) | Control.HasFocus(606) | Control.HasFocus(607) | Control.HasFocus(608) | Control.HasFocus(609) | Control.HasFocus(610) | Control.HasFocus(611) | Control.HasFocus(612) | Control.HasFocus(613) | Control.HasFocus(614) | Control.HasFocus(615) | Control.HasFocus(616) | Control.HasFocus(617) | Control.HasFocus(618) | Window.IsActive(61)</visible>
 		</control>
 		
 		<control type="multiimage">
 			<include>Multiimage_Backgrounds</include>
 			<imagepath background="true" fallback="special://skin/backgrounds/tvshows.jpg">$INFO[Skin.String(TVShows.Background)]</imagepath>
-			<visible>Control.HasFocus(502) | Control.HasFocus(68) | Control.HasFocus(626) | Control.HasFocus(627) | Control.HasFocus(628) | Control.HasFocus(629) | Control.HasFocus(630) | Control.HasFocus(631) | Control.HasFocus(632) | Control.HasFocus(633) | Control.HasFocus(634) | Control.HasFocus(635)</visible>
+			<visible>Control.HasFocus(502) | Control.HasFocus(68) | Control.HasFocus(626) | Control.HasFocus(627) | Control.HasFocus(628) | Control.HasFocus(629) | Control.HasFocus(630) | Control.HasFocus(631) | Control.HasFocus(632) | Control.HasFocus(633) | Control.HasFocus(634) | Control.HasFocus(635) | Window.IsActive(62) </visible>
 		</control>	
 		
 		<control type="multiimage">
@@ -173,7 +187,7 @@
 		<control type="multiimage">
 			<include>Multiimage_Backgrounds</include>
 			<imagepath background="true" fallback="special://skin/backgrounds/music.jpg">$INFO[Skin.String(Music.Background)]</imagepath>
-			<visible>Control.HasFocus(503) | Control.HasFocus(67) | Control.HasFocus(675) | Control.HasFocus(676) | Control.HasFocus(677) | Control.HasFocus(678) | Control.HasFocus(679) | Control.HasFocus(680) | Control.HasFocus(681) | Control.HasFocus(682) | Control.HasFocus(683) | Control.HasFocus(684) | Control.HasFocus(685) | Control.HasFocus(686) | Control.HasFocus(687) | Control.HasFocus(688) | Control.HasFocus(689)</visible>
+			<visible>Control.HasFocus(503) | Control.HasFocus(67) | Control.HasFocus(675) | Control.HasFocus(676) | Control.HasFocus(677) | Control.HasFocus(678) | Control.HasFocus(679) | Control.HasFocus(680) | Control.HasFocus(681) | Control.HasFocus(682) | Control.HasFocus(683) | Control.HasFocus(684) | Control.HasFocus(685) | Control.HasFocus(686) | Control.HasFocus(687) | Control.HasFocus(688) | Control.HasFocus(689) | Window.IsActive(63)</visible>
 		</control>
 		
 		<control type="multiimage">
@@ -185,7 +199,7 @@
 		<control type="multiimage">
 			<include>Multiimage_Backgrounds</include>
 			<imagepath background="true" fallback="special://skin/backgrounds/pictures.jpg">$INFO[Skin.String(Pictures.Background)]</imagepath>
-			<visible>Control.HasFocus(504) | Control.HasFocus(69) | Control.HasFocus(726)] | Control.HasFocus(727) | Control.HasFocus(728) | Control.HasFocus(729) | Control.HasFocus(730)</visible>
+			<visible>Control.HasFocus(504) | Control.HasFocus(69) | Control.HasFocus(726) | Control.HasFocus(727) | Control.HasFocus(728) | Control.HasFocus(729) | Control.HasFocus(730)</visible>
 		</control>	
 		
 		<control type="multiimage">
@@ -197,7 +211,7 @@
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<visible>Control.HasFocus(506) | Control.HasFocus(776)</visible>
-			<aspectratio background="true" aligny="top">stretch</aspectratio>
+			<aspectratio aligny="top">stretch</aspectratio>
 			<texture background="true" fallback="special://skin/backgrounds/weather.jpg">$INFO[Window(Weather).Property(Day0.FanartCode),../backgrounds/weather_fanart/,.jpg]</texture>
 			<animation effect="fade" time="1000">Hidden</animation>
 		</control>
@@ -205,7 +219,7 @@
 		<control type="multiimage">
 			<include>Multiimage_Backgrounds</include>
 			<imagepath background="true" fallback="special://skin/backgrounds/addons.jpg">$INFO[Skin.String(Addons.Background)]</imagepath>
-			<visible>Control.HasFocus(507) | Control.HasFocus(801)] | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804) | Control.HasFocus(805)</visible>
+			<visible>Control.HasFocus(507) | Control.HasFocus(801) | Control.HasFocus(802) | Control.HasFocus(803) | Control.HasFocus(804) | Control.HasFocus(805)</visible>
 		</control>	
 		
 		<control type="multiimage">

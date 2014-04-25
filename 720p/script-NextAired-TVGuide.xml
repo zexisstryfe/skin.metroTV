@@ -19,8 +19,6 @@
 			<control type="group">
 				<visible>!IsEmpty(Window(home).Property(TVGuide.BackgroundFanart))</visible>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
 					<width>1280</width>
 					<height>720</height>
 					<aspectratio>scale</aspectratio>
@@ -32,8 +30,6 @@
 				</control>
 				
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
 					<width>1280</width>
 					<height>720</height>
 					<aspectratio>scale</aspectratio>
@@ -45,8 +41,6 @@
 				</control>
 				
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
 					<width>1280</width>
 					<height>720</height>
 					<aspectratio>scale</aspectratio>
@@ -58,8 +52,6 @@
 				</control>
 				
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
 					<width>1280</width>
 					<height>720</height>
 					<aspectratio>scale</aspectratio>
@@ -71,8 +63,6 @@
 				</control>
 				
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
 					<width>1280</width>
 					<height>720</height>
 					<aspectratio>scale</aspectratio>
@@ -84,8 +74,6 @@
 				</control>
 				
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
 					<width>1280</width>
 					<height>720</height>
 					<aspectratio>scale</aspectratio>
@@ -96,8 +84,6 @@
 				</control>
 				
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
 					<width>1280</width>
 					<height>720</height>
 					<aspectratio>scale</aspectratio>
@@ -119,7 +105,6 @@
 		
 		<!--Content Area-->
 		<control type="group">
-			<posx>0</posx>
 			<posy>100</posy>
 			<width>1280</width>
 			<height>480</height>
@@ -139,7 +124,6 @@
 			
 			<control type="group">
 				<control type="list" id="50">
-					<posx>0</posx>
 					<posy>205</posy>
 					<width>400</width>
 					<height>480</height>
@@ -165,21 +149,16 @@
 							<height>44</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>font40L</font>
-							<textcolor>White</textcolor>
-							<selectedcolor>Accent</selectedcolor>
 							<aligny>center</aligny>
 							<align>left</align>							
 						</control>
 						
 						<control type="image">
-							<label></label>
 							<posx>15</posx>
-							<posy>0</posy>
 							<height>50</height>
 							<width>50</width>
 							<align>left</align>
-							<texture>arrows/marker.png</texture>
-							<colordiffuse>Accent</colordiffuse>
+							<texture colordiffuse="Accent">arrows/marker.png</texture>
 							<visible>StringCompare(ListItem.Label,System.Date(DDD))</visible>
 							<animation effect="fade" start="20" time="1200" pulse="true"></animation>
 						</control>
@@ -190,10 +169,9 @@
 					
 						<control type="label">
 							<posx>74</posx>
-							<posy>0</posy>
 							<width min="20" max="380">auto</width>
 							<label>$INFO[ListItem.Label]</label>
-							<font>Home_menu</font>
+							<font>font40L</font>
 							<textcolor>Accent</textcolor>
 							<aligny>center</aligny>
 							<align>left</align>							
@@ -201,14 +179,11 @@
 						</control>
 						
 						<control type="image">
-							<label></label>
 							<posx>15</posx>
-							<posy>0</posy>
 							<height>50</height>
 							<width>50</width>
 							<align>left</align>
-							<texture>arrows/marker.png</texture>
-							<colordiffuse>Accent</colordiffuse>
+							<texture colordiffuse="Accent">arrows/marker.png</texture>
 							<visible>StringCompare(ListItem.Label,System.Date(DDD))</visible>
 							<animation effect="fade" start="20" time="1200" pulse="true"></animation>
 						</control>
@@ -252,7 +227,6 @@
 			
 			<control type="group">
 				<posx>310</posx>
-				<posy>0</posy>
 				<width>1280</width>
 				<height>480</height>
 				
@@ -262,21 +236,16 @@
 					<posy>150</posy>
 					<height>30</height>
 					<width>400</width>
-					<font>Home_sub_header</font>
-					<align>left</align>
+					<font>font40L</font>
 				</control>
 				
-				<control type="textbox">
+				<control type="label">
 					<posx>60</posx>
 					<posy>210</posy>
-					<width>1500</width>
-					<height>480</height>
-					<label>there are no episodes showing on this day</label>
-					<font>font40L</font>
-					<textcolor>White</textcolor>
-					<aligny>top</aligny>
-					<wrapmultiline>true</wrapmultiline>
-					<scrollspeed>0</scrollspeed>
+					<width>800</width>
+					<height>40</height>
+					<label>31206</label>
+					<font>font32L</font>
 					<visible>[IsEmpty(Container(200).ListItem(0).Label) + StringCompare(Container(50).Position,0)] | [IsEmpty(Container(201).ListItem(0).Label) + StringCompare(Container(50).Position,1)] | [IsEmpty(Container(202).ListItem(0).Label) + StringCompare(Container(50).Position,2)] | [IsEmpty(Container(203).ListItem(0).Label) + StringCompare(Container(50).Position,3)] | [IsEmpty(Container(204).ListItem(0).Label) + StringCompare(Container(50).Position,4)] | [IsEmpty(Container(205).ListItem(0).Label) + StringCompare(Container(50).Position,5)] | [IsEmpty(Container(206).ListItem(0).Label) + StringCompare(Container(50).Position,6)]</visible>
 				</control>
 				

@@ -3,17 +3,19 @@
 <includes>
 
 	<include name="Viewtype_List_Pics">
-	
-		<control type="group">
-			<description>Lists View (id=50)</description>
+		<description>Lists View (id=50)</description>
+		
+		<control type="group">			
 			<visible>Control.IsVisible(50)</visible>
-			
+
+			<!--Background Area-->
 			<control type="image">
 				<include>Dimensions_Fullscreen</include>
 				<texture background="true">backings/music_fanart_diffuse.png</texture>
 				<visible>Skin.HasSetting(UseFanartOverlay)</visible>
 			</control>
 
+			<!--Top Area-->	
 			<include>Common_TopBar</include>
 		
 			<control type="image">
@@ -80,60 +82,35 @@
 			</control>
 
 			<control type="label">
-				<posx>585</posx>
-				<posy>188</posy>
-				<width>550</width>
-				<font>font24UB</font>
-				<align>center</align>
-				<scroll>true</scroll>
+				<include>Common_ListPic_Title</include>
 				<label>[COLOR Accent]$LOCALIZE[31194][/COLOR]</label>
 				<visible>stringcompare(ListItem.Label,..)</visible>
 			</control>
 			
 			<control type="label">
-				<posx>585</posx>
-				<posy>188</posy>
-				<width>550</width>
-				<font>font24UB</font>
-				<align>center</align>
-				<scroll>true</scroll>
+				<include>Common_ListPic_Title</include>
 				<label>[COLOR Accent]$INFO[ListItem.Label][/COLOR]</label>
 				<visible>!stringcompare(ListItem.Label,..)</visible>
 			</control>
 
 			<control type="image">
-				<posx>670</posx>
-				<posy>248</posy>
-				<width>380</width>
-				<height>380</height>
-				<fadetime>100</fadetime>
-				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<include>Common_ListPic_Icon</include>
 				<texture fallback="defaults/DefaultPicture.png">$INFO[ListItem.Icon]</texture>
-				<bordertexture>backings/key-back1.png</bordertexture>
 				<visible>!IsEmpty(ListItem.Icon) + !stringcompare(ListItem.Label,..)</visible>
 			</control>
 			
 			<control type="image">
-				<posx>670</posx>
-				<posy>248</posy>
-				<width>380</width>
-				<height>380</height>
-				<fadetime>100</fadetime>
-				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<include>Common_ListPic_Icon</include>
 				<texture>defaults/DefaultFolderBack.png</texture>
-				<bordertexture>backings/key-back1.png</bordertexture>
 				<visible>stringcompare(ListItem.Label,..)</visible>
 			</control>
 			
 			<control type="image">
 				<description>outline</description>
-				<animation effect="fade" time="200">VisibleChange</animation>
 				<posx>639</posx>
 				<posy>187</posy>
-				<width>7</width>
 				<height>462</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>colors/color_white.png</texture>
+				<include>Common_Scroll_OutlineV</include>
 				<visible>Control.HasFocus(60)</visible>
 			</control>
 
@@ -142,8 +119,6 @@
 				<posy>188</posy>
 				<height>460</height>
 				<width>5</width>
-				<texturesliderbar>general/accent.png</texturesliderbar> 
-				<texturesliderbackground>backings/key-back2.png</texturesliderbackground> 
 				<onleft>50</onleft>
 				<onright>50</onright>
 			</control>

@@ -24,7 +24,7 @@
 			</control>			
 
 			<control type="grouplist" id="1">
-				<posx>32</posx>
+				<posx>22</posx>
 				<posy>15</posy>
 				<width>1280</width>
 				<height>125</height>
@@ -34,6 +34,11 @@
 				<onup>50</onup>
 				<orientation>horizontal</orientation>
 				
+				<control type="image">
+					<width>10</width>
+					<height>50</height>
+				</control>
+
 				<control type="button" id="3110">
 					<include>Common_Settings_Button</include>
 					<texturefocus>contextmenu/SettingsFO.png</texturefocus>

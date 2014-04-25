@@ -286,8 +286,8 @@
 					<textoffsetx>10</textoffsetx>
 					<textureup>arrows/default-scroll-up.png</textureup>
 					<texturedown>arrows/default-scroll-down.png</texturedown>
-					<textureupfocus>arrows/default-scroll-up-focus.png</textureupfocus>
-					<texturedownfocus>arrows/default-scroll-down-focus.png</texturedownfocus>
+					<textureupfocus colordiffuse="Accent">arrows/default-scroll-up.png</textureupfocus>
+					<texturedownfocus colordiffuse="Accent">>arrows/default-scroll-down.png</texturedownfocus>
 					<showonepage>false</showonepage>
 					<visible>Control.IsVisible(120)</visible>
 				</control>

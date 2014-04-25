@@ -51,7 +51,6 @@
 				
 					<control type="image">
 						<posx>9</posx>
-						<posy>0</posy>
 						<width>185</width>
 						<height>220</height>
 						<texture background="true" border="2">backings/polaroid.png</texture>
@@ -87,7 +86,6 @@
 						<font>scrawl18</font>
 						<textcolor>Black</textcolor>
 						<align>center</align>
-						<wrapmultiline>true</wrapmultiline>
 						<visible>!stringcompare(ListItem.Label,..)</visible>
 					</control>
 					
@@ -100,7 +98,6 @@
 						<font>scrawl18</font>
 						<textcolor>Black</textcolor>
 						<align>center</align>
-						<wrapmultiline>true</wrapmultiline>
 						<visible>stringcompare(ListItem.Label,..)</visible>
 					</control>
 					
@@ -115,7 +112,6 @@
 						
 						<control type="image">
 							<posx>14</posx>
-							<posy>0</posy>
 							<width>185</width>
 							<height>220</height>
 							<texture>backings/polaroid.png</texture>
@@ -151,7 +147,7 @@
 							<font>scrawl18</font>
 							<textcolor>Black</textcolor>
 							<align>center</align>
-							<wrapmultiline>true</wrapmultiline>
+							<visible>!stringcompare(ListItem.Label,..)</visible>
 						</control>
 						
 						<control type="textbox">
@@ -163,7 +159,6 @@
 							<font>scrawl18</font>
 							<textcolor>Black</textcolor>
 							<align>center</align>
-							<wrapmultiline>true</wrapmultiline>
 							<visible>stringcompare(ListItem.Label,..)</visible>
 						</control>
 						
@@ -174,7 +169,6 @@
 			</control>
 
 			<control type="image">
-				<posx>0</posx>
 				<posy>660</posy>
 				<width>1280</width>
 				<height>90</height>
@@ -182,7 +176,6 @@
 			</control>
 			
 			<control type="image">
-				<posx>0</posx>
 				<posy>660</posy>
 				<width>1280</width>
 				<height>1</height>
@@ -191,7 +184,6 @@
 			
 			<control type="label">
 				<label>[COLOR Accent]$INFO[ListItem.Label][/COLOR]</label>
-				<posx>0</posx>
 				<posy>660</posy>
 				<height>50</height>
 				<width>1280</width>

@@ -4,21 +4,8 @@
 	<include condition="!Window.Previous(fullscreenvideo) + !Window.Previous(slideshow) + Skin.HasSetting(MetroAnimations)">Common_Animation_Splash_Flip</include>
 	
 	<controls>
-	
-		<include>Common_Fanart_Overlay</include>
 		
-		<control type="image" id="100">
-			<description>background</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<visible>true</visible>
-			<texture>../backgrounds/systeminfo.jpg</texture>			
-			<animation effect="fade" time="400">WindowOpen</animation>
-			<animation effect="fade" time="400">WindowClose</animation>
-		</control>	
-		
+		<include>Settings_Background</include>		
 		<include>Common_Fanart_Overlay</include>
 		<include>Common_TopBar</include>	
 		
@@ -43,7 +30,6 @@
 				
 					<control type="image">
 						<posx>9</posx>
-						<posy>0</posy>
 						<width>155</width>
 						<height>155</height>
 						<include>Common_Color_Tile1</include>
@@ -51,7 +37,6 @@
 				
 					<control type="image">
 						<posx>9</posx>
-						<posy>0</posy>
 						<include>Single_Tile</include>
 					</control>
 								
@@ -73,12 +58,9 @@
 				<focusedlayout width="215" height="348">
 					
 					<control type="group">
-						<posx>0</posx>
-						<posy>0</posy>
 						
 						<control type="image">
 							<posx>9</posx>
-							<posy>0</posy>
 							<include>Single_Tile_Focus</include>
 						</control>
 						

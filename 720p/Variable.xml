@@ -19,6 +19,7 @@
 		<value condition="Window.IsActive(Startup.xml)">splash/splash_startup.png</value>
 		<value condition="Window.IsActive(MyPVR.xml)">splash/splash_livetv.png</value>
 		<value condition="Window.IsActive(Startup.xml)">splash/splash_startup.png</value>
+		<value condition="Window.IsActive(script-Rom_Collection_Browser-main.xml)">splash/splash_games.png</value>
 	</variable>
 	
 	<variable name="Custom1.HomeMenu">
@@ -63,8 +64,8 @@
 	
 	<variable name="TopBar_Label">
 		<value condition="StringCompare(Container.FolderName,files)">$LOCALIZE[744]</value>
-		<value condition="Container.Content(Movies)">$LOCALIZE[342]</value>
-		<value condition="Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)">$LOCALIZE[20343]</value>
+		<value condition="Container.Content(Movies) | Window.IsActive(61)">$LOCALIZE[342]</value>
+		<value condition="Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Window.IsActive(62)">$LOCALIZE[20343]</value>
 		<value condition="Window.IsActive(401)">$LOCALIZE[4]</value>
 		<value condition="Container.Content(albums)">$LOCALIZE[132]</value>
 		<value condition="Container.Content(artists)">$LOCALIZE[133]</value>
@@ -72,7 +73,7 @@
 		<value condition="Container.Content(genres)">$LOCALIZE[135]</value>
 		<value condition="Container.Content(playlists)">$LOCALIZE[136]</value>
 		<value condition="Container.Content(files) + !Window.IsVisible(mymusicplaylisteditor.xml)">$LOCALIZE[744]</value>
-		<value condition="Container.Content(musicvideos)">$LOCALIZE[20389]</value>
+		<value condition="Container.Content(musicvideos) | Window.IsActive(64)">$LOCALIZE[20389]</value>
 		<value condition="Container.Content(years)">$LOCALIZE[652]</value>
 		<value condition="Container.Content(actors)">$LOCALIZE[344]</value>
 		<value condition="Container.Content(studios)">$LOCALIZE[20388]</value>
@@ -86,8 +87,9 @@
 		<value condition="Window.IsVisible(script-NextAired-TVGuide.xml)">$LOCALIZE[31103]</value>
 		<value condition="Window.IsVisible(myweather.xml)">$LOCALIZE[31157]</value>
 		<value condition="Window.IsVisible(myvideoplaylist.xml)">$LOCALIZE[3]</value>
-		<value condition="Window.IsVisible(mymusicplaylist.xml) | Window.IsVisible(mymusicplaylisteditor.xml)">$LOCALIZE[2]</value>
+		<value condition="Window.IsVisible(mymusicplaylist.xml) | Window.IsVisible(mymusicplaylisteditor.xml) | Window.IsActive(63)">$LOCALIZE[2]</value>
 		<value condition="Window.IsVisible(script-Rom_Collection_Browser-main.xml)">$LOCALIZE[15016]</value>
+		<value condition="Window.IsVisible(Custom_Hub_TraktTV.xml)">$LOCALIZE[31215]</value>
 	</variable>
 	
 	<variable name="Disabled_ColorDiffuse">
@@ -1773,5 +1775,25 @@
 		<value condition="Skin.String(Custom1Tile5,ProgramAddons)">ActivateWindow(programs)</value>
 		<value condition="Skin.String(Custom1Tile5,FileManager)">ActivateWindow(Filemanager)</value>
 	</variable>	
+	
+	<variable name="Trakt_TrendingMovies_TextColor">
+		<value condition="ControlGroup(10000).HasFocus(10001) + Control.HasFocus(10001)">Accent</value>
+		<value>White</value>
+	</variable>
+	
+	<variable name="Trakt_TrendingShows_TextColor">
+		<value condition="ControlGroup(10000).HasFocus(10002) + Control.HasFocus(10002)">Accent</value>
+		<value>White</value>
+	</variable>
+	
+	<variable name="Trakt_AiringShows_TextColor">
+		<value condition="ControlGroup(10000).HasFocus(10003) + Control.HasFocus(10003)">Accent</value>
+		<value>White</value>
+	</variable>
+	
+	<variable name="Trakt_PremieringShows_TextColor">
+		<value condition="ControlGroup(10000).HasFocus(10004) + Control.HasFocus(10004)">Accent</value>
+		<value>White</value>
+	</variable>
 	
 </includes>

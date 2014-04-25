@@ -54,16 +54,12 @@
 				<itemlayout width="420" height="115">
 				
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
 						<width>400</width>
 						<height>95</height>
 						<include>Common_Color_Keyback1</include>
 					</control>
 					
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
 						<width>95</width>
 						<height>95</height>
 						<include>Common_Color_Keyback2</include>
@@ -71,8 +67,6 @@
 					</control>	
 					
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
 						<width>95</width>
 						<height>95</height>
 						<aspectratio align="left" aligny="center">stretch</aspectratio>
@@ -81,8 +75,6 @@
 					</control>
 
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
 						<width>95</width>
 						<height>95</height>
 						<aspectratio align="left" aligny="center">stretch</aspectratio>
@@ -91,8 +83,6 @@
 					</control>
 					
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
 						<width>95</width>
 						<height>95</height>
 						<aspectratio align="left" aligny="center">stretch</aspectratio>
@@ -101,8 +91,6 @@
 					</control>
 
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
 						<width>95</width>
 						<height>95</height>
 						<aspectratio align="left" aligny="center">stretch</aspectratio>
@@ -119,7 +107,6 @@
 						<width>260</width>
 						<textcolor>Accent</textcolor>
 						<font>font24UB</font>
-						<align>left</align>
 						<visible>Window.IsActive(1) | Container.Content(artists) | Container.Content(addons) | Container.Content(albums) | Container.Content(musicvideos)</visible>
 						<visible>!stringcompare(ListItem.Label,..)</visible>
 					</control>
@@ -132,7 +119,6 @@
 						<width>260</width>
 						<textcolor>Accent</textcolor>
 						<font>font24UB</font>
-						<align>left</align>
 						<visible>stringcompare(ListItem.Label,..)</visible>
 					</control>
 					
@@ -141,9 +127,8 @@
 						<posx>114</posx>
 						<posy>35</posy>
 						<height>30</height>
-						<width>141</width>
+						<width>260</width>
 						<font>font18UB</font>
-						<align>left</align>
 						<visible>Window.IsActive(1) | Container.Content(albums) | Container.Content(musicvideos)</visible>
 					</control>
 
@@ -152,9 +137,8 @@
 						<posx>114</posx>
 						<posy>60</posy>
 						<height>30</height>
-						<width>186</width>
+						<width>260</width>
 						<font>font18UB</font>
-						<align>left</align>
 						<visible>Window.IsActive(1) | Container.Content(addons)</visible>
 					</control>				
 					
@@ -163,7 +147,7 @@
 						<posx>390</posx>
 						<posy>30</posy>
 						<height>30</height>
-						<width>186</width>
+						<width>260</width>
 						<font>font18L</font>
 						<align>right</align>
 						<visible>Window.IsActive(1) | Container.Content(addons)</visible>
@@ -174,9 +158,8 @@
 						<posx>114</posx>
 						<posy>60</posy>
 						<height>30</height>
-						<width>186</width>
+						<width>260</width>
 						<font>font18L</font>
-						<align>left</align>
 						<visible>Window.IsActive(1) | Container.Content(albums) | Container.Content(musicvideos)</visible>
 					</control>
 					
@@ -185,9 +168,8 @@
 						<posx>114</posx>
 						<posy>60</posy>
 						<height>30</height>
-						<width>186</width>
+						<width>260</width>
 						<font>font18L</font>
-						<align>left</align>
 						<visible>Window.IsActive(1) | Container.Content(artists)</visible>
 					</control>
 					
@@ -196,16 +178,12 @@
 				<focusedlayout width="420" height="115">
 				
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
 						<width>400</width>
 						<height>95</height>
 						<include>Common_Color_Accent</include>
 					</control>
 					
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
 						<width>95</width>
 						<height>95</height>
 						<include>Common_Color_Keyback2</include>
@@ -213,8 +191,6 @@
 					</control>
 					
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
 						<width>95</width>
 						<height>95</height>
 						<aspectratio align="left" aligny="center">stretch</aspectratio>
@@ -223,8 +199,6 @@
 					</control>
 
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
 						<width>95</width>
 						<height>95</height>
 						<aspectratio align="left" aligny="center">stretch</aspectratio>
@@ -233,8 +207,6 @@
 					</control>
 					
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
 						<width>95</width>
 						<height>95</height>
 						<aspectratio align="left" aligny="center">stretch</aspectratio>
@@ -243,8 +215,6 @@
 					</control>
 
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
 						<width>95</width>
 						<height>95</height>
 						<aspectratio align="left" aligny="center">stretch</aspectratio>
@@ -260,7 +230,6 @@
 						<height>30</height>
 						<width>260</width>
 						<font>font24UB</font>
-						<align>left</align>
 						<visible>Window.IsActive(1) | Container.Content(artists) | Container.Content(addons) | Container.Content(albums) | Container.Content(musicvideos)</visible>
 						<visible>!stringcompare(ListItem.Label,..)</visible>
 					</control>
@@ -272,7 +241,6 @@
 						<height>30</height>
 						<width>260</width>
 						<font>font24UB</font>
-						<align>left</align>
 						<visible>stringcompare(ListItem.Label,..)</visible>
 					</control>
 					
@@ -281,9 +249,8 @@
 						<posx>114</posx>
 						<posy>35</posy>
 						<height>30</height>
-						<width>141</width>
+						<width>260</width>
 						<font>font18UB</font>
-						<align>left</align>
 						<visible>Window.IsActive(1) | Container.Content(albums) | Container.Content(musicvideos)</visible>
 					</control>
 
@@ -292,9 +259,8 @@
 						<posx>114</posx>
 						<posy>60</posy>
 						<height>30</height>
-						<width>186</width>
+						<width>260</width>
 						<font>font18UB</font>
-						<align>left</align>
 						<visible>Window.IsActive(1) | Container.Content(addons)</visible>
 					</control>				
 					
@@ -303,7 +269,7 @@
 						<posx>390</posx>
 						<posy>30</posy>
 						<height>30</height>
-						<width>186</width>
+						<width>260</width>
 						<font>font18L</font>
 						<align>right</align>
 						<visible>Window.IsActive(1) | Container.Content(addons)</visible>
@@ -314,9 +280,8 @@
 						<posx>114</posx>
 						<posy>60</posy>
 						<height>30</height>
-						<width>186</width>
+						<width>260</width>
 						<font>font18L</font>
-						<align>left</align>
 						<visible>Window.IsActive(1) | Container.Content(albums) | Container.Content(musicvideos)</visible>
 					</control>
 					
@@ -325,9 +290,8 @@
 						<posx>114</posx>
 						<posy>60</posy>
 						<height>30</height>
-						<width>186</width>
+						<width>260</width>
 						<font>font18L</font>
-						<align>left</align>
 						<visible>Window.IsActive(1) | Container.Content(artists)</visible>
 					</control>
 
@@ -341,7 +305,6 @@
 			<visible>Control.IsVisible(55)</visible>
 		
 			<control type="image">
-				<posx>0</posx>
 				<posy>660</posy>
 				<width>1280</width>
 				<height>90</height>
@@ -349,7 +312,6 @@
 			</control>
 			
 			<control type="image">
-				<posx>0</posx>
 				<posy>660</posy>
 				<width>1280</width>
 				<height>1</height>
@@ -358,7 +320,6 @@
 			
 			<control type="label">
 				<label>[COLOR Accent]$INFO[ListItem.Label][/COLOR] $INFO[ListItem.Year]</label>
-				<posx>0</posx>
 				<posy>660</posy>
 				<height>50</height>
 				<width>1280</width>
@@ -371,9 +332,7 @@
 				<posx>169</posx>
 				<posy>639</posy>
 				<width>1092</width>
-				<height>7</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>colors/color_white.png</texture>
+				<include>Common_Scroll_OutlineH</include>
 				<visible>Control.HasFocus(70)</visible>
 			</control>
 			
@@ -382,8 +341,6 @@
 				<posy>640</posy>
 				<width>1090</width>
 				<height>5</height>
-				<texturesliderbar>general/accent.png</texturesliderbar> 
-				<texturesliderbackground>backings/key-back2.png</texturesliderbackground> 
 				<onup>54</onup>
 				<ondown>9000</ondown>
 				<orientation>horizontal</orientation>

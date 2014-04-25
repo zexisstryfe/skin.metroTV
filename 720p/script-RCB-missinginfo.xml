@@ -1,8 +1,6 @@
 <window id="5600">
 	<defaultcontrol>5201</defaultcontrol>
 	
-	<include>dialogeffect</include>
-	
 	<coordinates>
 		<system>1</system>
 	</coordinates>
@@ -19,8 +17,6 @@
 		<!-- Window -->
 			<control type="image" id="999">
 				<description>background image</description>
-				<posx>0</posx>
-				<posy>0</posy>
 				<width>720</width>
 				<height>620</height>
 				<include>Common_Color_Keyback1</include>
@@ -38,22 +34,15 @@
 			<control type="label">
 				<description>menu</description>
 				<posx>700</posx>
-				<posy>10</posy>
 				<width>700</width>
-				<align>right</align>
-				<height>40</height>
-				<textcolor>Accent</textcolor>
-				<font>font40LB</font>
+				<include>Dialog_Header</include>
 				<label>$ADDON[script.games.rom.collection.browser 56000]</label>
 			</control>
 			
 			<control type="image">
 				<description>background image</description>
-				<posx>0</posx>
-				<posy>60</posy>
 				<width>720</width>
-				<height>4</height>
-				<include>Common_Color_Accent</include>
+				<include>Dialog_Line</include>
 			</control>			
 		
 		<!-- Show/Hide missing info list -->
@@ -73,8 +62,6 @@
 				<focusedlayout height="35" width="680">
 				
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
 						<width>680</width>
 						<height>35</height>
 						<include>Common_Color_Accent</include>
@@ -85,8 +72,6 @@
 						<posx>10</posx>
 						<width>300</width>
 						<height>35</height>
-						<align>left</align>
-						<aligny>center</aligny>
 						<label>$ADDON[script.games.rom.collection.browser 56001]</label>
 						<visible>![Control.HasFocus(5201) | Control.HasFocus(5202)]</visible>
 					</control>
@@ -95,8 +80,6 @@
 						<posx>10</posx>
 						<width>300</width>
 						<height>35</height>
-						<align>left</align>
-						<aligny>center</aligny>
 						<label>$ADDON[script.games.rom.collection.browser 56001]</label>
 						<visible>[Control.HasFocus(5201) | Control.HasFocus(5202)]</visible>
 					</control>
@@ -105,10 +88,8 @@
 						<posx>670</posx>
 						<width>370</width>
 						<height>35</height>
-						<font>font13</font>
 						<textcolor>88FFFFFF</textcolor>
 						<align>right</align>
-						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 						<visible>![Control.HasFocus(5201) | Control.HasFocus(5202)]</visible>
 					</control>
@@ -117,10 +98,7 @@
 						<posx>670</posx>
 						<width>370</width>
 						<height>35</height>
-						<font>font13</font>
-						<textcolor>FFFFFFFF</textcolor>
 						<align>right</align>
-						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 						<visible>[Control.HasFocus(5201) | Control.HasFocus(5202)]</visible>
 					</control>
@@ -135,8 +113,6 @@
 				<posy>55</posy>
 				<width>20</width>
 				<height>35</height>
-				<label>-</label>
-				<font>-</font>
 				<texturefocus>-</texturefocus>
 				<onclick>Control.Move(5200,1)</onclick>
 				<onleft>6000</onleft>
@@ -151,8 +127,6 @@
 				<posy>55</posy>
 				<width>20</width>
 				<height>35</height>
-				<label>-</label>
-				<font>-</font>
 				<texturefocus>-</texturefocus>
 				<onclick>Control.Move(5200,-1)</onclick>
 				<onleft>5201</onleft>
@@ -168,12 +142,9 @@
 				
 				<control type="label">
 					<posx>7</posx>
-					<posy>0</posy>
 					<width>370</width>
 					<height>20</height>
 					<textcolor>Accent</textcolor>
-					<align>left</align>
-					<aligny>center</aligny>
 					<label>[B]$ADDON[script.games.rom.collection.browser 56002][/B]</label>
 				</control>
 				
@@ -182,39 +153,25 @@
 					<posy>30</posy>
 					
 					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
 						<width>370</width>
 						<height>20</height>
-						<align>left</align>
-						<aligny>center</aligny>
 						<label>$ADDON[script.games.rom.collection.browser 56003]:</label>
 					</control>
 					
 					<control type="label" id="5220">
 						<posx>605</posx>
-						<posy>0</posy>
 						<width>300</width>
 						<height>20</height>
 						<align>right</align>
-						<aligny>center</aligny>
 						<textcolor>88FFFFFF</textcolor>
 						<label>$ADDON[script.games.rom.collection.browser 56004]</label>
 					</control>
 					
 					<control type="button" id="5230"> 
 						<description>Add item</description>
-						<posx>15</posx>
 						<posy>25</posy>
-						<width>613</width>
-						<height>30</height>				
-						<font>font13</font>
+						<include>RCB_MissingInfo_GrayButton</include>		
 						<label>- $ADDON[script.games.rom.collection.browser 56005]</label>
-						<textcolor>88FFFFFF</textcolor>
-						<focusedcolor>FFFFFFFF</focusedcolor>
-						<disabledcolor>80FFFFFF</disabledcolor>
-						<align>left</align>
-						<aligny>center</aligny>
 						<onup>5201</onup>
 						<ondown>5240</ondown>
 						<onleft>6000</onleft>
@@ -223,17 +180,9 @@
 					
 					<control type="button" id="5240"> 
 						<description>Remove item</description>
-						<posx>15</posx>
 						<posy>50</posy>
-						<width>613</width>
-						<height>30</height>				
-						<font>font13</font>
+						<include>RCB_MissingInfo_GrayButton</include>			
 						<label>- $ADDON[script.games.rom.collection.browser 56006]</label>
-						<textcolor>88FFFFFF</textcolor>
-						<focusedcolor>FFFFFFFF</focusedcolor>
-						<disabledcolor>80FFFFFF</disabledcolor>
-						<align>left</align>
-						<aligny>center</aligny>
 						<onup>5230</onup>
 						<ondown>5260</ondown>
 						<onleft>6000</onleft>
@@ -247,12 +196,8 @@
 					<posy>120</posy>
 					
 					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
 						<width>370</width>
 						<height>20</height>
-						<align>left</align>
-						<aligny>center</aligny>
 						<label>$ADDON[script.games.rom.collection.browser 56007]:</label>
 					</control>
 					
@@ -262,24 +207,15 @@
 						<width>300</width>
 						<height>20</height>
 						<align>right</align>
-						<aligny>center</aligny>
 						<textcolor>88FFFFFF</textcolor>
 						<label>$ADDON[script.games.rom.collection.browser 56004]</label>
 					</control>
 					
 					<control type="button" id="5260"> 
 						<description>Add item</description>
-						<posx>15</posx>
 						<posy>25</posy>
-						<width>613</width>
-						<height>30</height>				
-						<font>font13</font>
+						<include>RCB_MissingInfo_GrayButton</include>			
 						<label>- $ADDON[script.games.rom.collection.browser 56005]</label>
-						<textcolor>88FFFFFF</textcolor>
-						<focusedcolor>FFFFFFFF</focusedcolor>
-						<disabledcolor>80FFFFFF</disabledcolor>
-						<align>left</align>
-						<aligny>center</aligny>
 						<onup>5240</onup>
 						<ondown>5270</ondown>
 						<onleft>6000</onleft>
@@ -288,17 +224,9 @@
 					
 					<control type="button" id="5270"> 
 						<description>Remove item</description>
-						<posx>15</posx>
 						<posy>50</posy>
-						<width>613</width>
-						<height>30</height>				
-						<font>font13</font>
+						<include>RCB_MissingInfo_GrayButton</include>			
 						<label>- $ADDON[script.games.rom.collection.browser 56006]</label>
-						<textcolor>88FFFFFF</textcolor>
-						<focusedcolor>FFFFFFFF</focusedcolor>
-						<disabledcolor>80FFFFFF</disabledcolor>
-						<align>left</align>
-						<aligny>center</aligny>
 						<onup>5260</onup>
 						<ondown>5290</ondown>
 						<onleft>6000</onleft>
@@ -316,13 +244,9 @@
 				
 				<control type="label">
 					<posx>7</posx>
-					<posy>0</posy>
 					<width>370</width>
 					<height>20</height>
-					<font>font13</font>
 					<textcolor>Accent</textcolor>
-					<align>left</align>
-					<aligny>center</aligny>
 					<label>[B]$ADDON[script.games.rom.collection.browser 56008][/B]</label>
 				</control>
 				
@@ -331,38 +255,25 @@
 					<posy>30</posy>
 					
 					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
 						<width>370</width>
 						<height>20</height>
-						<align>left</align>
-						<aligny>center</aligny>
 						<label>$ADDON[script.games.rom.collection.browser 56003]:</label>
 					</control>
 					
 					<control type="label" id="5280">
 						<posx>605</posx>
-						<posy>0</posy>
 						<width>300</width>
 						<height>20</height>
 						<align>right</align>
-						<aligny>center</aligny>
 						<textcolor>88FFFFFF</textcolor>
 						<label>$ADDON[script.games.rom.collection.browser 56004]</label>
 					</control>
 					
 					<control type="button" id="5290"> 
 						<description>Add item</description>
-						<posx>15</posx>
 						<posy>25</posy>
-						<width>613</width>
-						<height>30</height>				
+						<include>RCB_MissingInfo_GrayButton</include>			
 						<label>- $ADDON[script.games.rom.collection.browser 56005]</label>
-						<textcolor>88FFFFFF</textcolor>
-						<focusedcolor>FFFFFFFF</focusedcolor>
-						<disabledcolor>80FFFFFF</disabledcolor>
-						<align>left</align>
-						<aligny>center</aligny>
 						<onup>5270</onup>
 						<ondown>5300</ondown>
 						<onleft>6000</onleft>
@@ -371,16 +282,9 @@
 					
 					<control type="button" id="5300"> 
 						<description>Remove item</description>
-						<posx>15</posx>
 						<posy>50</posy>
-						<width>613</width>
-						<height>30</height>				
+						<include>RCB_MissingInfo_GrayButton</include>			
 						<label>- $ADDON[script.games.rom.collection.browser 56006]</label>
-						<textcolor>88FFFFFF</textcolor>
-						<focusedcolor>FFFFFFFF</focusedcolor>
-						<disabledcolor>80FFFFFF</disabledcolor>
-						<align>left</align>
-						<aligny>center</aligny>
 						<onup>5290</onup>
 						<ondown>5320</ondown>
 						<onleft>6000</onleft>
@@ -394,38 +298,25 @@
 					<posy>120</posy>
 					
 					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
 						<width>370</width>
 						<height>20</height>
-						<align>left</align>
-						<aligny>center</aligny>
 						<label>$ADDON[script.games.rom.collection.browser 56007]:</label>
 					</control>
 					
 					<control type="label" id="5310">
 						<posx>605</posx>
-						<posy>0</posy>
 						<width>300</width>
 						<height>20</height>
 						<align>right</align>
-						<aligny>center</aligny>
 						<textcolor>88FFFFFF</textcolor>
 						<label>$ADDON[script.games.rom.collection.browser 56004]</label>
 					</control>
 					
 					<control type="button" id="5320"> 
 						<description>Add item</description>
-						<posx>15</posx>
 						<posy>25</posy>
-						<width>613</width>
-						<height>30</height>				
+						<include>RCB_MissingInfo_GrayButton</include>			
 						<label>- $ADDON[script.games.rom.collection.browser 56005]</label>
-						<textcolor>88FFFFFF</textcolor>
-						<focusedcolor>FFFFFFFF</focusedcolor>
-						<disabledcolor>80FFFFFF</disabledcolor>
-						<align>left</align>
-						<aligny>center</aligny>
 						<onup>5300</onup>
 						<ondown>5330</ondown>
 						<onleft>6000</onleft>
@@ -434,16 +325,9 @@
 					
 					<control type="button" id="5330"> 
 						<description>Remove item</description>
-						<posx>15</posx>
 						<posy>50</posy>
-						<width>613</width>
-						<height>30</height>				
+						<include>RCB_MissingInfo_GrayButton</include>			
 						<label>- $ADDON[script.games.rom.collection.browser 56006]</label>
-						<textcolor>88FFFFFF</textcolor>
-						<focusedcolor>FFFFFFFF</focusedcolor>
-						<disabledcolor>80FFFFFF</disabledcolor>
-						<align>left</align>
-						<aligny>center</aligny>
 						<onup>5320</onup>
 						<ondown>6000</ondown>
 						<onleft>6000</onleft>
@@ -459,11 +343,9 @@
 				<description>Save</description>
 				<posx>600</posx>
 				<posy>560</posy>
-				<width>48</width>
-				<height>48</height>
 				<texturefocus>buttons/saveFO.png</texturefocus>
 				<texturenofocus>buttons/saveNF.png</texturenofocus>
-				<textoffsetx>2000</textoffsetx>
+				<include>Dialog_Button</include>
 				<onup>7010</onup>
 				<ondown>5101</ondown>
 				<onleft>7000</onleft>
@@ -474,11 +356,7 @@
 				<description>Cancel</description>
 				<posx>660</posx>
 				<posy>560</posy>
-				<width>48</width>
-				<height>48</height>
-				<texturefocus>buttons/cancelFO.png</texturefocus>
-				<texturenofocus>buttons/cancelNF.png</texturenofocus>
-				<textoffsetx>2000</textoffsetx>
+				<include>Dialog_CancelButton</include>
 				<onup>7010</onup>
 				<ondown>5101</ondown>
 				<onleft>6000</onleft>

@@ -11,7 +11,6 @@
 
 			<control type="image">
 				<description>horizontal bar</description>
-				<posx>0</posx>
 				<posy>500</posy>
 				<width>1280</width>
 				<height>200</height>
@@ -19,7 +18,6 @@
 			</control>	
 			
 			<control type="image">
-				<posx>0</posx>
 				<posy>700</posy>
 				<width>1280</width>
 				<height>1</height>
@@ -28,7 +26,6 @@
 			</control>
 			
 			<control type="image">
-				<posx>0</posx>
 				<posy>500</posy>
 				<width>1280</width>
 				<height>1</height>
@@ -39,7 +36,6 @@
 			<control type="image">
 				<description>vertical bar</description>
 				<posx>820</posx>
-				<posy>0</posy>
 				<width>430</width>
 				<height>720</height>
 				<include>Common_Color_Tile1</include>
@@ -47,7 +43,6 @@
 			
 			<control type="image">
 				<description>line</description>
-				<posx>0</posx>
 				<posy>560</posy>
 				<width>820</width>
 				<height>4</height>
@@ -62,8 +57,6 @@
 				<visible>!IsEmpty(Window(Home).Property(NextAired.Label)) + !stringcompare(ListItem.Label,..) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + !IsEmpty(ListItem.TVShowTitle) + !IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
 				
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
 					<width>820</width>
 					<height>40</height>
 					<include>Common_Color_Accent</include>
@@ -74,28 +67,21 @@
 					<posy>5</posy>
 					<width>30</width>
 					<height>30</height>
-					<texture>home/tv.png</texture>
+					<texture>tiles/tv.png</texture>
 				</control>
 				
 				<control type="label">
 					<posx>60</posx>
-					<posy>0</posy>
 					<width>590</width>
 					<height>40</height>
-					<align>left</align>
-					<aligny>center</aligny>
 					<font>font20UB</font>
-					<scroll>true</scroll>
 					<label>[B]$LOCALIZE[31173][/B]</label>
 				</control>
 				
 				<control type="label">
 					<posx>220</posx>
-					<posy>0</posy>
 					<width>550</width>
 					<height>40</height>
-					<align>left</align>
-					<aligny>center</aligny>
 					<font>font20</font>
 					<scroll>true</scroll>
 					<label>"$INFO[Window(Home).Property(NextAired.NextTitle)]" $LOCALIZE[31177] $INFO[Window(Home).Property(NextAired.NextDate)] - $INFO[Window(Home).Property(NextAired.AirTime)]</label>
@@ -105,7 +91,6 @@
 		
 			<control type="fixedlist" id="52">
 				<posx>840</posx>
-				<posy></posy>
 				<height>800</height>
 				<width>400</width>
 				<onup>52</onup>
@@ -121,7 +106,6 @@
 				<itemlayout width="400" height="80">
 				
 					<control type="image">
-						<posx>0</posx>
 						<posy>5</posy>
 						<width>400</width>
 						<height>1</height>
@@ -129,40 +113,34 @@
 					</control>
 					
 					<control type="label">
-						<posx>0</posx>
 						<posy>-72</posy>
 						<width>392</width>
 						<height>25</height>
 						<aligny>bottom</aligny>
 						<font>font22UB</font>
 						<textcolor>gray</textcolor>
-						<selectedcolor>white</selectedcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<visible>IsEmpty(ListItem.Title)</visible>						
 					</control>
 
 					<control type="label">
-						<posx>0</posx>
 						<posy>-72</posy>
 						<width>392</width>
 						<height>25</height>
 						<aligny>bottom</aligny>
 						<font>font22UB</font>
 						<textcolor>gray</textcolor>
-						<selectedcolor>white</selectedcolor>
 						<label>$INFO[ListItem.Title]</label>
 					</control>
 					
 					<control type="label">
-						<posx>0</posx>
 						<posy>-37</posy>
 						<width>392</width>
 						<height>49</height>
 						<aligny>center</aligny>
 						<font>font20L</font>
 						<textcolor>gray</textcolor>
-						<selectedcolor>white</selectedcolor>
-						<label>$INFO[ListItem.TVShowTitle] | Season $INFO[ListItem.Season] Episode $INFO[ListItem.Episode]</label>
+						<label>$INFO[ListItem.TVShowTitle] | $LOCALIZE[20373] $INFO[ListItem.Season] $LOCALIZE[20359] $INFO[ListItem.Episode]</label>
 						<visible>!IsEmpty(ListItem.Title)</visible>
 					</control>
 
@@ -181,62 +159,50 @@
 				<focusedlayout width="400" height="240">
 
 					<control type="label">
-						<posx>0</posx>
 						<posy>-45</posy>
 						<width>390</width>
 						<height>25</height>
-						<aligny>left</aligny>
 						<font>font26UB</font>
 						<label>[COLOR Accent]$INFO[ListItem.Label][/COLOR]</label>
 						<visible>IsEmpty(ListItem.Title)</visible>
 					</control>
 
 					<control type="label">
-						<posx>0</posx>
 						<posy>-45</posy>
 						<width>390</width>
 						<height>25</height>
-						<aligny>left</aligny>
 						<font>font26UB</font>
 						<label>[COLOR Accent]$INFO[ListItem.Title][/COLOR]</label>
 						<visible>!IsEmpty(ListItem.Title) + !SubString(Container.FolderPath,plugin)</visible>
 					</control>
 
 					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
 						<width>390</width>
 						<height>17</height>
-						<aligny>center</aligny>
 						<font>font24UB</font>
 						<label>$INFO[ListItem.TVShowTitle]</label>						
 						<visible>!IsEmpty(ListItem.Title) + Container.Content(episodes)</visible>
 					</control>
 					
 					<control type="label">
-						<posx>0</posx>
 						<posy>35</posy>
 						<width>390</width>
 						<height>17</height>
-						<aligny>center</aligny>
 						<font>font20L</font>
-						<label>Season $INFO[ListItem.Season] Episode $INFO[ListItem.Episode]</label>						
+						<label>$LOCALIZE[20373] $INFO[ListItem.Season] $LOCALIZE[20359] $INFO[ListItem.Episode]</label>						
 						<visible>!IsEmpty(ListItem.Title) + Container.Content(episodes)</visible>
 					</control>
 
 					<control type="label">
-						<posx>0</posx>
 						<posy>68</posy>
 						<width>392</width>
 						<height>17</height>
-						<aligny>center</aligny>
 						<font>font20L</font>
 						<label>$LOCALIZE[31175] $INFO[ListItem.Premiered]</label>						
 						<visible>!IsEmpty(ListItem.Title) + Container.Content(episodes)</visible>
 					</control>
 
 					<control type="image">
-						<posx>0</posx>
 						<posy>90</posy>
 						<width>150</width>
 						<height>40</height>
@@ -271,7 +237,7 @@
 				<align>right</align>
 				<fadetime>500</fadetime>
 				<aspectratio>scale</aspectratio>
-				<bordertexture border="5">general/accent.png</bordertexture>
+				<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
 				<bordersize>5</bordersize>
 				<texture>$INFO[ListItem.Art(thumb)]</texture>
 				<visible>!IsEmpty(ListItem.Art(thumb))</visible>			
@@ -286,7 +252,7 @@
 				<fadetime>500</fadetime>
 				<aspectratio>stretch</aspectratio>
 				<texture>defaults/DefaultFolderBack.png</texture>
-				<bordertexture border="5">general/accent.png</bordertexture>
+				<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
 				<bordersize>5</bordersize>
 				<visible>stringcompare(ListItem.Label,..)</visible>		
 			</control>
@@ -297,7 +263,6 @@
 				<width>500</width>
 				<height>50</height>
 				<align>right</align>
-				<aligny>Left</aligny>
 				<textcolor>Accent</textcolor>
 				<font>font40L</font>
 				<label>$LOCALIZE[207]</label>
@@ -310,7 +275,6 @@
 				<width>500</width>
 				<height>50</height>
 				<align>right</align>
-				<aligny>Left</aligny>
 				<textcolor>Accent</textcolor>
 				<font>font40L</font>
 				<label>$LOCALIZE[31194]</label>
@@ -380,19 +344,15 @@
 			
 			<control type="image">
 				<description>outline</description>
-				<animation effect="fade" time="200">VisibleChange</animation>
 				<posx>1249</posx>
 				<posy>-1</posy>
-				<width>7</width>
 				<height>722</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>colors/color_white.png</texture>
+				<include>Common_Scroll_OutlineV</include>
 				<visible>Control.HasFocus(60)</visible>
 			</control>
 			
 			<control type="scrollbar" id="60">
 				<posx>1250</posx>
-				<posy>0</posy>
 				<height>720</height>
 				<onleft>52</onleft>
 				<onright>9000</onright>

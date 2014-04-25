@@ -15,7 +15,7 @@
 		
 			<control type="panel" id="54">
 				<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + !Container.Content(Genres)</visible>
-				<posx>555</posx>
+				<posx>500</posx>
 				<posy>170</posy>
 				<width>800</width>
 				<height>500</height>
@@ -36,7 +36,6 @@
 						
 						<control type="image">
 							<posx>1</posx>
-							<posy>0</posy>
 							<width>155</width>
 							<height>230</height>
 							<include>Common_Color_Keyback1</include>
@@ -47,7 +46,6 @@
 						
 						<control type="image">
 							<posx>1</posx>
-							<posy>0</posy>
 							<width>155</width>
 							<height>230</height>
 							<texture background="true" fallback="defaults/DefaultAddonNone.png">$INFO[ListItem.Art(poster)]</texture>
@@ -59,7 +57,6 @@
 						<control type="image">
 							<visible>!Container.Content(Genres) + stringcompare(ListItem.Label,..)</visible>
 							<posx>1</posx>
-							<posy>0</posy>
 							<width>155</width>
 							<height>230</height>
 							<texture>defaults/DefaultFolderBack.png</texture>
@@ -69,7 +66,6 @@
 						
 						<control type="image">
 							<posx>1</posx>
-							<posy>0</posy>
 							<width>155</width>
 							<height>31</height>
 							<texture>general/movieset.png</texture>
@@ -102,7 +98,6 @@
 						
 						<control type="image">
 							<posx>6</posx>
-							<posy>0</posy>
 							<width>155</width>
 							<height>230</height>
 							<include>Common_Color_Accent</include>
@@ -113,12 +108,11 @@
 						
 						<control type="image">
 							<posx>6</posx>
-							<posy>0</posy>
 							<width>155</width>
 							<height>230</height>
 							<texture background="true" fallback="defaults/DefaultAddonNone.png">$INFO[ListItem.Art(poster)]</texture>
-							<bordertexture border="5">general/accent.png</bordertexture>
-							<bordersize>5</bordersize>
+							<bordertexture colordiffuse="Accent">colors/color_white.png</bordertexture>
+							<bordersize>2</bordersize>
 							<fadetime>200</fadetime>
 							<aspectratio>stretch</aspectratio>
 							<visible>!Container.Content(Genres) + !stringcompare(ListItem.Label,..)</visible>
@@ -127,7 +121,6 @@
 						<control type="image">
 							<visible>!Container.Content(Genres) + stringcompare(ListItem.Label,..)</visible>
 							<posx>1</posx>
-							<posy>0</posy>
 							<width>155</width>
 							<height>230</height>
 							<texture>defaults/DefaultFolderBack.png</texture>
@@ -186,14 +179,23 @@
 				
 				<control type="group">
 				
-					<control type="image">
+				<control type="image">
+					<posx>20</posx>
+					<posy>186</posy>
+					<width>520</width>
+					<height>290</height>
+					<fadetime>800</fadetime>
+					<include>Common_Color_Keyback2</include>
+				</control>
+
+				<control type="image">
 						<posx>20</posx>
 						<posy>186</posy>
 						<width>520</width>
 						<height>290</height>
 						<fadetime>800</fadetime>
 						<aspectratio>stretch</aspectratio>
-						<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+						<texture background="true" fallback="splash/splash_movies.png">$INFO[ListItem.Art(fanart)]</texture>
 					</control>
 					
 					<control type="label">
@@ -201,11 +203,7 @@
 						<visible>Container.Content(movies) + IsEmpty(Control.GetLabel(7017)) + !stringcompare(ListItem.Label,..)</visible>
 						<posx>35</posx>
 						<posy>400</posy>
-						<width>500</width>
-						<height>50</height>
-						<align>left</align>
-						<font>font32UB</font>
-						<textcolor>Accent</textcolor>
+						<include>Common_Panel_Title</include>
 						<label>$INFO[ListItem.Label]</label>
 						<shadowcolor>ff000000</shadowcolor>
 					</control>
@@ -215,11 +213,7 @@
 						<visible>Skin.HasSetting(UseTVLogos)</visible>
 						<posx>30</posx>
 						<posy>485</posy>
-						<width>500</width>
-						<height>50</height>
-						<align>left</align>
-						<font>font32UB</font>
-						<textcolor>Accent</textcolor>
+						<include>Common_Panel_Title</include>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					
@@ -227,11 +221,7 @@
 						<visible>stringcompare(ListItem.Label,..)</visible>
 						<posx>30</posx>
 						<posy>485</posy>
-						<width>500</width>
-						<height>50</height>
-						<align>left</align>
-						<font>font32UB</font>
-						<textcolor>Accent</textcolor>
+						<include>Common_Panel_Title</include>
 						<label>$LOCALIZE[31194]</label>
 					</control>
 					
@@ -262,11 +252,8 @@
 						<visible>[Container.Content(tvshows) | Container.Content(seasons)] + IsEmpty(Control.GetLabel(7017))</visible>
 						<posx>30</posx>
 						<posy>430</posy>
-						<width>500</width>
-						<height>50</height>
+						<include>Common_Panel_Title</include>
 						<align>center</align>
-						<font>font32UB</font>
-						<textcolor>Accent</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<shadowcolor>ff000000</shadowcolor>
 					</control>
@@ -276,11 +263,8 @@
 						<visible>!Skin.HasSetting(UseTVLogos)</visible>
 						<posx>30</posx>
 						<posy>430</posy>
-						<width>500</width>
-						<height>50</height>
+						<include>Common_Panel_Title</include>
 						<align>center</align>
-						<font>font32UB</font>
-						<textcolor>Accent</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<shadowcolor>ff000000</shadowcolor>
 					</control>
@@ -292,7 +276,6 @@
 						<height>50</height>
 						<align>center</align>
 						<font>font26L</font>
-						<textcolor>white</textcolor>
 						<label>31508</label>
 						<visible>Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
 					</control>
@@ -302,9 +285,7 @@
 						<posy>436</posy>
 						<width>500</width>
 						<height>50</height>
-						<align>left</align>
 						<font>font26L</font>
-						<textcolor>White</textcolor>
 						<shadowcolor>ff000000</shadowcolor>
 						<label>$INFO[ListItem.Year] / $INFO[ListItem.Duration] $LOCALIZE[12391]</label>
 						<visible>Container.Content(movies) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !IsEmpty(ListItem.Duration) + !SubString(ListItem.Duration,min)</visible>
@@ -315,9 +296,7 @@
 						<posy>436</posy>
 						<width>500</width>
 						<height>50</height>
-						<align>left</align>
 						<font>font26L</font>
-						<textcolor>White</textcolor>
 						<shadowcolor>ff000000</shadowcolor>
 						<label>$INFO[ListItem.Year] / $INFO[ListItem.Duration]</label>
 						<visible>Container.Content(movies) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !IsEmpty(ListItem.Duration) + SubString(ListItem.Duration,min)</visible>
@@ -334,7 +313,6 @@
 						<width>500</width>
 						<height>150</height>
 						<font>font18</font>
-						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Plot]</label>
 						<align>justify</align>
 						<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
@@ -495,8 +473,6 @@
 
 					
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
 						<width>520</width>
 						<height>30</height>
 						<include>Common_Color_Accent</include>
@@ -507,30 +483,23 @@
 						<posy>3</posy>
 						<width>22</width>
 						<height>22</height>
-						<texture>home/tv.png</texture>
+						<texture>tiles/tv.png</texture>
 						<visible>Container.Content(TVShows) | Container.Content(Seasons)</visible>
 					</control>
 					
 					<control type="label">
 						<posx>40</posx>
-						<posy>0</posy>
 						<width>465</width>
 						<height>30</height>
-						<align>left</align>
-						<aligny>center</aligny>
 						<font>font20UB</font>
-						<scroll>true</scroll>
 						<label>[B]$LOCALIZE[31173][/B]</label>
 						<visible>Container.Content(TVShows) | Container.Content(Seasons)</visible>
 					</control>
 					
 					<control type="label">
 						<posx>195</posx>
-						<posy>0</posy>
 						<width>320</width>
 						<height>30</height>
-						<align>left</align>
-						<aligny>center</aligny>
 						<font>font20</font>
 						<scroll>true</scroll>
 						<label>"$INFO[Window(Home).Property(NextAired.NextTitle)]" $LOCALIZE[31177] $INFO[Window(Home).Property(NextAired.NextDate)] - $INFO[Window(Home).Property(NextAired.AirTime)]</label>
@@ -544,9 +513,7 @@
 					<posx>19</posx>
 					<posy>685</posy>
 					<width>1242</width>
-					<height>7</height>
-					<aspectratio>stretch</aspectratio>
-					<texture>colors/color_white.png</texture>
+					<include>Common_Scroll_OutlineH</include>
 					<visible>Control.HasFocus(66)</visible>
 				</control>
 				
@@ -555,8 +522,6 @@
 					<posy>686</posy>
 					<width>1240</width>
 					<height>5</height>
-					<texturesliderbar>general/accent.png</texturesliderbar> 
-					<texturesliderbackground>backings/key-back2.png</texturesliderbackground> 
 					<onup>54</onup>
 					<ondown>9000</ondown>
 					<orientation>horizontal</orientation>

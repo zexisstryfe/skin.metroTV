@@ -1,0 +1,73 @@
+<window>
+	<coordinates>
+		<system>1</system>
+
+	</coordinates>
+	<controls>
+	
+		<include>DialogOverlay</include>
+	
+		<control type="group">
+			<posx>490</posx>
+			<posy>199</posy>
+			
+			<include>Animation_Dialog_Center</include>
+		
+			<control type="image" id="2">
+				<description>background image</description>
+				<width>340</width>
+				<height>132</height>
+				<include>Common_Color_Keyback1</include>
+			</control>
+			
+			<control type="list" id="111">
+				<posx>20</posx>
+				<posy>20</posy>
+				<width>300</width>
+				<height>322</height>
+				<onup>111</onup>
+				<ondown>111</ondown>
+				<onleft>111</onleft>
+				<onright>111</onright>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="46" width="300">
+				
+					<control type="label">
+						<posx>150</posx>
+						<width>300</width>
+						<height>40</height>
+						<font>font20L</font>
+						<selectedcolor>Accent</selectedcolor>
+						<align>center</align>
+						<info>ListItem.Label</info>
+					</control>
+					
+				</itemlayout>
+				
+				<focusedlayout height="46" width="300">
+				
+					<control type="image">
+						<width>300</width>
+						<height>40</height>
+						<include>Common_Color_Accent</include>
+					</control>
+					
+					<control type="label">
+						<posx>150</posx>
+						<width>300</width>
+						<height>40</height>
+						<font>font20L</font>
+						<selectedcolor>Black</selectedcolor>
+						<align>center</align>
+						<info>ListItem.Label</info>
+					</control>
+					
+				</focusedlayout>
+				
+			</control>
+			
+		</control>
+		
+	</controls>
+	
+</window>

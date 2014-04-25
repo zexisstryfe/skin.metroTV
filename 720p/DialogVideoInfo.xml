@@ -1,234 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<window id="2003">
-	<defaultcontrol always="true">9000</defaultcontrol>
+<window id="2003">	
+	<defaultcontrol always="true">9001</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-
-	<controls>
 	
-		<include>DialogOverlay</include>
-		
-		<control type="group">
-			<posx>150</posx>
-			<posy>100</posy>
-			
-			<include>Animation_Dialog_Center</include>
-			
-		<!--Backgrounds-->	
-			<control type="image">
-				<width>930</width>
-				<height>570</height>
-				<include>Common_Color_Keyback1</include>
-			</control>	
-			
-			<control type="image">
-				<description>line</description>
-				<width>930</width>
-				<include>Dialog_Line</include>
-			</control>
-			
-			<control type="image">
-				<width>320</width>
-				<height>570</height>
-				<include>Common_Color_Keyback2</include>
-			</control>
-			
-			<control type="image">
-				<description>Fanart Image</description>
-				<width>320</width>
-				<height>200</height>
-				<texture>$INFO[ListItem.Art(fanart)]</texture>
-				<aspectratio align="center" aligny="top">stretch</aspectratio>
-				<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
-				<bordersize>5</bordersize>
-			</control>	
-			
-			<control type="label" id="20">
-				<description>Title</description>
-				<posx>910</posx>
-				<width>570</width>
-				<include>Dialog_Header</include>
-				<label>[COLOR Accent]$INFO[ListItem.Title][/COLOR]</label>
-			</control>	
-			
-		<!--Details list-->	
-			<control type="grouplist">
-				<posx>340</posx>
-				<posy>70</posy>
-				<width>500</width>
-				<height>196</height>
-				<itemgap>0</itemgap>
-				<scrolltime tween="back" easing="inout">1000</scrolltime>
-				<orientation>vertical</orientation>
-				
-				<control type="group">
-					<height>28</height>
-					<visible>!IsEmpty(ListItem.Genre)</visible>
-					
-					<control type="label">
-						<description>Type Label</description>
-						<include>Common_Infolist_Label</include>
-						<label>$LOCALIZE[515]:</label>
-					</control>
-					
-					<control type="label">
-						<description>Type Value</description>
-						<include>Common_Infolist_Info</include>
-						<label>$INFO[ListItem.Genre]</label>						
-					</control>
-					
-				</control>	
-				
-				<control type="group">
-					<height>28</height>
-					<visible>!IsEmpty(ListItem.Director)</visible>
-					
-					<control type="label">
-						<description>Type Label</description>
-						<include>Common_Infolist_Label</include>
-						<label>$LOCALIZE[20339]:</label>
-					</control>
-					
-					<control type="label">
-						<description>Type Value</description>
-						<include>Common_Infolist_Info</include>
-						<label>$INFO[ListItem.Director]</label>						
-					</control>
-					
-				</control>	
-				
-				<control type="group">
-					<height>28</height>
-					<visible>!IsEmpty(ListItem.Year)</visible>
-					
-					<control type="label">
-						<description>Type Label</description>
-						<include>Common_Infolist_Label</include>
-						<label>$LOCALIZE[345]:</label>
-					</control>
-					
-					<control type="label">
-						<description>Type Value</description>
-						<include>Common_Infolist_Info</include>
-						<label>$INFO[ListItem.Year]</label>						
-					</control>
-					
-				</control>		
-				
-				<control type="group">
-					<height>28</height>
-					<visible>!IsEmpty(ListItem.Duration)</visible>
-					
-					<control type="label">
-						<description>Type Label</description>
-						<include>Common_Infolist_Label</include>
-						<label>$LOCALIZE[2050]:</label>
-					</control>
-					
-					<control type="label">
-						<description>Type Value</description>
-						<include>Common_Infolist_Info</include>
-						<label>$INFO[ListItem.Duration]</label>	
-						<visible>SubString(ListItem.Duration,min)</visible>						
-					</control>
-					
-					<control type="label">
-						<description>Type Value</description>
-						<include>Common_Infolist_Info</include>
-						<label>$INFO[ListItem.Duration] min</label>	
-						<visible>!SubString(ListItem.Duration,min)</visible>						
-					</control>
-					
-				</control>	
-				
-				<control type="group">
-					<height>28</height>
-					<visible>!IsEmpty(ListItem.RatingAndVotes)</visible>
-					
-					<control type="label">
-						<description>Type Label</description>
-						<include>Common_Infolist_Label</include>
-						<label>$LOCALIZE[563]:</label>
-					</control>
-					
-					<control type="label">
-						<description>Type Value</description>
-						<include>Common_Infolist_Info</include>
-						<label>$INFO[ListItem.RatingAndVotes]</label>						
-					</control>
-					
-				</control>		
+	<include>Animation_Common_Window</include>
 
-				<control type="group">
-					<height>28</height>
-					
-					<control type="label">
-						<description>Type Label</description>
-						<include>Common_Infolist_Label</include>
-						<label>$LOCALIZE[567]:</label>
-					</control>
-					
-					<control type="label">
-						<description>Type Value</description>
-						<include>Common_Infolist_Info</include>
-						<label>$INFO[ListItem.Playcount]</label>
-						<visible>!IsEmpty(ListItem.Playcount)</visible>
-					</control>
-					
-					<control type="label">
-						<description>Type Value</description>
-						<include>Common_Infolist_Info</include>
-						<label>231</label>
-						<visible>IsEmpty(ListItem.Playcount)</visible>
-					</control>
-					
-				</control>
-				
-			<!--Media Flags-->
-				<control type="grouplist">
-					<description>Media Codec Flagging Images</description>
-					<width>540</width>
-					<align>center</align>
-					<itemgap>1</itemgap>
-					<orientation>horizontal</orientation>
-					<control type="image">
-						<description>Video rez Image</description>
-						<width>80</width>
-						<height>28</height>
-						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.VideoResolution,flags/video/,.png]</texture>
-					</control>
-					<include>VideoCodecFlaggingConditions</include>
-					<include>AspectCodecFlaggingConditions</include>
-					<include>AudioCodecFlaggingConditions</include>
-					<include>AudioChannelsFlaggingConditions</include>
-				</control>
-				
+	<onload condition="System.HasAddon(script.extendedinfo) + Container.Content(movies)">RunScript(script.extendedinfo,info=Comments,dbid=$INFO[ListItem.DBID],type=movie)</onload>
+	<onload condition="System.HasAddon(script.extendedinfo) + Container.Content(tvshows)">RunScript(script.extendedinfo,info=Comments,dbid=$INFO[ListItem.DBID],type=tvshow)</onload>
+	<onload condition="System.HasAddon(script.extendedinfo) + Container.Content(episodes)">RunScript(script.extendedinfo,info=EpisodeComments,show=$INFO[ListItem.TVshowTitle],type=episode,season=$INFO[ListItem.Season],episode=$INFO[ListItem.Episode])</onload>
+	<onload condition="System.HasAddon(script.extendedinfo) + Container.Content(movies)">RunScript(script.extendedinfo,info=Similar,dbid=$INFO[ListItem.DBID],type=movie)</onload>
+	<onload condition="System.HasAddon(script.extendedinfo) + Container.Content(tvshows)">RunScript(script.extendedinfo,info=Similar,dbid=$INFO[ListItem.DBID],type=tvshow)</onload>
+	<onload condition="System.HasAddon(script.videoextras)">XBMC.RunScript(script.videoextras,check,"$INFO[ListItem.FilenameAndPath]")</onload>
+	<onload condition="Skin.HasSetting(ShowTVTunesNotification) + System.HasAddon(script.tvtunes)">XBMC.RunScript(script.tvtunes,backend=True)</onload>
+	
+	<controls>
+		<!--Background Area-->	
+		<control type="group">
+		
+			<control type="image">
+				<width>1280</width>
+				<height>720</height>
+				<texture background="true" fallback="special://skin/backgrounds/default.jpg">$INFO[ListItem.Art(fanart)]</texture>
+				<fadetime>600</fadetime>
+				<animation effect="fade" time="600">Visible</animation>
+				<animation effect="fade" time="600">Hidden</animation>
+			</control>
+		
+			<control type="image">		
+				<include>Dimensions_Fullscreen</include>
+				<include>Common_Color_Tile1</include>			
+			</control>
+		
+		</control>
+		
+		<!--Top Area-->		
+		<control type="group">
+	
+			<control type="image">
+				<description>top left bar</description>
+				<width>20</width>
+				<height>100</height>
+				<include>Common_Color_Accent</include>	
+			</control>	
+			
+			<control type="button">
+				<description>back button</description>
+				<posx>40</posx>
+				<posy>25</posy>
+				<width>40</width>
+				<height>40</height>
+				<texturefocus>arrows/back.png</texturefocus>	
+				<texturenofocus>arrows/back.png</texturenofocus>	
+				<onclick>Dialog.Close(2003)</onclick>
+			</control>
+
+			<control type="label">
+				<label>$INFO[ListItem.Title]</label>
+				<posx>90</posx>
+				<posy>20</posy>
+				<height>30</height>
+				<width>1100</width>
+				<font>font72L</font>
+				<shadowcolor>Black</shadowcolor>
+			</control>
+
+			<control type="label">
+				<posx>45</posx>
+				<posy>75</posy>
+				<width>1100</width>
+				<aligny>top</aligny>
+				<label>$INFO[ListItem.Tagline]</label>
+				<font>font24</font>			
+				<shadowcolor>Black</shadowcolor>
+			</control>			
+			
+		</control>	
+		
+		<!--Control Section-->
+		<control type="group">			
+			<posx>-340</posx>
+			<posy>120</posy>
+			<width>360</width>
+			<height>480</height>
+			
+			<animation type="Conditional" condition="Control.HasFocus(6) | Control.HasFocus(8) | Control.HasFocus(9) | Control.HasFocus(10) | Control.HasFocus(11) | Control.HasFocus(15) | Control.HasFocus(100) | Control.HasFocus(105) | [Skin.HasSetting(ShowManageMenu) + [System.GetBool(Input.EnableMouse) | Skin.HasSetting(UseTouchInput)]]">
+				<effect type="slide" start="0,0" end="400,0" time="400" delay="200" tween="cubic" easing="out"/>
+			</animation>
+			
+			<control type="label">							
+				<posx>45</posx>
+				<label>$LOCALIZE[31232]</label>
+				<height>30</height>
+				<width>250</width>
+				<font>font40L</font>
+				<shadowcolor>ff000000</shadowcolor>					
 			</control>
 			
-			<!--BUTTON list-->
-			<control type="grouplist" id="9000">
-				<posx>70</posx>
-				<posy>220</posy>
-				<width>180</width>
-				<height>350</height>
-				<itemgap>5</itemgap>
-				<scrolltime tween="back" easing="inout">1000</scrolltime>
+			<control type="grouplist">
+				<posx>50</posx>
+				<posy>60</posy>
+				<width>400</width>
+				<height>480</height>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				<pagecontrol>9010</pagecontrol>
+				<itemgap>10</itemgap>
 				<orientation>vertical</orientation>
 				
-				<!--PLAY-->
-				<control type="group">
-					<width>180</width>
-					<height>50</height>
-					<onright>50</onright>
-					<onleft>50</onleft>
-					
+				<!--Play Button-->
+				<control type="group">				
+					<width>400</width>
+					<height>60</height>
+
 					<control type="button" id="8">
 						<include>Common_Control_Button</include>
-						<onup>5</onup>
+						<onup>100</onup>
 						<ondown>9</ondown>
-						<onright>50</onright>
-						<onleft>50</onleft>
+						<onright>9001</onright>
 					</control>
 					
 					<control type="image">
@@ -236,30 +124,24 @@
 						<texture>icons/play.png</texture>
 					</control>
 					
-					<control type="image">
-						<visible>!Control.IsEnabled(8)</visible>
-						<include>Common_Control_Button</include>
-						<texture>backings/overlay.png</texture>
-					</control>
-					
 					<control type="label">
-						<include>Common_Control_Label</include>
+						<include>Common_Control_Label2</include>
 						<label>208</label>
 					</control>
 					
-				</control>	
-				
-				<!--RESUME-->
-				<control type="group">
-					<width>180</width>
-					<height>50</height>
+				</control>
+
+				<!--Resume Button-->
+				<control type="group">			
+					<width>400</width>
+					<height>60</height>
+					<visible>Control.IsEnabled(9)</visible>
 					
 					<control type="button" id="9">
 						<include>Common_Control_Button</include>
 						<onup>8</onup>
 						<ondown>11</ondown>
-						<onright>50</onright>
-						<onleft>50</onleft>
+						<onright>9001</onright>
 					</control>
 					
 					<control type="image">
@@ -267,44 +149,25 @@
 						<texture>icons/resume.png</texture>
 					</control>
 					
-					<control type="image">
-						<visible>!Control.IsEnabled(9)</visible>
-						<include>Common_Control_Button</include>
-						<texture>backings/overlay.png</texture>
-					</control>
-					
-					<control type="image">
-						<visible>!Control.IsEnabled(9)</visible>
-						<include>Common_Control_Button</include>
-						<texture>backings/overlay.png</texture>
-					</control>
-					
-					<control type="label">
-						<visible>!Control.IsEnabled(9)</visible>
-						<include>Common_Control_Label</include>
-						<label>13404</label>
-						<textcolor>Keyback1</textcolor>
-					</control>
-					
 					<control type="label">
 						<visible>Control.IsEnabled(9)</visible>
-						<include>Common_Control_Label</include>
+						<include>Common_Control_Label2</include>
 						<label>13404</label>
 					</control>
 					
-				</control>	
+				</control>
 				
-				<!--TRAILER-->
-				<control type="group">
-					<width>180</width>
-					<height>50</height>
+				<!--Trailer Button-->
+				<control type="group">				
+					<width>400</width>
+					<height>60</height>
+					<visible>Control.IsEnabled(11)</visible>
 					
 					<control type="button" id="11">
 						<include>Common_Control_Button</include>
 						<onup>9</onup>
-						<ondown>6</ondown>
-						<onright>50</onright>
-						<onleft>50</onleft>
+						<ondown>105</ondown>
+						<onright>9001</onright>
 						<enable>!IsEmpty(ListItem.Trailer)</enable>
 					</control>
 					
@@ -313,44 +176,58 @@
 						<texture>icons/trailer.png</texture>
 					</control>
 					
-					<control type="image">
-						<visible>!Control.IsEnabled(11)</visible>
-						<include>Common_Control_Button</include>
-						<texture>backings/overlay.png</texture>
-					</control>
-					
-					<control type="image">
-						<visible>!Control.IsEnabled(11)</visible>
-						<include>Common_Control_Button</include>
-						<texture>backings/overlay.png</texture>
-					</control>
-					
-					<control type="label">
-						<visible>!Control.IsEnabled(11)</visible>
-						<include>Common_Control_Label</include>
-						<label>20410</label>
-						<textcolor>Keyback1</textcolor>
-					</control>
-					
 					<control type="label">
 						<visible>Control.IsEnabled(11)</visible>
-						<include>Common_Control_Label</include>
+						<include>Common_Control_Label2</include>
 						<label>20410</label>
 					</control>
 					
-				</control>	
+				</control>
+
+				<!--Extras Button-->
+				<control type="group">				
+					<width>400</width>
+					<height>60</height>					
+					<visible>Control.IsEnabled(105)</visible>
+
+					<control type="button" id="105">
+						<include>Common_Control_Button</include>
+						<onup>11</onup>
+						<ondown>6</ondown>
+						<onright>9001</onright>
+						<onclick>XBMC.RunScript(script.videoextras,display,"$INFO[ListItem.FilenameAndPath]")</onclick>
+						<enable>System.HasAddon(script.videoextras) + [Container.Content(movies) | Container.Content(episodes) | Container.Content(TVShows)] + IsEmpty(Window(movieinformation).Property("HideVideoExtrasButton"))</enable>
+					</control>
+					
+					<control type="image">
+						<include>Common_Control_Button</include>
+						<texture>icons/extras.png</texture>
+					</control>
+					
+					<control type="label">
+						<include>Common_Control_Label2</include>
+						<label>$LOCALIZE[31233]</label>
+					</control>
+					
+				</control>
+
+				<control type="image">					
+					<width>48</width>
+					<height>2</height>
+					<texture>colors/color_white.png</texture>
+				</control>
 				
-				<!--REFRESH-->
-				<control type="group">
-					<width>180</width>
-					<height>50</height>
+				<!--Refresh Button-->
+				<control type="group">			
+					<width>400</width>
+					<height>60</height>
+					<visible>Control.IsEnabled(6)</visible>
 					
 					<control type="button" id="6">
 						<include>Common_Control_Button</include>
-						<onup>11</onup>
-						<ondown>10</ondown>
-						<onright>50</onright>
-						<onleft>50</onleft>
+						<onup>105</onup>
+						<ondown>15</ondown>
+						<onright>9001</onright>
 					</control>
 					
 					<control type="image">
@@ -358,30 +235,51 @@
 						<texture>icons/refresh.png</texture>
 					</control>
 					
-					<control type="image">
-						<visible>!Control.IsEnabled(6)</visible>
-						<include>Common_Control_Button</include>
-						<texture>backings/overlay.png</texture>
-					</control>
-					
 					<control type="label">
-						<include>Common_Control_Label</include>
+						<include>Common_Control_Label2</include>
 						<label>$LOCALIZE[184]</label>
 					</control>
 					
-				</control>	
+				</control>
 				
-				<!--ARTWORK-->
-				<control type="group">
-					<width>180</width>
-					<height>50</height>
+				<!--Edit Info Button-->
+				<control type="group">				
+					<width>400</width>
+					<height>60</height>					
+					<visible>Control.IsEnabled(15)</visible>
 					
+					<control type="button" id="15">						
+						<include>Common_Control_Button</include>
+						<onclick>RunScript(script.libraryeditor,DBID=$INFO[ListItem.DBID])</onclick>
+						<onup>6</onup>
+						<ondown>10</ondown>
+						<onright>9001</onright>	
+						<enable>System.HasAddon(script.libraryeditor)</enable>
+					</control>
+					
+					<control type="image">					
+						<include>Common_Control_Image</include>
+						<texture>icons/edit.png</texture>					
+					</control>
+					
+					<control type="label">					
+						<include>Common_Control_Label2</include>
+						<label>31235</label>						
+					</control>
+					
+				</control>
+				
+				<!--Artwork Button-->
+				<control type="group">				
+					<width>400</width>
+					<height>60</height>
+					<visible>Control.IsEnabled(10)</visible>
+
 					<control type="button" id="10">
 						<include>Common_Control_Button</include>
-						<onup>6</onup>
-						<ondown>5</ondown>
-						<onright>50</onright>
-						<onleft>50</onleft>
+						<onup>15</onup>
+						<ondown>100</ondown>
+						<onright>9001</onright>
 					</control>
 					
 					<control type="image">
@@ -389,205 +287,1370 @@
 						<texture>icons/art.png</texture>
 					</control>
 					
-					<control type="image">
-						<visible>!Control.IsEnabled(10)</visible>
-						<include>Common_Control_Button</include>
-						<texture>backings/overlay.png</texture>
-					</control>
-					
 					<control type="label">
-						<include>Common_Control_Label</include>
+						<include>Common_Control_Label2</include>
 						<label>$LOCALIZE[13511]</label>
-					</control>
-					
-				</control>	
-				
-				<!--CAST-->
-				<control type="group">
-					<width>180</width>
-					<height>50</height>
-					
-					<control type="button" id="5">
-						<include>Common_Control_Button</include>
-						<onup>10</onup>
-						<ondown>8</ondown>
-						<onright>50</onright>
-						<onleft>50</onleft>
-					</control>
-					
-					<control type="image">
-						<include>Common_Control_Button</include>
-						<texture>icons/cast.png</texture>
-						<visible>!Control.IsVisible(50)</visible>
-					</control>
-					
-					<control type="image">
-						<include>Common_Control_Button</include>
-						<texture>icons/plot.png</texture>
-						<visible>Control.IsVisible(50)</visible>
-					</control>
-					
-					<control type="label">
-						<visible>!Control.IsVisible(50)</visible>
-						<include>Common_Control_Label</include>
-						<label>$LOCALIZE[206]</label>
-					</control>
-					
-					<control type="image">
-						<visible>!Control.IsEnabled(5)</visible>
-						<include>Common_Control_Button</include>
-						<texture>backings/overlay.png</texture>
-					</control>
-					
-					<control type="label">
-						<visible>Control.IsVisible(50)</visible>
-						<include>Common_Control_Label</include>
-						<label>$LOCALIZE[207]</label>
 					</control>
 					
 				</control>
 
-			</control>
+				<!--Get Theme Button-->
+				<control type="group">				
+					<width>400</width>
+					<height>60</height>					
+					<visible>Control.IsEnabled(100)</visible>
 
-			<control type="label">
-				<posx>340</posx>
-				<posy>266</posy>			
-				<label>$LOCALIZE[207]:</label>
-				<include>Common_Infolist_Label</include>
-				<visible>!Control.IsVisible(50)</visible> 
-			</control>	
-			
-			<control type="label">
-				<posx>340</posx>
-				<posy>266</posy>			
-				<label>$LOCALIZE[206]:</label>
-				<include>Common_Infolist_Label</include>
-				<visible>Control.IsVisible(50)</visible> 
-			</control>	
-
-			<control type="image">
-				<description>outline</description>
-				<posx>839</posx>
-				<posy>274</posy>
-				<height>277</height>
-				<include>Common_Scroll_OutlineV</include>
-				<visible>Control.HasFocus(79)</visible>
-			</control>
-			
-			<control type="scrollbar" id="79">
-				<posx>840</posx>
-				<posy>275</posy>
-				<height>275</height>
-				<onleft>50</onleft>
-				<onright>9000</onright>
-				<width>5</width>
-				<visible>Control.IsVisible(50)</visible> 
-			</control>			
-			
-			<!--CAST list-->
-			<control type="list" id="50">
-				<description>Cast</description>
-				<posx>410</posx>
-				<posy>270</posy>
-				<width>580</width>
-				<height>280</height>
-				<onup>50</onup>
-				<ondown>50</ondown>
-				<onleft>9000</onleft>
-				<onright>79</onright>
-				<orientation>vertical</orientation>
-				<pagecontrol>79</pagecontrol>
-				<scrolltime>200</scrolltime>
-				
-				<itemlayout height="85">
-				
-					<control type="image">
-						<posx>5</posx>
-						<posy>5</posy>
-						<width>420</width>
-						<height>80</height>
-						<include>Common_Color_Keyback2</include>
+					<control type="button" id="100">
+						<include>Common_Control_Button</include>
+						<onup>10</onup>
+						<ondown>8</ondown>
+						<onright>9001</onright>
+						<onclick>XBMC.RunScript(script.tvtunes,mode=solo)</onclick>
+						<enable>System.HasAddon(script.tvtunes) + Container.Content(tvshows)</enable>
 					</control>
 					
 					<control type="image">
-						<posx>5</posx>
-						<posy>5</posy>
-						<width>80</width>
-						<height>80</height>
-						<texture border="2" colordiffuse="Keyback1">colors/color_white.png</texture>
+						<include>Common_Control_Button</include>
+						<texture>icons/note.png</texture>
 					</control>
-				
-					<control type="image">
-						<description>Actor Image</description>
-						<posx>5</posx>
-						<posy>5</posy>
-						<width>80</width>
-						<height>80</height>
-						<texture>$INFO[ListItem.Icon]</texture>
-						<aspectratio align="center" aligny="center">scale</aspectratio>
-					</control>		
-
+					
 					<control type="label">
-						<posx>110</posx>
-						<height>85</height>
+						<include>Common_Control_Label2</include>
+						<label>$LOCALIZE[31234]</label>
+					</control>
+					
+				</control>
+				
+			</control>
+
+		</control>
+		
+		<!--Content Area-->
+		<control type="group">
+			<posy>120</posy>
+			<width>1280</width>
+			<height>560</height>
+			
+			<!--Animation-->
+			<include>Animation_Common_Content</include>
+			
+			<animation type="Conditional" condition="Control.HasFocus(6) | Control.HasFocus(8) | Control.HasFocus(9) | Control.HasFocus(10) | Control.HasFocus(11) | Control.HasFocus(15) | Control.HasFocus(100) | Control.HasFocus(105) | [Skin.HasSetting(ShowManageMenu) + [System.GetBool(Input.EnableMouse) | Skin.HasSetting(UseTouchInput)]]">
+				<effect type="slide" start="0,0" end="400,0" time="400" delay="200" tween="cubic" easing="out"/>
+			</animation>
+			
+			<control type="grouplist">
+				<posx>60</posx>
+				<width>1220</width>
+				<height>600</height>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				<pagecontrol>9010</pagecontrol>
+				<itemgap>60</itemgap>
+				<orientation>horizontal</orientation>
+			
+				<!--Poster Section-->
+				<control type="group">				
+					<width>765</width>
+					<height>560</height>
+										
+					<control type="button" id="9001">	
+						<posy>60</posy>
 						<width>300</width>
-						<aligny>center</aligny>
-						<info>ListItem.Label</info>
+						<height>510</height>
+						<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
+						<texturenofocus colordiffuse="Keyback1">colors/color_white.png</texturenofocus>
+						<onleft>8</onleft>
+						<onright>50</onright>						
+					</control>
+					
+					<control type="image">							
+						<posy>60</posy>
+						<width>300</width>
+						<height>450</height>
+						<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+						<visible>Container.Content(episodes)</visible>
 					</control>
 
-				</itemlayout>
-				
-				<focusedlayout height="85">
-
-					<control type="image">
-						<posx>5</posx>
-						<posy>5</posy>
-						<width>420</width>
-						<height>80</height>
-						<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(50)">Conditional</animation>
-						<include>Common_Color_Accent</include>
+					<control type="image">							
+						<posy>60</posy>
+						<width>300</width>
+						<height>450</height>
+						<texture background="true">$INFO[ListItem.Art(poster)]</texture>
+						<visible>!Container.Content(episodes)</visible>
 					</control>
 					
 					<control type="image">
-						<posx>5</posx>
-						<posy>5</posy>
-						<width>80</width>
-						<height>80</height>
-						<texture border="2" colordiffuse="Keyback1">colors/color_white.png</texture>
+						<posx>10</posx>
+						<posy>520</posy>
+						<width>120</width>
+						<height>18</height>
+						<texture>flags/ratings/$INFO[ListItem.StarRating]</texture>
+						<align>left</align>
+						<aspectratio>keep</aspectratio>
+					</control>
+					
+					<control type="label">	
+						<posx>20</posx>
+						<posy>540</posy>					
+						<width>260</width>
+						<height>20</height>
+						<label>[B]$INFO[ListItem.RatingandVotes][/B]</label>
+						<font>font16</font>
+						<aligny>top</aligny>							
+					</control>
+					
+					<control type="label">	
+						<posx>320</posx>					
+						<label>$LOCALIZE[31001]</label>
+						<height>30</height>
+						<width>250</width>
+						<font>font40L</font>
+						<shadowcolor>ff000000</shadowcolor>					
+					</control>
+					
+					<control type="grouplist">
+						<posx>320</posx>
+						<posy>53</posy>
+						<width>500</width>
+						<height>196</height>
+						<itemgap>0</itemgap>
+						<scrolltime tween="back" easing="inout">1000</scrolltime>
+						<orientation>vertical</orientation>
+						
+						<control type="group">
+							<height>25</height>
+							<visible>!IsEmpty(ListItem.Genre)</visible>
+							
+							<control type="label">
+								<description>Type Label</description>
+								<include>Common_Infolist_Label</include>
+								<label>$LOCALIZE[515]:</label>
+							</control>
+							
+							<control type="label">
+								<description>Type Value</description>
+								<include>Common_Infolist_Info</include>
+								<label>$INFO[ListItem.Genre]</label>						
+							</control>
+							
+						</control>	
+						
+						<control type="group">
+							<height>25</height>
+							<visible>!IsEmpty(ListItem.Director)</visible>
+							
+							<control type="label">
+								<description>Type Label</description>
+								<include>Common_Infolist_Label</include>
+								<label>$LOCALIZE[20339]:</label>
+							</control>
+							
+							<control type="label">
+								<description>Type Value</description>
+								<include>Common_Infolist_Info</include>
+								<label>$INFO[ListItem.Director]</label>						
+							</control>
+							
+						</control>	
+						
+						<control type="group">
+							<height>25</height>
+							<visible>!IsEmpty(ListItem.Year)</visible>
+							
+							<control type="label">
+								<description>Type Label</description>
+								<include>Common_Infolist_Label</include>
+								<label>$LOCALIZE[345]:</label>
+							</control>
+							
+							<control type="label">
+								<description>Type Value</description>
+								<include>Common_Infolist_Info</include>
+								<label>$INFO[ListItem.Year]</label>						
+							</control>
+							
+						</control>		
+						
+						<control type="group">
+							<height>25</height>
+							<visible>!IsEmpty(ListItem.Duration)</visible>
+							
+							<control type="label">
+								<description>Type Label</description>
+								<include>Common_Infolist_Label</include>
+								<label>$LOCALIZE[2050]:</label>
+							</control>
+							
+							<control type="label">
+								<description>Type Value</description>
+								<include>Common_Infolist_Info</include>
+								<label>$INFO[ListItem.Duration]</label>	
+								<visible>SubString(ListItem.Duration,min)</visible>						
+							</control>
+							
+							<control type="label">
+								<description>Type Value</description>
+								<include>Common_Infolist_Info</include>
+								<label>$INFO[ListItem.Duration] min</label>	
+								<visible>!SubString(ListItem.Duration,min)</visible>						
+							</control>
+							
+						</control>	
+						
+						<control type="image">
+							<height>10</height>							
+						</control>
+						
+					<!--Media Flags-->
+						<control type="grouplist">
+							<description>Media Codec Flagging Images</description>
+							<width>500</width>
+							<align>left</align>
+							<itemgap>10</itemgap>
+							<orientation>horizontal</orientation>
+							<include>VideoResolutionFlaggingConditions</include>
+							<include>VideoCodecFlaggingConditions</include>
+							<include>AspectCodecFlaggingConditions</include>
+							<include>AudioCodecFlaggingConditions</include>
+							<include>AudioChannelsFlaggingConditions</include>
+						</control>
+						
+					</control>
+					
+					<control type="textbox" id="4">
+						<description>Plot</description>
+						<posx>320</posx>
+						<posy>200</posy>
+						<width>440</width>
+						<height>370</height>
+						<font>font20</font>
+					</control>
+					
+				</control>
+				
+				<!--Actors Section-->
+				<control type="group">				
+					<width>380</width>
+					<height>560</height>					
+					<visible>!StringCompare(Container(50).NumItems,0)</visible>
+					
+					<control type="label">							
+						<label>$LOCALIZE[344]</label>
+						<height>30</height>
+						<width>250</width>
+						<font>font40L</font>
+						<shadowcolor>ff000000</shadowcolor>					
+					</control>
+
+					<control type="list" id="50">
+						<description>Cast</description>
+						<posy>60</posy>
+						<width>370</width>
+						<height>510</height>
+						<onup>50</onup>
+						<ondown>50</ondown>
+						<onleft>9001</onleft>
+						<onright>51</onright>
+						<orientation>vertical</orientation>
+						<pagecontrol>79</pagecontrol>
+						<scrolltime>200</scrolltime>
+						
+						<itemlayout height="120">
+						
+							<control type="image">
+								<posx>5</posx>
+								<width>370</width>
+								<height>100</height>
+								<include>Common_Color_Keyback2</include>
+							</control>
+							
+							<control type="image">
+								<posx>5</posx>
+								<width>100</width>
+								<height>100</height>
+								<texture border="2" colordiffuse="Keyback1">colors/color_white.png</texture>
+							</control>
+						
+							<control type="image">
+								<description>Actor Image</description>
+								<posx>5</posx>
+								<width>100</width>
+								<height>100</height>
+								<texture fallback="defaults/DefaultActor.png">$INFO[ListItem.Icon]</texture>
+								<aspectratio align="center" aligny="center">scale</aspectratio>
+							</control>		
+
+							<control type="textbox">
+								<posy>22</posy>
+								<posx>110</posx>
+								<height>50</height>
+								<width>250</width>
+								<aligny>top</aligny>
+								<align>center</align>
+								<info>ListItem.Label</info>
+								<font>font20UB</font>
+								<autoscroll>false</autoscroll>
+							</control>
+
+						</itemlayout>
+						
+						<focusedlayout height="120">
+						
+							<control type="image">
+								<posx>5</posx>
+								<width>370</width>
+								<height>100</height>
+								<include>Common_Color_Keyback2</include>
+							</control>
+
+							<control type="image">
+								<posx>5</posx>
+								<width>370</width>
+								<height>100</height>
+								<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(50)">Conditional</animation>
+								<include>Common_Color_Accent</include>
+							</control>
+							
+							<control type="image">
+								<posx>5</posx>
+								<width>100</width>
+								<height>100</height>
+								<texture border="2" colordiffuse="Keyback1">colors/color_white.png</texture>
+							</control>
+						
+							<control type="image">
+								<description>Actor Image</description>
+								<posx>5</posx>
+								<width>100</width>
+								<height>100</height>
+								<texture fallback="defaults/DefaultActor.png">$INFO[ListItem.Icon]</texture>
+								<aspectratio align="center" aligny="center">scale</aspectratio>
+							</control>		
+
+							<control type="textbox">i
+								<posy>22</posy>
+								<posx>110</posx>
+								<height>50</height>
+								<width>250</width>
+								<aligny>top</aligny>
+								<align>center</align>
+								<info>ListItem.Label</info>
+								<font>font20UB</font>
+								<autoscroll>false</autoscroll>
+							</control>
+
+						</focusedlayout>
+
+					</control>
+					
+				</control>
+				
+				<!--Similar Section-->
+				<control type="group">			
+					<width>790</width>
+					<height>560</height>					
+					<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+				
+					<control type="label">							
+						<label>$LOCALIZE[31237]</label>
+						<height>30</height>
+						<width>350</width>
+						<font>font40L</font>
+						<shadowcolor>ff000000</shadowcolor>					
+					</control>
+					
+					<control type="panel" id="51">	
+						<posy>60</posy>
+						<width>780</width>
+						<height>520</height>
+						<onleft>50</onleft>
+						<onright>52</onright>
+						<onup>51</onup>
+						<ondown>51</ondown>									
+						<itemlayout width="190" height="260">
+
+							<control type="image">	
+								<width>170</width>
+								<height>240</height>
+								<texture background="true">$INFO[ListItem.Thumb]</texture>
+								<aspectratio scalediffuse="false">stretch</aspectratio>							
+							</control>
+
+						</itemlayout>
+
+						<focusedlayout width="190" height="260">
+
+							<control type="image">						
+								<width>170</width>
+								<height>240</height>
+								<texture background="true">$INFO[ListItem.Thumb]</texture>
+								<aspectratio scalediffuse="false">stretch</aspectratio>	
+								<bordertexture colordiffuse="Accent">colors/color_white.png</bordertexture>
+								<bordersize>2</bordersize>	
+								<animation type="Focus" reversible="false">
+									<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />
+								</animation>							
+							</control>
+
+						</focusedlayout>
+						
+						<content>
+						
+							<item id="1">
+								<label>$INFO[Window(Home).Property(SimilarTrakt.1.Title)]</label>
+								<thumb>$INFO[Window(Home).Property(SimilarTrakt.1.Art(poster))]</thumb>
+								<property name="Plot">$INFO[Window(Home).Property(SimilarTrakt.1.Plot)]</property>
+								<property name="Genre">$INFO[Window(Home).Property(SimilarTrakt.1.Genre)]</property>
+								<property name="MPAA">$INFO[Window(Home).Property(SimilarTrakt.1.MPAA)]</property>
+								<property name="Year">$INFO[Window(Home).Property(SimilarTrakt.1.Year)]</property>								
+								<include>Common_TraktTV_ClearProperties</include>
+								<onclick>SetProperty(Title,$INFO[Window(Home).Property(SimilarTrakt.1.Title)],58)</onclick>
+								<onclick>SetProperty(MPAA,$INFO[Window(Home).Property(SimilarTrakt.1.MPAA)],58)</onclick>
+								<onclick>SetProperty(Plot,$ESCINFO[Window(Home).Property(SimilarTrakt.1.Plot)],58)</onclick>
+								<onclick condition="Container.Content(movies)">SetProperty(Tagline,$INFO[Window(Home).Property(SimilarTrakt.1.Tagline)],58)</onclick>
+								<onclick condition="Container.Content(tvshows)">SetProperty(Tagline,$INFO[Window(Home).Property(SimilarTrakt.1.Studio)],58)</onclick>
+								<onclick>SetProperty(Year,$INFO[Window(Home).Property(SimilarTrakt.1.Year)],58)</onclick>
+								<onclick>SetProperty(Genre,$INFO[Window(Home).Property(SimilarTrakt.1.Genre)],58)</onclick>
+								<onclick>SetProperty(Runtime,$INFO[Window(Home).Property(SimilarTrakt.1.Runtime)],58)</onclick>
+								<onclick>SetProperty(Rating,$INFO[Window(Home).Property(SimilarTrakt.1.Rating)],58)</onclick>
+								<onclick>SetProperty(Poster,$INFO[Window(Home).Property(SimilarTrakt.1.Art(poster))],58)</onclick>
+								<onclick>SetProperty(Fanart,$INFO[Window(Home).Property(SimilarTrakt.1.Art(fanart))],58)</onclick>
+								<onclick condition="Container.Content(tvshows)">SetProperty(Country,$INFO[Window(Home).Property(SimilarTrakt.1.Country)],58)</onclick>
+								<onclick condition="Container.Content(tvshows)">SetProperty(NextTime,$INFO[Window(Home).Property(SimilarTrakt.1.ShortTime)] $INFO[Window(Home).Property(SimilarTrakt.1.NextDate)],58)</onclick>
+								<onclick>ActivateWindow(58,return)</onclick>
+							</item>
+							
+							<item id="2">
+								<label>$INFO[Window(Home).Property(SimilarTrakt.2.Title)]</label>
+								<thumb>$INFO[Window(Home).Property(SimilarTrakt.2.Art(poster))]</thumb>
+								<property name="Plot">$INFO[Window(Home).Property(SimilarTrakt.2.Plot)]</property>
+								<property name="Genre">$INFO[Window(Home).Property(SimilarTrakt.2.Genre)]</property>
+								<property name="MPAA">$INFO[Window(Home).Property(SimilarTrakt.2.MPAA)]</property>
+								<property name="Year">$INFO[Window(Home).Property(SimilarTrakt.2.Year)]</property>							
+								<include>Common_TraktTV_ClearProperties</include>
+								<onclick>SetProperty(Title,$INFO[Window(Home).Property(SimilarTrakt.2.Title)],58)</onclick>
+								<onclick>SetProperty(MPAA,$INFO[Window(Home).Property(SimilarTrakt.2.MPAA)],58)</onclick>
+								<onclick>SetProperty(Plot,$ESCINFO[Window(Home).Property(SimilarTrakt.2.Plot)],58)</onclick>
+								<onclick condition="Container.Content(movies)">SetProperty(Tagline,$INFO[Window(Home).Property(SimilarTrakt.2.Tagline)],58)</onclick>
+								<onclick condition="Container.Content(tvshows)">SetProperty(Tagline,$INFO[Window(Home).Property(SimilarTrakt.2.Studio)],58)</onclick>
+								<onclick>SetProperty(Year,$INFO[Window(Home).Property(SimilarTrakt.2.Year)],58)</onclick>
+								<onclick>SetProperty(Genre,$INFO[Window(Home).Property(SimilarTrakt.2.Genre)],58)</onclick>
+								<onclick>SetProperty(Runtime,$INFO[Window(Home).Property(SimilarTrakt.2.Runtime)],58)</onclick>
+								<onclick>SetProperty(Rating,$INFO[Window(Home).Property(SimilarTrakt.2.Rating)],58)</onclick>
+								<onclick>SetProperty(Poster,$INFO[Window(Home).Property(SimilarTrakt.2.Art(poster))],58)</onclick>
+								<onclick>SetProperty(Fanart,$INFO[Window(Home).Property(SimilarTrakt.2.Art(fanart))],58)</onclick>
+								<onclick condition="Container.Content(tvshows)">SetProperty(Country,$INFO[Window(Home).Property(SimilarTrakt.2.Country)],58)</onclick>
+								<onclick condition="Container.Content(tvshows)">SetProperty(NextTime,$INFO[Window(Home).Property(SimilarTrakt.2.ShortTime)] $INFO[Window(Home).Property(SimilarTrakt.2.NextDate)],58)</onclick>
+								<onclick>ActivateWindow(58,return)</onclick>
+							</item>
+							
+							<item id="3">
+								<label>$INFO[Window(Home).Property(SimilarTrakt.3.Title)]</label>
+								<thumb>$INFO[Window(Home).Property(SimilarTrakt.3.Art(poster))]</thumb>
+								<property name="Plot">$INFO[Window(Home).Property(SimilarTrakt.3.Plot)]</property>
+								<property name="Genre">$INFO[Window(Home).Property(SimilarTrakt.3.Genre)]</property>
+								<property name="MPAA">$INFO[Window(Home).Property(SimilarTrakt.3.MPAA)]</property>
+								<property name="Year">$INFO[Window(Home).Property(SimilarTrakt.3.Year)]</property>								
+								<include>Common_TraktTV_ClearProperties</include>
+								<onclick>SetProperty(Title,$INFO[Window(Home).Property(SimilarTrakt.3.Title)],58)</onclick>
+								<onclick>SetProperty(MPAA,$INFO[Window(Home).Property(SimilarTrakt.3.MPAA)],58)</onclick>
+								<onclick>SetProperty(Plot,$ESCINFO[Window(Home).Property(SimilarTrakt.3.Plot)],58)</onclick>
+								<onclick condition="Container.Content(movies)">SetProperty(Tagline,$INFO[Window(Home).Property(SimilarTrakt.3.Tagline)],58)</onclick>
+								<onclick condition="Container.Content(tvshows)">SetProperty(Tagline,$INFO[Window(Home).Property(SimilarTrakt.3.Studio)],58)</onclick>
+								<onclick>SetProperty(Year,$INFO[Window(Home).Property(SimilarTrakt.3.Year)],58)</onclick>
+								<onclick>SetProperty(Genre,$INFO[Window(Home).Property(SimilarTrakt.3.Genre)],58)</onclick>
+								<onclick>SetProperty(Runtime,$INFO[Window(Home).Property(SimilarTrakt.3.Runtime)],58)</onclick>
+								<onclick>SetProperty(Rating,$INFO[Window(Home).Property(SimilarTrakt.3.Rating)],58)</onclick>
+								<onclick>SetProperty(Poster,$INFO[Window(Home).Property(SimilarTrakt.3.Art(poster))],58)</onclick>
+								<onclick>SetProperty(Fanart,$INFO[Window(Home).Property(SimilarTrakt.3.Art(fanart))],58)</onclick>
+								<onclick condition="Container.Content(tvshows)">SetProperty(Country,$INFO[Window(Home).Property(SimilarTrakt.3.Country)],58)</onclick>
+								<onclick condition="Container.Content(tvshows)">SetProperty(NextTime,$INFO[Window(Home).Property(SimilarTrakt.3.ShortTime)] $INFO[Window(Home).Property(SimilarTrakt.3.NextDate)],58)</onclick>
+								<onclick>ActivateWindow(58,return)</onclick>
+							</item>
+							
+							<item id="4">
+								<label>$INFO[Window(Home).Property(SimilarTrakt.4.Title)]</label>
+								<thumb>$INFO[Window(Home).Property(SimilarTrakt.4.Art(poster))]</thumb>
+								<property name="Plot">$INFO[Window(Home).Property(SimilarTrakt.4.Plot)]</property>
+								<property name="Genre">$INFO[Window(Home).Property(SimilarTrakt.4.Genre)]</property>
+								<property name="MPAA">$INFO[Window(Home).Property(SimilarTrakt.4.MPAA)]</property>
+								<property name="Year">$INFO[Window(Home).Property(SimilarTrakt.4.Year)]</property>								
+								<include>Common_TraktTV_ClearProperties</include>
+								<onclick>SetProperty(Title,$INFO[Window(Home).Property(SimilarTrakt.4.Title)],58)</onclick>
+								<onclick>SetProperty(MPAA,$INFO[Window(Home).Property(SimilarTrakt.4.MPAA)],58)</onclick>
+								<onclick>SetProperty(Plot,$ESCINFO[Window(Home).Property(SimilarTrakt.4.Plot)],58)</onclick>
+								<onclick condition="Container.Content(movies)">SetProperty(Tagline,$INFO[Window(Home).Property(SimilarTrakt.4.Tagline)],58)</onclick>
+								<onclick condition="Container.Content(tvshows)">SetProperty(Tagline,$INFO[Window(Home).Property(SimilarTrakt.4.Studio)],58)</onclick>
+								<onclick>SetProperty(Year,$INFO[Window(Home).Property(SimilarTrakt.4.Year)],58)</onclick>
+								<onclick>SetProperty(Genre,$INFO[Window(Home).Property(SimilarTrakt.4.Genre)],58)</onclick>
+								<onclick>SetProperty(Runtime,$INFO[Window(Home).Property(SimilarTrakt.4.Runtime)],58)</onclick>
+								<onclick>SetProperty(Rating,$INFO[Window(Home).Property(SimilarTrakt.4.Rating)],58)</onclick>
+								<onclick>SetProperty(Poster,$INFO[Window(Home).Property(SimilarTrakt.4.Art(poster))],58)</onclick>
+								<onclick>SetProperty(Fanart,$INFO[Window(Home).Property(SimilarTrakt.4.Art(fanart))],58)</onclick>
+								<onclick condition="Container.Content(tvshows)">SetProperty(Country,$INFO[Window(Home).Property(SimilarTrakt.4.Country)],58)</onclick>
+								<onclick condition="Container.Content(tvshows)">SetProperty(NextTime,$INFO[Window(Home).Property(SimilarTrakt.4.ShortTime)] $INFO[Window(Home).Property(SimilarTrakt.4.NextDate)],58)</onclick>
+								<onclick>ActivateWindow(58,return)</onclick>
+							</item>
+							
+							<item id="5">
+								<label>$INFO[Window(Home).Property(SimilarTrakt.5.Title)]</label>
+								<thumb>$INFO[Window(Home).Property(SimilarTrakt.5.Art(poster))]</thumb>
+								<property name="Plot">$INFO[Window(Home).Property(SimilarTrakt.5.Plot)]</property>
+								<property name="Genre">$INFO[Window(Home).Property(SimilarTrakt.5.Genre)]</property>
+								<property name="MPAA">$INFO[Window(Home).Property(SimilarTrakt.5.MPAA)]</property>
+								<property name="Year">$INFO[Window(Home).Property(SimilarTrakt.5.Year)]</property>								
+								<include>Common_TraktTV_ClearProperties</include>
+								<onclick>SetProperty(Title,$INFO[Window(Home).Property(SimilarTrakt.5.Title)],58)</onclick>
+								<onclick>SetProperty(MPAA,$INFO[Window(Home).Property(SimilarTrakt.5.MPAA)],58)</onclick>
+								<onclick>SetProperty(Plot,$ESCINFO[Window(Home).Property(SimilarTrakt.5.Plot)],58)</onclick>
+								<onclick condition="Container.Content(movies)">SetProperty(Tagline,$INFO[Window(Home).Property(SimilarTrakt.5.Tagline)],58)</onclick>
+								<onclick condition="Container.Content(tvshows)">SetProperty(Tagline,$INFO[Window(Home).Property(SimilarTrakt.5.Studio)],58)</onclick>
+								<onclick>SetProperty(Year,$INFO[Window(Home).Property(SimilarTrakt.5.Year)],58)</onclick>
+								<onclick>SetProperty(Genre,$INFO[Window(Home).Property(SimilarTrakt.5.Genre)],58)</onclick>
+								<onclick>SetProperty(Runtime,$INFO[Window(Home).Property(SimilarTrakt.5.Runtime)],58)</onclick>
+								<onclick>SetProperty(Rating,$INFO[Window(Home).Property(SimilarTrakt.5.Rating)],58)</onclick>
+								<onclick>SetProperty(Poster,$INFO[Window(Home).Property(SimilarTrakt.5.Art(poster))],58)</onclick>
+								<onclick>SetProperty(Fanart,$INFO[Window(Home).Property(SimilarTrakt.5.Art(fanart))],58)</onclick>
+								<onclick condition="Container.Content(tvshows)">SetProperty(Country,$INFO[Window(Home).Property(SimilarTrakt.5.Country)],58)</onclick>
+								<onclick condition="Container.Content(tvshows)">SetProperty(NextTime,$INFO[Window(Home).Property(SimilarTrakt.5.ShortTime)] $INFO[Window(Home).Property(SimilarTrakt.5.NextDate)],58)</onclick>
+								<onclick>ActivateWindow(58,return)</onclick>
+							</item>
+							
+							<item id="6">
+								<label>$INFO[Window(Home).Property(SimilarTrakt.6.Title)]</label>
+								<thumb>$INFO[Window(Home).Property(SimilarTrakt.6.Art(poster))]</thumb>
+								<property name="Plot">$INFO[Window(Home).Property(SimilarTrakt.6.Plot)]</property>
+								<property name="Genre">$INFO[Window(Home).Property(SimilarTrakt.6.Genre)]</property>
+								<property name="MPAA">$INFO[Window(Home).Property(SimilarTrakt.6.MPAA)]</property>
+								<property name="Year">$INFO[Window(Home).Property(SimilarTrakt.6.Year)]</property>								
+								<include>Common_TraktTV_ClearProperties</include>
+								<onclick>SetProperty(Title,$INFO[Window(Home).Property(SimilarTrakt.6.Title)],58)</onclick>
+								<onclick>SetProperty(MPAA,$INFO[Window(Home).Property(SimilarTrakt.6.MPAA)],58)</onclick>
+								<onclick>SetProperty(Plot,$ESCINFO[Window(Home).Property(SimilarTrakt.6.Plot)],58)</onclick>
+								<onclick condition="Container.Content(movies)">SetProperty(Tagline,$INFO[Window(Home).Property(SimilarTrakt.6.Tagline)],58)</onclick>
+								<onclick condition="Container.Content(tvshows)">SetProperty(Tagline,$INFO[Window(Home).Property(SimilarTrakt.6.Studio)],58)</onclick>
+								<onclick>SetProperty(Year,$INFO[Window(Home).Property(SimilarTrakt.6.Year)],58)</onclick>
+								<onclick>SetProperty(Genre,$INFO[Window(Home).Property(SimilarTrakt.6.Genre)],58)</onclick>
+								<onclick>SetProperty(Runtime,$INFO[Window(Home).Property(SimilarTrakt.6.Runtime)],58)</onclick>
+								<onclick>SetProperty(Rating,$INFO[Window(Home).Property(SimilarTrakt.6.Rating)],58)</onclick>
+								<onclick>SetProperty(Poster,$INFO[Window(Home).Property(SimilarTrakt.6.Art(poster))],58)</onclick>
+								<onclick>SetProperty(Fanart,$INFO[Window(Home).Property(SimilarTrakt.6.Art(fanart))],58)</onclick>
+								<onclick condition="Container.Content(tvshows)">SetProperty(Country,$INFO[Window(Home).Property(SimilarTrakt.6.Country)],58)</onclick>
+								<onclick condition="Container.Content(tvshows)">SetProperty(NextTime,$INFO[Window(Home).Property(SimilarTrakt.6.ShortTime)] $INFO[Window(Home).Property(SimilarTrakt.6.NextDate)],58)</onclick>
+								<onclick>ActivateWindow(58,return)</onclick>
+							</item>
+							
+							<item id="7">
+								<label>$INFO[Window(Home).Property(SimilarTrakt.7.Title)]</label>
+								<thumb>$INFO[Window(Home).Property(SimilarTrakt.7.Art(poster))]</thumb>
+								<property name="Plot">$INFO[Window(Home).Property(SimilarTrakt.7.Plot)]</property>
+								<property name="Genre">$INFO[Window(Home).Property(SimilarTrakt.7.Genre)]</property>
+								<property name="MPAA">$INFO[Window(Home).Property(SimilarTrakt.7.MPAA)]</property>
+								<property name="Year">$INFO[Window(Home).Property(SimilarTrakt.7.Year)]</property>								
+								<include>Common_TraktTV_ClearProperties</include>
+								<onclick>SetProperty(Title,$INFO[Window(Home).Property(SimilarTrakt.7.Title)],58)</onclick>
+								<onclick>SetProperty(MPAA,$INFO[Window(Home).Property(SimilarTrakt.7.MPAA)],58)</onclick>
+								<onclick>SetProperty(Plot,$ESCINFO[Window(Home).Property(SimilarTrakt.7.Plot)],58)</onclick>
+								<onclick condition="Container.Content(movies)">SetProperty(Tagline,$INFO[Window(Home).Property(SimilarTrakt.7.Tagline)],58)</onclick>
+								<onclick condition="Container.Content(tvshows)">SetProperty(Tagline,$INFO[Window(Home).Property(SimilarTrakt.7.Studio)],58)</onclick>
+								<onclick>SetProperty(Year,$INFO[Window(Home).Property(SimilarTrakt.7.Year)],58)</onclick>
+								<onclick>SetProperty(Genre,$INFO[Window(Home).Property(SimilarTrakt.7.Genre)],58)</onclick>
+								<onclick>SetProperty(Runtime,$INFO[Window(Home).Property(SimilarTrakt.7.Runtime)],58)</onclick>
+								<onclick>SetProperty(Rating,$INFO[Window(Home).Property(SimilarTrakt.7.Rating)],58)</onclick>
+								<onclick>SetProperty(Poster,$INFO[Window(Home).Property(SimilarTrakt.7.Art(poster))],58)</onclick>
+								<onclick>SetProperty(Fanart,$INFO[Window(Home).Property(SimilarTrakt.7.Art(fanart))],58)</onclick>
+								<onclick condition="Container.Content(tvshows)">SetProperty(Country,$INFO[Window(Home).Property(SimilarTrakt.7.Country)],58)</onclick>
+								<onclick condition="Container.Content(tvshows)">SetProperty(NextTime,$INFO[Window(Home).Property(SimilarTrakt.7.ShortTime)] $INFO[Window(Home).Property(SimilarTrakt.7.NextDate)],58)</onclick>
+								<onclick>ActivateWindow(58,return)</onclick>
+							</item>
+							
+							<item id="8">
+								<label>$INFO[Window(Home).Property(SimilarTrakt.8.Title)]</label>
+								<thumb>$INFO[Window(Home).Property(SimilarTrakt.8.Art(poster))]</thumb>
+								<property name="Plot">$INFO[Window(Home).Property(SimilarTrakt.8.Plot)]</property>
+								<property name="Genre">$INFO[Window(Home).Property(SimilarTrakt.8.Genre)]</property>
+								<property name="MPAA">$INFO[Window(Home).Property(SimilarTrakt.8.MPAA)]</property>
+								<property name="Year">$INFO[Window(Home).Property(SimilarTrakt.8.Year)]</property>								
+								<include>Common_TraktTV_ClearProperties</include>
+								<onclick>SetProperty(Title,$INFO[Window(Home).Property(SimilarTrakt.8.Title)],58)</onclick>
+								<onclick>SetProperty(MPAA,$INFO[Window(Home).Property(SimilarTrakt.8.MPAA)],58)</onclick>
+								<onclick>SetProperty(Plot,$ESCINFO[Window(Home).Property(SimilarTrakt.8.Plot)],58)</onclick>
+								<onclick condition="Container.Content(movies)">SetProperty(Tagline,$INFO[Window(Home).Property(SimilarTrakt.8.Tagline)],58)</onclick>
+								<onclick condition="Container.Content(tvshows)">SetProperty(Tagline,$INFO[Window(Home).Property(SimilarTrakt.8.Studio)],58)</onclick>
+								<onclick>SetProperty(Year,$INFO[Window(Home).Property(SimilarTrakt.8.Year)],58)</onclick>
+								<onclick>SetProperty(Genre,$INFO[Window(Home).Property(SimilarTrakt.8.Genre)],58)</onclick>
+								<onclick>SetProperty(Runtime,$INFO[Window(Home).Property(SimilarTrakt.8.Runtime)],58)</onclick>
+								<onclick>SetProperty(Rating,$INFO[Window(Home).Property(SimilarTrakt.8.Rating)],58)</onclick>
+								<onclick>SetProperty(Poster,$INFO[Window(Home).Property(SimilarTrakt.8.Art(poster))],58)</onclick>
+								<onclick>SetProperty(Fanart,$INFO[Window(Home).Property(SimilarTrakt.8.Art(fanart))],58)</onclick>
+								<onclick condition="Container.Content(tvshows)">SetProperty(Country,$INFO[Window(Home).Property(SimilarTrakt.8.Country)],58)</onclick>
+								<onclick condition="Container.Content(tvshows)">SetProperty(NextTime,$INFO[Window(Home).Property(SimilarTrakt.8.ShortTime)] $INFO[Window(Home).Property(SimilarTrakt.8.NextDate)],58)</onclick>
+								<onclick>ActivateWindow(58,return)</onclick>
+							</item>
+
+						</content>		
+						
+					</control>
+
+				</control>
+				
+				<!--Comments Section-->
+				<control type="group">			
+					<width>420</width>
+					<height>560</height>					
+					<visible>[IntegerGreaterThan(Window(Home).Property(CommentsTrakt.Count),0) + [Container.Content(movies) | Container.Content(tvshows)]] | [IntegerGreaterThan(Window(Home).Property(EpisodeCommentsTrakt.Count),0) + Container.Content(episodes)]</visible>
+				
+					<control type="label">							
+						<label>$LOCALIZE[31238]</label>
+						<height>30</height>
+						<width>350</width>
+						<font>font40L</font>
+						<shadowcolor>ff000000</shadowcolor>					
+					</control>
+					
+					<control type="panel" id="52">							
+						<posy>60</posy>
+						<width>380</width>
+						<height>520</height>
+						<onleft>51</onleft>
+						<onright>-</onright>
+						<onup>52</onup>
+						<ondown>52</ondown>
+						<pagecontrol>82</pagecontrol>
+						<viewtype label="535">list</viewtype>
+						<scrolltime tween="cubic" easing="out">600</scrolltime>
+						<preloaditems>2</preloaditems>
+						<orientation>vertical</orientation>						
+						<itemlayout width="380" height="130">
+
+							<control type="group">							
+								<visible>StringCompare(ListItem.Thumb,forumbrowser/forumbrowser_bubble_left.png)</visible>
+
+								<control type="image">								
+									<width>60</width>
+									<height>60</height>
+									<texture background="true">$INFO[ListItem.Property(Avatar)]</texture>
+									<aspectratio>stretch</aspectratio>									
+								</control>
+								
+								<control type="image">							
+									<posx>48</posx>
+									<width>340</width>
+									<height>110</height>
+									<texture background="true" border="20,50,20,20" colordiffuse="Keyback2">$INFO[ListItem.Thumb]</texture>
+									<aspectratio>stretch</aspectratio>					
+								</control>
+							
+								<control type="group">							
+									<posx>76</posx>
+									<posy>16</posy>
+									<width>280</width>
+									<height>80</height>
+									
+									<control type="textbox">									
+										<posy>-10</posy>
+										<width>280</width>
+										<height>24</height>
+										<label>$INFO[ListItem.Label]</label>
+										<font>font18UB</font>
+										<aligny>top</aligny>
+										<autoscroll>false</autoscroll>									
+									</control>
+								
+									<control type="textbox">
+										<posy>16</posy>
+										<width>280</width>
+										<height>70</height>
+										<label>$INFO[ListItem.Property(Comment)]</label>
+										<font>font18</font>
+										<aligny>top</aligny>
+										<wrapmultiline>true</wrapmultiline>
+										<autoscroll>false</autoscroll>									
+									</control>
+									
+								</control>
+								
+							</control>	
+							
+							<control type="group">							
+								<visible>StringCompare(ListItem.Thumb,forumbrowser/forumbrowser_bubble_right.png)</visible>
+							
+								<control type="image">				
+									<posx>320</posx>
+									<width>60</width>
+									<height>60</height>
+									<texture background="true">$INFO[ListItem.Property(Avatar)]</texture>
+									<aspectratio>stretch</aspectratio>									
+								</control>
+								
+								<control type="image">
+									<width>332</width>
+									<height>110</height>
+									<texture background="true" border="20,50,20,20" colordiffuse="Keyback1">$INFO[ListItem.Thumb]</texture>
+									<aspectratio>stretch</aspectratio>								
+								</control>
+							
+								<control type="group">							
+									<posx>16</posx>
+									<posy>16</posy>
+									<width>280</width>
+									<height>80</height>
+									
+									<control type="textbox">
+										<posy>-10</posy>
+										<width>280</width>
+										<height>24</height>
+										<label>$INFO[ListItem.Label]</label>
+										<font>font18UB</font>
+										<aligny>top</aligny>
+										<autoscroll>false</autoscroll>
+										
+									</control>
+								
+									<control type="textbox">									
+										<posy>16</posy>
+										<width>280</width>
+										<height>70</height>
+										<label>$INFO[ListItem.Property(Comment)]</label>
+										<font>font18</font>
+										<aligny>top</aligny>
+										<autoscroll>false</autoscroll>										
+									</control>
+									
+								</control>
+								
+							</control>
+							
+						</itemlayout>
+
+						<focusedlayout width="380" height="260">
+
+							<control type="group">
+							
+								<visible>StringCompare(ListItem.Thumb,forumbrowser/forumbrowser_bubble_left.png)</visible>
+							
+								<control type="image">								
+									<width>60</width>
+									<height>60</height>
+									<texture background="true">$INFO[ListItem.Property(Avatar)]</texture>
+									<aspectratio>stretch</aspectratio>									
+								</control>
+								
+								<control type="image">								
+									<posx>48</posx>
+									<width>340</width>
+									<height>110</height>
+									<texture background="true" border="20,50,20,20" colordiffuse="Accent">$INFO[ListItem.Thumb]</texture>
+									<aspectratio>stretch</aspectratio>								
+								</control>
+							
+								<control type="group">								
+									<posx>76</posx>
+									<posy>16</posy>
+									<width>280</width>
+									<height>80</height>
+									
+									<control type="textbox">								
+										<posy>-10</posy>
+										<width>280</width>
+										<height>24</height>
+										<label>$INFO[ListItem.Label]</label>
+										<font>font18UB</font>
+										<aligny>top</aligny>
+										<autoscroll>false</autoscroll>										
+									</control>
+								
+									<control type="textbox">									
+										<posy>16</posy>
+										<width>280</width>
+										<height>70</height>
+										<label>$INFO[ListItem.Property(Comment)]</label>
+										<font>font18</font>
+										<aligny>top</aligny>
+										<autoscroll>true</autoscroll>										
+									</control>
+									
+								</control>
+								
+							</control>	
+							
+							<control type="group">
+							
+								<visible>StringCompare(ListItem.Thumb,forumbrowser/forumbrowser_bubble_right.png)</visible>
+							
+								<control type="image">								
+									<posx>320</posx>
+									<width>60</width>
+									<height>60</height>
+									<texture background="true">$INFO[ListItem.Property(Avatar)]</texture>
+									<aspectratio>stretch</aspectratio>									
+								</control>
+								
+								<control type="image">
+									<width>332</width>
+									<height>110</height>
+									<texture background="true" border="20,50,20,20" colordiffuse="Accent">$INFO[ListItem.Thumb]</texture>
+									<aspectratio>stretch</aspectratio>									
+								</control>
+							
+								<control type="group">								
+									<posx>16</posx>
+									<posy>16</posy>
+									<width>280</width>
+									<height>80</height>
+									
+									<control type="textbox">									
+										<posy>-10</posy>
+										<width>280</width>
+										<height>24</height>
+										<label>$INFO[ListItem.Label]</label>
+										<font>font18UB</font>
+										<aligny>top</aligny>
+										<autoscroll>false</autoscroll>										
+									</control>
+								
+									<control type="textbox">								
+										<posy>16</posy>
+										<width>280</width>
+										<height>70</height>
+										<label>$INFO[ListItem.Property(Comment)]</label>
+										<font>font18</font>
+										<aligny>top</aligny>
+										<autoscroll>true</autoscroll>										
+									</control>
+									
+								</control>
+								
+							</control>	
+
+						</focusedlayout>
+						
+						<content>
+												
+						<!--Movies/TV Shows-->
+							<item id="1">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(CommentsTrakt.1.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_left.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(CommentsTrakt.1.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(CommentsTrakt.1.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(CommentsTrakt.1.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(CommentsTrakt.1.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(CommentsTrakt.Count),0) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+							</item>
+							
+							<item id="2">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(CommentsTrakt.2.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_right.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(CommentsTrakt.2.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(CommentsTrakt.2.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(CommentsTrakt.2.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(CommentsTrakt.2.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(CommentsTrakt.Count),1) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+							</item>
+							
+							<item id="3">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(CommentsTrakt.3.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_left.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(CommentsTrakt.3.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(CommentsTrakt.3.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(CommentsTrakt.3.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(CommentsTrakt.3.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(CommentsTrakt.Count),2) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+							</item>
+							
+							<item id="4">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(CommentsTrakt.4.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_right.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(CommentsTrakt.4.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(CommentsTrakt.4.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(CommentsTrakt.4.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(CommentsTrakt.4.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(CommentsTrakt.Count),3) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+							</item>
+							
+							<item id="5">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(CommentsTrakt.5.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_left.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(CommentsTrakt.5.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(CommentsTrakt.5.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(CommentsTrakt.5.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(CommentsTrakt.5.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(CommentsTrakt.Count),4) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+							</item>
+							
+							<item id="6">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(CommentsTrakt.6.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_right.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(CommentsTrakt.6.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(CommentsTrakt.6.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(CommentsTrakt.6.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(CommentsTrakt.6.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(CommentsTrakt.Count),5) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+							</item>
+							
+							<item id="7">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(CommentsTrakt.7.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_left.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(CommentsTrakt.7.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(CommentsTrakt.7.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(CommentsTrakt.7.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(CommentsTrakt.7.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(CommentsTrakt.Count),6) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+							</item>
+							
+							<item id="8">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(CommentsTrakt.8.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_right.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(CommentsTrakt.8.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(CommentsTrakt.8.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(CommentsTrakt.8.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(CommentsTrakt.8.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(CommentsTrakt.Count),7) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+							</item>
+							
+							<item id="9">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(CommentsTrakt.9.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_left.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(CommentsTrakt.9.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(CommentsTrakt.9.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(CommentsTrakt.9.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(CommentsTrakt.9.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(CommentsTrakt.Count),8) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+							</item>
+							
+							<item id="10">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(CommentsTrakt.10.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_right.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(CommentsTrakt.10.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(CommentsTrakt.10.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(CommentsTrakt.10.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(CommentsTrakt.10.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(CommentsTrakt.Count),9) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+							</item>
+							
+							<item id="11">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(CommentsTrakt.11.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_left.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(CommentsTrakt.11.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(CommentsTrakt.11.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(CommentsTrakt.11.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(CommentsTrakt.11.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(CommentsTrakt.Count),10) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+							</item>
+							
+							<item id="12">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(CommentsTrakt.12.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_right.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(CommentsTrakt.12.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(CommentsTrakt.12.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(CommentsTrakt.12.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(CommentsTrakt.12.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(CommentsTrakt.Count),11) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+							</item>
+							
+							<item id="13">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(CommentsTrakt.13.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_left.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(CommentsTrakt.13.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(CommentsTrakt.13.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(CommentsTrakt.13.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(CommentsTrakt.13.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(CommentsTrakt.Count),12) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+							</item>
+							
+							<item id="14">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(CommentsTrakt.14.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_right.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(CommentsTrakt.14.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(CommentsTrakt.14.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(CommentsTrakt.14.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(CommentsTrakt.14.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(CommentsTrakt.Count),13) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+							</item>
+							
+							<item id="15">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(CommentsTrakt.15.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_left.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(CommentsTrakt.15.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(CommentsTrakt.15.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(CommentsTrakt.15.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(CommentsTrakt.15.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(CommentsTrakt.Count),14) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+							</item>
+							
+							<item id="16">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(CommentsTrakt.16.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_right.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(CommentsTrakt.16.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(CommentsTrakt.16.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(CommentsTrakt.16.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(CommentsTrakt.16.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(CommentsTrakt.Count),15) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+							</item>
+							
+							<item id="17">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(CommentsTrakt.17.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_left.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(CommentsTrakt.17.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(CommentsTrakt.17.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(CommentsTrakt.17.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(CommentsTrakt.17.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(CommentsTrakt.Count),16) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+							</item>
+							
+							<item id="18">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(CommentsTrakt.18.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_right.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(CommentsTrakt.18.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(CommentsTrakt.18.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(CommentsTrakt.18.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(CommentsTrakt.18.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(CommentsTrakt.Count),17) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+							</item>
+							
+							<item id="19">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(CommentsTrakt.19.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_left.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(CommentsTrakt.19.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(CommentsTrakt.19.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(CommentsTrakt.19.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(CommentsTrakt.19.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(CommentsTrakt.Count),18) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+							</item>
+							
+							<item id="20">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(CommentsTrakt.20.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_right.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(CommentsTrakt.20.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(CommentsTrakt.20.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(CommentsTrakt.20.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(CommentsTrakt.20.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(CommentsTrakt.Count),19) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+							</item>
+
+						<!--Episodes-->							
+							<item id="1">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(EpisodeCommentsTrakt.1.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_left.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(EpisodeCommentsTrakt.1.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(EpisodeCommentsTrakt.1.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(EpisodeCommentsTrakt.1.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(EpisodeCommentsTrakt.1.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(EpisodeCommentsTrakt.Count),0) + Container.Content(episodes)</visible>
+							</item>
+							
+							<item id="2">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(EpisodeCommentsTrakt.2.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_right.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(EpisodeCommentsTrakt.2.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(EpisodeCommentsTrakt.2.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(EpisodeCommentsTrakt.2.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(EpisodeCommentsTrakt.2.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(EpisodeCommentsTrakt.Count),1) + Container.Content(episodes)</visible>
+							</item>
+							
+							<item id="3">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(EpisodeCommentsTrakt.3.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_left.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(EpisodeCommentsTrakt.3.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(EpisodeCommentsTrakt.3.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(EpisodeCommentsTrakt.3.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(EpisodeCommentsTrakt.3.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(EpisodeCommentsTrakt.Count),2) + Container.Content(episodes)</visible>
+							</item>
+							
+							<item id="4">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(EpisodeCommentsTrakt.4.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_right.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(EpisodeCommentsTrakt.4.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(EpisodeCommentsTrakt.4.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(EpisodeCommentsTrakt.4.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(EpisodeCommentsTrakt.4.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(EpisodeCommentsTrakt.Count),3) + Container.Content(episodes)</visible>
+							</item>
+							
+							<item id="5">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(EpisodeCommentsTrakt.5.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_left.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(EpisodeCommentsTrakt.5.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(EpisodeCommentsTrakt.5.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(EpisodeCommentsTrakt.5.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(EpisodeCommentsTrakt.5.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(EpisodeCommentsTrakt.Count),4) + Container.Content(episodes)</visible>
+							</item>
+							
+							<item id="6">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(EpisodeCommentsTrakt.6.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_right.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(EpisodeCommentsTrakt.6.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(EpisodeCommentsTrakt.6.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(EpisodeCommentsTrakt.6.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(EpisodeCommentsTrakt.6.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(EpisodeCommentsTrakt.Count),5) + Container.Content(episodes)</visible>
+							</item>
+							
+							<item id="7">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(EpisodeCommentsTrakt.7.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_left.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(EpisodeCommentsTrakt.7.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(EpisodeCommentsTrakt.7.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(EpisodeCommentsTrakt.7.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(EpisodeCommentsTrakt.7.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(EpisodeCommentsTrakt.Count),6) + Container.Content(episodes)</visible>
+							</item>
+							
+							<item id="8">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(EpisodeCommentsTrakt.8.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_right.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(EpisodeCommentsTrakt.8.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(EpisodeCommentsTrakt.8.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(EpisodeCommentsTrakt.8.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(EpisodeCommentsTrakt.8.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(EpisodeCommentsTrakt.Count),7) + Container.Content(episodes)</visible>
+							</item>
+							
+							<item id="9">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(EpisodeCommentsTrakt.9.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_left.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(EpisodeCommentsTrakt.9.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(EpisodeCommentsTrakt.9.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(EpisodeCommentsTrakt.9.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(EpisodeCommentsTrakt.9.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(EpisodeCommentsTrakt.Count),8) + Container.Content(episodes)</visible>
+							</item>
+							
+							<item id="10">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(EpisodeCommentsTrakt.10.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_right.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(EpisodeCommentsTrakt.10.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(EpisodeCommentsTrakt.10.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(EpisodeCommentsTrakt.10.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(EpisodeCommentsTrakt.10.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(EpisodeCommentsTrakt.Count),9) + Container.Content(episodes)</visible>
+							</item>
+							
+							<item id="11">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(EpisodeCommentsTrakt.11.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_left.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(EpisodeCommentsTrakt.11.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(EpisodeCommentsTrakt.11.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(EpisodeCommentsTrakt.11.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(EpisodeCommentsTrakt.11.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(EpisodeCommentsTrakt.Count),10) + Container.Content(episodes)</visible>
+							</item>
+							
+							<item id="12">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(EpisodeCommentsTrakt.12.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_right.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(EpisodeCommentsTrakt.12.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(EpisodeCommentsTrakt.12.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(EpisodeCommentsTrakt.12.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(EpisodeCommentsTrakt.12.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(EpisodeCommentsTrakt.Count),11) + Container.Content(episodes)</visible>
+							</item>
+							
+							<item id="13">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(EpisodeCommentsTrakt.13.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_left.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(EpisodeCommentsTrakt.13.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(EpisodeCommentsTrakt.13.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(EpisodeCommentsTrakt.13.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(EpisodeCommentsTrakt.13.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(EpisodeCommentsTrakt.Count),12) + Container.Content(episodes)</visible>
+							</item>
+							
+							<item id="14">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(EpisodeCommentsTrakt.14.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_right.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(EpisodeCommentsTrakt.14.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(EpisodeCommentsTrakt.14.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(EpisodeCommentsTrakt.14.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(EpisodeCommentsTrakt.14.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(EpisodeCommentsTrakt.Count),13) + Container.Content(episodes)</visible>
+							</item>
+							
+							<item id="15">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(EpisodeCommentsTrakt.15.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_left.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(EpisodeCommentsTrakt.15.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(EpisodeCommentsTrakt.15.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(EpisodeCommentsTrakt.15.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(EpisodeCommentsTrakt.15.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(EpisodeCommentsTrakt.Count),14) + Container.Content(episodes)</visible>
+							</item>
+							
+							<item id="16">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(EpisodeCommentsTrakt.16.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_right.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(EpisodeCommentsTrakt.16.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(EpisodeCommentsTrakt.16.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(EpisodeCommentsTrakt.16.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(EpisodeCommentsTrakt.16.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(EpisodeCommentsTrakt.Count),15) + Container.Content(episodes)</visible>
+							</item>
+							
+							<item id="17">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(EpisodeCommentsTrakt.17.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_left.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(EpisodeCommentsTrakt.17.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(EpisodeCommentsTrakt.17.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(EpisodeCommentsTrakt.17.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(EpisodeCommentsTrakt.17.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(EpisodeCommentsTrakt.Count),16) + Container.Content(episodes)</visible>
+							</item>
+							
+							<item id="18">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(EpisodeCommentsTrakt.18.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_right.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(EpisodeCommentsTrakt.18.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(EpisodeCommentsTrakt.18.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(EpisodeCommentsTrakt.18.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(EpisodeCommentsTrakt.18.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(EpisodeCommentsTrakt.Count),17) + Container.Content(episodes)</visible>
+							</item>
+							
+							<item id="19">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(EpisodeCommentsTrakt.19.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_left.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(EpisodeCommentsTrakt.19.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(EpisodeCommentsTrakt.19.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(EpisodeCommentsTrakt.19.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(EpisodeCommentsTrakt.19.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(EpisodeCommentsTrakt.Count),18) + Container.Content(episodes)</visible>
+							</item>
+							
+							<item id="20">
+								<onclick>-</onclick>
+								<label>$INFO[Window(Home).Property(EpisodeCommentsTrakt.20.Username)]</label>
+								<thumb>forumbrowser/forumbrowser_bubble_right.png</thumb>
+								<property name="Avatar">$INFO[Window(Home).Property(EpisodeCommentsTrakt.20.Avatar)]</property>
+								<property name="Comment">$INFO[Window(Home).Property(EpisodeCommentsTrakt.20.Text)]</property>
+								<property name="Type">$INFO[Window(Home).Property(EpisodeCommentsTrakt.20.Type)]</property>
+								<property name="Likes">$INFO[Window(Home).Property(EpisodeCommentsTrakt.20.Likes)]</property>
+								<visible>IntegerGreaterThan(Window(Home).Property(EpisodeCommentsTrakt.Count),19) + Container.Content(episodes)</visible>
+							</item>
+							
+						</content>		
+						
+					</control>
+
+				</control>
+				
+				<!--Details Section-->
+				<control type="group">				
+					<width>360</width>
+					<height>560</height>					
+					<visible>Container.Content(movies) | Container.Content(episodes)</visible>
+				
+					<control type="label">							
+						<label>$LOCALIZE[31239]</label>
+						<height>30</height>
+						<width>350</width>
+						<font>font40L</font>
+						<shadowcolor>ff000000</shadowcolor>					
 					</control>
 				
-					<control type="image">
-						<description>Actor Image</description>
-						<posx>5</posx>
-						<posy>5</posy>
-						<width>80</width>
-						<height>80</height>
-						<texture>$INFO[ListItem.Icon]</texture>
-						<aspectratio align="center" aligny="center">scale</aspectratio>
-					</control>		
-
-					<control type="label">
-						<posx>110</posx>
-						<height>85</height>
-						<width>300</width>
-						<aligny>center</aligny>
-						<info>ListItem.Label</info>
+					<control type="grouplist">					
+						<posy>60</posy>
+						<width>340</width>
+						<height>520</height>
+						<itemgap>10</itemgap>
+						<orientation>vertical</orientation>
+						
+						<control type="label">						
+							<include>Common_InfoDialog_Detail_Header</include>
+							<label>31240</label>							
+						</control>
+						
+						<control type="textbox">						
+							<include>Common_InfoDialog_Detail_Label</include>
+							<label>$INFO[ListItem.FileNameAndPath]</label>							
+						</control>
+						
+						<control type="label">						
+							<include>Common_InfoDialog_Detail_Header</include>
+							<label>568</label>							
+						</control>
+						
+						<control type="textbox">						
+							<include>Common_InfoDialog_Detail_Label</include>
+							<label>$INFO[ListItem.LastPlayed]</label>							
+						</control>
+						
+						<control type="label">						
+							<include>Common_InfoDialog_Detail_Header</include>
+							<label>567</label>							
+						</control>
+						
+						<control type="textbox">						
+							<include>Common_InfoDialog_Detail_Label</include>
+							<label>$INFO[ListItem.PlayCount]</label>						
+						</control>
+						
+						<control type="label">						
+							<include>Common_InfoDialog_Detail_Header</include>
+							<label>570</label>							
+						</control>
+						
+						<control type="textbox">						
+							<include>Common_InfoDialog_Detail_Label</include>
+							<label>$INFO[ListItem.DateAdded]</label>							
+						</control>
+						
+						<control type="label">						
+							<include>Common_InfoDialog_Detail_Header</include>
+							<label>21802</label>							
+						</control>
+						
+						<control type="textbox">						
+							<include>Common_InfoDialog_Detail_Label</include>
+							<label>$INFO[ListItem.Size]</label>							
+						</control>
+						
 					</control>
-
-				</focusedlayout>
-
+					
+				</control>	
+				
 			</control>
 			
-			<control type="textbox" id="4">
-				<description>Plot</description>
-				<posx>360</posx>
-				<posy>294</posy>
-				<width>530</width>
-				<height>240</height>
-				<font>font18</font>
-				<align>justify</align>
-			</control>
-
 		</control>
 
 	</controls>

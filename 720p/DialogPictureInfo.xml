@@ -72,7 +72,6 @@
 						<textcolor>Accent</textcolor>
 						<font>font20UB</font>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>Accent</textcolor>
 					</control>
 
 					<control type="label">

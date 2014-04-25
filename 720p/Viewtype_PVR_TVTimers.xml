@@ -20,7 +20,6 @@
 
 				<control type="image">
 					<description>horizontal bar</description>
-					<posx>0</posx>
 					<posy>210</posy>
 					<width>1280</width>
 					<height>433</height>
@@ -99,7 +98,6 @@
 					<itemlayout height="47">
 					
 						<control type="image">
-							<posx></posx>
 							<width>208</width>
 							<height>45</height>
 							<include>Common_Color_Keyback2</include>
@@ -121,7 +119,6 @@
 						
 						<control type="label">
 							<posx>10</posx>
-							<posy>0</posy>
 							<width>210</width>
 							<font>font20UB</font>
 							<info>ListItem.ChannelName</info>
@@ -129,7 +126,6 @@
 						
 						<control type="label">
 							<posx>220</posx>
-							<posy>0</posy>
 							<width>390</width>
 							<font>font20</font>
 							<info>ListItem.Label</info>
@@ -137,7 +133,6 @@
 						
 						<control type="label">
 							<posx>918</posx>
-							<posy>0</posy>
 							<width>300</width>
 							<align>right</align>
 							<font>font18</font>
@@ -146,7 +141,6 @@
 						
 						<control type="label">
 							<posx>940</posx>
-							<posy>0</posy>
 							<width>150</width>
 							<font>font20</font>
 							<info>ListItem.Comment</info>
@@ -157,7 +151,6 @@
 					<focusedlayout height="47">
 					
 						<control type="image">
-							<posx></posx>
 							<width>208</width>
 							<height>45</height>
 							<include>Common_Color_Accent</include>
@@ -179,7 +172,6 @@
 						
 						<control type="label">
 							<posx>10</posx>
-							<posy>0</posy>
 							<width>210</width>
 							<font>font20UB</font>
 							<label>$INFO[ListItem.ChannelName]</label>
@@ -187,7 +179,6 @@
 						
 						<control type="label">
 							<posx>220</posx>
-							<posy>0</posy>
 							<width>390</width>
 							<font>font20</font>
 							<label>$INFO[ListItem.Label]</label>
@@ -195,7 +186,6 @@
 						
 						<control type="label">
 							<posx>918</posx>
-							<posy>0</posy>
 							<width>300</width>
 							<align>right</align>
 							<font>font18</font>
@@ -204,7 +194,6 @@
 						
 						<control type="label">
 							<posx>940</posx>
-							<posy>0</posy>
 							<width>150</width>
 							<font>font20</font>
 							<label>$INFO[ListItem.Comment]</label>
@@ -219,8 +208,6 @@
 					<posy>333</posy>
 					<width>5</width>
 					<height>280</height>
-					<texturesliderbar>general/accent.png</texturesliderbar> 
-					<texturesliderbackground>backings/key-back2.png</texturesliderbackground> 
 					<showonepage>true</showonepage>
 					<orientation>vertical</orientation>
 				</control>

@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <window id="0">
 	<defaultcontrol>1000</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>	
@@ -5,6 +7,7 @@
 	<onload>Weather.Refresh</onload>
 	<onload condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(skinsettings)</onload>
 	<onload condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(3002)</onload>
+	<onload condition="System.HasAddon(script.extendedinfo) + Skin.String(Home.TVShowPanel,Trending)">RunScript(script.extendedinfo,info=TrendingShows)</onload>
 	
 	<controls>
 	
@@ -68,6 +71,15 @@
 	<!-- CONTENT -->
 		<control type="group">
 			<include>Homescreen_Animation</include>
+			
+			<control type="image">
+				<posy>220</posy>
+				<height>425</height>
+				<width>1280</width>
+				<include>Common_Color_Tile1</include>
+				<visible>Skin.HasSetting(UseBlackband)</visible>
+			</control>
+			
 			<include>Common_Home_Label</include>
 			
 	<!-- MENU LIST -->
@@ -78,10 +90,8 @@
 				<animation effect="fade" time="200">VisibleChange</animation>
 				<posx>43</posx>
 				<posy>304</posy>
-				<width>7</width>
 				<height>327</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>colors/color_white.png</texture>
+				<include>Common_Scroll_OutlineV</include>
 				<visible>Control.HasFocus(999)</visible>
 			</control>
 			
@@ -92,6 +102,8 @@
 				<onleft>ActivateWindow(shutdownmenu)</onleft>
 				<onright>1000</onright>
 				<width>5</width>
+				<showonepage>false</showonepage>
+				<visible>Skin.HasSetting(UseHomeScroll)</visible>
 			</control>
 			
 				<control type="grouplist" id="1000">
@@ -110,7 +122,7 @@
 						<include>Common_HomeMenu_Fonts</include>
 						<label>$LOCALIZE[20342]</label>
 						<onright>601</onright>
-						<onclick>Control.SetFocus(601)</onclick>
+						<onclick>ActivateWindow(61,return)</onclick>
 						<onfocus>Skin.SetString(HomeFocus,movies)</onfocus>
 						<visible>!Skin.HasSetting(Movies.Hide)</visible>
 					</control>
@@ -120,7 +132,7 @@
 						<include>Common_HomeMenu_Fonts</include>
 						<label>$LOCALIZE[20343]</label>
 						<onright>626</onright>
-						<onclick>Control.SetFocus(626)</onclick>
+						<onclick>ActivateWindow(62,return)</onclick>
 						<onfocus>Skin.SetString(HomeFocus,tvshows)</onfocus>
 						<visible>!Skin.HasSetting(TVShows.Hide)</visible>
 					</control>
@@ -141,7 +153,7 @@
 						<include>Common_HomeMenu_Fonts</include>
 						<label>$LOCALIZE[2]</label>
 						<onright>676</onright>
-						<onclick>Control.SetFocus(676)</onclick>
+						<onclick>ActivateWindow(63,return)</onclick>
 						<onfocus>Skin.SetString(HomeFocus,music)</onfocus>
 						<visible>!Skin.HasSetting(Music.Hide)</visible>
 					</control>
@@ -151,7 +163,7 @@
 						<include>Common_HomeMenu_Fonts</include>
 						<label>$LOCALIZE[20389]</label>
 						<onright>701</onright>
-						<onclick>Control.SetFocus(701)</onclick>
+						<onclick>ActivateWindow(64,return)</onclick>
 						<onfocus>Skin.SetString(HomeFocus,musicvideos)</onfocus>
 						<visible>!Skin.HasSetting(MusicVid.Hide)</visible>
 					</control>	
@@ -181,7 +193,7 @@
 						<include>Common_HomeMenu_Fonts</include>
 						<label>$LOCALIZE[8]</label>
 						<onright>776</onright>
-						<onclick>Control.SetFocus(776)</onclick>
+						<onclick>ActivateWindow(weather)</onclick>
 						<onfocus>Skin.SetString(HomeFocus,weather)</onfocus>
 						<visible>!Skin.HasSetting(Weather.Hide)</visible>
 					</control>	
@@ -305,15 +317,7 @@
 			<control type="group">		
 				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
 				
-				<control type="image" id="5">
-					<description>rss underlay</description>
-					<posy>680</posy>
-					<width>935</width>
-					<height>40</height>
-					<texture>home/rss_underlay.png</texture>			
-					<animation effect="fade" time="400">WindowOpen</animation>
-					<animation effect="fade" time="400">WindowClose</animation>
-				</control>
+				<include>Common_Home_RSS</include>
 				
 				<control type="rss">
 					<description>RSS Feed</description>
@@ -353,15 +357,14 @@
 				
 		<!--Movie Tile 5-->
 				<include>Tile_Movies_5</include>
-				
-		<!--Movie Views-->
-				<include>Views_Movies</include>		
-		
+
 		<!--Movie Panels-->
 				<control type="panel" id="66">
 					<include condition="Skin.String(Home.MoviePanel,Recent)">Panel_Movies_Recent</include>
 					<include condition="Skin.String(Home.MoviePanel,Recommended)">Panel_Movies_Recommended</include>
 					<include condition="Skin.String(Home.MoviePanel,Random)">Panel_Movies_Random</include>
+					<include condition="Skin.String(Home.MoviePanel,InCinemas)">Panel_Movies_InCinemas</include>
+					<include condition="Skin.String(Home.MoviePanel,Trending)">Panel_Movies_Trending</include>
 				</control> 
 				
 			</control> 
@@ -389,16 +392,14 @@
 				
 		<!--TVShow Tile 5-->
 				<include>Tile_TVShows_5</include>
-				
-		<!--TVShow Views-->
-				<include>Views_TVShows</include>
-		
+
 		<!--TVShow Panels-->
 				<control type="panel" id="68">
 					<include condition="Skin.String(Home.TVShowPanel,Recent)">Panel_TVShows_Recent</include>
 					<include condition="Skin.String(Home.TVShowPanel,Recommended)">Panel_TVShows_Recommended</include>
 					<include condition="Skin.String(Home.TVShowPanel,Random)">Panel_TVShows_Random</include>
 					<include condition="Skin.String(Home.TVShowPanel,NextAired)">Panel_TVShows_NextAired</include>
+					<include condition="Skin.String(Home.TVShowPanel,Trending)">Panel_TVShows_Trending</include>
 				</control> 
 				
 				<control type="textbox">
@@ -414,8 +415,6 @@
 					<textcolor>White</textcolor>
 					<aligny>top</aligny>
 					<align>center</align>
-					<wrapmultiline>true</wrapmultiline>
-					<scrollspeed>0</scrollspeed>
 					<visible>IsEmpty(Window(Home).Property(NextAired.1.NextTitle)) + Skin.String(Home.TVShowPanel,NextAired)</visible>
 				</control>
 				
@@ -460,8 +459,6 @@
 					<textcolor>White</textcolor>
 					<aligny>top</aligny>
 					<align>center</align>
-					<wrapmultiline>true</wrapmultiline>
-					<scrollspeed>0</scrollspeed>
 					<visible>IsEmpty(PVR.NowRecordingTitle) + IsEmpty(PVR.NextRecordingTitle) + Skin.String(Home.LiveTVPanel,Recordings)</visible>
 				</control>	
 				
@@ -490,10 +487,7 @@
 				
 		<!--Music Tile 5-->
 				<include>Tile_Music_5</include>
-				
-		<!--Music Views-->
-				<include>Views_Music</include>
-				
+
 		<!--Music Panels-->
 				<control type="panel" id="67">
 					<include condition="Skin.String(Home.MusicPanel,Recent)">Panel_Albums_Recent</include>
@@ -528,10 +522,7 @@
 				
 		<!--Music Videos Tile 5-->
 				<include>Tile_MusicVid_5</include>
-				
-		<!--Music Videos Views-->
-				<include>Views_MusicVid</include>
-		
+
 		<!--Music Videos Panels-->	
 				<control type="panel" id="70">
 					<include condition="Skin.String(Home.MusicVidPanel,Recent)">Panel_MusicVideos_Recent</include>

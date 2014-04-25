@@ -51,7 +51,23 @@
 		<textcolor>Accent60</textcolor>
 		<align>center</align>
 		<font>font48BUB</font>
-	</include>	
+	</include>
+
+	<include name="RateDialog_Button">
+		<width>35</width>
+		<height>35</height>
+		<texturefocus colordiffuse="Accent">flags\ratings\star.png</texturefocus>
+		<texturenofocus>flags\ratings\star.png</texturenofocus>
+		<align>center</align>
+		<aligny>center</aligny>
+		<animation effect="zoom" end="115,115" center="auto" time="100">focus</animation>
+	</include>
+	
+	<include name="RateDialog_NoStar">
+		<width>35</width>
+		<height>35</height>
+		<texture>flags\ratings\no_star.png</texture>
+	</include>
 
 	<include name="Seekbar_Image">
 		<posy>311</posy>

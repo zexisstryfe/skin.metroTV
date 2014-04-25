@@ -31,7 +31,6 @@
 
 		<control type="label" id="24">
 			<description>buffering label</description>
-			<posx>0</posx>
 			<posy>350</posy>
 			<width>1280</width>
 			<label>$LOCALIZE[15107] $INFO[Player.CacheLevel]%</label>

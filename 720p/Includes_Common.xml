@@ -31,8 +31,8 @@
 	</include>
 	
 	<include name="Common_Control_Button">
-		<texturefocus aspectratio="keep" colordiffuse="Accent">colors/color_white.png</texturefocus>
-		<texturenofocus aspectratio="keep" colordiffuse="Keyback1">colors/color_white.png</texturenofocus>
+		<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
+		<texturenofocus colordiffuse="Keyback1">colors/color_white.png</texturenofocus>
 		<width>48</width>
 		<height>48</height>
 		<textwidth>1</textwidth>
@@ -42,7 +42,7 @@
 	<include name="Common_Control_Image">
 		<width>50</width>
 		<height>50</height>
-		<aspectratio>center</aspectratio>
+		<aspectratio>keep</aspectratio>
 	</include>	
 	
 	<include name="Common_Control_Label">
@@ -54,30 +54,14 @@
 		<font>font18L</font>
 	</include>
 	
-	<include name="Common_View_Button">
-		<width>60</width>
-		<height>60</height>
-		<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
-		<texturenofocus colordiffuse="Keyback1">colors/color_white.png</texturenofocus>
-		<disabledcolor>Black</disabledcolor>
-		<textcolor>Keyback1</textcolor>
-		<onleft>50</onleft>
-		<onright>50</onright>
-	</include>	
-	
-	<include name="Common_View_Image">
-		<width>60</width>
-		<height>60</height>
-		<aspectratio>center</aspectratio>
-	</include>
-	
-	<include name="Common_View_Label">
+	<include name="Common_Control_Label2">
 		<posx>80</posx>
-		<width min="20" max="320">auto</width>
-		<height>60</height>
+		<width>300</width>
+		<height>50</height>
 		<wrapmultiline>true</wrapmultiline>
 		<scrollspeed>0</scrollspeed>
-	</include>	
+		<font>font18UB</font>
+	</include>
 
 	<include name="Common_TopBar">
 	
@@ -110,7 +94,7 @@
 			<posy>10</posy>
 			<width>250</width>
 			<height>100</height>
-			<texture border="2">-</texture>			
+			<texturenofocus border="2">-</texturenofocus>			
 			<texturefocus border="2">-</texturefocus>	
 			<include>Animation_Home_Fade</include>
 			<onclick>ActivateWindow(111)</onclick>
@@ -125,7 +109,7 @@
 				<posx>40</posx>
 				<posy>20</posy>
 				<height>30</height>
-				<width>400</width>
+				<width>500</width>
 				<font>font72L</font>
 				<shadowcolor>Black</shadowcolor>
 			</control>	
@@ -133,7 +117,7 @@
 			<control type="label">
 				<posx>45</posx>
 				<posy>70</posy>
-				<width>300</width>
+				<width>500</width>
 				<aligny>top</aligny>
 				<label>$LOCALIZE[31182]: [COLOR Accent]$INFO[Container.SortMethod][/COLOR] </label>
 				<font>font24L</font>
@@ -185,7 +169,7 @@
 				<posx>90</posx>
 				<posy>20</posy>
 				<height>30</height>
-				<width>400</width>
+				<width>500</width>
 				<font>font72L</font>
 				<textcolor>White</textcolor>
 				<shadowcolor>Black</shadowcolor>
@@ -329,11 +313,20 @@
 		<texture>colors/color_white.png</texture>
 	</include>
 	
+	<include name="Common_Control_Divider">
+
+		<control type="image">					
+			<width>60</width>
+			<height>2</height>
+			<texture>colors/color_white.png</texture>
+		</control>
+
+	</include>
+	
 	<include name="Common_Settings_Button">
 		<width>50</width>
 		<height>50</height>
 		<font>font16LB</font>
-		<textcolor>White</textcolor>
 		<focusedcolor>White</focusedcolor>
 		<disabledcolor>Black</disabledcolor>
 		<aspectratio>keep</aspectratio>
@@ -444,38 +437,6 @@
 		<focusedcolor>White</focusedcolor>
 		<font>font20</font>
 	</include>
-	
-	<include name="Common_View_Background">
-	
-		<control type="image">
-			<visible>!Skin.HasSetting(TileBackground)</visible>
-			<posx>790</posx>
-			<posy>310</posy>
-			<width>190</width>
-			<height>315</height>
-			<include>Common_Color_Tile1</include>
-		</control>	
-		
-		<control type="image">
-			<visible>Skin.HasSetting(TileBackground)</visible>
-			<posx>790</posx>
-			<posy>310</posy>
-			<width>190</width>
-			<height>315</height>
-			<include>Common_Color_Keyback2</include>
-		</control>
-		
-		<control type="label">
-			<label>$LOCALIZE[31016]</label>
-			<posx>825</posx>
-			<posy>250</posy>
-			<height>30</height>
-			<width>400</width>
-			<font>font40L</font>
-			<shadowcolor>Black</shadowcolor>
-		</control>	
-		
-	</include>
 
 	<include name="Common_Color_Black">
 		<texture colordiffuse="Black">colors/color_white.png</texture>
@@ -491,12 +452,7 @@
 		<texture colordiffuse="Keyback1">colors/color_white.png</texture>
 		<aspectratio>stretch</aspectratio>
 	</include>
-	
-	<include name="Common_Color_Keyback1-80">
-		<texture colordiffuse="Keyback1-80">colors/color_white.png</texture>
-		<aspectratio>stretch</aspectratio>
-	</include>
-	
+		
 	<include name="Common_Color_Keyback2">
 		<texture colordiffuse="Keyback2">colors/color_white.png</texture>
 		<aspectratio>stretch</aspectratio>
@@ -532,7 +488,7 @@
 	</include>
 	
 	<include name="Common_Infolist_Info">
-		<posx>150</posx>
+		<posx>140</posx>
 		<width>300</width>
 		<height>28</height>
 		<scroll>true</scroll>
@@ -541,6 +497,13 @@
 	<include name="Common_Infolist_Info2">
 		<posx>80</posx>
 		<width>140</width>
+		<height>28</height>
+		<scroll>true</scroll>
+	</include>
+	
+	<include name="Common_Infolist_Info3">
+		<posx>120</posx>
+		<width>380</width>
 		<height>28</height>
 		<scroll>true</scroll>
 	</include>
@@ -579,6 +542,379 @@
 		<pagecontrol>98</pagecontrol>
 		<focusposition>0</focusposition>
 		<scrolltime tween="cubic" easing="out">400</scrolltime>
+	</include>
+	
+	<include name="Common_CurrentWeather_Label">
+		<width>500</width>
+		<height>100</height>
+		<font>font16UB</font>
+		<aligny>top</aligny>	
+	</include>
+	
+	<include name="Common_CurrentWeather_Data">
+		<posy>25</posy>
+		<width>500</width>
+		<height>100</height>
+		<font>font18L</font>
+		<aligny>top</aligny>
+	</include>
+	
+	<include name="Common_Weather_Header">
+		<width>700</width>
+		<font>font40L</font>
+		<shadowcolor>ff000000</shadowcolor>
+		<align>left</align>
+	</include>
+	
+	<include name="Common_Fanart_InfoBack">
+	
+		<control type="image">
+			<width>300</width>
+			<height>70</height>
+			<include>Common_Color_Keyback1</include>
+		</control>
+		
+		<control type="image">
+			<posy>70</posy>
+			<width>300</width>
+			<height>160</height>
+			<include>Common_Color_Tile1</include>
+		</control>
+		
+		<control type="image">
+			<posy>136</posy>
+			<width>300</width>
+			<height>1</height>
+			<include>Common_Color_Accent</include>
+		</control>
+		
+		<control type="image">
+			<posy>230</posy>
+			<width>300</width>
+			<height>10</height>
+			<include>Common_Color_Keyback1</include>
+		</control>
+					
+	</include>
+	
+	<include name="Common_Fanart_Title">
+		<height>20</height>
+		<width>290</width>
+		<font>font26UB</font>
+		<textcolor>Accent</textcolor>
+		<aligny>top</aligny>
+		<scroll>true</scroll>
+	</include>
+	
+	<include name="Common_Fanart_Label">
+		<height>20</height>
+		<align>center</align>
+		<font>font14UB</font>
+		<textcolor>White80</textcolor>
+	</include>
+	
+	<include name="Common_Fanart_Data">
+		<height>20</height>
+		<align>center</align>
+		<font>font20</font>
+	</include>
+	
+	<include name="Common_Fanart_Icon">
+		<posx>18</posx>
+		<posy>463</posy>
+		<width>240</width>
+		<height>240</height>
+		<fadetime>100</fadetime>
+		<aspectratio>stretch</aspectratio>
+	</include>
+	
+	<include name="Common_Fanart_Icon2">
+		<posx>18</posx>
+		<posy>463</posy>
+		<width>147</width>
+		<height>147</height>
+		<fadetime>100</fadetime>
+		<aspectratio>keep</aspectratio>
+	</include>
+	
+	<include name="Common_Fanart_Fadelabel">
+		<posx>263</posx>
+		<posy>468</posy>
+		<include>Common_Fanart_Title</include>
+	</include>
+	
+	<include name="Common_List_Title">
+		<posx>10</posx>
+		<posy>10</posy>
+		<height>20</height>
+		<width>380</width>
+		<font>font24UB</font>
+		<align>center</align>
+		<scroll>true</scroll>
+		<textcolor>Accent</textcolor>
+	</include>
+	
+	<include name="Common_List_Title2">
+		<posx>10</posx>
+		<posy>10</posy>
+		<height>20</height>
+		<width>255</width>
+		<font>font24UB</font>
+		<align>center</align>
+		<scroll>true</scroll>
+		<textcolor>Accent</textcolor>
+	</include>
+	
+	<include name="Common_List_Plot">
+		<posx>20</posx>
+		<posy>125</posy>
+		<width>360</width>
+		<height>220</height>
+		<align>justify</align>
+		<autoscroll time="3000" delay="6000" repeat="8000"></autoscroll>
+		<font>font18</font>
+	</include>
+	
+	<include name="Common_List_Plot2">
+		<posx>20</posx>
+		<posy>125</posy>
+		<width>235</width>
+		<height>220</height>
+		<align>justify</align>
+		<autoscroll time="3000" delay="6000" repeat="8000"></autoscroll>
+		<font>font18</font>
+	</include>
+	
+	<include name="Common_ListPic_Title">
+		<posx>585</posx>
+		<posy>605</posy>
+		<width>550</width>
+		<font>font24UB</font>
+		<align>center</align>
+		<scroll>true</scroll>
+		<textcolor>Accent</textcolor>
+	</include>
+	
+	<include name="Common_ListPic_Icon">
+		<posx>650</posx>
+		<posy>188</posy>
+		<width>420</width>
+		<height>420</height>
+		<fadetime>100</fadetime>
+		<aspectratio align="center" aligny="top">keep</aspectratio>
+		<bordertexture colordiffuse="Keyback2">colors/color_white.png</bordertexture>
+	</include>
+	
+	<include name="Common_Panel_Title">
+		<width>500</width>
+		<height>50</height>
+		<font>font32UB</font>
+		<textcolor>Accent</textcolor>
+		<scroll>true</scroll>
+	</include>
+	
+	<include name="Common_Panel_TitleW">
+		<width>500</width>
+		<height>50</height>
+		<font>font32UB</font>
+		<scroll>false</scroll>
+	</include>
+	
+	<include name="Common_GenrePanel_Title">
+		<posx>175</posx>
+		<posy>250</posy>
+		<height>30</height>
+		<width>900</width>
+		<font>font40UB</font>
+		<aligny>top</aligny>
+		<visible>true</visible>
+		<scroll>true</scroll>
+		<scrollout>false</scrollout>
+		<pauseatend>600</pauseatend>
+		<scrollspeed>50</scrollspeed>
+		<shadowcolor>ff000000</shadowcolor>
+	</include>
+	
+	<include name="Common_Showcase_Title">
+		<posy>630</posy>
+		<height>30</height>
+		<width>1280</width>
+		<font>font40UB</font>
+		<textcolor>Accent</textcolor>
+		<align>center</align>
+		<aligny>top</aligny>
+		<scroll>true</scroll>
+		<shadowcolor>black</shadowcolor>
+	</include>
+	
+	<include name="Common_Hub_Explore">
+		<control type="label">
+			<label>$LOCALIZE[31208]</label>
+			<posx>50</posx>
+			<posy>240</posy>
+			<height>30</height>
+			<width>250</width>
+			<font>font72L</font>
+			<shadowcolor>ff000000</shadowcolor>
+		</control>
+	</include>
+	
+	<include name="Common_Explore_Image">
+		<width>60</width>
+		<height>60</height>
+		<aspectratio>keep</aspectratio>
+	</include>	
+	
+	<include name="Common_Explore_Label">
+		<posx>80</posx>
+		<width min="20" max="320">auto</width>
+		<height>50</height>
+		<wrapmultiline>true</wrapmultiline>
+		<scrollspeed>0</scrollspeed>
+		<font>font20UB</font>
+	</include>
+	
+	<include name="Common_Hub_SectionLabel">
+		<posy>250</posy>
+		<width min="20" max="530">auto</width>
+		<height>30</height>
+		<font>font40L</font>
+		<shadowcolor>ff000000</shadowcolor>
+		<wrapmultiline>false</wrapmultiline>
+		<scrollspeed>0</scrollspeed>	
+	</include>
+	
+	<include name="Common_List_Indicator">
+		<width>20</width>
+		<height>20</height>
+		<texture colordiffuse="Accent">colors/color_white.png</texture>		
+	</include>
+	
+	<include name="Common_List_Back">
+		<width>20</width>
+		<height>20</height>
+		<texture colordiffuse="Keyback1">colors/color_white.png</texture>		
+	</include>
+	
+	<include name="Common_TraktTV_ClearProperties">	
+		<onclick>ClearProperty(Title,58)</onclick>
+		<onclick>ClearProperty(MPAA,58)</onclick>
+		<onclick>ClearProperty(Plot,58)</onclick>
+		<onclick>ClearProperty(Tagline,58)</onclick>
+		<onclick>ClearProperty(Year,58)</onclick>
+		<onclick>ClearProperty(Genre,58)</onclick>
+		<onclick>ClearProperty(Runtime,58)</onclick>
+		<onclick>ClearProperty(Rating,58)</onclick>
+		<onclick>ClearProperty(Poster,58)</onclick>
+		<onclick>ClearProperty(Fanart,58)</onclick>
+		<onclick>ClearProperty(Trailer,58)</onclick>
+		<onclick>ClearProperty(ID,58)</onclick>
+		<onclick>ClearProperty(Type,58)</onclick>
+		<onclick>ClearProperty(Country,58)</onclick>
+		<onclick>ClearProperty(NextTime,58)</onclick>		
+	</include>
+	
+	<include name="Common_TraktTV_HeaderButton">
+		<height>50</height>			
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<font>font32L</font>
+		<align>left</align>
+		<textoffsetx>0</textoffsetx>
+		<focusedcolor>Accent</focusedcolor>	
+	</include>
+	
+	<include name="Common_TraktTV_Hub_Panel">
+		<posx>68</posx>
+		<posy>80</posy>
+		<width>1160</width>
+		<height>520</height>
+		<onup>10000</onup>
+		<pagecontrol>81</pagecontrol>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">600</scrolltime>
+		<preloaditems>2</preloaditems>
+		<orientation>horizontal</orientation>									
+		<include>Animation_Common_ShowListing</include>					
+	</include>
+	
+	<include name="Common_Home_RSS">
+
+		<control type="group">
+				<animation effect="fade" time="400">WindowOpen</animation>
+				<animation effect="fade" time="400">WindowClose</animation>
+		
+			<control type="image">
+				<description>rss underlay</description>
+				<posy>680</posy>
+				<width>935</width>
+				<height>40</height>
+				<include>Common_Color_Tile1</include>				
+			</control>	
+			
+			<control type="image">
+				<description>rss underlay</description>
+				<posy>680</posy>
+				<width>40</width>
+				<height>40</height>
+				<texture colordiffuse="Accent">colors/color_white.png</texture>			
+			</control>
+			
+			<control type="image">
+				<description>rss underlay</description>
+				<posy>680</posy>
+				<width>40</width>
+				<height>40</height>
+				<texture>icons/RSS.png</texture>			
+			</control>
+			
+			<control type="image">
+				<description>rss underlay</description>
+				<posx>930</posx>
+				<posy>680</posy>
+				<width>5</width>
+				<height>40</height>
+				<texture colordiffuse="Accent">colors/color_white.png</texture>			
+			</control>
+			
+		</control>
+	
+	</include>
+	
+	<include name="Common_InfoDialog_Detail_Header">
+	
+		<width>340</width>
+		<height>16</height>
+		<font>font20UB</font>
+		<textcolor>Accent</textcolor>
+		
+	</include>
+	
+	<include name="Common_InfoDialog_Detail_Label">
+	
+		<width>340</width>
+		<height>50</height>
+		<font>font18</font>
+		<wrapmultiline>true</wrapmultiline>
+		
+	</include>
+	
+	<include name="Common_InfoDialog_Label_Small">
+	
+		<width>360</width>
+		<height>30</height>
+		<font>font20</font>
+		<aligny>center</aligny>
+	
+	</include>
+	
+	<include name="Common_InfoDialog_Header_Small">
+	
+		<width>360</width>
+		<height>30</height>
+		<font>font20UB</font>
+		<aligny>center</aligny>
+		
 	</include>
 	
 </includes>

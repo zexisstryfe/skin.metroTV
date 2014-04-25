@@ -20,7 +20,6 @@
 
 				<control type="image">
 					<description>horizontal bar</description>
-					<posx>0</posx>
 					<posy>210</posy>
 					<width>1280</width>
 					<height>433</height>
@@ -42,8 +41,6 @@
 					<posy>288</posy>
 					
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
 						<width>389</width>
 						<height>327</height>
 						<include>Common_Color_Keyback2</include>
@@ -65,7 +62,7 @@
 						<height>30</height>
 						<font>font20</font>
 						<label>$INFO[Container(13).ListItem.Date]</label>
-						<scroll>auto</scroll>
+						<scroll>true</scroll>
 					</control>
 					
 					<control type="textbox">
@@ -76,7 +73,6 @@
 						<align>justify</align>
 						<autoscroll time="3000" delay="6000" repeat="8000"></autoscroll>
 						<font>font18</font>
-						<textcolor>White</textcolor>
 						<label>$INFO[Container(13).ListItem.Plot]</label>
 					</control>
 					
@@ -97,7 +93,6 @@
 					<itemlayout height="47">
 					
 						<control type="image">
-							<posx></posx>
 							<width>588</width>
 							<height>45</height>
 							<include>Common_Color_Keyback1</include>
@@ -112,7 +107,6 @@
 						
 						<control type="label">
 							<posx>10</posx>
-							<posy>0</posy>
 							<width>605</width>
 							<font>font20</font>
 							<label>$INFO[ListItem.Label]</label>
@@ -120,7 +114,6 @@
 						
 						<control type="label">
 							<posx>800</posx>
-							<posy>0</posy>
 							<width>200</width>
 							<align>right</align>
 							<font>font20</font>
@@ -132,7 +125,6 @@
 					<focusedlayout height="47">
 					
 						<control type="image">
-							<posx></posx>
 							<width>588</width>
 							<height>45</height>
 							<include>Common_Color_Accent</include>
@@ -147,7 +139,6 @@
 						
 						<control type="label">
 							<posx>10</posx>
-							<posy>0</posy>
 							<width>605</width>
 							<font>font20</font>
 							<label>$INFO[ListItem.Label]</label>
@@ -155,7 +146,6 @@
 						
 						<control type="label">
 							<posx>800</posx>
-							<posy>0</posy>
 							<width>200</width>
 							<align>right</align>
 							<font>font20</font>
@@ -168,13 +158,10 @@
 				
 				<control type="image">
 					<description>outline</description>
-					<animation effect="fade" time="200">VisibleChange</animation>
 					<posx>890</posx>
 					<posy>288</posy>
-					<width>7</width>
 					<height>327</height>
-					<aspectratio>stretch</aspectratio>
-					<texture>colors/color_white.png</texture>
+					<include>Common_Scroll_OutlineV</include>
 					<visible>Control.HasFocus(72)</visible>
 				</control>
 				
@@ -185,8 +172,6 @@
 					<width>5</width>
 					<onright>34</onright>
 					<onleft>13</onleft>
-					<texturesliderbar>general/accent.png</texturesliderbar> 
-					<texturesliderbackground>backings/key-back2.png</texturesliderbackground> 
 				</control>
 				
 			</control>

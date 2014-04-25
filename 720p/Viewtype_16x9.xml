@@ -16,7 +16,6 @@
 			<control type="group">
 				<animation effect="slide" start="0,0" end="0,-30" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(69)">Conditional</animation>
 				<control type="image">
-					<posx>0</posx>
 					<posy>520</posy>
 					<width>1280</width>
 					<height>200</height>
@@ -25,7 +24,6 @@
 				</control>
 				
 				<control type="image">
-					<posx>0</posx>
 					<posy>520</posy>
 					<width>1280</width>
 					<height>1</height>
@@ -34,7 +32,6 @@
 				</control>
 				
 				<control type="image">
-					<posx>0</posx>
 					<posy>718</posy>
 					<width>1280</width>
 					<height>1</height>
@@ -48,8 +45,6 @@
 					<visible>!IsEmpty(Window(Home).Property(NextAired.Label)) + !stringcompare(ListItem.Label,..) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + !IsEmpty(ListItem.TVShowTitle) + !IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
 
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
 						<width>430</width>
 						<height>100</height>
 						<include>Common_Color_Tile1</include>
@@ -60,19 +55,15 @@
 						<posy>5</posy>
 						<width>30</width>
 						<height>30</height>
-						<texture>home/tv.png</texture>
+						<texture>tiles/tv.png</texture>
 						<visible>Container.Content(Episodes)</visible>
 					</control>
 					
 					<control type="label">
 						<posx>170</posx>
-						<posy>0</posy>
 						<width>590</width>
 						<height>40</height>
-						<align>left</align>
-						<aligny>center</aligny>
 						<font>font20UB</font>
-						<scroll>true</scroll>
 						<label>[B]$LOCALIZE[31173][/B]</label>
 						<visible>Container.Content(Episodes)</visible>
 					</control>
@@ -85,7 +76,6 @@
 						<align>center</align>
 						<aligny>top</aligny>
 						<font>font20</font>
-						<scroll>true</scroll>
 						<label>"$INFO[Window(Home).Property(NextAired.NextTitle)]" $LOCALIZE[31177] $INFO[Window(Home).Property(NextAired.NextDate)] $INFO[Window(Home).Property(NextAired.AirTime)]</label>
 						<visible>Container.Content(Episodes)</visible>
 					</control>
@@ -94,8 +84,6 @@
 
 				<!-- Poster Wrap View -->
 				<control type="wraplist" id="59">
-					<posx>0</posx>
-					<posy>0</posy>
 					<height>720</height>
 					<width>1320</width>
 					<onleft>59</onleft>
@@ -118,7 +106,6 @@
 							<posy>192</posy>
 						
 							<control type="image">
-								<posx>0</posx>
 								<posy>90</posy>
 								<width>334</width>
 								<height>220</height>
@@ -126,7 +113,6 @@
 							</control>
 							
 							<control type="image">
-								<posx>0</posx>
 								<posy>122</posy>
 								<width>334</width>
 								<height>188</height>
@@ -134,7 +120,6 @@
 							</control>
 							
 							<control type="image">
-								<posx>0</posx>
 								<posy>122</posy>
 								<width>334</width>
 								<height>188</height>
@@ -145,7 +130,6 @@
 							</control>
 							
 							<control type="image">
-								<posx>0</posx>
 								<posy>122</posy>
 								<width>334</width>
 								<height>188</height>
@@ -156,7 +140,6 @@
 							</control>
 							
 							<control type="image">
-								<posx>0</posx>
 								<posy>122</posy>
 								<width>334</width>
 								<height>188</height>
@@ -245,56 +228,43 @@
 						<control type="group">
 							<posx>30</posx>
 							<posy>40</posy>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" center="191,440" start="90" end="100" time="400" tween="back" easing="out" />
+								<effect type="fade" start="80" end="100" time="400" />
+							</animation>
 						
 							<control type="image">
-								<posx>0</posx>
 								<posy>115</posy>
 								<width>532</width>
 								<height>349</height>
 								<include>Common_Color_Accent</include>
-								<animation type="Focus" reversible="false">
-									<effect type="zoom" center="191,440" start="90" end="100" time="400" tween="back" easing="out" />
-									<effect type="fade" start="80" end="100" time="400" />
-								</animation>
 							</control>
 							
 							<control type="image">
-								<posx>0</posx>
 								<posy>166</posy>
 								<width>532</width>
 								<height>298</height>
 								<include>Common_Color_Keyback2</include>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
-								<animation type="Focus" reversible="false">
-									<effect type="zoom" center="191,440" start="90" end="100" time="400" tween="back" easing="out" />
-								</animation>
 							</control>
 							
 							<control type="image">
-								<posx>0</posx>
 								<posy>166</posy>
 								<width>532</width>
 								<height>298</height>
 								<texture background="true" fallback="splash/splash_movies.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
 								<fadetime>200</fadetime>					
 								<aspectratio scalediffuse="false">stretch</aspectratio>
-								<animation type="Focus" reversible="false">
-									<effect type="zoom" center="191,440" start="90" end="100" time="400" tween="back" easing="out" />
-								</animation>
 								<visible>!Container.Content(episodes) + !stringcompare(ListItem.Label,..)</visible>
 							</control>
 							
 							<control type="image">
-								<posx>0</posx>
 								<posy>166</posy>
 								<width>532</width>
 								<height>298</height>
 								<texture background="true" fallback="splash/splash_tvshows.png">$INFO[ListItem.Icon]</texture>
 								<fadetime>200</fadetime>					
 								<aspectratio scalediffuse="false">stretch</aspectratio>
-								<animation type="Focus" reversible="false">
-									<effect type="zoom" center="191,440" start="90" end="100" time="400" tween="back" easing="out" />
-								</animation>
 								<visible>Container.Content(episodes) + !stringcompare(ListItem.Label,..)</visible>
 							</control>
 							
@@ -306,9 +276,6 @@
 								<texture background="true">defaults/DefaultFolderBack.png</texture>
 								<fadetime>200</fadetime>					
 								<aspectratio scalediffuse="false">keep</aspectratio>
-								<animation type="Focus" reversible="false">
-									<effect type="zoom" center="191,440" start="90" end="100" time="400" tween="back" easing="out" />
-								</animation>
 								<visible>stringcompare(ListItem.Label,..)</visible>
 							</control>
 							
@@ -321,10 +288,6 @@
 								<texture background="true">$INFO[ListItem.path]logo.png</texture>
 								<fadetime>300</fadetime>
 								<aspectratio scalediffuse="false">keep</aspectratio>
-								<animation type="Focus" reversible="false">
-									<effect type="zoom" center="191,440" start="90" end="100" time="400" tween="back" easing="out" />
-									<effect type="fade" start="80" end="100" time="400" />
-								</animation>
 							</control>
 							
 							<control type="image">
@@ -335,10 +298,6 @@
 								<texture background="true">$INFO[ListItem.path]../logo.png</texture>
 								<fadetime>300</fadetime>
 								<aspectratio scalediffuse="false">keep</aspectratio>
-								<animation type="Focus" reversible="false">
-									<effect type="zoom" center="191,440" start="90" end="100" time="400" tween="back" easing="out" />
-									<effect type="fade" start="80" end="100" time="400" />
-								</animation>
 								<visible>Container.Content(episodes)</visible>
 							</control>
 							
@@ -350,10 +309,6 @@
 								<font>font26UB</font>
 								<textcolor>White</textcolor>
 								<label>$INFO[ListItem.Label]</label>
-								<animation type="Focus" reversible="false">
-									<effect type="zoom" center="191,440" start="90" end="100" time="400" tween="back" easing="out" />
-									<effect type="fade" start="80" end="100" time="400" />
-								</animation>
 								<scroll>true</scroll>
 								<visible>!stringcompare(ListItem.Label,..)</visible>
 							</control>
@@ -366,10 +321,6 @@
 								<font>font26UB</font>
 								<textcolor>White</textcolor>
 								<label>$LOCALIZE[31194]</label>
-								<animation type="Focus" reversible="false">
-									<effect type="zoom" center="191,440" start="90" end="100" time="400" tween="back" easing="out" />
-									<effect type="fade" start="80" end="100" time="400" />
-								</animation>
 								<visible>stringcompare(ListItem.Label,..)</visible>
 							</control>
 							
@@ -380,10 +331,6 @@
 								<height>55</height>
 								<texture>$INFO[listitem.studio,flags/Studios/,.png]</texture>
 								<aspectratio>keep</aspectratio>
-								<animation type="Focus" reversible="false">
-									<effect type="zoom" center="191,440" start="90" end="100" time="400" tween="back" easing="out" />
-									<effect type="fade" start="80" end="100" time="400" />
-								</animation>
 							</control>
 							
 							<control type="image">
@@ -395,10 +342,6 @@
 								<visible>ListItem.IsFolder + Container.Content(movies)</visible>
 								<visible>Skin.HasSetting(UseMovieset)</visible>
 								<visible>!stringcompare(ListItem.Label,..)</visible>
-								<animation type="Focus" reversible="false">
-									<effect type="zoom" center="191,440" start="90" end="100" time="400" tween="back" easing="out" />
-									<effect type="fade" start="80" end="100" time="400" />
-								</animation>
 							</control>
 							
 							<control type="image">
@@ -706,7 +649,6 @@
 				</control>
 				
 				<control type="textbox"><!-- Plot and TV -->
-					<posx>0</posx>
 					<posy>5</posy>
 					<width>600</width>
 					<height>148</height>
@@ -721,17 +663,15 @@
 				</control>
 
 				<control type="grouplist">
-					<visible>[Container.Content(movies) | Container.Content(episodes)] + !Skin.HasSetting(no_media_flags) + !Player.HasAudio</visible>
+					<visible>[Container.Content(movies) | Container.Content(episodes)] + !Player.HasAudio</visible>
 					<animation effect="slide" start="0,900" end="0,520" time="600" delay="4000" condition="[Container.Content(episodes) | Container.Content(movies)] + ![Container(59).OnNext | Container(59).OnPrevious]">Conditional</animation>
 					<description>Media Codec Flagging Images</description>
-					<posx>-50</posx>
 					<posy>160</posy>
 					<width>1280</width>
 					<align>center</align>
-					<itemgap>0</itemgap>
+					<itemgap>10</itemgap>
 					<orientation>horizontal</orientation>
-					<include>StudioFlags</include>
-					<include>VideoTypeHackFlaggingConditions</include>
+					<include>VideoResolutionFlaggingConditions</include>
 					<include>VideoCodecFlaggingConditions</include>
 					<include>AspectCodecFlaggingConditions</include>
 					<include>AudioCodecFlaggingConditions</include>
@@ -742,13 +682,10 @@
 			
 			<control type="image">
 				<description>outline</description>
-				<animation effect="fade" time="200">VisibleChange</animation>
 				<posx>99</posx>
 				<posy>724</posy>
 				<width>1082</width>
-				<height>7</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>colors/color_white.png</texture>
+				<include>Common_Scroll_OutlineH</include>
 				<animation effect="slide" start="0,0" end="0,-30" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(69)">Conditional</animation>
 			</control>
 			
@@ -758,8 +695,6 @@
 				<posy>725</posy>
 				<width>1080</width>
 				<height>5</height>
-				<texturesliderbar>general/accent.png</texturesliderbar> 
-				<texturesliderbackground>backings/key-back2.png</texturesliderbackground> 
 				<onup>59</onup>
 				<ondown>9000</ondown>
 				<showonepage>false</showonepage>

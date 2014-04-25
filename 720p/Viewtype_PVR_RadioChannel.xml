@@ -20,7 +20,6 @@
 				
 				<control type="image">
 					<description>horizontal bar</description>
-					<posx>0</posx>
 					<posy>210</posy>
 					<width>1280</width>
 					<height>433</height>
@@ -41,8 +40,6 @@
 					<posy>288</posy>
 					
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
 						<width>389</width>
 						<height>327</height>
 						<include>Common_Color_Keyback2</include>
@@ -64,7 +61,7 @@
 						<height>30</height>
 						<font>font20</font>
 						<label>$INFO[Container(12).ListItem.StartTime] - $INFO[Container(12).ListItem.EndTime]</label>
-						<scroll>auto</scroll>
+						<scroll>true</scroll>
 					</control>
 					
 					<control type="textbox">
@@ -75,7 +72,6 @@
 						<align>justify</align>
 						<autoscroll time="3000" delay="6000" repeat="8000"></autoscroll>
 						<font>font18</font>
-						<textcolor>White</textcolor>
 						<label>$INFO[Container(12).ListItem.Plot]</label>
 					</control>
 					
@@ -143,7 +139,6 @@
 					<itemlayout height="47">
 					
 						<control type="image">
-							<posx></posx>
 							<width>65</width>
 							<height>45</height>
 							<include>Common_Color_Keyback1</include>
@@ -176,9 +171,9 @@
 							<posy>39</posy>
 							<width>541</width>
 							<height>5</height>
-							<texturebg>backing/key-back1.png</texturebg>
+							<texturebg colordiffuse="Keyback1">colors/color_white.png</texturebg>
 							<lefttexture>-</lefttexture>
-							<midtexture>general/accent.png</midtexture>
+							<midtexture colordiffuse="Accent">colors/color_white.png</midtexture>
 							<righttexture>-</righttexture>
 							<info>ListItem.Progress</info>
 							<visible>ListItem.HasEpg</visible>
@@ -256,7 +251,7 @@
 							<posy>40</posy>
 							<width>541</width>
 							<height>3</height>
-							<texturebg>general/accent.png</texturebg>
+							<texturebg colordiffuse="Accent">colors/color_white.png</texturebg>
 							<lefttexture>-</lefttexture>
 							<righttexture>-</righttexture>
 							<visible>ListItem.HasEpg</visible>
@@ -301,13 +296,10 @@
 				
 				<control type="image">
 					<description>outline</description>
-					<animation effect="fade" time="200">VisibleChange</animation>
 					<posx>890</posx>
 					<posy>288</posy>
-					<width>7</width>
 					<height>327</height>
-					<aspectratio>stretch</aspectratio>
-					<texture>colors/color_white.png</texture>
+					<include>Common_Scroll_OutlineV</include>
 					<visible>Control.HasFocus(71)</visible>
 				</control>
 				
@@ -319,8 +311,6 @@
 					<onright condition="Player.HasMedia">111</onright>
 					<onright condition="!Player.HasMedia">33</onright>
 					<onleft>12</onleft>
-					<texturesliderbar>general/accent.png</texturesliderbar> 
-					<texturesliderbackground>backings/key-back2.png</texturesliderbackground> 
 				</control>
 				
 			</control>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<includes>
+
+	<include name="RCB_Context_Button">
+		<width>360</width>
+		<align>center</align>
+		<height>38</height>
+	</include>
+	
+	<include name="RCB_ArrowUp_Button">
+		<width>20</width>
+		<height>20</height>
+		<texturenofocus>controls/ArrowUpNF.png</texturenofocus>
+		<texturefocus>controls/ArrowUpFO.png</texturefocus>
+	</include>
+	
+	<include name="RCB_ArrowDown_Button">
+		<width>20</width>
+		<height>20</height>
+		<texturenofocus>controls/ArrowDownNF.png</texturenofocus>
+		<texturefocus>controls/ArrowDownFO.png</texturefocus>
+	</include>
+	
+	<include name="RCB_EditRom_RadioButton">
+		<width>570</width>
+		<height>35</height>
+		<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
+		<align>left</align>
+		<textoffsetx>7</textoffsetx>
+	</include>
+	
+	<include name="RCB_EditScraper_RadioButton">
+		<width>450</width>
+		<height>35</height>
+		<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
+		<align>left</align>
+		<textoffsetx>7</textoffsetx>
+	</include>
+	
+	<include name="RCB_EditRom_RightButton">
+		<posx>170</posx>
+		<width>410</width>
+		<height>35</height>
+		<texturefocus>-</texturefocus>
+		<align>right</align>
+	</include>
+	
+	<include name="RCB_EditScraper_RightButton">
+		<posx>160</posx>
+		<width>300</width>
+		<height>35</height>
+		<texturefocus>-</texturefocus>
+		<disabledcolor>80FFFFFF</disabledcolor>
+		<align>right</align>
+	</include>
+	
+	<include name="RCB_MissingInfo_GrayButton">
+		<posx>15</posx>
+		<textcolor>88FFFFFF</textcolor>
+		<focusedcolor>White</focusedcolor>
+		<disabledcolor>80FFFFFF</disabledcolor>
+		<width>613</width>
+		<height>30</height>		
+	</include>
+	
+</includes>

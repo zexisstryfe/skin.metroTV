@@ -39,7 +39,9 @@
 	<include file="Includes_Content.xml" />
 	<include file="Includes_Dialogs.xml" />
 	<include file="Includes_Home.xml" />
+	<include file="Includes_Hub.xml" />
 	<include file="Includes_Options.xml" />
+	<include file="Includes_RCB.xml" />
 	<include file="Includes_Settings.xml" />
 	
 	<!-- Variables -->
@@ -114,10 +116,9 @@
 				
 				<control type="image">
 					<description>Thumb</description>
-					<posx>5</posx>
 					<posy>160</posy>
-					<width>172</width>
-					<height>150</height>
+					<width>182</width>
+					<height>155</height>
 					<aspectratio aligny="top">scale</aspectratio>
 					<texture background="true">$INFO[ListItem.Property(Fanart)]</texture>
 				</control>
@@ -183,10 +184,9 @@
 				
 				<control type="image">
 					<description>Thumb</description>
-					<posx>5</posx>
 					<posy>160</posy>
-					<width>172</width>
-					<height>150</height>
+					<width>182</width>
+					<height>155</height>
 					<aspectratio aligny="top">scale</aspectratio>
 					<texture background="true">$INFO[ListItem.Property(Fanart)]</texture>
 				</control>	
@@ -255,10 +255,9 @@
 				
 				<control type="image">
 					<description>Thumb</description>
-					<posx>5</posx>
 					<posy>160</posy>
-					<width>172</width>
-					<height>150</height>
+					<width>182</width>
+					<height>155</height>
 					<aspectratio aligny="top">scale</aspectratio>
 					<texture background="true">$INFO[ListItem.Property(Fanart)]</texture>
 				</control>
@@ -298,7 +297,6 @@
 					<posy>900</posy>
 					<height>25</height>
 					<label>$INFO[ListItem.Title,  ,] $INFO[ListItem.Title,  ,] $INFO[ListItem.Title,  ,] $INFO[ListItem.Title,  ,] $INFO[ListItem.Title,  ,] </label>
-					<include>Common_Scroll_AngleText</include>
 					<font>font230L</font>
 					<textcolor>White60</textcolor>
 				</control>
@@ -308,7 +306,6 @@
 					<posx>170</posx>
 					<posy>900</posy>
 					<label>$INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] $INFO[ListItem.Artist, ,] </label>
-					<include>Common_Scroll_AngleText</include>
 					<font>font72L</font>
 					<textcolor>Black80</textcolor>
 					<scrollspeed>100</scrollspeed>
@@ -319,7 +316,6 @@
 					<posx>320</posx>
 					<posy>900</posy>
 					<label>$INFO[ListItem.Album, ,] $INFO[ListItem.Album, ,] $INFO[ListItem.Album, ,] $INFO[ListItem.Album, ,] $INFO[ListItem.Album, ,] $INFO[ListItem.Album, ,] $INFO[ListItem.Album, ,] $INFO[ListItem.Album, ,] </label>
-					<include>Common_Scroll_AngleText</include>
 					<font>font40L</font>
 					<textcolor>White80</textcolor>
 					<scrollspeed>80</scrollspeed>
@@ -365,7 +361,6 @@
 					<font>font40L</font>
 					<textcolor>White80</textcolor>
 					<scrollspeed>80</scrollspeed>
-					<pauseatend>0</pauseatend>
 				</control>
 										
 				<control type="label">
@@ -424,7 +419,6 @@
 					<textcolor>White80</textcolor>
 					<angle>90</angle>
 					<scrollspeed>80</scrollspeed>
-					<pauseatend>0</pauseatend>
 				</control>
 							
 				
@@ -452,7 +446,6 @@
 					<posy>900</posy>
 					<height>25</height>
 					<label>$INFO[MusicPlayer.Title,  ,] $INFO[MusicPlayer.Title,  ,] $INFO[MusicPlayer.Title,  ,] $INFO[MusicPlayer.Title,  ,] $INFO[MusicPlayer.Title,  ,] </label>
-					<include>Common_Scroll_AngleText</include>
 					<font>font230L</font>
 					<textcolor>White60</textcolor>
 				</control>
@@ -462,7 +455,6 @@
 					<posx>170</posx>
 					<posy>900</posy>
 					<label>$INFO[MusicPlayer.Artist, ,] $INFO[MusicPlayer.Artist, ,] $INFO[MusicPlayer.Artist, ,] $INFO[MusicPlayer.Artist, ,] $INFO[MusicPlayer.Artist, ,] $INFO[MusicPlayer.Artist, ,] $INFO[MusicPlayer.Artist, ,] $INFO[MusicPlayer.Artist, ,] $INFO[MusicPlayer.Artist, ,] </label>
-					<include>Common_Scroll_AngleText</include>
 					<font>font72L</font>
 					<textcolor>Black80</textcolor>
 					<scrollspeed>100</scrollspeed>
@@ -473,7 +465,6 @@
 					<posx>320</posx>
 					<posy>900</posy>
 					<label>$INFO[MusicPlayer.Album, ,] $INFO[MusicPlayer.Album, ,] $INFO[MusicPlayer.Album, ,] $INFO[MusicPlayer.Album, ,] $INFO[MusicPlayer.Album, ,] $INFO[MusicPlayer.Album, ,] $INFO[MusicPlayer.Album, ,] $INFO[MusicPlayer.Album, ,] </label>
-					<include>Common_Scroll_AngleText</include>
 					<font>font40L</font>
 					<textcolor>White80</textcolor>
 					<scrollspeed>80</scrollspeed>
@@ -588,7 +579,6 @@
 					<textcolor>White80</textcolor>
 					<angle>90</angle>
 					<scrollspeed>80</scrollspeed>
-					<pauseatend>0</pauseatend>
 				</control>
 								
 					
@@ -617,7 +607,7 @@
 			<fadetime>4000</fadetime>
 			<pauseatend>0</pauseatend>
 			<loop>true</loop>
-			<aspectratio background="true" aligny="top">stretch</aspectratio>
+			<aspectratio aligny="top">stretch</aspectratio>
 			<imagepath background="true">colors/</imagepath>
 			<include>Animation_CommonFade</include>
 			<visible>true</visible>

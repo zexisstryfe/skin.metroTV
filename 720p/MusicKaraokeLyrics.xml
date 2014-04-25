@@ -15,7 +15,7 @@
 			<description>fullscreen image</description>
 			<width>1280</width>
 			<height>720</height>
-			<visibility>false</visibility>
+			<visible>false</visible>
 		</control>
 
 		<control type="group">

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window id="64">
+	<defaultcontrol always="true">9000</defaultcontrol>	
+	<zorder>2</zorder>
+	
+	<onload condition="System.HasAddon(script.randomandlastitems) + Skin.HasSetting(ShowHistorySection_MusicVideo)">XBMC.RunScript(script.randomandlastitems,limit=10,method=Last,playlist=special://skin/playlists/History (Music Videos).xsp,menu=Menu4)</onload>	
+	<onload>RunScript(script.extendedinfo,info=NearEvents)</onload>
+
+	<controls>
+
+		<include>HomeBackground</include>	
+		<include>Common_TopBar</include>	
+			
+		<control type="image">
+			<posy>220</posy>
+			<height>492</height>
+			<width>1280</width>
+			<include>Common_Color_Tile1</include>
+			<visible>Skin.HasSetting(UseBlackband)</visible>
+		</control>
+
+		<control type="grouplist">
+			<width>1280</width>
+			<height>700</height>
+			<scrolltime tween="cubic" easing="out">600</scrolltime>
+			<pagecontrol>9010</pagecontrol>
+			<itemgap>60</itemgap>
+			<orientation>horizontal</orientation>
+			<include>Homescreen_Animation</include>
+			
+			<control type="group" id="8000">
+				<description>Explorer List</description>
+				<include>Common_Hub_Explore</include>
+				<width>280</width>
+				
+				<control type="image">
+					<description>outline</description>
+					<posx>43</posx>
+					<posy>304</posy>
+					<height>392</height>
+					<include>Common_Scroll_OutlineV</include>
+					<visible>Control.HasFocus(9020)</visible>
+				</control>
+				
+				<control type="scrollbar" id="9020">
+					<posx>44</posx>
+					<posy>305</posy>
+					<height>390</height>
+					<onleft>ActivateWindow(shutdownmenu)</onleft>
+					<onright>9000</onright>
+					<width>5</width>
+				</control>
+				
+				<control type="panel" id="9000">							
+					<posx>55</posx>
+					<posy>305</posy>
+					<width>400</width>
+					<height>390</height>
+					<onleft>9017</onleft>
+					<onright>9001</onright>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+					<pagecontrol>9020</pagecontrol>
+					<viewtype label="535">list</viewtype>
+					<scrolltime tween="cubic" easing="out">600</scrolltime>
+					<preloaditems>2</preloaditems>						
+					<itemlayout width="400" height="65">
+					
+						<control type="image">
+							<width>60</width>
+							<height>60</height>
+							<include>Common_Color_Keyback1</include>									
+						</control>
+					
+						<control type="image">							
+							<include>Common_Explore_Image</include>
+							<texture>$INFO[ListItem.Thumb]</texture>
+						</control>
+						
+						<control type="label">							
+							<label>$INFO[ListItem.Label]</label>
+							<include>Common_Explore_Label</include>									
+						</control>
+
+					</itemlayout>
+
+					<focusedlayout width="400" height="65">
+					
+						<control type="image">
+							<width>60</width>
+							<height>60</height>
+							<include>Common_Color_Accent</include>
+							<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(9000)">Conditional</animation>									
+						</control>
+					
+						<control type="image">								
+							<include>Common_Explore_Image</include>
+							<texture>$INFO[ListItem.Thumb]</texture>									
+						</control>
+						
+						<control type="label">								
+							<label>$INFO[ListItem.Label]</label>
+							<include>Common_Explore_Label</include>								
+						</control>
+
+					</focusedlayout>
+					
+					<content>
+
+						<item>
+							<description>Now Playing</description>
+							<label>31226</label>
+							<thumb>$VAR[NowPlaying_Image]</thumb>
+							<onclick>ActivateWindow(fullscreenvideo)</onclick>
+							<visible>Player.HasVideo + VideoPlayer.Content(movies)</visible>
+						</item>
+						
+						<item>
+							<description>Titles</description>
+							<label>31227</label>
+							<thumb>hub/hub_movietitles_small.png</thumb>
+							<onclick>ActivateWindow(Videos,MusicVideoTitles,return)</onclick>
+						</item>
+
+						<item>
+							<description>Recently Added</description>
+							<label>31009</label>
+							<thumb>hub/hub_recentlyadded_small.png</thumb>
+							<onclick>ActivateWindow(Videos,RecentlyAddedMusicVideos,return)</onclick>
+						</item>
+						
+						<item>
+							<description>Actors</description>
+							<label>133</label>
+							<thumb>hub/hub_actors_small.png</thumb>
+							<onclick>ActivateWindow(Videos,MusicVideoArtists,return)</onclick>
+						</item>
+						
+						<item>
+							<description>Directors</description>
+							<label>20348</label>
+							<thumb>hub/hub_directors_small.png</thumb>
+							<onclick>ActivateWindow(Videos,MusicVideoDirectors,return)</onclick>
+						</item>
+						
+						<item>
+							<description>Genres</description>
+							<label>135</label>
+							<thumb>hub/hub_genres_small.png</thumb>
+							<onclick>ActivateWindow(Videos,MusicVideoGenres,return)</onclick>
+						</item>
+						
+						<item>
+							<description>Years</description>
+							<label>652</label>
+							<thumb>hub/hub_years_small.png</thumb>
+							<onclick>ActivateWindow(Videos,MusicVideoYears,return)</onclick>
+						</item>
+						
+						<item>
+							<description>Studios</description>
+							<label>20388</label>
+							<thumb>hub/hub_studios_small.png</thumb>
+							<onclick>ActivateWindow(Videos,MusicVideoStudios,return)</onclick>
+						</item>
+						
+						<item>
+							<description>Playlists</description>
+							<label>136</label>
+							<thumb>hub/hub_playlists_small.png</thumb>
+							<onclick>ActivateWindow(Videos,special://videoplaylists/,return)</onclick>
+						</item>
+						
+						<item>
+							<description>Addons</description>
+							<label>24001</label>
+							<thumb>hub/hub_addons_small.png</thumb>
+							<onclick>ActivateWindow(Videos,addons://sources/video/,return)</onclick>
+						</item>
+						
+						<item>
+							<description>Files</description>
+							<label>744</label>
+							<thumb>hub/hub_files_small.png</thumb>
+							<onclick>ActivateWindow(Videos,Files,return)</onclick>
+						</item>
+
+					</content>
+					
+				</control>
+				
+			</control>
+			
+				<include>Hub_Featured</include>
+				<include>Hub_RecentlyAdded</include>
+				<include>Hub_AiringToday</include>
+				<include>Hub_InCinemas</include>
+				<include>Hub_NearbyEvents</include>
+				<include>Hub_History</include>
+				<include>Hub_Trakt</include>
+
+		</control>
+
+	</controls>
+	
+</window>

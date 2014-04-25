@@ -162,8 +162,6 @@
 					<control type="button" id="14">
 						<description>remove</description>
 						<include>Common_Control_Button</include>
-						<texturenofocus>views/removeNF.png</texturenofocus>
-						<texturefocus>views/removeFO.png</texturefocus>
 						<onup>13</onup>
 						<ondown>11</ondown>
 						<onleft>10</onleft>
@@ -215,7 +213,7 @@
 				<width>440</width>
 				<align>left</align>
 				<textoffsetx>20</textoffsetx>
-				<texturenofocus>backings/edit-back.png</texturenofocus>
+				<texturenofocus colordiffuse="Editback">colors/color_white.png</texturenofocus>
 				<font>font20</font>
 				<onup>10</onup>
 				<onleft>12</onleft>

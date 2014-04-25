@@ -36,7 +36,6 @@
 						
 						<control type="image">
 							<posx>1</posx>
-							<posy>0</posy>
 							<width>155</width>
 							<height>155</height>
 							<include>Common_Color_Keyback1</include>
@@ -47,7 +46,6 @@
 						
 						<control type="image">
 							<posx>1</posx>
-							<posy>0</posy>
 							<width>155</width>
 							<height>155</height>
 							<texture background="true" fallback="defaults/DefaultAlbumCover.png">$INFO[ListItem.Icon]</texture>
@@ -58,7 +56,6 @@
 						
 						<control type="image">
 							<posx>1</posx>
-							<posy>0</posy>
 							<width>155</width>
 							<height>155</height>
 							<texture>defaults/DefaultFolderBack.png</texture>
@@ -80,12 +77,10 @@
 						</animation>
 						
 						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
 							<width>155</width>
 							<height>155</height>
-							<texture background="true">backings/tile2.png</texture>
-							<bordertexture border="5">general/accent.png</bordertexture>
+							<texture background="true" colordiffuse="Keyback1">colors/color_white.png</texture>
+							<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
 							<bordersize>5</bordersize>
 							<fadetime>200</fadetime>
 							<aspectratio>stretch</aspectratio>
@@ -93,12 +88,10 @@
 						</control>
 						
 						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
 							<width>155</width>
 							<height>155</height>
 							<texture background="true" fallback="defaults/DefaultAlbumCover.png">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="5">general/accent.png</bordertexture>
+							<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
 							<bordersize>5</bordersize>
 							<fadetime>200</fadetime>
 							<aspectratio>stretch</aspectratio>
@@ -118,7 +111,6 @@
 						
 						<control type="image">
 							<posx>1</posx>
-							<posy>0</posy>
 							<width>155</width>
 							<height>155</height>
 							<texture>defaults/DefaultFolderBack.png</texture>
@@ -172,7 +164,6 @@
 						<height>30</height>
 						<align>right</align>
 						<font>font26UB</font>
-						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Year]</label>
 						<shadowcolor>ff000000</shadowcolor>
 					</control>
@@ -181,13 +172,8 @@
 						<!--Album title-->
 						<posx>35</posx>
 						<posy>370</posy>
-						<width>500</width>
-						<height>50</height>
-						<align>left</align>
-						<font>font32UB</font>
-						<textcolor>Accent</textcolor>
+						<include>Common_Panel_Title</include>
 						<label>$INFO[ListItem.Label]</label>
-						<scroll>true</scroll>
 						<shadowcolor>ff000000</shadowcolor>
 					</control>
 					
@@ -197,9 +183,7 @@
 						<posy>410</posy>
 						<width>500</width>
 						<height>50</height>
-						<align>left</align>
 						<font>font26L</font>
-						<textcolor>white</textcolor>
 						<label>[B]$INFO[ListItem.artist][/B]</label>
 						<shadowcolor>ff000000</shadowcolor>
 					</control>
@@ -210,7 +194,6 @@
 						<posy>456</posy>
 						<width>500</width>
 						<height>30</height>
-						<align>left</align>
 						<font>font26L</font>
 						<textcolor>Accent</textcolor>
 						<label>$LOCALIZE[31001]</label>
@@ -224,9 +207,8 @@
 					<width>500</width>
 					<height>140</height>
 					<font>font18</font>
-					<textcolor>white</textcolor>
 					<info>ListItem.Property(Album_Description)</info>
-					<label>There is no information for this album.</label>
+					<label>$LOCALIZE[31207]</label>
 					<align>justify</align>
 					<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
 				</control>
@@ -236,9 +218,7 @@
 					<posx>19</posx>
 					<posy>685</posy>
 					<width>1242</width>
-					<height>7</height>
-					<aspectratio>stretch</aspectratio>
-					<texture>colors/color_white.png</texture>
+					<include>Common_Scroll_OutlineH</include>
 					<visible>Control.HasFocus(66)</visible>
 				</control>
 				
@@ -247,8 +227,6 @@
 					<posy>686</posy>
 					<width>1240</width>
 					<height>5</height>
-					<texturesliderbar>general/accent.png</texturesliderbar> 
-					<texturesliderbackground>backings/key-back2.png</texturesliderbackground> 
 					<onup>54</onup>
 					<ondown>9000</ondown>
 					<orientation>horizontal</orientation>

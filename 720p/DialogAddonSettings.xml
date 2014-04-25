@@ -112,12 +112,10 @@
 				<label>-</label>
 				<textcolor>Accent</textcolor>
 				<font>font20UB</font>
-				<texturenofocus>-</texturenofocus>
 			</control>
 
 			<control type="image" id="6">
 				<description>Default Seperator</description>
-				<texturenofocus>-</texturenofocus>
 				<height>-2</height>
 				<texture>-</texture>
 			</control>

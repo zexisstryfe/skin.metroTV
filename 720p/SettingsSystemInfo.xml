@@ -5,31 +5,16 @@
 
 	<controls>
 
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<texture>../backgrounds/systeminfo.jpg</texture>
-			<aspectratio scalediffuse="false">stretch</aspectratio>
-		</control>
-			
+		<include>Settings_Background</include>	
 		<include>Common_Fanart_Overlay</include>
 		<include>Common_TopBar</include>
 
 		<control type="group">
 			<posx>105</posx>
 			<posy>120</posy>	
-			
-			<control type="image">
-				<width>220</width>
-				<height>560</height>
-				<include>Common_Color_Keyback2</include>
-			</control>
 		
 			<control type="image">
 				<posx>220</posx>
-				<posy>0</posy>
 				<width>845</width>
 				<height>560</height>
 				<include>Common_Color_Keyback1</include>
@@ -38,22 +23,21 @@
 			<control type="label">
 				<description>Header Label</description>
 				<posx>1045</posx>
-				<posy>10</posy>
 				<width>660</width>
 				<label>$LOCALIZE[130]</label>
-				<align>right</align>
-				<font>font40LB</font>
-				<textcolor>Accent</textcolor>
+				<include>Dialog_Header</include>
 			</control>
 			
 			<control type="image">
 				<description>line</description>
-				<posx>220</posx>
-				<posy>60</posy>
-				<width>845</width>
-				<height>4</height>
-				<aspectratio>stretch</aspectratio>
-				<include>Common_Color_Accent</include>
+				<width>1065</width>
+				<include>Dialog_Line</include>
+			</control>
+			
+			<control type="image">
+				<width>220</width>
+				<height>560</height>
+				<include>Common_Color_Keyback2</include>
 			</control>
 
 			<control type="group">
@@ -71,36 +55,31 @@
 
 					<control type="button" id="95">
 						<description>General</description>
-						<align>left</align>
-						<width>200</width>
+						<include>Settings_SysInfo_Label</include>
 						<label>$LOCALIZE[20037]</label>
 					</control>
 
 					<control type="button" id="94">
 						<description>Storage</description>
-						<align>left</align>
-						<width>200</width>
+						<include>Settings_SysInfo_Label</include>
 						<label>$LOCALIZE[13277]</label>
 					</control>
 
 					<control type="button" id="96">
 						<description>Network</description>
-						<align>left</align>
-						<width>200</width>
+						<include>Settings_SysInfo_Label</include>
 						<label>$LOCALIZE[13279]</label>
 					</control>
 
 					<control type="button" id="97">
 						<description>Video</description>
-						<align>left</align>
-						<width>200</width>
+						<include>Settings_SysInfo_Label</include>
 						<label>$LOCALIZE[13280]</label>
 					</control>
 
 					<control type="button" id="98">
 						<description>Hardware</description>
-						<align>left</align>
-						<width>200</width>
+						<include>Settings_SysInfo_Label</include>
 						<label>$LOCALIZE[13281]</label>
 					</control>
 					
@@ -116,6 +95,7 @@
 					<control type="label" id="52">
 						<description>XBMC XBE BUILD Version</description>
 						<width>800</width>
+						<height>35</height>
 					</control>
 
 					<control type="label" id="21">
@@ -133,6 +113,7 @@
 					<control type="label" id="23">
 						<description>Memory Text</description>
 						<width>800</width>
+						<height>55</height>
 						<label>memory usage $INFO[system.memory(used.percent)]</label>
 					</control>
 
@@ -144,51 +125,61 @@
 
 					<control type="label" id="2">
 						<description>Label 2</description>
+						<height>35</height>
 						<width>800</width>
 					</control>
 
 					<control type="label" id="3">
 						<description>Label 3</description>
+						<height>35</height>
 						<width>800</width>
 					</control>
 
 					<control type="label" id="4">
 						<description>Label 4</description>
+						<height>35</height>
 						<width>800</width>
 					</control>
 
 					<control type="label" id="5">
 						<description>Label 5</description>
+						<height>35</height>
 						<width>800</width>
 					</control>
 
 					<control type="label" id="6">
 						<description>Label 6</description>
+						<height>35</height>
 						<width>800</width>
 					</control>
 
 					<control type="label" id="7">
 						<description>Label 7</description>
+						<height>35</height>
 						<width>800</width>
 					</control>
 
 					<control type="label" id="8">
 						<description>Label 8</description>
+						<height>35</height>
 						<width>800</width>
 					</control>
 
 					<control type="label" id="9">
 						<description>Label 9</description>
+						<height>35</height>
 						<width>800</width>
 					</control>
 
 					<control type="label" id="10">
 						<description>Label 10</description>
+						<height>35</height>
 						<width>800</width>
 					</control>
 
 					<control type="label" id="11">
 						<description>Label 11</description>
+						<height>35</height>
 						<width>800</width>
 					</control>
 

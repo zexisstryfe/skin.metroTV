@@ -8,25 +8,25 @@
 			<description>Pointer</description>
 			<width>30</width>
 			<height>30</height>
-			<texture>pointers/PointerNF.png</texture>
+			<texture>pointers/Pointer.png</texture>
 		</control>
 
 		<control type="image" id="2">
 			<description>Pointer Focus</description>
 			<width>30</width>
 			<height>30</height>
-			<texture>pointers/PointerFo.png</texture>
+			<texture colordiffuse="Accent">pointers/Pointer.png</texture>
 		</control>
 
 		<control type="image" id="3">
 			<description>Pointer Drag</description>
 			<width>30</width>
 			<height>30</height>
-			<texture>pointers/PointerDrag.png</texture>
+			<texture colordiffuse="Accent">pointers/PointerClick.png</texture>
 		</control>
 
 		<control type="image" id="4">
-			<description>pointer_click</description>
+			<description>Pointer Click</description>
 			<width>30</width>
 			<height>30</height>
 			<texture>pointers/PointerClick.png</texture>

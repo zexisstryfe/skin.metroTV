@@ -20,7 +20,6 @@
 				
 				<control type="image">
 					<description>horizontal bar</description>
-					<posx>0</posx>
 					<posy>210</posy>
 					<width>1280</width>
 					<height>433</height>
@@ -88,7 +87,6 @@
 					<itemlayout height="47">
 					
 						<control type="image">
-							<posx></posx>
 							<width>208</width>
 							<height>45</height>
 							<include>Common_Color_Keyback1</include>
@@ -117,34 +115,26 @@
 						
 						<control type="label">
 							<posx>10</posx>
-							<posy>0</posy>
 							<width>190</width>
 							<height>45</height>
-							<aligny>center</aligny>
-							<align>left</align>
 							<font>font20UB</font>
 							<info>ListItem.ChannelName</info>
 						</control>
 						
 						<control type="label">
 							<posx>220</posx>
-							<posy>0</posy>
 							<width>650</width>
 							<height>45</height>
-							<aligny>center</aligny>
-							<align>left</align>
 							<font>font20</font>
 							<info>ListItem.Label</info>
 						</control>
 						
 						<control type="label">
 							<posx>950</posx>
-							<posy>0</posy>
 							<width>500</width>
 							<height>45</height>
-							<aligny>center</aligny>
-							<align>right</align>
 							<font>font20</font>
+							<align>right</align>
 							<info>ListItem.Date</info>
 						</control>
 						
@@ -159,10 +149,8 @@
 						
 						<control type="label">
 							<posx>1002</posx>
-							<posy>0</posy>
 							<width>80</width>
 							<height>40</height>
-							<align>left</align>
 							<font>font20</font>
 							<label>19043</label>
 							<visible>ListItem.IsRecording</visible>
@@ -179,7 +167,6 @@
 						
 						<control type="label">
 							<posx>1002</posx>
-							<posy>0</posy>
 							<width>80</width>
 							<height>40</height>
 							<align>left</align>
@@ -222,32 +209,24 @@
 						
 						<control type="label">
 							<posx>10</posx>
-							<posy>0</posy>
 							<width>190</width>
 							<height>45</height>
-							<aligny>center</aligny>
-							<align>left</align>
 							<font>font20UB</font>
 							<info>ListItem.ChannelName</info>
 						</control>
 						
 						<control type="label">
 							<posx>220</posx>
-							<posy>0</posy>
 							<width>650</width>
 							<height>45</height>
-							<aligny>center</aligny>
-							<align>left</align>
 							<font>font20</font>
 							<info>ListItem.Label</info>
 						</control>
 						
 						<control type="label">
 							<posx>950</posx>
-							<posy>0</posy>
 							<width>500</width>
 							<height>45</height>
-							<aligny>center</aligny>
 							<align>right</align>
 							<font>font20</font>
 							<info>ListItem.Date</info>
@@ -264,10 +243,8 @@
 						
 						<control type="label">
 							<posx>1002</posx>
-							<posy>0</posy>
 							<width>80</width>
 							<height>40</height>
-							<align>left</align>
 							<label>19043</label>
 							<font>font20</font>
 							<visible>ListItem.IsRecording</visible>
@@ -284,10 +261,8 @@
 						
 						<control type="label">
 							<posx>1002</posx>
-							<posy>0</posy>
 							<width>80</width>
 							<height>40</height>
-							<align>left</align>
 							<label>19040</label>
 							<font>font20</font>
 							<visible>ListItem.HasTimer</visible>
@@ -302,8 +277,6 @@
 					<posy>333</posy>
 					<height>282</height>
 					<width>5</width>
-					<texturesliderbar>general/accent.png</texturesliderbar> 
-					<texturesliderbackground>backings/key-back2.png</texturesliderbackground> 
 				</control>
 				
 			</control>

@@ -6,7 +6,7 @@
 	
 	<!--Script Loading-->
 	<onload condition="System.HasAddon(script.tv.show.next.aired)">XBMC.RunScript(script.tv.show.next.aired,backend=True)</onload>
-	<onload condition="Skin.HasSetting(UseTVTunes)">RunScript(script.tvtunes,backend=True)</onload>
+	<onload condition="System.HasAddon(script.tvtunes) + Skin.HasSetting(UseTVTunes)">RunScript(script.tvtunes,backend=True)</onload>
 
 	<!--Animation-->
 	<include condition="!Window.Previous(fullscreenvideo) + !Window.Previous(slideshow) + Skin.HasSetting(MetroAnimations)">Common_Animation_Splash_Flip</include>	

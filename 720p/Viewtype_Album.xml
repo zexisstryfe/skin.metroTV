@@ -19,17 +19,16 @@
 		</control>
 		
 		<control type="group">
-			<posx>137</posx>
+			<posx>172</posx>
 			<posy>280</posy>
 			<visible>Control.IsVisible(58)</visible>
 			<visible>Container.Content(episodes) | Container.Content(songs)</visible>
 			<include>Animation_Dialog_Center</include>
 			
 			<control type="list" id="58">
-				<posx>230</posx>
-				<posy>0</posy>
+				<posx>310</posx>
 				<height>375</height>
-				<width>765</width>
+				<width>615</width>
 				<onup>53</onup>
 				<ondown>53</ondown>
 				<onleft>9000</onleft>
@@ -40,36 +39,43 @@
 				<orientation>vertical</orientation>
 				<visible>Container.Content(songs)</visible>
 				
-				<itemlayout width="740" height="42">
+				<itemlayout width="615" height="42">
 				
 					<control type="image">
-						<width>790</width>
+						<width>615</width>
 						<height>40</height>
 						<include>Common_Color_Keyback2</include>
 					</control>
 
 					<control type="label">
 						<posx>20</posx>
-						<posy>0</posy>
 						<width>50</width>
 						<font>font26UB</font>
 						<height>40</height>
-						<aligny>center</aligny>
 						<label>$INFO[ListItem.TrackNumber].</label>
+						<visible>!stringcompare(ListItem.Label,..)</visible>
 					</control>
 					
 					<control type="label">
-						<posx>80</posx>
-						<posy>0</posy>
-						<width>470</width>
+						<posx>70</posx>
+						<width>320</width>
 						<font>font22</font>
 						<height>40</height>
-						<aligny>center</aligny>
 						<label>$INFO[ListItem.Title]</label>
+						<visible>!stringcompare(ListItem.Label,..)</visible>
+					</control>
+					
+					<control type="label">
+						<posx>70</posx>
+						<width>320</width>
+						<font>font22</font>
+						<height>40</height>
+						<label>$LOCALIZE[31194]</label>
+						<visible>stringcompare(ListItem.Label,..)</visible>
 					</control>
 					
 					<control type="image">
-						<posx>550</posx>
+						<posx>400</posx>
 						<posy>5</posy>
 						<width>100</width>
 						<height>30</height>
@@ -78,48 +84,44 @@
 					</control>
 					
 					<control type="label">
-						<posx>755</posx>
-						<posy>0</posy>
+						<posx>605</posx>
 						<width>90</width>
 						<font>font26UB</font>
 						<height>40</height>
-						<aligny>center</aligny>
 						<align>right</align>
 						<label>$INFO[ListItem.Duration]</label>
 					</control>
 				
 				</itemlayout>
 				
-				<focusedlayout width="740" height="42">
+				<focusedlayout width="615" height="42">
 				
 					<control type="image">
-						<width>790</width>
+						<width>615</width>
 						<height>40</height>
 						<include>Common_Color_Accent</include>
 					</control>
 
 					<control type="label">
 						<posx>20</posx>
-						<posy>0</posy>
 						<width>50</width>
 						<font>font26UB</font>
 						<height>40</height>
-						<aligny>center</aligny>
 						<label>$INFO[ListItem.TrackNumber].</label>
+						<visible>!stringcompare(ListItem.Label,..)</visible>
 					</control>
 					
 					<control type="label">
-						<posx>80</posx>
-						<posy>0</posy>
-						<width>470</width>
+						<posx>70</posx>
+						<width>320</width>
 						<font>font22</font>
 						<height>40</height>
-						<aligny>center</aligny>
 						<label>$INFO[ListItem.Title]</label>
+						<visible>!stringcompare(ListItem.Label,..)</visible>
 					</control>
 					
 					<control type="image">
-						<posx>550</posx>
+						<posx>400</posx>
 						<posy>5</posy>
 						<width>100</width>
 						<height>30</height>
@@ -128,14 +130,21 @@
 					</control>
 					
 					<control type="label">
-						<posx>755</posx>
-						<posy>0</posy>
+						<posx>605</posx>
 						<width>90</width>
 						<font>font26UB</font>
 						<height>40</height>
-						<aligny>center</aligny>
 						<align>right</align>
 						<label>$INFO[ListItem.Duration]</label>
+					</control>
+					
+					<control type="label">
+						<posx>70</posx>
+						<width>320</width>
+						<font>font22</font>
+						<height>40</height>
+						<label>$LOCALIZE[31194]</label>
+						<visible>stringcompare(ListItem.Label,..)</visible>
 					</control>
 				
 				</focusedlayout>
@@ -143,46 +152,52 @@
 			</control>
 	
 			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>225</width>
+				<width>300</width>
 				<height>375</height>
 				<include>Common_Color_Accent</include>
 				<visible>!IsEmpty(ListItem.Icon) + Container.Content(songs)</visible>
 			</control>
 
 			<control type="image">
-				<posx>5</posx>
-				<posy>5</posy>
-				<width>215</width>
-				<height>215</height>
+				<width>300</width>
+				<height>300</height>
 				<align>right</align>
 				<fadetime>500</fadetime>
 				<aspectratio>stretch</aspectratio>
 				<texture fallback="defaults/DefaultAlbumCover.png">$INFO[ListItem.Icon]</texture>
 				<visible>!IsEmpty(ListItem.Icon) + Container.Content(songs)</visible>
+				<visible>!stringcompare(ListItem.Label,..)</visible>
+			</control>
+			
+			<control type="image">
+				<width>300</width>
+				<height>300</height>
+				<fadetime>500</fadetime>
+				<aspectratio>stretch</aspectratio>
+				<texture background="true">defaults/DefaultFolderBack.png</texture>
+				<visible>!IsEmpty(ListItem.Icon) + Container.Content(songs)</visible>
+				<visible>stringcompare(ListItem.Label,..)</visible>
 			</control>
 			
 			<control type="label">
 				<posx>5</posx>
-				<posy>220</posy>
-				<width>215</width>
+				<posy>270</posy>
+				<width>290</width>
 				<font>font24UB</font>
 				<height>30</height>
-				<aligny>center</aligny>
 				<scroll>true</scroll>
+				<shadowcolor>Black</shadowcolor>
 				<label>[B]$INFO[ListItem.Album][/B]</label>
 			</control>
 			
 			<control type="label">
 				<posx>5</posx>
-				<posy>250</posy>
-				<width>215</width>
+				<posy>300</posy>
+				<width>290</width>
 				<textcolor>Black</textcolor>
 				<font>font20UB</font>
 				<height>25</height>
 				<scroll>true</scroll>
-				<aligny>center</aligny>
 				<label>[B]$INFO[ListItem.Artist][/B]</label>
 			</control>
 			
@@ -192,39 +207,32 @@
 				<width>215</width>
 				<font>font20UB</font>
 				<height>30</height>
-				<aligny>center</aligny>
 				<label>$INFO[ListItem.Year]</label>
 			</control>
 			
 			<control type="label">
 				<posx>5</posx>
 				<posy>335</posy>
-				<width>215</width>
+				<width>290</width>
 				<font>font20L</font>
 				<height>40</height>
-				<aligny>center</aligny>
 				<label>$INFO[ListItem.Genre]</label>
 			</control>
 
 			<control type="image">
 				<description>outline</description>
-				<animation effect="fade" time="200">VisibleChange</animation>
-				<posx>999</posx>
+				<posx>929</posx>
 				<posy>-1</posy>
-				<width>7</width>
 				<height>377</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>colors/color_white.png</texture>
+				<include>Common_Scroll_OutlineV</include>
 				<visible>Control.HasFocus(60)</visible>
 			</control>
 			
 			<control type="scrollbar" id="60">
-				<posx>1000</posx>
-				<posy>0</posy>
+				<posx>930</posx>
 				<height>375</height>
 				<onleft>53</onleft>
 				<onright>9000</onright>
-				<texturesliderbackground>backings/no-key.png</texturesliderbackground>
 			</control>
 			
 		</control>

@@ -175,7 +175,7 @@
                         <height>5</height>
                         <info>ListItem.Progress</info>
                         <visible>ListItem.HasEpg</visible>
-                        <texturebg>backings/key-back1.png</texturebg>
+                        <texturebg colordiffuse="Keyback1">colors/color_white.png</texturebg>
                         <midtexture>colors/color_white.png</midtexture>
                     </control>
 					
@@ -257,7 +257,7 @@
                         <height>5</height>
                         <info>ListItem.Progress</info>
                         <visible>ListItem.HasEpg</visible>
-                        <texturebg>backings/key-back1.png</texturebg>
+                        <texturebg colordiffuse="Keyback1">colors/color_white.png</texturebg>
                         <midtexture>colors/color_white.png</midtexture>
                     </control>
 					

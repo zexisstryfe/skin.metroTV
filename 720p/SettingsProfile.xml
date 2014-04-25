@@ -6,15 +6,7 @@
 
 	<controls>
 
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<texture>../backgrounds/systeminfo.jpg</texture>
-			<aspectratio scalediffuse="false">stretch</aspectratio>
-		</control>
-			
+		<include>Settings_Background</include>	
 		<include>Common_Fanart_Overlay</include>
 		<include>Common_TopBar</include>
 		
@@ -24,8 +16,6 @@
 			<posy>120</posy>
 
 			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
 				<width>440</width>
 				<height>496</height>
 				<include>Common_Color_Keyback1</include>
@@ -34,23 +24,15 @@
 			<control type="label">
 				<description>header label</description>
 				<posx>420</posx>
-				<posy>10</posy>
 				<width>440</width>
-				<align>right</align>
-				<font>font40LB</font>
-				<textcolor>Accent</textcolor>
+				<include>Dialog_Header</include>
 				<label>$LOCALIZE[31133]</label>
 			</control>
 			
 			<control type="image">
 				<description>line</description>
-				<posx>0</posx>
-				<posy>60</posy>
+				<include>Dialog_Line</include>
 				<width>440</width>
-				<height>4</height>
-				<aspectratio>stretch</aspectratio>
-				<height>496</height>
-				<include>Common_Color_Accent</include>
 			</control>
 
 			<control type="radiobutton" id="4">

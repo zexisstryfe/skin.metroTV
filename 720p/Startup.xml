@@ -4,6 +4,7 @@
 
 	<onload condition="System.HasAddon(script.tv.show.next.aired) + Skin.HasSetting(UseNextAiredScript)">XBMC.RunScript(script.tv.show.next.aired,silent=True)</onload>
 	<onload condition="System.HasAddon(script.favourites) + Skin.HasSetting(UseFavouritesScript)">XBMC.RunScript(script.favourites,silent=True)</onload>
+	<onload condition="System.HasAddon(script.games.rom.collection.browser)">XBMC.RunScript(script.games.rom.collection.browser,limit=10)</onload>
 	<allowoverlay>yes</allowoverlay>
 	
 	<!--Splash Screen-->
