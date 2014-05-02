@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<includes>
+
+	<include name="Viewtype_Thumbnail">
+
+		<control type="group">
+			<visible>Control.IsVisible(591)</visible>
+		
+			<control type="image">
+				<include>Dimensions_Fullscreen</include>
+				<texture background="true">backings/music_fanart_diffuse.png</texture>
+				<visible>Skin.HasSetting(UseFanartOverlay)</visible>
+			</control>
+			
+			<include>Common_TopBar</include>
+			
+		</control>
+	
+		<control type="group">
+			<posy>150</posy>
+			<posx>60</posx>		
+			<visible>Control.IsVisible(591)</visible>
+			
+			<include>Animation_Common_View</include>
+			
+			<control type="fixedlist" id="591">
+				<posy>20</posy>
+				<width>1500</width>
+				<height>480</height>
+				<onup>9000</onup>
+				<ondown>63</ondown>
+				<onleft>591</onleft>
+				<onright>591</onright>
+				<viewtype label="Extended">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>63</pagecontrol>
+				<focusposition>0</focusposition>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				<preloaditems>2</preloaditems>							
+				<itemlayout width="320" height="480">
+				
+					<control type="group">					
+						<posy>40</posy>
+						<width>300</width>
+						<height>440</height>
+						
+						<control type="image">
+							<width>300</width>
+							<height>440</height>
+							<include>Common_Color_Keyback1</include>								
+						</control>
+
+						<control type="image">
+							<width>300</width>
+							<height>170</height>
+							<include>Common_Color_Keyback2</include>							
+						</control>						
+
+						<control type="image">
+							<width>300</width>
+							<height>170</height>
+							<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+							<aspectratio aligny="top">scale</aspectratio>		
+							<visible>!stringcompare(ListItem.Label,..)</visible>
+						</control>
+						
+						<control type="image">
+							<width>300</width>
+							<height>170</height>
+							<texture background="true">$VAR[Common_Fallback]</texture>
+							<aspectratio aligny="top">keep</aspectratio>		
+							<visible>IsEmpty(ListItem.Art(fanart))</visible>
+						</control>
+						
+						<control type="textbox">					
+							<posx>20</posx>
+							<posy>180</posy>
+							<width>260</width>
+							<height>60</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>font24UB</font>
+							<textcolor>Accent</textcolor>
+							<aligny>top</aligny>
+							<align>center</align>
+							<autoscroll>false</autoscroll>	
+							<visible>!stringcompare(ListItem.Label,..)</visible>
+						</control>
+						
+						<control type="textbox">					
+							<posx>20</posx>
+							<posy>180</posy>
+							<width>260</width>
+							<height>60</height>
+							<label>$LOCALIZE[31194]</label>
+							<font>font24UB</font>
+							<textcolor>Accent</textcolor>
+							<aligny>top</aligny>
+							<align>center</align>
+							<visible>stringcompare(ListItem.Label,..)</visible>
+						</control>
+						
+						<control type="image">					
+							<posx>20</posx>
+							<posy>248</posy>
+							<width>120</width>
+							<height>20</height>
+							<texture>flags/ratings/$INFO[ListItem.StarRating]</texture>
+							<aspectratio>scale</aspectratio>							
+						</control>
+						
+						<control type="textbox">						
+							<posx>20</posx>
+							<posy>270</posy>
+							<width>260</width>
+							<height>125</height>
+							<label>$VAR[Common_Plot]</label>
+							<font>font20</font>
+							<aligny>top</aligny>
+							<autoscroll>false</autoscroll>		
+							<visible>!stringcompare(ListItem.Label,..)</visible>
+						</control>
+						
+						<control type="label">						
+							<posx>20</posx>
+							<posy>400</posy>
+							<width>260</width>
+							<height>26</height>
+							<label>$VAR[Common_Details]</label>
+							<font>font18UB</font>						
+						</control>
+						
+						<control type="image">
+							<posx>155</posx>
+							<width>145</width>
+							<height>29</height>
+							<texture>general/movieset.png</texture>
+							<visible>ListItem.IsFolder + Container.Content(movies)</visible>
+							<visible>Skin.HasSetting(UseMovieset)</visible>
+							<visible>!stringcompare(ListItem.Label,..)</visible>
+						</control>
+						
+						<control type="image">
+							<posx>10</posx>
+							<posy>10</posy>
+							<height>30</height>
+							<width>30</width>
+							<texture>watched/check.png</texture>
+							<visible>[Container.Content(movies) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(TVShows) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(episodes) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(seasons) + stringcompare(ListItem.Overlay,OverlayWatched.png)]</visible>
+						</control>
+						
+					</control>	
+					
+				</itemlayout>
+
+				<focusedlayout width="320" height="480">
+				
+					<control type="group">
+						<posy>40</posy>
+						<width>300</width>
+						<height>440</height>
+						
+						<control type="image">
+							<width>300</width>
+							<height>440</height>
+							<include>Common_Color_Accent</include>								
+						</control>
+						
+						<control type="image">
+							<width>300</width>
+							<height>170</height>
+							<include>Common_Color_Keyback2</include>							
+						</control>						
+
+						<control type="image">
+							<width>300</width>
+							<height>170</height>
+							<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+							<aspectratio aligny="top">scale</aspectratio>		
+							<visible>!stringcompare(ListItem.Label,..)</visible>
+						</control>
+						
+						<control type="image">
+							<width>300</width>
+							<height>170</height>
+							<texture background="true">$VAR[Common_Fallback]</texture>
+							<aspectratio aligny="top">keep</aspectratio>		
+							<visible>IsEmpty(ListItem.Art(fanart))</visible>
+						</control>
+						
+						<control type="textbox">					
+							<posx>20</posx>
+							<posy>180</posy>
+							<width>260</width>
+							<height>60</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>font24UB</font>
+							<aligny>top</aligny>
+							<align>center</align>
+							<autoscroll>false</autoscroll>	
+							<visible>!stringcompare(ListItem.Label,..)</visible>
+						</control>
+						
+						<control type="textbox">					
+							<posx>20</posx>
+							<posy>180</posy>
+							<width>260</width>
+							<height>60</height>
+							<label>$LOCALIZE[31194]</label>
+							<font>font24UB</font>
+							<aligny>top</aligny>
+							<align>center</align>
+							<visible>stringcompare(ListItem.Label,..)</visible>
+						</control>
+						
+						<control type="image">					
+							<posx>20</posx>
+							<posy>248</posy>
+							<width>120</width>
+							<height>20</height>
+							<texture>flags/ratings/$INFO[ListItem.StarRating]</texture>
+							<aspectratio>scale</aspectratio>							
+						</control>
+						
+						<control type="textbox">						
+							<posx>20</posx>
+							<posy>270</posy>
+							<width>260</width>
+							<height>125</height>
+							<label>$VAR[Common_Plot]</label>
+							<font>font20</font>
+							<aligny>top</aligny>
+							<autoscroll>false</autoscroll>
+							<visible>!stringcompare(ListItem.Label,..)</visible>
+						</control>
+						
+						<control type="label">						
+							<posx>20</posx>
+							<posy>400</posy>
+							<width>260</width>
+							<height>26</height>
+							<label>$VAR[Common_Details]</label>
+							<font>font18UB</font>						
+						</control>
+						
+						<control type="image">
+							<posx>155</posx>
+							<width>145</width>
+							<height>29</height>
+							<texture>general/movieset.png</texture>
+							<visible>ListItem.IsFolder + Container.Content(movies)</visible>
+							<visible>Skin.HasSetting(UseMovieset)</visible>
+							<visible>!stringcompare(ListItem.Label,..)</visible>
+						</control>
+						
+						<control type="image">
+							<posx>10</posx>
+							<posy>10</posy>
+							<height>30</height>
+							<width>30</width>
+							<texture>watched/check.png</texture>
+							<visible>[Container.Content(movies) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(TVShows) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(episodes) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(seasons) + stringcompare(ListItem.Overlay,OverlayWatched.png)]</visible>
+						</control>
+						
+					</control>	
+					
+				</focusedlayout>
+
+			</control>
+			
+			<!--Scrollbar-->
+			<control type="image">
+				<description>outline</description>
+				<posx>39</posx>
+				<posy>574</posy>
+				<width>1082</width>
+				<include>Common_Scroll_OutlineH</include>
+				<animation effect="slide" start="0,0" end="0,-30" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(63)">Conditional</animation>
+			</control>
+			
+			<control type="scrollbar" id="63">
+				<include>Animation_ZoomInZoomOut</include>
+				<posx>40</posx>
+				<posy>575</posy>
+				<width>1080</width>
+				<height>5</height>
+				<onup>591</onup>
+				<ondown>9000</ondown>
+				<showonepage>false</showonepage>
+				<orientation>horizontal</orientation>
+				<include>Animation_CommonFade</include>
+				<animation effect="slide" start="0,0" end="0,-30" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(63)">Conditional</animation>
+			</control>
+		
+		</control>
+		
+	</include>
+
+</includes>
