@@ -1,11 +1,8 @@
 <includes>
 
 	<variable name="Splash_Image">
-		<value condition="Window.IsVisible(script-The Big Picture-main.xml)">splash/splash_thebigpicture.png</value>
 		<value condition="Window.IsVisible(script-NextAired-TVGuide.xml)">splash/splash_nextaired.png</value>
 		<value condition="Window.IsVisible(script-globalsearch-main.xml)">splash/splash_globalsearch.png</value>
-		<value condition="Window.IsVisible(script-forumbrowser-forums.xml)">splash/splash_forumbrowser.png</value>
-		<value condition="Window.IsVisible(script.pseudotv.EPG.xml)">splash/splash_pseudotv.png</value>
 		<value condition="Window.IsActive(MyPics.xml)">splash/splash_picture.png</value>
 		<value condition="Window.IsActive(MyMusicNav.xml) | Window.IsActive(MyMusicSongs.xml)">splash/splash_music.png</value>
 		<value condition="Window.IsActive(MyVideoNav.xml) + [StringCompare(Container.FolderPath,videodb://1/2/) | StringCompare(Container.FolderPath,library://video/movies/)]">splash/splash_movies.png</value>
@@ -16,7 +13,6 @@
 		<value condition="Window.IsActive(MyPrograms.xml)">splash/splash_program.png</value>
 		<value condition="Window.IsActive(AddonBrowser.xml)">splash/splash_store.png</value>
 		<value condition="Window.IsActive(MyWeather.xml)">splash/splash_weather.png</value>
-		<value condition="Window.IsActive(Startup.xml)">splash/splash_startup.png</value>
 		<value condition="Window.IsActive(MyPVR.xml)">splash/splash_livetv.png</value>
 		<value condition="Window.IsActive(Startup.xml)">splash/splash_startup.png</value>
 		<value condition="Window.IsActive(script-Rom_Collection_Browser-main.xml)">splash/splash_games.png</value>
@@ -102,7 +98,7 @@
 		<value condition="Skin.String(MovieTile2,Views)">tiles/views.png</value>
 		<value condition="Skin.String(MovieTile2,3DMovies)">tiles/3Dglasses.png</value>
 		<value condition="Skin.String(MovieTile2,HDMovies)">tiles/HD.png</value>
-		<value condition="Skin.String(MovieTile2,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(MovieTile2,VideoFiles)">DefaultMovies.png</value>
 		<value condition="Skin.String(MovieTile2,Update)">tiles/update.png</value>
 		<value condition="Skin.String(MovieTile2,Playlists)">tiles/playlist.png</value>
 		<value condition="Skin.String(MovieTile2,VideoAddons)">tiles/video_addons.png</value>
@@ -164,7 +160,7 @@
 		<value condition="Skin.String(MovieTile3,Views)">tiles/views.png</value>
 		<value condition="Skin.String(MovieTile3,3DMovies)">tiles/3Dglasses.png</value>
 		<value condition="Skin.String(MovieTile3,HDMovies)">tiles/HD.png</value>
-		<value condition="Skin.String(MovieTile3,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(MovieTile3,VideoFiles)">DefaultMovies.png</value>
 		<value condition="Skin.String(MovieTile3,Update)">tiles/update.png</value>
 		<value condition="Skin.String(MovieTile3,Playlists)">tiles/playlist.png</value>
 		<value condition="Skin.String(MovieTile3,VideoAddons)">tiles/video_addons.png</value>
@@ -226,7 +222,7 @@
 		<value condition="Skin.String(MovieTile4,Views)">tiles/views.png</value>
 		<value condition="Skin.String(MovieTile4,3DMovies)">tiles/3Dglasses.png</value>
 		<value condition="Skin.String(MovieTile4,HDMovies)">tiles/HD.png</value>
-		<value condition="Skin.String(MovieTile4,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(MovieTile4,VideoFiles)">DefaultMovies.png</value>
 		<value condition="Skin.String(MovieTile4,Update)">tiles/update.png</value>
 		<value condition="Skin.String(MovieTile4,Playlists)">tiles/playlist.png</value>
 		<value condition="Skin.String(MovieTile4,VideoAddons)">tiles/video_addons.png</value>
@@ -288,7 +284,7 @@
 		<value condition="Skin.String(MovieTile5,Views)">tiles/views.png</value>
 		<value condition="Skin.String(MovieTile5,3DMovies)">tiles/3Dglasses.png</value>
 		<value condition="Skin.String(MovieTile5,HDMovies)">tiles/HD.png</value>
-		<value condition="Skin.String(MovieTile5,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(MovieTile5,VideoFiles)">DefaultMovies.png</value>
 		<value condition="Skin.String(MovieTile5,Update)">tiles/update.png</value>
 		<value condition="Skin.String(MovieTile5,Playlists)">tiles/playlist.png</value>
 		<value condition="Skin.String(MovieTile5,VideoAddons)">tiles/video_addons.png</value>
@@ -349,7 +345,7 @@
 <!--TVSHOW TILE VARIABLES-->		
 	<variable name="TVShowTile2.Image">
 		<value condition="Skin.String(TVShowTile2,Views)">tiles/views.png</value>
-		<value condition="Skin.String(TVShowTile2,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(TVShowTile2,VideoFiles)">DefaultMovies.png</value>
 		<value condition="Skin.String(TVShowTile2,Update)">tiles/update.png</value>
 		<value condition="Skin.String(TVShowTile2,Playlists)">tiles/playlist.png</value>
 		<value condition="Skin.String(TVShowTile2,VideoAddons)">tiles/video_addons.png</value>
@@ -396,7 +392,7 @@
 	
 	<variable name="TVShowTile3.Image">
 		<value condition="Skin.String(TVShowTile3,Views)">tiles/views.png</value>
-		<value condition="Skin.String(TVShowTile3,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(TVShowTile3,VideoFiles)">DefaultMovies.png</value>
 		<value condition="Skin.String(TVShowTile3,Update)">tiles/update.png</value>
 		<value condition="Skin.String(TVShowTile3,Playlists)">tiles/playlist.png</value>
 		<value condition="Skin.String(TVShowTile3,VideoAddons)">tiles/video_addons.png</value>
@@ -443,7 +439,7 @@
 	
 	<variable name="TVShowTile4.Image">
 		<value condition="Skin.String(TVShowTile4,Views)">tiles/views.png</value>
-		<value condition="Skin.String(TVShowTile4,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(TVShowTile4,VideoFiles)">DefaultMovies.png</value>
 		<value condition="Skin.String(TVShowTile4,Update)">tiles/update.png</value>
 		<value condition="Skin.String(TVShowTile4,Playlists)">tiles/playlist.png</value>
 		<value condition="Skin.String(TVShowTile4,VideoAddons)">tiles/video_addons.png</value>
@@ -490,7 +486,7 @@
 	
 	<variable name="TVShowTile5.Image">
 		<value condition="Skin.String(TVShowTile5,Views)">tiles/views.png</value>
-		<value condition="Skin.String(TVShowTile5,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(TVShowTile5,VideoFiles)">DefaultMovies.png</value>
 		<value condition="Skin.String(TVShowTile5,Update)">tiles/update.png</value>
 		<value condition="Skin.String(TVShowTile5,Playlists)">tiles/playlist.png</value>
 		<value condition="Skin.String(TVShowTile5,VideoAddons)">tiles/video_addons.png</value>
@@ -544,7 +540,7 @@
 		<value condition="Skin.String(LiveTVTile2,Settings)">tiles/settings.png</value>
 		<value condition="Skin.String(LiveTVTile2,Timers)">tiles/recent.png</value>
 		<value condition="Skin.String(LiveTVTile2,VideoAddons)">tiles/video_addons.png</value>
-		<value condition="Skin.String(LiveTVTile2,VideoFiles)">defaults/DefaultMovies.png</value>	
+		<value condition="Skin.String(LiveTVTile2,VideoFiles)">DefaultMovies.png</value>	
 	</variable>
 	
 	<variable name="LiveTVTile2.Label">	
@@ -566,7 +562,7 @@
 		<value condition="Skin.String(LiveTVTile3,Settings)">tiles/settings.png</value>
 		<value condition="Skin.String(LiveTVTile3,Timers)">tiles/recent.png</value>
 		<value condition="Skin.String(LiveTVTile3,VideoAddons)">tiles/video_addons.png</value>
-		<value condition="Skin.String(LiveTVTile3,VideoFiles)">defaults/DefaultMovies.png</value>	
+		<value condition="Skin.String(LiveTVTile3,VideoFiles)">DefaultMovies.png</value>	
 	</variable>
 	
 	<variable name="LiveTVTile3.Label">	
@@ -588,7 +584,7 @@
 		<value condition="Skin.String(LiveTVTile4,Settings)">tiles/settings.png</value>
 		<value condition="Skin.String(LiveTVTile4,Timers)">tiles/recent.png</value>
 		<value condition="Skin.String(LiveTVTile4,VideoAddons)">tiles/video_addons.png</value>
-		<value condition="Skin.String(LiveTVTile4,VideoFiles)">defaults/DefaultMovies.png</value>	
+		<value condition="Skin.String(LiveTVTile4,VideoFiles)">DefaultMovies.png</value>	
 	</variable>
 	
 	<variable name="LiveTVTile4.Label">	
@@ -610,7 +606,7 @@
 		<value condition="Skin.String(LiveTVTile5,Settings)">tiles/settings.png</value>
 		<value condition="Skin.String(LiveTVTile5,Timers)">tiles/recent.png</value>
 		<value condition="Skin.String(LiveTVTile5,VideoAddons)">tiles/video_addons.png</value>
-		<value condition="Skin.String(LiveTVTile5,VideoFiles)">defaults/DefaultMovies.png</value>	
+		<value condition="Skin.String(LiveTVTile5,VideoFiles)">DefaultMovies.png</value>	
 	</variable>
 	
 	<variable name="LiveTVTile5.Label">	
@@ -653,7 +649,7 @@
 		<value condition="Skin.String(MusicTile2,Favourites)">tiles/favourites.png</value>
 		<value condition="Skin.String(MusicTile2,Genres)">tiles/genres.png</value>
 		<value condition="Skin.String(MusicTile2,MusicAddons)">tiles/music_addons.png</value>
-		<value condition="Skin.String(MusicTile2,MusicFiles)">defaults/DefaultMusicPlugins.png</value>
+		<value condition="Skin.String(MusicTile2,MusicFiles)">DefaultMusicPlugins.png</value>
 		<value condition="Skin.String(MusicTile2,PartyMode)">tiles/party.png</value>
 		<value condition="Skin.String(MusicTile2,Playlists)">tiles/playlist.png</value>
 		<value condition="Skin.String(MusicTile2,RecentlyAdded)">tiles/recent.png</value>
@@ -703,7 +699,7 @@
 		<value condition="Skin.String(MusicTile3,Favourites)">tiles/favourites.png</value>
 		<value condition="Skin.String(MusicTile3,Genres)">tiles/genres.png</value>
 		<value condition="Skin.String(MusicTile3,MusicAddons)">tiles/music_addons.png</value>
-		<value condition="Skin.String(MusicTile3,MusicFiles)">defaults/DefaultMusicPlugins.png</value>
+		<value condition="Skin.String(MusicTile3,MusicFiles)">DefaultMusicPlugins.png</value>
 		<value condition="Skin.String(MusicTile3,PartyMode)">tiles/party.png</value>
 		<value condition="Skin.String(MusicTile3,Playlists)">tiles/playlist.png</value>
 		<value condition="Skin.String(MusicTile3,RecentlyAdded)">tiles/recent.png</value>
@@ -753,7 +749,7 @@
 		<value condition="Skin.String(MusicTile4,Favourites)">tiles/favourites.png</value>
 		<value condition="Skin.String(MusicTile4,Genres)">tiles/genres.png</value>
 		<value condition="Skin.String(MusicTile4,MusicAddons)">tiles/music_addons.png</value>
-		<value condition="Skin.String(MusicTile4,MusicFiles)">defaults/DefaultMusicPlugins.png</value>
+		<value condition="Skin.String(MusicTile4,MusicFiles)">DefaultMusicPlugins.png</value>
 		<value condition="Skin.String(MusicTile4,PartyMode)">tiles/party.png</value>
 		<value condition="Skin.String(MusicTile4,Playlists)">tiles/playlist.png</value>
 		<value condition="Skin.String(MusicTile4,RecentlyAdded)">tiles/recent.png</value>
@@ -803,7 +799,7 @@
 		<value condition="Skin.String(MusicTile5,Favourites)">tiles/favourites.png</value>
 		<value condition="Skin.String(MusicTile5,Genres)">tiles/genres.png</value>
 		<value condition="Skin.String(MusicTile5,MusicAddons)">tiles/music_addons.png</value>
-		<value condition="Skin.String(MusicTile5,MusicFiles)">defaults/DefaultMusicPlugins.png</value>
+		<value condition="Skin.String(MusicTile5,MusicFiles)">DefaultMusicPlugins.png</value>
 		<value condition="Skin.String(MusicTile5,PartyMode)">tiles/party.png</value>
 		<value condition="Skin.String(MusicTile5,Playlists)">tiles/playlist.png</value>
 		<value condition="Skin.String(MusicTile5,RecentlyAdded)">tiles/recent.png</value>
@@ -852,7 +848,7 @@
 <!--MUSIC VIDEO TILE VARIABLES-->	
 	<variable name="MusicVidTile2.Image">	
 		<value condition="Skin.String(MusicVidTile2,Views)">tiles/views.png</value>
-		<value condition="Skin.String(MusicVidTile2,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(MusicVidTile2,VideoFiles)">DefaultMovies.png</value>
 		<value condition="Skin.String(MusicVidTile2,Update)">tiles/update.png</value>
 		<value condition="Skin.String(MusicVidTile2,VideoAddons)">tiles/video_addons.png</value>
 		<value condition="Skin.String(MusicVidTile2,Genres)">tiles/genres.png</value>
@@ -896,7 +892,7 @@
 	
 	<variable name="MusicVidTile3.Image">	
 		<value condition="Skin.String(MusicVidTile3,Views)">tiles/views.png</value>
-		<value condition="Skin.String(MusicVidTile3,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(MusicVidTile3,VideoFiles)">DefaultMovies.png</value>
 		<value condition="Skin.String(MusicVidTile3,Update)">tiles/update.png</value>
 		<value condition="Skin.String(MusicVidTile3,VideoAddons)">tiles/video_addons.png</value>
 		<value condition="Skin.String(MusicVidTile3,Genres)">tiles/genres.png</value>
@@ -940,7 +936,7 @@
 
 	<variable name="MusicVidTile4.Image">	
 		<value condition="Skin.String(MusicVidTile4,Views)">tiles/views.png</value>
-		<value condition="Skin.String(MusicVidTile4,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(MusicVidTile4,VideoFiles)">DefaultMovies.png</value>
 		<value condition="Skin.String(MusicVidTile4,Update)">tiles/update.png</value>
 		<value condition="Skin.String(MusicVidTile4,VideoAddons)">tiles/video_addons.png</value>
 		<value condition="Skin.String(MusicVidTile4,Genres)">tiles/genres.png</value>
@@ -984,7 +980,7 @@
 	
 	<variable name="MusicVidTile5.Image">	
 		<value condition="Skin.String(MusicVidTile5,Views)">tiles/views.png</value>
-		<value condition="Skin.String(MusicVidTile5,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(MusicVidTile5,VideoFiles)">DefaultMovies.png</value>
 		<value condition="Skin.String(MusicVidTile5,Update)">tiles/update.png</value>
 		<value condition="Skin.String(MusicVidTile5,VideoAddons)">tiles/video_addons.png</value>
 		<value condition="Skin.String(MusicVidTile5,Genres)">tiles/genres.png</value>
@@ -1384,7 +1380,7 @@
 	<variable name="Custom1Tile1.Image">	
 		<value condition="Skin.String(Custom1Tile1,3DMovies)">tiles/3Dglasses.png</value>
 		<value condition="Skin.String(Custom1Tile1,HDMovies)">tiles/HD.png</value>
-		<value condition="Skin.String(Custom1Tile1,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(Custom1Tile1,VideoFiles)">DefaultMovies.png</value>
 		<value condition="Skin.String(Custom1Tile1,Playlists)">tiles/playlist.png</value>
 		<value condition="Skin.String(Custom1Tile1,VideoAddons)">tiles/video_addons.png</value>
 		<value condition="Skin.String(Custom1Tile1,Genres)">tiles/genres.png</value>
@@ -1398,7 +1394,7 @@
 		<value condition="Skin.String(Custom1Tile1,Adv.Launcher)">tiles/games.png</value>
 		<value condition="Skin.String(Custom1Tile1,NextAired)">tiles/tvguide.png</value>
 		<value condition="Skin.String(Custom1Tile1,MusicAddons)">tiles/music_addons.png</value>
-		<value condition="Skin.String(Custom1Tile1,MusicFiles)">defaults/DefaultMusicPlugins.png</value>
+		<value condition="Skin.String(Custom1Tile1,MusicFiles)">DefaultMusicPlugins.png</value>
 		<value condition="Skin.String(Custom1Tile1,PartyMode)">tiles/party.png</value>
 		<value condition="Skin.String(Custom1Tile1,Top100)">tiles/top100.png</value>
 		<value condition="Skin.String(Custom1Tile1,PictureAddons)">tiles/picture_addons.png</value>
@@ -1459,7 +1455,7 @@
 	<variable name="Custom1Tile2.Image">	
 		<value condition="Skin.String(Custom1Tile2,3DMovies)">tiles/3Dglasses.png</value>
 		<value condition="Skin.String(Custom1Tile2,HDMovies)">tiles/HD.png</value>
-		<value condition="Skin.String(Custom1Tile2,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(Custom1Tile2,VideoFiles)">DefaultMovies.png</value>
 		<value condition="Skin.String(Custom1Tile2,Playlists)">tiles/playlist.png</value>
 		<value condition="Skin.String(Custom1Tile2,VideoAddons)">tiles/video_addons.png</value>
 		<value condition="Skin.String(Custom1Tile2,Genres)">tiles/genres.png</value>
@@ -1473,7 +1469,7 @@
 		<value condition="Skin.String(Custom1Tile2,Adv.Launcher)">tiles/games.png</value>
 		<value condition="Skin.String(Custom1Tile2,NextAired)">tiles/tvguide.png</value>
 		<value condition="Skin.String(Custom1Tile2,MusicAddons)">tiles/music_addons.png</value>
-		<value condition="Skin.String(Custom1Tile2,MusicFiles)">defaults/DefaultMusicPlugins.png</value>
+		<value condition="Skin.String(Custom1Tile2,MusicFiles)">DefaultMusicPlugins.png</value>
 		<value condition="Skin.String(Custom1Tile2,PartyMode)">tiles/party.png</value>
 		<value condition="Skin.String(Custom1Tile2,Top100)">tiles/top100.png</value>
 		<value condition="Skin.String(Custom1Tile2,PictureAddons)">tiles/picture_addons.png</value>
@@ -1539,7 +1535,7 @@
 	<variable name="Custom1Tile3.Image">	
 		<value condition="Skin.String(Custom1Tile3,3DMovies)">tiles/3Dglasses.png</value>
 		<value condition="Skin.String(Custom1Tile3,HDMovies)">tiles/HD.png</value>
-		<value condition="Skin.String(Custom1Tile3,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(Custom1Tile3,VideoFiles)">DefaultMovies.png</value>
 		<value condition="Skin.String(Custom1Tile3,Playlists)">tiles/playlist.png</value>
 		<value condition="Skin.String(Custom1Tile3,VideoAddons)">tiles/video_addons.png</value>
 		<value condition="Skin.String(Custom1Tile3,Genres)">tiles/genres.png</value>
@@ -1553,7 +1549,7 @@
 		<value condition="Skin.String(Custom1Tile3,Adv.Launcher)">tiles/games.png</value>
 		<value condition="Skin.String(Custom1Tile3,NextAired)">tiles/tvguide.png</value>
 		<value condition="Skin.String(Custom1Tile3,MusicAddons)">tiles/music_addons.png</value>
-		<value condition="Skin.String(Custom1Tile3,MusicFiles)">defaults/DefaultMusicPlugins.png</value>
+		<value condition="Skin.String(Custom1Tile3,MusicFiles)">DefaultMusicPlugins.png</value>
 		<value condition="Skin.String(Custom1Tile3,PartyMode)">tiles/party.png</value>
 		<value condition="Skin.String(Custom1Tile3,Top100)">tiles/top100.png</value>
 		<value condition="Skin.String(Custom1Tile3,PictureAddons)">tiles/picture_addons.png</value>
@@ -1619,7 +1615,7 @@
 	<variable name="Custom1Tile4.Image">	
 		<value condition="Skin.String(Custom1Tile4,3DMovies)">tiles/3Dglasses.png</value>
 		<value condition="Skin.String(Custom1Tile4,HDMovies)">tiles/HD.png</value>
-		<value condition="Skin.String(Custom1Tile4,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(Custom1Tile4,VideoFiles)">DefaultMovies.png</value>
 		<value condition="Skin.String(Custom1Tile4,Playlists)">tiles/playlist.png</value>
 		<value condition="Skin.String(Custom1Tile4,VideoAddons)">tiles/video_addons.png</value>
 		<value condition="Skin.String(Custom1Tile4,Genres)">tiles/genres.png</value>
@@ -1633,7 +1629,7 @@
 		<value condition="Skin.String(Custom1Tile4,Adv.Launcher)">tiles/games.png</value>
 		<value condition="Skin.String(Custom1Tile4,NextAired)">tiles/tvguide.png</value>
 		<value condition="Skin.String(Custom1Tile4,MusicAddons)">tiles/music_addons.png</value>
-		<value condition="Skin.String(Custom1Tile4,MusicFiles)">defaults/DefaultMusicPlugins.png</value>
+		<value condition="Skin.String(Custom1Tile4,MusicFiles)">DefaultMusicPlugins.png</value>
 		<value condition="Skin.String(Custom1Tile4,PartyMode)">tiles/party.png</value>
 		<value condition="Skin.String(Custom1Tile4,Top100)">tiles/top100.png</value>
 		<value condition="Skin.String(Custom1Tile4,PictureAddons)">tiles/picture_addons.png</value>
@@ -1699,7 +1695,7 @@
 	<variable name="Custom1Tile5.Image">	
 		<value condition="Skin.String(Custom1Tile5,3DMovies)">tiles/3Dglasses.png</value>
 		<value condition="Skin.String(Custom1Tile5,HDMovies)">tiles/HD.png</value>
-		<value condition="Skin.String(Custom1Tile5,VideoFiles)">defaults/DefaultMovies.png</value>
+		<value condition="Skin.String(Custom1Tile5,VideoFiles)">DefaultMovies.png</value>
 		<value condition="Skin.String(Custom1Tile5,Playlists)">tiles/playlist.png</value>
 		<value condition="Skin.String(Custom1Tile5,VideoAddons)">tiles/video_addons.png</value>
 		<value condition="Skin.String(Custom1Tile5,Genres)">tiles/genres.png</value>
@@ -1713,7 +1709,7 @@
 		<value condition="Skin.String(Custom1Tile5,Adv.Launcher)">tiles/games.png</value>
 		<value condition="Skin.String(Custom1Tile5,NextAired)">tiles/tvguide.png</value>
 		<value condition="Skin.String(Custom1Tile5,MusicAddons)">tiles/music_addons.png</value>
-		<value condition="Skin.String(Custom1Tile5,MusicFiles)">defaults/DefaultMusicPlugins.png</value>
+		<value condition="Skin.String(Custom1Tile5,MusicFiles)">DefaultMusicPlugins.png</value>
 		<value condition="Skin.String(Custom1Tile5,PartyMode)">tiles/party.png</value>
 		<value condition="Skin.String(Custom1Tile5,Top100)">tiles/top100.png</value>
 		<value condition="Skin.String(Custom1Tile5,PictureAddons)">tiles/picture_addons.png</value>
@@ -1794,6 +1790,45 @@
 	<variable name="Trakt_PremieringShows_TextColor">
 		<value condition="ControlGroup(10000).HasFocus(10004) + Control.HasFocus(10004)">Accent</value>
 		<value>White</value>
+	</variable>
+	
+	<variable name="Common_SubHeader">
+		<value condition="Container.Content(albums)">$INFO[ListItem.Artist]</value>
+		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Version)] $INFO[ListItem.Property(Addon.Creator)]</value>
+		<value condition="[SubString(Container.FolderPath,addons,left) | SubString(Container.FolderPath,plugin,left)] + IsEmpty(ListItem.Property(Addon.Version))">$INFO[ListItem.Studio]</value>
+		<value>$INFO[ListItem.Label2]</value>
+	</variable>
+
+	<variable name="Common_Plot">
+		<value condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | SubString(Container.FolderPath,addons,left) | SubString(Container.FolderPath,plugin,left)] + !IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.PlotOutline]</value>
+		<value condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | SubString(Container.FolderPath,addons,left) | SubString(Container.FolderPath,plugin,left)] + !IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
+		<value condition="[SubString(Container.FolderPath,addons,left) | SubString(Container.FolderPath,plugin,left)] + IsEmpty(ListItem.Plot)">$INFO[ListItem.Property(Addon.Description)]</value>
+		<value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
+		<value condition="Container.Content(albums) + !IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
+		<value condition="Container.Content(seasons)">$INFO[Container.ShowPlot]</value>
+		<value>$LOCALIZE[31245]</value>
+	</variable>
+	
+	<variable name="Common_Details">
+		<value condition="Container.Content(movies)">$INFO[ListItem.Year] $INFO[ListItem.Studio]</value>
+		<value condition="Container.Content(tvshows)">$INFO[ListItem.Studio]</value>
+		<value condition="Container.Content(seasons)">$INFO[ListItem.Property(TotalEpisodes),, Episodes]</value>
+		<value condition="Container.Content(episodes) + StringCompare(Container.FolderPath,videodb://5/)">$INFO[ListItem.TVShowTitle]</value>
+		<value condition="Container.Content(episodes)">$INFO[ListItem.Premiered,$LOCALIZE[31175] ,]</value>
+		<value condition="Container.Content(artists)">$INFO[ListItem.NumItems] $LOCALIZE[132]</value>
+		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Version)] $INFO[ListItem.Property(Addon.Creator)]</value>
+		<value condition="[SubString(Container.FolderPath,addons,left) | SubString(Container.FolderPath,plugin,left)] + IsEmpty(ListItem.Property(Addon.Version))">$INFO[ListItem.Studio]</value>
+		<value>$INFO[ListItem.Label2]</value>
+	</variable>
+	
+	<variable name="Common_Fallback">
+		<value condition="Container.Content(movies) + !stringcompare(ListItem.Label,..)">DefaultMovies.png</value>
+		<value condition="[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !stringcompare(ListItem.Label,..)">DefaultTVShows.png</value>
+		<value condition="Container.Content(artists) + !stringcompare(ListItem.Label,..)">DefaultArtist.png</value>
+		<value condition="[Container.Content(albums) | Container.Content(songs)] + !stringcompare(ListItem.Label,..)">DefaultAlbumCover.png</value>
+		<value condition="[Container.Content(files) | Container.Content(addons)] + !stringcompare(ListItem.Label,..)">DefaultAddon.png</value>
+		<value condition="StringCompare(Window.Property(xmlfile),MyPrograms.xml) + !stringcompare(ListItem.Label,..)">DefaultProgram.png</value>
+		<value condition="stringcompare(ListItem.Label,..)">DefaultFolderBack.png</value>		
 	</variable>
 	
 </includes>

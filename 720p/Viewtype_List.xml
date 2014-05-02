@@ -47,7 +47,7 @@
 							<height>375</height>
 							<fadetime>100</fadetime>
 							<aspectratio align="right" aligny="top">stretch</aspectratio>
-							<texture fallback="defaults/DefaultVideo.png">$INFO[ListItem.Art(poster)]</texture>
+							<texture fallback="DefaultVideo.png">$INFO[ListItem.Art(poster)]</texture>
 							<bordertexture colordiffuse="Keyback1">colors/color_white.png</bordertexture>
 						</control>
 
@@ -72,7 +72,7 @@
 							<height>375</height>
 							<fadetime>100</fadetime>
 							<aspectratio align="right" aligny="top">keep</aspectratio>
-							<texture>defaults/DefaultFolderBack.png</texture>
+							<texture>DefaultFolderBack.png</texture>
 							<visible>stringcompare(ListItem.Label,..)</visible>
 						</control>
 
@@ -89,7 +89,7 @@
 							<height>375</height>
 							<fadetime>100</fadetime>
 							<aspectratio align="right" aligny="top">stretch</aspectratio>
-							<texture fallback="defaults/DefaultAddonNone.png">$INFO[ListItem.Icon]</texture>
+							<texture fallback="DefaultAddonNone.png">$INFO[ListItem.Icon]</texture>
 							<bordertexture colordiffuse="Keyback1">colors/color_white.png</bordertexture>
 						</control>
 						
@@ -98,7 +98,7 @@
 							<height>375</height>
 							<fadetime>100</fadetime>
 							<aspectratio align="right" aligny="top">stretch</aspectratio>
-							<texture>defaults/DefaultFolderBack.png</texture>
+							<texture>DefaultFolderBack.png</texture>
 							<bordertexture colordiffuse="Keyback1">colors/color_white.png</bordertexture>
 							<visible>stringcompare(ListItem.Label,..)</visible>
 						</control>
@@ -133,8 +133,16 @@
 									<posx>20</posx>
 									<width>450</width>
 									<font>font22</font>
+									<label>$LOCALIZE[31194]</label>
+									<visible>stringcompare(ListItem.Label,..)</visible>
+								</control>
+
+								<control type="label">
+									<posx>20</posx>
+									<width>450</width>
+									<font>font22</font>
 									<label>$INFO[ListItem.Label][COLOR Accent]$INFO[ListItem.Year, (,)][/COLOR]</label>
-									<visible>![ListItem.IsFolder + Container.Content(movies)]</visible>
+									<visible>![ListItem.IsFolder + Container.Content(movies)] + !stringcompare(ListItem.Label,..)</visible>
 								</control>
 								
 								<control type="label">
@@ -143,7 +151,7 @@
 									<font>font22</font>
 									<label>$INFO[ListItem.Label]</label>
 									<scroll>true</scroll>
-									<visible>ListItem.IsFolder + Container.Content(movies)</visible>
+									<visible>ListItem.IsFolder + Container.Content(movies) + !stringcompare(ListItem.Label,..)</visible>
 								</control>
 								
 								<control type="image">
@@ -188,8 +196,16 @@
 									<posx>20</posx>
 									<width>450</width>
 									<font>font22</font>
+									<label>$LOCALIZE[31194]</label>
+									<visible>stringcompare(ListItem.Label,..)</visible>
+								</control>
+
+								<control type="label">
+									<posx>20</posx>
+									<width>450</width>
+									<font>font22</font>
 									<label>[COLOR White]$INFO[ListItem.Label]$INFO[ListItem.Year, (,)][/COLOR]</label>
-									<visible>![ListItem.IsFolder + Container.Content(movies)]</visible>
+									<visible>![ListItem.IsFolder + Container.Content(movies)] + !stringcompare(ListItem.Label,..)</visible>
 									<scroll>true</scroll>
 								</control>
 								
@@ -199,7 +215,7 @@
 									<font>font22</font>
 									<label>$INFO[ListItem.Label]</label>
 									<scroll>true</scroll>
-									<visible>ListItem.IsFolder + Container.Content(movies)</visible>
+									<visible>ListItem.IsFolder + Container.Content(movies) + !stringcompare(ListItem.Label,..)</visible>
 								</control>
 								
 								<control type="image">
@@ -346,7 +362,7 @@
 
 						<control type="textbox">
 							<include>Common_List_Plot</include>
-							<info>ListItem.Plot</info>
+							<label>$VAR[Common_Plot]</label>
 						</control>
 						
 						<control type="grouplist">
@@ -498,63 +514,11 @@
 
 					   <control type="textbox">
 							<include>Common_List_Plot2</include>
-							<info>ListItem.Property(Addon.Description)</info>
-						</control>
-						
-						<control type="textbox">
-							<include>Common_List_Plot2</include>
-							<info>ListItem.Property(Artist_Description)</info>
-						</control>
-						
-						<control type="textbox">
-							<include>Common_List_Plot2</include>
-							<info>ListItem.Property(Album_Description)</info>
+							<label>$VAR[Common_Plot]</label>
 						</control>
 						
 					</control>
 
-				</control>
-
-				<control type="group">
-					<visible>Skin.HasSetting(UseNextAiredScript)</visible>
-					<posx>60</posx>
-					<posy>380</posy>
-					<visible>!IsEmpty(Window(Home).Property(NextAired.Label)) + !stringcompare(ListItem.Label,..) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + !IsEmpty(ListItem.TVShowTitle) + !IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
-
-					<control type="image">
-						<width>1175</width>
-						<height>40</height>
-						<include>Common_Color_Accent</include>
-					</control>
-					
-					<control type="image">
-						<posx>10</posx>
-						<posy>5</posy>
-						<width>30</width>
-						<height>30</height>
-						<texture>tiles/tv.png</texture>
-						<visible>Container.Content(TVShows) | Container.Content(Seasons)</visible>
-					</control>
-					
-					<control type="label">
-						<posx>50</posx>
-						<width>530</width>
-						<height>40</height>
-						<font>font20UB</font>
-						<label>$LOCALIZE[31173]</label>
-						<visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
-					</control>
-					
-					<control type="label">
-						<posx>200</posx>
-						<width>965</width>
-						<height>40</height>
-						<font>font20</font>
-						<scroll>true</scroll>
-						<label>"$INFO[Window(Home).Property(NextAired.NextTitle)]" $LOCALIZE[31177] $INFO[Window(Home).Property(NextAired.NextDate)] - $INFO[Window(Home).Property(NextAired.AirTime)]</label>
-						<visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
-					</control>
-					
 				</control>
 
 			</control>

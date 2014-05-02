@@ -318,7 +318,7 @@
 						<posy>60</posy>
 						<width>400</width>
 						<height>400</height>
-						<texture fallback="defaults/DefaultAlbumCover.png">$INFO[ListItem.Icon]</texture>
+						<texture fallback="DefaultAlbumCover.png">$INFO[ListItem.Icon]</texture>
 						<visible>Container.Content(albums)</visible>
 					</control>
 					
@@ -445,7 +445,7 @@
 							<control type="image">							
 								<width>240</width>
 								<height>240</height>
-								<texture background="true" fallback="defaults/DefaultAlbumCover.png">$INFO[ListItem.Icon]</texture>
+								<texture background="true" fallback="DefaultAlbumCover.png">$INFO[ListItem.Icon]</texture>
 								<aspectratio>scale</aspectratio>								
 							</control>
 							
@@ -487,7 +487,7 @@
 							<control type="image">							
 								<width>240</width>
 								<height>240</height>
-								<texture background="true" fallback="defaults/DefaultAlbumCover.png">$INFO[ListItem.Icon]</texture>
+								<texture background="true" fallback="DefaultAlbumCover.png">$INFO[ListItem.Icon]</texture>
 								<aspectratio>scale</aspectratio>								
 							</control>
 							

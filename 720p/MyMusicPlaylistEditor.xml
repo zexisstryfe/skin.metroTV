@@ -80,7 +80,7 @@
 						<posy>5</posy>
 						<width>30</width>
 						<height>30</height>
-						<texture fallback="defaults/DefaultFile.png">$INFO[Listitem.Icon]</texture>
+						<texture fallback="DefaultFile.png">$INFO[Listitem.Icon]</texture>
 					</control>
 
 					<control type="label">
@@ -122,7 +122,7 @@
 						<posy>5</posy>
 						<width>30</width>
 						<height>30</height>
-						<texture fallback="defaults/DefaultFile.png">$INFO[Listitem.Icon]</texture>
+						<texture fallback="DefaultFile.png">$INFO[Listitem.Icon]</texture>
 					</control>
 
 					<control type="label">
@@ -184,7 +184,7 @@
 				<width>220</width>
 				<height>200</height>
 				<aspectratio>keep</aspectratio>
-				<texture fallback="defaults/DefaultAlbumCover.png">$INFO[Container(50).ListItem.Icon]</texture>
+				<texture fallback="DefaultAlbumCover.png">$INFO[Container(50).ListItem.Icon]</texture>
 				<bordertexture border="5" colordiffuse="Keyback2">colors/color_white.png</bordertexture>
 				<bordersize>8</bordersize>
 				<visible>Control.HasFocus(50)</visible>
@@ -196,7 +196,7 @@
 				<width>220</width>
 				<height>200</height>
 				<aspectratio>keep</aspectratio>
-				<texture fallback="defaults/DefaultAlbumCover.png">$INFO[Container(100).ListItem.Icon]</texture>
+				<texture fallback="DefaultAlbumCover.png">$INFO[Container(100).ListItem.Icon]</texture>
 				<bordertexture border="5" colordiffuse="Keyback2">colors/color_white.png</bordertexture>
 				<bordersize>8</bordersize>
 				<visible>Control.HasFocus(100)</visible>
@@ -534,7 +534,7 @@
 						<posy>5</posy>
 						<width>30</width>
 						<height>30</height>
-						<texture fallback="defaults/DefaultFile.png">$INFO[Listitem.Icon]</texture>
+						<texture fallback="DefaultFile.png">$INFO[Listitem.Icon]</texture>
 					</control>
 
 					<control type="label">
@@ -576,7 +576,7 @@
 						<posy>5</posy>
 						<width>30</width>
 						<height>30</height>
-						<texture fallback="defaults/DefaultFile.png">$INFO[Listitem.Icon]</texture>
+						<texture fallback="DefaultFile.png">$INFO[Listitem.Icon]</texture>
 					</control>
 
 					<control type="label">

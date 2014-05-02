@@ -60,46 +60,7 @@
 				<height>540</height>
 				<include>Common_Color_Keyback2</include>
 			</control>
-			
-			<control type="group">
-				<visible>Control.IsVisible(53)</visible>
-				<visible>Skin.HasSetting(UseNextAiredScript)</visible>
-				<posy>-40</posy>
-				<visible>!IsEmpty(Window(Home).Property(NextAired.Label)) + !stringcompare(ListItem.Label,..) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + !IsEmpty(ListItem.TVShowTitle) + !IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
-
-				<control type="image">
-					<width>780</width>
-					<height>40</height>
-					<include>Common_Color_Accent</include>
-				</control>
-				
-				<control type="image">
-					<posx>20</posx>
-					<posy>5</posy>
-					<width>30</width>
-					<height>30</height>
-					<texture>tiles/tv.png</texture>
-				</control>
-				
-				<control type="label">
-					<posx>60</posx>
-					<width>590</width>
-					<height>40</height>
-					<font>font20UB</font>
-					<label>[B]$LOCALIZE[31173][/B]</label>
-				</control>
-				
-				<control type="label">
-					<posx>220</posx>
-					<width>550</width>
-					<height>40</height>
-					<font>font20</font>
-					<scroll>true</scroll>
-					<label>"$INFO[Window(Home).Property(NextAired.NextTitle)]" $LOCALIZE[31177] $INFO[Window(Home).Property(NextAired.NextDate)] - $INFO[Window(Home).Property(NextAired.AirTime)]</label>
-				</control>
-				
-			</control>
-						
+								
 			<control type="list" id="53">
 				<posx>260</posx>
 				<posy>70</posy>
@@ -183,6 +144,20 @@
 				</focusedlayout>
 
 			</control>
+			
+			<control type="image">
+				<posx>20</posx>
+				<posy>20</posy>
+				<width>220</width>
+				<height>200</height>
+				<align>right</align>
+				<fadetime>500</fadetime>
+				<aspectratio>keep</aspectratio>
+				<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
+				<bordersize>5</bordersize>
+				<texture>$VAR[Common_Fallback]</texture>
+				<visible>IsEmpty(ListItem.Art(thumb))</visible>
+			</control>
 	
 			<control type="image">
 				<posx>20</posx>
@@ -194,7 +169,7 @@
 				<aspectratio>keep</aspectratio>
 				<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
 				<bordersize>5</bordersize>
-				<texture fallback="defaults/DefaultAlbumCover.png">$INFO[ListItem.Icon]</texture>
+				<texture>$INFO[ListItem.Icon]</texture>
 				<visible>!IsEmpty(ListItem.Icon) + Container.Content(songs)</visible>
 			</control>
 			
@@ -208,22 +183,8 @@
 				<aspectratio>keep</aspectratio>
 				<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
 				<bordersize>5</bordersize>
-				<texture fallback="splash/splash_tvshows.png">$INFO[ListItem.Art(thumb)]</texture>
+				<texture>$INFO[ListItem.Art(thumb)]</texture>
 				<visible>!IsEmpty(ListItem.Art(thumb)) + Container.Content(episodes)</visible>
-			</control>
-			
-			<control type="image">
-				<posx>20</posx>
-				<posy>20</posy>
-				<width>220</width>
-				<height>220</height>
-				<align>right</align>
-				<fadetime>500</fadetime>
-				<aspectratio>keep</aspectratio>
-				<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
-				<bordersize>5</bordersize>
-				<texture>defaults/DefaultFolderBack.png</texture>
-				<visible>stringcompare(ListItem.Label,..)</visible>
 			</control>
 			
 			<control type="image">
@@ -234,6 +195,17 @@
 				<texture>flags/ratings/$INFO[ListItem.StarRating]</texture>
 				<visible>!IsEmpty(ListItem.Title) + Container.Content(episodes)</visible>
 				<aspectratio>keep</aspectratio>
+			</control>
+			
+			<control type="label">
+				<posx>20</posx>
+				<posy>220</posy>
+				<width>220</width>
+				<font>font22UB</font>
+				<height>30</height>
+				<textcolor>Accent</textcolor>
+				<label>[B]$LOCALIZE[31194][/B]</label>				
+				<visible>stringcompare(ListItem.Label,..)</visible>
 			</control>
 			
 			<control type="label">
@@ -259,24 +231,12 @@
 				<visible>!stringcompare(ListItem.Label,..)</visible>
 			</control>
 			
-			<control type="label">
-				<posx>240</posx>
-				<posy>270</posy>
-				<width>220</width>
-				<height>17</height>
-				<align>right</align>
-				<textcolor>Accent</textcolor>
-				<font>font26L</font>
-				<label>$LOCALIZE[31194]</label>				
-				<visible>stringcompare(ListItem.Label,..)</visible>
-			</control>
-			
 			<control type="textbox">
 				<posx>20</posx>
 				<posy>300</posy>
 				<width>220</width>
 				<height>210</height>
-				<info>ListItem.Plot</info>
+				<label>$VAR[Common_Plot]</label>
 				<align>justify</align>
 				<autoscroll time="3000" delay="6000" repeat="8000"></autoscroll>
 				<font>font18</font>

@@ -69,13 +69,23 @@
 							<height>240</height>
 							<include>Common_Color_Keyback1</include>
 						</control>
+
+						<control type="image">
+							<posx>1</posx>
+							<posy>131</posy>
+							<width>240</width>
+							<height>240</height>
+							<texture>$VAR[Common_Fallback]</texture>
+							<fadetime>200</fadetime>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+						</control>
 						
 						<control type="image">
 							<posx>1</posx>
 							<posy>131</posy>
 							<width>240</width>
 							<height>240</height>
-							<texture background="true" fallback="defaults/DefaultAlbumCover.png">$INFO[ListItem.Icon]</texture>
+							<texture background="true" fallback="DefaultAlbumCover.png">$INFO[ListItem.Icon]</texture>
 							<fadetime>200</fadetime>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 							<visible>!stringcompare(ListItem.Label,..) + Container.Content(Albums)</visible>
@@ -86,21 +96,10 @@
 							<posy>131</posy>
 							<width>240</width>
 							<height>240</height>
-							<texture background="true" fallback="defaults/DefaultArtist.png">$INFO[ListItem.Icon]</texture>
+							<texture background="true" fallback="DefaultArtist.png">$INFO[ListItem.Icon]</texture>
 							<fadetime>200</fadetime>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 							<visible>!stringcompare(ListItem.Label,..) + Container.Content(Artists)</visible>
-						</control>
-						
-						<control type="image">
-							<posx>1</posx>
-							<posy>131</posy>
-							<width>240</width>
-							<height>240</height>
-							<texture>defaults/DefaultFolderBack.png</texture>
-							<fadetime>200</fadetime>
-							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<visible>stringcompare(ListItem.Label,..)</visible>
 						</control>
 						
 					</control>
@@ -114,14 +113,25 @@
 						<animation effect="slide" start="0,0" end="-470,0" time="600" delay="2800" condition="[Container.Content(artists) | Container.Content(albums)] + ![Container(57).OnNext | Container(57).OnPrevious]">Conditional</animation>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
-						</animation>				
+						</animation>	
+
+						<control type="image">
+							<posx>2</posx>
+							<posy>90</posy>
+							<width>315</width>
+							<height>315</height>
+							<texture>$VAR[Common_Fallback]</texture>
+							<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
+							<bordersize>2</bordersize>
+							<aspectratio scalediffuse="false">keep</aspectratio>
+						</control>						
 						
 						<control type="image">
 							<posx>2</posx>
 							<posy>90</posy>
 							<width>315</width>
 							<height>315</height>
-							<texture background="true" fallback="defaults/DefaultAlbumCover.png">$INFO[ListItem.Icon]</texture>
+							<texture background="true" fallback="DefaultAlbumCover.png">$INFO[ListItem.Icon]</texture>
 							<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 							<bordersize>2</bordersize>
@@ -133,23 +143,11 @@
 							<posy>90</posy>
 							<width>315</width>
 							<height>315</height>
-							<texture background="true" fallback="defaults/DefaultArtist.png">$INFO[ListItem.Icon]</texture>
+							<texture background="true" fallback="DefaultArtist.png">$INFO[ListItem.Icon]</texture>
 							<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 							<bordersize>2</bordersize>
 							<visible>!stringcompare(ListItem.Label,..) + Container.Content(Artists)</visible>
-						</control>
-						
-						<control type="image">
-							<posx>2</posx>
-							<posy>90</posy>
-							<width>315</width>
-							<height>315</height>
-							<texture>defaults/DefaultFolderBack.png</texture>
-							<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
-							<bordersize>2</bordersize>
-							<aspectratio scalediffuse="false">keep</aspectratio>
-							<visible>stringcompare(ListItem.Label,..)</visible>
 						</control>
 						
 					</control>
@@ -235,23 +233,10 @@
 					<posy>385</posy>
 					<width>260</width>
 					<height>235</height>
-					<info>ListItem.Property(Artist_Description)</info>
+					<label>$VAR[Common_Plot]</label>
 					<align>justify</align>
 					<autoscroll time="3000" delay="6000" repeat="8000"></autoscroll>
 					<font>font18</font>
-					<visible>Container.Content(artists)</visible>
-				</control>
-				
-				<control type="textbox">
-					<posx>988</posx>
-					<posy>385</posy>
-					<width>260</width>
-					<height>235</height>
-					<info>ListItem.Property(Album_Description)</info>
-					<align>justify</align>
-					<autoscroll time="3000" delay="6000" repeat="8000"></autoscroll>
-					<font>font18</font>
-					<visible>Container.Content(albums)</visible>
 				</control>
 
 			</control>
@@ -274,21 +259,26 @@
 		<control type="image">
 			<description>outline</description>
 			<posx>99</posx>
-			<posy>699</posy>
+			<posy>729</posy>
 			<width>1082</width>
 			<include>Common_Scroll_OutlineH</include>
-			<visible>Control.HasFocus(68)</visible>
+			<visible>Control.IsVisible(57)</visible>
+			<animation effect="slide" start="0,0" end="0,-30" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(68)">Conditional</animation>
 		</control>
 		
 		<control type="scrollbar" id="68">
+			<include>Animation_ZoomInZoomOut</include>
 			<posx>100</posx>
-			<posy>700</posy>
+			<posy>730</posy>
 			<width>1080</width>
 			<height>5</height>
-			<onup>57</onup>
+			<onup>591</onup>
 			<ondown>9000</ondown>
+			<showonepage>false</showonepage>
 			<orientation>horizontal</orientation>
+			<include>Animation_CommonFade</include>
 			<visible>Control.IsVisible(57)</visible>
+			<animation effect="slide" start="0,0" end="0,-30" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(68)">Conditional</animation>
 		</control>
 		
 	</include>

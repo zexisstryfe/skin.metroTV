@@ -28,7 +28,7 @@
 					<height>240</height>
 					<fadetime>100</fadetime>
 					<aspectratio align="left" aligny="center">stretch</aspectratio>
-					<texture fallback="defaults/DefaultVideo.png">$INFO[VideoPlayer.Cover]</texture>
+					<texture fallback="DefaultVideo.png">$INFO[VideoPlayer.Cover]</texture>
 					<visible>!IsEmpty(VideoPlayer.Cover)</visible>
 					<visible>VideoPlayer.Content(Movies) | VideoPlayer.Content(MusicVideos)</visible>
 				</control>
@@ -38,7 +38,7 @@
 					<height>240</height>
 					<fadetime>100</fadetime>
 					<aspectratio align="left" aligny="center">stretch</aspectratio>
-					<texture fallback="defaults/DefaultVideo.png">$INFO[Player.Art(tvshow.poster)]</texture>
+					<texture fallback="DefaultVideo.png">$INFO[Player.Art(tvshow.poster)]</texture>
 					<visible>!IsEmpty(Player.Art(tvshow.poster))</visible>
 					<visible>VideoPlayer.Content(Episodes)</visible>
 				</control>

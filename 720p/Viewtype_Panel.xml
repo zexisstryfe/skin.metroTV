@@ -4,166 +4,172 @@
 	
 		<control type="group">
 			<visible>Control.IsVisible(54)</visible>
-			
+						
 			<control type="image">
 				<include>Dimensions_Fullscreen</include>
 				<texture background="true">backings/music_fanart_diffuse.png</texture>
 				<visible>Skin.HasSetting(UseFanartOverlay)</visible>
 			</control>
 			
-			<include>Common_TopBar</include>		
+			<include>Common_TopBar</include>
+
+			<control type="group">			
+				<include>Animation_Slide_Right</include>
 		
-			<control type="panel" id="54">
-				<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + !Container.Content(Genres)</visible>
-				<posx>500</posx>
-				<posy>170</posy>
-				<width>800</width>
-				<height>500</height>
-				<scrolltime>300</scrolltime>
-				<orientation>horizontal</orientation>
-				<viewtype label="Panel">Panel</viewtype>
-				<onleft>9000</onleft>
-				<onright>54</onright>
-				<onup>54</onup>
-				<ondown>66</ondown>
-				<preloaditems>2</preloaditems>
-				<pagecontrol>66</pagecontrol>
-				<itemlayout width="175" height="250">
-				
-					<control type="group">
-						<posx>60</posx>
-						<posy>16</posy>
-						
-						<control type="image">
-							<posx>1</posx>
-							<width>155</width>
-							<height>230</height>
-							<include>Common_Color_Keyback1</include>
-							<fadetime>200</fadetime>
-							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<visible>!Container.Content(Genres)</visible>
-						</control>
-						
-						<control type="image">
-							<posx>1</posx>
-							<width>155</width>
-							<height>230</height>
-							<texture background="true" fallback="defaults/DefaultAddonNone.png">$INFO[ListItem.Art(poster)]</texture>
-							<fadetime>200</fadetime>
-							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<visible>!Container.Content(Genres) + !stringcompare(ListItem.Label,..)</visible>
-						</control>
-						
-						<control type="image">
-							<visible>!Container.Content(Genres) + stringcompare(ListItem.Label,..)</visible>
-							<posx>1</posx>
-							<width>155</width>
-							<height>230</height>
-							<texture>defaults/DefaultFolderBack.png</texture>
-							<fadetime>100</fadetime>
-							<aspectratio scalediffuse="false">keep</aspectratio>
-						</control>
-						
-						<control type="image">
-							<posx>1</posx>
-							<width>155</width>
-							<height>31</height>
-							<texture>general/movieset.png</texture>
-							<visible>ListItem.IsFolder + Container.Content(movies)</visible>
-							<visible>Skin.HasSetting(UseMovieset)</visible>
-							<visible>!stringcompare(ListItem.Label,..)</visible>
-						</control>
-						
-						<control type="image">
-							<posx>121</posx>
-							<posy>5</posy>
-							<height>30</height>
-							<width>30</width>
-							<texture>watched/check.png</texture>
-							<visible>[Container.Content(movies) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(TVShows) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(episodes) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(seasons) + stringcompare(ListItem.Overlay,OverlayWatched.png)]</visible>
-						</control>
-						
-					</control>
+				<control type="panel" id="54">
+					<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + !Container.Content(Genres)</visible>
+					<posx>500</posx>
+					<posy>170</posy>
+					<width>800</width>
+					<height>500</height>
+					<scrolltime>300</scrolltime>
+					<orientation>horizontal</orientation>
+					<viewtype label="Panel">Panel</viewtype>
+					<onleft>54</onleft>
+					<onright>54</onright>
+					<onup>9000</onup>
+					<ondown>66</ondown>
+					<preloaditems>2</preloaditems>
+					<pagecontrol>66</pagecontrol>
+					<itemlayout width="175" height="250">
 					
-				</itemlayout>
-				
-				<focusedlayout width="300" height="184">
-				
-					<control type="group">
-						<posx>60</posx>
-						<posy>16</posy>
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />
-						</animation>
-						
-						<control type="image">
-							<posx>6</posx>
-							<width>155</width>
-							<height>230</height>
-							<include>Common_Color_Accent</include>
-							<fadetime>200</fadetime>
-							<aspectratio>stretch</aspectratio>
-							<visible>!Container.Content(Genres)</visible>
+						<control type="group">
+							<posx>60</posx>
+							<posy>16</posy>
+							
+							<control type="image">
+								<posx>1</posx>
+								<width>155</width>
+								<height>230</height>
+								<include>Common_Color_Keyback1</include>
+								<fadetime>200</fadetime>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+								<visible>!Container.Content(Genres)</visible>
+							</control>
+							
+							<control type="image">
+								<posx>1</posx>
+								<width>155</width>
+								<height>230</height>
+								<texture background="true" fallback="DefaultAddonNone.png">$INFO[ListItem.Art(poster)]</texture>
+								<fadetime>200</fadetime>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+								<visible>!Container.Content(Genres) + !stringcompare(ListItem.Label,..)</visible>
+							</control>
+							
+							<control type="image">
+								<visible>!Container.Content(Genres) + stringcompare(ListItem.Label,..)</visible>
+								<posx>1</posx>
+								<width>155</width>
+								<height>230</height>
+								<texture>$VAR[Common_Fallback]</texture>
+								<fadetime>100</fadetime>
+								<aspectratio scalediffuse="false">keep</aspectratio>
+								<visible>IsEmpty(ListItem.Art(poster))</visible>
+							</control>
+							
+							<control type="image">
+								<posx>1</posx>
+								<width>155</width>
+								<height>31</height>
+								<texture>general/movieset.png</texture>
+								<visible>ListItem.IsFolder + Container.Content(movies)</visible>
+								<visible>Skin.HasSetting(UseMovieset)</visible>
+								<visible>!stringcompare(ListItem.Label,..)</visible>
+							</control>
+							
+							<control type="image">
+								<posx>121</posx>
+								<posy>5</posy>
+								<height>30</height>
+								<width>30</width>
+								<texture>watched/check.png</texture>
+								<visible>[Container.Content(movies) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(TVShows) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(episodes) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(seasons) + stringcompare(ListItem.Overlay,OverlayWatched.png)]</visible>
+							</control>
+							
 						</control>
 						
-						<control type="image">
-							<posx>6</posx>
-							<width>155</width>
-							<height>230</height>
-							<texture background="true" fallback="defaults/DefaultAddonNone.png">$INFO[ListItem.Art(poster)]</texture>
-							<bordertexture colordiffuse="Accent">colors/color_white.png</bordertexture>
-							<bordersize>2</bordersize>
-							<fadetime>200</fadetime>
-							<aspectratio>stretch</aspectratio>
-							<visible>!Container.Content(Genres) + !stringcompare(ListItem.Label,..)</visible>
-						</control>
-						
-						<control type="image">
-							<visible>!Container.Content(Genres) + stringcompare(ListItem.Label,..)</visible>
-							<posx>1</posx>
-							<width>155</width>
-							<height>230</height>
-							<texture>defaults/DefaultFolderBack.png</texture>
-							<fadetime>100</fadetime>
-							<aspectratio scalediffuse="false">keep</aspectratio>
-						</control>
-						
-						<control type="image">
-							<posx>45</posx>
-							<posy>77</posy>
-							<width>75</width>
-							<height>75</height>
-							<texture>general/play_large.png</texture>
-							<visible>!Container.Content(Genres)</visible>
-							<aspectratio>scale</aspectratio>
-							<colordiffuse>Accent80</colordiffuse>
-							<visible>!ListItem.IsFolder</visible>
-						</control>
-						
-						<control type="image">
-							<posx>11</posx>
-							<posy>5</posy>
-							<width>145</width>
-							<height>29</height>
-							<texture>general/movieset.png</texture>
-							<visible>ListItem.IsFolder + Container.Content(movies)</visible>
-							<visible>Skin.HasSetting(UseMovieset)</visible>
-							<visible>!stringcompare(ListItem.Label,..)</visible>
-						</control>
-						
-						<control type="image">
-							<posx>121</posx>
-							<posy>10</posy>
-							<height>30</height>
-							<width>30</width>
-							<texture>watched/check.png</texture>
-							<visible>[Container.Content(movies) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(TVShows) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(episodes) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(seasons) + stringcompare(ListItem.Overlay,OverlayWatched.png)]</visible>
-						</control>
-						
-					</control>
+					</itemlayout>
 					
-				</focusedlayout>
-				
+					<focusedlayout width="300" height="184">
+					
+						<control type="group">
+							<posx>60</posx>
+							<posy>16</posy>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />
+							</animation>
+							
+							<control type="image">
+								<posx>6</posx>
+								<width>155</width>
+								<height>230</height>
+								<include>Common_Color_Accent</include>
+								<fadetime>200</fadetime>
+								<aspectratio>stretch</aspectratio>
+								<visible>!Container.Content(Genres)</visible>
+							</control>
+							
+							<control type="image">
+								<posx>6</posx>
+								<width>155</width>
+								<height>230</height>
+								<texture background="true" fallback="DefaultAddonNone.png">$INFO[ListItem.Art(poster)]</texture>
+								<bordertexture colordiffuse="Accent">colors/color_white.png</bordertexture>
+								<bordersize>2</bordersize>
+								<fadetime>200</fadetime>
+								<aspectratio>stretch</aspectratio>
+								<visible>!Container.Content(Genres) + !stringcompare(ListItem.Label,..)</visible>
+							</control>
+							
+							<control type="image">
+								<visible>IsEmpty(ListItem.Art(poster))</visible>
+								<posx>1</posx>
+								<width>155</width>
+								<height>230</height>
+								<texture>$VAR[Common_Fallback]</texture>
+								<fadetime>100</fadetime>
+								<aspectratio scalediffuse="false">keep</aspectratio>
+							</control>
+							
+							<control type="image">
+								<posx>45</posx>
+								<posy>77</posy>
+								<width>75</width>
+								<height>75</height>
+								<texture>general/play_large.png</texture>
+								<visible>!Container.Content(Genres)</visible>
+								<aspectratio>scale</aspectratio>
+								<colordiffuse>Accent80</colordiffuse>
+								<visible>!ListItem.IsFolder</visible>
+							</control>
+							
+							<control type="image">
+								<posx>11</posx>
+								<posy>5</posy>
+								<width>145</width>
+								<height>29</height>
+								<texture>general/movieset.png</texture>
+								<visible>ListItem.IsFolder + Container.Content(movies)</visible>
+								<visible>Skin.HasSetting(UseMovieset)</visible>
+								<visible>!stringcompare(ListItem.Label,..)</visible>
+							</control>
+							
+							<control type="image">
+								<posx>121</posx>
+								<posy>10</posy>
+								<height>30</height>
+								<width>30</width>
+								<texture>watched/check.png</texture>
+								<visible>[Container.Content(movies) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(TVShows) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(episodes) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(seasons) + stringcompare(ListItem.Overlay,OverlayWatched.png)]</visible>
+							</control>
+							
+						</control>
+						
+					</focusedlayout>
+					
+				</control>
+
 			</control>
 			
 			<control type="group">
@@ -307,13 +313,13 @@
 				<control type="group">
 				
 					<control type="textbox">
-						<visible>[Container.Content(movies) | Container.Content(tvshows)]</visible>
+						<visible>[Container.Content(movies) | Container.Content(tvshows)] + !stringcompare(ListItem.Label,..)</visible>
 						<posx>30</posx>
 						<posy>485</posy>
 						<width>500</width>
 						<height>150</height>
 						<font>font18</font>
-						<label>$INFO[ListItem.Plot]</label>
+						<label>$VAR[Common_Plot]</label>
 						<align>justify</align>
 						<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
 					</control>
@@ -465,68 +471,31 @@
 					
 				</control>
 				
-				<control type="group">
-					<visible>Skin.HasSetting(UseNextAiredScript)</visible>
-					<posx>20</posx>
-					<posy>636</posy>
-					<visible>!IsEmpty(Window(Home).Property(NextAired.Label)) + !stringcompare(ListItem.Label,..) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + !IsEmpty(ListItem.TVShowTitle) + !IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
-
-					
-					<control type="image">
-						<width>520</width>
-						<height>30</height>
-						<include>Common_Color_Accent</include>
-					</control>
-					
-					<control type="image">
-						<posx>10</posx>
-						<posy>3</posy>
-						<width>22</width>
-						<height>22</height>
-						<texture>tiles/tv.png</texture>
-						<visible>Container.Content(TVShows) | Container.Content(Seasons)</visible>
-					</control>
-					
-					<control type="label">
-						<posx>40</posx>
-						<width>465</width>
-						<height>30</height>
-						<font>font20UB</font>
-						<label>[B]$LOCALIZE[31173][/B]</label>
-						<visible>Container.Content(TVShows) | Container.Content(Seasons)</visible>
-					</control>
-					
-					<control type="label">
-						<posx>195</posx>
-						<width>320</width>
-						<height>30</height>
-						<font>font20</font>
-						<scroll>true</scroll>
-						<label>"$INFO[Window(Home).Property(NextAired.NextTitle)]" $LOCALIZE[31177] $INFO[Window(Home).Property(NextAired.NextDate)] - $INFO[Window(Home).Property(NextAired.AirTime)]</label>
-						<visible>Container.Content(TVShows) | Container.Content(Seasons)</visible>
-					</control>
-					
-				</control>
-				
-				<control type="image">
-					<description>outline</description>
-					<posx>19</posx>
-					<posy>685</posy>
-					<width>1242</width>
-					<include>Common_Scroll_OutlineH</include>
-					<visible>Control.HasFocus(66)</visible>
-				</control>
-				
-				<control type="scrollbar" id="66">
-					<posx>20</posx>
-					<posy>686</posy>
-					<width>1240</width>
-					<height>5</height>
-					<onup>54</onup>
-					<ondown>9000</ondown>
-					<orientation>horizontal</orientation>
-				</control>
-				
+			</control>
+			
+			<control type="image">
+				<description>outline</description>
+				<include>Animation_ZoomInZoomOut</include>
+				<animation effect="slide" start="0,0" end="0,-220" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(66)">Conditional</animation>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<posx>99</posx>
+				<posy>909</posy>
+				<width>1082</width>
+				<include>Common_Scroll_OutlineH</include>
+				<visible>Control.HasFocus(66)</visible>
+			</control>
+			
+			<control type="scrollbar" id="66">
+				<include>Animation_ZoomInZoomOut</include>
+				<posx>100</posx>
+				<posy>910</posy>
+				<width>1080</width>
+				<height>5</height>
+				<onup>54</onup>
+				<ondown>9000</ondown>
+				<showonepage>true</showonepage>
+				<orientation>horizontal</orientation>
+				<animation effect="slide" start="0,0" end="0,-220" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(66)">Conditional</animation>
 			</control>
 			
 		</control>	

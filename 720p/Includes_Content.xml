@@ -125,7 +125,7 @@
 			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],MusicFiles)</onclick>
 			<include>Content_Clear</include>
 			<onclick>Dialog.Close(200)</onclick>
-			<icon>defaults/DefaultMusicSongs.png</icon>
+			<icon>DefaultMusicSongs.png</icon>
 		</item>
 		<item id="915">
 			<label>$LOCALIZE[31183]</label>
@@ -269,7 +269,7 @@
 			<onclick>Skin.SetString($INFO[Skin.String(TileSelector_Temp)],VideoFiles)</onclick>
 			<include>Content_Clear</include>
 			<onclick>Dialog.Close(200)</onclick>
-			<icon>defaults/DefaultMovies.png</icon>
+			<icon>DefaultMovies.png</icon>
 		</item>
 		<!--<item id="933">
 			<label>$LOCALIZE[31016]</label>

@@ -16,7 +16,7 @@
 	<string id="31013">all recent</string>
 	<string id="31014">update videos</string>
 	<string id="31015">all tv shows</string>
-	<string id="31016">views</string>
+	<string id="31016">Views</string>
 	<string id="31017">all artists</string>
 	<string id="31018">there are no episodes airing today</string>
 	<string id="31019">update music</string>
@@ -115,7 +115,7 @@
 	<string id="31112">pause</string>
 	<string id="31113">stop</string>
 	<string id="31114">fast[CR]forward</string>
-	<string id="31115">visuals</string>
+	<string id="31115">Visuals</string>
 	<string id="31116">visual[CR]settings</string>
 	<string id="31117">visual[CR]presets</string>
 	<string id="31118">repeat[CR]off</string>
@@ -141,9 +141,9 @@
 	<string id="31138">Use background image for tiles</string>
 	<string id="31139">Use Metro-style transition animations</string>
 	<string id="31140">Fanart Overlays</string>
-	<string id="31141">enable Favourites script</string>
-	<string id="31142">enable Next Aired script</string>
-	<string id="31143">enable TVTunes script</string>
+	<string id="31141">Enable Favourites script</string>
+	<string id="31142">Enable Next Aired script</string>
+	<string id="31143">Enable TVTunes script</string>
 	<string id="31144">home menu</string>
 	<string id="31145">tile 1-</string>
 	<string id="31146">tile 2-</string>
@@ -244,5 +244,14 @@
 	<string id="31241">Upcoming Events</string>
 	<string id="31242">symbol</string>
 	<string id="31243">caps</string>
+	<string id="31244">thumbnail</string>
+	<string id="31245">No description is currently available.</string>
+	<string id="31246">custom menu</string>
+	<string id="31247">Disable alphabetic overlay when scrolling through media</string>
+	<string id="31248">Visualizations</string>
+	<string id="31249">Overlays</string>
+	<string id="31250">Transitions</string>
+	<string id="31251">Enable Trakt.TV script</string>
+	<string id="31252">General Settings</string>
 	
 </strings>

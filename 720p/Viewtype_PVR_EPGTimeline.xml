@@ -238,7 +238,7 @@
 					<posy>10</posy>
 					<width>140</width>
 					<height>140</height>
-					<texture fallback="defaults/DefaultVideo.png" background="true">$INFO[ListItem.Icon]</texture>
+					<texture fallback="DefaultVideo.png" background="true">$INFO[ListItem.Icon]</texture>
 				</control>
 
 				<control type="fadelabel">

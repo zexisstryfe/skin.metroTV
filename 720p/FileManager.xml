@@ -87,7 +87,7 @@
 						<posy>5</posy>
 						<width>30</width>
 						<height>30</height>
-						<texture fallback="defaults/DefaultFile.png">$INFO[Listitem.Icon]</texture>
+						<texture fallback="DefaultFile.png">$INFO[Listitem.Icon]</texture>
 					</control>
 
 					<control type="label">
@@ -128,7 +128,7 @@
 						<posy>5</posy>
 						<width>30</width>
 						<height>30</height>
-						<texture fallback="defaults/DefaultFile.png">$INFO[Listitem.Icon]</texture>
+						<texture fallback="DefaultFile.png">$INFO[Listitem.Icon]</texture>
 					</control>
 
 					<control type="label">
@@ -235,7 +235,7 @@
 						<posy>5</posy>
 						<width>30</width>
 						<height>30</height>
-						<texture fallback="defaults/DefaultFile.png">$INFO[Listitem.Icon]</texture>
+						<texture fallback="DefaultFile.png">$INFO[Listitem.Icon]</texture>
 					</control>
 
 					<control type="label">
@@ -276,7 +276,7 @@
 						<posy>5</posy>
 						<width>30</width>
 						<height>30</height>
-						<texture fallback="defaults/DefaultFile.png">$INFO[Listitem.Icon]</texture>
+						<texture fallback="DefaultFile.png">$INFO[Listitem.Icon]</texture>
 					</control>
 
 					<control type="label">

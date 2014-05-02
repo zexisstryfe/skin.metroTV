@@ -186,6 +186,10 @@
 			<include>Options_View_Tile</include>			
 		</control>	
 		
+		<control type="button" id="9121">			
+			<include>Options_View_Thumbnail</include>			
+		</control>	
+		
 		<!--Divider-->
 		<control type="image" id="9150">
 			<include>Common_Options_Divider</include>
@@ -313,6 +317,14 @@
 		<control type="button" id="9118">			
 			<include>Options_View_Tile</include>			
 		</control>	
+		
+		<control type="button" id="9119">			
+			<include>Options_View_Thumbnail</include>			
+		</control>	
+		
+		<control type="button" id="9120">			
+			<include>Options_View_Thumbnail_Album</include>			
+		</control>
 		
 		<!--Divider-->
 		<control type="image" id="9150">
@@ -558,6 +570,10 @@
 		
 		<control type="button" id="9111">			
 			<include>Options_View_Tile</include>			
+		</control>		
+
+		<control type="button" id="9112">			
+			<include>Options_View_Thumbnail_Album</include>			
 		</control>			
 		
 		<!--Divider-->
@@ -608,6 +624,10 @@
 		
 		<control type="button" id="9111">			
 			<include>Options_View_Tile</include>			
+		</control>			
+		
+		<control type="button" id="9111">			
+			<include>Options_View_Thumbnail_Album</include>			
 		</control>			
 		
 		<!--Divider-->
@@ -832,6 +852,24 @@
 		<label>$LOCALIZE[31084][CR]$LOCALIZE[179]</label>
 		<onclick>Container.SetViewMode(52)</onclick>
 		<visible>Container.Content(songs) | Container.Content(musicvideos)</visible>
+	</include>
+	
+	<include name="Options_View_Thumbnail">
+		<include>Common_Settings_Button</include>
+		<texturefocus>contextmenu/view_thumb_FO.png</texturefocus>
+		<texturenofocus>contextmenu/view_thumb_NF.png</texturenofocus>
+		<label>$LOCALIZE[31084][CR]$LOCALIZE[31244]</label>
+		<onclick>Container.SetViewMode(591)</onclick>
+		<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(artists)</visible>
+	</include>
+	
+	<include name="Options_View_Thumbnail_Album">
+		<include>Common_Settings_Button</include>
+		<texturefocus>contextmenu/view_thumb_FO.png</texturefocus>
+		<texturenofocus>contextmenu/view_thumb_NF.png</texturenofocus>
+		<label>$LOCALIZE[31084][CR]$LOCALIZE[31244]</label>
+		<onclick>Container.SetViewMode(592)</onclick>
+		<visible>Container.Content(albums) | Container.Content(files) | Container.Content(addons) | StringCompare(Window.Property(xmlfile),MyPrograms.xml)</visible>
 	</include>
 	
 	<include name="Options_View_Tile">

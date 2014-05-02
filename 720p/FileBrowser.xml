@@ -102,7 +102,7 @@
 						<posy>5</posy>
 						<width>80</width>
 						<height>80</height>
-						<texture fallback="defaults/DefaultDVDEmpty.png">$INFO[Listitem.Icon]</texture>
+						<texture fallback="DefaultDVDEmpty.png">$INFO[Listitem.Icon]</texture>
 					</control>
 
 					<control type="label">
@@ -159,7 +159,7 @@
 						<posy>5</posy>
 						<width>80</width>
 						<height>80</height>
-						<texture fallback="defaults/DefaultDVDEmpty.png">$INFO[Listitem.Icon]</texture>
+						<texture fallback="DefaultDVDEmpty.png">$INFO[Listitem.Icon]</texture>
 					</control>
 
 					<control type="label">
@@ -314,7 +314,7 @@
 				<posy>318</posy>
 				<width>200</width>
 				<height>240</height>
-				<texture fallback="defaults/DefaultDVDEmpty.png">$INFO[Container(450).ListItem.Icon]</texture>
+				<texture fallback="DefaultDVDEmpty.png">$INFO[Container(450).ListItem.Icon]</texture>
 				<aspectratio align="center" aligny="bottom">keep</aspectratio>
 				<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
 				<bordersize>5</bordersize>
@@ -327,7 +327,7 @@
 				<posy>318</posy>
 				<width>200</width>
 				<height>240</height>
-				<texture flipx="true" fallback="defaults/DefaultDVDEmpty.png">$INFO[Container(450).ListItem.Icon]</texture>
+				<texture flipx="true" fallback="DefaultDVDEmpty.png">$INFO[Container(450).ListItem.Icon]</texture>
 				<aspectratio align="center" aligny="bottom">keep</aspectratio>
 				<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
 				<bordersize>5</bordersize>

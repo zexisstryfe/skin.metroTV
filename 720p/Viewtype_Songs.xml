@@ -117,10 +117,9 @@
 						<height>200</height>				
 						<fadetime>500</fadetime>
 				     	<aspectratio>scale</aspectratio>
-						<texture background="true" fallback="defaults/DefaultAlbumCover.png">$INFO[ListItem.Icon]</texture>					
-						<visible>!stringcompare(ListItem.Label,..)</visible>
+						<texture>$VAR[Common_Fallback]</texture>					
 					</control>
-					
+
 					<control type="image">
 						<posx>12</posx>
 						<posy>12</posy>
@@ -128,8 +127,8 @@
 						<height>200</height>				
 						<fadetime>500</fadetime>
 				     	<aspectratio>scale</aspectratio>
-						<texture>defaults/DefaultFolderBack.png</texture>					
-						<visible>stringcompare(ListItem.Label,..)</visible>
+						<texture background="true">$INFO[ListItem.Icon]</texture>					
+						<visible>!stringcompare(ListItem.Label,..)</visible>
 					</control>
 					
 					<control type="label">

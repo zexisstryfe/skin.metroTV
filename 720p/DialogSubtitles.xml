@@ -306,7 +306,7 @@
 						<control type="image">
 							<width>40</width>
 							<height>40</height>
-							<texture>defaults/DefaultIconInfo.png</texture>
+							<texture>DefaultIconInfo.png</texture>
 						</control>
 						
 						<control type="label">

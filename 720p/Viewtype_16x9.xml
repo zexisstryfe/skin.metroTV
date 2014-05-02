@@ -39,49 +39,6 @@
 					<animation effect="slide" start="0,0" end="0,-40" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(580)">Conditional</animation>
 				</control>
 				
-				<control type="group">
-					<posx>425</posx>
-					<posy>50</posy>
-					<visible>!IsEmpty(Window(Home).Property(NextAired.Label)) + !stringcompare(ListItem.Label,..) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + !IsEmpty(ListItem.TVShowTitle) + !IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
-
-					<control type="image">
-						<width>430</width>
-						<height>100</height>
-						<include>Common_Color_Tile1</include>
-					</control>
-					
-					<control type="image">
-						<posx>130</posx>
-						<posy>5</posy>
-						<width>30</width>
-						<height>30</height>
-						<texture>tiles/tv.png</texture>
-						<visible>Container.Content(Episodes)</visible>
-					</control>
-					
-					<control type="label">
-						<posx>170</posx>
-						<width>590</width>
-						<height>40</height>
-						<font>font20UB</font>
-						<label>[B]$LOCALIZE[31173][/B]</label>
-						<visible>Container.Content(Episodes)</visible>
-					</control>
-					
-					<control type="textbox">
-						<posx>20</posx>
-						<posy>40</posy>
-						<width>390</width>
-						<height>75</height>
-						<align>center</align>
-						<aligny>top</aligny>
-						<font>font20</font>
-						<label>"$INFO[Window(Home).Property(NextAired.NextTitle)]" $LOCALIZE[31177] $INFO[Window(Home).Property(NextAired.NextDate)] $INFO[Window(Home).Property(NextAired.AirTime)]</label>
-						<visible>Container.Content(Episodes)</visible>
-					</control>
-					
-				</control>
-
 				<!-- Poster Wrap View -->
 				<control type="wraplist" id="59">
 					<height>720</height>
@@ -123,7 +80,7 @@
 								<posy>122</posy>
 								<width>334</width>
 								<height>188</height>
-								<texture background="true" fallback="splash/splash_movies.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+								<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 								<fadetime>200</fadetime>					
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 								<visible>!Container.Content(episodes) + !stringcompare(ListItem.Label,..)</visible>
@@ -133,17 +90,17 @@
 								<posy>122</posy>
 								<width>334</width>
 								<height>188</height>
-								<texture background="true">defaults/DefaultFolderBack.png</texture>
+								<texture background="true">$VAR[Common_Fallback]</texture>
 								<fadetime>200</fadetime>					
 								<aspectratio scalediffuse="false">keep</aspectratio>
-								<visible>stringcompare(ListItem.Label,..)</visible>
+								<visible>[!Container.Content(episodes) + IsEmpty(ListItem.Art(fanart))] | [Container.Content(episodes) + IsEmpty(ListItem.Icon)]</visible>
 							</control>
 							
 							<control type="image">
 								<posy>122</posy>
 								<width>334</width>
 								<height>188</height>
-								<texture background="true" fallback="splash/splash_tvshows.png">$INFO[ListItem.Icon]</texture>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
 								<fadetime>200</fadetime>					
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 								<visible>Container.Content(episodes) + !stringcompare(ListItem.Label,..)</visible>
@@ -252,7 +209,7 @@
 								<posy>166</posy>
 								<width>532</width>
 								<height>298</height>
-								<texture background="true" fallback="splash/splash_movies.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+								<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
 								<fadetime>200</fadetime>					
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 								<visible>!Container.Content(episodes) + !stringcompare(ListItem.Label,..)</visible>
@@ -262,7 +219,7 @@
 								<posy>166</posy>
 								<width>532</width>
 								<height>298</height>
-								<texture background="true" fallback="splash/splash_tvshows.png">$INFO[ListItem.Icon]</texture>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
 								<fadetime>200</fadetime>					
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 								<visible>Container.Content(episodes) + !stringcompare(ListItem.Label,..)</visible>
@@ -273,10 +230,10 @@
 								<posy>166</posy>
 								<width>532</width>
 								<height>298</height>
-								<texture background="true">defaults/DefaultFolderBack.png</texture>
+								<texture background="true">$VAR[Common_Fallback]</texture>
 								<fadetime>200</fadetime>					
 								<aspectratio scalediffuse="false">keep</aspectratio>
-								<visible>stringcompare(ListItem.Label,..)</visible>
+								<visible>[!Container.Content(episodes) + IsEmpty(ListItem.Art(fanart))] | [Container.Content(episodes) + IsEmpty(ListItem.Icon)]</visible>
 							</control>
 							
 							<control type="image">
@@ -653,7 +610,7 @@
 					<width>600</width>
 					<height>148</height>
 					<align>justify</align>
-					<info>ListItem.Plot</info>
+					<label>$VAR[Common_Plot]</label>
 					<font>font18</font>
 					<textcolor>White</textcolor>
 					<autoscroll time="3000" delay="6000" repeat="5000"></autoscroll>

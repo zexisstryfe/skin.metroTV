@@ -161,22 +161,20 @@
 			<control type="image">
 				<width>300</width>
 				<height>300</height>
-				<align>right</align>
 				<fadetime>500</fadetime>
 				<aspectratio>stretch</aspectratio>
-				<texture fallback="defaults/DefaultAlbumCover.png">$INFO[ListItem.Icon]</texture>
-				<visible>!IsEmpty(ListItem.Icon) + Container.Content(songs)</visible>
-				<visible>!stringcompare(ListItem.Label,..)</visible>
+				<texture background="true">$VAR[Common_Fallback]</texture>
 			</control>
-			
+
 			<control type="image">
 				<width>300</width>
 				<height>300</height>
+				<align>right</align>
 				<fadetime>500</fadetime>
 				<aspectratio>stretch</aspectratio>
-				<texture background="true">defaults/DefaultFolderBack.png</texture>
+				<texture>$INFO[ListItem.Icon]</texture>
 				<visible>!IsEmpty(ListItem.Icon) + Container.Content(songs)</visible>
-				<visible>stringcompare(ListItem.Label,..)</visible>
+				<visible>!stringcompare(ListItem.Label,..)</visible>
 			</control>
 			
 			<control type="label">

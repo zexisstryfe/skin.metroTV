@@ -37,7 +37,7 @@
 				<posy>20</posy>
 				<width>200</width>
 				<height>200</height>
-				<texture fallback="defaults/DefaultAlbumCover.png">$INFO[ListItem.Icon]</texture>
+				<texture fallback="DefaultAlbumCover.png">$INFO[ListItem.Icon]</texture>
 				<aspectratio>stretch</aspectratio>	
 				<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
 				<bordersize>5</bordersize>				

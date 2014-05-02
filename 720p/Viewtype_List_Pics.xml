@@ -18,109 +18,132 @@
 			<!--Top Area-->	
 			<include>Common_TopBar</include>
 		
-			<control type="image">
-				<posx>240</posx>
-				<posy>188</posy>
-				<width>400</width>
-				<height>460</height>
-				<include>Common_Color_Keyback1</include>
-			</control>
+			<control type="group">	
+				<include>Animation_Common_Content</include>
 			
-			<control type="image">
-				<posx>650</posx>
-				<posy>188</posy>
-				<width>420</width>
-				<height>460</height>
-				<include>Common_Color_Keyback2</include>
-			</control>
+				<control type="image">
+					<posx>240</posx>
+					<posy>188</posy>
+					<width>400</width>
+					<height>460</height>
+					<include>Common_Color_Keyback1</include>
+				</control>
+				
+				<control type="image">
+					<posx>650</posx>
+					<posy>188</posy>
+					<width>420</width>
+					<height>460</height>
+					<include>Common_Color_Keyback2</include>
+				</control>
+				
+				<control type="list" id="50">
+					<posx>240</posx>
+					<posy>188</posy>
+					<width>400</width>
+					<height>460</height>
+					<onleft>9000</onleft>
+					<onright>60</onright>
+					<onup>50</onup>
+					<ondown>50</ondown>
+					<pagecontrol>60</pagecontrol>
+					<viewtype label="list">list</viewtype>
+					<scrolltime>200</scrolltime>
+
+					<itemlayout width="400" height="30">
+						
+						<control type="label">
+							<posx>20</posx>
+							<width>350</width>
+							<font>font22</font>
+							<label>$LOCALIZE[31194]</label>
+							<visible>stringcompare(ListItem.Label,..)</visible>
+						</control>
+
+						<control type="label">
+							<posx>20</posx>
+							<width>350</width>
+							<font>font22</font>
+							<label>$INFO[ListItem.Label]</label>
+							<scroll>true</scroll>
+							<visible>!stringcompare(ListItem.Label,..)</visible>
+						</control>
+
+					</itemlayout>
+
+					<focusedlayout width="400" height="30">
+
+						<control type="image">
+							<width>640</width>
+							<posy>8</posy>
+							<height>30</height>
+							<include>Common_Color_Accent</include>
+							<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(50)">Conditional</animation>
+						</control>
+						
+						<control type="label">
+							<posx>20</posx>
+							<width>350</width>
+							<font>font22</font>
+							<label>$LOCALIZE[31194]</label>
+							<visible>stringcompare(ListItem.Label,..)</visible>
+						</control>
+						
+						<control type="label">
+							<posx>20</posx>
+							<width>350</width>
+							<font>font22</font>
+							<label>$INFO[ListItem.Label]</label>
+							<scroll>true</scroll>
+							<visible>!stringcompare(ListItem.Label,..)</visible>
+						</control>
+
+					</focusedlayout>
+
+				</control>
+
+				<control type="label">
+					<include>Common_ListPic_Title</include>
+					<label>[COLOR Accent]$LOCALIZE[31194][/COLOR]</label>
+					<visible>stringcompare(ListItem.Label,..)</visible>
+				</control>
+				
+				<control type="label">
+					<include>Common_ListPic_Title</include>
+					<label>[COLOR Accent]$INFO[ListItem.Label][/COLOR]</label>
+					<visible>!stringcompare(ListItem.Label,..)</visible>
+				</control>
+
+				<control type="image">
+					<include>Common_ListPic_Icon</include>
+					<texture fallback="DefaultPicture.png">$INFO[ListItem.Icon]</texture>
+					<visible>!IsEmpty(ListItem.Icon) + !stringcompare(ListItem.Label,..)</visible>
+				</control>
+				
+				<control type="image">
+					<include>Common_ListPic_Icon</include>
+					<texture>DefaultFolderBack.png</texture>
+					<visible>stringcompare(ListItem.Label,..)</visible>
+				</control>
+				
+				<control type="image">
+					<description>outline</description>
+					<posx>639</posx>
+					<posy>187</posy>
+					<height>462</height>
+					<include>Common_Scroll_OutlineV</include>
+					<visible>Control.HasFocus(60)</visible>
+				</control>
+
+				<control type="scrollbar" id="60">
+					<posx>640</posx>
+					<posy>188</posy>
+					<height>460</height>
+					<width>5</width>
+					<onleft>50</onleft>
+					<onright>50</onright>
+				</control>
 			
-			<control type="list" id="50">
-				<posx>240</posx>
-				<posy>188</posy>
-				<width>400</width>
-				<height>460</height>
-				<onleft>9000</onleft>
-				<onright>60</onright>
-				<onup>50</onup>
-				<ondown>50</ondown>
-				<pagecontrol>60</pagecontrol>
-				<viewtype label="list">list</viewtype>
-				<scrolltime>200</scrolltime>
-
-				<itemlayout width="400" height="30">
-					
-					<control type="label">
-						<posx>20</posx>
-						<width>350</width>
-						<font>font22</font>
-						<label>$INFO[ListItem.Label]</label>
-						<scroll>true</scroll>
-					</control>
-
-				</itemlayout>
-
-				<focusedlayout width="400" height="30">
-
-					<control type="image">
-						<width>640</width>
-						<posy>8</posy>
-						<height>30</height>
-						<include>Common_Color_Accent</include>
-						<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(50)">Conditional</animation>
-					</control>
-					
-					<control type="label">
-						<posx>20</posx>
-						<width>350</width>
-						<font>font22</font>
-						<label>$INFO[ListItem.Label]</label>
-						<scroll>true</scroll>
-					</control>
-
-				</focusedlayout>
-
-			</control>
-
-			<control type="label">
-				<include>Common_ListPic_Title</include>
-				<label>[COLOR Accent]$LOCALIZE[31194][/COLOR]</label>
-				<visible>stringcompare(ListItem.Label,..)</visible>
-			</control>
-			
-			<control type="label">
-				<include>Common_ListPic_Title</include>
-				<label>[COLOR Accent]$INFO[ListItem.Label][/COLOR]</label>
-				<visible>!stringcompare(ListItem.Label,..)</visible>
-			</control>
-
-			<control type="image">
-				<include>Common_ListPic_Icon</include>
-				<texture fallback="defaults/DefaultPicture.png">$INFO[ListItem.Icon]</texture>
-				<visible>!IsEmpty(ListItem.Icon) + !stringcompare(ListItem.Label,..)</visible>
-			</control>
-			
-			<control type="image">
-				<include>Common_ListPic_Icon</include>
-				<texture>defaults/DefaultFolderBack.png</texture>
-				<visible>stringcompare(ListItem.Label,..)</visible>
-			</control>
-			
-			<control type="image">
-				<description>outline</description>
-				<posx>639</posx>
-				<posy>187</posy>
-				<height>462</height>
-				<include>Common_Scroll_OutlineV</include>
-				<visible>Control.HasFocus(60)</visible>
-			</control>
-
-			<control type="scrollbar" id="60">
-				<posx>640</posx>
-				<posy>188</posy>
-				<height>460</height>
-				<width>5</width>
-				<onleft>50</onleft>
-				<onright>50</onright>
 			</control>
 			
 		</control>	

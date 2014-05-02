@@ -4,24 +4,7 @@
 		
 		<control type="group">
 			<visible>Control.IsVisible(55)</visible>
-			<animation type="TYPE" condition="Window.IsVisible(2003)" reversible="false">
-				<effect type="slide" end="-1500,0" time="200"/>
-			</animation>
-			<animation type="TYPE" condition="!Window.IsVisible(2003)" reversible="false">
-				<effect type="slide" start="-1500,0" time="200"/>
-			</animation>		
-			<animation type="WindowClose">
-				<effect type="fade" time="300"/>
-				<effect type="slide" end="+1500,0" time="300"/>
-			</animation>
-			<animation type="WindowOpen">
-				<effect type="fade" time="300"/>
-				<effect type="slide" start="+1500,0" time="300"/>
-			</animation>
-			<animation effect="fade" time="300">WindowOpen</animation>
-			<animation type="WindowClose">
-				<effect type="fade" time="300"/>
-			</animation>
+					
 			
 	<!-- Browser -->
 			<include>GlobalBackground</include>	
@@ -36,267 +19,237 @@
 				<include>Common_TopBar</include>
 			</control>		
 			
-			<control type="panel" id="55">
-				<viewtype label="tiles">tiles</viewtype>
-				<posx>150</posx>
-				<posy>180</posy>
-				<width>1200</width>
-				<height>460</height>
-				<scrolltime>200</scrolltime>
-				<orientation>horizontal</orientation>
-				<onright>-</onright>
-				<onleft>9000</onleft>
-				<ondown>70</ondown>
-				<pagecontrol>70</pagecontrol>
-				<preloaditems>2</preloaditems>
-				<include>Animation_HiddenByInfo</include>
-				<visible>Window.IsActive(1) | Container.Content(files) | Container.Content(albums) | Container.Content(artists) | Container.Content(addons) | Container.Content(musicvideos)</visible>
-				<itemlayout width="420" height="115">
+			<control type="group">
+				<include>Animation_Slide_Right</include>
 				
-					<control type="image">
-						<width>400</width>
-						<height>95</height>
-						<include>Common_Color_Keyback1</include>
-					</control>
+				<control type="panel" id="55">
+					<viewtype label="tiles">tiles</viewtype>
+					<posx>150</posx>
+					<posy>180</posy>
+					<width>1200</width>
+					<height>460</height>
+					<scrolltime>200</scrolltime>
+					<orientation>horizontal</orientation>
+					<onright>55</onright>
+					<onleft>55</onleft>
+					<onup>9000</onup>
+					<ondown>70</ondown>
+					<pagecontrol>70</pagecontrol>
+					<preloaditems>2</preloaditems>
+					<include>Animation_HiddenByInfo</include>
+					<visible>Window.IsActive(1) | Container.Content(files) | Container.Content(albums) | Container.Content(artists) | Container.Content(addons) | Container.Content(musicvideos)</visible>
+					<itemlayout width="420" height="115">
 					
-					<control type="image">
-						<width>95</width>
-						<height>95</height>
-						<include>Common_Color_Keyback2</include>
-						<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(addons) | Container.Content(musicvideos) | StringCompare(Window.Property(xmlfile),MyPrograms.xml)</visible>
-					</control>	
-					
-					<control type="image">
-						<width>95</width>
-						<height>95</height>
-						<aspectratio align="left" aligny="center">stretch</aspectratio>
-						<texture>defaults/DefaultFolderBack.png</texture>
-						<visible>stringcompare(ListItem.Label,..)</visible>
-					</control>
+						<control type="image">
+							<width>400</width>
+							<height>95</height>
+							<include>Common_Color_Keyback1</include>
+						</control>
+						
+						<control type="image">
+							<width>95</width>
+							<height>95</height>
+							<include>Common_Color_Keyback2</include>
+							<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(addons) | Container.Content(musicvideos) | StringCompare(Window.Property(xmlfile),MyPrograms.xml)</visible>
+						</control>	
+						
+						<control type="image">
+							<width>95</width>
+							<height>95</height>
+							<aspectratio align="left" aligny="center">stretch</aspectratio>
+							<texture>$VAR[Common_Fallback]</texture>
+						</control>
 
-					<control type="image">
-						<width>95</width>
-						<height>95</height>
-						<aspectratio align="left" aligny="center">stretch</aspectratio>
-						<texture fallback="defaults/DefaultArtist.png">$INFO[ListItem.Icon]</texture>
-						<visible>Container.Content(artists) + !stringcompare(ListItem.Label,..)</visible>
-					</control>
-					
-					<control type="image">
-						<width>95</width>
-						<height>95</height>
-						<aspectratio align="left" aligny="center">stretch</aspectratio>
-						<texture fallback="defaults/DefaultAlbumCover.png">$INFO[ListItem.Icon]</texture>
-						<visible>Container.Content(albums) + !stringcompare(ListItem.Label,..)</visible>
-					</control>
+						<control type="image">
+							<width>95</width>
+							<height>95</height>
+							<aspectratio align="left" aligny="center">stretch</aspectratio>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<visible>!stringcompare(ListItem.Label,..)</visible>
+						</control>
+						
+						<control type="label">
+							<label>$INFO[ListItem.Label]</label>
+							<posx>114</posx>
+							<posy>5</posy>
+							<height>30</height>
+							<width>260</width>
+							<textcolor>Accent</textcolor>
+							<font>font24UB</font>
+							<visible>Window.IsActive(1) | Container.Content(artists) | Container.Content(addons) | Container.Content(albums) | Container.Content(musicvideos)</visible>
+							<visible>!stringcompare(ListItem.Label,..)</visible>
+						</control>
+						
+						<control type="label">
+							<label>$LOCALIZE[31194]</label>
+							<posx>114</posx>
+							<posy>5</posy>
+							<height>30</height>
+							<width>260</width>
+							<textcolor>Accent</textcolor>
+							<font>font24UB</font>
+							<visible>stringcompare(ListItem.Label,..)</visible>
+						</control>
+						
+						<control type="label">
+							<label>$INFO[ListItem.Artist]</label>
+							<posx>114</posx>
+							<posy>35</posy>
+							<height>30</height>
+							<width>260</width>
+							<font>font18UB</font>
+							<visible>Window.IsActive(1) | Container.Content(albums) | Container.Content(musicvideos)</visible>
+						</control>
 
-					<control type="image">
-						<width>95</width>
-						<height>95</height>
-						<aspectratio align="left" aligny="center">stretch</aspectratio>
-						<texture fallback="defaults/DefaultAddonNone.png">$INFO[ListItem.Icon]</texture>
-						<visible>Container.Content(addons) | Container.Content(musicvideos) | StringCompare(Window.Property(xmlfile),MyPrograms.xml)</visible>
-						<visible>!stringcompare(ListItem.Label,..)</visible>
-					</control>
+						<control type="label">
+							<label>$INFO[ListItem.Property(Addon.Version)]</label>
+							<posx>114</posx>
+							<posy>60</posy>
+							<height>30</height>
+							<width>260</width>
+							<font>font18UB</font>
+							<visible>Window.IsActive(1) | Container.Content(addons)</visible>
+						</control>				
+						
+						<control type="label">
+							<label>$INFO[ListItem.Property(Addon.Status)]</label>
+							<posx>390</posx>
+							<posy>30</posy>
+							<height>30</height>
+							<width>260</width>
+							<font>font18L</font>
+							<align>right</align>
+							<visible>Window.IsActive(1) | Container.Content(addons)</visible>
+						</control>	
+						
+						<control type="label">
+							<label>$INFO[ListItem.Year]</label>
+							<posx>114</posx>
+							<posy>60</posy>
+							<height>30</height>
+							<width>260</width>
+							<font>font18L</font>
+							<visible>Window.IsActive(1) | Container.Content(albums) | Container.Content(musicvideos)</visible>
+						</control>
+						
+						<control type="label">
+							<label>$INFO[ListItem.Property(Artist_Genre)]</label>
+							<posx>114</posx>
+							<posy>60</posy>
+							<height>30</height>
+							<width>260</width>
+							<font>font18L</font>
+							<visible>Window.IsActive(1) | Container.Content(artists)</visible>
+						</control>
+						
+					</itemlayout>
 					
-					<control type="label">
-						<label>$INFO[ListItem.Label]</label>
-						<posx>114</posx>
-						<posy>5</posy>
-						<height>30</height>
-						<width>260</width>
-						<textcolor>Accent</textcolor>
-						<font>font24UB</font>
-						<visible>Window.IsActive(1) | Container.Content(artists) | Container.Content(addons) | Container.Content(albums) | Container.Content(musicvideos)</visible>
-						<visible>!stringcompare(ListItem.Label,..)</visible>
-					</control>
+					<focusedlayout width="420" height="115">
 					
-					<control type="label">
-						<label>$LOCALIZE[31194]</label>
-						<posx>114</posx>
-						<posy>5</posy>
-						<height>30</height>
-						<width>260</width>
-						<textcolor>Accent</textcolor>
-						<font>font24UB</font>
-						<visible>stringcompare(ListItem.Label,..)</visible>
-					</control>
-					
-					<control type="label">
-						<label>$INFO[ListItem.Artist]</label>
-						<posx>114</posx>
-						<posy>35</posy>
-						<height>30</height>
-						<width>260</width>
-						<font>font18UB</font>
-						<visible>Window.IsActive(1) | Container.Content(albums) | Container.Content(musicvideos)</visible>
-					</control>
+						<control type="image">
+							<width>400</width>
+							<height>95</height>
+							<include>Common_Color_Accent</include>
+						</control>
+						
+						<control type="image">
+							<width>95</width>
+							<height>95</height>
+							<include>Common_Color_Keyback2</include>
+							<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(addons) | Container.Content(musicvideos) | StringCompare(Window.Property(xmlfile),MyPrograms.xml)</visible>
+						</control>
+						
+						<control type="image">
+							<width>95</width>
+							<height>95</height>
+							<aspectratio align="left" aligny="center">stretch</aspectratio>
+							<texture>$VAR[Common_Fallback]</texture>
+						</control>
 
-					<control type="label">
-						<label>$INFO[ListItem.Property(Addon.Version)]</label>
-						<posx>114</posx>
-						<posy>60</posy>
-						<height>30</height>
-						<width>260</width>
-						<font>font18UB</font>
-						<visible>Window.IsActive(1) | Container.Content(addons)</visible>
-					</control>				
-					
-					<control type="label">
-						<label>$INFO[ListItem.Property(Addon.Status)]</label>
-						<posx>390</posx>
-						<posy>30</posy>
-						<height>30</height>
-						<width>260</width>
-						<font>font18L</font>
-						<align>right</align>
-						<visible>Window.IsActive(1) | Container.Content(addons)</visible>
-					</control>	
-					
-					<control type="label">
-						<label>$INFO[ListItem.Year]</label>
-						<posx>114</posx>
-						<posy>60</posy>
-						<height>30</height>
-						<width>260</width>
-						<font>font18L</font>
-						<visible>Window.IsActive(1) | Container.Content(albums) | Container.Content(musicvideos)</visible>
-					</control>
-					
-					<control type="label">
-						<label>$INFO[ListItem.Property(Artist_Genre)]</label>
-						<posx>114</posx>
-						<posy>60</posy>
-						<height>30</height>
-						<width>260</width>
-						<font>font18L</font>
-						<visible>Window.IsActive(1) | Container.Content(artists)</visible>
-					</control>
-					
-				</itemlayout>
-				
-				<focusedlayout width="420" height="115">
-				
-					<control type="image">
-						<width>400</width>
-						<height>95</height>
-						<include>Common_Color_Accent</include>
-					</control>
-					
-					<control type="image">
-						<width>95</width>
-						<height>95</height>
-						<include>Common_Color_Keyback2</include>
-						<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(addons) | Container.Content(musicvideos) | StringCompare(Window.Property(xmlfile),MyPrograms.xml)</visible>
-					</control>
-					
-					<control type="image">
-						<width>95</width>
-						<height>95</height>
-						<aspectratio align="left" aligny="center">stretch</aspectratio>
-						<texture>defaults/DefaultFolderBack.png</texture>
-						<visible>stringcompare(ListItem.Label,..)</visible>
-					</control>
+						<control type="image">
+							<width>95</width>
+							<height>95</height>
+							<aspectratio align="left" aligny="center">stretch</aspectratio>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<visible>!stringcompare(ListItem.Label,..)</visible>
+						</control>
+						
+						<control type="label">
+							<label>$INFO[ListItem.Label]</label>
+							<posx>114</posx>
+							<posy>5</posy>
+							<height>30</height>
+							<width>260</width>
+							<font>font24UB</font>
+							<visible>Window.IsActive(1) | Container.Content(artists) | Container.Content(addons) | Container.Content(albums) | Container.Content(musicvideos)</visible>
+							<visible>!stringcompare(ListItem.Label,..)</visible>
+						</control>
+						
+						<control type="label">
+							<label>$LOCALIZE[31194]</label>
+							<posx>114</posx>
+							<posy>5</posy>
+							<height>30</height>
+							<width>260</width>
+							<font>font24UB</font>
+							<visible>stringcompare(ListItem.Label,..)</visible>
+						</control>
+						
+						<control type="label">
+							<label>$INFO[ListItem.Artist]</label>
+							<posx>114</posx>
+							<posy>35</posy>
+							<height>30</height>
+							<width>260</width>
+							<font>font18UB</font>
+							<visible>Window.IsActive(1) | Container.Content(albums) | Container.Content(musicvideos)</visible>
+						</control>
 
-					<control type="image">
-						<width>95</width>
-						<height>95</height>
-						<aspectratio align="left" aligny="center">stretch</aspectratio>
-						<texture fallback="defaults/DefaultArtist.png">$INFO[ListItem.Icon]</texture>
-						<visible>Container.Content(artists) + !stringcompare(ListItem.Label,..)</visible>
-					</control>
-					
-					<control type="image">
-						<width>95</width>
-						<height>95</height>
-						<aspectratio align="left" aligny="center">stretch</aspectratio>
-						<texture fallback="defaults/DefaultAlbumCover.png">$INFO[ListItem.Icon]</texture>
-						<visible>Container.Content(albums) + !stringcompare(ListItem.Label,..)</visible>
-					</control>
+						<control type="label">
+							<label>$INFO[ListItem.Property(Addon.Version)]</label>
+							<posx>114</posx>
+							<posy>60</posy>
+							<height>30</height>
+							<width>260</width>
+							<font>font18UB</font>
+							<visible>Window.IsActive(1) | Container.Content(addons)</visible>
+						</control>				
+						
+						<control type="label">
+							<label>$INFO[ListItem.Property(Addon.Status)]</label>
+							<posx>390</posx>
+							<posy>30</posy>
+							<height>30</height>
+							<width>260</width>
+							<font>font18L</font>
+							<align>right</align>
+							<visible>Window.IsActive(1) | Container.Content(addons)</visible>
+						</control>	
+						
+						<control type="label">
+							<label>$INFO[ListItem.Year]</label>
+							<posx>114</posx>
+							<posy>60</posy>
+							<height>30</height>
+							<width>260</width>
+							<font>font18L</font>
+							<visible>Window.IsActive(1) | Container.Content(albums) | Container.Content(musicvideos)</visible>
+						</control>
+						
+						<control type="label">
+							<label>$INFO[ListItem.Property(Artist_Genre)]</label>
+							<posx>114</posx>
+							<posy>60</posy>
+							<height>30</height>
+							<width>260</width>
+							<font>font18L</font>
+							<visible>Window.IsActive(1) | Container.Content(artists)</visible>
+						</control>
 
-					<control type="image">
-						<width>95</width>
-						<height>95</height>
-						<aspectratio align="left" aligny="center">stretch</aspectratio>
-						<texture fallback="defaults/DefaultAddonNone.png">$INFO[ListItem.Icon]</texture>
-						<visible>Container.Content(addons) | Container.Content(musicvideos) | StringCompare(Window.Property(xmlfile),MyPrograms.xml)</visible>
-						<visible>!stringcompare(ListItem.Label,..)</visible>
-					</control>
+					</focusedlayout>
 					
-					<control type="label">
-						<label>$INFO[ListItem.Label]</label>
-						<posx>114</posx>
-						<posy>5</posy>
-						<height>30</height>
-						<width>260</width>
-						<font>font24UB</font>
-						<visible>Window.IsActive(1) | Container.Content(artists) | Container.Content(addons) | Container.Content(albums) | Container.Content(musicvideos)</visible>
-						<visible>!stringcompare(ListItem.Label,..)</visible>
-					</control>
-					
-					<control type="label">
-						<label>$LOCALIZE[31194]</label>
-						<posx>114</posx>
-						<posy>5</posy>
-						<height>30</height>
-						<width>260</width>
-						<font>font24UB</font>
-						<visible>stringcompare(ListItem.Label,..)</visible>
-					</control>
-					
-					<control type="label">
-						<label>$INFO[ListItem.Artist]</label>
-						<posx>114</posx>
-						<posy>35</posy>
-						<height>30</height>
-						<width>260</width>
-						<font>font18UB</font>
-						<visible>Window.IsActive(1) | Container.Content(albums) | Container.Content(musicvideos)</visible>
-					</control>
+				</control>
 
-					<control type="label">
-						<label>$INFO[ListItem.Property(Addon.Version)]</label>
-						<posx>114</posx>
-						<posy>60</posy>
-						<height>30</height>
-						<width>260</width>
-						<font>font18UB</font>
-						<visible>Window.IsActive(1) | Container.Content(addons)</visible>
-					</control>				
-					
-					<control type="label">
-						<label>$INFO[ListItem.Property(Addon.Status)]</label>
-						<posx>390</posx>
-						<posy>30</posy>
-						<height>30</height>
-						<width>260</width>
-						<font>font18L</font>
-						<align>right</align>
-						<visible>Window.IsActive(1) | Container.Content(addons)</visible>
-					</control>	
-					
-					<control type="label">
-						<label>$INFO[ListItem.Year]</label>
-						<posx>114</posx>
-						<posy>60</posy>
-						<height>30</height>
-						<width>260</width>
-						<font>font18L</font>
-						<visible>Window.IsActive(1) | Container.Content(albums) | Container.Content(musicvideos)</visible>
-					</control>
-					
-					<control type="label">
-						<label>$INFO[ListItem.Property(Artist_Genre)]</label>
-						<posx>114</posx>
-						<posy>60</posy>
-						<height>30</height>
-						<width>260</width>
-						<font>font18L</font>
-						<visible>Window.IsActive(1) | Container.Content(artists)</visible>
-					</control>
-
-				</focusedlayout>
-				
 			</control>
 			
 		</control>	
@@ -325,6 +278,17 @@
 				<width>1280</width>
 				<font>font40UB</font>
 				<align>center</align>
+				<visible>!stringcompare(ListItem.Label,..)</visible>
+			</control>
+			
+			<control type="label">
+				<label>[COLOR Accent]$LOCALIZE[31194][/COLOR]</label>
+				<posy>660</posy>
+				<height>50</height>
+				<width>1280</width>
+				<font>font40UB</font>
+				<align>center</align>
+				<visible>stringcompare(ListItem.Label,..)</visible>
 			</control>
 			
 			<control type="image">

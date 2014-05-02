@@ -48,47 +48,7 @@
 				<height>4</height>
 				<include>Common_Color_Accent</include>
 			</control>
-			
-			<control type="group">
-				<visible>Control.IsVisible(52)</visible>
-				<visible>Skin.HasSetting(UseNextAiredScript)</visible>
-				<posx>0</posx>
-				<posy>460</posy>
-				<visible>!IsEmpty(Window(Home).Property(NextAired.Label)) + !stringcompare(ListItem.Label,..) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + !IsEmpty(ListItem.TVShowTitle) + !IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
-				
-				<control type="image">
-					<width>820</width>
-					<height>40</height>
-					<include>Common_Color_Accent</include>
-				</control>
-				
-				<control type="image">
-					<posx>20</posx>
-					<posy>5</posy>
-					<width>30</width>
-					<height>30</height>
-					<texture>tiles/tv.png</texture>
-				</control>
-				
-				<control type="label">
-					<posx>60</posx>
-					<width>590</width>
-					<height>40</height>
-					<font>font20UB</font>
-					<label>[B]$LOCALIZE[31173][/B]</label>
-				</control>
-				
-				<control type="label">
-					<posx>220</posx>
-					<width>550</width>
-					<height>40</height>
-					<font>font20</font>
-					<scroll>true</scroll>
-					<label>"$INFO[Window(Home).Property(NextAired.NextTitle)]" $LOCALIZE[31177] $INFO[Window(Home).Property(NextAired.NextDate)] - $INFO[Window(Home).Property(NextAired.AirTime)]</label>
-				</control>
-				
-			</control>
-		
+	
 			<control type="fixedlist" id="52">
 				<posx>840</posx>
 				<height>800</height>
@@ -119,8 +79,19 @@
 						<aligny>bottom</aligny>
 						<font>font22UB</font>
 						<textcolor>gray</textcolor>
+						<label>$LOCALIZE[31194]</label>
+						<visible>stringcompare(ListItem.Label,..)</visible>						
+					</control>
+
+					<control type="label">
+						<posy>-72</posy>
+						<width>392</width>
+						<height>25</height>
+						<aligny>bottom</aligny>
+						<font>font22UB</font>
+						<textcolor>gray</textcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>IsEmpty(ListItem.Title)</visible>						
+						<visible>IsEmpty(ListItem.Title) + !stringcompare(ListItem.Label,..)</visible>						
 					</control>
 
 					<control type="label">
@@ -131,6 +102,7 @@
 						<font>font22UB</font>
 						<textcolor>gray</textcolor>
 						<label>$INFO[ListItem.Title]</label>
+						<visible>!stringcompare(ListItem.Label,..)</visible>	
 					</control>
 					
 					<control type="label">
@@ -163,8 +135,18 @@
 						<width>390</width>
 						<height>25</height>
 						<font>font26UB</font>
+						<label>$LOCALIZE[31194]</label>
+						<textcolor>Accent</textcolor>
+						<visible>stringcompare(ListItem.Label,..)</visible>	
+					</control>
+
+					<control type="label">
+						<posy>-45</posy>
+						<width>390</width>
+						<height>25</height>
+						<font>font26UB</font>
 						<label>[COLOR Accent]$INFO[ListItem.Label][/COLOR]</label>
-						<visible>IsEmpty(ListItem.Title)</visible>
+						<visible>IsEmpty(ListItem.Title) + !stringcompare(ListItem.Label,..)</visible>
 					</control>
 
 					<control type="label">
@@ -173,7 +155,7 @@
 						<height>25</height>
 						<font>font26UB</font>
 						<label>[COLOR Accent]$INFO[ListItem.Title][/COLOR]</label>
-						<visible>!IsEmpty(ListItem.Title) + !SubString(Container.FolderPath,plugin)</visible>
+						<visible>!IsEmpty(ListItem.Title) + !SubString(Container.FolderPath,plugin) + !stringcompare(ListItem.Label,..)</visible>
 					</control>
 
 					<control type="label">
@@ -251,10 +233,10 @@
 				<align>right</align>
 				<fadetime>500</fadetime>
 				<aspectratio>stretch</aspectratio>
-				<texture>defaults/DefaultFolderBack.png</texture>
+				<texture>$VAR[Common_Fallback]</texture>
 				<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
 				<bordersize>5</bordersize>
-				<visible>stringcompare(ListItem.Label,..)</visible>		
+				<visible>IsEmpty(ListItem.Art(thumb))</visible>		
 			</control>
 			
 			<control type="label">
@@ -269,38 +251,12 @@
 				<visible>!stringcompare(ListItem.Label,..)</visible>
 			</control>
 			
-			<control type="label">
-				<posx>600</posx>
-				<posy>500</posy>
-				<width>500</width>
-				<height>50</height>
-				<align>right</align>
-				<textcolor>Accent</textcolor>
-				<font>font40L</font>
-				<label>$LOCALIZE[31194]</label>
-				<visible>stringcompare(ListItem.Label,..)</visible>
-			</control>
-			
-			<control type="image" id="100">
-				<visible>Container.Content(episodes)</visible>
-				<visible>!IsEmpty(Window(Home).Property(NextAired.Label)) + !stringcompare(ListItem.Label,..) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + !IsEmpty(ListItem.TVShowTitle) + !IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>			
-				<posx>425</posx>
+			<control type="image">
+			<posx>425</posx>
 				<posy>400</posy>
 				<width>230</width>
 				<height>100</height>
-				<texture background="true">$INFO[ListItem.path]logo.png</texture>
-				<fadetime>100</fadetime>
-				<aspectratio scalediffuse="false">keep</aspectratio>
-			</control>
-			
-			<control type="image">
-				<visible>Container.Content(episodes)</visible>
-				<visible>!Control.IsVisible(100)</visible>			
-				<posx>425</posx>
-				<posy>440</posy>
-				<width>230</width>
-				<height>100</height>
-				<texture background="true">$INFO[ListItem.path]logo.png</texture>
+				<texture background="true">$INFO[ListItem.path]../logo.png</texture>
 				<fadetime>100</fadetime>
 				<aspectratio scalediffuse="false">keep</aspectratio>
 			</control>
@@ -316,30 +272,6 @@
 				<autoscroll time="3000" delay="6000" repeat="8000"></autoscroll>
 				<font>font18</font>
 				<visible>Container.Content(episodes)</visible>
-			</control>
-			
-			<control type="image" id="100">
-				<visible>Skin.HasSetting(UseTVLogos)</visible>
-				<visible>!IsEmpty(Window(Home).Property(NextAired.Label)) + !stringcompare(ListItem.Label,..) + !IsEmpty(ListItem.TVShowTitle) + !IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>			
-				<posx>425</posx>
-				<posy>360</posy>
-				<width>230</width>
-				<height>100</height>
-				<texture background="true">$INFO[ListItem.path]../logo.png</texture>
-				<fadetime>100</fadetime>
-				<aspectratio scalediffuse="false">keep</aspectratio>
-			</control>
-			
-			<control type="image">
-				<visible>Skin.HasSetting(UseTVLogos)</visible>
-				<visible>!Control.IsVisible(100)</visible>
-				<posx>425</posx>
-				<posy>400</posy>
-				<width>230</width>
-				<height>100</height>
-				<texture background="true">$INFO[ListItem.path]../logo.png</texture>
-				<fadetime>100</fadetime>
-				<aspectratio scalediffuse="false">keep</aspectratio>
 			</control>
 			
 			<control type="image">

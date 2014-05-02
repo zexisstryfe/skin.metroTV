@@ -3,24 +3,7 @@
 		
 		<control type="group">
 			<visible>Control.IsVisible(55)</visible>
-			<animation type="TYPE" condition="Window.IsVisible(2003)" reversible="false">
-				<effect type="slide" end="-1500,0" time="200"/>
-			</animation>
-			<animation type="TYPE" condition="!Window.IsVisible(2003)" reversible="false">
-				<effect type="slide" start="-1500,0" time="200"/>
-			</animation>		
-			<animation type="WindowClose">
-				<effect type="fade" time="300"/>
-				<effect type="slide" end="+1500,0" time="300"/>
-			</animation>
-			<animation type="WindowOpen">
-				<effect type="fade" time="300"/>
-				<effect type="slide" start="+1500,0" time="300"/>
-			</animation>
-			<animation effect="fade" time="300">WindowOpen</animation>
-			<animation type="WindowClose">
-				<effect type="fade" time="300"/>
-			</animation>
+			<include>Animation_Slide_Right</include>		
 			
 			<include>GlobalBackground</include>	
 			
@@ -40,9 +23,10 @@
 				<height>480</height>
 				<scrolltime>200</scrolltime>
 				<orientation>horizontal</orientation>
-				<onright>-</onright>
-				<onleft>9000</onleft>
+				<onright>55</onright>
+				<onleft>55</onleft>
 				<ondown>9000</ondown>
+				<onup>9000</onup>
 				<pagecontrol>62</pagecontrol>
 				<preloaditems>2</preloaditems>
 				<include>Animation_HiddenByInfo</include>
@@ -56,16 +40,6 @@
 						<texture background="true" border="2">backings/polaroid.png</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 					</control>
-
-					<control type="image">
-						<posx>19</posx>
-						<posy>10</posy>
-						<width>165</width>
-						<height>155</height>
-						<aspectratio align="left" aligny="center">scale</aspectratio>
-						<texture fallback="defaults/DefaultPicture.png">$INFO[ListItem.Icon]</texture>
-						<visible>!stringcompare(ListItem.Label,..)</visible>
-					</control>
 					
 					<control type="image">
 						<posx>19</posx>
@@ -73,8 +47,17 @@
 						<width>165</width>
 						<height>155</height>
 						<aspectratio align="left" aligny="center">keep</aspectratio>
-						<texture>defaults/DefaultFolderBack.png</texture>
-						<visible>stringcompare(ListItem.Label,..)</visible>
+						<texture>$VAR[Common_Fallback]</texture>
+					</control>
+
+					<control type="image">
+						<posx>19</posx>
+						<posy>10</posy>
+						<width>165</width>
+						<height>155</height>
+						<aspectratio align="left" aligny="center">scale</aspectratio>
+						<texture fallback="DefaultPicture.png">$INFO[ListItem.Icon]</texture>
+						<visible>!stringcompare(ListItem.Label,..)</visible>
 					</control>
 					
 					<control type="textbox">
@@ -123,9 +106,8 @@
 							<posy>10</posy>
 							<width>165</width>
 							<height>155</height>
-							<aspectratio align="left" aligny="center">scale</aspectratio>
-							<texture fallback="defaults/DefaultPicture.png">$INFO[ListItem.Icon]</texture>
-							<visible>!stringcompare(ListItem.Label,..)</visible>
+							<aspectratio align="left" aligny="center">keep</aspectratio>
+							<texture>$VAR[Common_Fallback]</texture>
 						</control>
 						
 						<control type="image">
@@ -133,9 +115,9 @@
 							<posy>10</posy>
 							<width>165</width>
 							<height>155</height>
-							<aspectratio align="left" aligny="center">keep</aspectratio>
-							<texture>defaults/DefaultFolderBack.png</texture>
-							<visible>stringcompare(ListItem.Label,..)</visible>
+							<aspectratio align="left" aligny="center">scale</aspectratio>
+							<texture fallback="DefaultPicture.png">$INFO[ListItem.Icon]</texture>
+							<visible>!stringcompare(ListItem.Label,..)</visible>
 						</control>
 										
 						<control type="textbox">
@@ -189,6 +171,17 @@
 				<width>1280</width>
 				<font>font40UB</font>
 				<align>center</align>
+				<visible>!stringcompare(ListItem.Label,..)</visible>
+			</control>
+			
+			<control type="label">
+				<label>[COLOR Accent]$LOCALIZE[31194][/COLOR]</label>
+				<posy>660</posy>
+				<height>50</height>
+				<width>1280</width>
+				<font>font40UB</font>
+				<align>center</align>
+				<visible>stringcompare(ListItem.Label,..)</visible>
 			</control>
 
 		</control>	

@@ -86,7 +86,7 @@
 						<posy>8</posy>
 						<width>74</width>
 						<height>74</height>
-						<texture fallback="defaults/DefaultAddonNone.png">$INFO[Listitem.Icon]</texture>
+						<texture fallback="DefaultAddonNone.png">$INFO[Listitem.Icon]</texture>
 					</control>
 
 					<control type="label">
@@ -122,7 +122,7 @@
 						<posy>8</posy>
 						<width>74</width>
 						<height>74</height>
-						<texture fallback="defaults/DefaultAddonNone.png">$INFO[Listitem.Icon]</texture>
+						<texture fallback="DefaultAddonNone.png">$INFO[Listitem.Icon]</texture>
 					</control>
 
 					<control type="label">

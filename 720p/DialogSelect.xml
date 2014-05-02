@@ -205,7 +205,7 @@
 						<posy>5</posy>
 						<width>80</width>
 						<height>80</height>						
-						<texture fallback="defaults/DefaultAddonNone.png">$INFO[Listitem.Icon]</texture>
+						<texture fallback="DefaultAddonNone.png">$INFO[Listitem.Icon]</texture>
 					</control>
 
 					<control type="label">
@@ -259,7 +259,7 @@
 				<posy>238</posy>
 				<width>200</width>
 				<height>300</height>
-				<texture fallback="defaults/DefaultAddonNone.png">$INFO[Container(6).ListItem.Icon]</texture>
+				<texture fallback="DefaultAddonNone.png">$INFO[Container(6).ListItem.Icon]</texture>
 				<aspectratio align="center" aligny="bottom">keep</aspectratio>
 				<bordertexture colordiffuse="Accent">colors/color_white.png</bordertexture>
 				<bordersize>5</bordersize>

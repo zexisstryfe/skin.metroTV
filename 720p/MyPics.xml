@@ -24,6 +24,10 @@
 	<!--Options Menu-->
 		<include>Common_Options</include>
 		<include>Common_Options_Clock</include>
+		
+	<!--Sort Overlays-->
+		<include>Sort_Panel</include>
+		<include>Sort_Panel_Alt</include>
 
 	<!--Splash Screen-->	
 		<include condition="!Window.Previous(fullscreenvideo) + !Window.Previous(slideshow) + Skin.HasSetting(MetroAnimations)">Common_Splash</include>

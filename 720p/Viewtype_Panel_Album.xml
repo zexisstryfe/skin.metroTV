@@ -13,115 +13,118 @@
 			
 			<include>Common_TopBar</include>				
 
-			<control type="panel" id="54">
-				<visible>Container.Content(albums) + !Container.Content(Genres)</visible>
-				<posx>500</posx>
-				<posy>150</posy>
-				<width>800</width>
-				<height>525</height>
-				<scrolltime>300</scrolltime>
-				<orientation>horizontal</orientation>
-				<viewtype label="Album Panel">Panel</viewtype>
-				<onleft>9000</onleft>
-				<onright>54</onright>
-				<onup>54</onup>
-				<ondown>66</ondown>
-				<preloaditems>2</preloaditems>
-				<pagecontrol>66</pagecontrol>
-				<itemlayout width="175" height="175">
-				
-					<control type="group">
-						<posx>60</posx>
-						<posy>16</posy>
-						
-						<control type="image">
-							<posx>1</posx>
-							<width>155</width>
-							<height>155</height>
-							<include>Common_Color_Keyback1</include>
-							<fadetime>200</fadetime>
-							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<visible>!Container.Content(Genres)</visible>
-						</control>
-						
-						<control type="image">
-							<posx>1</posx>
-							<width>155</width>
-							<height>155</height>
-							<texture background="true" fallback="defaults/DefaultAlbumCover.png">$INFO[ListItem.Icon]</texture>
-							<fadetime>200</fadetime>
-							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<visible>!Container.Content(Genres) + !stringcompare(ListItem.Label,..)</visible>
-						</control>
-						
-						<control type="image">
-							<posx>1</posx>
-							<width>155</width>
-							<height>155</height>
-							<texture>defaults/DefaultFolderBack.png</texture>
-							<aspectratio scalediffuse="false">keep</aspectratio>
-							<visible>!Container.Content(Genres) + stringcompare(ListItem.Label,..)</visible>
-						</control>
-						
-					</control>
+			<control type="group">			
+				<include>Animation_Slide_Right</include>			
+			
+				<control type="panel" id="54">
+					<visible>Container.Content(albums) + !Container.Content(Genres)</visible>
+					<posx>500</posx>
+					<posy>150</posy>
+					<width>800</width>
+					<height>525</height>
+					<scrolltime>300</scrolltime>
+					<orientation>horizontal</orientation>
+					<viewtype label="Album Panel">Panel</viewtype>
+					<onleft>54</onleft>
+					<onright>54</onright>
+					<onup>9000</onup>
+					<ondown>66</ondown>
+					<preloaditems>2</preloaditems>
+					<pagecontrol>66</pagecontrol>
+					<itemlayout width="175" height="175">
 					
-				</itemlayout>
-				
-				<focusedlayout width="184" height="184">
-				
-					<control type="group">
-						<posx>60</posx>
-						<posy>16</posy>
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />
-						</animation>
-						
-						<control type="image">
-							<width>155</width>
-							<height>155</height>
-							<texture background="true" colordiffuse="Keyback1">colors/color_white.png</texture>
-							<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
-							<bordersize>5</bordersize>
-							<fadetime>200</fadetime>
-							<aspectratio>stretch</aspectratio>
-							<visible>!Container.Content(Genres)</visible>
+						<control type="group">
+							<posx>60</posx>
+							<posy>16</posy>
+							
+							<control type="image">
+								<posx>1</posx>
+								<width>155</width>
+								<height>155</height>
+								<include>Common_Color_Keyback1</include>
+								<fadetime>200</fadetime>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+								<visible>!Container.Content(Genres)</visible>
+							</control>
+
+							<control type="image">
+								<posx>1</posx>
+								<width>155</width>
+								<height>155</height>
+								<texture>$VAR[Common_Fallback]</texture>
+								<aspectratio scalediffuse="false">keep</aspectratio>
+							</control>
+							
+							<control type="image">
+								<posx>1</posx>
+								<width>155</width>
+								<height>155</height>
+								<texture background="true" fallback="DefaultAlbumCover.png">$INFO[ListItem.Icon]</texture>
+								<fadetime>200</fadetime>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+								<visible>!Container.Content(Genres) + !stringcompare(ListItem.Label,..)</visible>
+							</control>
+							
 						</control>
 						
-						<control type="image">
-							<width>155</width>
-							<height>155</height>
-							<texture background="true" fallback="defaults/DefaultAlbumCover.png">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
-							<bordersize>5</bordersize>
-							<fadetime>200</fadetime>
-							<aspectratio>stretch</aspectratio>
-							<visible>!Container.Content(Genres) + !stringcompare(ListItem.Label,..)</visible>
-						</control>
-						
-						<control type="image">
-							<posx>40</posx>
-							<posy>40</posy>
-							<width>75</width>
-							<height>75</height>
-							<texture>general/play_large.png</texture>
-							<visible>!Container.Content(Genres) + !stringcompare(ListItem.Label,..)</visible>
-							<aspectratio>keep</aspectratio>
-							<colordiffuse>Accent80</colordiffuse>
-						</control>
-						
-						<control type="image">
-							<posx>1</posx>
-							<width>155</width>
-							<height>155</height>
-							<texture>defaults/DefaultFolderBack.png</texture>
-							<aspectratio scalediffuse="false">keep</aspectratio>
-							<visible>!Container.Content(Genres) + stringcompare(ListItem.Label,..)</visible>
-						</control>
-						
-					</control>
+					</itemlayout>
 					
-				</focusedlayout>
-				
+					<focusedlayout width="184" height="184">
+					
+						<control type="group">
+							<posx>60</posx>
+							<posy>16</posy>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />
+							</animation>
+							
+							<control type="image">
+								<width>155</width>
+								<height>155</height>
+								<texture background="true" colordiffuse="Keyback1">colors/color_white.png</texture>
+								<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
+								<bordersize>5</bordersize>
+								<fadetime>200</fadetime>
+								<aspectratio>stretch</aspectratio>
+								<visible>!Container.Content(Genres)</visible>
+							</control>
+							
+							<control type="image">
+								<posx>1</posx>
+								<width>155</width>
+								<height>155</height>
+								<texture>$VAR[Common_Fallback]</texture>
+								<aspectratio scalediffuse="false">keep</aspectratio>
+							</control>
+							
+							<control type="image">
+								<width>155</width>
+								<height>155</height>
+								<texture background="true" fallback="DefaultAlbumCover.png">$INFO[ListItem.Icon]</texture>
+								<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
+								<bordersize>5</bordersize>
+								<fadetime>200</fadetime>
+								<aspectratio>stretch</aspectratio>
+								<visible>!Container.Content(Genres) + !stringcompare(ListItem.Label,..)</visible>
+							</control>
+							
+							<control type="image">
+								<posx>40</posx>
+								<posy>40</posy>
+								<width>75</width>
+								<height>75</height>
+								<texture>general/play_large.png</texture>
+								<visible>!Container.Content(Genres) + !stringcompare(ListItem.Label,..)</visible>
+								<aspectratio>keep</aspectratio>
+								<colordiffuse>Accent80</colordiffuse>
+							</control>
+							
+						</control>
+						
+					</focusedlayout>
+					
+				</control>
+			
 			</control>
 
 			<control type="group">
@@ -207,32 +210,37 @@
 					<width>500</width>
 					<height>140</height>
 					<font>font18</font>
-					<info>ListItem.Property(Album_Description)</info>
-					<label>$LOCALIZE[31207]</label>
+					<label>$VAR[Common_Plot]</label>
 					<align>justify</align>
 					<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
 				</control>
 				
-				<control type="image">
-					<description>outline</description>
-					<posx>19</posx>
-					<posy>685</posy>
-					<width>1242</width>
-					<include>Common_Scroll_OutlineH</include>
-					<visible>Control.HasFocus(66)</visible>
-				</control>
-				
-				<control type="scrollbar" id="66">
-					<posx>20</posx>
-					<posy>686</posy>
-					<width>1240</width>
-					<height>5</height>
-					<onup>54</onup>
-					<ondown>9000</ondown>
-					<orientation>horizontal</orientation>
-				</control>
-				
 			</control>
+			
+			<control type="image">
+				<description>outline</description>
+				<include>Animation_ZoomInZoomOut</include>
+				<animation effect="slide" start="0,0" end="0,-220" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(66)">Conditional</animation>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<posx>99</posx>
+				<posy>909</posy>
+				<width>1082</width>
+				<include>Common_Scroll_OutlineH</include>
+				<visible>Control.HasFocus(66)</visible>
+			</control>
+			
+			<control type="scrollbar" id="66">
+				<include>Animation_ZoomInZoomOut</include>
+				<posx>100</posx>
+				<posy>910</posy>
+				<width>1080</width>
+				<height>5</height>
+				<onup>54</onup>
+				<ondown>9000</ondown>
+				<showonepage>true</showonepage>
+				<orientation>horizontal</orientation>
+				<animation effect="slide" start="0,0" end="0,-220" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(66)">Conditional</animation>
+			</control>	
 
 		</control>
 		

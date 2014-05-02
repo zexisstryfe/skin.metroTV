@@ -30,7 +30,7 @@
 			<control type="image">
 				<width>144</width>
 				<height>144</height>
-				<texture fallback="defaults/DefaultArtist.png">$INFO[ListItem.Icon]</texture>
+				<texture fallback="DefaultArtist.png">$INFO[ListItem.Icon]</texture>
 				<aspectratio aligny="top">scale</aspectratio>
 			</control>	
 			

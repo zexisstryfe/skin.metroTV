@@ -96,7 +96,7 @@
 								<width>160</width>
 								<height>240</height>								
 								<aspectratio align="center" aligny="bottom">keep</aspectratio>
-								<texture background="true" fallback="defaults/DefaultGameTile.png">$INFO[ListItem.ActualIcon]</texture>								
+								<texture background="true" fallback="DefaultGameTile.png">$INFO[ListItem.ActualIcon]</texture>								
 							</control>
 							
 							<control type="image">
@@ -122,7 +122,7 @@
 							<aspectratio align="center" aligny="bottom">keep</aspectratio>
 							<bordertexture border="8" colordiffuse="Accent">colors/color_white.png</bordertexture>
 							<bordersize>5</bordersize>
-							<texture background="true" fallback="defaults/DefaultGame.png">$INFO[ListItem.Thumb]</texture>
+							<texture background="true" fallback="DefaultGame.png">$INFO[ListItem.Thumb]</texture>
 							<animation reversible="false" effect="zoom" end="120" center="auto" time="150">Focus</animation>
 						</control>
 						
@@ -405,7 +405,7 @@
 						<width>160</width>
 						<height>240</height>
 						<aspectratio align="left" aligny="center">keep</aspectratio>
-						<texture background="true"  fallback="defaults/DefaultGameTile.png">$INFO[ListItem.ActualIcon]</texture>
+						<texture background="true"  fallback="DefaultGameTile.png">$INFO[ListItem.ActualIcon]</texture>
 					</control>
 					
 					<control type="image">
@@ -647,7 +647,7 @@
 								<posy>131</posy>
 								<width>162</width>
 								<height>241</height>
-								<texture background="true"  fallback="defaults/DefaultGameTile.png">$INFO[ListItem.ActualIcon]</texture>
+								<texture background="true"  fallback="DefaultGameTile.png">$INFO[ListItem.ActualIcon]</texture>
 								<fadetime>200</fadetime>
 								<aspectratio align="center" aligny="center">keep</aspectratio>
 							</control>
@@ -681,7 +681,7 @@
 								<posy>90</posy>
 								<width>215</width>
 								<height>314</height>
-								<texture background="true"  fallback="defaults/DefaultGame.png">$INFO[ListItem.ActualIcon]</texture>
+								<texture background="true"  fallback="DefaultGame.png">$INFO[ListItem.ActualIcon]</texture>
 								<bordertexture border="5" colordiffuse="Accent">colors/color_White.png</bordertexture>
 								<fadetime>200</fadetime>
 								<aspectratio align="center" aligny="center">keep</aspectratio>

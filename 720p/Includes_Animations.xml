@@ -196,4 +196,67 @@
 		</animation>		
 	</include>
 	
+	<include name="Animation_Common_HideWhenScrolling">
+		<animation type="Conditional" condition="Container.Scrolling" reversible="true">
+			<effect type="fade" start="100" end="10" delay="2000" time="400" />
+		</animation>		
+	</include>
+	
+	<include name="Animation_NextAired">
+		<animation type="Visible">
+			<effect type="zoom" delay="200" start="0" end="100" center="640,70" time="200" tween="back" easing="out"/>
+			<effect type="slide" delay="500" start="0" end="-150,0" time="200"/>
+		</animation>
+		<animation type="Hidden">
+			<effect type="slide" delay="0" start="-150,0" end="0,0" time="100"/>
+			<effect type="zoom" delay="100" start="100" end="0" center="640,70" time="100" tween="back" easing="in" />
+		</animation>
+	</include>	
+
+	<include name="Animation_NextAired_Stretch">
+		<animation type="Visible">
+			<effect type="zoom" delay="200" start="0" end="100" center="640,70" time="200" tween="back" easing="out"/>
+			<effect type="zoom" delay="500" start="100" end="475,100" center="640,70" time="200"/>
+		</animation>
+		<animation type="Hidden">
+			<effect type="zoom" delay="0" start="475,100" end="100" center="640,70" time="100"/>
+			<effect type="zoom" delay="100" start="100" end="0" center="640,70" time="100" tween="back" easing="in" />
+		</animation>
+	</include>	
+
+	<include name="Animation_NextAired_Fade">
+		<animation effect="fade" delay="700" time="200">Visible</animation>
+		<animation effect="fade" time="50">Hidden</animation>
+	</include>
+
+	<include name="Animation_Slide_Left">
+		<animation type="WindowOpen" reversible="false">
+			<effect type="slide" start="-1280,0" end="0,0" center="auto" time="600" delay="1000" tween="cubic" easing="out" />
+		</animation>		
+		<animation type="WindowClose" reversible="false">
+			<effect type="slide" start="0,0" end="-1280,0" time="400" tween="cubic" easing="in"/>
+		</animation>
+		<animation type="Visible">
+			<effect type="slide" start="-1280,0" end="0,0" center="auto" time="600" delay="1000" tween="cubic" easing="out" />
+		</animation>
+		<animation type="Hidden">
+			<effect type="slide" start="0,0" end="-1280,0" time="400" tween="cubic" easing="in"/>
+		</animation>
+	</include>	
+	
+	<include name="Animation_Slide_Right">
+		<animation type="WindowOpen" reversible="false">
+			<effect type="slide" start="1280,0" end="0,0" center="auto" time="600" delay="1000" tween="cubic" easing="out" />
+		</animation>		
+		<animation type="WindowClose" reversible="false">
+			<effect type="slide" start="0,0" end="1280,0" time="400" tween="cubic" easing="in"/>
+		</animation>
+		<animation type="Visible">
+			<effect type="slide" start="1280,0" end="0,0" center="auto" time="600" delay="1000" tween="cubic" easing="out" />
+		</animation>
+		<animation type="Hidden">
+			<effect type="slide" start="0,0" end="1280,0" time="400" tween="cubic" easing="in"/>
+		</animation>
+	</include>	
+	
 </includes>

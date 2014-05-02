@@ -19,6 +19,8 @@
 	<include file="Viewtype_Album.xml" /> <!-- id 58 -->
 	<include file="Viewtype_16x9.xml" /> <!-- id 59 -->
 	<include file="Viewtype_Fanart_Banner.xml" /> <!-- id 590 -->	
+	<include file="Viewtype_Thumbnail.xml" /> <!-- id 591 -->	
+	<include file="Viewtype_Thumbnail_Album.xml" /> <!-- id 592 -->	
 	
 	<!-- PVR Views -->
 	<include file="Viewtype_PVR_TVChannel.xml" />
@@ -43,6 +45,7 @@
 	<include file="Includes_Options.xml" />
 	<include file="Includes_RCB.xml" />
 	<include file="Includes_Settings.xml" />
+	<include file="Includes_Sort.xml" />
 	
 	<!-- Variables -->
 	<include file="Variable.xml" />

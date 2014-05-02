@@ -88,7 +88,7 @@
 						<posy>10</posy>
 						<width>90</width>
 						<height>90</height>
-						<texture>defaults/DefaultPeripheral.png</texture>
+						<texture>DefaultPeripheral.png</texture>
 					</control>
 					
 					<control type="label">
@@ -159,7 +159,7 @@
 						<posy>10</posy>
 						<width>90</width>
 						<height>90</height>
-						<texture>defaults/DefaultPeripheral.png</texture>
+						<texture>DefaultPeripheral.png</texture>
 					</control>
 					
 					<control type="label">

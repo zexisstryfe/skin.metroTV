@@ -575,7 +575,7 @@
 								<posx>5</posx>
 								<width>100</width>
 								<height>100</height>
-								<texture fallback="defaults/DefaultActor.png">$INFO[ListItem.Icon]</texture>
+								<texture fallback="DefaultActor.png">$INFO[ListItem.Icon]</texture>
 								<aspectratio align="center" aligny="center">scale</aspectratio>
 							</control>		
 
@@ -622,7 +622,7 @@
 								<posx>5</posx>
 								<width>100</width>
 								<height>100</height>
-								<texture fallback="defaults/DefaultActor.png">$INFO[ListItem.Icon]</texture>
+								<texture fallback="DefaultActor.png">$INFO[ListItem.Icon]</texture>
 								<aspectratio align="center" aligny="center">scale</aspectratio>
 							</control>		
 
