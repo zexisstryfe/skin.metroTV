@@ -154,7 +154,7 @@
 						<texturefocus>OSD/SubtitlesFO.png</texturefocus>
 						<texturenofocus>OSD/SubtitlesNF.png</texturenofocus>
 						<onclick>Close</onclick>
-						<onclick>XBMC.RunScript(script.xbmc.subtitles)</onclick>
+						<onclick>ActivateWindow(153)</onclick>
 						<visible>IsEmpty(Skin.String(SubtitlesPath))</visible>
 						<visible>!VideoPlayer.Content(LiveTV)</visible>
 					</control>
