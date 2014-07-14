@@ -187,7 +187,7 @@
 						<include>Common_Color_Accent</include>
 					</control>
 					
-                    <control type="fadelabel" id="1">
+                    <control type="label" id="1">
                         <posx>10</posx>
                         <width>120</width>
 						<font>font20</font>
