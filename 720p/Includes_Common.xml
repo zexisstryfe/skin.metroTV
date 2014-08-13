@@ -811,7 +811,8 @@
 		<onclick>ClearProperty(ID,58)</onclick>
 		<onclick>ClearProperty(Type,58)</onclick>
 		<onclick>ClearProperty(Country,58)</onclick>
-		<onclick>ClearProperty(NextTime,58)</onclick>		
+		<onclick>ClearProperty(NextTime,58)</onclick>	
+		<onclick>ClearProperty(Premiered,58)</onclick>
 	</include>
 	
 	<include name="Common_TraktTV_HeaderButton">
@@ -993,6 +994,21 @@
 
 		</control>	
 		
+	</include>
+	
+	<include name="Common_Infolist_Label3">
+		<width>150</width>
+		<posx>10</posx>
+		<height>28</height>
+		<textcolor>Black</textcolor>
+		<font>font20UB</font>
+	</include>
+	
+	<include name="Common_Infolist_Info">
+		<posx>160</posx>
+		<width>300</width>
+		<height>28</height>
+		<scroll>true</scroll>
 	</include>
 	
 </includes>

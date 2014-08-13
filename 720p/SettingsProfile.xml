@@ -42,9 +42,9 @@
 				<width>400</width>
 				<label>$LOCALIZE[20096]</label>
 				<align>left</align>
-				<onright>-</onright>
-				<onleft>-</onleft>
-				<onup>-</onup>
+				<onright>noop</onright>
+				<onleft>noop</onleft>
+				<onup>noop</onup>
 				<ondown>2</ondown>
 			</control>
 			
@@ -80,10 +80,10 @@
 				<posy>180</posy>
 				<width>400</width>
 				<height>311</height>
-				<onleft>-</onleft>
-				<onright>-</onright>
+				<onleft>noop</onleft>
+				<onright>noop</onright>
 				<onup>4</onup>
-				<ondown>-</ondown>
+				<ondown>noop</ondown>
 				<itemlayout height="46">
 
 					<control type="label">

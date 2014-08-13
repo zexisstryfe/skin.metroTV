@@ -329,7 +329,6 @@
 						<height>300</height>
 						<itemgap>0</itemgap>
 						<orientation>vertical</orientation>
-						<align>top</align>
 						<usecontrolcoords>true</usecontrolcoords>
 						
 						<!--Artist Info-->
@@ -652,7 +651,7 @@
 						<width>400</width>
 						<height>520</height>
 						<onleft>50</onleft>
-						<onright>-</onright>
+						<onright>noop</onright>
 						<onup>9004</onup>
 						<ondown>9004</ondown>
 						<pagecontrol>9014</pagecontrol>
@@ -697,8 +696,7 @@
 									<label>$INFO[ListItem.Label2]</label>
 									<font>font18</font>
 									<aligny>top</aligny>
-									<shadowcolor>00FFFFFF</shadowcolor>
-									<autoscroll>false</autoscroll>								
+									<shadowcolor>00FFFFFF</shadowcolor>							
 								</control>
 							
 							</control>
@@ -742,8 +740,7 @@
 									<label>$INFO[ListItem.Label2]</label>
 									<font>font18</font>
 									<aligny>top</aligny>
-									<shadowcolor>00FFFFFF</shadowcolor>
-									<autoscroll>false</autoscroll>								
+									<shadowcolor>00FFFFFF</shadowcolor>						
 								</control>
 							
 							</control>
@@ -753,7 +750,7 @@
 						<content>
 						
 							<item id="1">
-								<onclick>-</onclick>
+								<onclick>noop</onclick>
 								<thumb>$INFO[Window(Home).Property(ArtistEvents.1.Thumb)]</thumb>
 								<label>$INFO[Window(Home).Property(ArtistEvents.1.Artists)]</label>
 								<label2>[B]$INFO[Window(Home).Property(ArtistEvents.1.Date)][/B][CR]$INFO[Window(Home).Property(ArtistEvents.1.City)]</label2>
@@ -761,7 +758,7 @@
 							</item>
 							
 							<item id="2">
-								<onclick>-</onclick>
+								<onclick>noop</onclick>
 								<thumb>$INFO[Window(Home).Property(ArtistEvents.2.Thumb)]</thumb>
 								<label>$INFO[Window(Home).Property(ArtistEvents.2.Artists)]</label>
 								<label2>[B]$INFO[Window(Home).Property(ArtistEvents.2.Date)][/B][CR]$INFO[Window(Home).Property(ArtistEvents.2.City)]</label2>
@@ -769,7 +766,7 @@
 							</item>
 							
 							<item id="3">
-								<onclick>-</onclick>
+								<onclick>noop</onclick>
 								<thumb>$INFO[Window(Home).Property(ArtistEvents.3.Thumb)]</thumb>
 								<label>$INFO[Window(Home).Property(ArtistEvents.3.Artists)]</label>
 								<label2>[B]$INFO[Window(Home).Property(ArtistEvents.3.Date)][/B][CR]$INFO[Window(Home).Property(ArtistEvents.3.City)]</label2>
@@ -777,7 +774,7 @@
 							</item>
 							
 							<item id="4">
-								<onclick>-</onclick>
+								<onclick>noop</onclick>
 								<thumb>$INFO[Window(Home).Property(ArtistEvents.4.Thumb)]</thumb>
 								<label>$INFO[Window(Home).Property(ArtistEvents.4.Artists)]</label>
 								<label2>[B]$INFO[Window(Home).Property(ArtistEvents.4.Date)][/B][CR]$INFO[Window(Home).Property(ArtistEvents.4.City)]</label2>
@@ -785,7 +782,7 @@
 							</item>
 							
 							<item id="5">
-								<onclick>-</onclick>
+								<onclick>noop</onclick>
 								<thumb>$INFO[Window(Home).Property(ArtistEvents.5.Thumb)]</thumb>
 								<label>$INFO[Window(Home).Property(ArtistEvents.5.Artists)]</label>
 								<label2>[B]$INFO[Window(Home).Property(ArtistEvents.5.Date)][/B][CR]$INFO[Window(Home).Property(ArtistEvents.5.City)]</label2>
@@ -793,7 +790,7 @@
 							</item>
 							
 							<item id="6">
-								<onclick>-</onclick>
+								<onclick>noop</onclick>
 								<thumb>$INFO[Window(Home).Property(ArtistEvents.6.Thumb)]</thumb>
 								<label>$INFO[Window(Home).Property(ArtistEvents.6.Artists)]</label>
 								<label2>[B]$INFO[Window(Home).Property(ArtistEvents.6.Date)][/B][CR]$INFO[Window(Home).Property(ArtistEvents.6.City)]</label2>
@@ -801,7 +798,7 @@
 							</item>
 							
 							<item id="7">
-								<onclick>-</onclick>
+								<onclick>noop</onclick>
 								<thumb>$INFO[Window(Home).Property(ArtistEvents.7.Thumb)]</thumb>
 								<label>$INFO[Window(Home).Property(ArtistEvents.7.Artists)]</label>
 								<label2>[B]$INFO[Window(Home).Property(ArtistEvents.7.Date)][/B][CR]$INFO[Window(Home).Property(ArtistEvents.7.City)]</label2>
@@ -809,7 +806,7 @@
 							</item>
 							
 							<item id="8">
-								<onclick>-</onclick>
+								<onclick>noop</onclick>
 								<thumb>$INFO[Window(Home).Property(ArtistEvents.8.Thumb)]</thumb>
 								<label>$INFO[Window(Home).Property(ArtistEvents.8.Artists)]</label>
 								<label2>[B]$INFO[Window(Home).Property(ArtistEvents.8.Date)][/B][CR]$INFO[Window(Home).Property(ArtistEvents.8.City)]</label2>
@@ -817,7 +814,7 @@
 							</item>
 							
 							<item id="9">
-								<onclick>-</onclick>
+								<onclick>noop</onclick>
 								<thumb>$INFO[Window(Home).Property(ArtistEvents.9.Thumb)]</thumb>
 								<label>$INFO[Window(Home).Property(ArtistEvents.9.Artists)]</label>
 								<label2>[B]$INFO[Window(Home).Property(ArtistEvents.9.Date)][/B][CR]$INFO[Window(Home).Property(ArtistEvents.9.City)]</label2>
@@ -825,7 +822,7 @@
 							</item>
 							
 							<item id="10">
-								<onclick>-</onclick>
+								<onclick>noop</onclick>
 								<thumb>$INFO[Window(Home).Property(ArtistEvents.10.Thumb)]</thumb>
 								<label>$INFO[Window(Home).Property(ArtistEvents.10.Artists)]</label>
 								<label2>[B]$INFO[Window(Home).Property(ArtistEvents.10.Date)][/B][CR]$INFO[Window(Home).Property(ArtistEvents.10.City)]</label2>

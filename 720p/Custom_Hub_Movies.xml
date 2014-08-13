@@ -5,7 +5,7 @@
 	<zorder>2</zorder>
 	
 	<onload condition="System.HasAddon(script.randomandlastitems) + Skin.HasSetting(ShowHistorySection_Video)">XBMC.RunScript(script.randomandlastitems,limit=10,method=Last,playlist=special://skin/playlists/History (Movies).xsp,menu=Menu1)</onload>	
-	<onload condition="System.HasAddon(script.extendedinfo) + Skin.HasSetting(ShowInCinemasSection_Video)">RunScript(script.extendedinfo,info=incinema)</onload>
+	<onload condition="System.HasAddon(script.extendedinfo) + Skin.HasSetting(ShowInCinemasSection_Video)">RunScript(script.extendedinfo,info=incinemas)</onload>
 	<onload condition="System.HasAddon(script.extendedinfo) + Skin.HasSetting(ShowTrendingSection_Video)">RunScript(script.extendedinfo,info=TrendingMovies)</onload>
 
 	<controls>

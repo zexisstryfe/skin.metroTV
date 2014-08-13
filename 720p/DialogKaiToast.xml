@@ -5,71 +5,73 @@
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>
-
+	
 		<control type="group">
-			<posx>340r</posx>
-			<posy>30</posy>
+			<posx>400r</posx>
 			<include>Animation_Notification_Right</include>
 			
 			<control type="image">
 				<description>background image</description>
-				<width>340</width>
-				<height>64</height>
+				<width>400</width>
+				<height>100</height>
 				<include>Common_Color_Keyback1</include>
 			</control>
 			
 			<control type="image">
 				<description>Image</description>
-				<width>64</width>
-				<height>64</height>
+				<width>100</width>
+				<height>100</height>
 				<include>Common_Color_Keyback2</include>
 			</control>
 
 			<control type="image" id="400">
 				<description>Image</description>
 				<include>KaiToast_Icon</include>
-				<texture>kai\dialog.png</texture>
+				<texture>kai/dialog.png</texture>
 			</control>
 
 			<control type="label" id="402">
 				<description>heading</description>
-				<posx>84</posx>
-				<width>306</width>
+				<posy>10</posy>
+				<posx>120</posx>
+				<width>270</width>
 				<height>32</height>
 				<label>-</label>
-				<scroll>true</scroll>
+				<align>center</align>
 				<font>font20UB</font>
+				<wrapmultiline>true</wrapmultiline>
 			</control>
 
 			<control type="label" id="401">
 				<description>message</description>
-				<posx>84</posx>
-				<posy>32</posy>
-				<width>306</width>
-				<height>32</height>
+				<posx>120</posx>
+				<posy>45</posy>
+				<width>270</width>
+				<height>45</height>
+				<align>center</align>
 				<label>-</label>
-				<scroll>true</scroll>
+				<wrapmultiline>true</wrapmultiline>
 			</control>
 
 			<control type="image" id="403">
 				<description>Image</description>
 				<include>KaiToast_Icon</include>
 				<visible>false</visible>
-				<texture>kai\dialog-info.png</texture>
+				<texture>kai/dialog-info.png</texture>
 			</control>
 
 			<control type="image" id="404">
 				<description>Image</description>
 				<include>KaiToast_Icon</include>
 				<visible>false</visible>
-				<texture>kai\dialog-warning.png</texture>
+				<texture>kai/dialog-warning.png</texture>
 			</control>
 
 			<control type="image" id="405">
 				<description>Image</description>
 				<include>KaiToast_Icon</include>
 				<visible>false</visible>
-				<texture>kai\dialog-error.png</texture>
+				<texture>kai/dialog-error.png</texture>
 			</control>
 
 		</control>

@@ -7,7 +7,8 @@
 	<onload>Weather.Refresh</onload>
 	<onload condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(skinsettings)</onload>
 	<onload condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(3002)</onload>
-	<onload condition="System.HasAddon(script.extendedinfo) + Skin.String(Home.TVShowPanel,Trending)">RunScript(script.extendedinfo,info=TrendingShows)</onload>
+	<onload condition="System.HasAddon(script.extendedinfo) + Skin.String(Home.TVShowPanel,Trending)">RunScript(script.extendedinfo,info=trendingshows)</onload>
+	<onload condition="System.HasAddon(script.extendedinfo) + Skin.String(Home.MoviePanel,Trending)">RunScript(script.extendedinfo,info=trendingmovies)</onload>
 	
 	<controls>
 	
@@ -411,7 +412,7 @@
 					<width>300</width>
 					<height>100</height>
 					<label>$LOCALIZE[31018]</label>
-					<font>Geosans32L</font>
+					<font>font24L</font>
 					<textcolor>White</textcolor>
 					<aligny>top</aligny>
 					<align>center</align>
@@ -452,10 +453,10 @@
 				<control type="textbox">
 					<posx>810</posx>
 					<posy>425</posy>
-					<width>300</width>
+					<width>400</width>
 					<height>100</height>
 					<label>$LOCALIZE[31022]</label>
-					<font>Geosans32L</font>
+					<font>font24L</font>
 					<textcolor>White</textcolor>
 					<aligny>top</aligny>
 					<align>center</align>

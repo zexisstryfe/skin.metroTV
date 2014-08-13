@@ -80,7 +80,6 @@
 							<font>font24UB</font>
 							<textcolor>Accent</textcolor>
 							<aligny>top</aligny>
-							<autoscroll>false</autoscroll>
 							<visible>!stringcompare(ListItem.Label,..)</visible>							
 						</control>
 						
@@ -93,7 +92,6 @@
 							<font>font24UB</font>
 							<textcolor>Accent</textcolor>
 							<aligny>top</aligny>
-							<autoscroll>false</autoscroll>
 							<visible>stringcompare(ListItem.Label,..)</visible>							
 						</control>
 						
@@ -165,7 +163,6 @@
 							<label>$INFO[ListItem.Label]</label>
 							<font>font24UB</font>
 							<aligny>top</aligny>
-							<autoscroll>false</autoscroll>
 							<visible>!stringcompare(ListItem.Label,..)</visible>							
 						</control>
 						
@@ -177,7 +174,6 @@
 							<label>$LOCALIZE[31194]</label>
 							<font>font24UB</font>
 							<aligny>top</aligny>
-							<autoscroll>false</autoscroll>
 							<visible>stringcompare(ListItem.Label,..)</visible>							
 						</control>
 						

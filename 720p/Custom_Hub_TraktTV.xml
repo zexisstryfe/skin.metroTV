@@ -172,6 +172,7 @@
 							<onclick>SetProperty(Fanart,$INFO[Window(Home).Property(TrendingMovies.1.Art(fanart))],58)</onclick>
 							<onclick>SetProperty(Trailer,$INFO[Window(Home).Property(TrendingMovies.1.Play)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingMovies.1.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingMovies.1.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,movie,58)</onclick>
 							<onclick>ActivateWindow(58,return)</onclick>
 						</item>
@@ -192,6 +193,7 @@
 							<onclick>SetProperty(Fanart,$INFO[Window(Home).Property(TrendingMovies.2.Art(fanart))],58)</onclick>
 							<onclick>SetProperty(Trailer,$INFO[Window(Home).Property(TrendingMovies.2.Play)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingMovies.2.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingMovies.2.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,movie,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -212,6 +214,7 @@
 							<onclick>SetProperty(Fanart,$INFO[Window(Home).Property(TrendingMovies.3.Art(fanart))],58)</onclick>
 							<onclick>SetProperty(Trailer,$INFO[Window(Home).Property(TrendingMovies.3.Play)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingMovies.3.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingMovies.3.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,movie,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -232,6 +235,7 @@
 							<onclick>SetProperty(Fanart,$INFO[Window(Home).Property(TrendingMovies.4.Art(fanart))],58)</onclick>
 							<onclick>SetProperty(Trailer,$INFO[Window(Home).Property(TrendingMovies.4.Play)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingMovies.4.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingMovies.4.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,movie,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -252,6 +256,7 @@
 							<onclick>SetProperty(Fanart,$INFO[Window(Home).Property(TrendingMovies.5.Art(fanart))],58)</onclick>
 							<onclick>SetProperty(Trailer,$INFO[Window(Home).Property(TrendingMovies.5.Play)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingMovies.5.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingMovies.5.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,movie,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -272,6 +277,7 @@
 							<onclick>SetProperty(Fanart,$INFO[Window(Home).Property(TrendingMovies.6.Art(fanart))],58)</onclick>
 							<onclick>SetProperty(Trailer,$INFO[Window(Home).Property(TrendingMovies.6.Play)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingMovies.6.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingMovies.6.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,movie,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -292,6 +298,7 @@
 							<onclick>SetProperty(Fanart,$INFO[Window(Home).Property(TrendingMovies.7.Art(fanart))],58)</onclick>
 							<onclick>SetProperty(Trailer,$INFO[Window(Home).Property(TrendingMovies.7.Play)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingMovies.7.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingMovies.7.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,movie,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -312,6 +319,7 @@
 							<onclick>SetProperty(Fanart,$INFO[Window(Home).Property(TrendingMovies.8.Art(fanart))],58)</onclick>
 							<onclick>SetProperty(Trailer,$INFO[Window(Home).Property(TrendingMovies.8.Play)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingMovies.8.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingMovies.8.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,movie,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -332,6 +340,7 @@
 							<onclick>SetProperty(Fanart,$INFO[Window(Home).Property(TrendingMovies.9.Art(fanart))],58)</onclick>
 							<onclick>SetProperty(Trailer,$INFO[Window(Home).Property(TrendingMovies.9.Play)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingMovies.9.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingMovies.9.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,movie,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -352,6 +361,7 @@
 							<onclick>SetProperty(Fanart,$INFO[Window(Home).Property(TrendingMovies.10.Art(fanart))],58)</onclick>
 							<onclick>SetProperty(Trailer,$INFO[Window(Home).Property(TrendingMovies.10.Play)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingMovies.10.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingMovies.10.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,movie,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -372,6 +382,7 @@
 							<onclick>SetProperty(Fanart,$INFO[Window(Home).Property(TrendingMovies.11.Art(fanart))],58)</onclick>
 							<onclick>SetProperty(Trailer,$INFO[Window(Home).Property(TrendingMovies.11.Play)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingMovies.11.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingMovies.11.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,movie,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -392,6 +403,7 @@
 							<onclick>SetProperty(Fanart,$INFO[Window(Home).Property(TrendingMovies.12.Art(fanart))],58)</onclick>
 							<onclick>SetProperty(Trailer,$INFO[Window(Home).Property(TrendingMovies.12.Play)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingMovies.12.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingMovies.12.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,movie,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -412,6 +424,7 @@
 							<onclick>SetProperty(Fanart,$INFO[Window(Home).Property(TrendingMovies.13.Art(fanart))],58)</onclick>
 							<onclick>SetProperty(Trailer,$INFO[Window(Home).Property(TrendingMovies.13.Play)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingMovies.13.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingMovies.13.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,movie,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -432,6 +445,7 @@
 							<onclick>SetProperty(Fanart,$INFO[Window(Home).Property(TrendingMovies.14.Art(fanart))],58)</onclick>
 							<onclick>SetProperty(Trailer,$INFO[Window(Home).Property(TrendingMovies.14.Play)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingMovies.14.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingMovies.14.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,movie,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -452,6 +466,7 @@
 							<onclick>SetProperty(Fanart,$INFO[Window(Home).Property(TrendingMovies.15.Art(fanart))],58)</onclick>
 							<onclick>SetProperty(Trailer,$INFO[Window(Home).Property(TrendingMovies.15.Play)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingMovies.15.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingMovies.15.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,movie,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -472,6 +487,7 @@
 							<onclick>SetProperty(Fanart,$INFO[Window(Home).Property(TrendingMovies.16.Art(fanart))],58)</onclick>
 							<onclick>SetProperty(Trailer,$INFO[Window(Home).Property(TrendingMovies.16.Play)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingMovies.16.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingMovies.16.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,movie,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -492,6 +508,7 @@
 							<onclick>SetProperty(Fanart,$INFO[Window(Home).Property(TrendingMovies.17.Art(fanart))],58)</onclick>
 							<onclick>SetProperty(Trailer,$INFO[Window(Home).Property(TrendingMovies.17.Play)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingMovies.17.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingMovies.17.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,movie,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -512,6 +529,7 @@
 							<onclick>SetProperty(Fanart,$INFO[Window(Home).Property(TrendingMovies.18.Art(fanart))],58)</onclick>
 							<onclick>SetProperty(Trailer,$INFO[Window(Home).Property(TrendingMovies.18.Play)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingMovies.18.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingMovies.18.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,movie,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -532,6 +550,7 @@
 							<onclick>SetProperty(Fanart,$INFO[Window(Home).Property(TrendingMovies.19.Art(fanart))],58)</onclick>
 							<onclick>SetProperty(Trailer,$INFO[Window(Home).Property(TrendingMovies.19.Play)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingMovies.19.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingMovies.19.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,movie,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -552,6 +571,7 @@
 							<onclick>SetProperty(Fanart,$INFO[Window(Home).Property(TrendingMovies.20.Art(fanart))],58)</onclick>
 							<onclick>SetProperty(Trailer,$INFO[Window(Home).Property(TrendingMovies.20.Play)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingMovies.20.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingMovies.20.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,movie,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -611,6 +631,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(TrendingShows.1.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(TrendingShows.1.ShortTime)] $INFO[Window(Home).Property(TrendingShows.1.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingShows.1.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingShows.1.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58,return)</onclick>
 						</item>
@@ -632,6 +653,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(TrendingShows.2.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(TrendingShows.2.ShortTime)] $INFO[Window(Home).Property(TrendingShows.2.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingShows.2.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingShows.2.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -653,6 +675,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(TrendingShows.3.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(TrendingShows.3.ShortTime)] $INFO[Window(Home).Property(TrendingShows.3.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingShows.3.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingShows.3.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -674,6 +697,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(TrendingShows.4.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(TrendingShows.4.ShortTime)] $INFO[Window(Home).Property(TrendingShows.4.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingShows.4.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingShows.4.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -695,6 +719,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(TrendingShows.5.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(TrendingShows.5.ShortTime)] $INFO[Window(Home).Property(TrendingShows.5.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingShows.5.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingShows.5.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -716,6 +741,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(TrendingShows.6.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(TrendingShows.6.ShortTime)] $INFO[Window(Home).Property(TrendingShows.6.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingShows.6.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingShows.6.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -737,6 +763,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(TrendingShows.7.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(TrendingShows.7.ShortTime)] $INFO[Window(Home).Property(TrendingShows.7.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingShows.7.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingShows.7.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -758,6 +785,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(TrendingShows.8.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(TrendingShows.8.ShortTime)] $INFO[Window(Home).Property(TrendingShows.8.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingShows.8.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingShows.8.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -779,6 +807,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(TrendingShows.9.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(TrendingShows.9.ShortTime)] $INFO[Window(Home).Property(TrendingShows.9.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingShows.9.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingShows.9.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -800,6 +829,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(TrendingShows.10.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(TrendingShows.10.ShortTime)] $INFO[Window(Home).Property(TrendingShows.10.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingShows.10.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingShows.10.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -821,6 +851,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(TrendingShows.11.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(TrendingShows.11.ShortTime)] $INFO[Window(Home).Property(TrendingShows.11.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingShows.11.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingShows.11.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -842,6 +873,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(TrendingShows.12.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(TrendingShows.12.ShortTime)] $INFO[Window(Home).Property(TrendingShows.12.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingShows.12.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingShows.12.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -863,6 +895,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(TrendingShows.13.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(TrendingShows.13.ShortTime)] $INFO[Window(Home).Property(TrendingShows.13.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingShows.13.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingShows.13.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -884,6 +917,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(TrendingShows.14.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(TrendingShows.14.ShortTime)] $INFO[Window(Home).Property(TrendingShows.14.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingShows.14.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingShows.14.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -905,6 +939,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(TrendingShows.15.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(TrendingShows.15.ShortTime)] $INFO[Window(Home).Property(TrendingShows.15.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingShows.15.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingShows.15.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -926,6 +961,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(TrendingShows.16.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(TrendingShows.16.ShortTime)] $INFO[Window(Home).Property(TrendingShows.16.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingShows.16.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingShows.16.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -947,6 +983,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(TrendingShows.17.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(TrendingShows.17.ShortTime)] $INFO[Window(Home).Property(TrendingShows.17.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingShows.17.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingShows.17.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -968,6 +1005,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(TrendingShows.18.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(TrendingShows.18.ShortTime)] $INFO[Window(Home).Property(TrendingShows.18.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingShows.18.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingShows.18.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -989,6 +1027,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(TrendingShows.19.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(TrendingShows.19.ShortTime)] $INFO[Window(Home).Property(TrendingShows.19.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingShows.19.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingShows.19.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1010,6 +1049,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(TrendingShows.20.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(TrendingShows.20.ShortTime)] $INFO[Window(Home).Property(TrendingShows.20.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(TrendingShows.20.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(TrendingShows.20.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1069,6 +1109,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(AiringShows.1.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(AiringShows.1.ShortTime)] $INFO[Window(Home).Property(AiringShows.1.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(AiringShows.1.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(AiringShows.1.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58,return)</onclick>
 						</item>
@@ -1090,6 +1131,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(AiringShows.2.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(AiringShows.2.ShortTime)] $INFO[Window(Home).Property(AiringShows.2.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(AiringShows.2.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(AiringShows.2.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1111,6 +1153,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(AiringShows.3.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(AiringShows.3.ShortTime)] $INFO[Window(Home).Property(AiringShows.3.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(AiringShows.3.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(AiringShows.3.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1132,6 +1175,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(AiringShows.4.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(AiringShows.4.ShortTime)] $INFO[Window(Home).Property(AiringShows.4.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(AiringShows.4.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(AiringShows.4.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1153,6 +1197,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(AiringShows.5.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(AiringShows.5.ShortTime)] $INFO[Window(Home).Property(AiringShows.5.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(AiringShows.5.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(AiringShows.5.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1174,6 +1219,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(AiringShows.6.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(AiringShows.6.ShortTime)] $INFO[Window(Home).Property(AiringShows.6.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(AiringShows.6.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(AiringShows.6.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1195,6 +1241,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(AiringShows.7.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(AiringShows.7.ShortTime)] $INFO[Window(Home).Property(AiringShows.7.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(AiringShows.7.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(AiringShows.7.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1216,6 +1263,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(AiringShows.8.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(AiringShows.8.ShortTime)] $INFO[Window(Home).Property(AiringShows.8.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(AiringShows.8.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(AiringShows.8.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1237,6 +1285,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(AiringShows.9.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(AiringShows.9.ShortTime)] $INFO[Window(Home).Property(AiringShows.9.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(AiringShows.9.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(AiringShows.9.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1258,6 +1307,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(AiringShows.10.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(AiringShows.10.ShortTime)] $INFO[Window(Home).Property(AiringShows.10.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(AiringShows.10.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(AiringShows.10.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1279,6 +1329,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(AiringShows.11.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(AiringShows.11.ShortTime)] $INFO[Window(Home).Property(AiringShows.11.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(AiringShows.11.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(AiringShows.11.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1300,6 +1351,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(AiringShows.12.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(AiringShows.12.ShortTime)] $INFO[Window(Home).Property(AiringShows.12.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(AiringShows.12.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(AiringShows.12.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1321,6 +1373,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(AiringShows.13.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(AiringShows.13.ShortTime)] $INFO[Window(Home).Property(AiringShows.13.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(AiringShows.13.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(AiringShows.13.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1342,6 +1395,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(AiringShows.14.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(AiringShows.14.ShortTime)] $INFO[Window(Home).Property(AiringShows.14.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(AiringShows.14.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(AiringShows.14.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1363,6 +1417,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(AiringShows.15.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(AiringShows.15.ShortTime)] $INFO[Window(Home).Property(AiringShows.15.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(AiringShows.15.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(AiringShows.15.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1384,6 +1439,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(AiringShows.16.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(AiringShows.16.ShortTime)] $INFO[Window(Home).Property(AiringShows.16.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(AiringShows.16.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(AiringShows.16.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1405,6 +1461,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(AiringShows.17.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(AiringShows.17.ShortTime)] $INFO[Window(Home).Property(AiringShows.17.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(AiringShows.17.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(AiringShows.17.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1426,6 +1483,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(AiringShows.18.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(AiringShows.18.ShortTime)] $INFO[Window(Home).Property(AiringShows.18.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(AiringShows.18.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(AiringShows.18.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1447,6 +1505,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(AiringShows.19.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(AiringShows.19.ShortTime)] $INFO[Window(Home).Property(AiringShows.19.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(AiringShows.19.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(AiringShows.19.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1468,6 +1527,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(AiringShows.20.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(AiringShows.20.ShortTime)] $INFO[Window(Home).Property(AiringShows.20.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(AiringShows.20.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(AiringShows.20.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1527,6 +1587,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(PremiereShows.1.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(PremiereShows.1.ShortTime)] $INFO[Window(Home).Property(PremiereShows.1.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(PremiereShows.1.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(PremiereShows.1.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58,return)</onclick>
 						</item>
@@ -1548,6 +1609,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(PremiereShows.2.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(PremiereShows.2.ShortTime)] $INFO[Window(Home).Property(PremiereShows.2.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(PremiereShows.2.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(PremiereShows.2.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1569,6 +1631,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(PremiereShows.3.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(PremiereShows.3.ShortTime)] $INFO[Window(Home).Property(PremiereShows.3.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(PremiereShows.3.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(PremiereShows.3.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1590,6 +1653,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(PremiereShows.4.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(PremiereShows.4.ShortTime)] $INFO[Window(Home).Property(PremiereShows.4.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(PremiereShows.4.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(PremiereShows.4.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1611,6 +1675,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(PremiereShows.5.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(PremiereShows.5.ShortTime)] $INFO[Window(Home).Property(PremiereShows.5.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(PremiereShows.5.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(PremiereShows.5.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1632,6 +1697,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(PremiereShows.6.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(PremiereShows.6.ShortTime)] $INFO[Window(Home).Property(PremiereShows.6.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(PremiereShows.6.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(PremiereShows.6.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1653,6 +1719,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(PremiereShows.7.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(PremiereShows.7.ShortTime)] $INFO[Window(Home).Property(PremiereShows.7.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(PremiereShows.7.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(PremiereShows.7.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1674,6 +1741,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(PremiereShows.8.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(PremiereShows.8.ShortTime)] $INFO[Window(Home).Property(PremiereShows.8.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(PremiereShows.8.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(PremiereShows.8.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1695,6 +1763,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(PremiereShows.9.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(PremiereShows.9.ShortTime)] $INFO[Window(Home).Property(PremiereShows.9.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(PremiereShows.9.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(PremiereShows.9.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1716,6 +1785,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(PremiereShows.10.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(PremiereShows.10.ShortTime)] $INFO[Window(Home).Property(PremiereShows.10.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(PremiereShows.10.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(PremiereShows.10.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1737,6 +1807,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(PremiereShows.11.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(PremiereShows.11.ShortTime)] $INFO[Window(Home).Property(PremiereShows.11.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(PremiereShows.11.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(PremiereShows.11.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1758,6 +1829,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(PremiereShows.12.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(PremiereShows.12.ShortTime)] $INFO[Window(Home).Property(PremiereShows.12.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(PremiereShows.12.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(PremiereShows.12.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1779,6 +1851,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(PremiereShows.13.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(PremiereShows.13.ShortTime)] $INFO[Window(Home).Property(PremiereShows.13.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(PremiereShows.13.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(PremiereShows.13.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1800,6 +1873,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(PremiereShows.14.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(PremiereShows.14.ShortTime)] $INFO[Window(Home).Property(PremiereShows.14.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(PremiereShows.14.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(PremiereShows.14.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1821,6 +1895,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(PremiereShows.15.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(PremiereShows.15.ShortTime)] $INFO[Window(Home).Property(PremiereShows.15.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(PremiereShows.15.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(PremiereShows.15.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1842,6 +1917,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(PremiereShows.16.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(PremiereShows.16.ShortTime)] $INFO[Window(Home).Property(PremiereShows.16.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(PremiereShows.16.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(PremiereShows.16.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1863,6 +1939,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(PremiereShows.17.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(PremiereShows.17.ShortTime)] $INFO[Window(Home).Property(PremiereShows.17.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(PremiereShows.17.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(PremiereShows.17.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1884,6 +1961,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(PremiereShows.18.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(PremiereShows.18.ShortTime)] $INFO[Window(Home).Property(PremiereShows.18.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(PremiereShows.18.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(PremiereShows.18.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1905,6 +1983,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(PremiereShows.19.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(PremiereShows.19.ShortTime)] $INFO[Window(Home).Property(PremiereShows.19.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(PremiereShows.19.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(PremiereShows.19.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>
@@ -1926,6 +2005,7 @@
 							<onclick>SetProperty(Country,$INFO[Window(Home).Property(PremiereShows.20.Country)],58)</onclick>
 							<onclick>SetProperty(NextTime,$INFO[Window(Home).Property(PremiereShows.20.ShortTime)] $INFO[Window(Home).Property(PremiereShows.20.NextDate)],58)</onclick>
 							<onclick>SetProperty(ID,$INFO[Window(Home).Property(PremiereShows.20.ID)],58)</onclick>
+							<onclick>SetProperty(Premiered,$INFO[Window(Home).Property(PremiereShows.20.Premiered)],58)</onclick>
 							<onclick>SetProperty(Type,tvshow,58)</onclick>
 							<onclick>ActivateWindow(58)</onclick>
 						</item>

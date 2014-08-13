@@ -1149,7 +1149,7 @@
 		<texturefocus>contextmenu/searchFO.png</texturefocus>
 		<texturenofocus>contextmenu/searchNF.png</texturenofocus>
 		<label>137</label>
-		<onclick>-</onclick>
+		<onclick>noop</onclick>
 		<onclick>17</onclick>
 	</include>	
 	

@@ -326,7 +326,6 @@
 						<height>300</height>
 						<itemgap>0</itemgap>
 						<orientation>vertical</orientation>
-						<align>top</align>
 						<usecontrolcoords>true</usecontrolcoords>
 						
 							<control type="label">							

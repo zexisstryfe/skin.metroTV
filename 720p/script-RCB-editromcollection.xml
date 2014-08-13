@@ -155,19 +155,19 @@
 				<content>
 					<item id="1">
 						<label>$ADDON[script.games.rom.collection.browser 52002]</label>
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 					</item>
 					<item id="2">
 						<label>$ADDON[script.games.rom.collection.browser 52003]</label>
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 					</item>
 					<item id="3">
 						<label>$ADDON[script.games.rom.collection.browser 52004]</label>
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 					</item>
 					<item id="4">
 						<label>$ADDON[script.games.rom.collection.browser 52005]</label>
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 					</item>
 				</content>
 				

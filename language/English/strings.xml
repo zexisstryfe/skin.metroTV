@@ -40,8 +40,8 @@
 	<string id="31037">featured songs</string>
 	<string id="31038">popular videos</string>
 	<string id="31039">featured videos</string>
-	<string id="31040">Click to change default Lyrics script</string>
-	<string id="31041">Click to change default Subtitles script</string>
+	<string id="31040">Click to change default Lyrics add-on</string>
+	<string id="31041">Click to change default Subtitles add-on</string>
 	<string id="31042">Background Visuals</string>
 	<string id="31043">Lyrics/Subtitles</string>
 	<string id="31044">Current Selected</string>
@@ -141,9 +141,9 @@
 	<string id="31138">Use background image for tiles</string>
 	<string id="31139">Use Metro-style transition animations</string>
 	<string id="31140">Fanart Overlays</string>
-	<string id="31141">Enable Favourites script</string>
-	<string id="31142">Enable Next Aired script</string>
-	<string id="31143">Enable TVTunes script</string>
+	<string id="31141">Enable Favourites add-on</string>
+	<string id="31142">Enable Next Aired add-on</string>
+	<string id="31143">Enable TVTunes add-on</string>
 	<string id="31144">home menu</string>
 	<string id="31145">tile 1-</string>
 	<string id="31146">tile 2-</string>
@@ -251,7 +251,9 @@
 	<string id="31248">Visualizations</string>
 	<string id="31249">Overlays</string>
 	<string id="31250">Transitions</string>
-	<string id="31251">Enable Trakt.TV script</string>
+	<string id="31251">Enable Trakt.TV add-on</string>
 	<string id="31252">General Settings</string>
+	<string id="31253"> - Update art (landscape, logo, clearart) after database update</string>
+	<string id="31254">Enable Artwork Downloader add-on</string>
 	
 </strings>

@@ -44,7 +44,7 @@
 						<posy>18</posy>
 						<width>100</width>
 						<height>100</height>
-						<texture background="true" fallback="home/unknown.png">genres/$INFO[ListItem.Label].png</texture>
+						<texture background="true" fallback="tiles/unknown.png">genres/$INFO[ListItem.Label].png</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<visible>!stringcompare(ListItem.Label,..)</visible>
 					</control>
@@ -81,7 +81,7 @@
 						<posy>18</posy>
 						<width>100</width>
 						<height>100</height>
-						<texture background="true" fallback="home/unknown.png">genres/$INFO[ListItem.Label].png</texture>
+						<texture background="true" fallback="tiles/unknown.png">genres/$INFO[ListItem.Label].png</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<visible>!stringcompare(ListItem.Label,..)</visible>
 					</control>

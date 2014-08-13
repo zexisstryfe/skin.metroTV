@@ -135,7 +135,7 @@
 					<posy>200</posy>
 					<width>330</width>
 					<height>25</height>
-					<itemgap>0</itemgap>
+					<itemgap>5</itemgap>
 					<align>left</align>
 					<orientation>horizontal</orientation>								
 							
@@ -144,7 +144,7 @@
 						<width>70</width>
 						<height>25</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$INFO[VideoPlayer.VideoResolution,flags/video/,.png]</texture>
+						<texture>$INFO[VideoPlayer.VideoResolution,flags/resolution/,.png]</texture>
 					</control>
 
 					<control type="image">
@@ -152,7 +152,7 @@
 						<width>70</width>
 						<height>25</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$INFO[VideoPlayer.VideoCodec,flags/video/,.png]</texture>
+						<texture>$INFO[VideoPlayer.VideoCodec,flags/videocodec/,.png]</texture>
 						<visible>![substring(VideoPlayer.VideoCodec,div,left) | stringcompare(VideoPlayer.VideoCodec,dx50)]</visible>
 					</control>
 					
@@ -166,10 +166,10 @@
 					
 					<control type="image">
 						<description>Audio Codec Image</description>
-						<width>70</width>x
+						<width>70</width>
 						<height>25</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$INFO[VideoPlayer.AudioCodec,flags/audio/,.png]</texture>
+						<texture>$INFO[VideoPlayer.AudioCodec,flags/audiocodec/,.png]</texture>
 					</control>
 
 				</control>

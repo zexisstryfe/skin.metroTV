@@ -287,7 +287,7 @@
 					<textureup>arrows/default-scroll-up.png</textureup>
 					<texturedown>arrows/default-scroll-down.png</texturedown>
 					<textureupfocus colordiffuse="Accent">arrows/default-scroll-up.png</textureupfocus>
-					<texturedownfocus colordiffuse="Accent">>arrows/default-scroll-down.png</texturedownfocus>
+					<texturedownfocus colordiffuse="Accent">arrows/default-scroll-down.png</texturedownfocus>
 					<showonepage>false</showonepage>
 					<visible>Control.IsVisible(120)</visible>
 				</control>
@@ -421,12 +421,6 @@
 					</itemlayout>
 					
 					<focusedlayout width="400" height="36">
-					
-						<control type="image">
-							<width>230</width>
-							<height>38</height>
-							<texture>xbmc-subtitles/default-list-nofocus.png</texture>
-						</control>
 						
 						<control type="image">
 							<posx>10</posx>

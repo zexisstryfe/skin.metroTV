@@ -56,7 +56,7 @@
 						<posy>50</posy>
 						<width>230</width>
 						<height>89</height>
-						<texture background="true" fallback="home/unknown.png">$INFO[ListItem.path]logo.png</texture>
+						<texture background="true" fallback="tiles/unknown.png">$VAR[Common_Logo]</texture>
 						<fadetime>100</fadetime>
 						<animation effect="fade" start="40" end="40" time="0" condition="true">conditional</animation>
 						<aspectratio scalediffuse="false">keep</aspectratio>
@@ -94,7 +94,7 @@
 						<posy>50</posy>
 						<width>230</width>
 						<height>89</height>
-						<texture background="true" fallback="home/unknown.png">$INFO[ListItem.path]logo.png</texture>
+						<texture background="true" fallback="tiles/unknown.png">$VAR[Common_Logo]</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">keep</aspectratio>
 					</control>

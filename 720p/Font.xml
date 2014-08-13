@@ -14,6 +14,12 @@
 	<!--Roboto font-->
 	
 		<font>
+			<name>font10</name>
+			<filename>Roboto-Light.ttf</filename>
+			<size>10</size>
+		</font>	
+	
+		<font>
 			<name>font12</name>
 			<filename>Roboto-Light.ttf</filename>
 			<size>12</size>
@@ -101,6 +107,13 @@
 		<font>
 			<name>font20L</name>
 			<filename>Roboto-Light.ttf</filename>
+			<style>lowercase</style>
+			<size>20</size>
+		</font>
+		
+		<font>
+			<name>font20LB</name>
+			<filename>Roboto-Bold.ttf</filename>
 			<style>lowercase</style>
 			<size>20</size>
 		</font>
@@ -227,6 +240,13 @@
 			<size>40</size>
 		</font>
 		
+		<font>
+			<name>font48L</name>
+			<filename>Roboto-Light.ttf</filename>
+			<style>lowercase</style>
+			<size>48</size>
+		</font>
+
 		<font>
 			<name>font48BUB</name>
 			<filename>Roboto-Black.ttf</filename>

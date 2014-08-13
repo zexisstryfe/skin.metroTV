@@ -148,7 +148,7 @@
                         <posy>35</posy>
                         <width>30</width>
                         <height>20</height>
-                        <texture>PVR-IsRecording.png</texture>
+                        <texture>tiles/recordings.png</texture>
                         <visible>ListItem.IsRecording</visible>
                     </control>
 					
@@ -220,7 +220,7 @@
                         <posy>35</posy>
                         <width>30</width>
                         <height>20</height>
-                        <texture>PVR-IsRecording.png</texture>
+                        <texture>tiles/recordings.png</texture>
                         <visible>ListItem.IsRecording</visible>
                     </control>
 					

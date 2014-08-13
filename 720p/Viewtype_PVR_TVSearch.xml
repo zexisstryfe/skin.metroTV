@@ -143,7 +143,7 @@
 							<posy>10</posy>
 							<width>25</width>
 							<height>25</height>
-							<texture>home/recordings.png</texture>
+							<texture>tiles/recordings.png</texture>
 							<visible>ListItem.IsRecording</visible>
 						</control>
 						
@@ -161,7 +161,7 @@
 							<posy>10</posy>
 							<width>25</width>
 							<height>25</height>
-							<texture>home/recent.png</texture>
+							<texture>tiles/recent.png</texture>
 							<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 						</control>
 						
@@ -237,7 +237,7 @@
 							<posy>10</posy>
 							<width>25</width>
 							<height>25</height>
-							<texture>home/recordings.png</texture>
+							<texture>tiles/recordings.png</texture>
 							<visible>ListItem.IsRecording</visible>
 						</control>
 						
@@ -255,7 +255,7 @@
 							<posy>10</posy>
 							<width>25</width>
 							<height>25</height>
-							<texture>home/recent.png</texture>
+							<texture>tiles/recent.png</texture>
 							<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 						</control>
 						

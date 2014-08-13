@@ -1128,70 +1128,70 @@
 				<content>
 				
 					<item id="1">
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<thumb>$INFO[Window(Home).Property(NearEvents.1.artist_image)]</thumb>
 						<label>$INFO[Window(Home).Property(NearEvents.1.EventName)]</label>
 						<label2>[B]$INFO[Window(Home).Property(NearEvents.1.Date)][/B][CR]$INFO[Window(Home).Property(NearEvents.1.City)]</label2>
 					</item>
 					
 					<item id="2">
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<thumb>$INFO[Window(Home).Property(NearEvents.2.artist_image)]</thumb>
 						<label>$INFO[Window(Home).Property(NearEvents.2.EventName)]</label>
 						<label2>[B]$INFO[Window(Home).Property(NearEvents.2.Date)][/B][CR]$INFO[Window(Home).Property(NearEvents.2.City)]</label2>
 					</item>
 					
 					<item id="3">
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<thumb>$INFO[Window(Home).Property(NearEvents.3.artist_image)]</thumb>
 						<label>$INFO[Window(Home).Property(NearEvents.3.EventName)]</label>
 						<label2>[B]$INFO[Window(Home).Property(NearEvents.3.Date)][/B][CR]$INFO[Window(Home).Property(NearEvents.3.City)]</label2>
 					</item>
 					
 					<item id="4">
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<thumb>$INFO[Window(Home).Property(NearEvents.4.artist_image)]</thumb>
 						<label>$INFO[Window(Home).Property(NearEvents.4.EventName)]</label>
 						<label2>[B]$INFO[Window(Home).Property(NearEvents.4.Date)][/B][CR]$INFO[Window(Home).Property(NearEvents.4.City)]</label2>
 					</item>
 					
 					<item id="5">
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<thumb>$INFO[Window(Home).Property(NearEvents.5.artist_image)]</thumb>
 						<label>$INFO[Window(Home).Property(NearEvents.5.EventName)]</label>
 						<label2>[B]$INFO[Window(Home).Property(NearEvents.5.Date)][/B][CR]$INFO[Window(Home).Property(NearEvents.5.City)]</label2>
 					</item>
 					
 					<item id="6">
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<thumb>$INFO[Window(Home).Property(NearEvents.6.artist_image)]</thumb>
 						<label>$INFO[Window(Home).Property(NearEvents.6.EventName)]</label>
 						<label2>[B]$INFO[Window(Home).Property(NearEvents.6.Date)][/B][CR]$INFO[Window(Home).Property(NearEvents.6.City)]</label2>
 					</item>
 					
 					<item id="7">
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<thumb>$INFO[Window(Home).Property(NearEvents.7.artist_image)]</thumb>
 						<label>$INFO[Window(Home).Property(NearEvents.7.EventName)]</label>
 						<label2>[B]$INFO[Window(Home).Property(NearEvents.7.Date)][/B][CR]$INFO[Window(Home).Property(NearEvents.7.City)]</label2>
 					</item>
 					
 					<item id="8">
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<thumb>$INFO[Window(Home).Property(NearEvents.8.artist_image)]</thumb>
 						<label>$INFO[Window(Home).Property(NearEvents.8.EventName)]</label>
 						<label2>[B]$INFO[Window(Home).Property(NearEvents.8.Date)][/B][CR]$INFO[Window(Home).Property(NearEvents.8.City)]</label2>
 					</item>
 					
 					<item id="9">
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<thumb>$INFO[Window(Home).Property(NearEvents.9.artist_image)]</thumb>
 						<label>$INFO[Window(Home).Property(NearEvents.9.EventName)]</label>
 						<label2>[B]$INFO[Window(Home).Property(NearEvents.9.Date)][/B][CR]$INFO[Window(Home).Property(NearEvents.9.City)]</label2><visible>!IsEmpty(Window(Home).Property(NearEvents.9.Artists))</visible>
 					</item>
 					
 					<item id="10">
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<thumb>$INFO[Window(Home).Property(NearEvents.10.artist_image)]</thumb>
 						<label>$INFO[Window(Home).Property(NearEvents.10.EventName)]</label>
 						<label2>[B]$INFO[Window(Home).Property(NearEvents.10.Date)][/B][CR]$INFO[Window(Home).Property(NearEvents.10.City)]</label2>
@@ -1293,87 +1293,87 @@
 					<!--Movies-->
 				
 					<item id="1">
-						<onclick>-</onclick>
-						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(InCinemaMoviesRT.1.Art(poster))]</thumb>
-						<label>$INFO[Window(Home).Property(InCinemaMoviesRT.1.Title)]</label>
-						<label2>$INFO[Window(Home).Property(InCinemaMoviesRT.1.Runtime),, minutes]</label2>
-						<property name="Plot">$INFO[Window(Home).Property(InCinemaMoviesRT.1.Plot)]</property>
-						<property name="MPAA">$INFO[Window(Home).Property(InCinemaMoviesRT.1.MPAA)]</property>
-						<property name="Rating">$INFO[Window(Home).Property(InCinemaMoviesRT.1.Rating)]</property>
+						<onclick>noop</onclick>
+						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(InCinemasMovies.1.Art(poster))]</thumb>
+						<label>$INFO[Window(Home).Property(InCinemasMovies.1.Title)]</label>
+						<label2>$INFO[Window(Home).Property(InCinemasMovies.1.Runtime),, minutes]</label2>
+						<property name="Plot">$INFO[Window(Home).Property(InCinemasMovies.1.Plot)]</property>
+						<property name="MPAA">$INFO[Window(Home).Property(InCinemasMovies.1.MPAA)]</property>
+						<property name="Rating">$INFO[Window(Home).Property(InCinemasMovies.1.Rating)]</property>
 					</item>
 
 					<item id="2">
-						<onclick>-</onclick>
-						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(InCinemaMoviesRT.2.Art(poster))]</thumb>
-						<label>$INFO[Window(Home).Property(InCinemaMoviesRT.2.Title)]</label>
-						<label2>$INFO[Window(Home).Property(InCinemaMoviesRT.2.Runtime),, minutes]</label2>
-						<property name="Plot">$INFO[Window(Home).Property(InCinemaMoviesRT.2.Plot)]</property>
-						<property name="MPAA">$INFO[Window(Home).Property(InCinemaMoviesRT.2.MPAA)]</property>
-						<property name="Rating">$INFO[Window(Home).Property(InCinemaMoviesRT.2.Rating)]</property>
+						<onclick>noop</onclick>
+						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(InCinemasMovies.2.Art(poster))]</thumb>
+						<label>$INFO[Window(Home).Property(InCinemasMovies.2.Title)]</label>
+						<label2>$INFO[Window(Home).Property(InCinemasMovies.2.Runtime),, minutes]</label2>
+						<property name="Plot">$INFO[Window(Home).Property(InCinemasMovies.2.Plot)]</property>
+						<property name="MPAA">$INFO[Window(Home).Property(InCinemasMovies.2.MPAA)]</property>
+						<property name="Rating">$INFO[Window(Home).Property(InCinemasMovies.2.Rating)]</property>
 					</item>
 					
 					<item id="3">
-						<onclick>-</onclick>
-						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(InCinemaMoviesRT.3.Art(poster))]</thumb>
-						<label>$INFO[Window(Home).Property(InCinemaMoviesRT.3.Title)]</label>
-						<label2>$INFO[Window(Home).Property(InCinemaMoviesRT.3.Runtime),, minutes]</label2>
-						<property name="Plot">$INFO[Window(Home).Property(InCinemaMoviesRT.3.Plot)]</property>
-						<property name="MPAA">$INFO[Window(Home).Property(InCinemaMoviesRT.3.MPAA)]</property>
-						<property name="Rating">$INFO[Window(Home).Property(InCinemaMoviesRT.3.Rating)]</property>
+						<onclick>noop</onclick>
+						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(InCinemasMovies.3.Art(poster))]</thumb>
+						<label>$INFO[Window(Home).Property(InCinemasMovies.3.Title)]</label>
+						<label2>$INFO[Window(Home).Property(InCinemasMovies.3.Runtime),, minutes]</label2>
+						<property name="Plot">$INFO[Window(Home).Property(InCinemasMovies.3.Plot)]</property>
+						<property name="MPAA">$INFO[Window(Home).Property(InCinemasMovies.3.MPAA)]</property>
+						<property name="Rating">$INFO[Window(Home).Property(InCinemasMovies.3.Rating)]</property>
 					</item>
 
 					<item id="4">
-						<onclick>-</onclick>
-						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(InCinemaMoviesRT.4.Art(poster))]</thumb>
-						<label>$INFO[Window(Home).Property(InCinemaMoviesRT.4.Title)]</label>
-						<label2>$INFO[Window(Home).Property(InCinemaMoviesRT.4.Runtime),, minutes]</label2>
-						<property name="Plot">$INFO[Window(Home).Property(InCinemaMoviesRT.4.Plot)]</property>
-						<property name="MPAA">$INFO[Window(Home).Property(InCinemaMoviesRT.4.MPAA)]</property>
+						<onclick>noop</onclick>
+						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(InCinemasMovies.4.Art(poster))]</thumb>
+						<label>$INFO[Window(Home).Property(InCinemasMovies.4.Title)]</label>
+						<label2>$INFO[Window(Home).Property(InCinemasMovies.4.Runtime),, minutes]</label2>
+						<property name="Plot">$INFO[Window(Home).Property(InCinemasMovies.4.Plot)]</property>
+						<property name="MPAA">$INFO[Window(Home).Property(InCinemasMovies.4.MPAA)]</property>
 					</item>
 					
 					<item id="5">
-						<onclick>-</onclick>
-						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(InCinemaMoviesRT.5.Art(poster))]</thumb>
-						<label>$INFO[Window(Home).Property(InCinemaMoviesRT.5.Title)]</label>
-						<label2>$INFO[Window(Home).Property(InCinemaMoviesRT.5.Runtime),, minutes]</label2>
-						<property name="Plot">$INFO[Window(Home).Property(InCinemaMoviesRT.5.Plot)]</property>
-						<property name="MPAA">$INFO[Window(Home).Property(InCinemaMoviesRT.5.MPAA)]</property>
+						<onclick>noop</onclick>
+						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(InCinemasMovies.5.Art(poster))]</thumb>
+						<label>$INFO[Window(Home).Property(InCinemasMovies.5.Title)]</label>
+						<label2>$INFO[Window(Home).Property(InCinemasMovies.5.Runtime),, minutes]</label2>
+						<property name="Plot">$INFO[Window(Home).Property(InCinemasMovies.5.Plot)]</property>
+						<property name="MPAA">$INFO[Window(Home).Property(InCinemasMovies.5.MPAA)]</property>
 					</item>
 
 					<item id="6">
-						<onclick>-</onclick>
-						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(InCinemaMoviesRT.6.Art(poster))]</thumb>
-						<label>$INFO[Window(Home).Property(InCinemaMoviesRT.6.Title)]</label>
-						<label2>$INFO[Window(Home).Property(InCinemaMoviesRT.6.Runtime),, minutes]</label2>
-						<property name="Plot">$INFO[Window(Home).Property(InCinemaMoviesRT.6.Plot)]</property>
-						<property name="MPAA">$INFO[Window(Home).Property(InCinemaMoviesRT.6.MPAA)]</property>
+						<onclick>noop</onclick>
+						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(InCinemasMovies.6.Art(poster))]</thumb>
+						<label>$INFO[Window(Home).Property(InCinemasMovies.6.Title)]</label>
+						<label2>$INFO[Window(Home).Property(InCinemasMovies.6.Runtime),, minutes]</label2>
+						<property name="Plot">$INFO[Window(Home).Property(InCinemasMovies.6.Plot)]</property>
+						<property name="MPAA">$INFO[Window(Home).Property(InCinemasMovies.6.MPAA)]</property>
 					</item>
 					
 					<item id="7">
-						<onclick>-</onclick>
-						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(InCinemaMoviesRT.7.Art(poster))]</thumb>
-						<label>$INFO[Window(Home).Property(InCinemaMoviesRT.7.Title)]</label>
-						<label2>$INFO[Window(Home).Property(InCinemaMoviesRT.7.Runtime),, minutes]</label2>
-						<property name="Plot">$INFO[Window(Home).Property(InCinemaMoviesRT.7.Plot)]</property>
-						<property name="MPAA">$INFO[Window(Home).Property(InCinemaMoviesRT.7.MPAA)]</property>
+						<onclick>noop</onclick>
+						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(InCinemasMovies.7.Art(poster))]</thumb>
+						<label>$INFO[Window(Home).Property(InCinemasMovies.7.Title)]</label>
+						<label2>$INFO[Window(Home).Property(InCinemasMovies.7.Runtime),, minutes]</label2>
+						<property name="Plot">$INFO[Window(Home).Property(InCinemasMovies.7.Plot)]</property>
+						<property name="MPAA">$INFO[Window(Home).Property(InCinemasMovies.7.MPAA)]</property>
 					</item>
 
 					<item id="8">
-						<onclick>-</onclick>
-						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(InCinemaMoviesRT.8.Art(poster))]</thumb>
-						<label>$INFO[Window(Home).Property(InCinemaMoviesRT.8.Title)]</label>
-						<label2>$INFO[Window(Home).Property(InCinemaMoviesRT.8.Runtime),, minutes]</label2>
-						<property name="Plot">$INFO[Window(Home).Property(InCinemaMoviesRT.8.Plot)]</property>
-						<property name="MPAA">$INFO[Window(Home).Property(InCinemaMoviesRT.8.MPAA)]</property>
+						<onclick>noop</onclick>
+						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(InCinemasMovies.8.Art(poster))]</thumb>
+						<label>$INFO[Window(Home).Property(InCinemasMovies.8.Title)]</label>
+						<label2>$INFO[Window(Home).Property(InCinemasMovies.8.Runtime),, minutes]</label2>
+						<property name="Plot">$INFO[Window(Home).Property(InCinemasMovies.8.Plot)]</property>
+						<property name="MPAA">$INFO[Window(Home).Property(InCinemasMovies.8.MPAA)]</property>
 					</item>
 					
 					<item id="9">
-						<onclick>-</onclick>
-						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(InCinemaMoviesRT.9.Art(poster))]</thumb>
-						<label>$INFO[Window(Home).Property(InCinemaMoviesRT.9.Title)]</label>
-						<label2>$INFO[Window(Home).Property(InCinemaMoviesRT.9.Runtime),, minutes]</label2>
-						<property name="Plot">$INFO[Window(Home).Property(InCinemaMoviesRT.9.Plot)]</property>
-						<property name="MPAA">$INFO[Window(Home).Property(InCinemaMoviesRT.9.MPAA)]</property>
+						<onclick>noop</onclick>
+						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(InCinemasMovies.9.Art(poster))]</thumb>
+						<label>$INFO[Window(Home).Property(InCinemasMovies.9.Title)]</label>
+						<label2>$INFO[Window(Home).Property(InCinemasMovies.9.Runtime),, minutes]</label2>
+						<property name="Plot">$INFO[Window(Home).Property(InCinemasMovies.9.Plot)]</property>
+						<property name="MPAA">$INFO[Window(Home).Property(InCinemasMovies.9.MPAA)]</property>
 					</item>
 					
 				</content>
@@ -1392,17 +1392,15 @@
 					<height>60</height>
 					<include>Common_Color_Tile1</include>						
 					<animation effect="zoom" start="100,100" end="100,400" center="0,0" time="400" tween="cubic" easing="in" condition="System.IdleTime(2) + Control.HasFocus(9005)">Conditional</animation>
-					<animation effect="zoom" start="100,100" end="400,100" center="0,0" time="200" tween="cubic" easing="out" condition="![System.IdleTime(2) + Control.HasFocus(9005)]">Conditional</animation>					
+					<animation effect="zoom" start="100,100" end="100,100" center="0,0" time="200" tween="cubic" easing="out" condition="![System.IdleTime(2) + Control.HasFocus(9005)]">Conditional</animation>					
 				</control>
 
 				<control type="textbox">
 					<posx>10</posx>
-					<posy>6</posy>
 					<width>213</width>
-					<height>26</height>
+					<height>50</height>
 					<label>$INFO[Container(9005).ListItem.Label]</label>
 					<font>font20UB</font>
-					<aligny>top</aligny>
 					<shadowcolor>00FFFFFF</shadowcolor>
 					<autoscroll>false</autoscroll>				
 					<visible>!Control.HasFocus(9005)</visible>				
@@ -1410,24 +1408,12 @@
 			
 				<control type="textbox">				
 					<posx>10</posx>
-					<posy>6</posy>
 					<width>213</width>
-					<height>26</height>
+					<height>50</height>
 					<label>$INFO[Container(9005).ListItem.Label]</label>
 					<font>font20UB</font>
-					<textcolor>Accent</textcolor>
-					<aligny>top</aligny>					
+					<textcolor>Accent</textcolor>				
 					<visible>Control.HasFocus(9005)</visible>					
-				</control>
-				
-				<control type="textbox">			
-					<posx>10</posx>
-					<posy>30</posy>
-					<width>213</width>
-					<height>24</height>
-					<label>$INFO[Container(9005).ListItem.Label2]</label>
-					<font>font16UB</font>
-					<aligny>top</aligny>				
 				</control>
 				
 				<control type="textbox">				
@@ -2037,7 +2023,7 @@
 					<!--Movies-->
 				
 					<item id="1">
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(TrendingMovies.1.Art(poster))]</thumb>
 						<label>$INFO[Window(Home).Property(TrendingMovies.1.Title)]</label>
 						<label2>$INFO[Window(Home).Property(TrendingMovies.1.Runtime),, minutes]</label2>
@@ -2047,7 +2033,7 @@
 					</item>
 
 					<item id="2">
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(TrendingMovies.2.Art(poster))]</thumb>
 						<label>$INFO[Window(Home).Property(TrendingMovies.2.Title)]</label>
 						<label2>$INFO[Window(Home).Property(TrendingMovies.2.Runtime),, minutes]</label2>
@@ -2057,7 +2043,7 @@
 					</item>
 					
 					<item id="3">
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(TrendingMovies.3.Art(poster))]</thumb>
 						<label>$INFO[Window(Home).Property(TrendingMovies.3.Title)]</label>
 						<label2>$INFO[Window(Home).Property(TrendingMovies.3.Runtime),, minutes]</label2>
@@ -2067,7 +2053,7 @@
 					</item>
 
 					<item id="4">
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(TrendingMovies.4.Art(poster))]</thumb>
 						<label>$INFO[Window(Home).Property(TrendingMovies.4.Title)]</label>
 						<label2>$INFO[Window(Home).Property(TrendingMovies.4.Runtime),, minutes]</label2>
@@ -2077,7 +2063,7 @@
 					</item>
 					
 					<item id="5">
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(TrendingMovies.5.Art(poster))]</thumb>
 						<label>$INFO[Window(Home).Property(TrendingMovies.5.Title)]</label>
 						<label2>$INFO[Window(Home).Property(TrendingMovies.5.Runtime),, minutes]</label2>
@@ -2087,7 +2073,7 @@
 					</item>
 
 					<item id="6">
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(TrendingMovies.6.Art(poster))]</thumb>
 						<label>$INFO[Window(Home).Property(TrendingMovies.6.Title)]</label>
 						<label2>$INFO[Window(Home).Property(TrendingMovies.6.Runtime),, minutes]</label2>
@@ -2097,7 +2083,7 @@
 					</item>
 					
 					<item id="7">
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(TrendingMovies.7.Art(poster))]</thumb>
 						<label>$INFO[Window(Home).Property(TrendingMovies.7.Title)]</label>
 						<label2>$INFO[Window(Home).Property(TrendingMovies.7.Runtime),, minutes]</label2>
@@ -2107,7 +2093,7 @@
 					</item>
 
 					<item id="8">
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(TrendingMovies.8.Art(poster))]</thumb>
 						<label>$INFO[Window(Home).Property(TrendingMovies.8.Title)]</label>
 						<label2>$INFO[Window(Home).Property(TrendingMovies.8.Runtime),, minutes]</label2>
@@ -2117,7 +2103,7 @@
 					</item>
 					
 					<item id="9">
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(TrendingMovies.9.Art(poster))]</thumb>
 						<label>$INFO[Window(Home).Property(TrendingMovies.9.Title)]</label>
 						<label2>$INFO[Window(Home).Property(TrendingMovies.9.Runtime),, minutes]</label2>
@@ -2127,7 +2113,7 @@
 					</item>
 
 					<item id="10">
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(TrendingMovies.10.Art(poster))]</thumb>
 						<label>$INFO[Window(Home).Property(TrendingMovies.10.Title)]</label>
 						<label2>$INFO[Window(Home).Property(TrendingMovies.10.Runtime),, minutes]</label2>
@@ -2139,7 +2125,7 @@
 					<!--TV Shows-->
 				
 					<item id="1">
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(TrendingShows.1.Art(poster))]</thumb>
 						<label>$INFO[Window(Home).Property(TrendingShows.1.Title)]</label>
 						<label2>$INFO[Window(Home).Property(TrendingShows.1.Runtime),, minutes]</label2>
@@ -2149,7 +2135,7 @@
 					</item>
 
 					<item id="2">
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(TrendingShows.2.Art(poster))]</thumb>
 						<label>$INFO[Window(Home).Property(TrendingShows.2.Title)]</label>
 						<label2>$INFO[Window(Home).Property(TrendingShows.2.Runtime),, minutes]</label2>
@@ -2159,7 +2145,7 @@
 					</item>
 					
 					<item id="3">
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(TrendingShows.3.Art(poster))]</thumb>
 						<label>$INFO[Window(Home).Property(TrendingShows.3.Title)]</label>
 						<label2>$INFO[Window(Home).Property(TrendingShows.3.Runtime),, minutes]</label2>
@@ -2169,7 +2155,7 @@
 					</item>
 
 					<item id="4">
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(TrendingShows.4.Art(poster))]</thumb>
 						<label>$INFO[Window(Home).Property(TrendingShows.4.Title)]</label>
 						<label2>$INFO[Window(Home).Property(TrendingShows.4.Runtime),, minutes]</label2>
@@ -2179,7 +2165,7 @@
 					</item>
 					
 					<item id="5">
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(TrendingShows.5.Art(poster))]</thumb>
 						<label>$INFO[Window(Home).Property(TrendingShows.5.Title)]</label>
 						<label2>$INFO[Window(Home).Property(TrendingShows.5.Runtime),, minutes]</label2>
@@ -2189,7 +2175,7 @@
 					</item>
 
 					<item id="6">
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(TrendingShows.6.Art(poster))]</thumb>
 						<label>$INFO[Window(Home).Property(TrendingShows.6.Title)]</label>
 						<label2>$INFO[Window(Home).Property(TrendingShows.6.Runtime),, minutes]</label2>
@@ -2199,7 +2185,7 @@
 					</item>
 					
 					<item id="7">
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(TrendingShows.7.Art(poster))]</thumb>
 						<label>$INFO[Window(Home).Property(TrendingShows.7.Title)]</label>
 						<label2>$INFO[Window(Home).Property(TrendingShows.7.Runtime),, minutes]</label2>
@@ -2209,7 +2195,7 @@
 					</item>
 
 					<item id="8">
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(TrendingShows.8.Art(poster))]</thumb>
 						<label>$INFO[Window(Home).Property(TrendingShows.8.Title)]</label>
 						<label2>$INFO[Window(Home).Property(TrendingShows.8.Runtime),, minutes]</label2>
@@ -2219,7 +2205,7 @@
 					</item>
 					
 					<item id="9">
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(TrendingShows.9.Art(poster))]</thumb>
 						<label>$INFO[Window(Home).Property(TrendingShows.9.Title)]</label>
 						<label2>$INFO[Window(Home).Property(TrendingShows.9.Runtime),, minutes]</label2>
@@ -2229,7 +2215,7 @@
 					</item>
 
 					<item id="10">
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 						<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(TrendingShows.10.Art(poster))]</thumb>
 						<label>$INFO[Window(Home).Property(TrendingShows.10.Title)]</label>
 						<label2>$INFO[Window(Home).Property(TrendingShows.10.Runtime),, minutes]</label2>

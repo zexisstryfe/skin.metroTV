@@ -36,6 +36,7 @@
 		<font>font20</font>
 		<width>820</width>
 		<align>left</align>	
+		<textwidth>780</textwidth>
 	</include>
 	
 	<include name="Settings_HomeScreen_Category">

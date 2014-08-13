@@ -12,7 +12,7 @@
 		<control type="image">
 			<width>1280</width>
 			<height>720</height>
-			<texture>backgrounds\default.jpg</texture>
+			<texture>../backgrounds/default.jpg</texture>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 		</control>	
  
@@ -339,7 +339,7 @@
 							<property name="Condition">$INFO[Window.Property(Hourly.1.Outlook)]</property>
 							<property name="UseAltColor">true</property>
 							<thumb>$INFO[Window.Property(Hourly.1.FanartCode)]</thumb>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 						</item>
 						
 						<item>
@@ -348,7 +348,7 @@
 							<property name="Condition">$INFO[Window.Property(Hourly.2.Outlook)]</property>
 							<property name="UseAltColor">false</property>
 							<thumb>$INFO[Window.Property(Hourly.2.FanartCode)]</thumb>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 						</item>
 						
 						<item>
@@ -357,7 +357,7 @@
 							<property name="Condition">$INFO[Window.Property(Hourly.3.Outlook)]</property>
 							<property name="UseAltColor">true</property>
 							<thumb>$INFO[Window.Property(Hourly.3.FanartCode)]</thumb>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 						</item>
 						
 						<item>
@@ -366,7 +366,7 @@
 							<property name="Condition">$INFO[Window.Property(Hourly.4.Outlook)]</property>
 							<property name="UseAltColor">false</property>
 							<thumb>$INFO[Window.Property(Hourly.4.FanartCode)]</thumb>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 						</item>
 						
 						<item>
@@ -375,7 +375,7 @@
 							<property name="Condition">$INFO[Window.Property(Hourly.5.Outlook)]</property>
 							<property name="UseAltColor">true</property>
 							<thumb>$INFO[Window.Property(Hourly.5.FanartCode)]</thumb>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 						</item>
 						
 						<item>
@@ -384,7 +384,7 @@
 							<property name="Condition">$INFO[Window.Property(Hourly.6.Outlook)]</property>
 							<property name="UseAltColor">false</property>
 							<thumb>$INFO[Window.Property(Hourly.6.FanartCode)]</thumb>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 						</item>
 						
 						<item>
@@ -393,7 +393,7 @@
 							<property name="Condition">$INFO[Window.Property(Hourly.7.Outlook)]</property>
 							<property name="UseAltColor">true</property>
 							<thumb>$INFO[Window.Property(Hourly.7.FanartCode)]</thumb>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 						</item>
 						
 						<item>
@@ -402,7 +402,7 @@
 							<property name="Condition">$INFO[Window.Property(Hourly.8.Outlook)]</property>
 							<property name="UseAltColor">false</property>
 							<thumb>$INFO[Window.Property(Hourly.8.FanartCode)]</thumb>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 						</item>
 						
 						<item>
@@ -411,7 +411,7 @@
 							<property name="Condition">$INFO[Window.Property(Hourly.9.Outlook)]</property>
 							<property name="UseAltColor">true</property>
 							<thumb>$INFO[Window.Property(Hourly.9.FanartCode)]</thumb>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 						</item>
 						
 						<item>
@@ -420,7 +420,7 @@
 							<property name="Condition">$INFO[Window.Property(Hourly.10.Outlook)]</property>
 							<property name="UseAltColor">false</property>
 							<thumb>$INFO[Window.Property(Hourly.10.FanartCode)]</thumb>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 						</item>
 						
 						<item>
@@ -429,7 +429,7 @@
 							<property name="Condition">$INFO[Window.Property(Hourly.11.Outlook)]</property>
 							<property name="UseAltColor">true</property>
 							<thumb>$INFO[Window.Property(Hourly.11.FanartCode)]</thumb>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 						</item>
 						
 						<item>
@@ -438,7 +438,7 @@
 							<property name="Condition">$INFO[Window.Property(Hourly.12.Outlook)]</property>
 							<property name="UseAltColor">false</property>
 							<thumb>$INFO[Window.Property(Hourly.12.FanartCode)]</thumb>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 						</item>
 						
 						<item>
@@ -447,7 +447,7 @@
 							<property name="Condition">$INFO[Window.Property(Hourly.13.Outlook)]</property>
 							<property name="UseAltColor">true</property>
 							<thumb>$INFO[Window.Property(Hourly.13.FanartCode)]</thumb>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 						</item>
 						
 						<item>
@@ -456,7 +456,7 @@
 							<property name="Condition">$INFO[Window.Property(Hourly.14.Outlook)]</property>
 							<property name="UseAltColor">false</property>
 							<thumb>$INFO[Window.Property(Hourly.14.FanartCode)]</thumb>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 						</item>
 						
 						<item>
@@ -465,7 +465,7 @@
 							<property name="Condition">$INFO[Window.Property(Hourly.15.Outlook)]</property>
 							<property name="UseAltColor">true</property>
 							<thumb>$INFO[Window.Property(Hourly.15.FanartCode)]</thumb>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 						</item>
 						
 						<item>
@@ -474,7 +474,7 @@
 							<property name="Condition">$INFO[Window.Property(Hourly.16.Outlook)]</property>
 							<property name="UseAltColor">false</property>
 							<thumb>$INFO[Window.Property(Hourly.16.FanartCode)]</thumb>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 						</item>
 						
 						<item>
@@ -483,7 +483,7 @@
 							<property name="Condition">$INFO[Window.Property(Hourly.17.Outlook)]</property>
 							<property name="UseAltColor">true</property>
 							<thumb>$INFO[Window.Property(Hourly.17.FanartCode)]</thumb>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 						</item>
 						
 						<item>
@@ -492,7 +492,7 @@
 							<property name="Condition">$INFO[Window.Property(Hourly.18.Outlook)]</property>
 							<property name="UseAltColor">false</property>
 							<thumb>$INFO[Window.Property(Hourly.18.FanartCode)]</thumb>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 						</item>
 						
 						<item>
@@ -501,7 +501,7 @@
 							<property name="Condition">$INFO[Window.Property(Hourly.19.Outlook)]</property>
 							<property name="UseAltColor">true</property>
 							<thumb>$INFO[Window.Property(Hourly.19.FanartCode)]</thumb>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 						</item>
 						
 						<item>
@@ -510,7 +510,7 @@
 							<property name="Condition">$INFO[Window.Property(Hourly.20.Outlook)]</property>
 							<property name="UseAltColor">false</property>
 							<thumb>$INFO[Window.Property(Hourly.20.FanartCode)]</thumb>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 						</item>
 						
 					</content>	
@@ -670,7 +670,7 @@
 							<property name="Temp">$INFO[Window.Property(Daily.1.LowTemperature)] / $INFO[Window.Property(Daily.1.HighTemperature]</property>
 							<property name="Condition">$INFO[Window.Property(Daily.1.Outlook)]</property>
 							<thumb>$INFO[Window(weather).Property(Daily.1.FanartCode)]</thumb>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 						</item>
 						
 						<item>
@@ -679,7 +679,7 @@
 							<property name="Temp">$INFO[Window.Property(Daily.2.LowTemperature)] / $INFO[Window.Property(Daily.2.HighTemperature]</property>
 							<property name="Condition">$INFO[Window.Property(Daily.2.Outlook)]</property>
 							<thumb>$INFO[Window(weather).Property(Daily.2.FanartCode)]</thumb>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 						</item>
 						
 						<item>
@@ -688,7 +688,7 @@
 							<property name="Temp">$INFO[Window.Property(Daily.3.LowTemperature)] / $INFO[Window.Property(Daily.3.HighTemperature]</property>
 							<property name="Condition">$INFO[Window.Property(Daily.3.Outlook)]</property>
 							<thumb>$INFO[Window(weather).Property(Daily.3.FanartCode)]</thumb>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 						</item>
 						
 						<item>
@@ -697,7 +697,7 @@
 							<property name="Temp">$INFO[Window.Property(Daily.4.LowTemperature)] / $INFO[Window.Property(Daily.4.HighTemperature]</property>
 							<property name="Condition">$INFO[Window.Property(Daily.4.Outlook)]</property>
 							<thumb>$INFO[Window(weather).Property(Daily.4.FanartCode)]</thumb>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 						</item>
 						
 						<item>
@@ -706,7 +706,7 @@
 							<property name="Temp">$INFO[Window.Property(Daily.5.LowTemperature)] / $INFO[Window.Property(Daily.5.HighTemperature]</property>
 							<property name="Condition">$INFO[Window.Property(Daily.5.Outlook)]</property>
 							<thumb>$INFO[Window(weather).Property(Daily.5.FanartCode)]</thumb>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 						</item>
 						
 						<item>
@@ -715,7 +715,7 @@
 							<property name="Temp">$INFO[Window.Property(Daily.6.LowTemperature)] / $INFO[Window.Property(Daily.6.HighTemperature]</property>
 							<property name="Condition">$INFO[Window.Property(Daily.6.Outlook)]</property>
 							<thumb>$INFO[Window(weather).Property(Daily.6.FanartCode)]</thumb>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 						</item>
 						
 						<item>
@@ -724,7 +724,7 @@
 							<property name="Temp">$INFO[Window.Property(Daily.7.LowTemperature)] / $INFO[Window.Property(Daily.7.HighTemperature]</property>
 							<property name="Condition">$INFO[Window.Property(Daily.7.Outlook)]</property>
 							<thumb>$INFO[Window(weather).Property(Daily.7.FanartCode)]</thumb>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 						</item>
 						
 						<item>
@@ -733,7 +733,7 @@
 							<property name="Temp">$INFO[Window.Property(Daily.8.LowTemperature)] / $INFO[Window.Property(Daily.8.HighTemperature]</property>
 							<property name="Condition">$INFO[Window.Property(Daily.8.Outlook)]</property>
 							<thumb>$INFO[Window(weather).Property(Daily.8.FanartCode)]</thumb>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 						</item>
 						
 						<item>
@@ -742,7 +742,7 @@
 							<property name="Temp">$INFO[Window.Property(Daily.9.LowTemperature)] / $INFO[Window.Property(Daily.9.HighTemperature]</property>
 							<property name="Condition">$INFO[Window.Property(Daily.9.Outlook)]</property>
 							<thumb>$INFO[Window(weather).Property(Daily.9.FanartCode)]</thumb>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 						</item>
 						
 						<item>
@@ -751,7 +751,7 @@
 							<property name="Temp">$INFO[Window.Property(Daily.10.LowTemperature)] / $INFO[Window.Property(Daily.10.HighTemperature]</property>
 							<property name="Condition">$INFO[Window.Property(Daily.10.Outlook)]</property>
 							<thumb>$INFO[Window(weather).Property(Daily.10.FanartCode)]</thumb>
-							<onclick>-</onclick>
+							<onclick>noop</onclick>
 						</item>
 						
 					</content>

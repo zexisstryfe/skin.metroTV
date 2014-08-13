@@ -238,7 +238,7 @@
 						<posy>380</posy>
 						<width>550</width>
 						<height>90</height>
-						<texture background="true">$INFO[ListItem.path]logo.png</texture>
+						<texture background="true">$VAR[Common_Logo]</texture>
 						<fadetime>100</fadetime>
 						<aspectratio scalediffuse="false">keep</aspectratio>
 					</control>
@@ -327,11 +327,11 @@
 					<control type="grouplist">
 						<visible>Container.Content(movies)</visible>
 						<description>Media Codec Flagging Images</description>
-						<posx>115</posx>
+						<posx>105</posx>
 						<posy>635</posy>
-						<width>330</width>
+						<width>350</width>
 						<height>25</height>
-						<itemgap>0</itemgap>
+						<itemgap>5</itemgap>
 						<orientation>horizontal</orientation>
 						
 						<control type="image">
@@ -339,7 +339,7 @@
 							<width>65</width>
 							<height>25</height>
 							<aspectratio>keep</aspectratio>
-							<texture>$INFO[ListItem.VideoResolution,flags/video/,.png]</texture>
+							<texture>$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
 						</control>
 
 						<control type="image">
@@ -347,8 +347,7 @@
 							<width>65</width>
 							<height>25</height>
 							<aspectratio>keep</aspectratio>
-							<texture>$INFO[ListItem.VideoCodec,flags/video/,.png]</texture>
-							<!-- Don't show if its one of the 500 divx codecs -->
+							<texture>$INFO[ListItem.VideoCodec,flags/videocodec/,.png]</texture>
 							<visible>![substring(ListItem.VideoCodec,div,left) | stringcompare(ListItem.VideoCodec,dx50)]</visible>
 						</control>
 
@@ -357,7 +356,7 @@
 							<width>65</width>
 							<height>25</height>
 							<aspectratio>keep</aspectratio>
-							<texture>flagsvideo/divx.png</texture>
+							<texture>flags/videocodec/divx.png</texture>
 							<visible>[substring(ListItem.VideoCodec,div,left) | stringcompare(ListItem.VideoCodec,dx50)]</visible>
 						</control>
 
@@ -366,7 +365,7 @@
 							<width>65</width>
 							<height>25</height>
 							<aspectratio>keep</aspectratio>
-							<texture>flags/video/bluray.png</texture>
+							<texture>flags/videocodec/bluray.png</texture>
 							<visible>[substring(ListItem.FilenameAndPath,bluray) | substring(ListItem.FilenameAndPath,bdrip)] + !Skin.HasSetting(HideFilenameother_textures/flagging)</visible>
 						</control>
 
@@ -375,7 +374,7 @@
 							<width>65</width>
 							<height>25</height>
 							<aspectratio>keep</aspectratio>
-							<texture>flags/video/hddvd.png</texture>
+							<texture>flags/videocodec/hddvd.png</texture>
 							<visible>substring(ListItem.FilenameAndPath,hddvd) + !Skin.HasSetting(HideFilenameother_textures/flagging)</visible>
 						</control>
 
@@ -384,26 +383,8 @@
 							<width>65</width>
 							<height>25</height>
 							<aspectratio>keep</aspectratio>
-							<texture>flags/video/dvd.png</texture>
+							<texture>flags/videocodec/dvd.png</texture>
 							<visible>[substring(ListItem.FilenameAndPath,dvd) + ![substring(ListItem.FilenameAndPath,hddvd) | substring(ListItem.FilenameAndPath,bluray) | substring(ListItem.FilenameAndPath,bdrip)]] + !Skin.HasSetting(HideFilenameother_textures/flagging)</visible>
-						</control>
-
-						<control type="image">
-							<description>TV Types Image</description>
-							<width>65</width>
-							<height>25</height>
-							<aspectratio>keep</aspectratio>
-							<texture>flagsvideo/TV.png</texture>
-							<visible>[substring(ListItem.FilenameAndPath,pdtv) | substring(ListItem.FilenameAndPath,hdtv) | substring(ListItem.FilenameAndPath,dsr)] + !Skin.HasSetting(HideFilenameother_textures/flagging)</visible>
-						</control>
-
-						<control type="image">
-							<description>VHS Image</description>
-							<width>65</width>
-							<height>25</height>
-							<aspectratio>keep</aspectratio>
-							<texture>flags/video/vhs.png</texture>
-							<visible>substring(ListItem.FilenameAndPath,vhs) + !Skin.HasSetting(HideFilenameother_textures/flagging)</visible>
 						</control>
 
 						<control type="image">
@@ -411,7 +392,7 @@
 							<width>65</width>
 							<height>25</height>
 							<aspectratio>keep</aspectratio>
-							<texture>flags/mpaa/mpaa_general.png</texture>
+							<texture>flags/mpaa/mpaa_g.png</texture>
 							<visible>substring(listitem.mpaa,Rated G)</visible>
 						</control>
 
@@ -429,7 +410,7 @@
 							<width>65</width>
 							<height>25</height>
 							<aspectratio>keep</aspectratio>
-							<texture>flags/mpaa/mpaa_pg13.png</texture>
+							<texture>flags/mpaa/mpaa_pg-13.png</texture>
 							<visible>substring(listitem.mpaa,Rated PG-13)</visible>
 						</control>
 
@@ -438,7 +419,7 @@
 							<width>65</width>
 							<height>25</height>
 							<aspectratio>keep</aspectratio>
-							<texture>flags/mpaa/mpaa_restricted.png</texture>
+							<texture>flags/mpaa/mpaa_r.png</texture>
 							<visible>substring(Listitem.mpaa,Rated R)</visible>
 						</control>
 
@@ -447,21 +428,21 @@
 							<width>65</width>
 							<height>25</height>
 							<aspectratio>keep</aspectratio>
-							<texture>flags/mpaa/mpaa_nc17.png</texture>
+							<texture>flags/mpaa/mpaa_nc-17.png</texture>
 							<visible>substring(Listitem.mpaa,Rated NC)</visible>
 						</control>
 
 						<control type="image">
 							<description>Audio Codec Image</description>
-							<width>55</width>
+							<width>65</width>
 							<height>25</height>
 							<aspectratio>keep</aspectratio>
-							<texture>$INFO[ListItem.AudioCodec,flags/audio/,.png]</texture>
+							<texture>$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</texture>
 						</control>
 
 						<control type="image">
 							<description>Aspectratio Image</description>
-							<width>60</width>
+							<width>65</width>
 							<height>25</height>
 							<aspectratio>keep</aspectratio>
 							<texture>$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]</texture>

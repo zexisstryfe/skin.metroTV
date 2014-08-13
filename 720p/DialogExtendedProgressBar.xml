@@ -1,7 +1,9 @@
 <window id="2002">
 	<defaultcontrol always="true">10</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-
+    <onload condition="Library.IsScanningVideo + Skin.HasSetting(UpdateArt.Enabled) + Skin.HasSetting(UseArtDownloader)">SetProperty(UpdateArt,1)</onload>
+    <onunload condition="!IsEmpty(Window.Property(UpdateArt)) + Skin.HasSetting(UpdateArt.Enabled) + Skin.HasSetting(UseArtDownloader)">XBMC.RunScript(script.artwork.downloader,mode=custom,silent=true,landscape,clearlogo,clearart)</onunload>
+    <onunload condition="!IsEmpty(Window.Property(UpdateArt)) + Skin.HasSetting(UpdateArt.Enabled) + Skin.HasSetting(UseArtDownloader)">ClearProperty(UpdateArt)</onunload>
 	<controls>
 
 		<control type="group">			

@@ -40,8 +40,8 @@
 	<include name="KaiToast_Icon">
 		<posx>5</posx>
 		<posy>5</posy>
-		<width>54</width>
-		<height>54</height>
+		<width>90</width>
+		<height>90</height>
 		<aspectratio>keep</aspectratio>
 	</include>	
 
@@ -56,8 +56,8 @@
 	<include name="RateDialog_Button">
 		<width>35</width>
 		<height>35</height>
-		<texturefocus colordiffuse="Accent">flags\ratings\star.png</texturefocus>
-		<texturenofocus>flags\ratings\star.png</texturenofocus>
+		<texturefocus colordiffuse="Accent">flags/ratings/star.png</texturefocus>
+		<texturenofocus>flags/ratings/star.png</texturenofocus>
 		<align>center</align>
 		<aligny>center</aligny>
 		<animation effect="zoom" end="115,115" center="auto" time="100">focus</animation>
@@ -66,7 +66,7 @@
 	<include name="RateDialog_NoStar">
 		<width>35</width>
 		<height>35</height>
-		<texture>flags\ratings\no_star.png</texture>
+		<texture>flags/ratings/no_star.png</texture>
 	</include>
 
 	<include name="Seekbar_Image">

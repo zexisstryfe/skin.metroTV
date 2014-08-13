@@ -182,7 +182,7 @@
 							<width>35</width>
 							<height>35</height>
 							<aspectratio>scale</aspectratio>
-							<texture>home/recordings.png</texture>
+							<texture>tiles/recordings.png</texture>
 							<visible>ListItem.IsRecording</visible>
 						</control>
 						
@@ -260,7 +260,7 @@
 							<width>35</width>
 							<height>35</height>
 							<aspectratio>scale</aspectratio>
-							<texture>home/recordings.png</texture>
+							<texture>tiles/recordings.png</texture>
 							<visible>ListItem.IsRecording</visible>
 						</control>
 						

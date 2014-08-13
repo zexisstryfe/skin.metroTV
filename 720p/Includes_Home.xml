@@ -1448,7 +1448,7 @@
 				<onup condition="Control.IsVisible(730)">730</onup>
 				<ondown condition="Control.IsVisible(730)">730</ondown>
 				<onleft>726</onleft>
-				<onright>-</onright>
+				<onright>noop</onright>
 				<onclick>$VAR[PictureTile2.Path]</onclick>
 			</control>	
 			
@@ -3204,7 +3204,7 @@
 		<content>
 		
 			<item id="1">
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(InCinemaMoviesRT.1.Art(poster))]</thumb>
 				<label>$INFO[Window(Home).Property(InCinemaMoviesRT.1.Title)]</label>
 				<label2>$INFO[Window(Home).Property(InCinemaMoviesRT.1.Runtime),, minutes]</label2>
@@ -3214,7 +3214,7 @@
 			</item>
 
 			<item id="2">
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(InCinemaMoviesRT.2.Art(poster))]</thumb>
 				<label>$INFO[Window(Home).Property(InCinemaMoviesRT.2.Title)]</label>
 				<label2>$INFO[Window(Home).Property(InCinemaMoviesRT.2.Runtime),, minutes]</label2>
@@ -3224,7 +3224,7 @@
 			</item>
 			
 			<item id="3">
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(InCinemaMoviesRT.3.Art(poster))]</thumb>
 				<label>$INFO[Window(Home).Property(InCinemaMoviesRT.3.Title)]</label>
 				<label2>$INFO[Window(Home).Property(InCinemaMoviesRT.3.Runtime),, minutes]</label2>
@@ -3234,7 +3234,7 @@
 			</item>
 
 			<item id="4">
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(InCinemaMoviesRT.4.Art(poster))]</thumb>
 				<label>$INFO[Window(Home).Property(InCinemaMoviesRT.4.Title)]</label>
 				<label2>$INFO[Window(Home).Property(InCinemaMoviesRT.4.Runtime),, minutes]</label2>
@@ -3243,7 +3243,7 @@
 			</item>
 			
 			<item id="5">
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(InCinemaMoviesRT.5.Art(poster))]</thumb>
 				<label>$INFO[Window(Home).Property(InCinemaMoviesRT.5.Title)]</label>
 				<label2>$INFO[Window(Home).Property(InCinemaMoviesRT.5.Runtime),, minutes]</label2>
@@ -3252,7 +3252,7 @@
 			</item>
 
 			<item id="6">
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(InCinemaMoviesRT.6.Art(poster))]</thumb>
 				<label>$INFO[Window(Home).Property(InCinemaMoviesRT.6.Title)]</label>
 				<label2>$INFO[Window(Home).Property(InCinemaMoviesRT.6.Runtime),, minutes]</label2>
@@ -3261,7 +3261,7 @@
 			</item>
 			
 			<item id="7">
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(InCinemaMoviesRT.7.Art(poster))]</thumb>
 				<label>$INFO[Window(Home).Property(InCinemaMoviesRT.7.Title)]</label>
 				<label2>$INFO[Window(Home).Property(InCinemaMoviesRT.7.Runtime),, minutes]</label2>
@@ -3270,7 +3270,7 @@
 			</item>
 
 			<item id="8">
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(InCinemaMoviesRT.8.Art(poster))]</thumb>
 				<label>$INFO[Window(Home).Property(InCinemaMoviesRT.8.Title)]</label>
 				<label2>$INFO[Window(Home).Property(InCinemaMoviesRT.8.Runtime),, minutes]</label2>
@@ -3279,7 +3279,7 @@
 			</item>
 			
 			<item id="9">
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(InCinemaMoviesRT.9.Art(poster))]</thumb>
 				<label>$INFO[Window(Home).Property(InCinemaMoviesRT.9.Title)]</label>
 				<label2>$INFO[Window(Home).Property(InCinemaMoviesRT.9.Runtime),, minutes]</label2>
@@ -3288,7 +3288,7 @@
 			</item>
 			
 			<item id="9">
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<thumb fallback="special://skin/backgrounds/movies.jpg">$INFO[Window(Home).Property(InCinemaMoviesRT.10.Art(poster))]</thumb>
 				<label>$INFO[Window(Home).Property(InCinemaMoviesRT.10.Title)]</label>
 				<label2>$INFO[Window(Home).Property(InCinemaMoviesRT.10.Runtime),, minutes]</label2>
@@ -4256,7 +4256,7 @@
 				<width>30</width>
 				<height>30</height>
 				<aspectratio>keep</aspectratio>
-				<texture>home/recordings.png</texture>
+				<texture>tiles/recordings.png</texture>
 			</control>
 			
 			<control type="label">
@@ -4306,7 +4306,7 @@
 				<width>30</width>
 				<height>30</height>
 				<aspectratio>keep</aspectratio>
-				<texture>home/recent.png</texture>
+				<texture>tiles/recent.png</texture>
 			</control>
 			
 			<control type="label">
@@ -4943,7 +4943,7 @@
 				<posy>0</posy>
 				<width>155</width>
 				<height>155</height>
-				<texture fallback="home/songs.png">$INFO[ListItem.Thumb]</texture>
+				<texture fallback="tiles/songs.png">$INFO[ListItem.Thumb]</texture>
 				<aspectratio>scale</aspectratio>
 			</control>
 			
@@ -4958,7 +4958,7 @@
 				<posy>0</posy>
 				<width>155</width>
 				<height>155</height>
-				<texture fallback="home/songs.png">$INFO[ListItem.Thumb]</texture>
+				<texture fallback="tiles/songs.png">$INFO[ListItem.Thumb]</texture>
 				<aspectratio>scale</aspectratio>
 				<animation effect="fade" start="50" time="400" easing="out" tween="square">Focus</animation>
 			</control>
@@ -5535,7 +5535,7 @@
 				<posy>0</posy>
 				<width>182</width>
 				<height>270</height>
-				<texture>$INFO[ListItem.Thumb]</texture>
+				<texture>$INFO[ListItem.Icon]</texture>
 				<aspectratio>scale</aspectratio>
 			</control>
 			
@@ -5561,7 +5561,7 @@
 				<posy>0</posy>
 				<width>182</width>
 				<height>270</height>
-				<texture>$INFO[ListItem.Thumb]</texture>
+				<texture>$INFO[ListItem.Icon]</texture>
 				<aspectratio>scale</aspectratio>
 			</control>	
 			
@@ -5572,110 +5572,69 @@
 				<label>$INFO[Window.Property(MostPlayedROM.1.Console)]</label>
 				<label2>$INFO[Window.Property(MostPlayedROM.1.Title)]</label2>
 				<icon>$INFO[Window(0).Property(MostPlayedROM.1.Thumb)]</icon>
-				<property name="Fanart">$INFO[Window(0).Property(MostPlayedROM.1.Fanart)]</property>
-				<property name="Genre">$INFO[Window(0).Property(MostPlayedROM.1.Genre)]</property>
-				<property name="Rating">$INFO[Window(0).Property(MostPlayedROM.1.Rating)]</property>
-				<property name="Plot">$INFO[Window(0).Property(MostPlayedROM.1.Plot)]</property>
-				<property name="Year">$INFO[Window(0).Property(MostPlayedROM.1.Year)]</property>
 				<onclick>RunScript(script.games.rom.collection.browser,launchid=$INFO[Window(0).Property(MostPlayedROM.1.Id)])</onclick>
 				<visible>!IsEmpty(Window(0).Property(MostPlayedROM.1.Title))</visible>
 			</item>
 			<item id="2">
 				<label>$INFO[Window.Property(MostPlayedROM.2.Console)]</label>
 				<label2>$INFO[Window.Property(MostPlayedROM.2.Title)]</label2>
-				<property name="Fanart">$INFO[Window(0).Property(MostPlayedROM.2.Fanart)]</property>
-				<property name="Genre">$INFO[Window(0).Property(MostPlayedROM.2.Genre)]</property>
-				<property name="Rating">$INFO[Window(0).Property(MostPlayedROM.2.Rating)]</property>
-				<property name="Plot">$INFO[Window(0).Property(MostPlayedROM.2.Plot)]</property>
-				<property name="Year">$INFO[Window(0).Property(MostPlayedROM.2.Year)]</property>
+				<icon>$INFO[Window(0).Property(MostPlayedROM.2.Thumb)]</icon>
 				<onclick>RunScript(script.games.rom.collection.browser,launchid=$INFO[Window(0).Property(MostPlayedROM.2.Id)])</onclick>
 				<visible>!IsEmpty(Window(0).Property(MostPlayedROM.2.Title))</visible>
 			</item>
 			<item id="3">
 				<label>$INFO[Window.Property(MostPlayedROM.3.Console)]</label>
 				<label2>$INFO[Window.Property(MostPlayedROM.3.Title)]</label2>
-				<property name="Fanart">$INFO[Window(0).Property(MostPlayedROM.3.Fanart)]</property>
-				<property name="Genre">$INFO[Window(0).Property(MostPlayedROM.3.Genre)]</property>
-				<property name="Rating">$INFO[Window(0).Property(MostPlayedROM.3.Rating)]</property>
-				<property name="Plot">$INFO[Window(0).Property(MostPlayedROM.3.Plot)]</property>
-				<property name="Year">$INFO[Window(0).Property(MostPlayedROM.3.Year)]</property>
+				<icon>$INFO[Window(0).Property(MostPlayedROM.3.Thumb)]</icon>
 				<onclick>RunScript(script.games.rom.collection.browser,launchid=$INFO[Window(0).Property(MostPlayedROM.3.Id)])</onclick>
 				<visible>!IsEmpty(Window(0).Property(MostPlayedROM.3.Title))</visible>
 			</item>
 			<item id="4">
 				<label>$INFO[Window.Property(MostPlayedROM.4.Console)]</label>
 				<label2>$INFO[Window.Property(MostPlayedROM.4.Title)]</label2>
-				<property name="Fanart">$INFO[Window(0).Property(MostPlayedROM.4.Fanart)]</property>
-				<property name="Genre">$INFO[Window(0).Property(MostPlayedROM.4.Genre)]</property>
-				<property name="Rating">$INFO[Window(0).Property(MostPlayedROM.4.Rating)]</property>
-				<property name="Plot">$INFO[Window(0).Property(MostPlayedROM.4.Plot)]</property>
-				<property name="Year">$INFO[Window(0).Property(MostPlayedROM.4.Year)]</property>
+				<icon>$INFO[Window(0).Property(MostPlayedROM.4.Thumb)]</icon>
 				<onclick>RunScript(script.games.rom.collection.browser,launchid=$INFO[Window(0).Property(MostPlayedROM.4.Id)])</onclick>
 				<visible>!IsEmpty(Window(0).Property(MostPlayedROM.4.Title))</visible>
 			</item>
 			<item id="5">
 				<label>$INFO[Window.Property(MostPlayedROM.5.Console)]</label>
 				<label2>$INFO[Window.Property(MostPlayedROM.5.Title)]</label2>
-				<property name="Fanart">$INFO[Window(0).Property(MostPlayedROM.5.Fanart)]</property>
-				<property name="Genre">$INFO[Window(0).Property(MostPlayedROM.5.Genre)]</property>
-				<property name="Rating">$INFO[Window(0).Property(MostPlayedROM.5.Rating)]</property>
-				<property name="Plot">$INFO[Window(0).Property(MostPlayedROM.5.Plot)]</property>
-				<property name="Year">$INFO[Window(0).Property(MostPlayedROM.5.Year)]</property>
+				<icon>$INFO[Window(0).Property(MostPlayedROM.5.Thumb)]</icon>
 				<onclick>RunScript(script.games.rom.collection.browser,launchid=$INFO[Window(0).Property(MostPlayedROM.5.Id)])</onclick>
 				<visible>!IsEmpty(Window(0).Property(MostPlayedROM.5.Title))</visible>
 			</item>
 			<item id="6">
 				<label>$INFO[Window.Property(MostPlayedROM.6.Console)]</label>
 				<label2>$INFO[Window.Property(MostPlayedROM.6.Title)]</label2>
-				<property name="Fanart">$INFO[Window(0).Property(MostPlayedROM.6.Fanart)]</property>
-				<property name="Genre">$INFO[Window(0).Property(MostPlayedROM.6.Genre)]</property>
-				<property name="Rating">$INFO[Window(0).Property(MostPlayedROM.6.Rating)]</property>
-				<property name="Plot">$INFO[Window(0).Property(MostPlayedROM.6.Plot)]</property>
-				<property name="Year">$INFO[Window(0).Property(MostPlayedROM.6.Year)]</property>
+				<icon>$INFO[Window(0).Property(MostPlayedROM.6.Thumb)]</icon>
 				<onclick>RunScript(script.games.rom.collection.browser,launchid=$INFO[Window(0).Property(MostPlayedROM.6.Id)])</onclick>
 				<visible>!IsEmpty(Window(0).Property(MostPlayedROM.6.Title))</visible>
 			</item>
 			<item id="7">
 				<label>$INFO[Window.Property(MostPlayedROM.7.Console)]</label>
 				<label2>$INFO[Window.Property(MostPlayedROM.7.Title)]</label2>
-				<property name="Fanart">$INFO[Window(0).Property(MostPlayedROM.7.Fanart)]</property>
-				<property name="Genre">$INFO[Window(0).Property(MostPlayedROM.7.Genre)]</property>
-				<property name="Rating">$INFO[Window(0).Property(MostPlayedROM.7.Rating)]</property>
-				<property name="Plot">$INFO[Window(0).Property(MostPlayedROM.7.Plot)]</property>
-				<property name="Year">$INFO[Window(0).Property(MostPlayedROM.7.Year)]</property>
+				<icon>$INFO[Window(0).Property(MostPlayedROM.7.Thumb)]</icon>
 				<onclick>RunScript(script.games.rom.collection.browser,launchid=$INFO[Window(0).Property(MostPlayedROM.7.Id)])</onclick>
 				<visible>!IsEmpty(Window(0).Property(MostPlayedROM.7.Title))</visible>
 			</item>
 			<item id="8">
 				<label>$INFO[Window.Property(MostPlayedROM.8.Console)]</label>
 				<label2>$INFO[Window.Property(MostPlayedROM.8.Title)]</label2>
-				<property name="Fanart">$INFO[Window(0).Property(MostPlayedROM.8.Fanart)]</property>
-				<property name="Genre">$INFO[Window(0).Property(MostPlayedROM.8.Genre)]</property>
-				<property name="Rating">$INFO[Window(0).Property(MostPlayedROM.8.Rating)]</property>
-				<property name="Plot">$INFO[Window(0).Property(MostPlayedROM.8.Plot)]</property>
-				<property name="Year">$INFO[Window(0).Property(MostPlayedROM.8.Year)]</property>
+				<icon>$INFO[Window(0).Property(MostPlayedROM.8.Thumb)]</icon>
 				<onclick>RunScript(script.games.rom.collection.browser,launchid=$INFO[Window(0).Property(MostPlayedROM.8.Id)])</onclick>
 				<visible>!IsEmpty(Window(0).Property(MostPlayedROM.8.Title))</visible>
 			</item>
 			<item id="9">
 				<label>$INFO[Window.Property(MostPlayedROM.9.Console)]</label>
 				<label2>$INFO[Window.Property(MostPlayedROM.9.Title)]</label2>
-				<property name="Fanart">$INFO[Window(0).Property(MostPlayedROM.9.Fanart)]</property>
-				<property name="Genre">$INFO[Window(0).Property(MostPlayedROM.9.Genre)]</property>
-				<property name="Rating">$INFO[Window(0).Property(MostPlayedROM.9.Rating)]</property>
-				<property name="Plot">$INFO[Window(0).Property(MostPlayedROM.9.Plot)]</property>
-				<property name="Year">$INFO[Window(0).Property(MostPlayedROM.9.Year)]</property>
+				<icon>$INFO[Window(0).Property(MostPlayedROM.9.Thumb)]</icon>
 				<onclick>RunScript(script.games.rom.collection.browser,launchid=$INFO[Window(0).Property(MostPlayedROM.9.Id)])</onclick>
 				<visible>!IsEmpty(Window(0).Property(MostPlayedROM.9.Title))</visible>
 			</item>
 			<item id="10">
 				<label>$INFO[Window.Property(MostPlayedROM.10.Console)]</label>
 				<label2>$INFO[Window.Property(MostPlayedROM.10.Title)]</label2>
-				<property name="Fanart">$INFO[Window(0).Property(MostPlayedROM.10.Fanart)]</property>
-				<property name="Genre">$INFO[Window(0).Property(MostPlayedROM.10.Genre)]</property>
-				<property name="Rating">$INFO[Window(0).Property(MostPlayedROM.10.Rating)]</property>
-				<property name="Plot">$INFO[Window(0).Property(MostPlayedROM.10.Plot)]</property>
-				<property name="Year">$INFO[Window(0).Property(MostPlayedROM.10.Year)]</property>
+				<icon>$INFO[Window(0).Property(MostPlayedROM.10.Thumb)]</icon>
 				<onclick>RunScript(script.games.rom.collection.browser,launchid=$INFO[Window(0).Property(MostPlayedROM.10.Id)])</onclick>
 				<visible>!IsEmpty(Window(0).Property(MostPlayedROM.10.Title))</visible>
 			</item>
@@ -6045,7 +6004,7 @@
 				<posy>0</posy>
 				<width>155</width>
 				<height>155</height>
-				<texture fallback="home/favourites.png">$INFO[ListItem.Thumb]</texture>
+				<texture fallback="tiles/favourites.png">$INFO[ListItem.Thumb]</texture>
 				<aspectratio>scale</aspectratio>
 			</control>
 			
@@ -6060,7 +6019,7 @@
 				<posy>0</posy>
 				<width>155</width>
 				<height>155</height>
-				<texture fallback="home/favourites.png">$INFO[ListItem.Thumb]</texture>
+				<texture fallback="tiles/favourites.png">$INFO[ListItem.Thumb]</texture>
 				<aspectratio>scale</aspectratio>
 				<animation effect="fade" start="50" time="400" easing="out" tween="square">Focus</animation>
 			</control>

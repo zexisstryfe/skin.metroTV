@@ -298,7 +298,7 @@
 				<posy>20</posy>
 				<width>1280</width>
 				<height>100</height>
-				<texture background="true">$INFO[ListItem.path]logo.png</texture>
+				<texture background="true">$VAR[Common_Logo]</texture>
 				<fadetime>100</fadetime>
 				<aspectratio scalediffuse="false">keep</aspectratio>
 			</control>

@@ -70,7 +70,6 @@
 				<aligny>center</aligny>
 				<textcolor>Black</textcolor>
 				<focusedcolor>White</focusedcolor>
-				<selectedcolor>White</selectedcolor>
 				<textoffsetx>20</textoffsetx>
 				<texturenofocus border="2" colordiffuse="Editback">colors/color_white.png</texturenofocus>
 				<texturefocus border="5" colordiffuse="Accent">colors/color_white.png</texturefocus>

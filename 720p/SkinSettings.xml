@@ -49,7 +49,7 @@
 				<height>480</height>
 				<onup>100</onup>
 				<ondown>100</ondown>
-				<onleft>-</onleft>
+				<onleft>noop</onleft>
 				<onright>99</onright>
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
@@ -87,44 +87,44 @@
 					<item id="1">
 						<description>Visuals</description>
 						<label>31115</label>
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 					</item>					
 					<item id="2">
 						<description>Scripts</description>
-						<label>247</label>
-						<onclick>-</onclick>
+						<label>24001</label>
+						<onclick>noop</onclick>
 					</item>
 					<item id="3">
 						<description>Homescreen</description>
 						<label>31135</label>
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 					</item>		
 
 					<item id="4">
 						<description>Hubs</description>
 						<label>31216</label>
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 					</item>	
 					
 					<item id="5">
 						<description>Backgrounds</description>
 						<label>33069</label>
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 					</item>							
 					<item id="6">
 						<description>Views</description>
 						<label>31016</label>
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 					</item>					
 					<item id="7">
 						<description>Debug</description>
 						<label>31059</label>
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 					</item>					
 					<item id="8">
 						<description>Credits</description>
 						<label>470</label>
-						<onclick>-</onclick>
+						<onclick>noop</onclick>
 					</item>
 				</content>
 
@@ -144,7 +144,7 @@
 					<onup>200</onup>
 					<ondown>200</ondown>
 					<onleft>100</onleft>
-					<onright>-</onright>
+					<onright>noop</onright>
 					<orientation>vertical</orientation>
 					<visible>Container(100).Hasfocus(1)</visible>
 					
@@ -154,6 +154,15 @@
 						<font>font26L</font>
 						<textcolor>Accent</textcolor>
 						<label>31248</label>				
+					</control>
+					
+					<control type="radiobutton" id="202">
+						<description>Background Visualiser</description>
+						<include>Settings_Button</include>
+						<radioposx>780</radioposx>
+						<label>This is a test of the emergency broadcasting system. PLease hold tight or you will be maimed horribly!</label>
+						<onclick>Skin.ToggleSetting(NoBackgroundVisualiser)</onclick>
+						<selected>Skin.HasSetting(NoBackgroundVisualiser)</selected>						
 					</control>
 
 					<control type="radiobutton" id="202">
@@ -255,7 +264,7 @@
 					<onup>200</onup>
 					<ondown>200</ondown>
 					<onleft>100</onleft>
-					<onright>-</onright>
+					<onright>noop</onright>
 					<orientation>vertical</orientation>
 					<visible>Container(100).Hasfocus(2)</visible>
 
@@ -313,6 +322,25 @@
 						<disabledcolor>Black</disabledcolor>						
 					</control>
 					
+					<control type="radiobutton" id="307">
+						<description>Artwork Downloader</description>
+						<include>Settings_Button</include>
+						<label>$LOCALIZE[31254]</label>
+						<onclick>Skin.ToggleSetting(UseArtDownloader)</onclick>
+						<selected>Skin.HasSetting(UseArtDownloader)</selected>	
+						<enable>System.HasAddon(script.artwork.downloader)</enable>
+						<disabledcolor>Black</disabledcolor>						
+					</control>
+					
+					 <control type="radiobutton" id="308">
+                        <include>Settings_Button</include>
+                        <selected>Skin.HasSetting(UpdateArt.Enabled)</selected>
+                        <onclick>Skin.ToggleSetting(UpdateArt.Enabled)</onclick>
+                        <label>$LOCALIZE[31253]</label>
+                        <enable>System.HasAddon(script.artwork.downloader) + Skin.HasSetting(UseArtDownloader)</enable>
+						<disabledcolor>Black</disabledcolor>
+                    </control>
+					
 				</control>
 
 				<control type="grouplist" id="350">
@@ -323,7 +351,7 @@
 					<onup>200</onup>
 					<ondown>200</ondown>
 					<onleft>100</onleft>
-					<onright>-</onright>
+					<onright>noop</onright>
 					<orientation>vertical</orientation>
 					<visible>Container(100).Hasfocus(2)</visible>
 
@@ -340,7 +368,7 @@
 						<description>Default Button</description>
 						<width>800</width>
 						<align>right</align>
-						<label>CU Lyrics</label>
+						<label>$LOCALIZE[231]</label>
 						<visible>IsEmpty(Skin.String(LyricPath))</visible>						
 					</control>
 
@@ -348,16 +376,16 @@
 						<description>Default Button</description>
 						<width>800</width>
 						<align>right</align>
-						<label>$INFO[Skin.String(SubtitlesPath)]</label>
-						<visible>!IsEmpty(Skin.String(SubtitlesPath))</visible>					
+						<label>$INFO[Skin.String(SubtitlePath)]</label>
+						<visible>!IsEmpty(Skin.String(SubtitlePath))</visible>					
 					</control>
 
 					<control type="label" id="354">
 						<description>Default Button</description>
 						<width>800</width>
 						<align>right</align>
-						<label>XBMC Subtitles</label>
-						<visible>IsEmpty(Skin.String(SubtitlesPath))</visible>					
+						<label>$LOCALIZE[231]</label>
+						<visible>IsEmpty(Skin.String(SubtitlePath))</visible>					
 					</control>
 
 				</control>
@@ -1813,7 +1841,7 @@
 					<onup>200</onup>
 					<ondown>200</ondown>
 					<onleft>100</onleft>
-					<onright>-</onright>
+					<onright>noop</onright>
 					<orientation>vertical</orientation>
 					<visible>Container(100).Hasfocus(4)</visible>
 					
@@ -2223,7 +2251,7 @@
 					<onup>800</onup>
 					<ondown>800</ondown>
 					<onleft>100</onleft>
-					<onright>-</onright>
+					<onright>noop</onright>
 					<orientation>vertical</orientation>
 					<visible>Container(100).Hasfocus(6)</visible>
 
@@ -2271,7 +2299,7 @@
 					<onup>500</onup>
 					<ondown>500</ondown>
 					<onleft>100</onleft>
-					<onright>-</onright>
+					<onright>noop</onright>
 					<orientation>vertical</orientation>
 					<visible>Container(100).Hasfocus(7)</visible>
 
@@ -2303,7 +2331,7 @@
 					<onup>500</onup>
 					<ondown>500</ondown>
 					<onleft>100</onleft>
-					<onright>-</onright>
+					<onright>noop</onright>
 					<orientation>vertical</orientation>
 					<visible>Container(100).Hasfocus(8)</visible>
 				</control>

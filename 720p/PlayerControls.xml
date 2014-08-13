@@ -35,7 +35,7 @@
 				<orientation>horizontal</orientation>
 				<onleft>1</onleft>
 				<onright>1</onright>
-				<onup>-</onup>
+				<onup>noop</onup>
 				<ondown>2</ondown>
 
 				<control type="togglebutton" id="400">

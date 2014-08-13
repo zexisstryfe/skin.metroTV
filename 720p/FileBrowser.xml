@@ -47,7 +47,7 @@
 				<description>Path</description>
 				<posx>260</posx>
 				<posy>58</posy>
-				<width>500</width>
+				<width>460</width>
 				<haspath>true</haspath>
 			</control>
 			
@@ -108,7 +108,7 @@
 					<control type="label">
 						<posx>100</posx>
 						<posy>10</posy>
-						<width>400</width>
+						<width>310</width>
 						<height>30</height>
 						<font>font20UB</font>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
@@ -117,7 +117,7 @@
 					<control type="label">
 						<posx>100</posx>
 						<posy>50</posy>
-						<width>400</width>
+						<width>310</width>
 						<height>30</height>
 						<align>left</align>
 						<font>font20L</font>
@@ -165,7 +165,7 @@
 					<control type="label">
 						<posx>100</posx>
 						<posy>10</posy>
-						<width>400</width>
+						<width>310</width>
 						<height>30</height>
 						<font>font20UB</font>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
@@ -174,7 +174,7 @@
 					<control type="label">
 						<posx>100</posx>
 						<posy>50</posy>
-						<width>400</width>
+						<width>310</width>
 						<height>30</height>
 						<align>left</align>
 						<font>font20L</font>

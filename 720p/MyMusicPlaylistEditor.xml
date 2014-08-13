@@ -58,7 +58,7 @@
 				<posy>70</posy>
 				<width>450</width>
 				<height>480</height>
-				<onleft>-</onleft>
+				<onleft>noop</onleft>
 				<onright>60</onright>
 				<onup>50</onup>
 				<ondown>50</ondown>

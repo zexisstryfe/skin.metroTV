@@ -302,8 +302,8 @@
 					<onup>65</onup>
 					<ondown>304</ondown>  
 					<include>Common_Keyboard_Button</include>
-					<textureradiofocus>-</textureradiofocus> 
-					<textureradionofocus>-</textureradionofocus>
+					<textureradiofocus>noop</textureradiofocus> 
+					<textureradionofocus>noop</textureradionofocus>
 					<radioposy>12</radioposy>
 				</control>
 				
@@ -425,8 +425,8 @@
 					<onup>302</onup>
 					<ondown>81</ondown>
 					<include>Common_Keyboard_Button</include>
-					<textureradionofocus>-</textureradionofocus>
-					<textureradiofocus>-</textureradiofocus>
+					<textureradionofocus>noop</textureradionofocus>
+					<textureradiofocus>noop</textureradiofocus>
 					<radioposy>12</radioposy>
 				</control>
 				
@@ -440,8 +440,8 @@
 					<onup>90</onup>
 					<ondown>87</ondown>
 					<include>Common_Keyboard_Button</include>
-					<textureradiofocus>-</textureradiofocus> 
-					<textureradionofocus>-</textureradionofocus>
+					<textureradiofocus>noop</textureradiofocus> 
+					<textureradionofocus>noop</textureradionofocus>
 					<radioposy>12</radioposy>
 				</control>
 				

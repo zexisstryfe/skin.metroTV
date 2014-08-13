@@ -30,14 +30,6 @@
 		<value condition="Player.HasVideo + VideoPlayer.Content(files)">nowplaying/tile/nowplaying_file.png</value>
 	</variable>
 	
-	<variable name="NowPlaying_Icon">
-		<value condition="Player.HasAudio">tiles/home_music_small.png</value>
-		<value condition="VideoPlayer.Content(movies)">tiles/home_movie_small.png</value>
-		<value condition="VideoPlayer.Content(episodes)">tiles/home_tvshow_small.png</value>
-		<value condition="VideoPlayer.Content(files) + !VideoPlayer.HasMenu">tiles/home_videos_small.png</value>
-		<value condition="VideoPlayer.Content(files) + VideoPlayer.HasMenu">tiles/home_dvd_small.png</value>
-	</variable>
-	
 	<variable name="NowPlaying_First_Label">
 		<value condition="Player.HasAudio">$INFO[MusicPlayer.Artist]</value>
 		<value condition="Player.HasVideo + VideoPlayer.HasMenu">$INFO[Player.Title]</value>
@@ -1140,7 +1132,7 @@
 	
 	<variable name="GameTile1.Path">	
 		<value condition="Skin.String(GameTile1,RCB)">RunScript(script.games.rom.collection.browser)</value>
-		<value condition="Skin.String(GameTile1,Adv.Launcher)">RunScript(plugin.program.advanced.launcher)</value>
+		<value condition="Skin.String(GameTile1,Adv.Launcher)">ActivateWindow(10001,plugin://plugin.program.advanced.launcher,return)</value>
 	</variable>	
 	
 	<variable name="GameTile2.Image">	
@@ -1441,7 +1433,7 @@
 		<value condition="Skin.String(Custom1Tile1,PlayDisc)">PlayDVD</value>
 		<value condition="Skin.String(Custom1Tile1,EjectDisc)">EjectTray</value>
 		<value condition="Skin.String(Custom1Tile1,RCB)">RunScript(script.games.rom.collection.browser)</value>
-		<value condition="Skin.String(Custom1Tile1,Adv.Launcher)">RunScript(plugin.program.advanced.launcher)</value>
+		<value condition="Skin.String(Custom1Tile1,Adv.Launcher)">ActivateWindow(10001,plugin://plugin.program.advanced.launcher,return)</value>
 		<value condition="Skin.String(Custom1Tile1,NextAired)">RunScript(script.tv.show.next.aired)</value>
 		<value condition="Skin.String(Custom1Tile1,MusicAddons)">ActivateWindow(Music,Addons,return)</value>
 		<value condition="Skin.String(Custom1Tile1,MusicFiles)">ActivateWindow(Music)</value>
@@ -1521,7 +1513,7 @@
 		<value condition="Skin.String(Custom1Tile2,PlayDisc)">PlayDVD</value>
 		<value condition="Skin.String(Custom1Tile2,EjectDisc)">EjectTray</value>
 		<value condition="Skin.String(Custom1Tile2,RCB)">RunScript(script.games.rom.collection.browser)</value>
-		<value condition="Skin.String(Custom1Tile2,Adv.Launcher)">RunScript(plugin.program.advanced.launcher)</value>
+		<value condition="Skin.String(Custom1Tile2,Adv.Launcher)">ActivateWindow(10001,plugin://plugin.program.advanced.launcher,return)</value>
 		<value condition="Skin.String(Custom1Tile2,NextAired)">RunScript(script.tv.show.next.aired)</value>
 		<value condition="Skin.String(Custom1Tile2,MusicAddons)">ActivateWindow(Music,Addons,return)</value>
 		<value condition="Skin.String(Custom1Tile2,MusicFiles)">ActivateWindow(Music)</value>
@@ -1601,7 +1593,7 @@
 		<value condition="Skin.String(Custom1Tile3,PlayDisc)">PlayDVD</value>
 		<value condition="Skin.String(Custom1Tile3,EjectDisc)">EjectTray</value>
 		<value condition="Skin.String(Custom1Tile3,RCB)">RunScript(script.games.rom.collection.browser)</value>
-		<value condition="Skin.String(Custom1Tile3,Adv.Launcher)">RunScript(plugin.program.advanced.launcher)</value>
+		<value condition="Skin.String(Custom1Tile3,Adv.Launcher)">ActivateWindow(10001,plugin://plugin.program.advanced.launcher,return)</value>
 		<value condition="Skin.String(Custom1Tile3,NextAired)">RunScript(script.tv.show.next.aired)</value>
 		<value condition="Skin.String(Custom1Tile3,MusicAddons)">ActivateWindow(Music,Addons,return)</value>
 		<value condition="Skin.String(Custom1Tile3,MusicFiles)">ActivateWindow(Music)</value>
@@ -1681,7 +1673,7 @@
 		<value condition="Skin.String(Custom1Tile4,PlayDisc)">PlayDVD</value>
 		<value condition="Skin.String(Custom1Tile4,EjectDisc)">EjectTray</value>
 		<value condition="Skin.String(Custom1Tile4,RCB)">RunScript(script.games.rom.collection.browser)</value>
-		<value condition="Skin.String(Custom1Tile4,Adv.Launcher)">RunScript(plugin.program.advanced.launcher)</value>
+		<value condition="Skin.String(Custom1Tile4,Adv.Launcher)">ActivateWindow(10001,plugin://plugin.program.advanced.launcher,return)</value>
 		<value condition="Skin.String(Custom1Tile4,NextAired)">RunScript(script.tv.show.next.aired)</value>
 		<value condition="Skin.String(Custom1Tile4,MusicAddons)">ActivateWindow(Music,Addons,return)</value>
 		<value condition="Skin.String(Custom1Tile4,MusicFiles)">ActivateWindow(Music)</value>
@@ -1761,7 +1753,7 @@
 		<value condition="Skin.String(Custom1Tile5,PlayDisc)">PlayDVD</value>
 		<value condition="Skin.String(Custom1Tile5,EjectDisc)">EjectTray</value>
 		<value condition="Skin.String(Custom1Tile5,RCB)">RunScript(script.games.rom.collection.browser)</value>
-		<value condition="Skin.String(Custom1Tile5,Adv.Launcher)">RunScript(plugin.program.advanced.launcher)</value>
+		<value condition="Skin.String(Custom1Tile5,Adv.Launcher)">ActivateWindow(10001,plugin://plugin.program.advanced.launcher,return)</value>
 		<value condition="Skin.String(Custom1Tile5,NextAired)">RunScript(script.tv.show.next.aired)</value>
 		<value condition="Skin.String(Custom1Tile5,MusicAddons)">ActivateWindow(Music,Addons,return)</value>
 		<value condition="Skin.String(Custom1Tile5,MusicFiles)">ActivateWindow(Music)</value>
@@ -1771,26 +1763,6 @@
 		<value condition="Skin.String(Custom1Tile5,ProgramAddons)">ActivateWindow(programs)</value>
 		<value condition="Skin.String(Custom1Tile5,FileManager)">ActivateWindow(Filemanager)</value>
 	</variable>	
-	
-	<variable name="Trakt_TrendingMovies_TextColor">
-		<value condition="ControlGroup(10000).HasFocus(10001) + Control.HasFocus(10001)">Accent</value>
-		<value>White</value>
-	</variable>
-	
-	<variable name="Trakt_TrendingShows_TextColor">
-		<value condition="ControlGroup(10000).HasFocus(10002) + Control.HasFocus(10002)">Accent</value>
-		<value>White</value>
-	</variable>
-	
-	<variable name="Trakt_AiringShows_TextColor">
-		<value condition="ControlGroup(10000).HasFocus(10003) + Control.HasFocus(10003)">Accent</value>
-		<value>White</value>
-	</variable>
-	
-	<variable name="Trakt_PremieringShows_TextColor">
-		<value condition="ControlGroup(10000).HasFocus(10004) + Control.HasFocus(10004)">Accent</value>
-		<value>White</value>
-	</variable>
 	
 	<variable name="Common_SubHeader">
 		<value condition="Container.Content(albums)">$INFO[ListItem.Artist]</value>
@@ -1823,12 +1795,33 @@
 	
 	<variable name="Common_Fallback">
 		<value condition="Container.Content(movies) + !stringcompare(ListItem.Label,..)">DefaultMovies.png</value>
-		<value condition="[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !stringcompare(ListItem.Label,..)">DefaultTVShows.png</value>
-		<value condition="Container.Content(artists) + !stringcompare(ListItem.Label,..)">DefaultArtist.png</value>
-		<value condition="[Container.Content(albums) | Container.Content(songs)] + !stringcompare(ListItem.Label,..)">DefaultAlbumCover.png</value>
-		<value condition="[Container.Content(files) | Container.Content(addons)] + !stringcompare(ListItem.Label,..)">DefaultAddon.png</value>
+		<value condition="[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !stringcompare(ListItem.Label,..) + IsEmpty(ListItem.Icon)">DefaultTVShows.png</value>
+		<value condition="Container.Content(artists) + !stringcompare(ListItem.Label,..) + IsEmpty(ListItem.Icon)">DefaultArtist.png</value>
+		<value condition="[Container.Content(albums) | Container.Content(songs)] + !stringcompare(ListItem.Label,..) + IsEmpty(ListItem.Icon)">DefaultAlbumCover.png</value>
+		<value condition="[Container.Content(files) | Container.Content(addons)] + !stringcompare(ListItem.Label,..) + IsEmpty(ListItem.Icon)">DefaultAddon.png</value>
 		<value condition="StringCompare(Window.Property(xmlfile),MyPrograms.xml) + !stringcompare(ListItem.Label,..)">DefaultProgram.png</value>
 		<value condition="stringcompare(ListItem.Label,..)">DefaultFolderBack.png</value>		
 	</variable>
+	
+	<variable name="Common_Logo">
+		<value condition="!IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>		
+		<value condition="IsEmpty(ListItem.Art(clearlogo)) + Container.Content(episodes)">$INFO[ListItem.path]../logo.png</value>
+		<value condition="IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.path]logo.png</value>
+	</variable>
+	
+	<variable name="Common_Disc">
+		<value condition="!IsEmpty(ListItem.Art(discart))">$INFO[ListItem.Art(discart)]</value>
+		<value condition="IsEmpty(ListItem.Art(discart))">$INFO[ListItem.path]disc.png</value>		
+	</variable>	
+	
+	<variable name="Common_ClearArt">
+		<value condition="!IsEmpty(ListItem.Art(clearart))">$INFO[ListItem.Art(clearart)]</value>
+		<value condition="IsEmpty(ListItem.Art(clearart))">$INFO[ListItem.path]clearart.png</value>		
+	</variable>	
+	
+	<variable name="Common_Landscape">
+		<value condition="!IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
+		<value condition="IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.path]landscape.jpg</value>		
+	</variable>	
 	
 </includes>
