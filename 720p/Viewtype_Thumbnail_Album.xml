@@ -78,7 +78,7 @@
 							<height>36</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>font24UB</font>
-							<textcolor>Accent</textcolor>
+							<textcolor>$VAR[Accent_100]</textcolor>
 							<aligny>top</aligny>
 							<visible>!stringcompare(ListItem.Label,..)</visible>							
 						</control>
@@ -90,7 +90,7 @@
 							<height>36</height>
 							<label>$LOCALIZE[31194]</label>
 							<font>font24UB</font>
-							<textcolor>Accent</textcolor>
+							<textcolor>$VAR[Accent_100]</textcolor>
 							<aligny>top</aligny>
 							<visible>stringcompare(ListItem.Label,..)</visible>							
 						</control>

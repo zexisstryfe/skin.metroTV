@@ -145,7 +145,7 @@
 							<height>240</height>
 							<texture background="true">$INFO[ListItem.Thumb]</texture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>	
-							<bordertexture colordiffuse="Accent">colors/color_white.png</bordertexture>
+							<bordertexture colordiffuse="$VAR[Accent_100]">colors/color_white.png</bordertexture>
 							<bordersize>2</bordersize>	
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />
@@ -603,7 +603,7 @@
 							<height>240</height>
 							<texture background="true">$INFO[ListItem.Thumb]</texture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>	
-							<bordertexture colordiffuse="Accent">colors/color_white.png</bordertexture>
+							<bordertexture colordiffuse="$VAR[Accent_100]">colors/color_white.png</bordertexture>
 							<bordersize>2</bordersize>	
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />
@@ -1081,7 +1081,7 @@
 							<height>240</height>
 							<texture background="true">$INFO[ListItem.Thumb]</texture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>	
-							<bordertexture colordiffuse="Accent">colors/color_white.png</bordertexture>
+							<bordertexture colordiffuse="$VAR[Accent_100]">colors/color_white.png</bordertexture>
 							<bordersize>2</bordersize>
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />
@@ -1559,7 +1559,7 @@
 							<height>240</height>
 							<texture background="true">$INFO[ListItem.Thumb]</texture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>	
-							<bordertexture colordiffuse="Accent">colors/color_white.png</bordertexture>
+							<bordertexture colordiffuse="$VAR[Accent_100]">colors/color_white.png</bordertexture>
 							<bordersize>2</bordersize>	
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />

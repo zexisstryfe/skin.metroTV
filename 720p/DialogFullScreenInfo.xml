@@ -71,7 +71,7 @@
 					<posx>165</posx>
 					<width>335</width>
 					<align>left</align>
-					<textcolor>Accent</textcolor>
+					<textcolor>$VAR[Accent_100]</textcolor>
 					<font>font26UB</font>
 					<label>$INFO[VideoPlayer.Title] ($INFO[VideoPlayer.Year])</label>
 					<scroll>true</scroll>
@@ -84,7 +84,7 @@
 					<label>$INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,x] - $INFO[VideoPlayer.Title]</label>
 					<align>left</align>
 					<font>font26UB</font>
-					<textcolor>Accent</textcolor>
+					<textcolor>$VAR[Accent_100]</textcolor>
 					<scroll>true</scroll>
 					<visible>VideoPlayer.Content(Episodes)</visible>
 				</control>

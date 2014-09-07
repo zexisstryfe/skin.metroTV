@@ -20,7 +20,7 @@
 			<width>520</width>
 			<height>300</height>
 			<itemgap>8</itemgap>
-			<textcolor>Accent</textcolor>
+			<textcolor>$VAR[Accent_100]</textcolor>
 			<visible>!Skin.HasSetting(HideDebugInfo)</visible>
 			
 			<control type="label">

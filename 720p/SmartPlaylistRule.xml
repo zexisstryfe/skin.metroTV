@@ -41,7 +41,7 @@
 				<width>780</width>
 				<label>21422</label>
 				<font>font20UB</font>
-				<textcolor>Accent</textcolor>
+				<textcolor>$VAR[Accent_100]</textcolor>
 				<align>center</align>
 			</control>
 
@@ -111,7 +111,7 @@
 				
 				<control type="button" id="20">
 					<description>Browse button</description>
-					<texturefocus aspectratio="keep" colordiffuse="Accent">colors/color_white.png</texturefocus>
+					<texturefocus aspectratio="keep" colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>
 					<texturenofocus aspectratio="keep" colordiffuse="Keyback2">colors/color_white.png</texturenofocus>
 					<width>48</width>
 					<height>48</height>

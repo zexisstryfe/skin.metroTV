@@ -74,7 +74,7 @@
 							<posy>5</posy>
 							<height>30</height>
 							<width>260</width>
-							<textcolor>Accent</textcolor>
+							<textcolor>$VAR[Accent_100]</textcolor>
 							<font>font24UB</font>
 							<visible>Window.IsActive(1) | Container.Content(artists) | Container.Content(addons) | Container.Content(albums) | Container.Content(musicvideos)</visible>
 							<visible>!stringcompare(ListItem.Label,..)</visible>
@@ -86,7 +86,7 @@
 							<posy>5</posy>
 							<height>30</height>
 							<width>260</width>
-							<textcolor>Accent</textcolor>
+							<textcolor>$VAR[Accent_100]</textcolor>
 							<font>font24UB</font>
 							<visible>stringcompare(ListItem.Label,..)</visible>
 						</control>

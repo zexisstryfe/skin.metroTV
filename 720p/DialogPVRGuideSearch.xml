@@ -52,7 +52,7 @@
                 <font>font20</font>
                 <textoffsetx>20</textoffsetx>
                 <textoffsety>10</textoffsety>
-                <texturefocus border="5" colordiffuse="Accent">colors/color_white.png</texturefocus>
+                <texturefocus border="5" colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>
                 <texturenofocus border="2" colordiffuse="Editback">colors/color_white.png</texturenofocus>
             </control>
 			
@@ -99,7 +99,7 @@
                     <focusedcolor>White</focusedcolor>
                     <textoffsetx>20</textoffsetx>
                     <textoffsety>10</textoffsety>
-                    <texturefocus border="5" colordiffuse="Accent">colors/color_white.png</texturefocus>
+                    <texturefocus border="5" colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>
                 </control>
 				
                 <control type="edit" id="15">
@@ -115,7 +115,7 @@
                     <focusedcolor>White</focusedcolor>
                     <textoffsetx>20</textoffsetx>
                     <textoffsety>10</textoffsety>
-                    <texturefocus border="5" colordiffuse="Accent">colors/color_white.png</texturefocus>
+                    <texturefocus border="5" colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>
                 </control>
 				
                 <control type="spincontrolex" id="18">
@@ -201,7 +201,7 @@
                     <focusedcolor>White</focusedcolor>
                     <textoffsetx>20</textoffsetx>
                     <textoffsety>10</textoffsety>
-                    <texturefocus border="5" colordiffuse="Accent">colors/color_white.png</texturefocus>
+                    <texturefocus border="5" colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>
                 </control>
 				
                 <control type="edit" id="17">
@@ -218,7 +218,7 @@
                     <focusedcolor>White</focusedcolor>
                     <textoffsetx>20</textoffsetx>
                     <textoffsety>10</textoffsety>
-                    <texturefocus border="5" colordiffuse="Accent">colors/color_white.png</texturefocus>
+                    <texturefocus border="5" colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>
                 </control>
 				
                 <control type="radiobutton" id="19">

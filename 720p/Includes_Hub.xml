@@ -363,7 +363,7 @@
 					<height>116</height>
 					<label>$INFO[Container(9001).ListItem.Label]</label>
 					<font>font32UB</font>
-					<textcolor>Accent</textcolor>
+					<textcolor>$VAR[Accent_100]</textcolor>
 					<aligny>top</aligny>
 					<shadowcolor>0Black</shadowcolor>
 					<autoscroll>false</autoscroll>					
@@ -615,7 +615,7 @@
 							<height>86</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>font24UB</font>
-							<textcolor>Accent</textcolor>
+							<textcolor>$VAR[Accent_100]</textcolor>
 							<aligny>top</aligny>
 							<shadowcolor>00FFFFFF</shadowcolor>
 							<autoscroll>true</autoscroll>
@@ -629,7 +629,7 @@
 							<height>40</height>
 							<label>$INFO[ListItem.Label2]</label>
 							<font>font20UB</font>
-							<textcolor>Accent</textcolor>
+							<textcolor>$VAR[Accent_100]</textcolor>
 							<aligny>top</aligny>
 							<shadowcolor>00FFFFFF</shadowcolor>					
 						</control>
@@ -1105,7 +1105,7 @@
 							<height>30</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>font24UB</font>
-							<textcolor>Accent</textcolor>
+							<textcolor>$VAR[Accent_100]</textcolor>
 							<scroll>true</scroll>							
 						</control>
 						
@@ -1412,7 +1412,7 @@
 					<height>50</height>
 					<label>$INFO[Container(9005).ListItem.Label]</label>
 					<font>font20UB</font>
-					<textcolor>Accent</textcolor>				
+					<textcolor>$VAR[Accent_100]</textcolor>				
 					<visible>Control.HasFocus(9005)</visible>					
 				</control>
 				
@@ -1709,7 +1709,7 @@
 						<height>40</height>
 						<label>$INFO[ListItem.Label]</label>
 						<font>font16UB</font>
-						<textcolor>Accent</textcolor>
+						<textcolor>$VAR[Accent_100]</textcolor>
 						<aligny>top</aligny>
 						<shadowcolor>00FFFFFF</shadowcolor>
 						<autoscroll>true</autoscroll>
@@ -2263,7 +2263,7 @@
 					<height>26</height>
 					<label>$INFO[Container(9007).ListItem.Label]</label>
 					<font>font20UB</font>
-					<textcolor>Accent</textcolor>
+					<textcolor>$VAR[Accent_100]</textcolor>
 					<aligny>top</aligny>					
 					<visible>Control.HasFocus(9007)</visible>					
 				</control>

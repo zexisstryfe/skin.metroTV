@@ -15,14 +15,14 @@
 			<description>Pointer Focus</description>
 			<width>30</width>
 			<height>30</height>
-			<texture colordiffuse="Accent">pointers/Pointer.png</texture>
+			<texture colordiffuse="$VAR[Accent_100]">pointers/Pointer.png</texture>
 		</control>
 
 		<control type="image" id="3">
 			<description>Pointer Drag</description>
 			<width>30</width>
 			<height>30</height>
-			<texture colordiffuse="Accent">pointers/PointerClick.png</texture>
+			<texture colordiffuse="$VAR[Accent_100]">pointers/PointerClick.png</texture>
 		</control>
 
 		<control type="image" id="4">

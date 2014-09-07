@@ -34,7 +34,7 @@
 				<posx>20</posx>
 				<width>410</width>
 				<height>60</height>
-				<textcolor>Accent</textcolor>
+				<textcolor>$VAR[Accent_100]</textcolor>
 				<font>font40LB</font>
 				<label>31101</label>
 			</control>

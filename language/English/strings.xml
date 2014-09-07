@@ -255,5 +255,6 @@
 	<string id="31252">General Settings</string>
 	<string id="31253"> - Update art (landscape, logo, clearart) after database update</string>
 	<string id="31254">Enable Artwork Downloader add-on</string>
+	<string id="31255">Select Accent color</string>
 	
 </strings>

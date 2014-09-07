@@ -50,7 +50,7 @@
 						<posy>20</posy>
 						<width>100</width>
 						<height>100</height>
-						<texture >$INFO[ListItem.Thumb]</texture>
+						<texture colordiffuse="Icon">$INFO[ListItem.Thumb]</texture>
 					</control>
 					
 				</itemlayout>
@@ -69,7 +69,7 @@
 							<posy>20</posy>
 							<width>100</width>
 							<height>100</height>
-							<texture >$INFO[ListItem.Thumb]</texture>
+							<texture colordiffuse="Icon">$INFO[ListItem.Thumb]</texture>
 						</control>
 					
 					</control>

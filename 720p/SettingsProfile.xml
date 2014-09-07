@@ -54,7 +54,7 @@
 				<posy>120</posy>
 				<width>400</width>
 				<align>center</align>
-				<textcolor>Accent</textcolor>
+				<textcolor>$VAR[Accent_100]</textcolor>
 				<label>$LOCALIZE[31134]</label>
 				<font>font40L</font>
 			</control>

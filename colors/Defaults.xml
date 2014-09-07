@@ -1,4 +1,6 @@
 <colors>
+	<color name="TrueWhite">FFFFFFFF</color>
+	<color name="TrueBlack">FF000000</color>
 	<color name="Black">FF000000</color>
 	<color name="Black60">77000000</color>
 	<color name="Black70">A9000000</color>
@@ -28,4 +30,5 @@
 	<color name="Keyback2">FF1D1C21</color>
 	<color name="Nokey">FF0b0b0e</color>
 	<color name="Editback">FF9f9ead</color>
+	<color name="Icon">FFFFFFFF</color>
 </colors>

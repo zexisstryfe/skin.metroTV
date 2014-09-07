@@ -1824,4 +1824,16 @@
 		<value condition="IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.path]landscape.jpg</value>		
 	</variable>	
 	
+	<variable name="Accent_100">
+		<value>FF$INFO[Skin.String(accent.color)]</value>	
+	</variable>	
+	
+	<variable name="Accent_80">
+		<value>CC$INFO[Skin.String(accent.color)]</value>	
+	</variable>	
+	
+	<variable name="Accent_60">
+		<value>77$INFO[Skin.String(accent.color)]</value>	
+	</variable>	
+	
 </includes>

@@ -12,112 +12,112 @@
 		<control type="image">
 			<description>Rated G</description>
 			<include>Dimensions_CodecFlags</include>
-			<texture>flags/mpaa/mpaa_g.png</texture>
+			<texture colordiffuse="White">flags/mpaa/mpaa_g.png</texture>
 			<visible>substring(listitem.mpaa,Rated G)</visible>
 		</control>
 		
 		<control type="image">
 			<description>Rated PG</description>
 			<include>Dimensions_CodecFlags</include>
-			<texture>flags/mpaa/mpaa_pg.png</texture>
+			<texture colordiffuse="White">flags/mpaa/mpaa_pg.png</texture>
 			<visible>substring(listitem.mpaa,Rated PG) + !substring(listitem.mpaa,Rated PG-13)</visible>
 		</control>
 		
 		<control type="image">
 			<description>Rated PG-13</description>
 			<include>Dimensions_CodecFlags</include>
-			<texture>flags/mpaa/mpaa_pg-13.png</texture>
+			<texture colordiffuse="White">flags/mpaa/mpaa_pg-13.png</texture>
 			<visible>substring(listitem.mpaa,Rated PG-13)</visible>
 		</control>
 		
 		<control type="image">
 			<description>Rated R</description>
 			<include>Dimensions_CodecFlags</include>
-			<texture>flags/mpaa/mpaa_r.png</texture>
+			<texture colordiffuse="White">flags/mpaa/mpaa_r.png</texture>
 			<visible>substring(Listitem.mpaa,Rated R)</visible>
 		</control>
 		
 		<control type="image">
 			<description>Rated NC-17</description>
 			<include>Dimensions_CodecFlags</include>
-			<texture>flags/mpaa/mpaa_nc-17.png</texture>
+			<texture colordiffuse="White">flags/mpaa/mpaa_nc-17.png</texture>
 			<visible>substring(Listitem.mpaa,Rated NC)</visible>
 		</control>
 		
 		<control type="image">
 			<description>Rated TV-G</description>
 			<include>Dimensions_CodecFlags</include>
-			<texture>flags/mpaa/tv-g.png</texture>
+			<texture colordiffuse="White">flags/mpaa/tv-g.png</texture>
 			<visible>substring(listitem.mpaa,TV-G)</visible>
 		</control>
 		
 		<control type="image">
 			<description>Rated TV-PG</description>
 			<include>Dimensions_CodecFlags</include>
-			<texture>flags/mpaa/tv-pg.png</texture>
+			<texture colordiffuse="White">flags/mpaa/tv-pg.png</texture>
 			<visible>substring(listitem.mpaa,TV-PG)</visible>
 		</control>
 		
 		<control type="image">
 			<description>Rated TV-14</description>
 			<include>Dimensions_CodecFlags</include>
-			<texture>flags/mpaa/tv-14.png</texture>
+			<texture colordiffuse="White">flags/mpaa/tv-14.png</texture>
 			<visible>substring(listitem.mpaa,TV-14)</visible>
 		</control>
 		
 		<control type="image">
 			<description>Rated TV-MA</description>
 			<include>Dimensions_CodecFlags</include>
-			<texture>flags/mpaa/tv-ma.png</texture>
+			<texture colordiffuse="White">flags/mpaa/tv-ma.png</texture>
 			<visible>substring(listitem.mpaa,TV-MA)</visible>
 		</control>
 		
 		<control type="image">
 			<description>Rated bbfc_u</description>
 			<include>Dimensions_CodecFlags</include>
-			<texture>flags/mpaa/bbfc_u.png</texture>
+			<texture colordiffuse="White">flags/mpaa/bbfc_u.png</texture>
 			<visible>substring(listitem.mpaa,UK:U)</visible>
 		</control>
 		
 		<control type="image">
 			<description>Rated bbfc_pg</description>
 			<include>Dimensions_CodecFlags</include>
-			<texture>flags/mpaa/bbfc_pg.png</texture>
+			<texture colordiffuse="White">flags/mpaa/bbfc_pg.png</texture>
 			<visible>substring(listitem.mpaa,UK:PG)</visible>
 		</control>
 		
 		<control type="image">
 			<description>Rated bbfc_12</description>
 			<include>Dimensions_CodecFlags</include>
-			<texture>flags/mpaa/bbfc_12.png</texture>
+			<texture colordiffuse="White">flags/mpaa/bbfc_12.png</texture>
 			<visible>substring(listitem.mpaa,UK:12)</visible>
 		</control>
 
 		<control type="image">
 			<description>Rated bbfc_12a</description>
 			<include>Dimensions_CodecFlags</include>
-			<texture>flags/mpaa/bbfc_12A.png</texture>
+			<texture colordiffuse="White">flags/mpaa/bbfc_12A.png</texture>
 			<visible>substring(listitem.mpaa,UK:12A)</visible>
 		</control>
 		
 		<control type="image">
 			<description>Rated bbfc_15</description>
 			<include>Dimensions_CodecFlags</include>
-			<texture>flags/mpaa/bbfc_15.png</texture>
+			<texture colordiffuse="White">flags/mpaa/bbfc_15.png</texture>
 			<visible>substring(listitem.mpaa,UK:15)</visible>
 		</control>
 		
 		<control type="image">
 			<description>Rated bbfc_18</description>
 			<include>Dimensions_CodecFlags</include>
-			<texture>flags/mpaa/bbfc_18.png</texture>
+			<texture colordiffuse="White">flags/mpaa/bbfc_18.png</texture>
 			<visible>substring(listitem.mpaa,UK:18)</visible>
 		</control>
 		
 		<control type="image">
 			<description>Rated bbfc_18</description>
 			<include>Dimensions_CodecFlags</include>
-			<texture>flags/mpaa/bbfc_18.png</texture>
+			<texture colordiffuse="White">flags/mpaa/bbfc_18.png</texture>
 			<visible>substring(listitem.mpaa,UK:R18)</visible>
 		</control>
 		
@@ -128,7 +128,7 @@
 		<control type="image">
 			<description>Video Codec Image</description>
 			<include>Dimensions_CodecFlags</include>
-			<texture>$INFO[ListItem.VideoCodec,flags/videocodec/,.png]</texture>
+			<texture colordiffuse="White">$INFO[ListItem.VideoCodec,flags/videocodec/,.png]</texture>
 		</control>
 		
 	</include>
@@ -138,7 +138,7 @@
 		<control type="image">
 			<description>Audio Codec Image</description>
 			<include>Dimensions_CodecFlags</include>
-			<texture>$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</texture>
+			<texture colordiffuse="White">$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</texture>
 		</control>
 
 	</include>
@@ -148,7 +148,7 @@
 		<control type="image">
 			<description>Audio Codec Image</description>
 			<include>Dimensions_CodecFlags</include>
-			<texture>$INFO[ListItem.AudioChannels,flags/audiochannels/,ch.png]</texture>
+			<texture colordiffuse="White">$INFO[ListItem.AudioChannels,flags/audiochannels/,ch.png]</texture>
 		</control>
 		
 	</include>
@@ -158,7 +158,7 @@
 		<control type="image">
 			<description>Aspectratio Image</description>
 			<include>Dimensions_CodecFlags</include>
-			<texture>$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
+			<texture colordiffuse="White">$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
 		</control>
 		
 	</include>
@@ -170,7 +170,7 @@
 			<width>80</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
+			<texture colordiffuse="White">$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
 		</control>	
 	
 	</include>

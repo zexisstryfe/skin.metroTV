@@ -121,7 +121,7 @@
 							<width>315</width>
 							<height>315</height>
 							<texture>$VAR[Common_Fallback]</texture>
-							<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[Accent_100]">colors/color_white.png</bordertexture>
 							<bordersize>2</bordersize>
 							<aspectratio scalediffuse="false">keep</aspectratio>
 						</control>						
@@ -132,7 +132,7 @@
 							<width>315</width>
 							<height>315</height>
 							<texture background="true" fallback="DefaultAlbumCover.png">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[Accent_100]">colors/color_white.png</bordertexture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 							<bordersize>2</bordersize>
 							<visible>!stringcompare(ListItem.Label,..) + Container.Content(Albums)</visible>
@@ -144,7 +144,7 @@
 							<width>315</width>
 							<height>315</height>
 							<texture background="true" fallback="DefaultArtist.png">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
+							<bordertexture border="5" colordiffuse="$VAR[Accent_100]">colors/color_white.png</bordertexture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 							<bordersize>2</bordersize>
 							<visible>!stringcompare(ListItem.Label,..) + Container.Content(Artists)</visible>
@@ -202,7 +202,7 @@
 					<height>50</height>
 					<align>right</align>
 					<font>font40L</font>
-					<textcolor>Accent</textcolor>
+					<textcolor>$VAR[Accent_100]</textcolor>
 					<label>21887</label>
 					<visible>Container.Content(artists)</visible>
 				</control>
@@ -214,7 +214,7 @@
 					<height>50</height>
 					<align>right</align>
 					<font>font40L</font>
-					<textcolor>Accent</textcolor>
+					<textcolor>$VAR[Accent_100]</textcolor>
 					<label>183</label>
 					<visible>Container.Content(albums)</visible>
 				</control>

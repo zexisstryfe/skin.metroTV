@@ -16,7 +16,7 @@
 			<width>128</width>
 			<height>128</height>
 			<texturefocus>calibration/CalibrateTopLeft.png</texturefocus>
-			<colordiffuse>Accent</colordiffuse>
+			<colordiffuse>$VAR[Accent_100]</colordiffuse>
 		</control>
 
 		<control type="mover" id="9">
@@ -26,7 +26,7 @@
 			<width>128</width>
 			<height>128</height>
 			<texturefocus>calibration/CalibrateBottomRight.png</texturefocus>
-			<colordiffuse>Accent</colordiffuse>
+			<colordiffuse>$VAR[Accent_100]</colordiffuse>
 		</control>
 
 		<control type="mover" id="10">
@@ -36,7 +36,7 @@
 			<width>512</width>
 			<height>128</height>
 			<texturefocus>calibration/CalibrateSubTitles.png</texturefocus>
-			<colordiffuse>Accent</colordiffuse>
+			<colordiffuse>$VAR[Accent_100]</colordiffuse>
 		</control>
 
 		<control type="resize" id="11">
@@ -45,7 +45,7 @@
 			<width>256</width>
 			<height>256</height>
 			<texturefocus>calibration/CalibratePixelRatio.png</texturefocus>
-			<colordiffuse>Accent</colordiffuse>
+			<colordiffuse>$VAR[Accent_100]</colordiffuse>
 		</control>
 
 		<control type="label" id="2">

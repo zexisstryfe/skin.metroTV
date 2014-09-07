@@ -144,7 +144,7 @@
 					<posx>7</posx>
 					<width>370</width>
 					<height>20</height>
-					<textcolor>Accent</textcolor>
+					<textcolor>$VAR[Accent_100]</textcolor>
 					<label>[B]$ADDON[script.games.rom.collection.browser 56002][/B]</label>
 				</control>
 				
@@ -246,7 +246,7 @@
 					<posx>7</posx>
 					<width>370</width>
 					<height>20</height>
-					<textcolor>Accent</textcolor>
+					<textcolor>$VAR[Accent_100]</textcolor>
 					<label>[B]$ADDON[script.games.rom.collection.browser 56008][/B]</label>
 				</control>
 				

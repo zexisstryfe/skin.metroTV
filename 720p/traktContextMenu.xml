@@ -37,7 +37,7 @@
 						<width>300</width>
 						<height>40</height>
 						<font>font20L</font>
-						<selectedcolor>Accent</selectedcolor>
+						<selectedcolor>$VAR[Accent_100]</selectedcolor>
 						<align>center</align>
 						<info>ListItem.Label</info>
 					</control>

@@ -147,25 +147,24 @@
 					<onright>noop</onright>
 					<orientation>vertical</orientation>
 					<visible>Container(100).Hasfocus(1)</visible>
+
+					<control type="button" id="201">
+						<include>Settings_Button</include>
+						<description>accent selector</description>
+						<label>$LOCALIZE[31255]</label>
+						<label2>$VAR[Accent_100]</label2>
+						<onclick>ActivateWindow(3003)</onclick>
+					</control>
 					
-					<control type="label" id="201">
+					<control type="label" id="202">
 						<description>Visualisations</description>
 						<width>820</width>
 						<font>font26L</font>
-						<textcolor>Accent</textcolor>
+						<textcolor>$VAR[Accent_100]</textcolor>
 						<label>31248</label>				
 					</control>
-					
-					<control type="radiobutton" id="202">
-						<description>Background Visualiser</description>
-						<include>Settings_Button</include>
-						<radioposx>780</radioposx>
-						<label>This is a test of the emergency broadcasting system. PLease hold tight or you will be maimed horribly!</label>
-						<onclick>Skin.ToggleSetting(NoBackgroundVisualiser)</onclick>
-						<selected>Skin.HasSetting(NoBackgroundVisualiser)</selected>						
-					</control>
 
-					<control type="radiobutton" id="202">
+					<control type="radiobutton" id="204">
 						<description>Background Visualiser</description>
 						<include>Settings_Button</include>
 						<label>$LOCALIZE[31049]</label>
@@ -173,7 +172,7 @@
 						<selected>Skin.HasSetting(NoBackgroundVisualiser)</selected>						
 					</control>
 
-					<control type="radiobutton" id="203">
+					<control type="radiobutton" id="205">
 						<description>Background Video</description>
 						<include>Settings_Button</include>
 						<label>$LOCALIZE[31050]</label>
@@ -181,15 +180,15 @@
 						<selected>Skin.HasSetting(NoBackgroundVideo)</selected>						
 					</control>
 					
-					<control type="label" id="204">
+					<control type="label" id="206">
 						<description>Overlays</description>
 						<width>820</width>
 						<font>font26L</font>
-						<textcolor>Accent</textcolor>
+						<textcolor>$VAR[Accent_100]</textcolor>
 						<label>31249</label>				
 					</control>
 					
-					<control type="radiobutton" id="205">
+					<control type="radiobutton" id="207">
 						<description>Home Screen Overlay</description>
 						<include>Settings_Button</include>
 						<label>$LOCALIZE[31140]- $LOCALIZE[31135]</label>
@@ -197,7 +196,7 @@
 						<selected>Skin.HasSetting(UseHomeOverlay)</selected>						
 					</control>
 									
-					<control type="radiobutton" id="206">
+					<control type="radiobutton" id="208">
 						<description>Fanart Overlay</description>
 						<include>Settings_Button</include>
 						<label>$LOCALIZE[31140]- $LOCALIZE[31136]</label>
@@ -205,7 +204,7 @@
 						<selected>Skin.HasSetting(UseFanartOverlay)</selected>						
 					</control>
 					
-					<control type="radiobutton" id="207">
+					<control type="radiobutton" id="209">
 						<description>Home Screen Black Band</description>
 						<include>Settings_Button</include>
 						<label>$LOCALIZE[31209]</label>
@@ -213,7 +212,7 @@
 						<selected>Skin.HasSetting(UseBlackband)</selected>						
 					</control>					
 										
-					<control type="radiobutton" id="208">
+					<control type="radiobutton" id="210">
 						<description>Tile Backgrounds</description>
 						<include>Settings_Button</include>
 						<label>$LOCALIZE[31138]</label>
@@ -221,15 +220,15 @@
 						<selected>Skin.HasSetting(TileBackground)</selected>					
 					</control>
 					
-					<control type="label" id="209">
+					<control type="label" id="211">
 						<description>Transitions</description>
 						<width>820</width>
 						<font>font26L</font>
-						<textcolor>Accent</textcolor>
+						<textcolor>$VAR[Accent_100]</textcolor>
 						<label>31250</label>				
 					</control>
 					
-					<control type="radiobutton" id="210">
+					<control type="radiobutton" id="212">
 						<description>Tile Backgrounds</description>
 						<include>Settings_Button</include>
 						<label>$LOCALIZE[31139]</label>
@@ -237,15 +236,15 @@
 						<selected>Skin.HasSetting(MetroAnimations)</selected>						
 					</control>
 					
-					<control type="label" id="211">
+					<control type="label" id="213">
 						<description>Tile Details</description>
 						<width>820</width>
 						<font>font26L</font>
 						<label>31252</label>
-						<textcolor>Accent</textcolor>
+						<textcolor>$VAR[Accent_100]</textcolor>
 					</control>
 					
-					<control type="radiobutton" id="212">
+					<control type="radiobutton" id="214">
 						<description>Homescreen Scrollbar</description>
 						<include>Settings_Button</include>
 						<label>$LOCALIZE[31210]</label>
@@ -492,7 +491,7 @@
 						<control type="button" id="411">
 							<description>custom</description>
 							<include>Settings_HomeScreen_Category</include>
-							<textcolor>Accent</textcolor>
+							<textcolor>$VAR[Accent_100]</textcolor>
 							<focusedcolor>White</focusedcolor>
 							<label>  - $VAR[Custom1.HomeMenu]</label>
 							<onclick>Skin.SetString(CustomHome.1.Name)</onclick>
@@ -1849,7 +1848,7 @@
 						<description>Tile Details</description>
 						<width>820</width>
 						<font>font26L</font>
-						<textcolor>Accent</textcolor>
+						<textcolor>$VAR[Accent_100]</textcolor>
 						<label>31217</label>				
 					</control>
 
@@ -1914,7 +1913,7 @@
 						<description>Tile Details</description>
 						<width>820</width>
 						<font>font26L</font>
-						<textcolor>Accent</textcolor>
+						<textcolor>$VAR[Accent_100]</textcolor>
 						<label>31218</label>				
 					</control>
 
@@ -1958,7 +1957,7 @@
 						<description>Tile Details</description>
 						<width>820</width>
 						<font>font26L</font>
-						<textcolor>Accent</textcolor>
+						<textcolor>$VAR[Accent_100]</textcolor>
 						<label>31219</label>				
 					</control>
 					
@@ -2260,7 +2259,7 @@
 						<width>820</width>
 						<font>font26L</font>
 						<label>31252</label>
-						<textcolor>Accent</textcolor>
+						<textcolor>$VAR[Accent_100]</textcolor>
 					</control>
 					
 					<control type="radiobutton" id="802">

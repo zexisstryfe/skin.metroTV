@@ -158,7 +158,7 @@
 						<posy>10</posy>
 						<width>400</width>
 						<height>30</height>
-						<textcolor>Accent</textcolor>
+						<textcolor>$VAR[Accent_100]</textcolor>
 						<font>font20UB</font>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
 					</control>
@@ -261,7 +261,7 @@
 				<height>300</height>
 				<texture fallback="DefaultAddonNone.png">$INFO[Container(6).ListItem.Icon]</texture>
 				<aspectratio align="center" aligny="bottom">keep</aspectratio>
-				<bordertexture colordiffuse="Accent">colors/color_white.png</bordertexture>
+				<bordertexture colordiffuse="$VAR[Accent_100]">colors/color_white.png</bordertexture>
 				<bordersize>5</bordersize>
 			</control>
 

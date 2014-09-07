@@ -253,7 +253,7 @@
 					<pauseatend>600</pauseatend>
 					<scrollspeed>50</scrollspeed>
 					<aligny>top</aligny>
-					<textcolor>Accent</textcolor>
+					<textcolor>$VAR[Accent_100]</textcolor>
 				</control>
 				
 				<control type="label">

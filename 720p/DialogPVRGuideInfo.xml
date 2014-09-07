@@ -147,7 +147,7 @@
 				<height>28</height>
 				<label>$LOCALIZE[31001]:</label>
 				<font>font20UB</font>
-				<textcolor>Accent</textcolor>
+				<textcolor>$VAR[Accent_100]</textcolor>
 				<aligny>top</aligny>
 			</control>
 			

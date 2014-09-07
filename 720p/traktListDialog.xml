@@ -45,7 +45,7 @@
                 <height>20</height>
                 <align>center</align>
                 <font>font20UB</font>
-                <textcolor>Accent</textcolor>
+                <textcolor>$VAR[Accent_100]</textcolor>
             </control>
 			
 			<control type="image">
@@ -77,7 +77,7 @@
 						<height>40</height>
 						<font>font20</font>
 						<info>ListItem.Label</info>
-						<selectedcolor>Accent</selectedcolor>
+						<selectedcolor>$VAR[Accent_100]</selectedcolor>
 					</control>
 					
 				</itemlayout>
@@ -269,7 +269,7 @@
 					<onleft>141</onleft>
 					<onright>114</onright>
 					<texturenofocus colordiffuse="Keyback1">colors/color_white.png</texturenofocus>
-					<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>
 					<onup>111</onup>
 					<ondown>16</ondown>
 				</control>
@@ -285,7 +285,7 @@
 					<onleft>113</onleft>
 					<onright>16</onright>
 					<texturenofocus colordiffuse="Keyback1">colors/color_white.png</texturenofocus>
-					<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>
 					<onup>141</onup>
 					<ondown>16</ondown>
 				</control>

@@ -24,7 +24,7 @@
 				<posx>290</posx>
 				<width>700</width>
 				<font>font32L</font>
-				<textcolor>Accent</textcolor>
+				<textcolor>$VAR[Accent_100]</textcolor>
 				<align>center</align>
 			</control>
 			

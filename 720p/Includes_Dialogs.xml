@@ -33,7 +33,7 @@
 		<width>340</width>
 		<height>28</height>
 		<font>font20UB</font>
-		<textcolor>Accent</textcolor>
+		<textcolor>$VAR[Accent_100]</textcolor>
 		<aligny>top</aligny>
 	</include>
 
@@ -48,7 +48,7 @@
 	<include name="Seekbar_Label">
 		<posy>250</posy>
 		<width>1280</width>
-		<textcolor>Accent60</textcolor>
+		<textcolor>$VAR[Accent_60]</textcolor>
 		<align>center</align>
 		<font>font48BUB</font>
 	</include>
@@ -56,7 +56,7 @@
 	<include name="RateDialog_Button">
 		<width>35</width>
 		<height>35</height>
-		<texturefocus colordiffuse="Accent">flags/ratings/star.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[Accent_100]">flags/ratings/star.png</texturefocus>
 		<texturenofocus>flags/ratings/star.png</texturenofocus>
 		<align>center</align>
 		<aligny>center</aligny>
@@ -100,7 +100,7 @@
 		<posy>10</posy>
 		<align>right</align>
 		<font>font40LB</font>
-		<textcolor>Accent</textcolor>
+		<textcolor>$VAR[Accent_100]</textcolor>
 		<scroll>true</scroll>
 	</include>
 	

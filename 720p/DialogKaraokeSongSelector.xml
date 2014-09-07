@@ -26,7 +26,7 @@
 				<scroll>false</scroll>
 				<align>left</align>
 				<aligny>top</aligny>
-				<textcolor>Accent</textcolor>
+				<textcolor>$VAR[Accent_100]</textcolor>
 			</control>
 			
 			<control type="label" id="401">

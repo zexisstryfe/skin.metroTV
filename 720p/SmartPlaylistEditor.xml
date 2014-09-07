@@ -55,7 +55,7 @@
 				<width>740</width>
 				<label>21433</label>
 				<font>font20UB</font>
-				<textcolor>Accent</textcolor>
+				<textcolor>$VAR[Accent_100]</textcolor>
 				<align>center</align>
 			</control>
 
@@ -72,7 +72,7 @@
 				<focusedcolor>White</focusedcolor>
 				<textoffsetx>20</textoffsetx>
 				<texturenofocus border="2" colordiffuse="Editback">colors/color_white.png</texturenofocus>
-				<texturefocus border="5" colordiffuse="Accent">colors/color_white.png</texturefocus>
+				<texturefocus border="5" colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>
 				<pulseonselect>false</pulseonselect>
 				<onup>22</onup>
 				<onleft>12</onleft>
@@ -87,7 +87,7 @@
 				<width>740</width>
 				<label>21434</label>
 				<font>font20UB</font>
-				<textcolor>Accent</textcolor>
+				<textcolor>$VAR[Accent_100]</textcolor>
 				<align>center</align>
 			</control>
 			
@@ -217,7 +217,7 @@
 				<width>740</width>
 				<label>31166</label>
 				<font>font20UB</font>
-				<textcolor>Accent</textcolor>
+				<textcolor>$VAR[Accent_100]</textcolor>
 				<align>center</align>
 			</control>
 

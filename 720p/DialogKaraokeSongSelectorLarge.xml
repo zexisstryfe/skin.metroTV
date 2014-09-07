@@ -38,7 +38,7 @@
 				<width>410</width>
 				<font>font26L</font>
 				<align>center</align>
-				<textcolor>Accent</textcolor>
+				<textcolor>$VAR[Accent_100]</textcolor>
 				<scroll>true</scroll>
 			</control>
 

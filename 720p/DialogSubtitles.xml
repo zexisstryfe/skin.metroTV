@@ -286,8 +286,8 @@
 					<textoffsetx>10</textoffsetx>
 					<textureup>arrows/default-scroll-up.png</textureup>
 					<texturedown>arrows/default-scroll-down.png</texturedown>
-					<textureupfocus colordiffuse="Accent">arrows/default-scroll-up.png</textureupfocus>
-					<texturedownfocus colordiffuse="Accent">arrows/default-scroll-down.png</texturedownfocus>
+					<textureupfocus colordiffuse="$VAR[Accent_100]">arrows/default-scroll-up.png</textureupfocus>
+					<texturedownfocus colordiffuse="$VAR[Accent_100]">arrows/default-scroll-down.png</texturedownfocus>
 					<showonepage>false</showonepage>
 					<visible>Control.IsVisible(120)</visible>
 				</control>
@@ -329,7 +329,7 @@
 					<posy>348</posy>
 					<width>24</width>
 					<height>24</height>
-					<texture colordiffuse="Accent">arrows/nav-right.png</texture>
+					<texture colordiffuse="$VAR[Accent_100]">arrows/nav-right.png</texture>
 				</control>
 				
 			</control>
@@ -353,7 +353,7 @@
 					<width>440</width>
 					<align>right</align>
 					<font>font40LB</font>
-					<textcolor>Accent</textcolor>
+					<textcolor>$VAR[Accent_100]</textcolor>
 					<label>$LOCALIZE[33063]</label>
 				</control>
 				
@@ -366,7 +366,7 @@
 					<label>$LOCALIZE[SCRIPT760]</label>
 					<font>font20UB</font>
 					<align>center</align>
-					<textcolor>Accent</textcolor>
+					<textcolor>$VAR[Accent_100]</textcolor>
 					<wrapmultiline>true</wrapmultiline>
 				</control>
 				

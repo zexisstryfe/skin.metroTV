@@ -137,7 +137,7 @@
 						<width>392</width>
 						<height>25</height>
 						<font>font26UB</font>
-						<textcolor>Accent</textcolor>
+						<textcolor>$VAR[Accent_100]</textcolor>
 						<label>$INFO[ListItem.Title]</label>						
 						<visible>!IsEmpty(ListItem.Title) + !SubString(Container.FolderPath,plugin)</visible>
 					</control>		
@@ -148,7 +148,7 @@
 						<width>392</width>
 						<height>25</height>
 						<font>font26UB</font>
-						<textcolor>Accent</textcolor>
+						<textcolor>$VAR[Accent_100]</textcolor>
 						<label>$LOCALIZE[31194]</label>						
 						<visible>stringcompare(ListItem.Label,..)</visible>
 					</control>	

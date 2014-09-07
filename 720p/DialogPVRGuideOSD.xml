@@ -100,7 +100,7 @@
 				<width>380</width>
 				<font>font26UB</font>
 				<align>center</align>
-				<textcolor>Accent</textcolor>
+				<textcolor>$VAR[Accent_100]</textcolor>
 			</control>
 
             <control type="list" id="11">

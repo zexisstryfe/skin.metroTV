@@ -30,6 +30,7 @@
 				<visible>!Control.HasFocus(500)</visible>
 				<animation effect="fade" time="200" delay="300">Hidden</animation>
 				<include>Animation_Home_Fade</include>
+				<textcolor>TrueWhite</textcolor>
 				<shadowcolor>ff000000</shadowcolor>
 			</control>
 			
@@ -306,7 +307,7 @@
 					<width>35</width>
 					<align>left</align>
 					<texture>home/searchNF.png</texture>
-					<colordiffuse>Accent</colordiffuse>
+					<colordiffuse>$VAR[Accent_100]</colordiffuse>
 					<visible>Control.HasFocus(508)</visible>
 					<animation effect="fade" start="20" time="1200" condition="Control.HasFocus(508)">Conditional</animation>
 					<animation effect="fade" time="200" delay="200">Hidden</animation>
@@ -328,9 +329,9 @@
 					<height>14</height>
 					<font>font20L</font>
 					<urlset>1</urlset>
-					<titlecolor>Accent</titlecolor>
+					<titlecolor>$VAR[Accent_100]</titlecolor>
 					<headlinecolor>White</headlinecolor>
-					<textcolor>Accent</textcolor>
+					<textcolor>$VAR[Accent_100]</textcolor>
 				</control>
 				
 			</control>

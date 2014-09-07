@@ -153,7 +153,7 @@
 				<align>right</align>
 				<fadetime>500</fadetime>
 				<aspectratio>keep</aspectratio>
-				<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
+				<bordertexture border="5" colordiffuse="$VAR[Accent_100]">colors/color_white.png</bordertexture>
 				<bordersize>5</bordersize>
 				<texture>$VAR[Common_Fallback]</texture>
 				<visible>IsEmpty(ListItem.Art(thumb))</visible>
@@ -167,7 +167,7 @@
 				<align>right</align>
 				<fadetime>500</fadetime>
 				<aspectratio>keep</aspectratio>
-				<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
+				<bordertexture border="5" colordiffuse="$VAR[Accent_100]">colors/color_white.png</bordertexture>
 				<bordersize>5</bordersize>
 				<texture>$INFO[ListItem.Icon]</texture>
 				<visible>!IsEmpty(ListItem.Icon) + Container.Content(songs)</visible>
@@ -181,7 +181,7 @@
 				<align>right</align>
 				<fadetime>500</fadetime>
 				<aspectratio>keep</aspectratio>
-				<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
+				<bordertexture border="5" colordiffuse="$VAR[Accent_100]">colors/color_white.png</bordertexture>
 				<bordersize>5</bordersize>
 				<texture>$INFO[ListItem.Art(thumb)]</texture>
 				<visible>!IsEmpty(ListItem.Art(thumb)) + Container.Content(episodes)</visible>
@@ -203,7 +203,7 @@
 				<width>220</width>
 				<font>font22UB</font>
 				<height>30</height>
-				<textcolor>Accent</textcolor>
+				<textcolor>$VAR[Accent_100]</textcolor>
 				<label>[B]$LOCALIZE[31194][/B]</label>				
 				<visible>stringcompare(ListItem.Label,..)</visible>
 			</control>
@@ -224,7 +224,7 @@
 				<width>220</width>
 				<height>17</height>
 				<align>right</align>
-				<textcolor>Accent</textcolor>
+				<textcolor>$VAR[Accent_100]</textcolor>
 				<font>font26L</font>
 				<label>$LOCALIZE[207]</label>				
 				<visible>Container.Content(episodes)</visible>
@@ -248,7 +248,7 @@
 				<width>220</width>
 				<font>font22UB</font>
 				<height>30</height>
-				<textcolor>Accent</textcolor>
+				<textcolor>$VAR[Accent_100]</textcolor>
 				<scroll>true</scroll>
 				<label>[B]$INFO[ListItem.Album][/B]</label>
 			</control>

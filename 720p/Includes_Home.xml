@@ -237,7 +237,7 @@
 				<posy>25</posy>
 				<width>90</width>
 				<height>90</height>
-				<texture>tiles/movies.png</texture>
+				<texture colordiffuse="Icon">tiles/movies.png</texture>
 			</control>
 			
 			<control type="label">
@@ -284,7 +284,7 @@
 
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[MovieTile2.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[MovieTile2.Image]</texture>
 			</control>
 			
 			<control type="image">
@@ -333,7 +333,7 @@
 			
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[MovieTile3.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[MovieTile3.Image]</texture>
 			</control>
 			
 			<control type="label">
@@ -377,7 +377,7 @@
 			
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[MovieTile4.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[MovieTile4.Image]</texture>
 			</control>
 			
 			<control type="label">
@@ -422,7 +422,7 @@
 			
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[MovieTile5.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[MovieTile5.Image]</texture>
 			</control>
 			
 			<control type="label">
@@ -467,7 +467,7 @@
 				<posy>25</posy>
 				<width>90</width>
 				<height>90</height>
-				<texture>tiles/tv.png</texture>
+				<texture colordiffuse="Icon">tiles/tv.png</texture>
 			</control>	
 			
 			<control type="label">
@@ -519,7 +519,7 @@
 
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[TVShowTile2.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[TVShowTile2.Image]</texture>
 			</control>			
 			
 			<control type="label">
@@ -563,7 +563,7 @@
 
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[TVShowTile3.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[TVShowTile3.Image]</texture>
 			</control>			
 			
 			<control type="label">
@@ -607,7 +607,7 @@
 
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[TVShowTile4.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[TVShowTile4.Image]</texture>
 			</control>			
 			
 			<control type="label">
@@ -651,7 +651,7 @@
 
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[TVShowTile5.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[TVShowTile5.Image]</texture>
 			</control>			
 			
 			<control type="label">
@@ -697,7 +697,7 @@
 				<posy>25</posy>
 				<width>90</width>
 				<height>90</height>
-				<texture>tiles/livetv.png</texture>
+				<texture colordiffuse="Icon">tiles/livetv.png</texture>
 			</control>
 			
 			<control type="label">
@@ -763,7 +763,7 @@
 			
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[LiveTVTile2.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[LiveTVTile2.Image]</texture>
 			</control>
 			
 		</control>
@@ -816,7 +816,7 @@
 			
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[LiveTVTile3.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[LiveTVTile3.Image]</texture>
 			</control>
 			
 		</control>
@@ -869,7 +869,7 @@
 			
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[LiveTVTile4.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[LiveTVTile4.Image]</texture>
 			</control>
 			
 		</control>
@@ -922,7 +922,7 @@
 			
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[LiveTVTile5.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[LiveTVTile5.Image]</texture>
 			</control>
 			
 		</control>
@@ -962,7 +962,7 @@
 			
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[MusicTile1.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[MusicTile1.Image]</texture>
 			</control>
 			
 			<control type="label">
@@ -1014,7 +1014,7 @@
 			
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[MusicTile2.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[MusicTile2.Image]</texture>
 			</control>
 			
 		</control>
@@ -1058,7 +1058,7 @@
 			
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[MusicTile3.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[MusicTile3.Image]</texture>
 			</control>
 			
 		</control>
@@ -1102,7 +1102,7 @@
 			
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[MusicTile4.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[MusicTile4.Image]</texture>
 			</control>
 			
 		</control>
@@ -1146,7 +1146,7 @@
 			
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[MusicTile5.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[MusicTile5.Image]</texture>
 			</control>
 			
 		</control>
@@ -1186,7 +1186,7 @@
 				<posy>25</posy>
 				<width>90</width>
 				<height>90</height>
-				<texture>tiles/musicvideos.png</texture>
+				<texture colordiffuse="Icon">tiles/musicvideos.png</texture>
 			</control>	
 			
 			<control type="label">
@@ -1243,7 +1243,7 @@
 			
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[MusicVidTile2.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[MusicVidTile2.Image]</texture>
 			</control>
 			
 		</control>
@@ -1287,7 +1287,7 @@
 			
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[MusicVidTile3.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[MusicVidTile3.Image]</texture>
 			</control>
 			
 		</control>
@@ -1331,7 +1331,7 @@
 			
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[MusicVidTile4.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[MusicVidTile4.Image]</texture>
 			</control>
 			
 		</control>
@@ -1376,7 +1376,7 @@
 			
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[MusicVidTile5.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[MusicVidTile5.Image]</texture>
 			</control>
 			
 		</control>
@@ -1418,7 +1418,7 @@
 				<posy>15</posy>
 				<width>90</width>
 				<height>90</height>
-				<texture>tiles/pictures.png</texture>
+				<texture colordiffuse="Icon">tiles/pictures.png</texture>
 			</control>	
 			
 			<control type="label">
@@ -1459,7 +1459,7 @@
 						
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[PictureTile2.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[PictureTile2.Image]</texture>
 			</control>
 			
 			<control type="label">
@@ -1501,7 +1501,7 @@
 						
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[PictureTile3.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[PictureTile3.Image]</texture>
 			</control>
 			
 			<control type="label">
@@ -1543,7 +1543,7 @@
 						
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[PictureTile4.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[PictureTile4.Image]</texture>
 			</control>
 			
 			<control type="label">
@@ -1585,7 +1585,7 @@
 						
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[PictureTile5.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[PictureTile5.Image]</texture>
 			</control>
 			
 			<control type="label">
@@ -1629,7 +1629,7 @@
 			
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[GameTile1.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[GameTile1.Image]</texture>
 			</control>
 			
 		</control>
@@ -1665,7 +1665,7 @@
 			
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[GameTile2.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[GameTile2.Image]</texture>
 			</control>
 			
 			<control type="label">
@@ -1708,7 +1708,7 @@
 			
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[GameTile3.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[GameTile3.Image]</texture>
 			</control>
 			
 			<control type="label">
@@ -1751,7 +1751,7 @@
 			
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[GameTile4.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[GameTile4.Image]</texture>
 			</control>
 			
 			<control type="label">
@@ -1794,7 +1794,7 @@
 			
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[GameTile5.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[GameTile5.Image]</texture>
 			</control>
 			
 			<control type="label">
@@ -1881,9 +1881,10 @@
 				<posx>25</posx>
 				<posy>130</posy>
 				<width>200</width>
-				<label>[COLOR Accent]$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits][/COLOR]</label> 
+				<label>$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label> 
 				<font>font80L</font>
 				<visible>!Control.HasFocus(776)</visible>
+				<textcolor>$VAR[Accent_100]</textcolor>
 				<align>left</align>
 			</control>
 			
@@ -1916,6 +1917,7 @@
 				<width>180</width>
 				<height>60</height>
 				<label>$INFO[Window(Weather).Property(Current.Condition)]</label>
+				<textcolor>White</textcolor>
 				<font>font22L</font>
 				<align>left</align>
 				<aligny>top</aligny>
@@ -2031,7 +2033,7 @@
 				<posy>25</posy>
 				<width>90</width>
 				<height>90</height>
-				<texture>tiles/addons.png</texture>
+				<texture colordiffuse="Icon">tiles/addons.png</texture>
 			</control>
 			
 			<control type="label">
@@ -2072,7 +2074,7 @@
 			
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[AddonTile2.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[AddonTile2.Image]</texture>
 			</control>
 			
 			<control type="label">
@@ -2114,7 +2116,7 @@
 			
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[AddonTile3.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[AddonTile3.Image]</texture>
 			</control>
 			
 			<control type="label">
@@ -2156,7 +2158,7 @@
 			
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[AddonTile4.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[AddonTile4.Image]</texture>
 			</control>
 			
 			<control type="label">
@@ -2199,7 +2201,7 @@
 			
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[AddonTile5.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[AddonTile5.Image]</texture>
 			</control>
 			
 			<control type="label">
@@ -2242,7 +2244,7 @@
 			</control>
 			
 			<control type="image">
-				<include>Common_HomeTile_Image</include>
+				<include colordiffuse="Icon">Common_HomeTile_Image</include>
 				<texture>$VAR[Custom1Tile1.Image]</texture>
 			</control>
 			
@@ -2279,7 +2281,7 @@
 			
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[Custom1Tile2.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[Custom1Tile2.Image]</texture>
 			</control>
 			
 			<control type="label">
@@ -2322,7 +2324,7 @@
 			
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[Custom1Tile3.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[Custom1Tile3.Image]</texture>
 			</control>
 			
 			<control type="label">
@@ -2365,7 +2367,7 @@
 			
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[Custom1Tile4.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[Custom1Tile4.Image]</texture>
 			</control>
 			
 			<control type="label">
@@ -2408,7 +2410,7 @@
 			
 			<control type="image">
 				<include>Common_HomeTile_Image</include>
-				<texture>$VAR[Custom1Tile5.Image]</texture>
+				<texture colordiffuse="Icon">$VAR[Custom1Tile5.Image]</texture>
 			</control>
 			
 			<control type="label">
@@ -3161,7 +3163,7 @@
 				<font>font16UB</font>
 				<align>center</align>
 				<autoscroll>false</autoscroll>
-				<textcolor>Accent</textcolor>
+				<textcolor>$VAR[Accent_100]</textcolor>
 			</control>
 			
 			<control type="image">
@@ -3774,7 +3776,7 @@
 					<height>60</height>
 					<label>$INFO[ListItem.Label]</label>
 					<font>font16UB</font>
-					<textcolor>Accent</textcolor>
+					<textcolor>$VAR[Accent_100]</textcolor>
 					<shadowcolor>00FFFFFF</shadowcolor>
 					<align>center</align>
 					<autoscroll>true</autoscroll>

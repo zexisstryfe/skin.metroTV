@@ -68,7 +68,7 @@
 					<onleft>54</onleft>
 					<onright>51</onright>	
 					<texturenofocus colordiffuse="Keyback1">colors/color_white.png</texturenofocus>
-					<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>
 				</control>		
 			
 				<control type="label">

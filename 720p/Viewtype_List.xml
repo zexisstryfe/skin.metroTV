@@ -354,7 +354,7 @@
 							<posy>85</posy>
 							<width>380</width>
 							<font>font26L</font>
-							<textcolor>Accent</textcolor>			
+							<textcolor>$VAR[Accent_100]</textcolor>			
 							<scroll>true</scroll>
 							<label>$LOCALIZE[207]</label>
 							<visible>!stringcompare(ListItem.Label,..)</visible>
@@ -506,7 +506,7 @@
 							<posy>85</posy>
 							<width>380</width>
 							<font>font26L</font>
-							<textcolor>Accent</textcolor>			
+							<textcolor>$VAR[Accent_100]</textcolor>			
 							<scroll>true</scroll>
 							<label>$LOCALIZE[31001]</label>
 							<visible>!stringcompare(ListItem.Label,..)</visible>

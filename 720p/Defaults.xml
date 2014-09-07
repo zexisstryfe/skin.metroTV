@@ -53,7 +53,7 @@
 		<textcolor>White</textcolor>
 		<focusedcolor>White</focusedcolor>
 		<disabledcolor>Black</disabledcolor>
-		<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>
 		<pulseonselect>false</pulseonselect>
 	</default>
 
@@ -68,8 +68,8 @@
 		<textcolor>White</textcolor>
 		<focusedcolor>White</focusedcolor>
 		<disabledcolor>Black</disabledcolor>
-		<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
-		<alttexturefocus border="5" colordiffuse="Accent">colors/color_white.png</alttexturefocus>
+		<texturefocus colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>
+		<alttexturefocus border="5" colordiffuse="$VAR[Accent_100]">colors/color_white.png</alttexturefocus>
 		<align>center</align>
 		<aligny>center</aligny>
 		<pulseonselect>false</pulseonselect>
@@ -89,9 +89,9 @@
 		<disabledcolor>Black</disabledcolor>
 		<radiowidth>30</radiowidth>
 		<radioheight>30</radioheight>
-		<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
-		<textureradiofocus>controls/RadiobuttonFo.png</textureradiofocus>
-		<textureradionofocus>controls/RadiobuttonNF.png</textureradionofocus>
+		<texturefocus colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>
+		<textureradiofocus colordiffuse="White">controls/RadiobuttonFo.png</textureradiofocus>
+		<textureradionofocus colordiffuse="White">controls/RadiobuttonNF.png</textureradionofocus>
 		<textoffsetx>20</textoffsetx>
 		<pulseonselect>false</pulseonselect>
 	</default>
@@ -105,11 +105,11 @@
 		<font>font20L</font>
 		<spinwidth>26</spinwidth>
 		<spinheight>26</spinheight>
-		<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
-		<textureup>controls/ArrowUpNF.png</textureup>
-		<texturedown>controls/ArrowDownNF.png</texturedown>
-		<textureupfocus>controls/ArrowUpFO.png</textureupfocus>
-		<texturedownfocus>controls/ArrowDownFO.png</texturedownfocus>
+		<texturefocus colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>
+		<textureup colordiffuse="White">controls/ArrowUpNF.png</textureup>
+		<texturedown colordiffuse="White">controls/ArrowDownNF.png</texturedown>
+		<textureupfocus colordiffuse="White">controls/ArrowUpFO.png</textureupfocus>
+		<texturedownfocus colordiffuse="White">controls/ArrowDownFO.png</texturedownfocus>
 		<textcolor>White</textcolor>
 		<focusedcolor>White</focusedcolor>
 		<disabledcolor>Black</disabledcolor>
@@ -127,10 +127,10 @@
 		<width>15</width>
 		<spinwidth>26</spinwidth>
 		<spinheight>26</spinheight>
-		<textureup>controls/ArrowUpNF.png</textureup>
-		<texturedown>controls/ArrowDownNF.png</texturedown>
-		<textureupfocus>controls/ArrowUpFO.png</textureupfocus>
-		<texturedownfocus>controls/ArrowDownFO.png</texturedownfocus>
+		<textureup colordiffuse="White">controls/ArrowUpNF.png</textureup>
+		<texturedown colordiffuse="White">controls/ArrowDownNF.png</texturedown>
+		<textureupfocus colordiffuse="White">controls/ArrowUpFO.png</textureupfocus>
+		<texturedownfocus colordiffuse="White">controls/ArrowDownFO.png</texturedownfocus>
 		<font>font20L</font>
 		<textcolor>White</textcolor>
 		<focusedcolor>White</focusedcolor>
@@ -147,7 +147,7 @@
 		<posy>0</posy>
 		<height>44</height>
 		<width>300</width>
-		<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>
 		<sliderwidth>150</sliderwidth>
 		<sliderheight>15</sliderheight>
 		<texturesliderbar>OSD/slider_bg.png</texturesliderbar>
@@ -165,9 +165,9 @@
 		<posx>150</posx>
 		<posy>325</posy>
 		<height>5</height>
-		<texturebg>controls/ProgressBack.png</texturebg>
+		<texturebg colordiffuse="White">controls/ProgressBack.png</texturebg>
 		<lefttexture>-</lefttexture>
-		<midtexture colordiffuse="Accent">controls/ProgressMid.png</midtexture>
+		<midtexture colordiffuse="$VAR[Accent_100]">controls/ProgressMid.png</midtexture>
 		<righttexture>-</righttexture>
 		<overlaytexture>-</overlaytexture>
 	</default>
@@ -181,14 +181,14 @@
 		<texturenofocus>-</texturenofocus>
 		<texturesliderbar>OSD/slider_bg_2.png</texturesliderbar>
 		<textureslidernib border="2">OSD/SliderNibNF.png</textureslidernib>
-		<textureslidernibfocus border="2" colordiffuse="Accent">colors/color_white.png</textureslidernibfocus>
+		<textureslidernibfocus border="2" colordiffuse="$VAR[Accent_100]">colors/color_white.png</textureslidernibfocus>
 	</default>
 
 	<default type="scrollbar">
 		<width>5</width>
-		<texturesliderbar colordiffuse="Accent">colors/color_white.png</texturesliderbar> 
+		<texturesliderbar colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturesliderbar> 
 		<texturesliderbackground colordiffuse="Keyback2">colors/color_white.png</texturesliderbackground> 
-		<texturesliderbarfocus colordiffuse="Accent">colors/color_white.png</texturesliderbarfocus>
+		<texturesliderbarfocus colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturesliderbarfocus>
 		<showonepage>true</showonepage>
 		<orientation>vertical</orientation>
 	</default>

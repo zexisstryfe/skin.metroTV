@@ -120,7 +120,7 @@
 							<width>160</width>
 							<height>240</height>
 							<aspectratio align="center" aligny="bottom">keep</aspectratio>
-							<bordertexture border="8" colordiffuse="Accent">colors/color_white.png</bordertexture>
+							<bordertexture border="8" colordiffuse="$VAR[Accent_100]">colors/color_white.png</bordertexture>
 							<bordersize>5</bordersize>
 							<texture background="true" fallback="DefaultGame.png">$INFO[ListItem.Thumb]</texture>
 							<animation reversible="false" effect="zoom" end="120" center="auto" time="150">Focus</animation>
@@ -438,7 +438,7 @@
 						<height>20</height>
 						<width>290</width>
 						<font>font26UB</font>
-						<textcolor>Accent</textcolor>
+						<textcolor>$VAR[Accent_100]</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>true</scroll>
 						<scrollout>false</scrollout>
@@ -682,7 +682,7 @@
 								<width>215</width>
 								<height>314</height>
 								<texture background="true"  fallback="DefaultGame.png">$INFO[ListItem.ActualIcon]</texture>
-								<bordertexture border="5" colordiffuse="Accent">colors/color_White.png</bordertexture>
+								<bordertexture border="5" colordiffuse="$VAR[Accent_100]">colors/color_White.png</bordertexture>
 								<fadetime>200</fadetime>
 								<aspectratio align="center" aligny="center">keep</aspectratio>
 								<animation type="Focus" reversible="false">
@@ -752,7 +752,7 @@
 						<height>50</height>
 						<align>right</align>
 						<font>font40L</font>
-						<textcolor>Accent</textcolor>
+						<textcolor>$VAR[Accent_100]</textcolor>
 						<label>$LOCALIZE[207]</label>
 					</control>
 					
@@ -850,7 +850,7 @@
 				<width>200</width>
 				<height>30</height>
 				<label>$ADDON[script.games.rom.collection.browser 50004]:</label>
-				<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>
 				<align>left</align>
 				<onleft>900</onleft>
 				<onright>500</onright>
@@ -865,7 +865,7 @@
 				<width>200</width>
 				<height>30</height>
 				<visible>true</visible>
-				<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>
 				<label>$ADDON[script.games.rom.collection.browser 50005]:</label>
 				<disabledcolor>Keyback2</disabledcolor>
 				<align>left</align>
@@ -899,7 +899,7 @@
 					<width>200</width>
 					<height>30</height>
 					<align>center</align>
-					<textcolor>Accent</textcolor>
+					<textcolor>$VAR[Accent_100]</textcolor>
 					<font>font20UB</font>
 					<label>[B]$ADDON[script.games.rom.collection.browser 50006][/B]</label>
 				</control>
@@ -955,7 +955,7 @@
 					<width>200</width>
 					<height>30</height>
 					<align>center</align>
-					<textcolor>Accent</textcolor>
+					<textcolor>$VAR[Accent_100]</textcolor>
 					<font>font20UB</font>
 					<label>[B]$ADDON[script.games.rom.collection.browser 50001][/B]</label>
 				</control>
@@ -1020,7 +1020,7 @@
 					<width>200</width>
 					<height>30</height>
 					<align>center</align>
-					<textcolor>Accent</textcolor>
+					<textcolor>$VAR[Accent_100]</textcolor>
 					<font>font20UB</font>
 					<label>[B]$ADDON[script.games.rom.collection.browser 50000][/B]</label>
 				</control>
@@ -1085,7 +1085,7 @@
 					<width>200</width>
 					<height>30</height>
 					<align>center</align>
-					<textcolor>Accent</textcolor>
+					<textcolor>$VAR[Accent_100]</textcolor>
 					<font>font20UB</font>
 					<label>[B]$ADDON[script.games.rom.collection.browser 50002][/B]</label>
 				</control>	
@@ -1150,7 +1150,7 @@
 					<width>180</width>
 					<height>30</height>
 					<align>center</align>
-					<textcolor>Accent</textcolor>
+					<textcolor>$VAR[Accent_100]</textcolor>
 					<font>font20UB</font>
 					<label>[B]$ADDON[script.games.rom.collection.browser 50007][/B]</label>
 				</control>	

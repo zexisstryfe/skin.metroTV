@@ -115,7 +115,7 @@
 								<width>155</width>
 								<height>230</height>
 								<texture background="true" fallback="DefaultAddonNone.png">$INFO[ListItem.Art(poster)]</texture>
-								<bordertexture colordiffuse="Accent">colors/color_white.png</bordertexture>
+								<bordertexture colordiffuse="$VAR[Accent_100]">colors/color_white.png</bordertexture>
 								<bordersize>2</bordersize>
 								<fadetime>200</fadetime>
 								<aspectratio>stretch</aspectratio>
@@ -140,7 +140,7 @@
 								<texture>general/play_large.png</texture>
 								<visible>!Container.Content(Genres)</visible>
 								<aspectratio>scale</aspectratio>
-								<colordiffuse>Accent80</colordiffuse>
+								<colordiffuse>$VAR[Accent_80]</colordiffuse>
 								<visible>!ListItem.IsFolder</visible>
 							</control>
 							

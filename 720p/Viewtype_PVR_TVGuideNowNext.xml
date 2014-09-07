@@ -117,7 +117,7 @@
 								<height>5</height>
 								<texturebg colordiffuse="Keyback1">colors/color_white.png</texturebg>
 								<lefttexture>-</lefttexture>
-								<midtexture colordiffuse="Accent">colors/color_white.png</midtexture>
+								<midtexture colordiffuse="$VAR[Accent_100]">colors/color_white.png</midtexture>
 								<righttexture>-</righttexture>
 								<info>ListItem.Progress</info>
 								<visible>ListItem.HasEpg</visible>
@@ -234,7 +234,7 @@
 								<posy>40</posy>
 								<width>578</width>
 								<height>3</height>
-								<texturebg colordiffuse="Accent">colors/color_white.png</texturebg>
+								<texturebg colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturebg>
 								<lefttexture>-</lefttexture>
 								<righttexture>-</righttexture>
 								<visible>ListItem.HasEpg</visible>

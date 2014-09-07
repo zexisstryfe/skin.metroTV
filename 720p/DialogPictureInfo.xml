@@ -49,7 +49,7 @@
 				<onleft>5</onleft>
 				<onright>5</onright>
 				<width>5</width>
-				<texturesliderbar colordiffuse="Accent">colors/color_white.png</texturesliderbar> 
+				<texturesliderbar colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturesliderbar> 
 				<texturesliderbackground colordiffuse="Keyback2">colors/color_white.png</texturesliderbackground> 
 			</control>
 
@@ -69,7 +69,7 @@
 					<control type="label">
 						<posx>20</posx>
 						<width>180</width>
-						<textcolor>Accent</textcolor>
+						<textcolor>$VAR[Accent_100]</textcolor>
 						<font>font20UB</font>
 						<label>$INFO[ListItem.Label]</label>
 					</control>

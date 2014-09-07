@@ -31,7 +31,7 @@
 	</include>
 	
 	<include name="Common_Control_Button">
-		<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>
 		<texturenofocus colordiffuse="Keyback1">colors/color_white.png</texturenofocus>
 		<width>48</width>
 		<height>48</height>
@@ -69,8 +69,8 @@
 			<description>top left bar</description>
 			<width>20</width>
 			<height>100</height>
-			<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>	
-			<texturenofocus colordiffuse="Accent">colors/color_white.png</texturenofocus>	
+			<texturefocus colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>	
+			<texturenofocus colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturenofocus>	
 			<onclick>9000</onclick>
 			<include>Animation_Home_Fade</include>
 		</control>
@@ -111,7 +111,8 @@
 				<height>30</height>
 				<width>500</width>
 				<font>font72L</font>
-				<shadowcolor>Black</shadowcolor>
+				<shadowcolor>TrueBlack</shadowcolor>
+				<textcolor>TrueWhite</textcolor>
 			</control>	
 
 			<control type="label">
@@ -171,8 +172,8 @@
 				<height>30</height>
 				<width>500</width>
 				<font>font72L</font>
-				<textcolor>White</textcolor>
-				<shadowcolor>Black</shadowcolor>
+				<textcolor>TrueWhite</textcolor>
+				<shadowcolor>TrueBlack</shadowcolor>
 			</control>	
 
 			<control type="label">
@@ -217,9 +218,10 @@
 		<align>left</align>
 		<aligny>center</aligny>	
 		<font>font40L</font>
-		<focusedcolor>Accent</focusedcolor>
+		<focusedcolor>$VAR[Accent_100]</focusedcolor>
 		<texturefocus></texturefocus>
 		<shadowcolor>ff000000</shadowcolor>
+		<textcolor>Icon</textcolor>
 	</include>
 	
 	<include name="Common_Library_Label">
@@ -230,6 +232,7 @@
 			<height>30</height>
 			<width>250</width>
 			<font>font40L</font>
+			<textcolor>Icon</textcolor>
 			<shadowcolor>ff000000</shadowcolor>
 		</control>
 	</include>
@@ -242,6 +245,7 @@
 			<height>30</height>
 			<width>250</width>
 			<font>font72L</font>
+			<textcolor>Icon</textcolor>
 			<shadowcolor>ff000000</shadowcolor>
 		</control>
 	</include>
@@ -256,6 +260,7 @@
 			<width>200</width>
 			<font>font65L</font>
 			<align>right</align>
+			<textcolor>TrueWhite</textcolor>
 			<shadowcolor>ff000000</shadowcolor>
 			<visible>!IsEmpty(System.Time(xx))</visible>
 		</control>	
@@ -267,40 +272,44 @@
 			<height>100</height>
 			<width>200</width>
 			<font>font60L</font>
+			<textcolor>TrueWhite</textcolor>
 			<shadowcolor>ff000000</shadowcolor>
 			<visible>IsEmpty(System.Time(xx))</visible>
 		</control>	
 		
 		<control type="label">
-			<label>[COLOR Accent]$INFO[System.Time(xx)][/COLOR]</label>
+			<label>$INFO[System.Time(xx)]</label>
 			<posx>1225</posx>
 			<posy>644</posy>
 			<height>100</height>
 			<width>60</width>
 			<font>font26L</font>
+			<textcolor>$VAR[Accent_100]</textcolor>
 			<shadowcolor>ff000000</shadowcolor>
 			<visible>!IsEmpty(System.Time(xx))</visible>
 		</control>
 		
 		<control type="label">
-			<label>[COLOR Accent]$INFO[System.Date(DDD)][/COLOR]</label>
+			<label>$INFO[System.Date(DDD)]</label>
 			<posx>1072</posx>
 			<posy>614</posy>
 			<height>100</height>
 			<width>750</width>
 			<font>font26L</font>
 			<align>right</align>
+			<textcolor>$VAR[Accent_100]</textcolor>
 			<shadowcolor>ff000000</shadowcolor>
 		</control>
 		
 		<control type="label">
-			<label>[COLOR Accent]$INFO[System.Date(MMM)] $INFO[System.Date(dd)][/COLOR]</label>
+			<label>$INFO[System.Date(MMM)] $INFO[System.Date(dd)]</label>
 			<posx>1072</posx>
 			<posy>644</posy>
 			<height>100</height>
 			<width>750</width>
 			<font>font22L</font>
 			<align>right</align>
+			<textcolor>$VAR[Accent_100]</textcolor>
 			<shadowcolor>ff000000</shadowcolor>
 		</control>
 		
@@ -353,7 +362,7 @@
 		<texturenofocus>-</texturenofocus>
 		<alttexturefocus>colors/color_white.png</alttexturefocus>
 		<alttexturenofocus>-</alttexturenofocus>
-		<colordiffuse>Accent</colordiffuse>
+		<colordiffuse>$VAR[Accent_100]</colordiffuse>
 		<disabledColorDiffuse>Keyback2</disabledColorDiffuse>
 		<font>font20</font>
 		<textcolor>White</textcolor>
@@ -402,7 +411,7 @@
 		<width>69</width>
 		<height>57</height>
 		<texturenofocus colordiffuse="Keyback1">colors/color_white.png</texturenofocus>
-		<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>
 		<textoffsetx>0</textoffsetx>
 		<focusedcolor>white</focusedcolor>
 		<font>font20</font>
@@ -410,7 +419,7 @@
 	
 	<include name="Common_Keyboard_Button2">
 		<texturenofocus colordiffuse="Keyback1">colors/color_white.png</texturenofocus>
-		<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>
 		<textoffsetx>0</textoffsetx>
 		<focusedcolor>white</focusedcolor>
 		<font>font20</font>
@@ -421,7 +430,7 @@
 		<height>55</height>
 		<align>center</align>
 		<texturenofocus colordiffuse="Keyback2">colors/color_white.png</texturenofocus>
-		<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>
 		<focusedcolor>White</focusedcolor>
 		<font>font20</font>
 	</include>
@@ -433,7 +442,7 @@
 		<textwidth>120</textwidth>
 		<align>center</align>
 		<texturenofocus colordiffuse="Keyback2">colors/color_white.png</texturenofocus>
-		<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>
 		<focusedcolor>White</focusedcolor>
 		<font>font20</font>
 	</include>
@@ -444,7 +453,7 @@
 	</include>
 	
 	<include name="Common_Color_Accent">
-		<texture colordiffuse="Accent">colors/color_white.png</texture>
+		<texture colordiffuse="$VAR[Accent_100]">colors/color_white.png</texture>
 		<aspectratio>stretch</aspectratio>
 	</include>
 	
@@ -476,7 +485,7 @@
 	<include name="Common_Infolist_Label">
 		<width>150</width>
 		<height>28</height>
-		<textcolor>Accent</textcolor>
+		<textcolor>$VAR[Accent_100]</textcolor>
 		<font>font20UB</font>
 	</include>
 	
@@ -530,6 +539,7 @@
 		<font>font40L</font>
 		<align>left</align>
 		<shadowcolor>ff000000</shadowcolor>
+		<textcolor>Icon</textcolor>
 	</include>
 	
 	<include name="Common_HomePanel">
@@ -601,7 +611,7 @@
 		<height>20</height>
 		<width>290</width>
 		<font>font26UB</font>
-		<textcolor>Accent</textcolor>
+		<textcolor>$VAR[Accent_100]</textcolor>
 		<aligny>top</aligny>
 		<scroll>true</scroll>
 	</include>
@@ -651,7 +661,7 @@
 		<font>font24UB</font>
 		<align>center</align>
 		<scroll>true</scroll>
-		<textcolor>Accent</textcolor>
+		<textcolor>$VAR[Accent_100]</textcolor>
 	</include>
 	
 	<include name="Common_List_Title2">
@@ -662,7 +672,7 @@
 		<font>font24UB</font>
 		<align>center</align>
 		<scroll>true</scroll>
-		<textcolor>Accent</textcolor>
+		<textcolor>$VAR[Accent_100]</textcolor>
 	</include>
 	
 	<include name="Common_List_Plot">
@@ -692,7 +702,7 @@
 		<font>font24UB</font>
 		<align>center</align>
 		<scroll>true</scroll>
-		<textcolor>Accent</textcolor>
+		<textcolor>$VAR[Accent_100]</textcolor>
 	</include>
 	
 	<include name="Common_ListPic_Icon">
@@ -709,7 +719,7 @@
 		<width>500</width>
 		<height>50</height>
 		<font>font32UB</font>
-		<textcolor>Accent</textcolor>
+		<textcolor>$VAR[Accent_100]</textcolor>
 		<scroll>true</scroll>
 	</include>
 	
@@ -740,7 +750,7 @@
 		<height>30</height>
 		<width>1280</width>
 		<font>font40UB</font>
-		<textcolor>Accent</textcolor>
+		<textcolor>$VAR[Accent_100]</textcolor>
 		<align>center</align>
 		<aligny>top</aligny>
 		<scroll>true</scroll>
@@ -787,7 +797,7 @@
 	<include name="Common_List_Indicator">
 		<width>20</width>
 		<height>20</height>
-		<texture colordiffuse="Accent">colors/color_white.png</texture>		
+		<texture colordiffuse="$VAR[Accent_100]">colors/color_white.png</texture>		
 	</include>
 	
 	<include name="Common_List_Back">
@@ -822,7 +832,7 @@
 		<font>font32L</font>
 		<align>left</align>
 		<textoffsetx>0</textoffsetx>
-		<focusedcolor>Accent</focusedcolor>	
+		<focusedcolor>$VAR[Accent_100]</focusedcolor>	
 	</include>
 	
 	<include name="Common_TraktTV_Hub_Panel">
@@ -858,7 +868,7 @@
 				<posy>680</posy>
 				<width>40</width>
 				<height>40</height>
-				<texture colordiffuse="Accent">colors/color_white.png</texture>			
+				<texture colordiffuse="$VAR[Accent_100]">colors/color_white.png</texture>			
 			</control>
 			
 			<control type="image">
@@ -875,7 +885,7 @@
 				<posy>680</posy>
 				<width>5</width>
 				<height>40</height>
-				<texture colordiffuse="Accent">colors/color_white.png</texture>			
+				<texture colordiffuse="$VAR[Accent_100]">colors/color_white.png</texture>			
 			</control>
 			
 		</control>
@@ -886,7 +896,7 @@
 		<width>340</width>
 		<height>16</height>
 		<font>font20UB</font>
-		<textcolor>Accent</textcolor>		
+		<textcolor>$VAR[Accent_100]</textcolor>		
 	</include>
 	
 	<include name="Common_InfoDialog_Detail_Label">	

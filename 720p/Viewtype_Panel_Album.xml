@@ -82,7 +82,7 @@
 								<width>155</width>
 								<height>155</height>
 								<texture background="true" colordiffuse="Keyback1">colors/color_white.png</texture>
-								<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
+								<bordertexture border="5" colordiffuse="$VAR[Accent_100]">colors/color_white.png</bordertexture>
 								<bordersize>5</bordersize>
 								<fadetime>200</fadetime>
 								<aspectratio>stretch</aspectratio>
@@ -101,7 +101,7 @@
 								<width>155</width>
 								<height>155</height>
 								<texture background="true" fallback="DefaultAlbumCover.png">$INFO[ListItem.Icon]</texture>
-								<bordertexture border="5" colordiffuse="Accent">colors/color_white.png</bordertexture>
+								<bordertexture border="5" colordiffuse="$VAR[Accent_100]">colors/color_white.png</bordertexture>
 								<bordersize>5</bordersize>
 								<fadetime>200</fadetime>
 								<aspectratio>stretch</aspectratio>
@@ -116,7 +116,7 @@
 								<texture>general/play_large.png</texture>
 								<visible>!Container.Content(Genres) + !stringcompare(ListItem.Label,..)</visible>
 								<aspectratio>keep</aspectratio>
-								<colordiffuse>Accent80</colordiffuse>
+								<colordiffuse>$VAR[Accent_80]</colordiffuse>
 							</control>
 							
 						</control>
@@ -198,7 +198,7 @@
 						<width>500</width>
 						<height>30</height>
 						<font>font26L</font>
-						<textcolor>Accent</textcolor>
+						<textcolor>$VAR[Accent_100]</textcolor>
 						<label>$LOCALIZE[31001]</label>
 					</control>
 					

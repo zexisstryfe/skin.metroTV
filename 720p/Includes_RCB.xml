@@ -25,7 +25,7 @@
 	<include name="RCB_EditRom_RadioButton">
 		<width>570</width>
 		<height>35</height>
-		<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>
 		<align>left</align>
 		<textoffsetx>7</textoffsetx>
 	</include>
@@ -33,7 +33,7 @@
 	<include name="RCB_EditScraper_RadioButton">
 		<width>450</width>
 		<height>35</height>
-		<texturefocus colordiffuse="Accent">colors/color_white.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>
 		<align>left</align>
 		<textoffsetx>7</textoffsetx>
 	</include>

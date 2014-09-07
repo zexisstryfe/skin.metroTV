@@ -63,7 +63,7 @@
 				<label>10037</label>
 				<textoffsetx>20</textoffsetx>
 				<textoffsety>28</textoffsety>
-				<textcolor>Accent</textcolor>
+				<textcolor>$VAR[Accent_100]</textcolor>
 				<focusedcolor>Black</focusedcolor>
 				<align>right</align>
 				<aligny>top</aligny>
