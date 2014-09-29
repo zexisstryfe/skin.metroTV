@@ -115,15 +115,25 @@
 						<label>$INFO[ListItem.TVShowTitle] | $LOCALIZE[20373] $INFO[ListItem.Season] $LOCALIZE[20359] $INFO[ListItem.Episode]</label>
 						<visible>!IsEmpty(ListItem.Title)</visible>
 					</control>
-
+					
+					<control type="image">
+						<posx>360</posx>
+						<posy>-55</posy>
+						<height>40</height>
+						<width>40</width>
+						<texture background="true" colordiffuse="Watched">$VAR[Watched_Image]</texture>
+						<aspectratio aligny="top">keep</aspectratio>
+						<visible>Container.Content(songs) | ListItem.IsPlaying | IntegerGreaterThan(ListItem.PercentPlayed,99) | !IntegerGreaterThan(ListItem.PercentPlayed,1)</visible>
+					</control> 
+					
 					<control type="image">
 						<posx>360</posx>
 						<posy>-55</posy>
 						<width>40</width>
 						<height>40</height>
-						<texture>watched/check.png</texture>
-						<colordiffuse>White60</colordiffuse>
-						<visible>Container.Content(episodes) + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+						<aspectratio aligny="top">keep</aspectratio>
+						<texture colordiffuse="Watched" diffuse="watched/circle/mask.png">$INFO[ListItem.PercentPlayed,watched/circle/,.png]</texture>
+						<visible>!ListItem.IsPlaying + !IntegerGreaterThan(ListItem.PercentPlayed,99) + IntegerGreaterThan(ListItem.PercentPlayed,1)</visible>
 					</control>
 		
 				</itemlayout>
@@ -145,7 +155,8 @@
 						<width>390</width>
 						<height>25</height>
 						<font>font26UB</font>
-						<label>[COLOR Accent]$INFO[ListItem.Label][/COLOR]</label>
+						<label>$INFO[ListItem.Label]</label>
+						<textcolor>$VAR[Accent_100]</textcolor>
 						<visible>IsEmpty(ListItem.Title) + !stringcompare(ListItem.Label,..)</visible>
 					</control>
 
@@ -154,7 +165,8 @@
 						<width>390</width>
 						<height>25</height>
 						<font>font26UB</font>
-						<label>[COLOR Accent]$INFO[ListItem.Title][/COLOR]</label>
+						<label>$INFO[ListItem.Title]</label>
+						<textcolor>$VAR[Accent_100]</textcolor>
 						<visible>!IsEmpty(ListItem.Title) + !SubString(Container.FolderPath,plugin) + !stringcompare(ListItem.Label,..)</visible>
 					</control>
 
@@ -196,10 +208,21 @@
 					<control type="image">
 						<posx>360</posx>
 						<posy>25</posy>
+						<height>40</height>
+						<width>40</width>
+						<texture background="true" colordiffuse="Watched">$VAR[Watched_Image]</texture>
+						<aspectratio aligny="top">keep</aspectratio>
+						<visible>Container.Content(songs) | ListItem.IsPlaying | IntegerGreaterThan(ListItem.PercentPlayed,99) | !IntegerGreaterThan(ListItem.PercentPlayed,1)</visible>
+					</control> 
+					
+					<control type="image">
+						<posx>360</posx>
+						<posy>25</posy>
 						<width>40</width>
 						<height>40</height>
-						<texture>watched/check.png</texture>
-						<visible>Container.Content(episodes) + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+						<aspectratio aligny="top">keep</aspectratio>
+						<texture colordiffuse="Watched" diffuse="watched/circle/mask.png">$INFO[ListItem.PercentPlayed,watched/circle/,.png]</texture>
+						<visible>!ListItem.IsPlaying + !IntegerGreaterThan(ListItem.PercentPlayed,99) + IntegerGreaterThan(ListItem.PercentPlayed,1)</visible>
 					</control>
 					
 				</focusedlayout>

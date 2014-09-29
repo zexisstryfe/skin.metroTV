@@ -36,19 +36,22 @@
 					<posx>900</posx>
 					<label>31199</label>
 					<width>590</width>
-					<font>font40</font>					
+					<font>font40</font>	
+					<textcolor>$VAR[Accent_100]</textcolor>
 				</control>
 
 				<control type="label" id="2">					
 					<description>Line 1</description>
 					<include>FirstRun_Labels</include>
-					<label>31200</label>				
+					<label>31200</label>	
+					<textcolor>$VAR[Accent_100]</textcolor>
 				</control>
 
 				<control type="label" id="3">					
 					<description>Line 2</description>
 					<include>FirstRun_Labels</include>
-					<label>31201</label>				
+					<label>31201</label>
+					<textcolor>$VAR[Accent_100]</textcolor>
 				</control>
 				
 				<control type="label" id="4">					

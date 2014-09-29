@@ -12,14 +12,14 @@
 		<control type="image">
 			<width>1280</width>
 			<height>720</height>
-			<texture>../backgrounds/default.jpg</texture>
+			<texture>../extras/backgrounds/default.jpg</texture>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 		</control>	
  
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<animation effect="fade" time="800">WindowOpen</animation>
-			<texture background="true">$INFO[Window.Property(Day0.FanartCode),../backgrounds/weather_fanart/,.jpg]</texture>
+			<texture background="true">$INFO[Window.Property(Day0.FanartCode),../extras/backgrounds/weather_fanart/,.jpg]</texture>
 		</control> 	
 		
 		<include>Common_Fanart_Overlay</include>

@@ -8,28 +8,28 @@
 			<description>Pointer</description>
 			<width>30</width>
 			<height>30</height>
-			<texture>pointers/Pointer.png</texture>
+			<texture>pointers/pointer.png</texture>
 		</control>
 
 		<control type="image" id="2">
 			<description>Pointer Focus</description>
 			<width>30</width>
 			<height>30</height>
-			<texture colordiffuse="$VAR[Accent_100]">pointers/Pointer.png</texture>
+			<texture colordiffuse="$VAR[Accent_100]">pointers/pointer.png</texture>
 		</control>
 
 		<control type="image" id="3">
 			<description>Pointer Drag</description>
 			<width>30</width>
 			<height>30</height>
-			<texture colordiffuse="$VAR[Accent_100]">pointers/PointerClick.png</texture>
+			<texture colordiffuse="$VAR[Accent_100]">pointers/pointer.png</texture>
 		</control>
 
 		<control type="image" id="4">
 			<description>Pointer Click</description>
 			<width>30</width>
 			<height>30</height>
-			<texture>pointers/PointerClick.png</texture>
+			<texture>pointers/pointer.png</texture>
 		</control>
 
 	</controls>

@@ -32,8 +32,8 @@
 					<width>600</width>
 					<height>50</height>
 					<font>font40UB</font>
-					<textcolor>White</textcolor>
-					<label>[COLOR Accent]$INFO[Control.GetLabel(34),[COLOR White]$LOCALIZE[31084] [/COLOR]][/COLOR]</label>
+					<label>$INFO[Control.GetLabel(34),[COLOR White]$LOCALIZE[31084] [/COLOR]]</label>
+					<textcolor>$VAR[Accent_100]</textcolor>
 				</control>
 				
 				<control type="group">
@@ -52,7 +52,8 @@
 						<width>350</width>
 						<height>35</height>
 						<font>font26UB</font>
-						<label>[COLOR Accent]$INFO[Container(13).ListItem.Label][/COLOR]</label>
+						<label>$INFO[Container(13).ListItem.Label]</label>
+						<textcolor>$VAR[Accent_100]</textcolor>
 					</control>
 					
 					<control type="label">

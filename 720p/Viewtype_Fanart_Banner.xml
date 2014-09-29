@@ -75,7 +75,8 @@
 							<width>360</width>
 							<height>80</height>
 							<font>font24UB</font>
-							<label>$INFO[ListItem.Label][COLOR Accent]$INFO[ListItem.Year, (,)][/COLOR]</label>
+							<label>[COLOR White]$INFO[ListItem.Label][/COLOR]$INFO[ListItem.Year, (,)]</label>
+							<textcolor>$VAR[Accent_100]</textcolor>
 							<visible>IsEmpty(ListItem.Art(banner)) + !stringcompare(ListItem.Label,..)</visible>
 						</control>
 						
@@ -126,8 +127,9 @@
 							<width>360</width>
 							<height>80</height>
 							<font>font24UB</font>
-							<label>$INFO[ListItem.Label][COLOR Accent]$INFO[ListItem.Year, (,)][/COLOR]</label>
+							<label>[COLOR White]$INFO[ListItem.Label][/COLOR]$INFO[ListItem.Year, (,)]</label>
 							<aligny>center</aligny>
+							<textcolor>$VAR[Accent_100]</textcolor>
 							<visible>IsEmpty(ListItem.Art(banner)) + !stringcompare(ListItem.Label,..)</visible>
 						</control>
 						

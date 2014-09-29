@@ -1825,15 +1825,46 @@
 	</variable>	
 	
 	<variable name="Accent_100">
-		<value>FF$INFO[Skin.String(accent.color)]</value>	
+		<value condition="!IsEmpty(Skin.String(accent.color))">FF$INFO[Skin.String(accent.color)]</value>	
+		<value condition="IsEmpty(Skin.String(accent.color))">FF2e8def</value>	
 	</variable>	
 	
 	<variable name="Accent_80">
-		<value>CC$INFO[Skin.String(accent.color)]</value>	
+		<value condition="!IsEmpty(Skin.String(accent.color))">CC$INFO[Skin.String(accent.color)]</value>
+		<value condition="IsEmpty(Skin.String(accent.color))">CC2e8def</value>	
 	</variable>	
 	
 	<variable name="Accent_60">
-		<value>77$INFO[Skin.String(accent.color)]</value>	
+		<value condition="!IsEmpty(Skin.String(accent.color))">77$INFO[Skin.String(accent.color)]</value>	
+		<value condition="IsEmpty(Skin.String(accent.color))">772e8def</value>	
 	</variable>	
+	
+	<variable name="Picker_Color">
+		<value>$INFO[ListItem.Label]</value>	
+	</variable>	
+	
+	<variable name="Watched_Image">
+		<value condition="stringcompare(ListItem.Label,..)">watched/Back.png</value>
+	  
+        <value condition="ListItem.IsPlaying  + Window.IsVisible(MyPVR.xml)">watched/Playing.png</value>
+        <value condition="ListItem.IsPlaying">watched/Playing.png</value>
+        
+        <value condition="stringcompare(ListItem.Overlay,OverlayWatched.png) + Window.IsVisible(MyPVR.xml)">watched/Watched.png</value>
+        <value condition="stringcompare(ListItem.Overlay,OverlayWatched.png)">watched/Watched.png</value>
+        
+        <value condition="stringcompare(ListItem.Overlay,OverlayUnwatched.png) + Window.IsVisible(MyPVR.xml)">noop</value>
+        <value condition="[stringcompare(ListItem.Overlay,OverlayUnwatched.png) | Container.Content(songs)]">watched/Empty.png</value>
+    </variable>
+	
+	<variable name="Header_Lists">
+		<value condition="Window.IsVisible(Custom_Hub_Movies.xml)">$INFO[Window(home).Property(Movies.Count)] [COLOR=White]$LOCALIZE[20342][/COLOR]</value>	  
+        <value condition="Window.IsVisible(Custom_Hub_MusicVid.xml)">$INFO[Window(home).Property(MusicVideos.Count)] [COLOR=White]$LOCALIZE[20389][/COLOR]</value>	 
+		<value condition="Window.IsVisible(Custom_Hub_TV.xml)">$INFO[Window(home).Property(TVShows.Count)] [COLOR=White]$LOCALIZE[20343]  •[/COLOR]  $INFO[Window(home).Property(Episodes.Count)] [COLOR=White]$LOCALIZE[20360][/COLOR]</value>
+        <value condition="Window.IsVisible(Custom_Hub_Music.xml)">$INFO[Window(home).Property(Music.ArtistsCount)] [COLOR=White]$LOCALIZE[133]  •[/COLOR]  $INFO[Window(home).Property(Music.AlbumsCount)] [COLOR=White]$LOCALIZE[132]  •[/COLOR]  $INFO[Window(home).Property(Music.SongsCount)] [COLOR=White]$LOCALIZE[134][/COLOR]</value>
+		<value condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos)">[COLOR=White]$LOCALIZE[31182]:[/COLOR] $INFO[Container.SortMethod]</value>       
+        <value condition="Window.IsVisible(mypvr.xml)">[COLOR White]$LOCALIZE[31084][/COLOR] $INFO[Control.GetLabel(32)] </value>
+        <value condition="Window.IsVisible(script-Rom_Collection_Browser-main.xml)">[COLOR White]$LOCALIZE[31182]:[/COLOR] $INFO[Container.SortMethod] </value>
+		<value condition="Window.IsVisible(home.xml)">$INFO[Window(home).Property(Movies.Count)] [COLOR=White]$LOCALIZE[20342]  •[/COLOR]  $INFO[Window(home).Property(Episodes.Count)] [COLOR=White]$LOCALIZE[20360]  •  [/COLOR]$INFO[Window(home).Property(Music.SongsCount)] [COLOR=White]$LOCALIZE[134][/COLOR]</value>
+    </variable>
 	
 </includes>

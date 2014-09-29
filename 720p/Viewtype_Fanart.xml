@@ -53,9 +53,11 @@
 					<visible>Window.IsActive(1) | Window.IsActive(myvideonav.xml) | Window.IsActive(pictures) | Container.Content(songs)  | Container.Content(artists) | Container.Content(albums)  | Container.Content(musicvideos) | Window.IsActive(MyMusicSongs.xml)</visible>
 					<itemlayout width="640" height="32">
 
+						<include>Common_Watched_Medium</include>
+						
 						<control type="label">
-							<posx>20</posx>
-							<width>315</width>
+							<posx>40</posx>
+							<width>325</width>
 							<height>30</height>
 							<font>font20</font>
 							<label>$LOCALIZE[31194]</label>
@@ -63,30 +65,22 @@
 						</control>	
 
 						<control type="label">
-							<posx>20</posx>
-							<width>315</width>
+							<posx>40</posx>
+							<width>325</width>
 							<height>30</height>
 							<font>font20</font>
-							<label>$INFO[ListItem.Label][COLOR Accent]$INFO[ListItem.Year, (,)][/COLOR]</label>
+							<label>[COLOR White]$INFO[ListItem.Label][/COLOR]$INFO[ListItem.Year, (,)]</label>
+							<textcolor>$VAR[Accent_100]</textcolor>
 							<visible>![ListItem.IsFolder + Container.Content(movies)] + !stringcompare(ListItem.Label,..)</visible>
 						</control>					
 										
 						<control type="label">
-							<posx>20</posx>
-							<width>315</width>
+							<posx>40</posx>
+							<width>325</width>
 							<font>font20</font>
 							<label>$INFO[ListItem.Label]</label>
-							<scroll>true</scroll>
 							<height>30</height>
 							<visible>ListItem.IsFolder + Container.Content(movies) + !stringcompare(ListItem.Label,..)</visible>
-						</control>
-						
-						<control type="image">
-							<posx>340</posx>
-							<height>30</height>
-							<width>30</width>
-							<texture>watched/check.png</texture>
-							<visible>[Container.Content(movies) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(TVShows) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(episodes) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(seasons) + stringcompare(ListItem.Overlay,OverlayWatched.png)]</visible>
 						</control>
 
 					</itemlayout>
@@ -98,11 +92,15 @@
 							<height>30</height>
 							<include>Common_Color_Accent</include>
 							<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(51)">Conditional</animation>
+							<animation condition="Container(51).OnNext" reversible="false" effect="slide" start="0,-30" end="0,0" time="100" tween="back" easing="out">Focus</animation>
+							<animation condition="Container(51).OnPrevious" reversible="false" effect="slide" start="0,30" end="0,0" time="100" tween="back" easing="out">Focus</animation>
 						</control>
 						
+						<include>Common_Watched_Medium</include>
+						
 						<control type="label">
-							<posx>20</posx>
-							<width>315</width>
+							<posx>40</posx>
+							<width>325</width>
 							<height>30</height>
 							<font>font20</font>
 							<label>$LOCALIZE[31194]</label>
@@ -110,30 +108,23 @@
 						</control>
 
 						<control type="label">
-							<posx>20</posx>
-							<width>315</width>
+							<posx>40</posx>
+							<width>325</width>
 							<font>font20</font>
 							<height>30</height>
 							<label>[COLOR White]$INFO[ListItem.Label]$INFO[ListItem.Year, (,)][/COLOR]</label>
+							<scroll>true</scroll>
 							<visible>![ListItem.IsFolder + Container.Content(movies)] + !stringcompare(ListItem.Label,..)</visible>
 						</control>
 						
 						<control type="label">
-							<posx>20</posx>
-							<width>315</width>
+							<posx>40</posx>
+							<width>325</width>
 							<font>font20</font>
 							<label>$INFO[ListItem.Label]</label>
 							<scroll>true</scroll>
 							<height>30</height>
 							<visible>ListItem.IsFolder + Container.Content(movies) + !stringcompare(ListItem.Label,..)</visible>
-						</control>
-						
-						<control type="image">
-							<posx>340</posx>
-							<height>30</height>
-							<width>30</width>
-							<texture>watched/check.png</texture>
-							<visible>[Container.Content(movies) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(TVShows) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(episodes) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(seasons) + stringcompare(ListItem.Overlay,OverlayWatched.png)]</visible>
 						</control>
 
 					</focusedlayout>
@@ -527,7 +518,8 @@
 				
 				<control type="fadelabel" id="141">
 					<include>Common_Fanart_Fadelabel</include>
-					<label>[COLOR Accent]$INFO[ListItem.Label][/COLOR]</label>
+					<label>$INFO[ListItem.Label]</label>
+					<textcolor>$VAR[Accent_100]</textcolor>
 					<visible>Container.Content(files)</visible>
 				</control>
 				

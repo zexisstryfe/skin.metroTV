@@ -9,6 +9,7 @@
 	<onload condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(3002)</onload>
 	<onload condition="System.HasAddon(script.extendedinfo) + Skin.String(Home.TVShowPanel,Trending)">RunScript(script.extendedinfo,info=trendingshows)</onload>
 	<onload condition="System.HasAddon(script.extendedinfo) + Skin.String(Home.MoviePanel,Trending)">RunScript(script.extendedinfo,info=trendingmovies)</onload>
+	<onload condition="System.HasAddon(script.extendedinfo) + Skin.String(Home.MoviePanel,InCinemas)">RunScript(script.extendedinfo,info=intheaters)</onload>
 	
 	<controls>
 	
@@ -258,7 +259,7 @@
 			<control type="group">
 			
 				<control type="label">
-					<label>[COLOR Accent]$INFO[System.ProfileName][/COLOR]</label>
+					<label>$INFO[System.ProfileName]</label>
 					<posx>1165</posx>
 					<posy>15</posy>
 					<height>30</height>
@@ -266,6 +267,7 @@
 					<font>font24L</font>
 					<align>right</align>
 					<visible>Control.HasFocus(500)</visible>
+					<textcolor>$VAR[Accent_100]</textcolor>
 					<animation effect="fade" start="0" time="400" condition="Control.HasFocus(500)" >Conditional</animation>
 					<animation effect="fade" time="200" delay="200">Hidden</animation>
 					<shadowcolor>ff000000</shadowcolor>

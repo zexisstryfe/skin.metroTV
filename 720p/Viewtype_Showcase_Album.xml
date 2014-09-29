@@ -4,7 +4,7 @@
 	
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
-			<texture background="true">backings/music_fanart_diffuse.png</texture>
+			<texture background="true">../extras/overlays/music_fanart_diffuse.png</texture>
 			<visible>Skin.HasSetting(UseFanartOverlay)</visible>
 			<visible>Control.IsVisible(57)</visible>
 		</control>
@@ -243,9 +243,10 @@
 			
 			<control type="label" id="140">
 				<include>Common_Showcase_Title</include>
-				<label>[COLOR Accent]$INFO[ListItem.Label][/COLOR] $INFO[ListItem.Year]</label>
+				<label>$INFO[ListItem.Label] [COLOR White]$INFO[ListItem.Year][/COLOR]</label>
 				<visible>Window.IsActive(1) | Container.Content(albums) | Container.Content(artists)</visible>
 				<visible>!stringcompare(ListItem.Label,..)</visible>
+				<textcolor>$VAR[Accent_100]</textcolor>
 			</control>
 			
 			<control type="label" id="140">

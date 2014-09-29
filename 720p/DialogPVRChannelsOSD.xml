@@ -55,34 +55,37 @@
 				</control>
 				
 				<control type="label">
-					<label>[COLOR Accent]$INFO[System.Time(xx)][/COLOR]</label>
+					<label>$INFO[System.Time(xx)]</label>
 					<posx>305</posx>
 					<posy>15</posy>
 					<height>100</height>
 					<width>60</width>
 					<font>font26L</font>
 					<align>left</align>
+					<textcolor>$VAR[Accent_100]</textcolor>
 					<visible>!IsEmpty(System.Time(xx))</visible>
 				</control>
 				
 				<control type="label">
-					<label>[COLOR Accent]$INFO[System.Date(DDD)][/COLOR]</label>
+					<label>$INFO[System.Date(DDD)]</label>
 					<posx>152</posx>
 					<posy>-16</posy>
 					<height>100</height>
 					<width>750</width>
 					<font>font26L</font>
 					<align>right</align>
+					<textcolor>$VAR[Accent_100]</textcolor>
 				</control>
 				
 				<control type="label">
-					<label>[COLOR Accent]$INFO[System.Date(MMM)] $INFO[System.Date(dd)][/COLOR]</label>
+					<label>$INFO[System.Date(MMM)] $INFO[System.Date(dd)]</label>
 					<posx>152</posx>
 					<posy>14</posy>
 					<height>100</height>
 					<width>750</width>
 					<font>font22L</font>
 					<align>right</align>
+					<textcolor>$VAR[Accent_100]</textcolor>
 				</control>
 				
 			</control>
@@ -118,7 +121,8 @@
                 <posy>670</posy>
                 <width>340</width>
                 <font>font20</font>
-                <label>[COLOR Accent]$INFO[Container(11).ListItem.NextTitle,[LOWERCASE][COLOR white]$LOCALIZE[19031]: [/COLOR][/LOWERCASE]][/COLOR]</label>
+                <label>$INFO[Container(11).ListItem.NextTitle,[LOWERCASE][COLOR white]$LOCALIZE[19031]: [/COLOR][/LOWERCASE]]</label>
+				<textcolor>$VAR[Accent_100]</textcolor>
             </control>
 			
             <control type="list" id="11">
@@ -156,7 +160,8 @@
                         <posx>65</posx>
                         <width>340</width>
                         <font>font20UB</font>
-                        <label>$INFO[ListItem.Label] - [COLOR Accent]$INFO[ListItem.Title][/COLOR]</label>
+                        <label>[COLOR White]$INFO[ListItem.Label] - [/COLOR]$INFO[ListItem.Title]</label>
+						<textcolor>$VAR[Accent_100]</textcolor>
                     </control>
 					
                     <control type="label">

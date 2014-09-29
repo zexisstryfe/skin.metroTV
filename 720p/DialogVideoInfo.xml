@@ -6,11 +6,11 @@
 	
 	<include>Animation_Common_Window</include>
 
-	<onload condition="System.HasAddon(script.extendedinfo) + Container.Content(movies)">RunScript(script.extendedinfo,info=Comments,dbid=$INFO[ListItem.DBID],type=movie)</onload>
-	<onload condition="System.HasAddon(script.extendedinfo) + Container.Content(tvshows)">RunScript(script.extendedinfo,info=Comments,dbid=$INFO[ListItem.DBID],type=tvshow)</onload>
-	<onload condition="System.HasAddon(script.extendedinfo) + Container.Content(episodes)">RunScript(script.extendedinfo,info=EpisodeComments,show=$INFO[ListItem.TVshowTitle],type=episode,season=$INFO[ListItem.Season],episode=$INFO[ListItem.Episode])</onload>
-	<onload condition="System.HasAddon(script.extendedinfo) + Container.Content(movies)">RunScript(script.extendedinfo,info=Similar,dbid=$INFO[ListItem.DBID],type=movie)</onload>
-	<onload condition="System.HasAddon(script.extendedinfo) + Container.Content(tvshows)">RunScript(script.extendedinfo,info=Similar,dbid=$INFO[ListItem.DBID],type=tvshow)</onload>
+	<onload condition="System.HasAddon(script.extendedinfo) + Container.Content(movies)">RunScript(script.extendedinfo,info=comments,dbid=$INFO[ListItem.DBID],type=movie)</onload>
+	<onload condition="System.HasAddon(script.extendedinfo) + Container.Content(tvshows)">RunScript(script.extendedinfo,info=comments,dbid=$INFO[ListItem.DBID],type=tvshow)</onload>
+	<onload condition="System.HasAddon(script.extendedinfo) + Container.Content(episodes)">RunScript(script.extendedinfo,info=episodecomments,show=$INFO[ListItem.TVshowTitle],type=episode,season=$INFO[ListItem.Season],episode=$INFO[ListItem.Episode])</onload>
+	<onload condition="System.HasAddon(script.extendedinfo) + Container.Content(movies)">RunScript(script.extendedinfo,info=similarmovies,dbid=$INFO[ListItem.DBID],type=movie)</onload>
+	<onload condition="System.HasAddon(script.extendedinfo) + Container.Content(tvshows)">RunScript(script.extendedinfo,info=similar,dbid=$INFO[ListItem.DBID],type=tvshow)</onload>
 	<onload condition="System.HasAddon(script.videoextras)">XBMC.RunScript(script.videoextras,check,"$INFO[ListItem.FilenameAndPath]")</onload>
 	<onload condition="Skin.HasSetting(ShowTVTunesNotification) + System.HasAddon(script.tvtunes)">XBMC.RunScript(script.tvtunes,backend=True)</onload>
 	

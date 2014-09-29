@@ -9,7 +9,7 @@
 		
 			<control type="image">
 				<include>Dimensions_Fullscreen</include>
-				<texture background="true">backings/music_fanart_diffuse.png</texture>
+				<texture background="true">../extras/overlays/music_fanart_diffuse.png</texture>
 				<visible>Skin.HasSetting(UseFanartOverlay)</visible>
 			</control>
 			

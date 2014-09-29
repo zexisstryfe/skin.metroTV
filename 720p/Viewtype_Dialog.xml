@@ -8,7 +8,7 @@
 		
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
-			<texture background="true">backings/music_fanart_diffuse.png</texture>
+			<texture background="true">../extras/overlays/music_fanart_diffuse.png</texture>
 			<visible>Skin.HasSetting(UseFanartOverlay)</visible>
 			<visible>Control.IsVisible(53)</visible>
 		</control>
@@ -77,8 +77,10 @@
 				<visible>Container.Content(episodes) | Container.Content(songs)</visible>				
 				<itemlayout width="530" height="40">
 
+					<include>Common_Watched_Medium</include>
+					
 					<control type="label">
-						<posx>20</posx>
+						<posx>40</posx>
 						<posy>-5</posy>
 						<width>470</width>
 						<font>font22</font>
@@ -87,21 +89,12 @@
 					</control>
 					
 					<control type="label">
-						<posx>20</posx>
+						<posx>40</posx>
 						<posy>-5</posy>
 						<width>470</width>
 						<font>font22</font>
 						<label>$LOCALIZE[31194]</label>
 						<visible>stringcompare(ListItem.Label,..)</visible>					
-					</control>
-					
-					<control type="image">
-						<posx>455</posx>
-						<posy>5</posy>
-						<height>30</height>
-						<width>30</width>
-						<texture>watched/check.png</texture>
-						<visible>[Container.Content(episodes) + stringcompare(ListItem.Overlay,OverlayWatched.png)]</visible>
 					</control>
 				
 				</itemlayout>
@@ -112,10 +105,15 @@
 						<width>530</width>
 						<height>40</height>
 						<include>Common_Color_Accent</include>
+						<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(53)">Conditional</animation>
+						<animation condition="Container(53).OnNext" reversible="false" effect="slide" start="0,-30" end="0,0" time="100" tween="back" easing="out">Focus</animation>
+						<animation condition="Container(53).OnPrevious" reversible="false" effect="slide" start="0,30" end="0,0" time="100" tween="back" easing="out">Focus</animation>
 					</control>
+					
+					<include>Common_Watched_Medium</include>
 
 					<control type="label">
-						<posx>20</posx>
+						<posx>40</posx>
 						<posy>-5</posy>
 						<width>530</width>
 						<font>font22</font>
@@ -124,21 +122,12 @@
 					</control>
 					
 					<control type="label">
-						<posx>20</posx>
+						<posx>40</posx>
 						<posy>-5</posy>
 						<width>470</width>
 						<font>font22</font>
 						<label>$LOCALIZE[31194]</label>
 						<visible>stringcompare(ListItem.Label,..)</visible>					
-					</control>
-					
-					<control type="image">
-						<posx>455</posx>
-						<posy>5</posy>
-						<height>30</height>
-						<width>30</width>
-						<texture>watched/check.png</texture>
-						<visible>[Container.Content(episodes) + stringcompare(ListItem.Overlay,OverlayWatched.png)]</visible>
 					</control>
 				
 				</focusedlayout>

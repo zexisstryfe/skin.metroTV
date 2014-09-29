@@ -1,7 +1,7 @@
 <fonts>
 
 	<fontset id="default" unicode="true">
-
+	
 	<!--Scrawl font-->
 	
 		<font>
@@ -29,7 +29,7 @@
 			<name>font13</name>
 			<filename>Roboto-Light.ttf</filename>
 			<size>13</size>
-		</font>	
+		</font>
 	
 		<font>
 			<name>font14L</name>

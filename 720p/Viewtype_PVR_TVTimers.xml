@@ -33,7 +33,8 @@
 					<height>50</height>
 					<aligny>center</aligny>
 					<font>font40UB</font>
-					<label>[COLOR Accent]$INFO[Control.GetLabel(35),[COLOR White]$LOCALIZE[31084] [/COLOR]][/COLOR]</label>
+					<label>$INFO[Control.GetLabel(35),[COLOR White]$LOCALIZE[31084] [/COLOR]]</label>
+					<textcolor>$VAR[Accent_100]</textcolor>
 				</control>
 				
 				<control type="label">

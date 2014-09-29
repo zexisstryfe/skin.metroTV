@@ -10,17 +10,16 @@
 			<include>BackgroundTextScroll</include>
 
 			<include>ListWalls</include>
-
-			<include>Common_TopBar</include>
-
 			
 			<control type="image">
 				<description>Music bar</description>
 				<width>1280</width>
 				<height>720</height>
 				<fadetime>200</fadetime>
-				<texture background="true">backings/music_fanart_diffuse.png</texture>
+				<texture background="true">../extras/overlays/music_fanart_diffuse.png</texture>
 			</control>
+			
+			<include>Common_TopBar</include>
 	
 			<control type="image">
 				<description>Horizontal bar</description>

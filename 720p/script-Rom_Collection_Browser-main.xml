@@ -160,12 +160,13 @@
 				</control>
 				
 				<control type="label">
-					<label>[COLOR Accent]$INFO[ListItem.Label][/COLOR] $INFO[ListItem.Property(console)]</label>
+					<label>$INFO[ListItem.Label] [COLOR White]$INFO[ListItem.Property(console)][/COLOR]</label>
 					<posy>660</posy>
 					<height>50</height>
 					<width>1280</width>
 					<font>font40UB</font>
 					<align>center</align>
+					<textcolor>$VAR[Accent_100]</textcolor>
 				</control>
 				
 				<!-- top area -->
@@ -822,7 +823,8 @@
 					<pauseatend>600</pauseatend>
 					<scrollspeed>50</scrollspeed>
 					<shadowcolor>black</shadowcolor>					
-					<label>[COLOR Accent]$INFO[ListItem.Label][/COLOR] $INFO[ListItem.Property(console)]</label>					
+					<label>$INFO[ListItem.Label] [COLOR White]$INFO[ListItem.Property(console)][/COLOR]</label>
+					<textcolor>$VAR[Accent_100]</textcolor>
 				</control>	
 				
 			</control>

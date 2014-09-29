@@ -9,7 +9,7 @@
 		
 			<control type="image">
 				<include>Dimensions_Fullscreen</include>
-				<texture background="true">backings/music_fanart_diffuse.png</texture>
+				<texture background="true">../extras/overlays/music_fanart_diffuse.png</texture>
 				<visible>Skin.HasSetting(UseFanartOverlay)</visible>
 			</control>
 			
@@ -80,7 +80,6 @@
 							<height>60</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>font24UB</font>
-							<textcolor>$VAR[Accent_100]</textcolor>
 							<aligny>top</aligny>
 							<align>center</align>
 							<autoscroll>false</autoscroll>	
@@ -94,7 +93,6 @@
 							<height>60</height>
 							<label>$LOCALIZE[31194]</label>
 							<font>font24UB</font>
-							<textcolor>$VAR[Accent_100]</textcolor>
 							<aligny>top</aligny>
 							<align>center</align>
 							<visible>stringcompare(ListItem.Label,..)</visible>

@@ -101,7 +101,6 @@
 					<height>60</height>
 					<label>$INFO[ListItem.Property(NextTitle)]</label>
 					<font>font16UB</font>
-					<textcolor>$VAR[Accent_100]</textcolor>
 					<shadowcolor>00FFFFFF</shadowcolor>
 					<align>center</align>
 					<autoscroll>true</autoscroll>
@@ -169,7 +168,6 @@
 					<height>60</height>
 					<label>$INFO[ListItem.Property(NextTitle)]</label>
 					<font>font16UB</font>
-					<textcolor>$VAR[Accent_100]</textcolor>
 					<shadowcolor>00FFFFFF</shadowcolor>
 					<align>center</align>
 					<autoscroll>true</autoscroll>

@@ -33,52 +33,25 @@
 				<include>Dialog_Header</include>
 				<label>$LOCALIZE[31255]</label>
 			</control>	
+
+            <!--scrollbar-->			
+			<control type="image">
+				<description>outline</description>
+				<posx>1039</posx>
+				<posy>74</posy>
+				<height>467</height>
+				<include>Common_Scroll_OutlineV</include>
+				<visible>Control.HasFocus(61)</visible>
+			</control>
+
+			<control type="scrollbar" id="61">
+				<posy>75</posy>
+				<posx>1040</posx>
+				<height>465</height>
+				<onleft>100</onleft>
+				<onright>100</onright>
+			</control>
 			
-            <control type="image">
-                <left>350</left>
-                <top>0</top>
-                <width>7</width>
-                <height>720</height>
-                <texture flipx="true">sidebarshadow.png</texture>
-            </control>
-            <!--close window button-->
-            <control type="button">
-                <left>363</left>
-                <top>0</top>
-                <width>33</width>
-                <height>17</height>
-                <label>-</label>
-                <font>-</font>
-                <onclick>PreviousMenu</onclick>
-                <texturefocus>DialogCloseButton-focus.png</texturefocus>
-                <texturenofocus>DialogCloseButton.png</texturenofocus>
-                <onleft>2</onleft>
-                <onright>13</onright>
-                <onup>13</onup>
-                <ondown>2</ondown>
-                <visible>system.getbool(input.enablemouse)</visible>
-            </control>
-            <!--header-->
-            <control type="label">
-                <left>400</left>
-                <top>27</top>
-                <height>40</height>
-                <label>Colour Picker</label>
-                <font>info.title</font>
-                <textcolor>text.primary</textcolor>
-                <aligny>center</aligny>
-            </control>
-            <!--scrollbar-->
-            <control type="scrollbar" id="61">
-                <left>400</left>
-                <top>680</top>
-                <width>850</width>
-                <height>5</height>
-                <onup>100</onup>
-                <ondown>100</ondown>
-                <orientation>horizontal</orientation>
-                <texturesliderbackground colordiffuse="text.primary">backgrounds/white.png</texturesliderbackground>
-            </control>
             <control type="group">
                 <!--content-->
                 <control type="panel" id="100">
@@ -88,14 +61,15 @@
                     <width>1025</width>
                     <height>470</height>
                     <onup>100</onup>
-                    <ondown>61</ondown>
+                    <ondown>100</ondown>
                     <onleft>100</onleft>
-                    <onright>100</onright>
+                    <onright>61</onright>
                     <orientation>vertical</orientation>
                     <scrolltime>200</scrolltime>
                     <preloaditems>4</preloaditems>
                     <pagecontrol>61</pagecontrol>
                     <itemlayout height="143" width="143">
+					
                         <control type="image">
                             <left>5</left>
                             <top>5</top>
@@ -103,8 +77,11 @@
                             <height>133</height>
                             <texture background="true">$INFO[ListItem.Thumb]</texture>
                         </control>
+						
                     </itemlayout>
+					
                     <focusedlayout height="143" width="143">
+					
                         <control type="image">
                             <left>0</left>
                             <width>143</width>
@@ -113,12 +90,14 @@
                             <bordertexture>colors/color_white.png</bordertexture>
                             <bordersize>7</bordersize>
                         </control>
+						
                     </focusedlayout>
+					
                     <content>
                         <item id="1">
                             <!--current-->
                             <onclick>Close</onclick>
-                            <thumb>colors/FF$VAR[Accent_100].png</thumb>
+                            <thumb>colors/$VAR[Accent_100].png</thumb>
                             <label>selected</label>
                         </item>
                         <item id="2">
@@ -545,9 +524,15 @@
                             <onclick>Close</onclick>
                             <thumb>colors/FF67e964.png</thumb>
                         </item>
+						
                     </content>
+					
                 </control>
+				
             </control>
+			
         </control>
+		
     </controls>
+	
 </window>

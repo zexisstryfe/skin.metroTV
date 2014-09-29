@@ -6,8 +6,9 @@
 	
 	<include>Animation_Common_Window</include>
 	
-	<onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=Comments,id=$INFO[Window.Property(ID)],type=$INFO[Window.Property(Type)])</onload>
-	<onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=Similar,id=$INFO[Window.Property(ID)],type=$INFO[Window.Property(Type)])</onload>
+	<onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=comments,id=$INFO[Window.Property(ID)],type=$INFO[Window.Property(Type)])</onload>
+	<onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=similarmovies,id=$INFO[Window.Property(ID)],type=$INFO[Window.Property(Type)])</onload>
+	<onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=similartvshowstrakt,id=$INFO[Window.Property(ID)],type=$INFO[Window.Property(Type)])</onload>
 	
 	<controls>
 	

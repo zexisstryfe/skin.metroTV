@@ -11,7 +11,7 @@
 			<!--Background Area-->
 			<control type="image">
 				<include>Dimensions_Fullscreen</include>
-				<texture background="true">backings/music_fanart_diffuse.png</texture>
+				<texture background="true">../extras/overlays/music_fanart_diffuse.png</texture>
 				<visible>Skin.HasSetting(UseFanartOverlay)</visible>
 			</control>
 
@@ -130,23 +130,26 @@
 							<itemlayout width="400" height="30">
 
 								<control type="label">
-									<posx>20</posx>
+									<posx>35</posx>
 									<width>450</width>
 									<font>font22</font>
 									<label>$LOCALIZE[31194]</label>
 									<visible>stringcompare(ListItem.Label,..)</visible>
 								</control>
+								
+								<include>Common_Watched</include>
 
 								<control type="label">
-									<posx>20</posx>
+									<posx>35</posx>
 									<width>450</width>
 									<font>font22</font>
-									<label>$INFO[ListItem.Label][COLOR Accent]$INFO[ListItem.Year, (,)][/COLOR]</label>
+									<label>[COLOR White]$INFO[ListItem.Label][/COLOR]$INFO[ListItem.Year, (,)]</label>
+									<textcolor>$VAR[Accent_100]</textcolor>
 									<visible>![ListItem.IsFolder + Container.Content(movies)] + !stringcompare(ListItem.Label,..)</visible>
 								</control>
 								
 								<control type="label">
-									<posx>20</posx>
+									<posx>35</posx>
 									<width>450</width>
 									<font>font22</font>
 									<label>$INFO[ListItem.Label]</label>
@@ -155,25 +158,16 @@
 								</control>
 								
 								<control type="image">
-									<posx>470</posx>
-									<posy>10</posy>
-									<height>25</height>
-									<width>25</width>
-									<texture>watched/check.png</texture>
-									<visible>[Container.Content(movies) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(TVShows) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(episodes) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(seasons) + stringcompare(ListItem.Overlay,OverlayWatched.png)]</visible>
-								</control>
-								
-								<control type="image">
-									<posx>470</posx>
-									<posy>10</posy>
+									<posx>5</posx>
+									<posy>12</posy>
 									<height>25</height>
 									<width>25</width>
 									<texture>watched/$INFO[ListItem.Property(Addon.Status)].png</texture>
 								</control>
 								
 								<control type="image">
-									<posx>470</posx>
-									<posy>10</posy>
+									<posx>5</posx>
+									<posy>12</posy>
 									<height>25</height>
 									<width>25</width>
 									<texture>watched/download.png</texture>
@@ -188,12 +182,16 @@
 									<width>640</width>
 									<posy>8</posy>
 									<height>30</height>
+									<animation condition="Container(50).OnNext" reversible="false" effect="slide" start="0,-30" end="0,0" time="100" tween="back" easing="out">Focus</animation>
+									<animation condition="Container(50).OnPrevious" reversible="false" effect="slide" start="0,30" end="0,0" time="100" tween="back" easing="out">Focus</animation>
 									<include>Common_Color_Accent</include>
 									<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(50)">Conditional</animation>
 								</control>
+								
+								<include>Common_Watched</include>
 
 								<control type="label">
-									<posx>20</posx>
+									<posx>35</posx>
 									<width>450</width>
 									<font>font22</font>
 									<label>$LOCALIZE[31194]</label>
@@ -201,7 +199,7 @@
 								</control>
 
 								<control type="label">
-									<posx>20</posx>
+									<posx>35</posx>
 									<width>450</width>
 									<font>font22</font>
 									<label>[COLOR White]$INFO[ListItem.Label]$INFO[ListItem.Year, (,)][/COLOR]</label>
@@ -210,7 +208,7 @@
 								</control>
 								
 								<control type="label">
-									<posx>20</posx>
+									<posx>35</posx>
 									<width>450</width>
 									<font>font22</font>
 									<label>$INFO[ListItem.Label]</label>
@@ -219,25 +217,16 @@
 								</control>
 								
 								<control type="image">
-									<posx>470</posx>
-									<posy>10</posy>
-									<height>25</height>
-									<width>25</width>
-									<texture>watched/check.png</texture>
-									<visible>[Container.Content(movies) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(TVShows) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(episodes) + stringcompare(ListItem.Overlay,OverlayWatched.png)] | [Container.Content(seasons) + stringcompare(ListItem.Overlay,OverlayWatched.png)]</visible>
-								</control>
-								
-								<control type="image">
-									<posx>470</posx>
-									<posy>10</posy>
+									<posx>5</posx>
+									<posy>12</posy>
 									<height>25</height>
 									<width>25</width>
 									<texture>watched/$INFO[ListItem.Property(Addon.Status)].png</texture>
 								</control>
 								
 								<control type="image">
-									<posx>470</posx>
-									<posy>10</posy>
+									<posx>5</posx>
+									<posy>12</posy>
 									<height>25</height>
 									<width>25</width>
 									<texture>watched/download.png</texture>

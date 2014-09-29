@@ -11,7 +11,7 @@
 			<!--Background Area-->
 			<control type="image">
 				<include>Dimensions_Fullscreen</include>
-				<texture background="true">backings/music_fanart_diffuse.png</texture>
+				<texture background="true">../extras/overlays/music_fanart_diffuse.png</texture>
 				<visible>Skin.HasSetting(UseFanartOverlay)</visible>
 			</control>
 
@@ -104,13 +104,15 @@
 
 				<control type="label">
 					<include>Common_ListPic_Title</include>
-					<label>[COLOR Accent]$LOCALIZE[31194][/COLOR]</label>
+					<label>$LOCALIZE[31194]</label>
+					<textcolor>$VAR[Accent_100]</textcolor>
 					<visible>stringcompare(ListItem.Label,..)</visible>
 				</control>
 				
 				<control type="label">
 					<include>Common_ListPic_Title</include>
-					<label>[COLOR Accent]$INFO[ListItem.Label][/COLOR]</label>
+					<label>$INFO[ListItem.Label]</label>
+					<textcolor>$VAR[Accent_100]</textcolor>
 					<visible>!stringcompare(ListItem.Label,..)</visible>
 				</control>
 
