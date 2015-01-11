@@ -36,23 +36,22 @@
 				<include>Common_Color_Accent</include>
 			</control>
 
-			<control type="image">
-				<posx>310</posx>
-				<posy>55</posy>
-				<width>660</width>
-				<height>40</height>
-				<aspectratio>stretch</aspectratio>
-				<include>Common_Color_Editback</include>
-			</control>
-
-			<control type="label" id="310">
+			<control type="edit" id="312">
 				<description>Edit Text</description>
 				<posx>315</posx>
 				<posy>55</posy>
 				<width>650</width>
 				<height>40</height>
+				<width>440</width>
 				<font>font20</font>
 				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>Black</textcolor>
+				<focusedcolor>White</focusedcolor>
+				<textoffsetx>20</textoffsetx>
+				<texturenofocus border="2" colordiffuse="Editback">colors/color_white.png</texturenofocus>
+				<texturefocus border="5" colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>
+				<pulseonselect>false</pulseonselect>
 			</control>
 			
 	<!--Keyboard-->
@@ -60,7 +59,7 @@
 				<posx>74</posx>
 				<posy>100</posy>
 		
-				<control type="button" id="81">
+				<control type="button" id="120">
 					<description>'Q' button</description>
 					<onleft>57</onleft>
 					<onright>87</onright>
@@ -69,7 +68,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 				
-				<control type="button" id="87">
+				<control type="button" id="121">
 					<description>'W' button</description>
 					<posx>74</posx>
 					<onleft>81</onleft>
@@ -79,7 +78,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 				
-				<control type="button" id="69">
+				<control type="button" id="122">
 					<description>'E' button</description>
 					<posx>148</posx>
 					<onleft>87</onleft>
@@ -89,7 +88,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 				
-				<control type="button" id="82">
+				<control type="button" id="123">
 					<description>'R' button</description>
 					<posx>222</posx>
 					<onleft>69</onleft>
@@ -99,7 +98,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 
-				<control type="button" id="84">
+				<control type="button" id="124">
 					<description>'T' button</description>
 					<posx>296</posx>
 					<onleft>82</onleft>
@@ -109,7 +108,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 				
-				<control type="button" id="89">
+				<control type="button" id="125">
 					<description>'Y' button</description>
 					<posx>370</posx>
 					<onleft>84</onleft>
@@ -119,7 +118,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 				
-				<control type="button" id="85">
+				<control type="button" id="126">
 					<description>'U' button</description>
 					<posx>444</posx>
 					<onleft>89</onleft>
@@ -129,7 +128,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 				
-				<control type="button" id="73">
+				<control type="button" id="127">
 					<description>'I' button</description>
 					<posx>518</posx>
 					<onleft>85</onleft>
@@ -139,7 +138,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 				
-				<control type="button" id="79">
+				<control type="button" id="128">
 					<description>'O' button</description>
 					<posx>592</posx>
 					<onleft>73</onleft>
@@ -149,7 +148,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 				
-				<control type="button" id="80">
+				<control type="button" id="129">
 					<description>'P' button</description>
 					<posx>666</posx>
 					<onleft>79</onleft>
@@ -172,7 +171,7 @@
 					<include>Common_Keyboard_Button2</include>
 				</control>
 				
-				<control type="button" id="65">
+				<control type="button" id="140">
 					<description>'A' button</description>
 					<posx>25</posx>
 					<posy>62</posy>
@@ -183,7 +182,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 				
-				<control type="button" id="83">
+				<control type="button" id="141">
 					<description>'S' button</description>
 					<posx>99</posx>
 					<posy>62</posy>
@@ -194,7 +193,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 				
-				<control type="button" id="68">
+				<control type="button" id="142">
 					<description>'D' button</description>
 					<posx>173</posx>
 					<posy>62</posy>
@@ -205,7 +204,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 				
-				<control type="button" id="70">
+				<control type="button" id="143">
 					<description>'F' button</description>
 					<posx>247</posx>
 					<posy>62</posy>
@@ -216,7 +215,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 				
-				<control type="button" id="71">
+				<control type="button" id="144">
 					<description>'G' button</description>   
 					<posx>321</posx>
 					<posy>62</posy>
@@ -227,7 +226,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 
-				<control type="button" id="72">
+				<control type="button" id="145">
 					<description>'H' button</description>
 					<posx>395</posx>
 					<posy>62</posy>
@@ -238,7 +237,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 				
-				<control type="button" id="74">
+				<control type="button" id="146">
 					<description>'J' button</description>
 					<posx>469</posx>
 					<posy>62</posy>
@@ -249,7 +248,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 				
-				<control type="button" id="75">
+				<control type="button" id="147">
 					<description>'K' button</description>
 					<posx>543</posx>
 					<posy>62</posy>
@@ -260,7 +259,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 
-				<control type="button" id="76">
+				<control type="button" id="148">
 					<description>'L' button</description>
 					<posx>617</posx>
 					<posy>62</posy>
@@ -307,7 +306,7 @@
 					<radioposy>12</radioposy>
 				</control>
 				
-				<control type="button" id="90">
+				<control type="button" id="160">
 					<description>'Z' button</description>
 					<posx>74</posx>
 					<posy>124</posy>
@@ -318,7 +317,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 				
-				<control type="button" id="88">
+				<control type="button" id="161">
 					<description>'X' button</description>
 					<posx>148</posx>
 					<posy>124</posy>
@@ -329,7 +328,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 				
-				<control type="button" id="67">
+				<control type="button" id="162">
 					<description>'C' button</description>
 					<posx>222</posx>
 					<posy>124</posy>
@@ -340,7 +339,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 				
-				<control type="button" id="86">
+				<control type="button" id="163">
 					<description>'V' button</description>
 					<posx>296</posx>
 					<posy>124</posy>
@@ -351,7 +350,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 				
-				<control type="button" id="66">
+				<control type="button" id="164">
 					<description>'B' button</description>
 					<posx>370</posx>
 					<posy>124</posy>
@@ -362,7 +361,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 				
-				<control type="button" id="78">
+				<control type="button" id="165">
 					<description>'N' button</description>
 					<posx>444</posx>
 					<posy>124</posy>
@@ -373,7 +372,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 				
-				<control type="button" id="77">
+				<control type="button" id="166">
 					<description>'M' button</description>
 					<posx>518</posx>
 					<posy>124</posy>
@@ -504,7 +503,7 @@
 				</control>
 			
 				
-				<control type="button" id="55">
+				<control type="button" id="106">
 					<description>'7' button</description>
 					<posx>908</posx>
 					<onleft>8</onleft>
@@ -514,7 +513,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 
-				<control type="button" id="56">
+				<control type="button" id="107">
 					<description>'8' button</description>
 					<posx>982</posx>
 					<onleft>55</onleft>
@@ -524,7 +523,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 
-				<control type="button" id="57">
+				<control type="button" id="108">
 					<description>'9' button</description>
 					<posx>1056</posx>
 					<onleft>56</onleft>
@@ -534,7 +533,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 				
-				<control type="button" id="52">
+				<control type="button" id="103">
 					<description>'4' button</description>
 					<posx>908</posx>
 					<posy>62</posy>
@@ -545,7 +544,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 
-				<control type="button" id="53">
+				<control type="button" id="104">
 					<description>'5' button</description>
 					<posx>982</posx>
 					<posy>62</posy>
@@ -556,7 +555,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 
-				<control type="button" id="54">
+				<control type="button" id="105">
 					<description>'6' button</description>
 					<posx>1056</posx>
 					<posy>62</posy>
@@ -567,7 +566,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 				
-				<control type="button" id="49">
+				<control type="button" id="100">
 					<description>'1' button</description>
 					<posx>908</posx>
 					<posy>124</posy>
@@ -578,7 +577,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 
-				<control type="button" id="50">
+				<control type="button" id="101">
 					<description>'2' button</description>
 					<posx>982</posx>
 					<posy>124</posy>
@@ -589,7 +588,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 
-				<control type="button" id="51">
+				<control type="button" id="102">
 					<description>'3' button</description>
 					<posx>1056</posx>
 					<posy>124</posy>
@@ -600,7 +599,7 @@
 					<include>Common_Keyboard_Button</include>
 				</control>
 				
-				<control type="button" id="48">
+				<control type="button" id="109">
 					<description>'0' button</description>
 					<posx>908</posx>
 					<posy>186</posy>

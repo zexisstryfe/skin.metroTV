@@ -205,16 +205,21 @@
 				<label>$LOCALIZE[1022]</label>
 			</control>
 
-			<control type="button" id="12">
+			<control type="edit" id="12">
 				<description>Name</description>
 				<posx>205</posx>
 				<posy>448</posy>
-				<label>-</label>
+				<height>44</height>
 				<width>440</width>
-				<align>left</align>
-				<textoffsetx>20</textoffsetx>
-				<texturenofocus colordiffuse="Editback">colors/color_white.png</texturenofocus>
 				<font>font20</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>Black</textcolor>
+				<focusedcolor>White</focusedcolor>
+				<textoffsetx>20</textoffsetx>
+				<texturenofocus border="2" colordiffuse="Editback">colors/color_white.png</texturenofocus>
+				<texturefocus border="5" colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>
+				<pulseonselect>false</pulseonselect>
 				<onup>10</onup>
 				<onleft>12</onleft>
 				<onright>18</onright>

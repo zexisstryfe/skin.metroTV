@@ -76,17 +76,17 @@
 		</control>
 		
 		<control type="image">
-			<description>xbmc</description>
+			<description>KODI</description>
 			<posx>40</posx>
 			<posy>-10</posy>
 			<width>250</width>
 			<height>100</height>
 			<visible>true</visible>
 			<aspectratio>keep</aspectratio>
-			<texture border="2">general/xbmc.png</texture>			
+			<texture border="2">general/kodi.png</texture>			
 			<include>Animation_Home_Fade</include>
 			<visible>Window.IsActive(0)</visible>
-		</control>	
+		</control>		
 		
 		<control type="button">
 			<description>invisible settings</description>

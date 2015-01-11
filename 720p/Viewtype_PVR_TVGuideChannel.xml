@@ -8,7 +8,7 @@
 		
         <control type="group">
 			<description>TV Guide Channel</description>
-            <visible>Control.IsVisible(15)</visible>
+            <visible>Control.IsVisible(13)</visible>
 			
             <control type="group">
 				<animation effect="fade" time="400">VisibleChange</animation>
@@ -21,7 +21,7 @@
 					<description>horizontal bar</description>
 					<posy>210</posy>
 					<width>1280</width>
-					<height>433</height>
+					<height>483</height>
 					<include>Common_Color_Tile1</include>
 				</control>
 				
@@ -63,7 +63,7 @@
 						<label>[B]$LOCALIZE[126][/B]</label>
 					</control>
 					
-					<control type="list" id="15">
+					<control type="list" id="13">
 						<posy>45</posy>
 						<width>1100</width>
 						<height>327</height>

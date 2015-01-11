@@ -143,6 +143,13 @@
 				<width>200</width>
 				<font>font20</font>
 			</control>
+			
+			<control type="sliderex" id="13">
+				<description>Default Sliderex Button</description>
+				<align>left</align>
+				<width>200</width>
+				<font>font20</font>
+			</control>
 		
 			<control type="label" id="2">
 				<description>Fake Label so we can pass it value on</description>

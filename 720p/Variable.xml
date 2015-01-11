@@ -13,7 +13,7 @@
 		<value condition="Window.IsActive(MyPrograms.xml)">splash/splash_program.png</value>
 		<value condition="Window.IsActive(AddonBrowser.xml)">splash/splash_store.png</value>
 		<value condition="Window.IsActive(MyWeather.xml)">splash/splash_weather.png</value>
-		<value condition="Window.IsActive(MyPVR.xml)">splash/splash_livetv.png</value>
+		<value condition="Window.IsActive(MyPVRChannels.xml) | Window.IsActive(MyPVRGuide.xml) | Window.IsActive(MyPVRRecordings.xml) | Window.IsActive(MyPVRSearch.xml) | Window.IsActive(MyPVRTimers.xml)">splash/splash_livetv.png</value>
 		<value condition="Window.IsActive(Startup.xml)">splash/splash_startup.png</value>
 		<value condition="Window.IsActive(script-Rom_Collection_Browser-main.xml)">splash/splash_games.png</value>
 	</variable>
@@ -66,6 +66,7 @@
 		<value condition="Container.Content(actors)">$LOCALIZE[344]</value>
 		<value condition="Container.Content(studios)">$LOCALIZE[20388]</value>
 		<value condition="Container.Content(directors)">$LOCALIZE[20348]</value>
+		<value condition="Window.IsVisible(home.xml)">$LOCALIZE[31256]</value>
 		<value condition="Window.IsVisible(mypics.xml)">$LOCALIZE[1]</value>
 		<value condition="Window.IsVisible(mypvr.xml)">$LOCALIZE[31012]</value>
 		<value condition="Window.IsVisible(filemanager.xml)">$LOCALIZE[10003]</value>
@@ -78,6 +79,11 @@
 		<value condition="Window.IsVisible(mymusicplaylist.xml) | Window.IsVisible(mymusicplaylisteditor.xml) | Window.IsActive(63)">$LOCALIZE[2]</value>
 		<value condition="Window.IsVisible(script-Rom_Collection_Browser-main.xml)">$LOCALIZE[15016]</value>
 		<value condition="Window.IsVisible(Custom_Hub_TraktTV.xml)">$LOCALIZE[31215]</value>
+		<value condition="Window.IsVisible(mypvrguide.xml)">$LOCALIZE[31103]</value>
+		<value condition="Window.IsVisible(mypvrchannels.xml)">$LOCALIZE[19023]</value>
+		<value condition="Window.IsVisible(mypvrrecordings.xml)">$LOCALIZE[19017]</value>
+		<value condition="Window.IsVisible(mypvrsearch.xml)">$LOCALIZE[137]</value>
+		<value condition="Window.IsVisible(mypvrtimers.xml)">$LOCALIZE[31106]</value>
 	</variable>
 	
 	<variable name="Disabled_ColorDiffuse">

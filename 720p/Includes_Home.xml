@@ -687,9 +687,7 @@
 				<onleft>509</onleft>
 				<onright condition="Control.IsVisible(654)">654</onright>				
 				<onright condition="!Control.IsVisible(654)">69</onright>
-				<onclick>ActivateWindow(PVR)</onclick>
-				<onclick>Setfocus(31)</onclick>
-				<onclick>Setfocus(11)</onclick>
+				<onclick>ActivateWindow(TVGuide)</onclick>
 			</control>	
 			
 			<control type="image">
@@ -738,20 +736,12 @@
 				<ondown condition="Control.IsVisible(655)">655</ondown>
 				<onleft>651</onleft>
 				<onright>69</onright>
-				<onclick condition="Skin.String(LiveTVTile2,ChannelList)">ActivateWindow(PVR)</onclick>
-				<onclick condition="Skin.String(LiveTVTile2,ChannelList)">Setfocus(31)</onclick>
-				<onclick condition="Skin.String(LiveTVTile2,ChannelList)">Setfocus(10)</onclick>
+				<onclick condition="Skin.String(LiveTVTile2,ChannelList)">ActivateWindow(TVChannels)</onclick>
 				<onclick condition="Skin.String(LiveTVTile2,Favourites)">ActivateWindow(Favourites)</onclick>
-				<onclick condition="Skin.String(LiveTVTile2,RadioList)">ActivateWindow(PVR)</onclick>
-				<onclick condition="Skin.String(LiveTVTile2,RadioList)">Setfocus(33)</onclick>
-				<onclick condition="Skin.String(LiveTVTile2,RadioList)">Setfocus(12)</onclick>
-				<onclick condition="Skin.String(LiveTVTile2,Recording)">ActivateWindow(PVR)</onclick>
-				<onclick condition="Skin.String(LiveTVTile2,Recording)">Setfocus(34)</onclick>
-				<onclick condition="Skin.String(LiveTVTile2,Recording)">Setfocus(14)</onclick>
+				<onclick condition="Skin.String(LiveTVTile2,RadioList)">ActivateWindow(RadioChannels)</onclick>
+				<onclick condition="Skin.String(LiveTVTile2,Recording)">ActivateWindow(TVRecordings)</onclick>
 				<onclick condition="Skin.String(LiveTVTile2,Settings)">ActivateWindow(Settings)</onclick>
-				<onclick condition="Skin.String(LiveTVTile2,Timers)">ActivateWindow(PVR)</onclick>
-				<onclick condition="Skin.String(LiveTVTile2,Timers)">Setfocus(35)</onclick>
-				<onclick condition="Skin.String(LiveTVTile2,Timers)">Setfocus(14)</onclick>
+				<onclick condition="Skin.String(LiveTVTile2,Timers)">ActivateWindow(TVTimers)</onclick>
 				<onclick condition="Skin.String(LiveTVTile2,VideoAddons)">ActivateWindow(Videos,Addons,return)</onclick>
 				<onclick condition="Skin.String(LiveTVTile2,VideoFiles)">ActivateWindow(Videos,Files,return)</onclick>
 			</control>	
@@ -791,20 +781,12 @@
 				<onright condition="Control.IsVisible(653)">653</onright>
 				<onright condition="!Control.IsVisible(653) + Control.IsVisible(655)">655</onright>
 				<onright condition="!Control.IsVisible(653) + !Control.IsVisible(655)">69</onright>
-				<onclick condition="Skin.String(LiveTVTile3,ChannelList)">ActivateWindow(PVR)</onclick>
-				<onclick condition="Skin.String(LiveTVTile3,ChannelList)">Setfocus(31)</onclick>
-				<onclick condition="Skin.String(LiveTVTile3,ChannelList)">Setfocus(10)</onclick>
+				<onclick condition="Skin.String(LiveTVTile3,ChannelList)">ActivateWindow(TVChannels)</onclick>
 				<onclick condition="Skin.String(LiveTVTile3,Favourites)">ActivateWindow(Favourites)</onclick>
-				<onclick condition="Skin.String(LiveTVTile3,RadioList)">ActivateWindow(PVR)</onclick>
-				<onclick condition="Skin.String(LiveTVTile3,RadioList)">Setfocus(33)</onclick>
-				<onclick condition="Skin.String(LiveTVTile3,RadioList)">Setfocus(12)</onclick>
-				<onclick condition="Skin.String(LiveTVTile3,Recording)">ActivateWindow(PVR)</onclick>
-				<onclick condition="Skin.String(LiveTVTile3,Recording)">Setfocus(34)</onclick>
-				<onclick condition="Skin.String(LiveTVTile3,Recording)">Setfocus(14)</onclick>
+				<onclick condition="Skin.String(LiveTVTile3,RadioList)">ActivateWindow(RadioChannels)</onclick>
+				<onclick condition="Skin.String(LiveTVTile3,Recording)">ActivateWindow(TVRecordings)</onclick>
 				<onclick condition="Skin.String(LiveTVTile3,Settings)">ActivateWindow(Settings)</onclick>
-				<onclick condition="Skin.String(LiveTVTile3,Timers)">ActivateWindow(PVR)</onclick>
-				<onclick condition="Skin.String(LiveTVTile3,Timers)">Setfocus(35)</onclick>
-				<onclick condition="Skin.String(LiveTVTile3,Timers)">Setfocus(14)</onclick>
+				<onclick condition="Skin.String(LiveTVTile3,Timers)">ActivateWindow(TVTimers)</onclick>
 				<onclick condition="Skin.String(LiveTVTile3,VideoAddons)">ActivateWindow(Videos,Addons,return)</onclick>
 				<onclick condition="Skin.String(LiveTVTile3,VideoFiles)">ActivateWindow(Videos,Files,return)</onclick>
 			</control>
@@ -844,22 +826,14 @@
 				<onleft condition="!Control.IsVisible(652)">509</onleft>
 				<onright condition="Control.IsVisible(655)">655</onright>
 				<onright condition="!Control.IsVisible(655)">69</onright>						
-				<onclick condition="Skin.String(LiveTVTile4,ChannelList)">ActivateWindow(PVR)</onclick>
-				<onclick condition="Skin.String(LiveTVTile4,ChannelList)">Setfocus(31)</onclick>
-				<onclick condition="Skin.String(LiveTVTile4,ChannelList)">Setfocus(10)</onclick>
+				<onclick condition="Skin.String(LiveTVTile4,ChannelList)">ActivateWindow(TVChannels)</onclick>
 				<onclick condition="Skin.String(LiveTVTile4,Favourites)">ActivateWindow(Favourites)</onclick>
-				<onclick condition="Skin.String(LiveTVTile4,RadioList)">ActivateWindow(PVR)</onclick>
-				<onclick condition="Skin.String(LiveTVTile4,RadioList)">Setfocus(33)</onclick>
-				<onclick condition="Skin.String(LiveTVTile4,RadioList)">Setfocus(12)</onclick>
-				<onclick condition="Skin.String(LiveTVTile4,Recording)">ActivateWindow(PVR)</onclick>
-				<onclick condition="Skin.String(LiveTVTile4,Recording)">Setfocus(34)</onclick>
-				<onclick condition="Skin.String(LiveTVTile4,Recording)">Setfocus(14)</onclick>
+				<onclick condition="Skin.String(LiveTVTile4,RadioList)">ActivateWindow(RadioChannels)</onclick>
+				<onclick condition="Skin.String(LiveTVTile4,Recording)">ActivateWindow(TVRecordings)</onclick>
 				<onclick condition="Skin.String(LiveTVTile4,Settings)">ActivateWindow(Settings)</onclick>
-				<onclick condition="Skin.String(LiveTVTile4,Timers)">ActivateWindow(PVR)</onclick>
-				<onclick condition="Skin.String(LiveTVTile4,Timers)">Setfocus(35)</onclick>
-				<onclick condition="Skin.String(LiveTVTile4,Timers)">Setfocus(14)</onclick>
+				<onclick condition="Skin.String(LiveTVTile4,Timers)">ActivateWindow(TVTimers)</onclick>
 				<onclick condition="Skin.String(LiveTVTile4,VideoAddons)">ActivateWindow(Videos,Addons,return)</onclick>
-				<onclick condition="Skin.String(LiveTVTile4,VideoFiles)">ActivateWindow(Videos,Files,return)</onclick>			
+				<onclick condition="Skin.String(LiveTVTile4,VideoFiles)">ActivateWindow(Videos,Files,return)</onclick>		
 			</control>	
 			
 			<control type="label">
@@ -897,22 +871,14 @@
 				<onleft condition="!Control.IsVisible(653) + Control.IsVisible(652)">652</onleft>
 				<onleft condition="!Control.IsVisible(653) + !Control.IsVisible(652)">509</onleft>
 				<onright>69</onright>
-				<onclick condition="Skin.String(LiveTVTile5,ChannelList)">ActivateWindow(PVR)</onclick>
-				<onclick condition="Skin.String(LiveTVTile5,ChannelList)">Setfocus(31)</onclick>
-				<onclick condition="Skin.String(LiveTVTile5,ChannelList)">Setfocus(10)</onclick>
+				<onclick condition="Skin.String(LiveTVTile5,ChannelList)">ActivateWindow(TVChannels)</onclick>
 				<onclick condition="Skin.String(LiveTVTile5,Favourites)">ActivateWindow(Favourites)</onclick>
-				<onclick condition="Skin.String(LiveTVTile5,RadioList)">ActivateWindow(PVR)</onclick>
-				<onclick condition="Skin.String(LiveTVTile5,RadioList)">Setfocus(33)</onclick>
-				<onclick condition="Skin.String(LiveTVTile5,RadioList)">Setfocus(12)</onclick>
-				<onclick condition="Skin.String(LiveTVTile5,Recording)">ActivateWindow(PVR)</onclick>
-				<onclick condition="Skin.String(LiveTVTile5,Recording)">Setfocus(34)</onclick>
-				<onclick condition="Skin.String(LiveTVTile5,Recording)">Setfocus(14)</onclick>
+				<onclick condition="Skin.String(LiveTVTile5,RadioList)">ActivateWindow(RadioChannels)</onclick>
+				<onclick condition="Skin.String(LiveTVTile5,Recording)">ActivateWindow(TVRecordings)</onclick>
 				<onclick condition="Skin.String(LiveTVTile5,Settings)">ActivateWindow(Settings)</onclick>
-				<onclick condition="Skin.String(LiveTVTile5,Timers)">ActivateWindow(PVR)</onclick>
-				<onclick condition="Skin.String(LiveTVTile5,Timers)">Setfocus(35)</onclick>
-				<onclick condition="Skin.String(LiveTVTile5,Timers)">Setfocus(14)</onclick>
+				<onclick condition="Skin.String(LiveTVTile5,Timers)">ActivateWindow(TVTimers)</onclick>
 				<onclick condition="Skin.String(LiveTVTile5,VideoAddons)">ActivateWindow(Videos,Addons,return)</onclick>
-				<onclick condition="Skin.String(LiveTVTile5,VideoFiles)">ActivateWindow(Videos,Files,return)</onclick>			
+				<onclick condition="Skin.String(LiveTVTile5,VideoFiles)">ActivateWindow(Videos,Files,return)</onclick>		
 			</control>
 			
 			<control type="label">
@@ -2469,7 +2435,7 @@
 				<include>HomePanel_Poster</include>
 				
 				<control type="textbox">
-					<label>$INFO[ListItem.Label2][COLOR Black] $INFO[ListItem.Label][/COLOR]</label>
+					<label>$INFO[ListItem.Label2][COLOR Editback] $INFO[ListItem.Label][/COLOR]</label>
 					<posx>15</posx>
 					<posy>270</posy>
 					<height>45</height>
@@ -2602,7 +2568,7 @@
 				<include>HomePanel_Poster</include>
 				
 				<control type="textbox">
-					<label>$INFO[ListItem.Label2][COLOR Black] $INFO[ListItem.Label][/COLOR]</label>
+					<label>$INFO[ListItem.Label2][COLOR Editback] $INFO[ListItem.Label][/COLOR]</label>
 					<posx>15</posx>
 					<posy>270</posy>
 					<height>45</height>
@@ -2736,7 +2702,7 @@
 				<include>HomePanel_Poster</include>
 				
 				<control type="textbox">
-					<label>$INFO[ListItem.Label2][COLOR Black] $INFO[ListItem.Label][/COLOR]</label>
+					<label>$INFO[ListItem.Label2][COLOR Editback] $INFO[ListItem.Label][/COLOR]</label>
 					<posx>15</posx>
 					<posy>270</posy>
 					<height>45</height>
@@ -2896,7 +2862,7 @@
 			<include>HomePanel_Poster_Focus</include>
 			
 			<control type="textbox">
-				<label>$INFO[ListItem.Label][COLOR Black] $INFO[ListItem.Label2][/COLOR]</label>
+				<label>$INFO[ListItem.Label][COLOR Editback] $INFO[ListItem.Label2][/COLOR]</label>
 				<posx>15</posx>
 				<posy>270</posy>
 				<height>45</height>
@@ -3348,7 +3314,7 @@
 			<include>HomePanel_Thumbnail</include>
 			
 			<control type="textbox">
-				<label>$INFO[ListItem.Label2][CR][COLOR Black] $INFO[ListItem.Label][/COLOR]</label>
+				<label>$INFO[ListItem.Label2][CR][COLOR Editback] $INFO[ListItem.Label][/COLOR]</label>
 				<posx>15</posx>
 				<posy>110</posy>
 				<height>40</height>
@@ -3484,7 +3450,7 @@
 			<include>HomePanel_Thumbnail</include>
 			
 			<control type="textbox">
-				<label>$INFO[ListItem.Label2][CR][COLOR Black] $INFO[ListItem.Label][/COLOR]</label>
+				<label>$INFO[ListItem.Label2][CR][COLOR Editback] $INFO[ListItem.Label][/COLOR]</label>
 				<posx>15</posx>
 				<posy>110</posy>
 				<height>40</height>
@@ -3620,7 +3586,7 @@
 			<include>HomePanel_Thumbnail</include>
 			
 			<control type="textbox">
-				<label>$INFO[ListItem.Label2][CR][COLOR Black] $INFO[ListItem.Label][/COLOR]</label>
+				<label>$INFO[ListItem.Label2][CR][COLOR Editback] $INFO[ListItem.Label][/COLOR]</label>
 				<posx>15</posx>
 				<posy>110</posy>
 				<height>40</height>
@@ -3776,8 +3742,8 @@
 					<height>60</height>
 					<label>$INFO[ListItem.Label]</label>
 					<font>font16UB</font>
-					<textcolor>$VAR[Accent_100]</textcolor>
 					<shadowcolor>00FFFFFF</shadowcolor>
+					<textcolor>White</textcolor>
 					<align>center</align>
 					<autoscroll>true</autoscroll>
 				</control>
@@ -3958,7 +3924,7 @@
 			<include>HomePanel_Poster</include>
 		
 			<control type="textbox">
-				<label>$INFO[ListItem.Label2][COLOR Black] $INFO[ListItem.Label][/COLOR]</label>
+				<label>$INFO[ListItem.Label2][COLOR Editback] $INFO[ListItem.Label][/COLOR]</label>
 				<posx>15</posx>
 				<posy>270</posy>
 				<height>45</height>
@@ -4291,7 +4257,7 @@
 				<font>font70L</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<label> [COLOR Black]$INFO[PVR.NowRecordingTitle][/COLOR] $INFO[PVR.NowRecordingChannel]</label>
+				<label> [COLOR Editback]$INFO[PVR.NowRecordingTitle][/COLOR] $INFO[PVR.NowRecordingChannel]</label>
 			</control>
 			
 		</control>
@@ -4341,7 +4307,7 @@
 				<font>font70L</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<label> [COLOR Black]$INFO[PVR.NextRecordingTitle][/COLOR] $INFO[PVR.NextRecordingChannel]</label>
+				<label> [COLOR Editback]$INFO[PVR.NextRecordingTitle][/COLOR] $INFO[PVR.NextRecordingChannel]</label>
 			</control>
 			
 		</control>
@@ -5103,7 +5069,7 @@
 			<include>HomePanel_Thumbnail</include>
 			
 			<control type="textbox">
-				<label>$INFO[ListItem.Label2][CR][COLOR Black] $INFO[ListItem.Label][/COLOR]</label>
+				<label>$INFO[ListItem.Label2][CR][COLOR Editback] $INFO[ListItem.Label][/COLOR]</label>
 				<posx>15</posx>
 				<posy>110</posy>
 				<height>40</height>
@@ -5239,7 +5205,7 @@
 			<include>HomePanel_Thumbnail</include>
 			
 			<control type="textbox">
-				<label>$INFO[ListItem.Label2][CR][COLOR Black] $INFO[ListItem.Label][/COLOR]</label>
+				<label>$INFO[ListItem.Label2][CR][COLOR Editback] $INFO[ListItem.Label][/COLOR]</label>
 				<posx>15</posx>
 				<posy>110</posy>
 				<height>40</height>
@@ -5375,7 +5341,7 @@
 			<include>HomePanel_Thumbnail</include>
 			
 			<control type="textbox">
-				<label>$INFO[ListItem.Label2][CR][COLOR Black] $INFO[ListItem.Label][/COLOR]</label>
+				<label>$INFO[ListItem.Label2][CR][COLOR Editback] $INFO[ListItem.Label][/COLOR]</label>
 				<posx>15</posx>
 				<posy>110</posy>
 				<height>40</height>
@@ -5522,7 +5488,7 @@
 			<include>HomePanel_Poster</include>
 			
 			<control type="textbox">
-				<label>$INFO[ListItem.Label2][COLOR Black] $INFO[ListItem.Label][/COLOR]</label>
+				<label>$INFO[ListItem.Label2][COLOR Editback] $INFO[ListItem.Label][/COLOR]</label>
 				<posx>15</posx>
 				<posy>270</posy>
 				<height>45</height>

@@ -39,7 +39,7 @@
 				<include>Common_Color_Keyback2</include>
 			</control>
 
-			<control type="label" id="3">
+			<control type="label">
 				<description>No Settings Label</description>
 				<posx>215</posx>
 				<posy>200</posy>
@@ -78,7 +78,7 @@
 				<reverse>yes</reverse>
 			</control>
 
-			<control type="sliderex" id="10">
+			<control type="sliderex" id="13">
 				<description>Default Slider</description>
 				<width>485</width>
 				<align>left</align>

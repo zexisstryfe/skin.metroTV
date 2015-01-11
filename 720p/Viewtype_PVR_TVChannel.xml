@@ -105,7 +105,7 @@
 					<width>810</width>
 					<height>327</height>
 					<onleft condition="Player.HasMedia">111</onleft>
-					<onleft condition="!Player.HasMedia">32</onleft>
+					<onleft condition="!Player.HasMedia">9000</onleft>
 					<onright>70</onright>
 					<onup>11</onup>
 					<ondown>11</ondown>
@@ -157,7 +157,6 @@
 						</control>
 						
 						<control type="label">
-							<posx>32</posx>
 							<width>65</width>
 							<align>center</align>
 							<font>font20UB</font>
@@ -235,7 +234,6 @@
 						</control>
 						
 						<control type="label">
-							<posx>32</posx>
 							<width>65</width>
 							<align>center</align>
 							<font>font20UB</font>
@@ -285,7 +283,7 @@
 					<height>325</height>
 					<width>5</width>
 					<onright condition="Player.HasMedia">111</onright>
-					<onright condition="!Player.HasMedia">32</onright>
+					<onright condition="!Player.HasMedia">9000</onright>
 					<onleft>11</onleft>
 				</control>
 				

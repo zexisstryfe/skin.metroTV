@@ -9,7 +9,7 @@
 	<onload condition="System.HasAddon(script.extendedinfo) + Container.Content(movies)">RunScript(script.extendedinfo,info=comments,dbid=$INFO[ListItem.DBID],type=movie)</onload>
 	<onload condition="System.HasAddon(script.extendedinfo) + Container.Content(tvshows)">RunScript(script.extendedinfo,info=comments,dbid=$INFO[ListItem.DBID],type=tvshow)</onload>
 	<onload condition="System.HasAddon(script.extendedinfo) + Container.Content(episodes)">RunScript(script.extendedinfo,info=episodecomments,show=$INFO[ListItem.TVshowTitle],type=episode,season=$INFO[ListItem.Season],episode=$INFO[ListItem.Episode])</onload>
-	<onload condition="System.HasAddon(script.extendedinfo) + Container.Content(movies)">RunScript(script.extendedinfo,info=similarmovies,dbid=$INFO[ListItem.DBID],type=movie)</onload>
+	<onload condition="System.HasAddon(script.extendedinfo) + Container.Content(movies)">RunScript(script.extendedinfo,info=similarmoviestrakt,dbid=$INFO[ListItem.DBID])</onload>
 	<onload condition="System.HasAddon(script.extendedinfo) + Container.Content(tvshows)">RunScript(script.extendedinfo,info=similar,dbid=$INFO[ListItem.DBID],type=tvshow)</onload>
 	<onload condition="System.HasAddon(script.videoextras)">XBMC.RunScript(script.videoextras,check,"$INFO[ListItem.FilenameAndPath]")</onload>
 	<onload condition="Skin.HasSetting(ShowTVTunesNotification) + System.HasAddon(script.tvtunes)">XBMC.RunScript(script.tvtunes,backend=True)</onload>
@@ -332,7 +332,21 @@
 						<texturefocus colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>
 						<texturenofocus colordiffuse="Keyback1">colors/color_white.png</texturenofocus>
 						<onleft>8</onleft>
-						<onright>50</onright>						
+						<onright>50</onright>	
+						<onfocus>Dialog.Close(movieinformation)</onfocus>
+						<onfocus>RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[ListItem.DBID])</onfocus>
+						<visible>Container.Content(movies)</visible>
+					</control>
+					
+					<control type="button" id="9001">	
+						<posy>60</posy>
+						<width>300</width>
+						<height>510</height>
+						<texturefocus colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>
+						<texturenofocus colordiffuse="Keyback1">colors/color_white.png</texturenofocus>
+						<onleft>8</onleft>
+						<onright>50</onright>
+						<visible>!Container.Content(movies)</visible>
 					</control>
 					
 					<control type="image">							
@@ -697,7 +711,7 @@
 				<control type="group">			
 					<width>790</width>
 					<height>560</height>					
-					<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+					<visible>Container.Content(movies)</visible>
 				
 					<control type="label">							
 						<label>$LOCALIZE[31237]</label>

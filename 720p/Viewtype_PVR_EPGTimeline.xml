@@ -43,186 +43,6 @@
 				<textcolor>$VAR[Accent_100]</textcolor>
             </control>
 			
-            <!--<control type="epggrid" id="10">
-                <description>EPG Grid</description>
-                <posy>58</posy>
-                <width>1204</width>
-                <height>325</height>
-                <pagecontrol>10</pagecontrol>
-				<progresstexture border="5">$VAR[Accent_60]</progresstexture>
-                <scrolltime tween="quadratic">300</scrolltime>
-                <scrolltime>350</scrolltime>
-                <timeblocks>40</timeblocks>
-                <rulerunit>6</rulerunit>
-                <onleft>31</onleft>
-                <onright>31</onright>
-                <onup>10</onup>
-                <ondown>10</ondown>				
-                <rulerlayout height="47" width="40">
-				
-                    <control type="label" id="2">
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>40</width>
-						<font>font20UB</font>
-                        <label>|   $INFO[ListItem.Label]</label>
-                    </control>
-					
-                </rulerlayout>
-				
-                <channellayout height="47" width="240">
-                    <animation effect="fade" start="110" time="200">OnFocus</animation>
-					
-					<control type="image">
-						<width>65</width>
-						<height>45</height>
-						<include>Common_Color_Keyback2</include>
-					</control>
-					
-					<control type="image">
-						<posx>67</posx>
-						<width>200</width>
-						<height>45</height>
-						<include>Common_Color_Keyback2</include>
-					</control>
-					
-					<control type="label">
-						<posx>87</posx>
-						<width>160</width>
-						<font>font20UB</font>
-						<label>$INFO[ListItem.ChannelName]</label>
-					</control>
-					
-					<control type="label">
-						<posx>32</posx>
-						<width>65</width>
-						<align>center</align>
-						<font>font20UB</font>
-						<label>[B]$INFO[ListItem.ChannelNumber][/B]</label>						
-					</control>
-					
-                </channellayout>
-				
-                <focusedchannellayout height="47" width="280">
-                    <animation effect="fade" start="110" time="200">OnFocus</animation>
-					
-					<control type="image">
-						<width>65</width>
-						<height>45</height>
-						<include>Common_Color_Accent</include>
-					</control>
-					
-					<control type="image">
-						<posx>67</posx>
-						<width>200</width>
-						<height>45</height>
-						<include>Common_Color_Accent</include>
-					</control>
-					
-					<control type="label">
-						<posx>87</posx>
-						<width>160</width>
-						<font>font20UB</font>
-						<label>$INFO[ListItem.ChannelName]</label>
-					</control>
-					
-					<control type="label">
-						<posx>32</posx>
-						<width>65</width>
-						<align>center</align>
-						<font>font20UB</font>
-						<label>[B]$INFO[ListItem.ChannelNumber][/B]</label>						
-					</control>
-					
-                </focusedchannellayout>
-				
-                <itemlayout height="47" width="142">
-				
- 					<control type="image" id="2">
-						<posx>2</posx>
-						<width>140</width>
-						<height>45</height>
-						<include>Common_Color_Keyback1</include>
-					</control>
-					
-					<control type="image" id="2">
-						<posx>2</posx>
-						<width>140</width>
-						<height>45</height>
-						<aspectratio>stretch</aspectratio>
-						<texture border="5">colors/color_maroon.png</texture>
-						<visible>ListItem.IsRecording</visible>
-					</control>
-					
-					<control type="label" id="1">
-                        <posx>10</posx>
-                        <width>120</width>
-						<font>font20</font>
-                        <info>ListItem.Label</info>
-                    </control>
-					
-                    <control type="image">
-                        <posx>5</posx>
-                        <posy>28</posy>
-                        <width>30</width>
-                        <height>20</height>
-                        <texture>tiles/recordings.png</texture>
-                        <visible>ListItem.IsRecording</visible>
-                    </control>
-					
-                    <control type="image">
-                        <posx>5</posx>
-                        <posy>28</posy>
-                        <width>20</width>
-                        <height>20</height>
-                        <texture>tiles/recent.png</texture>
-                        <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
-                    </control>
-					
-                </itemlayout>
-				
-                <focusedlayout height="45" width="142">
-				
-				 	<control type="image" id="2">
-						<posx>2</posx>
-						<width>140</width>
-						<height>45</height>
-						<include>Common_Color_Accent</include>
-					</control>
-					
-                    <control type="label" id="1">
-                        <posx>10</posx>
-                        <width>120</width>
-						<font>font20</font>
-                        <label>$INFO[ListItem.Label]</label>
-                    </control>
-					
-                    <control type="image">
-                        <posx>5</posx>
-                        <posy>28</posy>
-                        <width>30</width>
-                        <height>20</height>
-                        <texture>tiles/recordings.png</texture>
-                        <visible>ListItem.IsRecording</visible>
-                    </control>
-					
-                    <control type="image">
-                        <posx>5</posx>
-                        <posy>28</posy>
-                        <width>20</width>
-                        <height>20</height>
-                        <texture>tiles/recent.png</texture>
-                        <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
-                    </control>
-					
-                </focusedlayout>
-				
-            </control>-->
-
-
-
-
-			
 			<control type="epggrid" id="10">
                 <description>EPG Grid</description>
                 <posy>58</posy>
@@ -275,7 +95,7 @@
 					</control>
 					
 					<control type="label">
-						<posx>32</posx>
+						<posx>0</posx>
 						<width>65</width>
 						<align>center</align>
 						<font>font20UB</font>
@@ -308,7 +128,7 @@
 					</control>
 					
 					<control type="label">
-						<posx>32</posx>
+						<posx>0</posx>
 						<width>65</width>
 						<align>center</align>
 						<font>font20UB</font>

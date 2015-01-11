@@ -30,7 +30,8 @@
 	<include file="Viewtype_PVR_TVTimers.xml" />
 	<include file="Viewtype_PVR_TVSearch.xml" />
 	<include file="Viewtype_PVR_TVGuideChannel.xml" />
-	<include file="Viewtype_PVR_TVGuideNowNext.xml" />	
+	<include file="Viewtype_PVR_TVGuideNow.xml" />	
+	<include file="Viewtype_PVR_TVGuideNext.xml" />
 	
 	<!-- Include Files -->
 	<include file="Includes_Animations.xml" />

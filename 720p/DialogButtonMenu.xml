@@ -31,7 +31,7 @@
 				<itemgap>30</itemgap>
 				<onleft>1</onleft>
 				<onright>1</onright>
-				<onup>50</onup>
+				<onup>Dialog.Close(111)</onup>
 				<orientation>horizontal</orientation>
 				
 				<control type="image">

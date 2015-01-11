@@ -19,7 +19,7 @@
 				<include>Common_Color_Keyback1</include>
 			</control>
 
-			<control type="label" id="1000">
+			<control type="label" id="102">
 				<description>Profile Name</description>
 				<posx>460</posx>
 				<width>480</width>
@@ -32,14 +32,14 @@
 				<include>Dialog_Line</include>
 			</control>
 
-			<control type="label" id="1001">
+			<control type="label" id="103">
 				<description>Profile Directory</description>
 				<posx>30</posx>
 				<posy>94</posy>
 				<width>300</width>
 			</control>
 
-			<control type="image" id="2">
+			<control type="image" id="101">
 				<description>profile image</description>
 				<posx>340</posx>
 				<posy>70</posy>

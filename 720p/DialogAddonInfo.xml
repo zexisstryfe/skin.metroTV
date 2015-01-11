@@ -227,7 +227,7 @@
 					<control type="button" id="11">					
 						<include>Common_Control_Button</include>
 						<onup>10</onup>
-						<ondown>6</ondown>
+						<ondown>12</ondown>
 						<onright>9002</onright>						
 					</control>
 					
@@ -239,6 +239,31 @@
 					<control type="label">
 						<include>Common_Control_Label2</include>
 						<label>24048</label>
+					</control>
+					
+				</control>
+				
+				<!--Launch Button-->
+				<control type="group">				
+					<width>400</width>
+					<height>60</height>					
+					<visible>Control.IsEnabled(12)</visible>
+
+					<control type="button" id="12">					
+						<include>Common_Control_Button</include>
+						<onup>11</onup>
+						<ondown>6</ondown>
+						<onright>9002</onright>						
+					</control>
+					
+					<control type="image">
+						<include>Common_Control_Button</include>
+						<texture>icons/play.png</texture>
+					</control>
+					
+					<control type="label">
+						<include>Common_Control_Label2</include>
+						<label>518</label>
 					</control>
 					
 				</control>

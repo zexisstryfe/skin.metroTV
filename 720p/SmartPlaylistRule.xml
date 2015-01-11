@@ -91,17 +91,25 @@
 
 			</control>
 
-			<control type="button" id="17">
+			<control type="edit" id="17">
 				<description>Value Button</description>
 				<posx>40</posx>
 				<posy>176</posy>
 				<width>705</width>
-				<height>48</height>
+				<height>44</height>
+				<font>font20</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>Black</textcolor>
+				<focusedcolor>White</focusedcolor>
+				<textoffsetx>20</textoffsetx>
+				<texturenofocus border="2" colordiffuse="Editback">colors/color_white.png</texturenofocus>
+				<texturefocus border="5" colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>
+				<pulseonselect>false</pulseonselect>
 				<onup>9001</onup>
 				<onleft>20</onleft>
 				<onright>20</onright>
 				<ondown>9000</ondown>
-				<texturenofocus colordiffuse="Editback">colors/color_white.png</texturenofocus>
 			</control>
 			
 			<control type="group">

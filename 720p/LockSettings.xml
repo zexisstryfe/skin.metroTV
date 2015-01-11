@@ -19,7 +19,7 @@
 				<include>Common_Color_Keyback1</include>
 			</control>
 
-			<control type="label">
+			<control type="label" id="2">
 				<description>Header Label</description>
 				<posx>380</posx>
 				<width>400</width>
