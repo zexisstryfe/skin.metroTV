@@ -43,11 +43,11 @@
 					<include>Common_Settings_Button</include>
 					<texturefocus>OSD/RandomOffFO.png</texturefocus>
 					<texturenofocus>OSD/RandomOffNF.png</texturenofocus>
-					<label>$LOCALIZE[31118]</label>
+					<label>$LOCALIZE[31110]</label>
 					<usealttexture>Playlist.IsRandom</usealttexture>
 					<alttexturefocus>OSD/RandomOnFO.png</alttexturefocus>
 					<alttexturenofocus>OSD/RandomOnNF.png</alttexturenofocus>
-					<altlabel>$LOCALIZE[31127]</altlabel>
+					<altlabel>$LOCALIZE[31111]</altlabel>
 					<onclick>playercontrol(random)</onclick>
 				</control>
 

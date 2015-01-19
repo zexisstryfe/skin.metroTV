@@ -403,6 +403,11 @@
 		<aspectratio>stretch</aspectratio>
 	</include>
 	
+	<include name="Common_Color_Accent_60">
+		<texture colordiffuse="$VAR[Accent_60]">colors/color_white.png</texture>
+		<aspectratio>stretch</aspectratio>
+	</include>
+	
 	<include name="Common_Color_Keyback1">
 		<texture colordiffuse="Keyback1">colors/color_white.png</texture>
 		<aspectratio>stretch</aspectratio>
@@ -442,6 +447,14 @@
 		<font>font20UB</font>
 	</include>
 	
+	<include name="Common_Infolist_Label3">
+		<width>170</width>
+		<posx>10</posx>
+		<height>28</height>
+		<textcolor>Black</textcolor>
+		<font>font20UB</font>
+	</include>
+	
 	<include name="Common_Infolist_Info">
 		<posx>140</posx>
 		<width>300</width>
@@ -457,7 +470,7 @@
 	</include>
 	
 	<include name="Common_Infolist_Info3">
-		<posx>120</posx>
+		<posx>180</posx>
 		<width>380</width>
 		<height>28</height>
 		<scroll>true</scroll>
@@ -591,6 +604,15 @@
 		<height>147</height>
 		<fadetime>100</fadetime>
 		<aspectratio>keep</aspectratio>
+	</include>
+	
+	<include name="Common_Fanart_Icon3">
+		<posx>18</posx>
+		<posy>463</posy>
+		<width>240</width>
+		<height>240</height>
+		<fadetime>100</fadetime>
+		<aspectratio align="center" aligny="top">scale</aspectratio>
 	</include>
 	
 	<include name="Common_Fanart_Fadelabel">
@@ -951,14 +973,7 @@
 		</control>	
 		
 	</include>
-	
-	<include name="Common_Infolist_Label3">
-		<width>150</width>
-		<posx>10</posx>
-		<height>28</height>
-		<textcolor>Black</textcolor>
-		<font>font20UB</font>
-	</include>
+
 	
 	<include name="Common_Infolist_Info">
 		<posx>160</posx>

@@ -26,6 +26,12 @@
 		</font>	
 		
 		<font>
+			<name>font12B</name>
+			<filename>Roboto-Bold.ttf</filename>
+			<size>12</size>
+		</font>	
+		
+		<font>
 			<name>font13</name>
 			<filename>Roboto-Light.ttf</filename>
 			<size>13</size>

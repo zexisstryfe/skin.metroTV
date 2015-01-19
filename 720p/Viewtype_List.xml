@@ -40,7 +40,7 @@
 					<control type="group">				
 						<width>250</width>
 						<height>560</height>
-						<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + !Container.Content(genres)</visible>
+						<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)] + !Container.Content(genres)</visible>
 
 						<control type="image">
 							<width>250</width>
@@ -82,15 +82,26 @@
 					<control type="group">				
 						<width>375</width>
 						<height>560</height>
-						<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres)]</visible>
+						<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres) | Container.Content(sets)]</visible>
 
 						<control type="image">
 							<width>375</width>
 							<height>375</height>
 							<fadetime>100</fadetime>
 							<aspectratio align="right" aligny="top">stretch</aspectratio>
-							<texture fallback="DefaultAddonNone.png">$INFO[ListItem.Icon]</texture>
+							<texture fallback="DefaultAddonNone.png">$INFO[ListItem.Thumb]</texture>
 							<bordertexture colordiffuse="Keyback1">colors/color_white.png</bordertexture>
+							<visible>!Container.Content(actors) + !Container.Content(directors)</visible>
+						</control>
+						
+						<control type="image">
+							<width>375</width>
+							<height>375</height>
+							<fadetime>100</fadetime>
+							<aspectratio align="center" aligny="top">scale</aspectratio>
+							<texture fallback="DefaultArtist.png">$INFO[ListItem.Icon]</texture>
+							<bordertexture colordiffuse="Keyback1">colors/color_white.png</bordertexture>
+							<visible>Container.Content(actors) | Container.Content(directors)</visible>
 						</control>
 						
 						<control type="image">

@@ -35,6 +35,7 @@
 				<aspectratio  align="left" aligny="top">keep</aspectratio>
 				<bordertexture border="5" colordiffuse="Keyback1">colors/color_white.png</bordertexture>
 				<bordersize>8</bordersize>
+				<visible>!Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
 			</control>
 		
 			<control type="group">			

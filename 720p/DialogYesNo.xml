@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <window id="100">
-	<defaultcontrol always="true">11</defaultcontrol>
+	<defaultcontrol always="true">10</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	
 	<controls>

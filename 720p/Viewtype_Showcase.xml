@@ -326,6 +326,16 @@
 				</control>
 				
 				<control type="label">
+					<posx>1085</posx>
+					<posy>340</posy>
+					<width>100</width>
+					<height>30</height>
+					<font>font20</font>
+					<label>$INFO[ListItem.Rating]</label>
+					<visible>!IsEmpty(ListItem.Title) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+				</control>
+				
+				<control type="label">
 					<posx>940</posx>
 					<posy>580</posy>
 					<width>200</width>

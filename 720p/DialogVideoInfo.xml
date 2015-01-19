@@ -6,8 +6,6 @@
 	
 	<include>Animation_Common_Window</include>
 
-	<onload condition="System.HasAddon(script.extendedinfo) + Container.Content(movies)">RunScript(script.extendedinfo,info=comments,dbid=$INFO[ListItem.DBID],type=movie)</onload>
-	<onload condition="System.HasAddon(script.extendedinfo) + Container.Content(tvshows)">RunScript(script.extendedinfo,info=comments,dbid=$INFO[ListItem.DBID],type=tvshow)</onload>
 	<onload condition="System.HasAddon(script.extendedinfo) + Container.Content(episodes)">RunScript(script.extendedinfo,info=episodecomments,show=$INFO[ListItem.TVshowTitle],type=episode,season=$INFO[ListItem.Season],episode=$INFO[ListItem.Episode])</onload>
 	<onload condition="System.HasAddon(script.extendedinfo) + Container.Content(movies)">RunScript(script.extendedinfo,info=similarmoviestrakt,dbid=$INFO[ListItem.DBID])</onload>
 	<onload condition="System.HasAddon(script.extendedinfo) + Container.Content(tvshows)">RunScript(script.extendedinfo,info=similar,dbid=$INFO[ListItem.DBID],type=tvshow)</onload>
@@ -29,7 +27,7 @@
 		
 			<control type="image">		
 				<include>Dimensions_Fullscreen</include>
-				<include>Common_Color_Tile1</include>			
+				<texture colordiffuse="InfoDiffuse">general/diffuseoverlay.png</texture>			
 			</control>
 		
 		</control>
@@ -95,6 +93,14 @@
 				<width>250</width>
 				<font>font40L</font>
 				<shadowcolor>ff000000</shadowcolor>					
+			</control>
+			
+			<control type="image">							
+				<posy>276</posy>
+				<posx>345</posx>
+				<width>48</width>
+				<height>48</height>
+				<texture background="true" colordiffuse="$VAR[Accent_100]">arrows/nav-left.png</texture>
 			</control>
 			
 			<control type="grouplist">
@@ -326,17 +332,28 @@
 					<height>560</height>
 										
 					<control type="button" id="9001">	
-						<posy>60</posy>
-						<width>300</width>
-						<height>510</height>
-						<texturefocus colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>
-						<texturenofocus colordiffuse="Keyback1">colors/color_white.png</texturenofocus>
-						<onleft>8</onleft>
-						<onright>50</onright>	
 						<onfocus>Dialog.Close(movieinformation)</onfocus>
 						<onfocus>RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[ListItem.DBID])</onfocus>
-						<visible>Container.Content(movies)</visible>
+						<visible>Container.Content(movies) + Skin.HasSetting(ExtendedInfo.Enabled)</visible>
 					</control>
+					
+					<control type="button" id="9001">	
+						<onfocus>Dialog.Close(movieinformation)</onfocus>
+						<onfocus>RunScript(script.extendedinfo,info=extendedtvinfo,dbid=$INFO[ListItem.DBID])</onfocus>
+						<visible>[Container.Content(tvshows) | Container.Content(seasons)] + [SubString(Container.FolderPath,videodb://) | SubString(Container.FolderPath,.xsp] + Skin.HasSetting(ExtendedInfo.Enabled)</visible>
+					</control>
+					
+					<control type="button" id="9001">	
+						<onfocus>Dialog.Close(movieinformation)</onfocus>
+						<onfocus>RunScript(script.extendedinfo,info=extendedtvinfo,dbid=$INFO[ListItem.DBID])</onfocus>
+						<visible>[Container.Content(tvshows) | Container.Content(seasons)] + [SubString(Container.FolderPath,videodb://) | SubString(Container.FolderPath,.xsp] + Skin.HasSetting(ExtendedInfo.Enabled)</visible>
+					</control>
+					
+					<!--<control type="button" id="9001">	
+						<onfocus>Dialog.Close(movieinformation)</onfocus>
+						<onfocus>RunScript(script.extendedinfo,info=seasoninfo,tvshow=$INFO[ListItem.TvShowTitle],season=$INFO[Window(home).Property(SeasonNumber)],silent=True)</onfocus>
+						<visible>!Stringcompare(Container.FolderPath,videodb://tvshows/titles/) + Substring(Container.FolderPath,videodb://tvshows/titles/,left) + !Container.Content(episodes) + Skin.HasSetting(ExtendedInfo.Enabled)</visible>
+					</control>-->
 					
 					<control type="button" id="9001">	
 						<posy>60</posy>
@@ -345,8 +362,8 @@
 						<texturefocus colordiffuse="$VAR[Accent_100]">colors/color_white.png</texturefocus>
 						<texturenofocus colordiffuse="Keyback1">colors/color_white.png</texturenofocus>
 						<onleft>8</onleft>
-						<onright>50</onright>
-						<visible>!Container.Content(movies)</visible>
+						<onright>50</onright>	
+						<visible>!Skin.HasSetting(ExtendedInfo.Enabled) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
 					</control>
 					
 					<control type="image">							
@@ -392,6 +409,14 @@
 						<width>250</width>
 						<font>font40L</font>
 						<shadowcolor>ff000000</shadowcolor>					
+					</control>
+					
+					<control type="image">
+						<posx>320</posx>
+						<posy>60</posy>
+						<texture colordiffuse="Black70">colors/color_white.png</texture>
+						<width>600</width>
+						<height>510</height>
 					</control>
 					
 					<control type="grouplist">
@@ -569,14 +594,6 @@
 						
 						</control>
 						
-					</control>
-					
-					<control type="image">
-						<posx>320</posx>
-						<posy>240</posy>
-						<texture colordiffuse="Black60">colors/color_white.png</texture>
-						<width>600</width>
-						<height>330</height>
 					</control>
 					
 					<control type="textbox" id="4">

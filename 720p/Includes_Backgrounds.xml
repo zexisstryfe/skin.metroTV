@@ -52,48 +52,60 @@
 	
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
-			<texture>../extras/backgrounds/default.jpg</texture>
+			<texture fallback="../extras/backgrounds/default.jpg">$INFO[Skin.String(Default.Background)]</texture>
 		</control>
 		
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
-			<texture>../extras/backgrounds/movies.jpg</texture>
+			<texture fallback="../extras/backgrounds/movies.jpg">$INFO[Skin.String(Movies.Background)]</texture>
 			<visible>Window.IsActive(25) + IsEmpty(ListItem.Art(fanart))</visible>
 		</control>
 		
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
-			<texture>../extras/backgrounds/movies.jpg</texture>
+			<texture fallback="../extras/backgrounds/movies.jpg">$INFO[Skin.String(Movies.Background)]</texture>
 			<visible>Container.Content(movies) + IsEmpty(ListItem.Art(fanart))</visible>
 		</control>
 		
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
-			<texture>../extras/backgrounds/tvshows.jpg</texture>
+			<texture fallback="../extras/backgrounds/tvshows.jpg">$INFO[Skin.String(TVShows.Background)]</texture>
 			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + IsEmpty(ListItem.Art(fanart))</visible>
 		</control>
 		
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
-			<texture>../extras/backgrounds/music.jpg</texture>
+			<texture fallback="../extras/backgrounds/livetv.jpg">$INFO[Skin.String(PVR.Background)]</texture>
+			<visible>[Window.IsActive(tvchannels) | Window.IsActive(tvrecordings) | Window.IsActive(tvguide) | Window.IsActive(tvtimers) | Window.IsActive(tvsearch) | Window.IsActive(radiochannels) | Window.IsActive(radiorecordings) | Window.IsActive(radioguide) | Window.IsActive(radiotimers) | Window.IsActive(radiosearch)] + IsEmpty(ListItem.Art(fanart))</visible>
+		</control>
+
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture fallback="../extras/backgrounds/music.jpg">$INFO[Skin.String(Music.Background)]</texture>
 			<visible>[Container.Content(songs) | Container.Content(artists) | Container.Content(albums)] + IsEmpty(ListItem.Art(fanart))</visible>
 		</control>
 		
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
-			<texture>../extras/backgrounds/musicvid.jpg</texture>
+			<texture fallback="../extras/backgrounds/musicvid.jpg">$INFO[Skin.String(MusicVid.Background)]</texture>
 			<visible>Container.Content(musicvideos) + IsEmpty(ListItem.Art(fanart))</visible>
 		</control>
 		
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
-			<texture>../extras/backgrounds/programs.jpg</texture>
+			<texture fallback="../extras/backgrounds/pictures.jpg">$INFO[Skin.String(Pictures.Background)]</texture>
+			<visible>Window.IsActive(pictures) + IsEmpty(ListItem.Art(fanart))</visible>
+		</control>
+
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture fallback="../extras/backgrounds/addons.jpg">$INFO[Skin.String(Addons.Background)]</texture>
 			<visible>Window.IsActive(programs) + IsEmpty(ListItem.Art(fanart))</visible>
 		</control>
 		
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
-			<texture>../extras/backgrounds/programs.jpg</texture>
+			<texture fallback="../extras/backgrounds/addons.jpg">$INFO[Skin.String(Addons.Background)]</texture>
 			<visible>Window.IsActive(addonbrowser) + IsEmpty(ListItem.Art(fanart))</visible>
 		</control>
 		
@@ -111,7 +123,14 @@
 				<include>Dimensions_Fullscreen</include>
 				<fadetime>800</fadetime>
 				<texture background="true" fallback="../extras/backgrounds/movies.jpg">$INFO[ListItem.Art(fanart)]</texture>
-				<visible>Container.Content(Movies) | Container.Content(Genres)</visible>
+				<visible>Container.Content(Movies) | Container.Content(Genres) | Container.Content(Sets)</visible>
+			</control>
+			
+			<control type="image">
+				<include>Dimensions_Fullscreen</include>
+				<fadetime>800</fadetime>
+				<texture background="true" fallback="../extras/backgrounds/tvshows.jpg">$INFO[ListItem.Art(fanart)]</texture>
+				<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
 			</control>
 			
 			<control type="image">

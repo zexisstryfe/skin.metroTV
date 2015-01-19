@@ -340,6 +340,15 @@
 						<disabledcolor>Black</disabledcolor>
                     </control>
 					
+					<control type="radiobutton" id="309">
+                        <include>Settings_Button</include>
+                        <selected>Skin.HasSetting(ExtendedInfo.Enabled)</selected>
+                        <onclick>Skin.ToggleSetting(ExtendedInfo.Enabled)</onclick>
+                        <label>$LOCALIZE[31267]</label>
+                        <enable>System.HasAddon(script.extendedinfo)</enable>
+						<disabledcolor>Black</disabledcolor>
+                    </control>
+					
 				</control>
 
 				<control type="grouplist" id="350">
@@ -2039,8 +2048,8 @@
 							</control>
 							
 							<control type="label">
-							    <posx>225r</posx>
-							    <width>600</width>
+							    <posx>10</posx>
+							    <width>580</width>
 							    <height>50</height>
 							    <align>right</align>
 								<label>$INFO[ListItem.Label]</label>
@@ -2052,82 +2061,82 @@
 							<item id="0">
 								<label>571</label>
 							    <onclick>Control.Move(9003,-1)</onclick>
-							    <icon>special://skin/backgrounds/default.jpg</icon>
+							    <icon>special://skin/extras/backgrounds/default.jpg</icon>
 							    <thumb>$INFO[Skin.String(Default.Background)]</thumb>
 							</item>
 							<item id="1">
 							    <visible>!Skin.HasSetting(Movies.Hide)</visible>
 							    <label>20342</label>
 							    <onclick>Control.Move(9003,-1)</onclick>
-							    <icon>special://skin/backgrounds/Movies.jpg</icon>
+							    <icon>special://skin/extras/backgrounds/Movies.jpg</icon>
 							    <thumb>$INFO[Skin.String(Movies.Background)]</thumb>
 							</item>
 							<item id="2">
 							    <visible>!Skin.HasSetting(TVShows.Hide)</visible>
 							    <label>20343</label>
 							    <onclick>Control.Move(9003,-1)</onclick>
-							    <icon>special://skin/backgrounds/TVShows.jpg</icon>
+							    <icon>special://skin/extras/backgrounds/TVShows.jpg</icon>
 							    <thumb>$INFO[Skin.String(TVShows.Background)]</thumb>
 							</item>
 							<item id="3">
 							    <visible>System.GetBool(pvrmanager.enabled)</visible>
 							    <label>31012</label>
 							    <onclick>Control.Move(9003,-1)</onclick>
-							    <icon>special://skin/backgrounds/livetv.jpg</icon>
+							    <icon>special://skin/extras/backgrounds/livetv.jpg</icon>
 							    <thumb>$INFO[Skin.String(Pvr.Background)]</thumb>
 							</item>
 							<item id="4">
 							    <visible>!Skin.HasSetting(Music.Hide)</visible>
 							    <label>2</label>
 							    <onclick>Control.Move(9003,-1)</onclick>
-							    <icon>special://skin/backgrounds/Music.jpg</icon>
+							    <icon>special://skin/extras/backgrounds/Music.jpg</icon>
 							    <thumb>$INFO[Skin.String(Music.Background)]</thumb>
 							</item>
 							<item id="5">
 							    <visible>!Skin.HasSetting(MusicVid.Hide)</visible>
 							    <label>20389</label>
 							    <onclick>Control.Move(9003,-1)</onclick>
-							    <icon>special://skin/backgrounds/MusicVid.jpg</icon>
+							    <icon>special://skin/extras/backgrounds/MusicVid.jpg</icon>
 							    <thumb>$INFO[Skin.String(MusicVid.Background)]</thumb>
 							</item>
 							<item id="6">
 							    <visible>!Skin.HasSetting(Pictures.Hide)</visible>
 							    <label>1</label>
 							    <onclick>Control.Move(9003,-1)</onclick>
-							    <icon>special://skin/backgrounds/Pictures.jpg</icon>
+							    <icon>special://skin/extras/backgrounds/Pictures.jpg</icon>
 							    <thumb>$INFO[Skin.String(Pictures.Background)]</thumb>
 							</item>
 							<item id="7">
 								<visible>!Skin.HasSetting(Games.Hide)</visible>
 							    <label>15016</label>
 							    <onclick>Control.Move(9003,-1)</onclick>
-							    <icon>special://skin/backgrounds/Games.jpg</icon>
+							    <icon>special://skin/extras/backgrounds/Games.jpg</icon>
 							    <thumb>$INFO[Skin.String(Games.Background)]</thumb>
 							</item>
 							<item id="9">
 							    <visible>!Skin.HasSetting(Addons.Hide)</visible>
 							    <label>24001</label>
 							    <onclick>Control.Move(9003,-1)</onclick>
-							    <icon>special://skin/backgrounds/Addons.jpg</icon>
+							    <icon>special://skin/extras/backgrounds/Addons.jpg</icon>
 							    <thumb>$INFO[Skin.String(Addons.Background)]</thumb>
 							</item>
 							<item id="10">
 							    <label>13200</label>
 							    <onclick>Control.Move(9003,-1)</onclick>
-							    <icon>special://skin/backgrounds/Profile.jpg</icon>
+							    <icon>special://skin/extras/backgrounds/Profile.jpg</icon>
 							    <thumb>$INFO[Skin.String(Profile.Background)]</thumb>
 							</item>
 							<item id="11">
 							    <label>137</label>
 							    <onclick>Control.Move(9003,-1)</onclick>
-							    <icon>special://skin/backgrounds/Search.jpg</icon>
+							    <icon>special://skin/extras/backgrounds/Search.jpg</icon>
 							    <thumb>$INFO[Skin.String(Settings.Background)]</thumb>
 							</item>
 							<item id="12">
 							    <visible>!IsEmpty(Skin.String(CustomHome.1.Path))</visible>
 							    <label>$VAR[Custom1.HomeMenu]</label>
 							    <onclick>Control.Move(9003,-1)</onclick>
-							    <icon>special://skin/backgrounds/default/default.jpg</icon>
+							    <icon>special://skin/extras/backgrounds/default/default.jpg</icon>
 							    <thumb>$INFO[Skin.String(CustomHome.1.Background)]</thumb>
 							</item>
 						</content>

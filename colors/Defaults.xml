@@ -14,6 +14,7 @@
 	<color name="FanartDiffuse">99FFFFFF</color>
 	<color name="HomeDiffuse">99FFFFFF</color>
 	<color name="Home2Diffuse">66FFFFFF</color>
+	<color name="InfoDiffuse">A9FFFFFF</color>
 	<color name="HomeFanart">AAAAAAAA</color>
 	<color name="ImageDiffuse">FF555555</color>
 	<color name="PanelDiffuse">88888888</color>

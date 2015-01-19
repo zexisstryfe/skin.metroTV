@@ -14,7 +14,7 @@
 			<control type="image">
 				<width>1280</width>
 				<height>720</height>
-				<texture background="true">special://skin/backgrounds/addons.jpg</texture>
+				<texture background="true">special://skin/extras/backgrounds/addons.jpg</texture>
 				<fadetime>600</fadetime>
 				<animation effect="fade" time="600">Visible</animation>
 				<animation effect="fade" time="600">Hidden</animation>
@@ -22,7 +22,7 @@
 		
 			<control type="image">		
 				<include>Dimensions_Fullscreen</include>
-				<include>Common_Color_Tile1</include>			
+				<texture colordiffuse="InfoDiffuse">general/diffuseoverlay.png</texture>			
 			</control>
 		
 		</control>
@@ -78,6 +78,14 @@
 				<width>250</width>
 				<font>font40L</font>
 				<shadowcolor>ff000000</shadowcolor>					
+			</control>
+			
+			<control type="image">							
+				<posy>276</posy>
+				<posx>345</posx>
+				<width>48</width>
+				<height>48</height>
+				<texture background="true" colordiffuse="$VAR[Accent_100]">arrows/nav-left.png</texture>
 			</control>
 			
 			<control type="grouplist" id="9001">
@@ -380,13 +388,21 @@
 						<font>font40L</font>
 						<shadowcolor>ff000000</shadowcolor>					
 					</control>
+					
+					<control type="image">
+						<posx>400</posx>
+						<posy>60</posy>
+						<texture colordiffuse="Black70">colors/color_white.png</texture>
+						<width>340</width>
+						<height>510</height>
+					</control>
 			
 					<control type="textbox">
 						<description>Plot</description>
 						<posx>420</posx>
-						<posy>60</posy>
+						<posy>70</posy>
 						<width>300</width>
-						<height>510</height>
+						<height>490</height>
 						<font>font20</font>
 						<align>left</align>
 						<label>$INFO[ListItem.Property(Addon.Description)]</label>						
